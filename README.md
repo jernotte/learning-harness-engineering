@@ -9,18 +9,23 @@ The research is intended to do three things at once. The process itself should d
 - [`AGENTS.md`](AGENTS.md) is the operating contract for agents working in this repository.
 - [`docs/research-charter.md`](docs/research-charter.md) explains the mission, boundaries, and standards of evidence.
 - [`docs/methodology.md`](docs/methodology.md) defines the iterative `recon -> analyze -> consolidate -> refine` method.
+- [`docs/source-provenance.md`](docs/source-provenance.md) defines the required search, reading, and claim-evidence audit trail.
 - [`docs/research-plan.md`](docs/research-plan.md) describes the initial program and its early human checkpoints.
 - [`research/STATUS.md`](research/STATUS.md) is the current human-readable control panel.
 - [`outline.md`](outline.md) is a useful seed, not an approved or fixed taxonomy.
 
 ## Repository shape
 
-The structure is intentionally small until the first reconnaissance cycle reveals the right taxonomy.
+The structure remains intentionally small while Cycle 1 provenance is reconstructed and the analytical lens is tested. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
 
 ```text
-docs/                       durable project guidance
+docs/
+  research-charter.md       mission, scope, and evidence principles
+  methodology.md            research and maturity workflow
+  source-provenance.md      approved capture and audit contract
+  research-plan.md          staged program and checkpoints
 research/
-  sources/                  one record for each source actually used
+  sources/                  legacy/full narrative records; catalog/events planned in Stage 0.5
   case-studies/             deep dives into implementations or techniques
   syntheses/                cross-source and cross-harness findings
   cycles/                   plans, recon maps, and cycle reviews
@@ -33,4 +38,4 @@ outline.md                  initial curriculum hypothesis
 
 Large third-party repositories belong in `/Users/jernotte/dev/reference-materials/research`, not in this repository. Findings derived from them belong here and should identify the inspected commit or release.
 
-The repository does not yet contain an HTML dashboard. If the canonical artifacts prove cumbersome to review, a dashboard may be generated from them later. It must never become a second source of truth.
+The repository does not yet contain the approved provenance capture implementation or an HTML dashboard. The implementation may be native event ingestion, a logged gateway, or adapters depending on feasibility. New subject-matter research is paused until the minimum capture path is built and validated. Human audit views will be generated from canonical provenance and research artifacts; they must never become a second source of truth.

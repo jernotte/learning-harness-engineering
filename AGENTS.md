@@ -13,11 +13,16 @@ Read these files in order:
 1. `README.md`
 2. `docs/research-charter.md`
 3. `docs/methodology.md`
-4. `docs/research-plan.md`
-5. `research/STATUS.md`, `research/COVERAGE.md`, and `research/DECISIONS.md`
-6. The active cycle file named by `research/STATUS.md`, when one exists
+4. `docs/source-provenance.md`
+5. `docs/research-plan.md`
+6. `research/STATUS.md`, `research/COVERAGE.md`, and `research/DECISIONS.md`
+7. The active cycle file named by `research/STATUS.md`, when one exists
 
 Treat `outline.md` as an informed starting hypothesis. Do not silently adopt its modules as the final taxonomy.
+
+## Current research pause
+
+Do not begin new subject-matter recon, source collection, or implementation deep dives while `research/STATUS.md` says provenance infrastructure is pending. Work is currently limited to maintaining the approved methodology, investigating and building the provenance capture path, testing it with deliberately bounded fixtures or a miniature approved recon, and reconstructing Cycle 1 with explicit incompleteness. Before reading external material for the bootstrap investigation, append interaction-time events to `research/provenance/bootstrap-events.jsonl` using `research/provenance/README.md`. Bootstrap activity is segregated and `partial` until reconciled; do not mix it into the subject corpus.
 
 ## Scope
 
@@ -29,7 +34,7 @@ Model training, fine-tuning, tokenizer design, general HCI, and security as an i
 
 - Trace every material factual claim to evidence. Prefer links to the exact paper section, documentation page, source file, commit, experiment, or firsthand account.
 - Identify source-code observations by commit, tag, or release whenever possible. Do not describe a moving default branch as timeless architecture.
-- Distinguish `verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `recommendation`, and `open question`. Never blur these categories for smoother prose.
+- Distinguish `verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, and `open question`. Never blur these categories for smoother prose.
 - A vendor statement establishes what the vendor says, not that the mechanism works. A paper establishes what its experiment found under stated conditions, not a universal rule.
 - Repetition is not necessarily independent corroboration. Check whether apparently separate articles derive from the same announcement, paper, benchmark, or author.
 - Evaluate evidence along several axes: directness, rigor, recency, independence, applicability, and confidence. Do not reduce quality to a source-type hierarchy.
@@ -38,6 +43,18 @@ Model training, fine-tuning, tokenizer design, general HCI, and security as an i
 - Seek evidence that could falsify the maintainer's beliefs and the agent's emerging thesis. Prior experience is a useful hypothesis, never assumed truth.
 - Never equate popularity, polish, citation count, or confident language with evidence.
 - Do not call a recurring technique a best practice without outcome evidence. Use the pattern vocabulary in `docs/methodology.md`.
+- A direct external link in analysis does not replace a durable source record. Referenced evidence must be represented in the source catalog and a full source record before it supports a material claim.
+- Count claim coverage, not source files. Every material claim must have a globally unique claim ID derived from `<cycle-id>-<artifact-type>-<artifact-slug>-C###` in one canonical artifact claim ledger and map to supporting and, when applicable, opposing source records. Source records reference claim IDs rather than owning duplicate claim text.
+
+## Taxonomy and navigation
+
+Use three complementary layers instead of forcing one hierarchy to do every job:
+
+1. **Source-native vocabulary** drives recon and human navigation. Preserve common terms such as tools, context, memory, planning, skills, workflows, subagents, evaluation, runtime, routing, and self-improvement, plus the aliases used by sources.
+2. **Architectural responsibilities** provide a multi-label analytical lens for comparing control, state, capability, and evidence. They are questions to apply, not exclusive folders into which a source must fit.
+3. **Narrative and curriculum structure** is a later human-centered view derived from reviewed research. It may recombine responsibilities into fewer approachable modules.
+
+Search using source-native terms, aliases, product terminology, mechanism terms, and failure terms. Never restrict discovery to the names in the analytical lens. Record taxonomy friction rather than forcing a mechanism into a category.
 
 ## Research loop
 
@@ -49,11 +66,15 @@ Search broadly before settling on an explanation. Map vocabulary, architectural 
 
 Produce a source inventory and coverage map before choosing all deep-dive targets. Search beyond familiar products and beyond the seed outline. Record why a source is promising, but do not promote an unread search result into evidence.
 
+Use the approved provenance capture path for every query and source interaction. The audit funnel is `returned -> opened -> read_only or referenced`, with `excluded` available after inspection. Search results may be leads, but an agent may not rely on a result snippet as evidence. If a snippet matters, open and log the source.
+
 ### Analyze
 
 Read primary material and inspect code deeply. For an implementation, trace actual control flow, prompts, tool schemas, state transitions, persistence, error handling, and verification rather than relying on the README. Use history and tests when they clarify design intent or real behavior.
 
 Use `research/templates/case-study.md` as a starting schema, adapting it when the subject requires different treatment. Separate observed mechanism from explanation of why it may work. State assumptions, tradeoffs, failure modes, evaluation support, transfer limits, and open questions.
+
+At Checkpoint 3, each case must report where the responsibility lens was difficult to apply, which mechanisms spanned boundaries, what did not fit, and what taxonomy change—if any—the evidence suggests. Do not silently repair the taxonomy during a case study.
 
 Closed-source systems may be studied through official material and credible firsthand or third-party reports. Describe only externally supported behavior; do not invent internal architecture. Multiple reports increase confidence only to the extent that they are independent.
 
@@ -81,7 +102,9 @@ Keep evidence at an honest maturity level:
 
 Do not place a lead or an agent summary directly into reviewed synthesis. The canonical research artifacts live in this repository. A dashboard or other human view, if added, must be derived from them.
 
-Maturity is promoted deliberately. The primary agent may promote captured material through analyzed evidence and provisional findings after verifying its sources. A reviewed finding requires a documented claim/source check with reviewer, date, and review basis. During early alignment, the maintainer is the reviewer at the applicable checkpoint. After the process is explicitly graduated, the primary agent may review routine findings; the maintainer still reviews material reversals and changes to scope, taxonomy, or evidence policy. A consolidated pattern must be based on reviewed findings from a synthesis, not on recurrence alone.
+Every opened source receives a lightweight catalog/event entry. A source used to support, oppose, or materially contextualize a claim also requires a full narrative source record. Read-only sources remain visible with their reading depth and disposition reason; they do not require full narrative records.
+
+Maturity is promoted deliberately. The primary agent may promote captured material through analyzed evidence only after verifying its sources. An artifact cannot become a provisional finding until its canonical claim-evidence ledger is complete, a prose-to-ledger attestation is recorded, all referenced sources have full records, every referenced claim/source/location mapping has a primary verification event, no subagent has self-verified its own evidence, and the cycle source audit passes. A reviewed finding additionally requires a documented claim/source check with reviewer, date, and review basis. During early alignment, the maintainer is the reviewer at the applicable checkpoint. After the process is explicitly graduated, the primary agent may review routine findings; the maintainer still reviews material reversals and changes to scope, taxonomy, or evidence policy. A consolidated pattern must be based on reviewed findings from a synthesis, not on recurrence alone.
 
 At the end of meaningful work, update:
 
@@ -89,6 +112,7 @@ At the end of meaningful work, update:
 - `research/COVERAGE.md` when scope coverage or gaps changed;
 - `research/DECISIONS.md` when methodology, taxonomy, scope, or evidence policy changed;
 - the active cycle artifact with sources examined and the saturation assessment.
+- the cycle source audit and global source-coverage view after research activity.
 
 Write for a technically capable newcomer without talking down to an experienced engineer. Favor clear, enjoyable prose over curt fragments and dense walls of bullets. Do not polish narrative beyond the maturity of its evidence.
 
@@ -108,9 +132,9 @@ After the maintainer explicitly graduates the process, these become inspectable 
 
 ## Agents and concurrency
 
-The primary agent owns research design, source verification, deduplication, synthesis, shared control state, maturity promotion, and final quality. It may use at most two research subagents concurrently. The overall cap is one primary plus two subagents; nested delegation counts against the same cap and must never bypass it.
+The primary agent owns research design, source verification, deduplication, synthesis, shared control state, maturity promotion, provenance consolidation, and final quality. It may use at most two research subagents concurrently. The overall cap is one primary plus two subagents; nested delegation counts against the same cap and must never bypass it.
 
-Use subagents for bounded, independent work such as separate landscape searches or implementation deep dives. Give each a distinct question and required output. Subagents should normally return reports or edit only explicitly assigned, non-overlapping artifacts. Only the primary updates `STATUS.md`, `COVERAGE.md`, `DECISIONS.md`, checkpoint state, cross-case syntheses, and maturity labels. Treat subagent reports and edits as unverified until the primary verifies the cited evidence. Do not split synthesis into disconnected fragments merely to create parallel work.
+Use subagents for bounded, separately executed work such as complementary landscape searches or implementation deep dives. Do not call their results independent corroboration merely because different agents produced them. Give each a distinct question, required output, and non-overlapping provenance log. Subagents should normally return reports or edit only explicitly assigned artifacts and their own event logs. Only the primary updates `STATUS.md`, `COVERAGE.md`, `DECISIONS.md`, checkpoint state, cross-case syntheses, maturity labels, and consolidated provenance. Treat subagent reports and edits as unverified until the primary records verification of the cited evidence. Do not split synthesis into disconnected fragments merely to create parallel work.
 
 ## Repositories and external material
 
@@ -125,6 +149,8 @@ Direct empirical reproduction is not the initial program's main goal. Inspect im
 - Begin with the active question and the decision the research should eventually inform.
 - Search with multiple names for the same mechanism; terminology is inconsistent across harnesses.
 - Read the sources that support a claim before writing the claim. Never cite a search snippet.
+- Register and log the source before using it in analysis. Do not backfill evidence only after prose has been written.
+- Do not present a checkpoint without its generated source audit, claim-evidence coverage audit, and provenance-completeness status.
 - Prefer primary sources and implementation evidence, then use independent secondary sources to challenge or contextualize them.
 - Capture negative and disconfirming evidence alongside positive evidence.
 - Separate notes about what exists from recommendations about what to build.

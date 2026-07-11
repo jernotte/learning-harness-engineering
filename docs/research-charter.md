@@ -24,6 +24,8 @@ The corpus should be backed by sources and implementation evidence rather than c
 
 No category is admitted or rejected wholesale. A polished paper can overgeneralize from a narrow benchmark; a marketing article can contain an excellent architectural disclosure; a social post can point to a real failure mode. We judge the specific claim and its evidence.
 
+Research breadth must also be auditable. The project records searches, returned results when available, opened sources, reading depth, disposition, and eventual claim use. This allows a reviewer to distinguish a justified source mix from clustering around a convenient host, organization, source type, or evidence lineage. Referenced claims require durable records; read-only and excluded sources remain visible without being promoted into evidence.
+
 Six questions guide that judgment:
 
 1. **Directness:** How close is the evidence to the mechanism or outcome?

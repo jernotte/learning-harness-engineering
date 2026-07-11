@@ -1,9 +1,12 @@
 # Case Study: [Implementation or Technique]
 
-**Maturity:** Analyzed evidence  
-**Question:**  
-**Scope and inspected version:**  
+**Maturity:** Analyzed evidence
+**Question:**
+**Artifact ID:** [globally unique `<cycle-id>-case-<artifact-slug>`]
+**Scope and inspected version:**
 **Primary evidence records:**
+**Source-audit reference:**
+**Claim-evidence ledger:**
 
 ## Executive understanding
 
@@ -33,9 +36,28 @@ Summarize outcome evidence, negative results, missing comparisons, confounds, an
 
 Identify meaningfully similar and contrasting approaches. Discuss dependence on model, harness, task, domain, version, or infrastructure.
 
+## Responsibility-lens map and friction
+
+Use source-native language in the narrative, then multi-label relevant mechanisms against the provisional responsibilities. Record:
+
+- responsibilities that were difficult to distinguish;
+- mechanisms that legitimately spanned boundaries;
+- responsibilities absent or irrelevant in this case;
+- important mechanisms not represented by the lens;
+- categories that appeared too broad, narrow, or abstract;
+- proposed changes to test at Checkpoint 3.
+
+Apply these provisional primary owners while recording cross-boundary coupling as friction:
+
+- Responsibility 2 owns instruction/model policy: authorship or selection of behavioral instructions, model/role selection, routing, and fallback.
+- Responsibility 3 owns per-call prompt materialization and model-visible capability admission: what instructions, tools, skills, resources, and state enter a call, with ordering, precedence, scoping, and context cost.
+- Responsibility 5 owns action representation, authorization, dispatch, and execution against the environment.
+
+Do not force a clean answer when code couples them.
+
 ## Findings and open questions
 
-List provisional findings with exactly one canonical epistemic kind—`verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, or `open question`—and a confidence judgment. State what additional evidence would materially change them.
+Give every material finding a globally unique claim ID derived from the artifact ID. List it with exactly one canonical epistemic kind—`verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, or `open question`—supporting and, when applicable, opposing source-record IDs, verification events, version/freshness limits, and a confidence judgment. State what additional evidence would materially change it.
 
 ## Research trail
 

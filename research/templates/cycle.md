@@ -1,8 +1,9 @@
 # Research Cycle: [Question]
 
-**Status:** Proposed  
-**Current phase:** Recon  
-**Governance:** Early alignment / graduated  
+**Status:** Proposed
+**Current phase:** Recon
+**Governance:** Early alignment / graduated
+**Provenance completeness:** [complete / complete_with_declared_manual_sources / partial / reconstructed / unknown]
 
 ## Decision-oriented question
 
@@ -12,13 +13,17 @@ State a bounded question whose answer could improve harness design or evaluation
 
 Describe what belongs in this cycle, what adjacent topics do not, and how the recon will avoid sampling only familiar systems or one evidence type.
 
+### Source-coverage plan
+
+State the source channels, query families, source types, implementation domains, and evidence lineages that should be represented. These are question-specific expectations, not universal quotas. The generated audit will compare plan with actual activity.
+
 ## Recon map
 
 Capture vocabulary and aliases, candidate systems and techniques, source inventory, competing views, negative evidence, benchmarks, and gaps. Explain the rationale for each proposed deep dive.
 
 ### Recon-pass log
 
-Record query families and source channels rather than every individual query. This is enough to audit breadth without turning search into clerical work.
+The canonical provenance log records every exact query. This table is the readable summary of query families, source channels, coverage, and marginal information.
 
 | Pass and date | Purpose | Channels and query families | Coverage dimension | New mechanisms, contradictions, or sources | Marginal information gained |
 | --- | --- | --- | --- | --- | --- |
@@ -26,7 +31,7 @@ Record query families and source channels rather than every individual query. Th
 
 ## Analysis plan and case-study status
 
-Track approved deep dives, inspected versions, owners, maturity, and the distinct architectural question each contributes. Two subagents may work concurrently; the primary agent remains accountable for verification and synthesis.
+Track approved deep dives, owners, maturity, and the distinct architectural question each contributes. For Checkpoint 2, include batch size, responsibility coverage, repository, release/tag, exact commit, date, documentation alignment, evidence mode, and lineage risk. Two subagents may work concurrently; each writes only its assigned provenance log, and the primary remains accountable for verification and synthesis.
 
 ## Consolidation state
 
@@ -43,6 +48,12 @@ Before stopping, address:
 - Are credible new searches now mostly repetitive?
 - What known gaps remain, and why is stopping still reasonable?
 - What new evidence should reopen this cycle?
+- Does the generated source audit show adequate search-channel breadth, repository inspection depth, and resolved concentration warnings?
+- Does every material claim have referenced source-record coverage and primary verification?
+
+## Taxonomy stress test
+
+At Checkpoint 3, consolidate boundary friction from every case: responsibilities that blurred, mechanisms spanning several categories, missing concepts, forced classifications, and proposed revisions. Preserve source-native navigation even when the analytical lens changes.
 
 ## Process retrospective
 

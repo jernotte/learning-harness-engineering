@@ -6,13 +6,31 @@ The project uses four recurring modes of work: reconnaissance, analysis, consoli
 
 Each cycle begins with a question that matters to harness design. “Research memory” is too broad to control the work. “How do current harnesses decide what persistent information enters the active context, and what evidence supports those policies?” provides something to map, compare, and eventually answer.
 
+## Three layers of organization
+
+The project does not ask one taxonomy to serve discovery, architecture, and teaching equally well.
+
+First, recon and human navigation use source-native vocabulary: tools, context, memory, planning, workflows, skills, subagents, evaluation, runtime, routing, self-improvement, and the aliases used by the field. These terms are discoverable and readable even when they overlap.
+
+Second, analysis applies a multi-label responsibility lens. The provisional responsibilities concern run lifecycle; model and instruction policy; active-context and capability construction; control flow; action and environment mediation; observation construction; durable state; decomposition and coordination; verification and recovery; external evaluation; and adaptation across runs. This lens exposes allocations of control, state, capability, and evidence. It is not an exclusive directory tree, and a mechanism may legitimately span several responsibilities.
+
+Third, the eventual field guide and curriculum may recombine reviewed knowledge into fewer, approachable narrative modules. Teaching convenience must not erase analytical distinctions, but analytical vocabulary must not make discovery or reading needlessly abstract.
+
+This layered approach is intentionally revisable. Case studies record boundary friction, missing concepts, and forced classifications so taxonomy changes are driven by evidence.
+
+For the first batch, Responsibility 2 primarily owns instruction/model policy, including authorship or selection of behavioral instructions, routing, and fallback. Responsibility 3 owns per-call prompt materialization and model-visible capability admission. Responsibility 5 owns action representation, authorization, dispatch, and execution. Real systems may couple these boundaries; that coupling is taxonomy-friction evidence rather than permission to classify inconsistently.
+
 ## 1. Reconnaissance: learn the shape of the unknown
 
 Recon favors breadth. Its purpose is to discover how the topic is discussed, which systems embody it, where the strongest evidence may live, what schools of thought disagree, and which important examples are absent from our initial framing.
 
 A good recon uses several passes. Begin with vocabulary, surveys, known systems, and citation trails. Expand through repositories, papers, practitioner accounts, benchmarks, conference material, contrary results, and neighboring terminology. Search recent material deliberately. Then inspect promising sources enough to determine whether they deserve a full analysis; a title or search result is only a lead.
 
+Every search and source interaction follows `docs/source-provenance.md`. Query logs make search breadth visible; source events distinguish returned results, opened sources, reading depth, and final disposition. A source must be cataloged before its contents can enter analysis. Read-only and excluded sources remain visible because they show what the research considered and prevent later agents from repeating low-value paths.
+
 Recon should produce a readable landscape, not a link dump. The cycle artifact records the central questions, vocabulary and aliases, candidate implementations, source inventory, tentative architectural axes, conspicuous gaps, and recommended deep dives. It also records why the proposed set offers coverage—different mechanisms, domains, model families, levels of openness, or evidence quality.
+
+The source audit complements this narrative with planned-versus-actual channels, source-type and host distributions, repository inspection depth, disposition, lineage, and concentration warnings. Breadth is judged against the research question, not a universal quota.
 
 Several breadth passes should occur before the first deep-dive set is fixed. Recon remains open throughout the cycle because serious analysis often uncovers the best missing sources.
 
@@ -33,6 +51,7 @@ Case studies should normally address:
 - similarities and contrasts with other approaches;
 - portability across models, domains, and harnesses;
 - contradictions, confidence limits, and open questions.
+- taxonomy friction: boundaries that blurred, mechanisms that spanned responsibilities, missing categories, and categories that appeared too broad or narrow.
 
 This is a thinking guide rather than a demand for eleven shallow headings. Tailor the presentation to what the subject reveals, while preserving the distinctions necessary for later comparison.
 
@@ -52,12 +71,13 @@ During consolidation:
 4. Ask whether apparent conflict comes from different models, tasks, versions, metrics, or definitions.
 5. Identify provisional patterns and the conditions under which they may hold.
 6. Expose gaps that require another recon or analysis pass.
+7. Complete a claim-evidence ledger before promoting conclusions.
 
 Comparison tables are useful when the same exact dimensions apply across several systems. Narrative is better for causal explanations, qualifications, and design histories. Use each where it improves comprehension.
 
 ## 4. Refinement: earn the conclusion
 
-Refinement is not copyediting. It is the stage where accumulated claims are challenged, reduced, and made useful. Reopen cited sources and ensure they support the language used. Search for counterexamples and disconfirming results. Remove repetitions that add no independent evidence. Separate robust mechanisms from incidental implementation details. Tighten scope when the evidence is narrower than the provisional conclusion.
+Refinement is not copyediting. It is the stage where accumulated claims are challenged, reduced, and made useful. Reopen cited sources and ensure they support the language used. Audit material claims rather than relying on source-record counts. Search for counterexamples and disconfirming results. Remove repetitions that add no independent evidence. Separate robust mechanisms from incidental implementation details. Tighten scope when the evidence is narrower than the provisional conclusion.
 
 Then classify each reusable pattern honestly: observed, supported, contextual, emerging, contested, or anti-pattern. Explain what problem it addresses, why it may work, when it is appropriate, what it costs, how it fails, and what would change our confidence. A reader should be able to use the finding in a design discussion without mistaking it for a universal recipe.
 
@@ -84,10 +104,16 @@ lead
 
 A source record establishes what was examined and which claims it can support. A case study performs analysis. A synthesis compares cases and makes provisional findings. A review earns higher confidence. The maturity label describes review state, not whether the conclusion is positive.
 
+A lightweight provenance entry is required for every opened source; a full source record is required only when the source is referenced by an artifact. Material claims receive globally unique claim IDs and map to supporting and, when applicable, opposing records. This ordering is mandatory: catalog and inspect the source, create the record when it becomes evidence, then write or promote the claim. Backfilling records after synthesis is a process failure even when the resulting citation is correct.
+
+Before a provisional finding or checkpoint is presented, the cycle must generate its source audit and claim-coverage audit. Every referenced source must have a record, every referenced claim/source/location mapping must have a primary verification event, no subagent may self-verify its evidence, and every concentration warning must be addressed or explained. The cycle also declares provenance completeness using the labels in `docs/source-provenance.md`.
+
 The canonical artifacts should be optimized for accurate agent work and durable version control while remaining legible to humans. `research/STATUS.md` provides a shorter audit view. If a generated website becomes useful, it should read these same artifacts and link back to them rather than introduce separately edited conclusions.
 
 ## Checkpoints and gradual autonomy
 
 Early checkpoints intentionally trade some speed for alignment. The maintainer reviews the first recon map and taxonomy proposal, the first deep-dive selection, the first batch of cases, the first synthesis, and the first cycle review. This is how the project discovers whether its schemas and judgments are producing the desired quality before mistakes multiply.
 
-Once the maintainer explicitly approves the operating model, routine checkpoints become non-blocking, inspectable milestones. Changes to scope, taxonomy, evidence policy, or a consequential reviewed conclusion still require review. The current mode is always visible in `research/STATUS.md`.
+Checkpoint 2 identifies a release, tag, and exact commit for every open implementation before approval; it also states the evidence mode for closed systems. Checkpoint 3 explicitly stress-tests the responsibility lens using friction recorded in each case. Checkpoint artifacts include their human-readable source audit.
+
+Once the maintainer explicitly graduates the governance mode, routine checkpoints become non-blocking, inspectable milestones. Approval of D-001 did not itself graduate the process. Changes to scope, taxonomy, evidence policy, or a consequential reviewed conclusion still require review. The current mode is always visible in `research/STATUS.md`.

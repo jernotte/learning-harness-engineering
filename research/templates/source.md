@@ -1,26 +1,32 @@
 # Source Record: [Title]
 
-**Maturity:** Captured source  
-**Source type:** [paper / documentation / repository / code / blog / talk / interview / benchmark / social post / other]  
-**Author or organization:**  
-**Publication date:**  
-**URL:**  
-**Inspected version:** [commit / tag / release, when applicable]  
+**Source ID:**
+**Maturity:** Captured source
+**Source type:** [paper / documentation / repository / code / blog / talk / interview / benchmark / social post / other]
+**Author or organization:**
+**Publication date:**
+**URL:**
+**Inspected version:** [commit / tag / release, when applicable]
 **Related cycle or question:**
+**Source family / parent:**
+**Inspection extent:** [screening / partial substantive / full substantive]
+**Surfaces inspected:** [documentation / README / code / tests / history / releases / issues / benchmark artifacts / other]
+**Provenance events:**
+**Primary verification events:** [claim ID, source/location ID, version, verifier/date, outcome, and scope notes]
 
 ## Why this source matters
 
 Explain what question led us here and what unique evidence this source may provide. Do not use this section as a generic abstract.
 
-## Claims and evidence
+## Evidence items and claim references
 
-For each useful claim, distinguish the source's statement from the evidence it provides. Link to the exact section or code location when possible.
+The canonical claim text lives in the artifact claim ledger. Record evidence items and exact source locations here, then reference the claim IDs they may support or oppose. Do not maintain a second mutable copy of the claim.
 
-| Kind | Claim or observation | Exact support | Limits |
-| --- | --- | --- | --- |
-| [One canonical epistemic kind] |  |  |  |
+| Evidence item ID | Source observation or statement | Exact child page/file/section/commit | Related claim IDs | Relationship | Limits |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | [supports / opposes / contextualizes] |  |
 
-Use exactly one kind per row: `verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, or `open question`.
+Epistemic kinds belong to claims in the canonical ledger: `verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, or `open question`.
 
 ## Evidence assessment
 

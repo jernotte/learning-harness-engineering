@@ -1,0 +1,32 @@
+# Source Record: SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering
+
+**Maturity:** Captured source
+**Source type:** Peer-reviewed research paper and open implementation
+**Author or organization:** John Yang and collaborators
+**Publication date:** 2024-05-06; revised 2024-11-11
+**URL:** https://arxiv.org/abs/2405.15793
+**Project:** https://swe-agent.com/
+**Related cycle or question:** Cycle 1 field landscape
+
+## Why this source matters
+
+SWE-agent treats the interface between model and computer as a first-class optimization target and reports task results tied to that design.
+
+## Claims and evidence
+
+| Kind | Claim or observation | Exact support | Limits |
+| --- | --- | --- | --- |
+| source-reported claim | A custom agent-computer interface improves the model's ability to navigate, edit, and test repositories. | Abstract, design sections, and reported experiments/ablations. | Historical models and benchmark state; detailed causal attribution needs full paper/code analysis. |
+| source-reported claim | The reported system achieved 12.5% SWE-bench pass@1 and 87.7% HumanEvalFix at publication. | Abstract. | Historical results, not current state of the art. |
+
+## Evidence assessment
+
+Primary, peer-reviewed, open, and unusually aligned with harness engineering. Strong evidence that action/observation interface design can matter, but exact lessons should be reconstructed at the evaluated version rather than transferred from current code.
+
+## Relationships and contradictions
+
+Supports Anthropic's tool-interface guidance and suggests separating action representation, environment mediation, and observation construction rather than grouping all three as “tools.”
+
+## Leads and open questions
+
+Pin the evaluated implementation, reconstruct ablations, compare with raw shell and current coding-agent tools, and identify which gains survive newer models.

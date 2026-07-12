@@ -1,6 +1,6 @@
 # Provenance Capture and Bootstrap
 
-The approved D-004 implementation is documented in `docs/provenance-architecture.md` and lives under `tools/provenance/`. Its fixtures, archive-enforced real acceptance, and claim closeout pass. The realistic preflight retains its overhead finding but blocks honestly on one truncated search-result window. The reconstructed Cycle 1 audit passes the fixed `provisional-promotion` profile under an explicit maintainer waiver; bounded Checkpoint 2 selection is authorized.
+The approved D-004 implementation is documented in `docs/provenance-architecture.md` and lives under `tools/provenance/`. Its fixtures, archive-enforced real acceptance, and claim closeout pass. The realistic preflight retains its overhead finding but blocks honestly on one truncated search-result window. The reconstructed Cycle 1 audit passes the fixed `provisional-promotion` profile under an explicit maintainer waiver. The bounded Checkpoint 2 selection audit also passes; the maintainer approved the batch and authorized only the pinned Pi pilot before another alignment review.
 
 Search-result updates are monotonic and visible in generated audits. The named promotion profile enforces promotion-critical gates without optional caller flags. Provenance infrastructure is now frozen except for consequential failures observed during real research.
 

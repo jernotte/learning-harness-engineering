@@ -32,13 +32,29 @@ Describe what the approach gains, what it consumes or complicates, how it fails,
 
 Summarize outcome evidence, negative results, missing comparisons, confounds, and credible contradictions. Do not infer effectiveness from adoption alone.
 
+Explicitly compare the observed implementation practice with relevant academic research, controlled evaluations, benchmarks, and credible operational evidence. State whether they support, qualify, contradict, or have not tested the mechanism. When industry and research disagree, investigate whether the difference comes from model capability, task, version, metric, budget, production constraints, or an unsupported convention. Do not assume that deployment proves effectiveness or that a bounded study settles production design.
+
 ## Comparison and transferability
 
 Identify meaningfully similar and contrasting approaches. Discuss dependence on model, harness, task, domain, version, or infrastructure.
 
 ## Responsibility-lens map and friction
 
-Use source-native language in the narrative, then multi-label relevant mechanisms against the provisional responsibilities. Record:
+Use source-native language in the narrative, then multi-label relevant mechanisms against the provisional responsibilities. The IDs are:
+
+- R1 — run lifecycle and ingress;
+- R2 — model and instruction policy;
+- R3 — active-context and capability construction;
+- R4 — control flow and execution semantics;
+- R5 — action and environment mediation;
+- R6 — observation and feedback construction;
+- R7 — durable state and persistence;
+- R8 — decomposition, coordination, and aggregation;
+- R9 — verification, recovery, and control boundaries;
+- R10 — observability and external evaluation;
+- R11 — adaptation and optimization across runs;
+
+For the case, record:
 
 - responsibilities that were difficult to distinguish;
 - mechanisms that legitimately spanned boundaries;

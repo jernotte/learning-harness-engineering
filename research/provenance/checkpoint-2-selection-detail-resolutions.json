@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-07-12T19:13:00Z",
+  "agent": "primary",
+  "cycle": "field-landscape",
+  "pass": "checkpoint-2-selection-resolution",
+  "resolution_batch_id": "checkpoint-2-selection-resolution-batch-2",
+  "resolutions": [
+    {
+      "observation_id": "native-3786a4811cf4f18afe2a",
+      "previous_resolution_event_id": "native-3786a4811cf4f18afe2a",
+      "resolution": "linked",
+      "reason": "Outer tool call reopening exact-tag repository pages at precise README or root-tree locations for conservative selection-level evidence.",
+      "linked_event_ids": ["cp2-detail-s002", "cp2-detail-s003", "cp2-detail-s004", "cp2-detail-s005", "cp2-detail-s006", "cp2-detail-s007", "cp2-detail-s008"]
+    },
+    {
+      "observation_id": "native-bace0ac4f31c619eed3b",
+      "previous_resolution_event_id": "native-bace0ac4f31c619eed3b",
+      "resolution": "linked",
+      "reason": "Nested native web observation for the exact-tag selection-detail pages.",
+      "linked_event_ids": ["cp2-detail-s002", "cp2-detail-s003", "cp2-detail-s004", "cp2-detail-s005", "cp2-detail-s006", "cp2-detail-s007", "cp2-detail-s008"]
+    }
+  ]
+}

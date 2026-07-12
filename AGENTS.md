@@ -22,9 +22,9 @@ Treat `outline.md` as an informed starting hypothesis. Do not silently adopt its
 
 ## Current authorization
 
-Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Bounded Checkpoint 2 selection is authorized but has not begun. Selection may inspect candidate versions and evidence modes only as needed to propose the batch; it does not authorize implementation deep dives or case studies, which remain blocked until Checkpoint 2 maintainer review. The eleven-responsibility lens remains provisional until Checkpoint 3 records taxonomy friction.
+Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Checkpoint 2 is approved: the six-case batch is selected, Claude Code remains conditional on a bounded maintainer-supplied evidence set, and only the Pi pilot at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b` is authorized. Pause for maintainer alignment after that one case; no other implementation deep dive or case study may begin. The eleven-responsibility lens remains provisional until Checkpoint 3 records taxonomy friction.
 
-D-004 remains approved. Its overhead preflight result stands, while one historical truncated search remains honestly marked incomplete. The fixed promotion profile and monotonic `search_update` safeguard are now enforced. Provenance infrastructure is frozen: change it only when real research exposes a consequential failure, not to address speculative or immaterial imperfections. Bootstrap activity remains segregated and `partial`; do not mix it into the subject corpus.
+D-004 remains approved. Its overhead preflight result stands, while one historical truncated search remains honestly marked incomplete. The fixed promotion profile and monotonic `search_update` safeguard are now enforced. Provenance infrastructure is frozen: change it only when real research exposes a consequential failure, not to address speculative or immaterial imperfections. Until manual `result_returned` events are mechanically bound to native output, any checkpoint relying on them must verify their canonical URLs against the retained native archive and record the check. If this becomes materially expensive or unreliable in search-heavy work, pause and ask whether the D-005 freeze exception is justified; do not preemptively implement an adapter. Bootstrap activity remains segregated and `partial`; do not mix it into the subject corpus.
 
 ## Scope
 
@@ -75,6 +75,8 @@ Use the approved provenance capture path for every query and source interaction.
 Read primary material and inspect code deeply. For an implementation, trace actual control flow, prompts, tool schemas, state transitions, persistence, error handling, and verification rather than relying on the README. Use history and tests when they clarify design intent or real behavior.
 
 Use `research/templates/case-study.md` as a starting schema, adapting it when the subject requires different treatment. Separate observed mechanism from explanation of why it may work. State assumptions, tradeoffs, failure modes, evaluation support, transfer limits, and open questions.
+
+Treat implementation prevalence as evidence of use, not effectiveness. For consequential mechanisms, compare the code and stated rationale with relevant academic research, controlled evaluations, benchmarks, negative results, and credible operational evidence. Record whether those sources support, qualify, contradict, or have not tested the practice. Preserve industry–research disagreement and investigate differing models, tasks, versions, metrics, budgets, and production constraints rather than automatically privileging either side.
 
 At Checkpoint 3, each case must report where the responsibility lens was difficult to apply, which mechanisms spanned boundaries, what did not fit, and what taxonomy change—if any—the evidence suggests. Do not silently repair the taxonomy during a case study.
 

@@ -1,7 +1,7 @@
 # Research Cycle: The Architectural Landscape of Modern Harnesses
 
 **Status:** Checkpoint 1 provisionally promoted under reconstructed-provenance waiver
-**Current phase:** Bounded Checkpoint 2 selection authorized but not begun
+**Current phase:** Checkpoint 2 approved; Pi pilot authorized but not begun
 **Governance:** Early alignment
 **Provenance status:** `reconstructed`. Exact query bundles were recovered from three rollout files; complete provider result windows, result ranks, all screening decisions, and exact inspection depth for report-only leads remain unrecoverable
 
@@ -66,7 +66,7 @@ The same word often hides different semantics. In particular, a handoff that tra
 
 The academic pass mapped control loops, tool/action interfaces, context and memory, planning/search, multi-agent organization, feedback and verification, evaluation, and compound-system optimization. It preserved contrary findings rather than selecting one narrative. The implementation recon report described 22 current or historically important systems across eight architectural families. The primary pass checked selected production documentation and implementation material. Because source-event capture did not exist, these activity counts are reconstructed from tool history, agent reports, and artifacts rather than a complete provenance ledger.
 
-Sixteen narrative records cited or used in the synthesis now have referenced dispositions, canonical claim mappings, and primary verification. Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other implementation details remain read-only leads without the durable source lifecycle required to support claims. Checkpoint 2 may evaluate them as candidates to pin; it must not inherit their reported mechanisms as evidence.
+Sixteen narrative records cited or used in the synthesis now have referenced dispositions, canonical claim mappings, and primary verification. Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other Cycle 1 implementation details remain read-only leads without the durable source lifecycle required to support claims. Checkpoint 2 independently pinned its selected repositories, but no reported mechanism was inherited as evidence.
 
 The cycle also retains a larger lead inventory for later deep dives, including ReAct, ReWOO, LATS, LLM+P, ToolBench/StableToolBench, tau-bench/tau2-bench, LoCoMo, LongMemEval, PlanBench, AgentBoard, DSPy, ADAS, SICA, and the open implementations listed in the synthesis. Leads are not evidence.
 
@@ -120,7 +120,11 @@ The maintainer granted the reconstructed-provenance waiver with a persistent lim
 
 ## Analysis plan and case-study status
 
-Bounded Checkpoint 2 selection is authorized but has not begun. It will state batch size and include a responsibility-coverage matrix, exact tags/commits/dates, documentation alignment, evidence mode, and lineage risk. The batch will deliberately include one closed production reference case using Claude Code material supplied by the maintainer; its externally supported behavior will not be presented as inspected internal architecture. Selection ends at a maintainer checkpoint before any deep dive or case study.
+The proposed set is documented in `research/selections/checkpoint-2-deep-dive-set.md`: Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. The five open cases and three alternates have exact tags and commits. The responsibility matrix is an expected-coverage hypothesis, not a mechanism claim. No case study has begun.
+
+Only Pi is authorized as a pilot. The pilot pauses for maintainer alignment before the other five cases. Claude Code remains blocked until its evidence set is supplied, enumerated, dated, and admitted.
+
+The bounded selection pass captured two GitHub search batches with 35 returned identities, screened eight exact-tag repository pages, resolved eight public Git refs, and retained three exact native transcript prefixes. All eight referenced repositories have full screening records and all 14 claim mappings have primary verification. Eleven audit warnings are resolved as expected selection limits: GitHub concentration, README/release-only inspection, and missing user-provided Claude Code material.
 
 ## Consolidation state
 
@@ -128,7 +132,7 @@ The provisional consolidation is `research/syntheses/field-landscape.md`. Comple
 
 ## Refinement and saturation review
 
-Checkpoint 1 evaluated landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. Reconstruction recovered exact query bundles but not complete result windows or screening activity, so it cannot support an accurate breadth, balance, absence-of-evidence, saturation, or marginal-information claim. The waiver preserves that limitation until a complete cycle revalidates the landscape. The next action is bounded Checkpoint 2 selection, not further landscape recon.
+Checkpoint 1 evaluated landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. Reconstruction recovered exact query bundles but not complete result windows or screening activity, so it cannot support an accurate breadth, balance, absence-of-evidence, saturation, or marginal-information claim. The waiver preserves that limitation until a complete cycle revalidates the landscape. The next action is the bounded Pi pilot, not further landscape recon.
 
 ## Process retrospective
 
@@ -141,7 +145,7 @@ The parallel split produced complementary maps, but the cycle lacked per-agent p
 | Foundation / Stage 0 | D-001 and initial repository foundation | 2026-07-10 | Approved | Continue with first cycle | None recorded | Cycle 1 recon |
 | Infrastructure / Stage 0.5 | D-004, real acceptance, and realistic preflight | 2026-07-11 | Approved and frozen | D-004 accepted; later correction honestly blocked one truncated preflight result without changing overhead evidence | Final monotonic-update and fixed-profile safeguards completed 2026-07-12 | Bounded Cycle 1 reconstruction, then Checkpoint 2 selection |
 | Checkpoint 1 | Reconstructed landscape, sourcing coverage, claim ledger, and three-layer taxonomy | 2026-07-12 | Provisionally promoted | Maintainer granted the reconstructed-provenance waiver and accepted the three-layer direction as provisional | Preserve caveat until complete revalidation; test responsibility boundaries at Checkpoint 3 | Bounded Checkpoint 2 selection |
-| Checkpoint 2 | First deep-dive set |  | Not reached |  |  |  |
+| Checkpoint 2 | `research/selections/checkpoint-2-deep-dive-set.md`, complete selection source/claim audit, and D-006 | 2026-07-12 | Approved | Maintainer selected the six-case portfolio with Claude Code conditional and authorized only the pinned Pi pilot | Preserve reconstructed caveat; archive-check manual result URLs; pause after Pi; no other case authorized | Pi pilot only |
 | Checkpoint 3 | First case-study batch |  | Not reached |  |  |  |
 | Checkpoint 4 | First cross-harness synthesis |  | Not reached |  |  |  |
 | Checkpoint 5 | First refine and saturation review |  | Not reached |  |  |  |

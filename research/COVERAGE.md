@@ -96,6 +96,14 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 - The audit's GitHub host concentration warning is explained, not erased: the implementation pass intentionally sampled repositories, while referenced evidence remains distributed across papers, documentation, a specification, and a synthesis.
 - Because provenance is reconstructed, the current evidence cannot establish breadth, balance, absence of evidence, marginal information, or saturation.
 
+## Checkpoint 2 selection coverage
+
+Checkpoint 2 selects Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. The five open cases have exact tags and commits; smolagents, STORM, and SWE-agent are pinned alternates. The other inherited leads remain deferred or historically excluded rather than silently disappearing. Only the Pi pilot is authorized before another maintainer alignment review.
+
+The responsibility matrix is a sampling hypothesis. Responsibilities 1–10 have at least two expected open-case contrasts, while Responsibility 11 remains weak and uncertain. Claude Code remains unknown across the matrix until its bounded evidence set is supplied. No case has yet tested whether these expectations are correct.
+
+The selection source audit is `complete` for its two bounded search batches and direct pin checks: 35 returned identities, ten opened sources, eight referenced repository records, two excluded operational sources, and 14 verified claim mappings. GitHub concentration and shallow repository inspection are intentional and resolved for a repository-selection decision, not evidence of landscape breadth or implementation depth. The 35 manually authored result URLs and both batched query strings were separately confirmed in the retained native archives before approval because the generated audit cannot establish that content binding itself. Cycle 1's reconstructed limitation still governs the landscape from which the candidates originated.
+
 ## Next coverage decision
 
-D-004 remains approved and its archive-enforced acceptance passes. The realistic preflight supports the overhead conclusion while honestly marking one truncated result window incomplete. The reconstructed audit passes the fixed provisional-promotion profile under the maintainer waiver. Bounded Checkpoint 2 selection is now authorized to propose a pinned contrast batch; the 24 repository leads are candidates to verify and pin, not evidence to inherit. Deep dives remain blocked until Checkpoint 2 review.
+Analyze only the pinned Pi pilot and use its responsibility-friction report to test whether the expected coverage and case method are useful. Pause for maintainer review afterward. Every other deep dive remains blocked, and Claude Code cannot begin until the maintainer-supplied material is enumerated and admitted.

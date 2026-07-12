@@ -40,6 +40,26 @@ Analysis asks what a system actually does and what the evidence can legitimately
 
 For a technique or paper, reconstruct the claim, comparison, conditions, outcome measure, and limitations. Check whether the benchmark measures the architectural benefit being attributed to it. Note model and harness dependencies because a gain on one pair may not transfer to another.
 
+Use the following provisional responsibilities as a multi-label analytical lens. They are questions to apply, not exclusive modules or a claim that every harness implements each one:
+
+| ID | Architectural responsibility | Central question |
+| --- | --- | --- |
+| R1 | Run lifecycle and ingress | What starts, resumes, cancels, wakes, and completes a run? |
+| R2 | Model and instruction policy | Which models, roles, instructions, settings, routing, and fallbacks govern cognitive work? |
+| R3 | Active-context and capability construction | What instructions, history, state, tools, skills, and observations enter a model call? |
+| R4 | Control flow and execution semantics | Who or what decides the next step, scheduling, branching, retries, and termination? |
+| R5 | Action and environment mediation | How are model actions represented, authorized, dispatched, and executed? |
+| R6 | Observation and feedback construction | How are results, errors, tests, and environment changes turned into usable model feedback? |
+| R7 | Durable state and persistence | What survives beyond a call or run, and how is it retained, recovered, updated, or forgotten? |
+| R8 | Decomposition, coordination, and aggregation | How is work divided, coordinated, isolated, and recombined? |
+| R9 | Verification, recovery, and control boundaries | How is acceptability judged, and how do failure, retry, rollback, escalation, and stopping work? |
+| R10 | Observability and external evaluation | How do developers trace, measure, benchmark, and evaluate the harness outside the active task? |
+| R11 | Adaptation and optimization across runs | How does evidence from completed runs change future prompts, skills, memory, workflows, tools, or code? |
+
+The full rationale and current evidence for these boundaries live in `research/syntheses/field-landscape.md`. Case studies must record where the lens clarifies a mechanism and where it blurs, omits, or distorts one.
+
+Implementation prevalence is evidence that a design is used, not that it is effective or best. For each consequential mechanism, ask whether academic work, controlled experiments, benchmarks, or credible operational evidence support, qualify, contradict, or simply have not tested the practice. Preserve disagreement rather than automatically privileging either industry adoption or academic results: deployed systems may optimize for conditions absent from a study, while common practice may also persist without valid outcome evidence. Agreement across independent implementation and outcome evidence can strengthen a pattern only within the conditions both actually support.
+
 Case studies should normally address:
 
 - the problem or model limitation being addressed;
@@ -48,6 +68,7 @@ Case studies should normally address:
 - the proposed causal explanation, clearly labeled as such;
 - benefits, costs, assumptions, and failure modes;
 - evaluation evidence and important missing tests;
+- agreement or disagreement between implementation practice and academic, benchmark, or other outcome evidence;
 - similarities and contrasts with other approaches;
 - portability across models, domains, and harnesses;
 - contradictions, confidence limits, and open questions.

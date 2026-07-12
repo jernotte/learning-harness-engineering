@@ -16,7 +16,7 @@ The research is intended to do three things at once. The process itself should d
 
 ## Repository shape
 
-The structure remains intentionally small while Checkpoint 2 selects the first deep-dive batch and the analytical lens awaits case-study testing. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
+The structure remains intentionally small while the approved Pi pilot begins testing the first deep-dive method and the analytical lens. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
 
 ```text
 docs/
@@ -41,4 +41,4 @@ tools/provenance/            capture, transcript-ingest, validation, and audit C
 
 Large third-party repositories belong in `/Users/jernotte/dev/reference-materials/research`, not in this repository. Findings derived from them belong here and should identify the inspected commit or release.
 
-The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver, and bounded Checkpoint 2 selection is authorized. An HTML dashboard and further speculative provenance work remain deferred.
+The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver. Checkpoint 2 is approved, and only the pinned Pi pilot is authorized before the next maintainer alignment review. An HTML dashboard and further speculative provenance work remain deferred.

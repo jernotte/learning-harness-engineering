@@ -211,7 +211,7 @@ The source-facing corpus should retain familiar modules and aliases, while cases
 
 ## Candidate deep-dive pool for Checkpoint 2
 
-Checkpoint 1 is provisionally promoted. The recon report offers this unapproved candidate pool for bounded Checkpoint 2 selection; every candidate remains subject to pinning and evidence-mode review:
+At Checkpoint 1, the recon report offered the following unapproved candidate pool for bounded Checkpoint 2 selection. D-006 later selected and pinned a six-case batch; this historical list remains a record of the reconstructed landscape, not evidence inherited by the selected cases:
 
 - **Codex CLI** — large, current model-driven coding runtime with tool registry, policy/sandboxing, context management, sessions, hooks, and delegation.
 - **Pi** — deliberately small/extensible coding core with unusually explicit branch and compaction semantics and externalized containment.
@@ -243,4 +243,4 @@ The batch should not contain eight similar coding agents simply because their co
 
 ## Checkpoint 1 decision
 
-The maintainer provisionally promoted the three-layer direction and responsibility map under an explicit reconstructed-provenance waiver. This does not establish breadth, balance, absence of evidence, marginal information, saturation, or final taxonomy validity. Bounded Checkpoint 2 selection may propose a pinned contrast batch; Checkpoint 3 must test where the lens blurs or fails. Every later summary relying on this cycle must preserve the reconstruction caveat until a complete cycle revalidates the landscape.
+The maintainer provisionally promoted the three-layer direction and responsibility map under an explicit reconstructed-provenance waiver. This does not establish breadth, balance, absence of evidence, marginal information, saturation, or final taxonomy validity. D-006 selected a pinned contrast batch and authorized only its Pi pilot; Checkpoint 3 must test where the lens blurs or fails. Every later summary relying on this cycle must preserve the reconstruction caveat until a complete cycle revalidates the landscape.

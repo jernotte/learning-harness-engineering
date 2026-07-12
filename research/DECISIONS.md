@@ -201,3 +201,48 @@ An incomplete search can become complete only through a newly captured, mechanic
 ### Approval record
 
 Approved by the maintainer on 2026-07-12 as part of the Checkpoint 1 waiver, provisional promotion, and provenance-freeze closeout.
+
+## D-006 — First deep-dive set and single-case pilot
+
+**Status:** Approved — Pi pilot only
+**Date:** 2026-07-12
+
+### Decision
+
+Select a six-case first batch: Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and Claude Code. Treat Claude Code as conditional until the maintainer supplies an independently enumerable evidence set. Authorize only the Pi case as a pilot and pause for an alignment review before any other batch member begins.
+
+Use these immutable open-case boundaries:
+
+- Pi `v0.80.6` at `2b3fda9921b5590f285165287bd442a25817f17b`;
+- OpenHands Software Agent SDK `v1.35.0` at `9028562e2d5eda76de662ec9b7584125760eb83f`;
+- LangGraph `1.2.5` at `7ab79f9f3e94fb4357334d902f5fd69ec0088eb4`;
+- Browser Use `0.13.4` at `68afe46456a23009a7d5eec2017ec7ab51b7c027`;
+- OpenClaw `v2026.6.6` at dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`.
+
+### Why
+
+The portfolio preserves five contrasts with six cases: compact versus platform-scale coding harnesses; model-directed versus explicitly programmed control; coding versus perception-grounded browser work; short interactive runs versus long-lived operational lifecycle; and open implementation evidence versus a closed production case. Six is the smallest proposed set that preserves all five contrasts. Pi is the pilot because its tagged repository presents the agent runtime, provider layer, coding CLI, state management, and containment boundary together within a comparatively bounded project.
+
+The responsibility matrix is explicitly a hypothesis for Checkpoint 3, not evidence that these systems implement the expected mechanisms. Responsibility 11 remains weak rather than being padded with an unadmitted adaptation lead.
+
+### Alternatives considered
+
+- Replace Pi with smolagents `v1.26.0` to emphasize code-as-action. This gives up the compact coding-harness pilot chosen to test the full case method.
+- Replace LangGraph with STORM `v1.1.0` to emphasize a research pipeline. This improves domain diversity but removes the cleanest general programmed-control counterpoint.
+- Replace Pi or OpenHands with SWE-agent `v1.1.0` to align code with published ACI evidence. This increases coding-agent concentration.
+- Use five cases by dropping OpenClaw or Browser Use. That leaves lifecycle or observation/environment contrast materially weaker.
+- Begin the entire batch after approval. This magnifies early schema or taxonomy drift before the maintainer can inspect one real case.
+
+### Consequences
+
+Only Pi begins. It produces one case study, claim ledger, source audit, and responsibility-friction report, then pauses for maintainer alignment. The other cases remain selected but unauthorized. Repository-contained documentation is aligned to the exact tag; live documentation must be separately dated. Claude Code may support declared or observed behavior only and cannot be used to invent internal architecture.
+
+The case program begins from concrete implementations to ground the research in mechanisms that are actually used, but it does not treat adoption as proof of quality. Each case compares consequential practices with relevant academic research, controlled evaluations, benchmarks, and credible operational evidence. Alignment may strengthen a conditional pattern; disagreement must be preserved and investigated for differences in models, tasks, versions, metrics, budgets, production constraints, or unsupported convention. Recon may reopen whenever a case exposes a gap or contradiction.
+
+The provenance infrastructure remains frozen. The selection pass required explicit canonical authoring for generic web results despite complete native reconciliation; this overhead is recorded as a limitation, not used to reopen D-005 because it did not materially affect a research conclusion.
+
+The generated audit proves interaction reconciliation but does not bind the contents of manual `result_returned` events to native output. Before approval, the primary agent compared all 35 manually recorded canonical URLs and both batched query strings against the three retained transcript archives; every value was present. Until a consequential real-research failure justifies a D-005 freeze exception, any later checkpoint relying on manual result events must repeat and record that archive comparison. If search-heavy work makes the check materially expensive or unreliable, the work pauses for a maintainer decision. This decision does not preauthorize a generic-web adapter or a new audit rule.
+
+### Approval record
+
+The maintainer approved D-006 on 2026-07-12 after directly reviewing the selection logic, implementation-grounded progression, responsibility lens, and planned relationship between case evidence and academic or empirical research. The maintainer required the R1–R11 reference to be made self-contained and emphasized that cases must preserve and investigate agreement and disagreement between deployed practice and research evidence. An external review separately verified all eight pins, the selection audit, archive integrity, and the 35 manual result URLs. Only the pinned Pi pilot is authorized. Claude Code remains conditional, and OpenHands SDK, LangGraph, Browser Use, OpenClaw, and every alternate remain blocked until the post-Pi alignment review or a later explicit decision.

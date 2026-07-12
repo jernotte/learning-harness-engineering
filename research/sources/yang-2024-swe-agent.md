@@ -1,5 +1,6 @@
 # Source Record: SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering
 
+**Source ID:** FL-S016
 **Maturity:** Captured source
 **Source type:** Peer-reviewed research paper and open implementation
 **Author or organization:** John Yang and collaborators
@@ -7,12 +8,20 @@
 **URL:** https://arxiv.org/abs/2405.15793
 **Project:** https://swe-agent.com/
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained abstract/design excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s016`, `fl-inspect-s016`, `fl-disposition-s016`
+**Related claim IDs:** C007, C008, and C022 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C007 — abstract, ACI design sections, and reported ablations; C008 — ACI design sections; C022 — ACI design and ablations
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 SWE-agent treats the interface between model and computer as a first-class optimization target and reports task results tied to that design.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

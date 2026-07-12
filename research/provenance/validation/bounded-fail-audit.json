@@ -1,0 +1,299 @@
+{
+  "generated_at": "2026-07-12T00:42:40.130Z",
+  "cycle": "bounded-validation",
+  "completeness": "complete",
+  "gate_passed": false,
+  "counts": {
+    "searches": 1,
+    "searches_with_incomplete_result_capture": 0,
+    "returned": 5,
+    "opened": 4,
+    "read_only": 1,
+    "referenced": 2,
+    "excluded": 1,
+    "claims": 2,
+    "verifications": 0,
+    "native_boundaries": 1,
+    "native_observations": 1,
+    "automatically_resolved_observations": 0,
+    "human_resolved_observations": 0,
+    "unresolved_observations": 1,
+    "linked_observations": 0,
+    "not_research_observations": 0,
+    "observation_resolution_batches": 0,
+    "manual_capture_actions": "not measured",
+    "semantic_batch_actions": "not measured"
+  },
+  "planned_channels": [
+    "general web search",
+    "GitHub repository search"
+  ],
+  "actual_channels": [
+    "general web search"
+  ],
+  "host_distribution": {
+    "arxiv.org": 3,
+    "github.com": 1
+  },
+  "repository_depth": [
+    {
+      "source_id": "fx-source-d",
+      "surfaces": [
+        "README"
+      ],
+      "pinned": false
+    }
+  ],
+  "repository_observations": [],
+  "repository_summary": {
+    "returned": 1,
+    "opened": 1,
+    "readme_only": 1,
+    "code_inspected": 0,
+    "test_inspected": 0,
+    "history_inspected": 0,
+    "pinned": 0,
+    "referenced": 1
+  },
+  "local_repository_summary": {
+    "observations": 0,
+    "code_inspected": 0,
+    "test_inspected": 0,
+    "history_inspected": 0,
+    "commit_captured": 0
+  },
+  "capture_archives": [],
+  "distributions": {
+    "host": {
+      "arxiv.org": 3,
+      "github.com": 1
+    },
+    "organization": {
+      "Fixture A": 1,
+      "Fixture B": 1,
+      "Fixture C": 1,
+      "Example": 1
+    },
+    "source_type": {
+      "paper": 3,
+      "repository": 1
+    },
+    "publication_year": {
+      "unspecified": 4
+    },
+    "primary_secondary": {
+      "unspecified": 4
+    },
+    "evidence_lineage": {
+      "unspecified": 4
+    }
+  },
+  "searches": [
+    {
+      "event_id": "fx-search-web",
+      "query_id": "fx-Q1",
+      "query": "bounded provenance fixture",
+      "query_family": "validation",
+      "channel": "general web search",
+      "tool_provider": "fixture search",
+      "filters": null,
+      "requested_limit": 5,
+      "observed_returned_count": 5,
+      "result_capture_status": "complete",
+      "truncation": "none",
+      "purpose": "Exercise the bounded source funnel",
+      "coverage_dimension": "mixed source discovery"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fx-source-a",
+      "canonical_url": "https://arxiv.org/a",
+      "host": "arxiv.org",
+      "organization": "Fixture A",
+      "source_type": "paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "fx-Q1"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "full_substantive",
+      "surfaces": [
+        "paper"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports fixture claim",
+      "version_freshness_state": "unspecified",
+      "record_path": "tools/provenance/fixtures/missing-a.md"
+    },
+    {
+      "source_id": "fx-source-b",
+      "canonical_url": "https://arxiv.org/b",
+      "host": "arxiv.org",
+      "organization": "Fixture B",
+      "source_type": "paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "fx-Q1"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "partial_substantive",
+      "surfaces": [
+        "paper"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "Useful background but not cited",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "fx-source-c",
+      "canonical_url": "https://arxiv.org/c",
+      "host": "arxiv.org",
+      "organization": "Fixture C",
+      "source_type": "paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "fx-Q1"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "abstract"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "Duplicate and too shallow",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "fx-source-d",
+      "canonical_url": "https://github.com/example/repo",
+      "host": "github.com",
+      "organization": "Example",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "fx-Q1"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "README"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports implementation claim",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "tools/provenance/fixtures/missing-d.md"
+    },
+    {
+      "source_id": "fx-source-e",
+      "canonical_url": "https://example.net/unopened",
+      "host": "example.net",
+      "organization": "Example",
+      "source_type": "blog",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "fx-Q1"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    }
+  ],
+  "errors": [
+    {
+      "code": "missing_source_record",
+      "message": "Referenced source lacks an existing full record: fx-source-a",
+      "source_id": "fx-source-a"
+    },
+    {
+      "code": "missing_source_record",
+      "message": "Referenced source lacks an existing full record: fx-source-d",
+      "source_id": "fx-source-d"
+    },
+    {
+      "code": "missing_claim_declaration",
+      "message": "Claim reference has no canonical declaration: bounded-validation-synthesis-fixture-C001",
+      "claim_id": "bounded-validation-synthesis-fixture-C001"
+    },
+    {
+      "code": "missing_verification",
+      "message": "Claim mapping lacks primary verification: bounded-validation-synthesis-fixture-C001 -> fx-source-a @ section 2",
+      "claim_id": "bounded-validation-synthesis-fixture-C001",
+      "source_id": "fx-source-a"
+    },
+    {
+      "code": "missing_claim_declaration",
+      "message": "Claim reference has no canonical declaration: bounded-validation-synthesis-fixture-C002",
+      "claim_id": "bounded-validation-synthesis-fixture-C002"
+    },
+    {
+      "code": "missing_verification",
+      "message": "Claim mapping lacks primary verification: bounded-validation-synthesis-fixture-C002 -> fx-source-d @ src/loop.ts:10",
+      "claim_id": "bounded-validation-synthesis-fixture-C002",
+      "source_id": "fx-source-d"
+    },
+    {
+      "code": "unpinned_implementation_claim",
+      "message": "Implementation claim uses an unpinned source: fx-source-d",
+      "claim_id": "bounded-validation-synthesis-fixture-C002",
+      "source_id": "fx-source-d"
+    },
+    {
+      "code": "unreconciled_native_interaction",
+      "message": "Native research-capable interaction is unreconciled: fx-native-unreconciled",
+      "native_event_id": "fx-native-unreconciled"
+    },
+    {
+      "code": "native_source_missing",
+      "message": "Neither runtime transcript nor durable archive is available for fx-boundary",
+      "boundary_id": "fx-boundary"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "planned_channel_missing",
+      "message": "Planned channel had no search: GitHub repository search",
+      "channel": "GitHub repository search",
+      "resolved": false
+    },
+    {
+      "code": "host_concentration",
+      "message": "3/4 opened sources came from arxiv.org",
+      "host": "arxiv.org",
+      "count": 3,
+      "total": 4,
+      "resolved": false
+    },
+    {
+      "code": "repository_shallow",
+      "message": "fx-source-d was inspected without code, tests, or history",
+      "source_id": "fx-source-d",
+      "surfaces": [
+        "README"
+      ],
+      "pinned": false,
+      "resolved": false
+    }
+  ]
+}

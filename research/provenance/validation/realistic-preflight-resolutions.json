@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-11T23:55:00Z",
+  "agent": "primary",
+  "cycle": "stage-0-5-realistic-preflight",
+  "pass": "observation-resolution",
+  "resolution_batch_id": "stage-0-5-realistic-preflight-resolution-batch-1",
+  "resolutions": [
+    {
+      "observation_id": "native-9a95dba79bbd604733ab",
+      "previous_resolution_event_id": "native-9a95dba79bbd604733ab",
+      "resolution": "not_research",
+      "reason": "The call enumerated locally available runtime tool names and did not search, open, or inspect subject-matter evidence."
+    },
+    {
+      "observation_id": "native-c232a4a31492af588f18",
+      "previous_resolution_event_id": "native-c232a4a31492af588f18",
+      "resolution": "not_research",
+      "reason": "The call inspected locally available tool descriptions to locate an infrastructure adapter and did not execute a search or open subject-matter evidence."
+    }
+  ],
+  "search_updates": [
+    {
+      "search_event_id": "auto-search-21ec016aa02182c152",
+      "reason": "The archived native output at line 1402 begins with an explicit runtime truncation warning and contains unparseable partial search JSON; the historical automatic zero-result fields are not supported.",
+      "query_family": null,
+      "purpose": null,
+      "coverage_dimension": null,
+      "semantic_status": "pending",
+      "observed_returned_count": null,
+      "total_hits_reported": null,
+      "truncation": "runtime output truncation detected; returned-result window is incomplete",
+      "result_capture_status": "incomplete_truncated"
+    }
+  ]
+}

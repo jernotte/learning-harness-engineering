@@ -1,17 +1,26 @@
 # Source Record: Claude Code Context and Memory Documentation
 
+**Source ID:** FL-S004
 **Maturity:** Captured source
 **Source type:** Official product documentation
 **Author or organization:** Anthropic
 **Publication date:** Not stated; current documentation inspected 2026-07-10
 **URLs:** https://code.claude.com/docs/en/how-claude-code-works and https://code.claude.com/docs/en/memory
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s004`, `fl-inspect-s004`, `fl-disposition-s004`
+**Related claim IDs:** C005 and C016 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C005 — How Claude Code Works, “The context window”; C016 — “The context window” and Memory, “Auto memory”
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 These tightly related pages expose concrete context-lifecycle and persistent-memory policies in a production coding harness.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

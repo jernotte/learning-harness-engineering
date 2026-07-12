@@ -1,17 +1,26 @@
 # Source Record: OpenAI Agents SDK Architecture Documentation
 
+**Source ID:** FL-S013
 **Maturity:** Captured source
 **Source type:** Official SDK documentation
 **Author or organization:** OpenAI
 **Publication date:** Not stated; current documentation inspected 2026-07-10
 **URLs:** https://openai.github.io/openai-agents-python/agents/ and https://openai.github.io/openai-agents-python/handoffs/ and https://openai.github.io/openai-agents-python/tracing/
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained documentation output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s013`, `fl-inspect-s013`, `fl-disposition-s013`
+**Related claim IDs:** C010, C012, C014, and C023 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C010 and C023 — Handoffs; C012 — Tracing; C014 — Handoffs and Tracing
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 This documentation exposes a current orchestration decomposition centered on Agent plus Runner, tools, guardrails, sessions, handoffs, hooks, results, and tracing.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

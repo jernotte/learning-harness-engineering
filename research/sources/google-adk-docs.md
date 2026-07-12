@@ -1,17 +1,26 @@
 # Source Record: Google Agent Development Kit Architecture Documentation
 
+**Source ID:** FL-S007
 **Maturity:** Captured source
 **Source type:** Official framework documentation and engineering article
 **Author or organization:** Google
 **Publication date:** Documentation current in 2026; ADK 2.0 article 2026-07-01
 **URLs:** https://adk.dev/runtime/ and https://adk.dev/sessions/ and https://developers.googleblog.com/en/why-we-built-adk-20/
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained documentation output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s007`, `fl-inspect-s007`, `fl-disposition-s007`
+**Related claim IDs:** C001, C003, C004, C006, C009, C014, C015, C016, and C024 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C001, C003, and C014 — Runtime and Sessions documentation; C004, C006, C015, and C024 — ADK 2.0 “When to use Agents vs Workflows”; C009 and C016 — Sessions and Memory documentation
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 ADK makes event loops, session/state/memory services, deterministic graphs, dynamic workflows, multi-agent collaboration, tools, artifacts, callbacks, evaluation, and observability separately visible. Its recent 2.0 rationale directly addresses the model-versus-code control boundary.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

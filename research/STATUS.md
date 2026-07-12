@@ -1,13 +1,13 @@
 # Research Status
 
 **Governance mode:** Early alignment — checkpoints require maintainer review
-**Current phase:** Stage 0.5 — Provenance methodology aligned; capture implementation pending
+**Current phase:** Checkpoint 1 provisionally promoted — bounded Checkpoint 2 selection authorized but not begun
 **Active cycle:** `research/cycles/field-landscape.md`
-**Last updated:** 2026-07-11
+**Last updated:** 2026-07-12
 
 ## Current objective
 
-Build and validate the minimum instrumented provenance capture path, reconstruct Cycle 1 honestly, close its claim/source gaps, and re-present Checkpoint 1 before any deep-dive selection.
+Prepare the bounded Checkpoint 2 selection proposal: a pinned, architecturally contrasting batch with a responsibility-coverage matrix and explicit evidence modes. Selection is authorized; implementation deep dives and case studies are not.
 
 ## What now exists
 
@@ -17,18 +17,29 @@ Build and validate the minimum instrumented provenance capture path, reconstruct
 - Canonical trackers for coverage, decisions, and status
 - Minimum templates for source records, case studies, topic syntheses, and cycle reviews
 - Agent instructions defining concurrency, repository use, evidence discipline, and human review gates
-- A conditionally approved three-layer direction: source-native discovery vocabulary, a multi-label responsibility lens, and a later human-facing narrative; final promotion remains pending
+- A provisionally promoted three-layer direction: source-native discovery vocabulary, a multi-label responsibility lens, and a later human-facing narrative; the responsibility lens remains provisional until Checkpoint 3 friction testing
 - An approved provenance and source-coverage specification in `docs/source-provenance.md`
 - Updated source-audit and claim-ledger requirements in the research templates
+- An approved native-transcript reconciliation architecture in `docs/provenance-architecture.md`
+- A dependency-free capture, native-ingest, semantic-batch, validation, and audit CLI under `tools/provenance/`
+- Failing and corrected fixture audits plus one real transcript-backed acceptance audit
+- A review-scope manifest with two real claims, exact evidence mappings, primary verification, and prose-ledger attestation
+- Append-only observation resolution with a valid 38-observation overhead measurement and an honestly blocked incomplete-result subcheck
+- A real exact-prefix archive with owner-only permissions plus passing archive-enforced regeneration
+- A reconstructed Cycle 1 canonical event log with 27 recoverable query bundles, 40 opened source identities, 16 referenced records, and 24 unadmitted implementation leads
+- A canonical ledger of 24 material synthesis claims with 50 exact claim/source/location mappings and 50 primary verification events
+- A generated reconstructed source and claim-evidence audit that passes the fixed provisional-promotion profile under the maintainer's explicit waiver, with one explained concentration warning
+- Monotonic search-result corrections and a fixed provisional-promotion audit profile
+- A frozen provenance infrastructure policy that permits further changes only for consequential failures observed during real research
 
 ## Decisions and checkpoints
 
-The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved the revised D-002 direction and approved D-003. Checkpoint 1 is not complete. Authorized work is limited to methodology maintenance, provenance feasibility/build/test work, Cycle 1 reconstruction, and remediation. Checkpoint 2 deep-dive selection is not yet authorized.
+The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and authorized bounded Checkpoint 2 selection after the final safeguards passed.
 
 ## Confidence and risks
 
-Three complementary, separately executed passes produced similar responsibility-oriented maps, but they shared project framing and are not independent corroboration. Confidence remains provisional because the map has not been exercised through full cases. Initial narrative reconstruction of Cycle 1 is complete; formal event and claim reconstruction awaits capture validation. The best attainable provenance class is `reconstructed` because exact subagent queries, all returned results, and every screened source are not recoverable. Several synthesis statements rely on recon leads that have not completed the durable source-record lifecycle and therefore cannot support reviewed findings.
+The real bounded acceptance audit still passes with two claims, two mappings, and durable retention. The realistic preflight still resolves 36/38 observations automatically and two exceptions in one batch, while its effective audit blocks on one archived, truncated search whose returned-result count is unknowable. The reconstructed Cycle 1 audit verifies all 50 claim mappings and all 16 referenced records and now passes the fixed provisional-promotion profile under the maintainer waiver. The waiver does not establish complete result windows, screening breadth, source balance, absence of evidence, marginal information, saturation, or final taxonomy validity. The 24 GitHub leads remain visible, unadmitted, and non-evidentiary.
 
 ## Next highest-value action
 
-Investigate native tool-event/transcript ingestion, choose the minimum viable capture architecture, build and validate it, then generate the reconstructed Cycle 1 source and claim audits. Re-present the remediated Checkpoint 1 package for authoritative review.
+Begin bounded Checkpoint 2 selection. Propose batch size, responsibility coverage, exact versions, evidence modes, documentation alignment, and lineage risks; include the maintainer-supplied Claude Code closed-source case. Pause for maintainer review before any deep dive or case study begins.

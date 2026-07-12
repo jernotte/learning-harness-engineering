@@ -1,0 +1,244 @@
+{
+  "generated_at": "2026-07-12T18:06:53.159Z",
+  "cycle": "stage-0-5-real-capture",
+  "completeness": "complete",
+  "profile": "diagnostic",
+  "gate_passed": true,
+  "counts": {
+    "searches": 1,
+    "search_updates": 0,
+    "applied_search_updates": 0,
+    "rejected_search_updates": 0,
+    "searches_with_incomplete_result_capture": 0,
+    "returned": 3,
+    "returned_source_identities_recovered": 3,
+    "opened": 1,
+    "read_only": 0,
+    "referenced": 1,
+    "excluded": 0,
+    "declared_claims": 2,
+    "claims": 2,
+    "claim_evidence_mappings": 2,
+    "verifications": 2,
+    "unverified_claim_evidence_mappings": 0,
+    "native_boundaries": 1,
+    "native_observations": 3,
+    "automatically_resolved_observations": 3,
+    "human_resolved_observations": 0,
+    "unresolved_observations": 0,
+    "linked_observations": 3,
+    "not_research_observations": 0,
+    "observation_resolution_batches": 0,
+    "manual_capture_actions": 0,
+    "semantic_batch_actions": 1
+  },
+  "planned_channels": [
+    "official documentation search",
+    "local repository inspection"
+  ],
+  "actual_channels": [
+    "official documentation search",
+    "local repository inspection"
+  ],
+  "host_distribution": {
+    "learn.chatgpt.com": 1
+  },
+  "repository_depth": [],
+  "repository_observations": [
+    {
+      "timestamp": "2026-07-11T20:11:53.545Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-real-capture",
+      "pass": "bounded-remediation",
+      "derived_from_native_event": "native-00a5cc10c4e4ebfa0564",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-a7c94601c833752767",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "0e0d9213bc530a036ee6f6fdf6e178ec46b7e30914f057465bcab0ea745d3f3e",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": "dfdffdc7ca76eda4ebb209f2074957ff0f1f9b70",
+      "capture_mode": "automatic",
+      "__line": 11
+    }
+  ],
+  "repository_summary": {
+    "returned": 0,
+    "opened": 0,
+    "readme_only": 0,
+    "code_inspected": 0,
+    "test_inspected": 0,
+    "history_inspected": 0,
+    "pinned": 0,
+    "referenced": 0
+  },
+  "local_repository_summary": {
+    "observations": 1,
+    "code_inspected": 1,
+    "test_inspected": 0,
+    "history_inspected": 1,
+    "commit_captured": 1
+  },
+  "claim_evidence": [
+    {
+      "claim_id": "stage-0-5-real-capture-analysis-provenance-architecture-C001",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "The documented PostToolUse hook covers supported Bash, apply_patch, and MCP tools, but does not cover WebSearch and does not intercept every unified shell call.",
+      "artifact_location": "docs/provenance-architecture.md, Acceptance boundary",
+      "confidence": "high for the live documentation observed on 2026-07-11",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "auto-source-99bc0cb8da0c7a35"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "stage-0-5-real-capture-analysis-provenance-architecture-C002",
+      "epistemic_kind": "engineering recommendation",
+      "claim_text": "Because the documented hook surface omits research-capable interactions that the provenance boundary must detect, hooks should be optional enrichment rather than the sole completeness boundary for this architecture.",
+      "artifact_location": "docs/provenance-architecture.md, Acceptance boundary",
+      "confidence": "high for the evaluated Codex runtime and documented hook surface",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    }
+  ],
+  "capture_archives": [
+    {
+      "event_id": "capture-archive-518caa77db54c6e9ce",
+      "timestamp": "2026-07-11T23:50:00Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-real-capture",
+      "pass": "retention",
+      "event_type": "capture_archive",
+      "boundary_id": "native-boundary-fd4a1895c9a1600a819e",
+      "archive_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/stage-0-5-real-capture/native-boundary-fd4a1895c9a1600a819e-prefix.jsonl",
+      "archive_sha256": "fd4a1895c9a1600a819ee7cca0b1f95df6c22e15cb46d49096870c1152147414",
+      "archive_bytes": 5434209,
+      "line_start": 1,
+      "line_end": 1641,
+      "source_runtime_path": "/Users/jernotte/.codex/sessions/2026/07/10/rollout-2026-07-10T20-20-05-019f4ec2-9fba-7033-a71b-0e34e29bf2ae.jsonl",
+      "captured_at": "2026-07-11T23:50:00Z",
+      "archive_mode": "0600",
+      "__line": 25
+    }
+  ],
+  "provenance_waivers": [],
+  "distributions": {
+    "host": {
+      "learn.chatgpt.com": 1
+    },
+    "organization": {
+      "OpenAI": 1
+    },
+    "source_type": {
+      "official documentation": 1
+    },
+    "publication_year": {
+      "unspecified": 1
+    },
+    "primary_secondary": {
+      "primary": 1
+    },
+    "evidence_lineage": {
+      "OpenAI documentation": 1
+    }
+  },
+  "searches": [
+    {
+      "event_id": "auto-search-6846b7f254abbfca45",
+      "query_id": "auto-Q-7ace547f2e79c9",
+      "query": "Codex PostToolUse WebSearch coverage",
+      "query_family": "official documentation lookup",
+      "channel": "official documentation search",
+      "tool_provider": "OpenAI Developer Docs MCP",
+      "filters": "official OpenAI documentation",
+      "requested_limit": 3,
+      "observed_returned_count": 3,
+      "total_hits_reported": 246,
+      "result_capture_status": "complete",
+      "truncation": "observed window smaller than total hits",
+      "purpose": "bounded capture test",
+      "coverage_dimension": "native capture feasibility"
+    }
+  ],
+  "search_updates": [],
+  "sources": [
+    {
+      "source_id": "auto-source-6959106e44077cd3",
+      "canonical_url": "https://learn.chatgpt.com/docs/enterprise/work-admin-faq",
+      "host": "learn.chatgpt.com",
+      "organization": "OpenAI",
+      "source_type": "official documentation",
+      "publication_year": "unspecified",
+      "primary_secondary": "primary",
+      "evidence_lineage": "OpenAI documentation",
+      "query_ids": [
+        "auto-Q-7ace547f2e79c9"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-99bc0cb8da0c7a35",
+      "canonical_url": "https://learn.chatgpt.com/docs/hooks",
+      "host": "learn.chatgpt.com",
+      "organization": "OpenAI",
+      "source_type": "official documentation",
+      "publication_year": "unspecified",
+      "primary_secondary": "primary",
+      "evidence_lineage": "OpenAI documentation",
+      "query_ids": [
+        "auto-Q-7ace547f2e79c9"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "partial_substantive",
+      "surfaces": [
+        "documentation"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Official documentation materially constrains whether hooks can serve as the completeness mechanism.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/provenance/validation/sources/openai-hooks.md"
+    },
+    {
+      "source_id": "auto-source-f1bfabe51f8471f2",
+      "canonical_url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "host": "learn.chatgpt.com",
+      "organization": "OpenAI",
+      "source_type": "official documentation",
+      "publication_year": "unspecified",
+      "primary_secondary": "primary",
+      "evidence_lineage": "OpenAI documentation",
+      "query_ids": [
+        "auto-Q-7ace547f2e79c9"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

@@ -1,17 +1,26 @@
 # Source Record: Building Effective Agents
 
+**Source ID:** FL-S001
 **Maturity:** Captured source
 **Source type:** Official engineering article
 **Author or organization:** Anthropic
 **Publication date:** 2024-12-19
 **URL:** https://www.anthropic.com/engineering/building-effective-agents
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s001`, `fl-inspect-s001`, `fl-disposition-s001`
+**Related claim IDs:** C002, C006, C010, and C015 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C002, C006, and C015 — “What are agents?” / “Building blocks, workflows, and agents”; C010 — orchestrator-workers and parallelization patterns
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 This article supplies a production-informed distinction between deterministic workflows and model-directed agents, plus a compact vocabulary of common control-flow patterns.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

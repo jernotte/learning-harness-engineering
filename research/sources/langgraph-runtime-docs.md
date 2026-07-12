@@ -1,17 +1,26 @@
 # Source Record: LangGraph Persistence and Subgraph Documentation
 
+**Source ID:** FL-S010
 **Maturity:** Captured source
 **Source type:** Official framework documentation
 **Author or organization:** LangChain
 **Publication date:** Not stated; current documentation inspected 2026-07-10
 **URLs:** https://docs.langchain.com/oss/javascript/langgraph/persistence and https://docs.langchain.com/oss/python/langgraph/use-subgraphs
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained documentation output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s010`, `fl-inspect-s010`, `fl-disposition-s010`
+**Related claim IDs:** C003, C009, and C016 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C003 — Persistence documentation; C009 — Persistence and “Subgraph persistence”; C016 — Persistence documentation
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 LangGraph exposes durable execution and state boundaries as explicit runtime architecture rather than treating memory as chat history alone.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

@@ -6,7 +6,7 @@ This is the concise human view of what the project has examined, what remains pr
 
 Cycle 1 used three complementary, separately executed passes: academic/empirical research, an implementation recon report describing 22 systems, and production/cross-cutting documentation with selected code checks. The passes shared the same project framing and are not independent corroboration. Because search and source events were not instrumented, Cycle 1 coverage is `reconstructed` and its exact query, result, and screening breadth is incomplete.
 
-The maintainer has directionally accepted a three-layer model: source-native vocabulary for discovery/navigation, the responsibilities below as a multi-label analytical lens, and a later human-facing narrative. Final Checkpoint 1 promotion awaits provenance and claim/source remediation.
+The maintainer provisionally promoted the three-layer model under a reconstructed-provenance waiver: source-native vocabulary for discovery/navigation, the responsibilities below as a multi-label analytical lens, and a later human-facing narrative. Bounded reconstruction recovered 27 exact query bundles, 40 opened source identities, 16 referenced records, and 24 unadmitted implementation leads. The limitation must remain visible until a complete cycle revalidates the landscape, and Checkpoint 3 must test the responsibility lens through recorded taxonomy friction.
 
 ## Source-native topic index
 
@@ -14,21 +14,21 @@ This is the human and search entry point. Query families are provisional because
 
 | Familiar topic | Example query/alias families | Related analytical responsibilities | Current coverage state |
 | --- | --- | --- | --- |
-| Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | Several legacy records await formal admission; implementation breadth reconstructed |
-| Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP have legacy records awaiting formal admission; current production interfaces need pinned cases |
-| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | A Claude context legacy record awaits formal admission; Pi/OpenHands remain leads |
-| Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, and MemoryAgentBench have legacy records awaiting formal admission; procedural memory thin |
-| Planning and workflows | plan-and-execute, replanning, tree search, deterministic workflow | 4, 8, 9 | Agentless and practitioner-guidance legacy records await formal admission; ReAct/ReWOO/LATS remain leads |
+| Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | Referenced general records are mapped; implementation breadth remains reconstructed |
+| Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP are mapped; current production interfaces still need pinned cases |
+| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence is mapped; Pi/OpenHands remain unadmitted leads |
+| Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, and MemoryAgentBench evidence is mapped; procedural memory remains thin |
+| Planning and workflows | plan-and-execute, replanning, tree search, deterministic workflow | 4, 8, 9 | Agentless and practitioner guidance are mapped; ReAct/ReWOO/LATS remain unadmitted leads |
 | Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Mostly framing and product documentation; empirical depth pending |
-| Subagents and multi-agent systems | handoff, agent-as-tool, worker, delegation, debate, voting | 3, 4, 8, 9 | Claude/OpenAI and BenchAgent legacy records await formal admission; implementation comparisons pending |
-| Verification and evaluation | tests, critic, judge, grader, trajectory, benchmark, self-correction | 6, 9, 10 | Several empirical and production legacy records await formal admission; judge/evaluator gaps remain |
-| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph legacy records await formal admission; OpenClaw/Hermes/Letta remain leads |
-| Model routing and instruction policy | model selection, fallback, effort, role model, system prompt | 2, 3 | Claude/ADK documentation records await formal admission; controlled comparisons scarce |
-| Self-improvement | context optimization, workflow search, self-editing harness, regression gate | 7, 10, 11 | A Weng legacy record awaits formal admission as framing; primary research bundle remains leads |
+| Subagents and multi-agent systems | handoff, agent-as-tool, worker, delegation, debate, voting | 3, 4, 8, 9 | Claude/OpenAI and BenchAgent records are mapped; implementation comparisons remain pending |
+| Verification and evaluation | tests, critic, judge, grader, trajectory, benchmark, self-correction | 6, 9, 10 | Empirical and production records are mapped; judge/evaluator gaps remain |
+| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph evidence is mapped; OpenClaw/Hermes/Letta remain unadmitted leads |
+| Model routing and instruction policy | model selection, fallback, effort, role model, system prompt | 2, 3 | Claude/ADK documentation is mapped; controlled comparisons remain scarce |
+| Self-improvement | context optimization, workflow search, self-editing harness, regression gate | 7, 10, 11 | Weng is mapped as framing; the primary research bundle remains unadmitted |
 
 ## Analytical responsibility view
 
-| Provisional responsibility | Legacy recorded evidence awaiting formal D-003 admission | Unadmitted leads and gap before durable conclusions |
+| Provisional responsibility | Referenced evidence mapped during reconstruction | Unadmitted leads and gap before durable conclusions |
 | --- | --- | --- |
 | Run lifecycle and ingress | Google ADK runtime/session record | OpenClaw, Hermes, and Letta lifecycle leads; comparative research thin |
 | Model and instruction policy | Claude subagent and Google ADK records | Browser Use/provider normalization leads; few controlled routing comparisons |
@@ -50,7 +50,7 @@ The table below comes from the implementation recon report. It is a candidate co
 | --- | --- | --- |
 | Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Reported by reconstructed recon; no batch selected |
 | Event-sourced workspace agents | OpenHands Software Agent SDK | Reported lead; not yet admitted as a pinned case |
-| Explicit state graphs and durable workflows | LangGraph, Microsoft Agent Framework, OpenAI Agents SDK, PydanticAI | Family reported; some legacy documentation records await formal admission |
+| Explicit state graphs and durable workflows | LangGraph, Microsoft Agent Framework, OpenAI Agents SDK, PydanticAI | LangGraph/OpenAI documentation is mapped; the other repository families remain unadmitted |
 | Conversational/message-passing multi-agent systems | AutoGen and successors | Reported lineage lead; not yet verified for selection |
 | Code-as-action agents | smolagents | Reported lead; not yet admitted |
 | Browser and computer-use agents | Browser Use, Agent S | Reported leads; one may later represent perception/grounding |
@@ -89,11 +89,13 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 - Lifecycle, observation construction, failure recovery, and model mediation are visible in code but thinly studied as independent topics.
 - The field lacks stable vocabulary for runtime, workflow engine, environment service, gateway, session, memory, and agent.
 - Historical and current architectures are easily mixed in fast-moving or rewritten projects.
-- Exact search queries and result sets from the two Cycle 1 subagents are not recoverable.
+- Exact query bundles were recovered from the primary and two subagent rollouts, but complete provider result windows, result ranks, and all screening decisions are not recoverable.
 - Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other details appeared as recon leads without completing the source-record lifecycle.
-- Sixteen source records exist, but claim-evidence coverage has not yet been measured; source count is not evidence coverage.
-- No generated source audit currently shows host/type/organization balance, GitHub inspection depth, or concentration warnings.
+- All 16 referenced sources now have full records; the canonical ledger contains 24 material claims, 50 claim/source/location mappings, and 50 primary verification events.
+- The generated audit shows 24 GitHub repository leads, none admitted or pinned for claim support; this is visible breadth, not verified implementation depth.
+- The audit's GitHub host concentration warning is explained, not erased: the implementation pass intentionally sampled repositories, while referenced evidence remains distributed across papers, documentation, a specification, and a synthesis.
+- Because provenance is reconstructed, the current evidence cannot establish breadth, balance, absence of evidence, marginal information, or saturation.
 
 ## Next coverage decision
 
-Build and validate provenance capture, reconstruct this cycle, complete the source and claim audits, and re-present Checkpoint 1. Only then may Checkpoint 2 propose a pinned, bounded batch with a responsibility-coverage matrix and a deliberate Claude Code closed-production reference case.
+D-004 remains approved and its archive-enforced acceptance passes. The realistic preflight supports the overhead conclusion while honestly marking one truncated result window incomplete. The reconstructed audit passes the fixed provisional-promotion profile under the maintainer waiver. Bounded Checkpoint 2 selection is now authorized to propose a pinned contrast batch; the 24 repository leads are candidates to verify and pin, not evidence to inherit. Deep dives remain blocked until Checkpoint 2 review.

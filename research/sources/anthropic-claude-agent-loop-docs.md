@@ -1,17 +1,26 @@
 # Source Record: How the Agent Loop Works
 
+**Source ID:** FL-S003
 **Maturity:** Captured source
 **Source type:** Official product/SDK documentation
 **Author or organization:** Anthropic
 **Publication date:** Not stated; current documentation inspected 2026-07-10
 **URL:** https://code.claude.com/docs/en/agent-sdk/agent-loop
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s003`, `fl-inspect-s003`, `fl-disposition-s003`
+**Related claim IDs:** C008 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C008 — “The loop at a glance”
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 It provides a current, explicit description of the message and tool lifecycle used by the Claude Agent SDK and reportedly by Claude Code.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

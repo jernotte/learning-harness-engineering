@@ -1,5 +1,6 @@
 # Source Record: Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions
 
+**Source ID:** FL-S008
 **Maturity:** Captured source
 **Source type:** Peer-reviewed benchmark paper and open implementation
 **Author or organization:** Yutai Hou and collaborators
@@ -7,12 +8,20 @@
 **URL:** https://iclr.cc/virtual/2026/poster/10010781
 **Code:** https://github.com/HUST-AI-HYZ/MemoryAgentBench
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained project/paper excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s008`, `fl-inspect-s008`, `fl-disposition-s008`
+**Related claim IDs:** C009 and C016 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C009 and C016 — task taxonomy; the reported all-competencies limitation remains contextual evidence in this record
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 MemoryAgentBench evaluates memory as an incremental lifecycle rather than only as retrieval from a static store.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

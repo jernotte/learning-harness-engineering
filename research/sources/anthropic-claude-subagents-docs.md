@@ -1,17 +1,26 @@
 # Source Record: Create Custom Subagents
 
+**Source ID:** FL-S005
 **Maturity:** Captured source
 **Source type:** Official product documentation
 **Author or organization:** Anthropic
 **Publication date:** Not stated; current documentation inspected 2026-07-10
 **URL:** https://code.claude.com/docs/en/sub-agents
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s005`, `fl-inspect-s005`, `fl-disposition-s005`
+**Related claim IDs:** C004, C010, C023, and C024 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C004 and C024 — frontmatter reference; C010 and C023 — “Manage subagent context” and frontmatter reference
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 The page describes a production delegation interface in unusually concrete terms: isolated prompts and contexts, tool/model/permission configuration, persistence scope, worktree isolation, foreground/background execution, and result return.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

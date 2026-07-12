@@ -1,17 +1,26 @@
 # Source Record: Do More Agents Help? Controlled and Protocol-Aligned Evaluation of LLM Agent Workflows
 
+**Source ID:** FL-S006
 **Maturity:** Captured source
 **Source type:** Research preprint and evaluation framework
 **Author or organization:** Yuhang Fu and collaborators
 **Publication date:** 2026-06-04
 **URL:** https://arxiv.org/abs/2606.05670
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained abstract/evaluation excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s006`, `fl-inspect-s006`, `fl-disposition-s006`
+**Related claim IDs:** C010, C017, and C023 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C010, C017, and C023 — abstract, substrate-internal evaluation, and protocol-aligned external study
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 BenchAgent explicitly tries to normalize the substrate used by single- and multi-agent workflows, addressing a major confound in claims that adding agents improves quality.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

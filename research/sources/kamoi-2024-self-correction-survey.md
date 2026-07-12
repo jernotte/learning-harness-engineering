@@ -1,17 +1,26 @@
 # Source Record: When Can LLMs Actually Correct Their Own Mistakes?
 
+**Source ID:** FL-S009
 **Maturity:** Captured source
 **Source type:** Peer-reviewed critical survey
 **Author or organization:** Ryo Kamoi and collaborators
 **Publication date:** 2024
 **URL:** https://aclanthology.org/2024.tacl-1.78/
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained abstract/paper excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s009`, `fl-inspect-s009`, `fl-disposition-s009`
+**Related claim IDs:** C011 and C018 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C011 — abstract and critical-review taxonomy/checklist; C018 — abstract and critical review
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 This survey separates feedback sources and evaluation questions that are often collapsed into a generic “reflection” component.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

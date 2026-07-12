@@ -33,8 +33,8 @@ Approved by the maintainer on 2026-07-10 with the instruction to continue into t
 
 ## D-002 — Provisional harness-architecture taxonomy
 
-**Status:** Conditionally approved — remediation required before Checkpoint 2
-**Date:** 2026-07-10; revised and conditionally approved 2026-07-11
+**Status:** Provisionally approved at Checkpoint 1 — validation required at Checkpoint 3
+**Date:** 2026-07-10; revised 2026-07-11; provisionally promoted 2026-07-12
 
 ### Decision
 
@@ -72,7 +72,9 @@ Checkpoint 2 must present a bounded batch with a responsibility-coverage matrix.
 
 ### Approval record
 
-The maintainer approved the revised three-layer direction and Checkpoint 2/3 conditions on 2026-07-11. Final Checkpoint 1 promotion remains blocked until the minimum provenance capture path is built and validated, Cycle 1 sourcing is reconstructed and audited, unsupported claims are corrected or admitted as evidence, and the remediated package is reviewed. Work authorized before then is methodology maintenance and provenance infrastructure, not deep-dive selection.
+The maintainer approved the revised three-layer direction and Checkpoint 2/3 conditions on 2026-07-11. On 2026-07-12, after reconstruction produced 24 declared claims, 50 verified claim/source/location mappings, and a passing fixed promotion audit under the explicit waiver, the maintainer provisionally promoted Checkpoint 1 and authorized bounded Checkpoint 2 selection.
+
+This is approval of the research direction, not validation of the eleven-responsibility lens. The reconstruction limitation must remain in later summaries until a complete cycle revalidates the landscape. Checkpoint 3 taxonomy-friction reports remain the acceptance test for revising, retaining, merging, or splitting responsibilities.
 
 ## D-003 — Instrumented research provenance before further subject research
 
@@ -99,7 +101,7 @@ Tool-level capture is required to answer what was searched, returned, opened, in
 
 ### Required completeness labels
 
-Every cycle declares `complete`, `complete_with_declared_manual_sources`, `partial`, `reconstructed`, or `unknown`. Cycle 1 is `reconstructed`; its exact subagent queries and all screened results cannot be recovered.
+Every cycle declares `complete`, `complete_with_declared_manual_sources`, `partial`, `reconstructed`, or `unknown`. Cycle 1 is `reconstructed`; exact query bundles were recovered, but complete result windows and all screening decisions cannot be recovered.
 
 ### Validation requirement
 
@@ -112,3 +114,90 @@ The provenance system becomes immediate research infrastructure rather than a de
 ### Approval record
 
 Approved by the maintainer on 2026-07-11 with the instruction to update all governing artifacts consistently before building and testing the capture path.
+
+## D-004 — Native transcript reconciliation plus semantic research events
+
+**Status:** Approved — bounded Cycle 1 reconstruction authorized and completed
+**Date:** 2026-07-11
+
+### Decision
+
+Use persisted Codex rollout JSONL for desktop work and `codex exec --json` streams for deliberately launched non-interactive workers as the technical completeness backstop. Keep append-only canonical research events for semantics the native transcript cannot determine reliably: query intent and family, observed result identity, inspection extent and surfaces, disposition, claim use, exact evidence location, version state, and primary verification.
+
+Require every complete cycle to declare a native capture boundary. Every research-capable native interaction inside it must be linked to canonical events or explicitly classified as non-research with a reason. Native observations contain transcript offsets and hashes, not raw prompts or outputs. Unrecognized and generic shell interactions fail closed into reconciliation review.
+
+Generate JSON and Markdown audits from canonical events. Promotion remains blocked by schema failures, missing dispositions or source records, unsupported claim mappings, absent primary verification, unpinned implementation claims, unreconciled native interactions, capture-count mismatches, or unexplained concentration and coverage warnings.
+
+### Acceptance conditions and tripwire
+
+The capture path is not minimum viable unless searches, observed results, opened sources, native links, and repository-inspection facts are derived automatically from ordinary research-tool use. The researching agent may make semantic judgments—inspection depth, disposition, claim use, and verification—in one batch, but must not hand-author per-search, per-result, or per-open bookkeeping. The bounded validation reports manual capture actions separately from semantic decisions.
+
+Canonical research events remain runtime-agnostic. Runtime-specific parsing lives behind adapters, and a runtime switch without a verified adapter forces `partial` provenance rather than silently claiming completeness.
+
+This authorization permits one remediation iteration. If an end-to-end bounded web search plus repository inspection cannot meet the near-zero-overhead criterion, stop and present native-adapter and gateway/MCP alternatives to the maintainer instead of extending Stage 0.5.
+
+### Why
+
+The installed Codex runtime already persists structured per-thread rollouts containing tool calls and outputs, and the CLI exposes a JSONL stdout mode. These native records can detect research interactions that explicit agent-authored events omit. Explicit events remain necessary because a transcript does not know whether a source was screened or read deeply, why it was excluded, or which exact claim it supports.
+
+This hybrid closes the structural gap without forcing all research through a new gateway or depending on the experimental app-server protocol. It preserves the Codex desktop workflow and can later accept richer gateway, hook, or app-server adapters.
+
+### Alternatives considered
+
+- A logged gateway as the sole research interface. It produces clean records but cannot detect external sources reached through other Codex tools, connectors, shell commands, or local files.
+- App-server interception. It is rich and live, but experimental and operationally heavier than post-turn rollout ingestion.
+- Hooks alone. Their full coverage was not established during bootstrap, and hook events still would not supply semantic source disposition or claim use.
+- Manual event discipline without native reconciliation. This repeats the Cycle 1 failure mode because omitted interactions are invisible.
+
+### Validation result
+
+The bounded failing fixture is blocked and exposes returned-but-unopened sources, all three opened-source dispositions, missing planned-channel coverage, host concentration, shallow repository inspection, missing full source records, missing verification, an unpinned implementation claim, and an unreconciled native interaction. The corrected fixture passes only after records, pins, verification, native links, and warning explanations are present.
+
+The authorized real-thread test then used one ordinary official-documentation search, one ordinary fetch, and one ordinary local repository inspection. The Codex adapter derived the search, three observed results, source open and conservative inspection, repository path/surfaces/commit, native links, and capture boundary automatically. One semantic batch supplied inspection depth and disposition. The audit re-read and hashed the immutable transcript prefix, verified every native input/output fingerprint, found zero unreconciled research interactions, and passed with `manual_capture_actions = 0` and `semantic_batch_actions = 1`.
+
+The approval closeout separated the factual hook-coverage claim from the project’s engineering recommendation, assigned canonical claim IDs, mapped both to the exact section, recorded primary verification, and attested the prose against the canonical ledger. A mandatory review-scope manifest now prevents a scoped material artifact from bypassing claim gates merely because its registration was omitted; maintainer review must still check that the scope itself is complete. Surface values are schema-enforced, authority is separate, and repository reporting distinguishes GitHub source-funnel totals from local repository observations.
+
+The mandatory Cycle 1 preflight exercised 38 real observations from the Stage 0.5 implementation session. Thirty-six were resolved automatically. Two generic runtime-tool-inventory interactions required review and were resolved in one append-only batch, leaving 11 linked, 27 `not_research`, and zero unresolved observations. Human judgment touched 5.3% of observations in one action, rather than scaling one-for-one with the interaction stream.
+
+**Post-approval bounded correction:** Independent review of the retained transcript showed that one automatically linked preflight search had a runtime-truncated, unparseable output. The historical event incorrectly asserted zero results and no truncation. That event remains preserved; an append-only search update now records unknown counts and `incomplete_truncated`, so the effective preflight audit blocks rather than presenting complete result capture. The 36/38 automatic-resolution overhead measurement is independent of returned-result completeness and remains valid. The adapter now distinguishes parsed zero, parsed results, explicit truncation, and other unparseable output, and no longer invents purpose or coverage intent. D-004 remains approved because the architecture and original parsed acceptance window are unchanged.
+
+The retention implementation and fixtures prove exact-prefix archiving, owner-only permissions, archive-only regeneration after runtime deletion, and fail-closed tamper handling. After the maintainer explicitly approved writes under `/Users/jernotte/dev/reference-materials/research`, the real 1,641-line acceptance prefix was archived with mode `0600`. Its 5,434,209 bytes match boundary SHA-256 `fd4a1895c9a1600a819ee7cca0b1f95df6c22e15cb46d49096870c1152147414`, and the archive-enforced audit passes with no errors or warnings.
+
+The one-iteration tripwire was not triggered. This establishes the minimum path for the tested Codex MCP-plus-shell window, not universal runtime coverage. Other runtimes require their own adapter validation or incomplete provenance.
+
+The implementation and detailed limitations are documented in `docs/provenance-architecture.md`. The completed validation establishes D-004 as the approved minimum for the tested Codex runtime. No subject-matter research or Cycle 1 reconstruction began during closeout.
+
+### Approval record
+
+Approved on 2026-07-11 under the maintainer’s instruction to record Stage 0.5 approval if all closeout criteria passed. The maintainer subsequently authorized persistent writes under `/Users/jernotte/dev/reference-materials/research`; the archive-enforced acceptance gate then passed. This approval accepts D-004 as the minimum provenance architecture. It does not by itself waive the requested pause before Cycle 1 reconstruction.
+
+### Transition record
+
+On 2026-07-12, the maintainer explicitly authorized bounded Cycle 1 reconstruction from existing evidence only. The authorization excluded new recon, source collection, deep dives, case studies, Checkpoint 2 selection, provenance waivers, and implementation of deferred hardening. Reconstruction completed under those boundaries; the later Checkpoint 1 decision granted the waiver and promotion recorded in D-002 and D-005.
+
+The historical truncated-search preflight remains honestly blocked, while its 36/38 automatic-resolution overhead finding stands. The final closeout implemented monotonic `search_update` transitions and the fixed promotion profile before authorizing Checkpoint 2 selection; D-005 records the policy and infrastructure freeze.
+
+## D-005 — Final provenance safeguards and infrastructure freeze
+
+**Status:** Approved
+**Date:** 2026-07-12
+
+### Decision
+
+Make `search_update` result-capture transitions monotonic: updates may preserve or weaken effective capture status, but cannot strengthen it or rewrite evidence already classified complete. Surface every update and whether it was applied or rejected in the generated audit.
+
+Use the named `provisional-promotion` audit profile for maturity promotion. The profile automatically requires review scope and, for complete provenance, durable transcript retention. Diagnostic audits remain available without promotion-only gates.
+
+Freeze provenance infrastructure after these safeguards pass. Future changes require a consequential failure observed during real research. Minor cataloging or reporting imperfections that cannot materially change a research conclusion are accepted; speculative hardening, dashboards, additional adapters, heuristics, and architectural refactors are deferred.
+
+### Why
+
+The safeguards close the two remaining paths to a false PASS without expanding the architecture. A monotonic update rule is safer and smaller than a general evidence-correction framework. A named profile prevents callers from weakening promotion by forgetting flags. Freezing the system redirects effort to the harness research it exists to support.
+
+### Consequences
+
+An incomplete search can become complete only through a newly captured, mechanically verified interaction—not through `search_update`. The reconstructed Checkpoint 1 audit uses `provisional-promotion`; Stage 0.5 acceptance and historical preflight audits retain their purpose-specific diagnostic invocations. Checkpoint 2 selection may begin, but deep dives remain subject to its maintainer checkpoint.
+
+### Approval record
+
+Approved by the maintainer on 2026-07-12 as part of the Checkpoint 1 waiver, provisional promotion, and provenance-freeze closeout.

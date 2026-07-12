@@ -1,13 +1,16 @@
 # Synthesis: A Provisional Architecture of Language-Model Harnesses
 
-**Maturity:** Analyzed evidence — provisional promotion blocked pending provenance and claim audit
+**Maturity:** provisional finding
 **Cycle:** `research/cycles/field-landscape.md`
-**Reconstructed inputs:** Academic/empirical recon report, implementation recon report describing 22 systems, primary production-documentation pass, and sixteen legacy narrative source records; not all inputs are admitted evidence
-**Last substantive check:** Partial legacy primary-agent source check, 2026-07-10; not a completed claim-evidence audit
-**Reviewed by:** [blank until Checkpoint 1]
-**Review date:** [blank until Checkpoint 1]
-**Review basis:** Pending remediated Checkpoint 1 review
-**Provenance status:** Initial narrative reconstruction completed; formal event and claim reconstruction awaits capture validation. Best attainable class is `reconstructed`
+**Artifact ID:** `field-landscape-synthesis-field-landscape`
+**Canonical claim ledger:** `research/provenance/field-landscape-events.jsonl`; readable projection at `research/claims/field-landscape.md`
+**Reconstructed inputs:** Three retained Codex rollout files, the academic/empirical and implementation recon reports, the primary production-documentation pass, sixteen referenced narrative source records, and twenty-four unadmitted implementation leads
+**Last substantive check:** Primary reconstruction verification against retained Cycle 1 evidence, 2026-07-12
+**Reviewed by:** Maintainer
+**Review date:** 2026-07-12
+**Review basis:** Reconstructed Checkpoint 1 claim/source audit and explicit provenance waiver
+**Provenance status:** `reconstructed`. Exact query bundles were recovered, but complete provider result windows, all screening decisions, and exact inspection depth for report-only leads remain unknowable
+**Prose-to-ledger attestation:** Recorded in the canonical event log for the material subject-matter scope of this artifact
 
 ## The question this map should answer
 
@@ -17,11 +20,11 @@ An inventory such as “prompts, tools, memory, planning, subagents, and evals�
 
 The first recon therefore points to a more durable organizing idea:
 
-> A harness allocates control, state, capability, and evidence among the model, deterministic code, external environments, other agents, and humans over time.
+> A useful harness-architecture lens asks how the software allocates control, state, capability, and evidence among models, deterministic code, environments, other agents, and humans over time. ([C001](../claims/field-landscape.md#c001))
 
 The architecture is the set of responsibilities that performs that allocation. Named product features are strategies inside those responsibilities.
 
-This is a provisional analytical lens. Complementary academic, implementation, and production-documentation passes produced compatible responsibility-oriented maps, but they shared project framing and are not independent corroboration. The synthesis has not completed its source/claim audit or been tested through an approved case-study batch.
+This is a provisional analytical lens. Complementary academic, implementation, and production-documentation passes produced compatible responsibility-oriented maps, but they shared project framing and are not independent corroboration. The reconstructed source/claim audit is complete; the lens has not been tested through an approved case-study batch.
 
 ## How to use this map
 
@@ -31,13 +34,13 @@ The responsibility map is one of three organizational layers.
 - The responsibilities below provide a multi-label engineering lens. A mechanism may span several; they are not exclusive folders or required search terms.
 - A later field guide and curriculum will recombine reviewed knowledge into fewer, approachable narrative modules.
 
-This distinction protects search breadth and readability while preserving the deeper boundaries needed for architectural diagnosis.
+This distinction protects search breadth and readability while preserving the deeper boundaries needed for architectural diagnosis. It is an engineering recommendation, not a discovered natural law. ([C002](../claims/field-landscape.md#c002))
 
 ## A provisional responsibility map
 
 ### 1. Run lifecycle and ingress
 
-This responsibility turns an external event into a bounded or persistent run. It defines what starts work, how identity and tenancy are scoped, whether work is interactive or background, how sessions resume, what can cancel or wake them, and what constitutes completion at the application boundary.
+This responsibility turns an external event into a bounded or persistent run. It defines what starts work, how identity and tenancy are scoped, whether work is interactive or background, how sessions resume, what can cancel or wake them, and what constitutes completion at the application boundary. ([C003](../claims/field-landscape.md#c003))
 
 Interactive coding agents make this layer easy to overlook because the terminal prompt supplies it. Google ADK exposes API, CLI, ambient/background, resume, and cancellation paths ([source record](../sources/google-adk-docs.md)). OpenClaw, Hermes, Letta, and other messaging or scheduled-agent systems are candidate lifecycle cases from the implementation recon, but their specific mechanisms remain unadmitted leads.
 
@@ -45,7 +48,7 @@ Lifecycle is provisionally separate from the inner agent loop. A system can have
 
 ### 2. Model and instruction policy
 
-This responsibility selects and configures the model calls that perform cognitive work. It owns provider adaptation, model routing and fallback, inference budget and effort, system instructions, behavioral policies, structured-output contracts, and the use of auxiliary models for summarization, grounding, planning, judging, or extraction.
+This responsibility selects and configures the model calls that perform cognitive work. It owns provider adaptation, model routing and fallback, inference budget and effort, system instructions, behavioral policies, structured-output contracts, and the use of auxiliary models for summarization, grounding, planning, judging, or extraction. ([C004](../claims/field-landscape.md#c004))
 
 The model is assumed fixed, but choosing which fixed model sees which task remains a harness decision. Claude Code's current subagent documentation exposes per-subagent model and effort choices ([source record](../sources/anthropic-claude-subagents-docs.md)); Google ADK exposes model routing as a framework concern ([source record](../sources/google-adk-docs.md)). Browser Use and provider-neutral normalization remain recon leads until their source lifecycle is reconstructed and admitted.
 
@@ -53,7 +56,7 @@ This area was underrepresented in `outline.md`. It should not be reduced to “t
 
 ### 3. Active-context and capability construction
 
-This responsibility determines the model's current view: which instructions, conversation items, files, retrieved memories, tool schemas, skills, examples, artifacts, summaries, and environment observations enter a call; in what order and representation; and what is omitted, deferred, cached, or compressed.
+This responsibility determines the model's current view: which instructions, conversation items, files, retrieved memories, tool schemas, skills, examples, artifacts, summaries, and environment observations enter a call; in what order and representation; and what is omitted, deferred, cached, or compressed. ([C005](../claims/field-landscape.md#c005))
 
 Claude Code documents an active context containing history, files, tool output, persistent instructions, auto memory, skills, system instructions, and tool metadata, with compaction and deferred tool loading as lifecycle policies ([context and memory source record](../sources/anthropic-claude-context-memory-docs.md)). Pi compaction and OpenHands condenser architecture are promising contrast leads, but their direct live links did not complete the durable source-record lifecycle and cannot yet support this synthesis.
 
@@ -61,15 +64,15 @@ Responsibility 3 decides which capabilities are visible in a particular model ca
 
 ### 4. Control flow and execution semantics
 
-This responsibility decides what happens next and when the run should stop. Control may reside in a model-directed loop, deterministic code, a graph, an event runtime, a planner/executor split, a search procedure, or a hybrid. It covers scheduling, branches, loops, retries, turn budgets, concurrency, termination, and the boundary between probabilistic judgment and ordinary software.
+This responsibility decides what happens next and when the run should stop. Control may reside in a model-directed loop, deterministic code, a graph, an event runtime, a planner/executor split, a search procedure, or a hybrid. It covers scheduling, branches, loops, retries, turn budgets, concurrency, termination, and the boundary between probabilistic judgment and ordinary software. The recovered evidence does not establish a universally preferred allocation. ([C006](../claims/field-landscape.md#c006))
 
 Anthropic distinguishes predefined workflows from systems where the model directs its own process, then describes chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer, and open-ended loops ([source record](../sources/anthropic-2024-building-effective-agents.md)). Google ADK 2.0 argues for hybrid workflows that reserve deterministic routing for known business logic and use models where dynamic reasoning is needed ([ADK source record](../sources/google-adk-docs.md)). Agentless provides historical empirical counterevidence to the assumption that a freer tool loop is always better: its fixed localization/repair/validation stages were competitive with more autonomous 2024 software agents ([source record](../sources/xia-2024-agentless.md)).
 
-“Planning” is one possible control strategy, not necessarily a standalone organ. It can be an explicit model phase, a symbolic planner, a state graph, a mutable task list, tree search, or simply the model's next-action choice.
+“Planning” is one possible control strategy, not necessarily a standalone organ. It can be an explicit model phase, a symbolic planner, a state graph, a mutable task list, tree search, or simply the model's next-action choice. ([C015](../claims/field-landscape.md#c015))
 
 ### 5. Action and environment mediation
 
-This responsibility defines the model-to-world interface. It determines the action language—structured tool calls, shell commands, edit protocols, generated Python, browser operations, GUI coordinates, workflow commands, or agent handoffs—and the runtime that executes it: host process, container, sandbox, remote workspace, browser, desktop, or distributed worker.
+This responsibility defines the model-to-world interface. It determines the action language—structured tool calls, shell commands, edit protocols, generated Python, browser operations, GUI coordinates, workflow commands, or agent handoffs—and the runtime that executes it: host process, container, sandbox, remote workspace, browser, desktop, or distributed worker. ([C007](../claims/field-landscape.md#c007))
 
 The interface is not cosmetic. SWE-agent explicitly studies the agent-computer interface and reports large historical gains from changing repository navigation, editing, and test interaction ([source record](../sources/yang-2024-swe-agent.md)). Smolagents and differing production edit primitives remain useful recon leads, but they are not admitted evidence until captured in source records at stable versions.
 
@@ -77,7 +80,7 @@ Permissions and containment enter scope here when they change which actions are 
 
 ### 6. Observation and feedback construction
 
-Executing an action does not automatically create useful feedback. This responsibility converts environment changes, command output, errors, browser/GUI state, tests, human messages, and tool results into observations the model can interpret. It governs normalization, truncation, pairing of calls and results, grounding, error language, loop/stall detection, and the visibility of state changes.
+Executing an action does not automatically create useful feedback. This responsibility converts environment changes, command output, errors, browser/GUI state, tests, human messages, and tool results into observations the model can interpret. It governs normalization, truncation, pairing of calls and results, grounding, error language, loop/stall detection, and the visibility of state changes. ([C008](../claims/field-landscape.md#c008))
 
 Browser and desktop agents make perception explicit: screenshots, DOM/accessibility trees, coordinates, and grounding models determine what the model can see. Coding agents make it equally consequential through test output, diffs, file reads, and shell errors. User reports across open agents repeatedly point to malformed or unpaired tool events, runaway retries, and reconstructed sessions with different environment state; these remain leads until analyzed, but they identify observation integrity as a likely failure class.
 
@@ -85,11 +88,11 @@ This responsibility is distinct from verification. An observation reports what h
 
 ### 7. Durable state and persistence
 
-This responsibility preserves information outside the immediate model call. It includes transcripts, append-only event logs, graph checkpoints, session state, workspace artifacts, task records, cross-session memories, learned procedures, provenance, and lineage. It also governs write authority, retention, indexing, conflict handling, forgetting, and resumption.
+This responsibility preserves information outside the immediate model call. It includes transcripts, append-only event logs, graph checkpoints, session state, workspace artifacts, task records, cross-session memories, learned procedures, provenance, and lineage. It also governs write authority, retention, indexing, conflict handling, forgetting, and resumption. ([C009](../claims/field-landscape.md#c009))
 
 LangGraph's checkpoints support durable execution, interruption, inspection, and branching; subgraphs can have per-invocation, per-thread, or no persistence ([source record](../sources/langgraph-runtime-docs.md)). Google ADK separates session history/events, mutable session state, and searchable cross-session memory ([source record](../sources/google-adk-docs.md)). OpenHands' separation of event history from model view remains an unadmitted recon lead.
 
-The recon strongly rejects a single “memory” bucket. At minimum, later studies should distinguish:
+The recovered evidence supports rejecting a single “memory” bucket as the analytical endpoint. At minimum, later studies should distinguish the following roles. ([C016](../claims/field-landscape.md#c016))
 
 - active context, which is transient model input;
 - execution state, which allows a run to continue or recover;
@@ -101,35 +104,35 @@ Recent MemoryAgentBench work further separates retrieval, test-time learning, lo
 
 ### 8. Decomposition, coordination, and aggregation
 
-This responsibility divides work, gives each part context and authority, coordinates dependencies and concurrency, and recombines results. Strategies include prompt stages, agents-as-tools, handoffs, orchestrator-workers, parallel samples, specialist subagents, debate, event-based actors, and deterministic workflow nodes.
+This responsibility divides work, gives each part context and authority, coordinates dependencies and concurrency, and recombines results. Strategies include prompt stages, agents-as-tools, handoffs, orchestrator-workers, parallel samples, specialist subagents, debate, event-based actors, and deterministic workflow nodes. ([C010](../claims/field-landscape.md#c010))
 
 The architectural questions are more important than the agent count: who decomposes; whether workers share or isolate state; what each worker receives; how budgets and cancellation propagate; whether control transfers or returns; how conflicts are handled; and who synthesizes and verifies.
 
-Current evidence is deliberately contested. BenchAgent reports that five of six tested multi-agent workflows trail a matched single-agent baseline under its normalized protocol, while a separately evaluated Claude-Code-style runtime with task-specific subagents, persistent evidence artifacts, and verification performs strongly ([source record](../sources/fu-2026-benchagent.md)). This does not prove that subagents help or hurt universally. It shows why role labels and agent count are poor causal explanations.
+Current evidence is deliberately contested. BenchAgent reports that five of six tested multi-agent workflows trail a matched single-agent baseline under its normalized protocol, while a separately evaluated Claude-Code-style runtime with task-specific subagents, persistent evidence artifacts, and verification performs strongly ([source record](../sources/fu-2026-benchagent.md)). This is not a causal ablation of subagents and does not prove that they help or hurt universally. ([C017](../claims/field-landscape.md#c017))
 
 ### 9. Verification, recovery, and control boundaries
 
-This responsibility decides whether work is acceptable, whether another step is warranted, and how failure changes the run. It includes executable tests, validators, schema checks, critics, approval gates, human interrupts, retry and backoff, rollback, failure escalation, budget enforcement, and stop conditions.
+This responsibility decides whether work is acceptable, whether another step is warranted, and how failure changes the run. It includes executable tests, validators, schema checks, critics, approval gates, human interrupts, retry and backoff, rollback, failure escalation, budget enforcement, and stop conditions. ([C011](../claims/field-landscape.md#c011))
 
-The feedback source matters. A critical TACL survey found little convincing evidence for prompted intrinsic self-correction outside unusually favorable tasks, while reliable external feedback was effective ([source record](../sources/kamoi-2024-self-correction-survey.md)). “Reflection” should therefore be decomposed into error observability, feedback source, critic independence and capability, correction policy, and acceptance/rollback.
+The feedback source matters. A critical TACL survey found little convincing evidence for prompted intrinsic self-correction outside unusually favorable tasks, while reliable external feedback was effective in the literature it reviewed ([source record](../sources/kamoi-2024-self-correction-survey.md)). ([C018](../claims/field-landscape.md#c018)) “Reflection” should therefore be decomposed into error observability, feedback source, critic independence and capability, correction policy, and acceptance/rollback. ([C011](../claims/field-landscape.md#c011))
 
 Verification inside a task is not the same as evaluation of the harness. A test may tell an agent whether to keep editing; an evaluation suite tells a developer whether that harness policy improves performance across trials.
 
 ### 10. Observability and external evaluation
 
-This responsibility records and judges the system from outside the optimized run. It includes traces, event and usage accounting, trajectory views, end-state graders, repeated trials, benchmark adapters, regression suites, cost/latency measures, and failure attribution.
+This responsibility records and judges the system from outside the optimized run. It includes traces, event and usage accounting, trajectory views, end-state graders, repeated trials, benchmark adapters, regression suites, cost/latency measures, and failure attribution. ([C012](../claims/field-landscape.md#c012))
 
-Anthropic explicitly separates the agent harness from the evaluation harness and distinguishes a trajectory from the resulting environment state ([source record](../sources/anthropic-2026-agent-evals.md)). OpenAI's Agents SDK traces model, tool, guardrail, and handoff spans ([source record](../sources/openai-agents-sdk-docs.md)). Research benchmarks increasingly add progress and trajectory diagnosis because final success alone cannot localize failure.
+Anthropic explicitly separates the agent harness from the evaluation harness, distinguishes a trajectory from the resulting environment state, and recommends repeated trials for non-deterministic agents ([source record](../sources/anthropic-2026-agent-evals.md)). ([C020](../claims/field-landscape.md#c020)) OpenAI's Agents SDK traces model, tool, guardrail, and handoff spans ([source record](../sources/openai-agents-sdk-docs.md)).
 
 Evaluation is not just a final course module. It is a parallel architecture that determines whether any claimed harness improvement is knowable. Benchmark version, model, tool substrate, context policy, budget, retry policy, sampling protocol, and grader must travel with a result.
 
 ### 11. Adaptation and optimization across runs
 
-This responsibility uses evidence from completed runs to change future behavior. The editable object may be stored context, memory, skills, prompts, demonstrations, workflow graphs, tool descriptions, harness code, or the optimizer itself. It includes proposal, evaluation, selection, regression protection, rollback, archives of failures, and human review.
+This responsibility uses evidence from completed runs to change future behavior. The editable object may be stored context, memory, skills, prompts, demonstrations, workflow graphs, tool descriptions, harness code, or the optimizer itself. It includes proposal, evaluation, selection, regression protection, rollback, archives of failures, and human review. ([C013](../claims/field-landscape.md#c013))
 
-Weng's 2026 synthesis describes a progression from instructions through context, workflows, harness code, and optimizer code ([source record](../sources/weng-2026-harness-engineering.md)). Current research reports promising prompt/program compilation, workflow search, and self-editing agents, but general transfer and regression containment remain weakly established.
+Weng's 2026 synthesis describes a progression from instructions through context, workflows, harness code, and optimizer code ([source record](../sources/weng-2026-harness-engineering.md)). The other optimization systems surfaced during recon remain unadmitted leads, so this synthesis does not use them to claim effectiveness.
 
-Self-improvement is therefore not merely an advanced agent loop. It is an outer lifecycle that depends on trustworthy evaluation, preserved trajectories, bounded edit surfaces, and acceptance policy. The evaluator and authority boundary must not be freely rewritten by the same process they govern.
+Self-improvement should therefore be treated as an outer lifecycle rather than merely an advanced agent loop. It needs trustworthy evaluation, preserved trajectories, bounded edit surfaces, regression protection, rollback, and authority boundaries. ([C021](../claims/field-landscape.md#c021))
 
 ## Cross-cutting dimensions
 
@@ -143,7 +146,7 @@ The responsibilities describe what must be decided. Several dimensions should ac
 6. **Model and version dependence:** which model, harness release, prompt/tool interface, and environment produced the observation.
 7. **Evidence position:** observation inside the loop, verifier at a workflow boundary, or evaluator outside the run.
 
-These dimensions are often more discriminating than product feature checklists. Two systems may both “support subagents” while differing on every dimension above.
+These dimensions are an explicit comparison recommendation, not an empirically complete factor model. ([C014](../claims/field-landscape.md#c014)) Two systems may both “support subagents” while differing on every dimension above.
 
 ## Architectural families found during recon
 
@@ -168,47 +171,47 @@ Recon found no basis for resolving the following into slogans:
 
 ### Model-directed loops versus programmed workflows
 
-ReAct-style interleaving adapts to observations. ReWOO-style planning/execution separation reports efficiency and tool-failure benefits. Deterministic workflows improve predictability and can outperform more autonomous historical systems; they can also become brittle under unanticipated state. The research question is which decisions require model judgment, when, and with what recovery—not whether agents or workflows win universally.
+The recon report contrasted ReAct-style interleaving with ReWOO-style planning/execution separation, but those sources remain unadmitted and cannot support an outcome comparison here. The admitted evidence supports only the narrower point that production guidance exposes model-directed, deterministic, and hybrid choices, while Agentless supplies a historical deterministic counterexample. The unresolved research question is which decisions require model judgment, when, and with what recovery—not whether agents or workflows win universally. ([C006](../claims/field-landscape.md#c006))
 
 ### More turns or context versus usable state
 
-Longer interaction can reveal more evidence, but context position, accumulated noise, lossy compaction, and runaway single turns can erase the benefit. General AgentBench reports a sequential “context ceiling” and a parallel “verification gap” ([source record](../sources/li-2026-general-agentbench.md)). More inference is useful only if state management and candidate selection scale with it.
+General AgentBench reports substantial degradation in its unified general-agent setting, a sequential “context ceiling,” and a parallel candidate-selection “verification gap” ([source record](../sources/li-2026-general-agentbench.md)). ([C019](../claims/field-landscape.md#c019)) The broader mechanisms behind those benchmark-specific results remain questions for later analysis.
 
 ### More agents versus better organization
 
-Independent sampling and voting sometimes improve pass@K. Controlled comparisons often find role-based multi-agent systems add cost and communication loss without matched quality gains. The variables to isolate are diversity, decomposability, context partitioning, communication, aggregation, verifier quality, and compute—not count.
+The recovered BenchAgent comparison is mixed across its normalized internal workflows and separately evaluated external runtime; other positive and negative multi-agent studies remain unadmitted leads. The variables to isolate are diversity, decomposability, context partitioning, communication, aggregation, verifier quality, and compute—not count. ([C010](../claims/field-landscape.md#c010), [C017](../claims/field-landscape.md#c017))
 
 ### Reflection versus grounded correction
 
-Positive self-refinement systems report gains, while critical work finds intrinsic self-feedback unreliable and vulnerable to self-bias. Executable or independent feedback is a different mechanism from asking the same model to reconsider. Later analysis must compare feedback provenance and acceptance rules.
+Positive self-refinement systems surfaced as unadmitted leads. The admitted TACL survey supports only the bounded conclusion about the literature it reviewed: intrinsic prompted self-correction lacked convincing evidence outside favorable settings, while reliable external feedback worked. Later analysis must compare feedback provenance and acceptance rules. ([C018](../claims/field-landscape.md#c018))
 
 ### Rich general substrates versus specialized interfaces
 
-General tool ecosystems improve reach, yet specialized ACIs and domain workflows can produce better reliability and lower context cost. General AgentBench reports degradation when agents move from specialized environments to one broad substrate. The relevant trade is generality versus interface fit, discovery burden, and evaluation complexity.
+General AgentBench reports degradation when evaluated agents move from domain-specific settings to its unified substrate, while SWE-agent historically reports gains from a specialized ACI. These are different experiments, so together they motivate—not resolve—a tradeoff among generality, interface fit, discovery burden, and evaluation complexity. ([C007](../claims/field-landscape.md#c007), [C019](../claims/field-landscape.md#c019))
 
 ### Benchmark progress versus valid measurement
 
-Rapid leaderboard gains can coincide with contamination, broken tests, changing datasets, and inconsistent budgets. A harness result without a pinned evaluation substrate is not durable evidence.
+The admitted papers are version-sensitive and bundle model, harness, benchmark, and protocol choices. This synthesis therefore treats an unpinned evaluation result as non-durable for architectural comparison; the broader contamination and benchmark-integrity leads remain for later admission.
 
 ## How this complements the seed outline
 
 The outline identified most important subject matter but mixed responsibilities with strategies and maturity stages. Its familiar terms remain useful for discovery, navigation, and teaching. The provisional responsibility lens suggests these analytical distinctions:
 
 - Keep the agentic loop, but study it under control flow and execution semantics rather than treating it as the whole architecture.
-- Split “tools” into active capability admission, action representation/environment mediation, and observation construction.
-- Split “context” and “memory” by temporal role: active context, runtime state, artifacts, cross-session knowledge, and procedural adaptation.
+- Split “tools” into active capability admission, action representation/environment mediation, and observation construction. ([C022](../claims/field-landscape.md#c022))
+- Split “context” and “memory” by temporal role: active context, runtime state, artifacts, cross-session knowledge, and procedural adaptation. ([C016](../claims/field-landscape.md#c016))
 - Treat skills as one strategy for packaging and admitting procedural capability, not automatically a peer architectural layer.
-- Treat planning as a family of control strategies that may be model-driven, symbolic, graph-based, search-based, or absent.
-- Study subagents through decomposition, context/state isolation, control transfer, concurrency, aggregation, and verification.
+- Treat planning as a family of control strategies that may be model-driven, symbolic, graph-based, search-based, or absent. ([C015](../claims/field-landscape.md#c015))
+- Study subagents through decomposition, context/state isolation, control transfer, concurrency, aggregation, and verification. ([C023](../claims/field-landscape.md#c023))
 - Separate in-loop verification and recovery from outside-loop observability and evaluation.
-- Add run lifecycle/ingress and model mediation/routing, both visible in current implementations but thin in the outline.
+- Add run lifecycle/ingress and model mediation/routing, both visible in recovered production sources but thin in the outline. ([C024](../claims/field-landscape.md#c024))
 - Keep self-improvement as an outer lifecycle that can edit several inner responsibilities.
 
 The source-facing corpus should retain familiar modules and aliases, while cases are multi-labeled with the deeper responsibilities. A later teaching sequence may use tools, context, memory, and subagents without pretending those are exclusive architectural boundaries.
 
 ## Candidate deep-dive pool for Checkpoint 2
 
-Checkpoint 1 remediation and provenance validation must finish before the first batch is selected. The recon report currently offers this unapproved candidate pool for later architectural contrast:
+Checkpoint 1 is provisionally promoted. The recon report offers this unapproved candidate pool for bounded Checkpoint 2 selection; every candidate remains subject to pinning and evidence-mode review:
 
 - **Codex CLI** — large, current model-driven coding runtime with tool registry, policy/sandboxing, context management, sessions, hooks, and delegation.
 - **Pi** — deliberately small/extensible coding core with unusually explicit branch and compaction semantics and externalized containment.
@@ -238,6 +241,6 @@ The batch should not contain eight similar coding agents simply because their co
 - There is no stable shared vocabulary for agent runtime, workflow engine, environment service, gateway, and application.
 - Permissions, lifecycle triggers, model routing, and failure recovery are visible in code but underrepresented in comparative research.
 
-## Checkpoint 1 recommendation
+## Checkpoint 1 decision
 
-Directionally accept a three-layer model: source-native discovery/navigation, the responsibility map as a provisional analytical lens, and a later narrative/curriculum layer. Final promotion is deferred until provenance reconstruction and claim/source audits are complete. Checkpoint 3 will test whether the lens produces clearer comparisons and record boundaries that blur or fail.
+The maintainer provisionally promoted the three-layer direction and responsibility map under an explicit reconstructed-provenance waiver. This does not establish breadth, balance, absence of evidence, marginal information, saturation, or final taxonomy validity. Bounded Checkpoint 2 selection may propose a pinned contrast batch; Checkpoint 3 must test where the lens blurs or fails. Every later summary relying on this cycle must preserve the reconstruction caveat until a complete cycle revalidates the landscape.

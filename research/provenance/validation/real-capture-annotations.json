@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-07-11T20:12:00Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "stage-0-5-real-capture",
+  "pass": "semantic-annotation",
+  "semantic_batch_id": "stage-0-5-real-capture-batch-1",
+  "planned_channels": ["official documentation search", "local repository inspection"],
+  "planning_basis": "The maintainer-authorized bounded scenario and working plan declared both channels before the acceptance window.",
+  "artifact": {
+    "artifact_id": "stage-0-5-real-capture-analysis-provenance-architecture",
+    "artifact_type": "analysis",
+    "artifact_path": "docs/provenance-architecture.md"
+  },
+  "review_scope": {
+    "scope_id": "stage-0-5-approval-closeout",
+    "scope_basis": "Material architecture artifact presented for the D-004 approval decision.",
+    "artifact_ids": ["stage-0-5-real-capture-analysis-provenance-architecture"]
+  },
+  "sources": [
+    {
+      "source_id": "auto-source-99bc0cb8da0c7a35",
+      "disposition": "referenced",
+      "reason": "Official documentation materially constrains whether hooks can serve as the completeness mechanism.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["PostToolUse section"],
+      "inspection_basis": "Exact anchored section fetched and read in full.",
+      "record_path": "research/provenance/validation/sources/openai-hooks.md"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "stage-0-5-real-capture-analysis-provenance-architecture-C001",
+      "claim_text": "The documented PostToolUse hook covers supported Bash, apply_patch, and MCP tools, but does not cover WebSearch and does not intercept every unified shell call.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "docs/provenance-architecture.md, Acceptance boundary",
+      "confidence": "high for the live documentation observed on 2026-07-11",
+      "references": [
+        {
+          "source_id": "auto-source-99bc0cb8da0c7a35",
+          "location": "PostToolUse section",
+          "relationship": "supports",
+          "verifier": "primary",
+          "verifier_role": "primary",
+          "outcome": "supports_scope",
+          "inspected_version": "live documentation observed 2026-07-11",
+          "notes": "The exact section explicitly lists the supported tool classes and its WebSearch/unified-shell exclusions. The claim remains version-sensitive because the documentation is live."
+        }
+      ]
+    },
+    {
+      "claim_id": "stage-0-5-real-capture-analysis-provenance-architecture-C002",
+      "claim_text": "Because the documented hook surface omits research-capable interactions that the provenance boundary must detect, hooks should be optional enrichment rather than the sole completeness boundary for this architecture.",
+      "epistemic_kind": "engineering recommendation",
+      "artifact_location": "docs/provenance-architecture.md, Acceptance boundary",
+      "confidence": "high for the evaluated Codex runtime and documented hook surface",
+      "references": [
+        {
+          "source_id": "auto-source-99bc0cb8da0c7a35",
+          "location": "PostToolUse section",
+          "relationship": "material premise",
+          "verifier": "primary",
+          "verifier_role": "primary",
+          "outcome": "supports_scope",
+          "inspected_version": "live documentation observed 2026-07-11",
+          "notes": "The source establishes the coverage limitation, not the architecture choice. The recommendation is the project’s inference from that limitation and its requirement to detect every research-capable interaction."
+        }
+      ]
+    }
+  ]
+}

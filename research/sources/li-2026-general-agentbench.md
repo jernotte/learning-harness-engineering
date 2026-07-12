@@ -1,5 +1,6 @@
 # Source Record: Benchmark Test-Time Scaling of General LLM Agents
 
+**Source ID:** FL-S011
 **Maturity:** Captured source
 **Source type:** Research preprint and benchmark implementation
 **Author or organization:** Xiaochuan Li and collaborators
@@ -7,12 +8,20 @@
 **URL:** https://arxiv.org/abs/2602.18998
 **Code:** https://github.com/cxcscmu/General-AgentBench
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained abstract/experiment excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s011`, `fl-inspect-s011`, `fl-disposition-s011`
+**Related claim IDs:** C019 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C019 — abstract and scaling experiments; the specialized-versus-general comparison is retained only inside the bounded C019 wording
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 General AgentBench attempts to hold a shared general-agent substrate across search, coding, reasoning, and tool-use domains, making it unusually relevant to claims about harness generality and test-time scaling.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

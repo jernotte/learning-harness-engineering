@@ -16,16 +16,18 @@ The research is intended to do three things at once. The process itself should d
 
 ## Repository shape
 
-The structure remains intentionally small while Cycle 1 provenance is reconstructed and the analytical lens is tested. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
+The structure remains intentionally small while Checkpoint 2 selects the first deep-dive batch and the analytical lens awaits case-study testing. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
 
 ```text
 docs/
   research-charter.md       mission, scope, and evidence principles
   methodology.md            research and maturity workflow
   source-provenance.md      approved capture and audit contract
+  provenance-architecture.md approved and frozen minimum implementation architecture
   research-plan.md          staged program and checkpoints
 research/
-  sources/                  legacy/full narrative records; catalog/events planned in Stage 0.5
+  provenance/               bootstrap log and generated validation evidence
+  sources/                  legacy/full narrative records
   case-studies/             deep dives into implementations or techniques
   syntheses/                cross-source and cross-harness findings
   cycles/                   plans, recon maps, and cycle reviews
@@ -34,8 +36,9 @@ research/
   DECISIONS.md              consequential methodology decisions
   STATUS.md                 concise progress and review view
 outline.md                  initial curriculum hypothesis
+tools/provenance/            capture, transcript-ingest, validation, and audit CLI
 ```
 
 Large third-party repositories belong in `/Users/jernotte/dev/reference-materials/research`, not in this repository. Findings derived from them belong here and should identify the inspected commit or release.
 
-The repository does not yet contain the approved provenance capture implementation or an HTML dashboard. The implementation may be native event ingestion, a logged gateway, or adapters depending on feasibility. New subject-matter research is paused until the minimum capture path is built and validated. Human audit views will be generated from canonical provenance and research artifacts; they must never become a second source of truth.
+The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver, and bounded Checkpoint 2 selection is authorized. An HTML dashboard and further speculative provenance work remain deferred.

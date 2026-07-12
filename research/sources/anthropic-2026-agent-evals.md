@@ -1,17 +1,26 @@
 # Source Record: Demystifying Evals for AI Agents
 
+**Source ID:** FL-S002
 **Maturity:** Captured source
 **Source type:** Official engineering article
 **Author or organization:** Anthropic
 **Publication date:** 2026-01-09
 **URL:** https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s002`, `fl-inspect-s002`, `fl-disposition-s002`
+**Related claim IDs:** C012 and C020 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C012 — “The structure of an evaluation”; C020 — the same section plus transcript/trajectory, outcome, and non-determinism guidance
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 It explicitly distinguishes an agent harness from an evaluation harness and explains why outcomes and trajectories require different evaluation mechanisms.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

@@ -55,7 +55,7 @@ Each opened source event records at least:
 - cycle, pass, agent, timestamp, and discovery/query provenance;
 - pages, sections, files, tests, commits, or history inspected;
 - inspection extent: screening, partial substantive, or full substantive;
-- surfaces inspected, which may be multiple: documentation, README, code, tests, history, releases, issues, benchmark artifacts, or other named material;
+- surfaces inspected, which may be multiple. The schema vocabulary is `documentation`, `README`, `code`, `tests`, `history`, `releases`, `issues`, `benchmark_artifacts`, `paper`, `abstract`, `transcript`, `command_output`, and `other`. More specific descriptions belong in `surface_details`; authority such as “official” belongs in source identity/organization metadata, not in the surface value;
 - disposition and reason;
 - artifact and claim IDs when referenced;
 - version/freshness status and primary-verification state.
@@ -77,6 +77,8 @@ Every material claim in an analysis or synthesis receives a stable claim ID. The
 Each analysis or synthesis has a globally unique artifact ID and one canonical claim ledger. Artifact IDs use `<cycle-id>-<artifact-type>-<artifact-slug>`; claim IDs append `-C###`. IDs are never reused and the ledger owns the authoritative claim text. Source records and prose annotations reference the ID rather than maintaining independent mutable copies. A non-substantive wording clarification may retain the ID with revision history; a material scope or meaning change creates a new claim ID and supersedes the old one.
 
 Transitional prose does not need artificial claim IDs. Claims that establish a category, comparison, causal explanation, pattern, recommendation, or consequential factual premise do. Before review, the primary records a prose-to-ledger attestation. Automation can validate declared claims and mappings; it cannot reliably discover a material prose claim the author omitted from the ledger.
+
+Every promotion audit also requires a `review_scope` manifest enumerating the material artifacts in the package. Every scoped artifact must be registered and contain declared claims. This does not make prose-claim discovery automatic—the maintainer still reviews whether the manifest and ledger are complete—but it prevents an artifact from silently bypassing claim gates merely because neither its registration nor its claims were emitted.
 
 Primary verification is an event, not a checkbox. Before provisional promotion, every referenced claim/source/location mapping requires an event recording claim ID, source ID and child location, inspected version, primary verifier, date, outcome, and notes on whether the source supports the claim's wording and scope. A subagent cannot verify its own evidence for promotion.
 
@@ -117,6 +119,12 @@ No artifact may be promoted to a provisional finding, and no checkpoint package 
 
 The audit reports claim coverage rather than source-record count.
 
+## Native observation resolution
+
+Runtime adapters preserve their derived observation files. They are never hand-edited to settle ambiguous calls. An append-only `observation_resolution` batch may classify an unresolved observation as `linked` to reciprocally linked canonical events or as `not_research` with a reason. `not_research` is permitted only for the generic-shell review class; known external interactions and unknown native tool shapes must be linked or remain blocking.
+
+Each resolution names the immediately preceding effective-resolution event. The audit applies transitions in log order and accepts only a chain extending the current state; stale or competing transitions are contradictory and block promotion. This last-valid-transition rule preserves correction history without allowing a late classification to erase the native observation, its fingerprint, or a missing reciprocal evidence event.
+
 Internal drafts may exist before these gates pass, but their metadata must say `non-reviewable draft` or `analyzed evidence — promotion blocked`. A conditional or draft label cannot be used to route an incomplete package through checkpoint approval.
 
 ## Completeness labels
@@ -129,16 +137,26 @@ Every cycle declares one of:
 - `reconstructed`: provenance was recreated from transcripts, reports, and artifacts;
 - `unknown`: completeness cannot be assessed.
 
-Cycle 1 is `reconstructed`. Its exact subagent queries and every screened result are not recoverable, so no later artifact may describe its provenance as complete.
+Cycle 1 is `reconstructed`. Its exact query bundles were recovered from retained rollouts, but complete provider result windows, result ranks, every screening decision, and exact report-only inspection depth are not recoverable, so no later artifact may describe its provenance as complete.
 
 Incomplete provenance may support individually verified claims. `partial`, `reconstructed`, and `unknown` cycles cannot establish search breadth, source balance, marginal information, absence of evidence, or saturation. For `complete_with_declared_manual_sources`, any breadth or saturation conclusion is limited to the instrumented coverage boundary and the independently enumerable manual set. A taxonomy derived from incomplete work remains explicitly provisional and requires a maintainer waiver to advance; the limitation persists in later summaries until a complete cycle revalidates it.
 
 ## Capture architecture and current limitation
 
-The target implementation is an instrumented source-capture layer. Prefer native structured tool-event or transcript ingestion if available. Otherwise use a logged research gateway, such as an MCP server, for search, retrieval, GitHub and repository inspection, and manual/user source registration. Manual logs are a bootstrap and emergency path, not the normal architecture.
+The approved minimum implementation uses native Codex rollout or `codex exec --json` ingestion as a completeness backstop and explicit canonical events for source semantics. The architecture and alternatives are documented in `provenance-architecture.md`. Logged gateways and adapters may later enrich search, retrieval, GitHub, repository, and manual-source events. Manual logs remain a bootstrap and emergency path, not the normal architecture.
+
+Near-zero interaction overhead is an acceptance gate. Runtime adapters must derive queries, observed results, source opens, native links, and inspectable repository facts from ordinary tool use. Agents may supply inherently semantic judgments in a single batch, but per-interaction JSON authoring fails Stage 0.5. The canonical event model remains runtime-neutral; using an unvalidated runtime adapter forces incomplete provenance.
+
+A known search shape is not evidence of a successfully captured result window. Explicit runtime truncation or an unparseable known-search output records unknown counts and incomplete capture; it must never be converted into a zero-result search. Query purpose, family, and coverage intent remain pending until supplied semantically.
+
+The `semantic_batch_actions <= 1` threshold belongs only to the bounded Stage 0.5 acceptance scenario. Normal multi-day cycles may require multiple semantic batches. Their general requirement is that capture work scale with semantic decisions and ambiguous exceptions rather than one manual action per interaction.
+
+Every native boundary used to support a completed research cycle must have a durable `capture_archive` record. The archive contains exactly the fingerprint-verified transcript prefix, is stored outside this repository under `/Users/jernotte/dev/reference-materials/research`, and uses owner-only permissions. The record preserves runtime path, archive path, SHA-256, byte count, line boundary, capture date, and mode. Regeneration verifies both copies when both exist, may use a valid archive when the runtime transcript has disappeared, and fails closed if neither survives or either declared copy is inconsistent. Because the prefix contains raw transcript content, its external write requires explicit privacy approval.
 
 Repository scripts can validate recorded events but cannot prove that an agent never used an uninstrumented tool. A claim of complete provenance therefore requires either tool-level capture or an environment that restricts research to instrumented tools.
 
-New subject-matter research is paused until a minimum capture path is built and validated. Before any external feasibility research, initialize the append-only bootstrap log at `research/provenance/bootstrap-events.jsonl`. Log each interaction immediately, not retrospectively, using the schema in `research/provenance/README.md`. Local governing files do not need source events; external documentation, web pages, repositories, transcripts outside this project, and user-provided research material do. Bootstrap and test events are segregated from the subject corpus and carry their own `partial` completeness status unless later reconciled through tool-level records.
+The maintainer granted the reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and authorized bounded Checkpoint 2 selection. The `provisional-promotion` profile now enforces review scope and applicable archive retention without relying on caller-selected flags. `search_update` is monotonic: it may preserve or weaken result-capture status, but cannot strengthen it or rewrite evidence already classified complete. Generated audits expose every applied or rejected update.
+
+Provenance infrastructure is frozen. Change it only when real research exposes a consequential failure; minor cataloging or presentation imperfections that cannot materially affect a conclusion do not justify more infrastructure. Bootstrap feasibility activity remains in `research/provenance/bootstrap-events.jsonl`; local governing files do not need source events. Bootstrap and test events are segregated from the subject corpus and carry their own `partial` or fixture-only status rather than inheriting completeness from the validation run.
 
 The validation test must include returned-but-unopened, read-only, excluded, and referenced sources and demonstrate that the human audit exposes source concentration, planned-versus-actual channels, repository inspection depth, missing claim evidence, and unpinned implementation claims.

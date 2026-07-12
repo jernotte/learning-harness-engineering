@@ -1,17 +1,26 @@
 # Source Record: Agentless: Demystifying LLM-based Software Engineering Agents
 
+**Source ID:** FL-S015
 **Maturity:** Captured source
 **Source type:** Research paper / implementation
 **Author or organization:** Chunqiu Steven Xia, Yinlin Deng, Soren Dunn, and Lingming Zhang
 **Publication date:** 2024-07-01
 **URL:** https://arxiv.org/abs/2407.01489
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained abstract/evaluation excerpts and the legacy record
+**Surfaces inspected:** abstract, paper
+**Provenance events:** `fl-open-s015`, `fl-inspect-s015`, `fl-disposition-s015`
+**Related claim IDs:** C006 and C015 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C006 — abstract and three-stage architecture; C015 — three-stage architecture
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 Agentless is useful negative evidence against treating autonomy or architectural complexity as inherently beneficial. It replaces a free-running tool loop with a simple staged localization, repair, and validation workflow.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

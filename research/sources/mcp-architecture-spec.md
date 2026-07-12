@@ -1,5 +1,6 @@
 # Source Record: Model Context Protocol Architecture and Server Primitives
 
+**Source ID:** FL-S012
 **Maturity:** Captured source
 **Source type:** Official protocol specification/documentation
 **Author or organization:** Model Context Protocol project
@@ -7,12 +8,20 @@
 **URLs:** https://modelcontextprotocol.io/docs/learn/architecture and https://modelcontextprotocol.io/specification/2025-06-18/server/index
 **Inspected version:** 2025-06-18 specification for server primitives
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained specification output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s012`, `fl-inspect-s012`, `fl-disposition-s012`
+**Related claim IDs:** C001, C005, C014, and C022 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C001 and C014 — server overview control hierarchy; C005 and C022 — architecture overview, server primitives, and control hierarchy
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 MCP standardizes part of the boundary between a harness and external capabilities/context. It also explicitly assigns control of prompts, resources, and tools to different actors.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

@@ -1,17 +1,26 @@
 # Source Record: Harness Engineering for Self-Improvement
 
+**Source ID:** FL-S014
 **Maturity:** Captured source
 **Source type:** Technical synthesis / research blog
 **Author or organization:** Lilian Weng
 **Publication date:** 2026-07-04
 **URL:** https://lilianweng.github.io/posts/2026-07-04-harness/
 **Related cycle or question:** Cycle 1 field landscape
+**Inspection extent:** Partial substantive, reconstructed from retained article output and the legacy record
+**Surfaces inspected:** documentation
+**Provenance events:** `fl-open-s014`, `fl-inspect-s014`, `fl-disposition-s014`
+**Related claim IDs:** C001, C002, C013, and C021 in `field-landscape-synthesis-field-landscape`
+**Canonical mapping locations:** C001 and C002 — opening harness definition and “Case study: Coding Agent Harness”; C013 — “Harness Optimization”; C021 — “Harness Optimization” and open challenges
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
 
 ## Why this source matters
 
 This is the project's anchor framing and a recent attempt to define the harness as a software system rather than a prompt wrapper. It also connects production coding-agent patterns with current work on context, workflow, and harness optimization.
 
-## Claims and evidence
+## Evidence items and claim references
+
+The rows preserve source observations; canonical claim wording lives in the artifact claim ledger.
 
 | Kind | Claim or observation | Exact support | Limits |
 | --- | --- | --- | --- |

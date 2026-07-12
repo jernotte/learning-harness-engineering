@@ -1,0 +1,6 @@
+{"timestamp":"2026-07-11T00:00:00Z","type":"session_meta","payload":{"id":"fixture-thread","cli_version":"0.143.0"}}
+{"timestamp":"2026-07-11T00:01:00Z","type":"response_item","payload":{"type":"custom_tool_call","call_id":"call-web","name":"exec","input":"await tools.web__run({search_query:[{q:'fixture'}]})"}}
+{"timestamp":"2026-07-11T00:01:01Z","type":"event_msg","payload":{"type":"web_search_end","call_id":"call-web","query":"fixture"}}
+{"timestamp":"2026-07-11T00:01:02Z","type":"response_item","payload":{"type":"custom_tool_call_output","call_id":"call-web","output":"fixture search results"}}
+{"timestamp":"2026-07-11T00:02:00Z","type":"response_item","payload":{"type":"function_call","call_id":"call-message","name":"send_message","arguments":"{}"}}
+{"timestamp":"2026-07-11T00:02:01Z","type":"response_item","payload":{"type":"function_call_output","call_id":"call-message","output":"delivered"}}

@@ -1,0 +1,296 @@
+{
+  "generated_at": "2026-07-12T18:06:57.473Z",
+  "cycle": "stage-0-5-realistic-preflight",
+  "completeness": "complete",
+  "profile": "diagnostic",
+  "gate_passed": false,
+  "counts": {
+    "searches": 1,
+    "search_updates": 1,
+    "applied_search_updates": 1,
+    "rejected_search_updates": 0,
+    "searches_with_incomplete_result_capture": 1,
+    "returned": 0,
+    "returned_source_identities_recovered": 0,
+    "opened": 0,
+    "read_only": 0,
+    "referenced": 0,
+    "excluded": 0,
+    "declared_claims": 0,
+    "claims": 0,
+    "claim_evidence_mappings": 0,
+    "verifications": 0,
+    "unverified_claim_evidence_mappings": 0,
+    "native_boundaries": 1,
+    "native_observations": 38,
+    "automatically_resolved_observations": 36,
+    "human_resolved_observations": 2,
+    "unresolved_observations": 0,
+    "linked_observations": 11,
+    "not_research_observations": 27,
+    "observation_resolution_batches": 1,
+    "manual_capture_actions": "not measured",
+    "semantic_batch_actions": "not measured"
+  },
+  "planned_channels": [],
+  "actual_channels": [
+    "official documentation search",
+    "local repository inspection"
+  ],
+  "host_distribution": {},
+  "repository_depth": [],
+  "repository_observations": [
+    {
+      "timestamp": "2026-07-11T19:49:36.698Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-810fce9370999e5c8277",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c20c34aa5c6c55c85c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "6c790adb4d331eb7f7175de35afaae57e6a6dc383e0ebaf028b688d2b1cac896",
+      "surfaces": [
+        "history",
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 40
+    },
+    {
+      "timestamp": "2026-07-11T19:50:30.158Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-83e78de25e78423d0864",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d1deaf695ee5d5552f",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "5b1df5ed9a5acc5cf42b1304c357167d7b9cee0243c33d4ef03c1fd0ded6ba9d",
+      "surfaces": [
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 41
+    },
+    {
+      "timestamp": "2026-07-11T19:51:47.924Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-15a89414ee5038263e7d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-9983cd1f74eeaf88d4",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "ba04feb4552df0973fa424e9157b90f14966be2bbb378a5068db8de5370a4ef0",
+      "surfaces": [
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 42
+    },
+    {
+      "timestamp": "2026-07-11T19:52:26.529Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-cc01379cabd1c8a1449c",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-0d6d512534cafaf37e",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "cfc3c58001583579883f1d74ee2b28af43e8b9b9a40ea7137940cfd58e6d60b1",
+      "surfaces": [
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 43
+    },
+    {
+      "timestamp": "2026-07-11T19:53:09.326Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-028a727aebeedb95326e",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d56c6e10d64d204fdb",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "e01e1369bd2704289ba2b322e80a3ed57cd29f5355b38a839fa70f9e67a7fb3b",
+      "surfaces": [
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 44
+    },
+    {
+      "timestamp": "2026-07-11T19:53:19.307Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-6bec002f18abad9d8247",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-9e6885fb3f59be0804",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "1197940ce95b3014aea12c8cbbe3f638c263e052399541500d957cdba14a8722",
+      "surfaces": [
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 45
+    },
+    {
+      "timestamp": "2026-07-11T19:55:56.080Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-e9b8a79761e80e3b380e",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-b04e564ade96d736ad",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "57f44fe6a03eb39bd8042ca36bc8911004937b0612d4bd7d572cf4db1655b29f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 46
+    },
+    {
+      "timestamp": "2026-07-11T19:56:25.571Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-52601c497ba53cb8b08d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-084db2d79e70f1a6c1",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 47
+    },
+    {
+      "timestamp": "2026-07-11T20:00:27.041Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-51ffb9fdd7c1459eb5e5",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d2d91ce817e924b16e",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "f770e50259d747169e91e7763943f6cf19ad4b3eed98a74b8293dda26ea1d1e0",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 48
+    },
+    {
+      "timestamp": "2026-07-11T20:00:32.348Z",
+      "agent": "primary",
+      "cycle": "stage-0-5-realistic-preflight",
+      "pass": "actual-session-slice",
+      "derived_from_native_event": "native-85938c7fa179936a2449",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-18d70d3bb7db1822cd",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "f3098aa6f60e64dc634317a5110bd912095a9c4bae8ebabd37e2b9de0bc8968e",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 49
+    }
+  ],
+  "repository_summary": {
+    "returned": 0,
+    "opened": 0,
+    "readme_only": 0,
+    "code_inspected": 0,
+    "test_inspected": 0,
+    "history_inspected": 0,
+    "pinned": 0,
+    "referenced": 0
+  },
+  "local_repository_summary": {
+    "observations": 10,
+    "code_inspected": 7,
+    "test_inspected": 6,
+    "history_inspected": 2,
+    "commit_captured": 0
+  },
+  "claim_evidence": [],
+  "capture_archives": [],
+  "provenance_waivers": [],
+  "distributions": {
+    "host": {},
+    "organization": {},
+    "source_type": {},
+    "publication_year": {},
+    "primary_secondary": {},
+    "evidence_lineage": {}
+  },
+  "searches": [
+    {
+      "event_id": "auto-search-21ec016aa02182c152",
+      "query_id": "auto-Q-ef0b810ee18675",
+      "query": "Codex hooks app server JSONL events",
+      "query_family": null,
+      "channel": "official documentation search",
+      "tool_provider": "OpenAI Developer Docs MCP",
+      "filters": "official OpenAI documentation",
+      "requested_limit": 10,
+      "observed_returned_count": null,
+      "total_hits_reported": null,
+      "result_capture_status": "incomplete_truncated",
+      "truncation": "runtime output truncation detected; returned-result window is incomplete",
+      "semantic_status": "pending",
+      "purpose": null,
+      "coverage_dimension": null
+    }
+  ],
+  "search_updates": [
+    {
+      "event_id": "search-update-63a82b79dc7643a4ce",
+      "search_event_id": "auto-search-21ec016aa02182c152",
+      "applied": true,
+      "from_status": "complete",
+      "to_status": "incomplete_truncated",
+      "reason": "The archived native output at line 1402 begins with an explicit runtime truncation warning and contains unparseable partial search JSON; the historical automatic zero-result fields are not supported."
+    }
+  ],
+  "sources": [],
+  "errors": [
+    {
+      "code": "incomplete_search_result_capture",
+      "message": "Search result capture is incomplete_truncated: auto-Q-ef0b810ee18675",
+      "event_id": "auto-search-21ec016aa02182c152",
+      "query_id": "auto-Q-ef0b810ee18675"
+    }
+  ],
+  "warnings": []
+}

@@ -1,9 +1,9 @@
 # Research Cycle: The Architectural Landscape of Modern Harnesses
 
-**Status:** Checkpoint 1 conditionally reviewed; remediation in progress
-**Current phase:** Provenance capture feasibility, implementation, and validation; reconstruction/remediation follows
+**Status:** Checkpoint 1 provisionally promoted under reconstructed-provenance waiver
+**Current phase:** Bounded Checkpoint 2 selection authorized but not begun
 **Governance:** Early alignment
-**Provenance status:** Initial narrative reconstruction completed; formal event and claim reconstruction awaits capture validation. The best attainable class is `reconstructed` because exact subagent queries, returned-result sets, and all screened sources are not recoverable
+**Provenance status:** `reconstructed`. Exact query bundles were recovered from three rollout files; complete provider result windows, result ranks, all screening decisions, and exact inspection depth for report-only leads remain unrecoverable
 
 ## Decision-oriented question
 
@@ -66,7 +66,7 @@ The same word often hides different semantics. In particular, a handoff that tra
 
 The academic pass mapped control loops, tool/action interfaces, context and memory, planning/search, multi-agent organization, feedback and verification, evaluation, and compound-system optimization. It preserved contrary findings rather than selecting one narrative. The implementation recon report described 22 current or historically important systems across eight architectural families. The primary pass checked selected production documentation and implementation material. Because source-event capture did not exist, these activity counts are reconstructed from tool history, agent reports, and artifacts rather than a complete provenance ledger.
 
-Sixteen legacy narrative records exist for sources cited or used in the draft synthesis. Formal referenced disposition remains pending reconstruction; the count is not a claim-coverage audit. Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other implementation details entered recon or draft prose without completing the required durable source lifecycle. Until reconstruction admits them as referenced evidence, the synthesis must label them as unadmitted leads or remove the claims they support.
+Sixteen narrative records cited or used in the synthesis now have referenced dispositions, canonical claim mappings, and primary verification. Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other implementation details remain read-only leads without the durable source lifecycle required to support claims. Checkpoint 2 may evaluate them as candidates to pin; it must not inherit their reported mechanisms as evidence.
 
 The cycle also retains a larger lead inventory for later deep dives, including ReAct, ReWOO, LATS, LLM+P, ToolBench/StableToolBench, tau-bench/tau2-bench, LoCoMo, LongMemEval, PlanBench, AgentBoard, DSPy, ADAS, SICA, and the open implementations listed in the synthesis. Leads are not evidence.
 
@@ -95,30 +95,32 @@ The cycle also retains a larger lead inventory for later deep dives, including R
 
 ### Unadmitted lineage leads
 
-The implementation recon reported that AutoGPT Classic and both major BabyAGI lines are archived or unsupported; AutoGen is in maintenance mode in favor of Microsoft Agent Framework; DeerFlow 2.0 is a ground-up rewrite; and OpenHands shifted toward a separate Software Agent SDK. These remain unadmitted leads until their source events and records are reconstructed. If admitted, they may establish version lineage; they cannot by themselves prove why systems changed or which architecture is better.
+The implementation recon reported that AutoGPT Classic and both major BabyAGI lines are archived or unsupported; AutoGen is in maintenance mode in favor of Microsoft Agent Framework; DeerFlow 2.0 is a ground-up rewrite; and OpenHands shifted toward a separate Software Agent SDK. These remain read-only, unadmitted leads until later work verifies and promotes them through the full source lifecycle. If admitted, they may establish version lineage; they cannot by themselves prove why systems changed or which architecture is better.
 
 ### Recon-pass log
 
 | Pass and date | Purpose | Channels and query families | Coverage dimension | New mechanisms, contradictions, or sources | Marginal information gained |
 | --- | --- | --- | --- | --- | --- |
-| Academic and empirical landscape — 2026-07-10 | Identify research framings, evaluated mechanisms, benchmarks, and open problems | Reconstructed from agent report; exact queries and returned results incomplete | Foundational/current research and empirical evidence | Eight candidate responsibilities, contradiction clusters, and paper leads | Reported high; not an instrumented marginal-information measure |
-| Open implementation landscape — 2026-07-10 | Identify responsibilities expressed in code and materially different control-flow designs | Reconstructed from agent report describing 22 repositories/docs/releases; exact searches and inspection depth incomplete | Open systems across domains and architectures | Twelve implementation-visible responsibilities, eight families, and version-sensitive leads | Reported high; several claims await durable admission |
+| Academic and empirical landscape — 2026-07-10 | Identify research framings, evaluated mechanisms, benchmarks, and open problems | Exact query bundles recovered from rollout; complete result windows and screening remain unknown | Foundational/current research and empirical evidence | Eight candidate responsibilities, contradiction clusters, and paper leads | Reported high; not an instrumented marginal-information measure |
+| Open implementation landscape — 2026-07-10 | Identify responsibilities expressed in code and materially different control-flow designs | Exact query bundles and report recovered; complete result windows and primary inspection depth remain unknown | Open systems across domains and architectures | Twelve implementation-visible responsibilities, eight families, and version-sensitive leads | Reported high; 24 repository families remain read-only and unadmitted |
 | Production and cross-cutting landscape — 2026-07-10 | Map disclosures, terminology, and responsibilities across source families | Partly reconstructable from primary tool history and current source records | Open/closed production systems and cross-cutting taxonomy | Eleven-responsibility analytical lens and seven comparison dimensions | Substantive, but not complete provenance or independent corroboration |
 
 ### Source-audit status
 
-The approved provenance capture path does not yet exist. Before Checkpoint 1 can complete, this cycle requires:
+The approved D-004 path passes fixtures and its archive-enforced real acceptance with real claims. Its 38-observation preflight supports exception-scaled overhead, while one preserved truncated search correctly leaves result capture incomplete and the effective preflight audit blocked. Under the maintainer's bounded authorization, reconstruction produced:
 
-- a reconstructed source catalog and per-agent/source event history with explicit gaps;
-- a generated human source audit showing search channels, host/type/organization distribution, repository depth, dispositions, and concentration warnings;
-- a claim-evidence ledger for the synthesis;
-- full records for every referenced source;
-- removal or explicit lead labeling for unsupported material claims;
-- a documented primary verification event for every referenced claim/source/location mapping, with subagent non-self-verification enforced as an additional constraint.
+- `research/provenance/field-landscape-events.jsonl`, containing 27 recovered query bundles, 40 opened identities, 16 referenced records, 24 read-only implementation leads, and explicit reconstruction limits;
+- `research/provenance/field-landscape-audit.md` and JSON, generated from those events;
+- 24 canonical material claims with 50 exact source/location mappings and 50 primary verification events;
+- full metadata and provenance links for all 16 referenced narrative source records;
+- a readable claim-ledger projection at `research/claims/field-landscape.md`;
+- tightened synthesis prose that demotes unsupported comparisons and keeps report-only systems unadmitted.
+
+The maintainer granted the reconstructed-provenance waiver with a persistent limitation, and the audit now passes the fixed `provisional-promotion` profile. Its GitHub concentration warning remains visible and explicitly resolved by noting that all 24 GitHub families are read-only and support no material claim.
 
 ## Analysis plan and case-study status
 
-Deep-dive selection is paused until the provenance system is validated and Checkpoint 1 is re-presented. At Checkpoint 2, the proposal will state batch size and include a responsibility-coverage matrix, exact tags/commits/dates, documentation alignment, evidence mode, and lineage risk. The batch will deliberately include one closed production reference case using Claude Code material supplied by the maintainer; its externally supported behavior will not be presented as inspected internal architecture.
+Bounded Checkpoint 2 selection is authorized but has not begun. It will state batch size and include a responsibility-coverage matrix, exact tags/commits/dates, documentation alignment, evidence mode, and lineage risk. The batch will deliberately include one closed production reference case using Claude Code material supplied by the maintainer; its externally supported behavior will not be presented as inspected internal architecture. Selection ends at a maintainer checkpoint before any deep dive or case study.
 
 ## Consolidation state
 
@@ -126,7 +128,7 @@ The provisional consolidation is `research/syntheses/field-landscape.md`. Comple
 
 ## Refinement and saturation review
 
-Checkpoint 1 evaluates landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. The original recon cannot support an accurate saturation or marginal-information claim because query/result provenance was not instrumented. Additional subject-matter recon remains paused; the next useful work is capture infrastructure and honest reconstruction.
+Checkpoint 1 evaluated landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. Reconstruction recovered exact query bundles but not complete result windows or screening activity, so it cannot support an accurate breadth, balance, absence-of-evidence, saturation, or marginal-information claim. The waiver preserves that limitation until a complete cycle revalidates the landscape. The next action is bounded Checkpoint 2 selection, not further landscape recon.
 
 ## Process retrospective
 
@@ -137,7 +139,8 @@ The parallel split produced complementary maps, but the cycle lacked per-agent p
 | Checkpoint | Artifact or version reviewed | Date | Status | Maintainer decision | Conditions or requested changes | Next phase authorized |
 | --- | --- | --- | --- | --- | --- | --- |
 | Foundation / Stage 0 | D-001 and initial repository foundation | 2026-07-10 | Approved | Continue with first cycle | None recorded | Cycle 1 recon |
-| Checkpoint 1 | Landscape, sourcing coverage, and three-layer taxonomy | 2026-07-11 | Conditional remediation | Direction approved; final promotion deferred | Build/test provenance capture; reconstruct Cycle 1; complete source and claim audits; correct independence wording and unsupported claims | Methodology and provenance infrastructure only; no Checkpoint 2 selection |
+| Infrastructure / Stage 0.5 | D-004, real acceptance, and realistic preflight | 2026-07-11 | Approved and frozen | D-004 accepted; later correction honestly blocked one truncated preflight result without changing overhead evidence | Final monotonic-update and fixed-profile safeguards completed 2026-07-12 | Bounded Cycle 1 reconstruction, then Checkpoint 2 selection |
+| Checkpoint 1 | Reconstructed landscape, sourcing coverage, claim ledger, and three-layer taxonomy | 2026-07-12 | Provisionally promoted | Maintainer granted the reconstructed-provenance waiver and accepted the three-layer direction as provisional | Preserve caveat until complete revalidation; test responsibility boundaries at Checkpoint 3 | Bounded Checkpoint 2 selection |
 | Checkpoint 2 | First deep-dive set |  | Not reached |  |  |  |
 | Checkpoint 3 | First case-study batch |  | Not reached |  |  |  |
 | Checkpoint 4 | First cross-harness synthesis |  | Not reached |  |  |  |

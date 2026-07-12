@@ -20,9 +20,11 @@ Read these files in order:
 
 Treat `outline.md` as an informed starting hypothesis. Do not silently adopt its modules as the final taxonomy.
 
-## Current research pause
+## Current authorization
 
-Do not begin new subject-matter recon, source collection, or implementation deep dives while `research/STATUS.md` says provenance infrastructure is pending. Work is currently limited to maintaining the approved methodology, investigating and building the provenance capture path, testing it with deliberately bounded fixtures or a miniature approved recon, and reconstructing Cycle 1 with explicit incompleteness. Before reading external material for the bootstrap investigation, append interaction-time events to `research/provenance/bootstrap-events.jsonl` using `research/provenance/README.md`. Bootstrap activity is segregated and `partial` until reconciled; do not mix it into the subject corpus.
+Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Bounded Checkpoint 2 selection is authorized but has not begun. Selection may inspect candidate versions and evidence modes only as needed to propose the batch; it does not authorize implementation deep dives or case studies, which remain blocked until Checkpoint 2 maintainer review. The eleven-responsibility lens remains provisional until Checkpoint 3 records taxonomy friction.
+
+D-004 remains approved. Its overhead preflight result stands, while one historical truncated search remains honestly marked incomplete. The fixed promotion profile and monotonic `search_update` safeguard are now enforced. Provenance infrastructure is frozen: change it only when real research exposes a consequential failure, not to address speculative or immaterial imperfections. Bootstrap activity remains segregated and `partial`; do not mix it into the subject corpus.
 
 ## Scope
 

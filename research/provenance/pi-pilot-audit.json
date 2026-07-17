@@ -1,0 +1,1602 @@
+{
+  "generated_at": "2026-07-13T00:34:12.574Z",
+  "cycle": "field-landscape",
+  "completeness": "complete",
+  "profile": "provisional-promotion",
+  "gate_passed": true,
+  "counts": {
+    "searches": 1,
+    "search_updates": 0,
+    "applied_search_updates": 0,
+    "rejected_search_updates": 0,
+    "searches_with_incomplete_result_capture": 0,
+    "returned": 21,
+    "returned_source_identities_recovered": 21,
+    "opened": 5,
+    "read_only": 0,
+    "referenced": 5,
+    "excluded": 0,
+    "declared_claims": 15,
+    "claims": 19,
+    "claim_evidence_mappings": 19,
+    "verifications": 19,
+    "unverified_claim_evidence_mappings": 0,
+    "native_boundaries": 1,
+    "native_observations": 53,
+    "automatically_resolved_observations": 49,
+    "human_resolved_observations": 4,
+    "unresolved_observations": 0,
+    "linked_observations": 43,
+    "not_research_observations": 10,
+    "observation_resolution_batches": 1,
+    "manual_capture_actions": 27,
+    "semantic_batch_actions": 1
+  },
+  "planned_channels": [
+    "academic web search",
+    "local repository inspection"
+  ],
+  "actual_channels": [
+    "academic web search",
+    "local repository inspection"
+  ],
+  "host_distribution": {
+    "github.com": 1,
+    "arxiv.org": 3,
+    "aclanthology.org": 1
+  },
+  "repository_depth": [
+    {
+      "source_id": "CP2-S001",
+      "surfaces": [
+        "README",
+        "documentation",
+        "code",
+        "tests",
+        "history",
+        "releases",
+        "command_output"
+      ],
+      "pinned": true
+    }
+  ],
+  "repository_observations": [
+    {
+      "timestamp": "2026-07-13T00:13:45.666Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-50791854f0065d2478b8",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-77850d96cfb02c9684",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "0ad5ea206adfe99c2fcb9e1b76ef51cfef771d85fd9e91f66cf3f86a47f2f94e",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 55
+    },
+    {
+      "timestamp": "2026-07-13T00:13:50.692Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-4a5c4003416043be8e3f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-7e37fce5228b69177f",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "0254f5ba11dc74490035a004acc46133810201d967994e0b56a23c90310599fd",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 56
+    },
+    {
+      "timestamp": "2026-07-13T00:13:57.768Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-b3616abacf7e937cab60",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d359efd7c3d93bbfb5",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "44229de915cd90cd557f83958b1f8f5ecff907e27a76f998549724d026ba89dd",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 57
+    },
+    {
+      "timestamp": "2026-07-13T00:14:04.017Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-f6f93db1a04a0b43edc7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-0a3d026ca82c1248f0",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3a06282fd7ae2dd40b4d71e9aea1074ac10fc195994047b74a380485d920b938",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 58
+    },
+    {
+      "timestamp": "2026-07-13T00:14:20.094Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-c57388237cf4156e21d8",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-7434f5fb9fa2ec09d9",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "827794137271747957080f850a70cc2eb8f5e14aef78bdb109b46791082f5001",
+      "surfaces": [],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 59
+    },
+    {
+      "timestamp": "2026-07-13T00:14:24.698Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-e386cb81b0c38262106f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-41fcc3daeb2ce5f66a",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "ff2fa8c62c7c98c45a9fdbcb6aa081ec0e392535b5f6ba4261f16c6b024cb005",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 60
+    },
+    {
+      "timestamp": "2026-07-13T00:14:34.148Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-ab80a38ca5af991f671b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-9e6cc699a10f1f7736",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "e10b19ee0ed4b4095ce2f797bf20693ce8fed8054972cc08c48e2ba13b92208b",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 61
+    },
+    {
+      "timestamp": "2026-07-13T00:14:44.876Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-345c30dcb7251a10d3b7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ea4ec2e671b75252f3",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "9b969374024b0fcd7fa77a285b42208264668a1831a0fedd7fcbb393b401f3f1",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 62
+    },
+    {
+      "timestamp": "2026-07-13T00:14:53.269Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-9c4ff8d55fc0fa5ce756",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-62621f546bc1af7ae5",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "c7f7fa46048f8d8f945a74913a459f7517ee53bf91426ac241bd1727da8c8a94",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 63
+    },
+    {
+      "timestamp": "2026-07-13T00:14:59.106Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-d795d29201d1ab8004fb",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-1af6776ca89350020d",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "4cae38be1f6f90ae32a2e37c81d8481ab041fb4763d3d5f5fa1263dabd56f1ba",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 64
+    },
+    {
+      "timestamp": "2026-07-13T00:15:06.990Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-07ccf1039e8b82053eb7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f780bfb5526d9ae225",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "e7190c99a7a2d6589a194fbabb34dcd1c2fcb6d10463e9ff57f69727ac50650f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 65
+    },
+    {
+      "timestamp": "2026-07-13T00:15:15.092Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-517a4e72536f6a8f9d06",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-b7b566357cab0c918c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3dd276bee05630fb672714c12d9f1068e47bfe8b97ea4a72e35a5e5c2662f8ac",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 66
+    },
+    {
+      "timestamp": "2026-07-13T00:15:29.233Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-756de3110c60641749a7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-bde34337919272483d",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "53fa29a314a10e6fb7b571a8bab5548fe8442dfc742a704d04e1a73b902043d0",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 67
+    },
+    {
+      "timestamp": "2026-07-13T00:15:35.031Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-59089119a3ab1a9ac898",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f531259b9eed52b1c5",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 68
+    },
+    {
+      "timestamp": "2026-07-13T00:15:44.670Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-9341b691f5e65c85c401",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f39b5f70bd7e8a9c10",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "009a0c959748f7336434a3c318c6bd7d2d84be51f5ab1d7e379667217cdd3831",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 69
+    },
+    {
+      "timestamp": "2026-07-13T00:16:44.566Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-1e781f608d8460634e3e",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-6437512cbd9c8d2dee",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "47293707ab2c1b2f1e187c952c305e274d8f380cff483a696150497cd37f3a74",
+      "surfaces": [
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 70
+    },
+    {
+      "timestamp": "2026-07-13T00:16:55.606Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-20299bb4f53d99780463",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f611611e40ed62b172",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "44084fc3406b8320497c4dbc7ec08a39e298cf683d1110e7f90bd89a309741a3",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 71
+    },
+    {
+      "timestamp": "2026-07-13T00:17:05.512Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-4ecef45a03b82547784f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-1901fc4452e157cc3b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "09c40c7dff642ae85ef3bdedeb875755b7a33d4b6697b0f5f0cdd231d69c128f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 72
+    },
+    {
+      "timestamp": "2026-07-13T00:17:17.201Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-7053a833f354d07a14da",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c79f34f3bac0d3c410",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3441950549423ae34ba06e4a405e7bc7f22ed01df90d5a653b9b11d5b45b05e2",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 73
+    },
+    {
+      "timestamp": "2026-07-13T00:18:01.148Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-5b620bf1a18a4b768860",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-07c68d9d59ebf0b71e",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "bced980c250a545b1c48f737f9f52557e49e84e0d0812b3718e5fadc50f526e1",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 74
+    },
+    {
+      "timestamp": "2026-07-13T00:18:07.696Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-4b576ece08c0a70190f5",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-cace0a9dcc929421c1",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "4098674fff53ccd39d8f3b8277713806c5ae31f3cea6c851b71bbb9e35a3a4c8",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 75
+    },
+    {
+      "timestamp": "2026-07-13T00:18:16.477Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-7c2b278dcad97abdf9b8",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c5b05aef26bd13a3d0",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "dce1baa6c386cb59fcc03665b99965c568e76df8d18a5da2ae387de63bdf5a3b",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "351efc828b6fc5250fa50d6b32b20b0f0cb22cb4",
+      "capture_mode": "automatic",
+      "__line": 76
+    },
+    {
+      "timestamp": "2026-07-13T00:18:21.170Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-4ef0739f4f8072a2cc5a",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e714988a7db6242c4b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3728feddf2b85223d9e381600543a7c0a7dc80c7748bbf22d7889de059b4a83a",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 77
+    },
+    {
+      "timestamp": "2026-07-13T00:18:24.643Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-979de8e2acb66f90eeb2",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-32cc91099cdf3c5225",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "a6ee70245f5ecf35c9a6a5e29acde24b3a9bf9a2f5a2b8e8aec7502c8075a21f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 78
+    },
+    {
+      "timestamp": "2026-07-13T00:18:29.775Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-004ef637d1b0f91de4d7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-a9648f90a250d485ef",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "75e9e929582ddd2bf49354f59bf4faf83bd012cbf26460f6402bf5641a4fde84",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 79
+    },
+    {
+      "timestamp": "2026-07-13T00:18:34.632Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-cd8e9d1ec6e771dbe523",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e607eb459ed278cb6f",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "ecd48cb33e28771910c90457cb819dd560ac93cd28f621b237f4ef5dbaa88376",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 80
+    },
+    {
+      "timestamp": "2026-07-13T00:18:44.764Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-b4f3ac100773b73098b8",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-cc8ad4a33e4cb340b0",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "bc7419d52e693ac274f4f476d9a90a68bfc974f05088f396c89af5ef1cf5e4ae",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 81
+    },
+    {
+      "timestamp": "2026-07-13T00:19:16.512Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-c653492c234cdf5627cd",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-8d80c0bc10bd79af32",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 82
+    },
+    {
+      "timestamp": "2026-07-13T00:19:24.287Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-56411df398258a26ab51",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-45f2c830a1635398cb",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 83
+    },
+    {
+      "timestamp": "2026-07-13T00:19:30.434Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-e1bc73cac68ae4bc035f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-6e7f7bc271a48acf47",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "de9a377cf25858f4433f96c8b2cdef9b37780d354409d0a0fe700b9af31ce5c3",
+      "surfaces": [
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 84
+    },
+    {
+      "timestamp": "2026-07-13T00:23:14.489Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-8dc3e0125e428f199be5",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-7b30c9366b78a6d59b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "615b87d3ecd7d8ffabc4a19b79b6e00304635acf4fb20bf2d4a6295b4d1dbb63",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "9028562e2d5eda76de662ec9b7584125760eb83f",
+      "capture_mode": "automatic",
+      "__line": 85
+    },
+    {
+      "timestamp": "2026-07-13T00:23:23.871Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-64b4d7b45788020a5c77",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c8f778d8225dd4d37d",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "9664fa584997e77951d2b2b936cce1d319d9248e7baa0056cff90146e2eaeb95",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 86
+    },
+    {
+      "timestamp": "2026-07-13T00:23:30.952Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-54fc8cfa40d449a2df37",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-3b7c6700249d05949c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "be0b4884a9a937f8ff5c95f651fa8bcdc5c1097af86c3eb4086ad81efa0d5300",
+      "surfaces": [
+        "code"
+      ],
+      "commit": "2b3fda9921b5590f285165287bd442a25817f17b",
+      "capture_mode": "automatic",
+      "__line": 87
+    },
+    {
+      "timestamp": "2026-07-13T00:24:49.893Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-9603872c216a11db1baf",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-b19b0d91750afc42a3",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "0bd1334aebfb08749b031d5ba2560ad8d82cfdd3e8788f1283a6c1f6adba9b55",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 88
+    },
+    {
+      "timestamp": "2026-07-13T00:24:53.190Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-4b981a291823862061f1",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-80e87cbd10856ac29c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 89
+    },
+    {
+      "timestamp": "2026-07-13T00:24:57.782Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-d8023ae13b059e188fe4",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-760e85d5ef127cb3de",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "0406b166e456915c1aa9cc3cf506e7e591630218b7525a61ab4c81ae8ed84f8c",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 90
+    },
+    {
+      "timestamp": "2026-07-13T00:25:00.907Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-c46972a2ab21f61bd4eb",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d2ad7faa603b5c55c2",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "a878b24b60b7696850fe8d7781a0e287275083113103664c24aa2655e4e44ed7",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 91
+    },
+    {
+      "timestamp": "2026-07-13T00:25:13.551Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-cfee0fe43717c7c9b7a7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d3822ebf0303293be0",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "3cd99b53f1e7273719fad78844f296c49f58617ce8d325d979f0fefcfd8309fb",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 92
+    },
+    {
+      "timestamp": "2026-07-13T00:25:18.153Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot",
+      "derived_from_native_event": "native-35849d2ded64258edcd3",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-5314de0f55f499a281",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "74c071a70e1c06a26e8266deff0c1357f12590c0b02dfd1409bb1c74396eb5bd",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 93
+    }
+  ],
+  "repository_summary": {
+    "returned": 0,
+    "opened": 1,
+    "readme_only": 0,
+    "code_inspected": 1,
+    "test_inspected": 1,
+    "history_inspected": 1,
+    "pinned": 1,
+    "referenced": 1
+  },
+  "local_repository_summary": {
+    "observations": 39,
+    "code_inspected": 34,
+    "test_inspected": 2,
+    "history_inspected": 2,
+    "commit_captured": 8
+  },
+  "claim_evidence": [
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C001",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "At v0.80.6, Pi's coding path layers pi-ai, the low-level Agent, and pi-coding-agent's AgentSession; the separate AgentHarness implementation is present but is not imported by coding-agent source and its pinned design document marks lifecycle work as provisional.",
+      "artifact_location": "Implementation boundary and Two loop abstractions",
+      "confidence": "high for the pinned repository; the import absence is version-bounded",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C002",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "The low-level loop is model-directed over tool calls, with deterministic code owning event order, turn snapshots, queue-drain points, tool scheduling, termination hints, cancellation, and provider-failure normalization.",
+      "artifact_location": "The production control loop",
+      "confidence": "high for v0.80.6; no effectiveness implication",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C003",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pi builds each coding prompt from active tools and guidelines, project/global instruction files, skills metadata, date, and cwd, while refreshing model, tools, system prompt, and thinking level between tool turns.",
+      "artifact_location": "What the model sees",
+      "confidence": "high; concrete runs remain configuration- and extension-dependent",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C004",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pi validates tool arguments, exposes pre/post extension hooks, defaults to parallel tool execution unless a tool or configuration forces sequential execution, bounds tool observations, and refuses to execute calls from a length-truncated assistant response; trusted pre-call hooks can mutate the validated argument object before execution.",
+      "artifact_location": "Tools and observations",
+      "confidence": "high for mechanics; trusted hooks are inside the trust boundary",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C005",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pi preserves an append-only tree-shaped session separately from the compaction-aware active model context, enabling retained history and branching even when older entries leave the model view.",
+      "artifact_location": "Durable state and projected context",
+      "confidence": "high; in-memory mode is not durable",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C006",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Default coding-session compaction uses a model-generated structured summary plus a retained recent tail, triggered manually, by threshold, or by overflow; overflow may compact and retry once.",
+      "artifact_location": "Compaction and recovery",
+      "confidence": "high for implementation; semantic retention and task benefit are unmeasured",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C007",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Delegation is not a primitive of the default core loop; the pinned repository demonstrates single, parallel, and chained subagents as an optional extension that spawns separate Pi processes.",
+      "artifact_location": "Extensions and delegation",
+      "confidence": "high for the inspected boundary; extensions make deployed behavior open-ended",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C008",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "Pi intentionally provides no built-in permission system or sandbox; project trust gates resource loading, while execution containment is assigned to extensions or external OS/virtualization boundaries.",
+      "artifact_location": "Containment and trust",
+      "confidence": "high for declared and code-consistent policy; no security-effectiveness claim",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C009",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pi provides retry and context-overflow recovery for runtime failures, but the default inspected path has no independent task-success verifier, acceptance gate, or rollback policy.",
+      "artifact_location": "Verification, recovery, and stopping",
+      "confidence": "high for present and absent code at the pin; extensions can add policy",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C010",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pi records rich operational evidence—events, JSONL sessions, model/tool metadata, usage, cache and cost data, exports, and regression tests—but the inspected repository does not contain a task-level evaluation harness or pinned coding-outcome result for v0.80.6.",
+      "artifact_location": "Observability without outcome evaluation",
+      "confidence": "high for the inspected repository; private external evaluations remain unknowable",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C011",
+      "epistemic_kind": "inference",
+      "claim_text": "Pi's recent fixes for truncated tool arguments, stale next-turn state, and settled event timing indicate that action integrity and lifecycle boundaries are active failure surfaces rather than incidental implementation detail.",
+      "artifact_location": "What recent fixes reveal",
+      "confidence": "moderate; illustrative history, not a failure-frequency measurement",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C012",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "SWE-agent's historical experiments support the proposition that coding-agent action/observation interface design can materially affect outcomes, but do not validate Pi's exact interface or current models.",
+      "artifact_location": "Practice versus outcome evidence: action interfaces",
+      "confidence": "moderate transfer confidence across different implementation, model, benchmark, and date",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [
+        "FL-S016"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [
+        "CP2-S001"
+      ],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C013",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "Recent preprints report that synchronous LLM summarization compaction can be lossy, blocking, and variable, and propose deterministic or parallel alternatives; these results qualify rather than directly refute Pi's unmeasured default compaction.",
+      "artifact_location": "Practice versus outcome evidence: compaction",
+      "confidence": "moderate-low due to recent preprints, different tasks and models, and no direct Pi comparison",
+      "mapping_count": 3,
+      "verified_mapping_count": 3,
+      "supporting_sources": [
+        "PI-S002",
+        "PI-S003"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [
+        "CP2-S001"
+      ],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C014",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "The Kamoi et al. survey found reliable external feedback substantially more credible for correction than prompted intrinsic self-feedback, qualifying any assumption that a model-directed coding loop will verify itself without an explicit policy.",
+      "artifact_location": "Practice versus outcome evidence: verification",
+      "confidence": "moderate transfer confidence; the survey predates current models and does not evaluate Pi",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [
+        "FL-S009"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [
+        "CP2-S001"
+      ],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C015",
+      "epistemic_kind": "hypothesis",
+      "claim_text": "Pi suggests the lens may need explicit nested lifecycle scales and a cross-cutting extension/policy-injection dimension, because session lifecycle and turn lifecycle differ while extensions span most responsibilities.",
+      "artifact_location": "Responsibility-lens friction",
+      "confidence": "low until contrasted with remaining cases; no taxonomy change authorized",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    }
+  ],
+  "capture_archives": [
+    {
+      "event_id": "capture-archive-924b075dc4cd2056e7",
+      "timestamp": "2026-07-13T00:32:32.513Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "pi-pilot-retention",
+      "event_type": "capture_archive",
+      "boundary_id": "native-boundary-74f621581a6d010050e9",
+      "archive_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/pi-pilot/pi-pilot-prefix.jsonl",
+      "archive_sha256": "74f621581a6d010050e9ebd7f2fe93c9fa14aef0161afbb9f93d608ea8d618b3",
+      "archive_bytes": 15985199,
+      "line_start": 1,
+      "line_end": 4689,
+      "source_runtime_path": "/Users/jernotte/.codex/sessions/2026/07/10/rollout-2026-07-10T20-20-05-019f4ec2-9fba-7033-a71b-0e34e29bf2ae.jsonl",
+      "captured_at": "2026-07-13T00:32:32.523Z",
+      "archive_mode": "0600",
+      "__line": 194
+    }
+  ],
+  "provenance_waivers": [],
+  "distributions": {
+    "host": {
+      "github.com": 1,
+      "aclanthology.org": 1,
+      "arxiv.org": 3
+    },
+    "organization": {
+      "earendil-works": 1,
+      "Kamoi et al.": 1,
+      "Yang et al.": 1,
+      "Semenov et al.": 1,
+      "Cim et al.": 1
+    },
+    "source_type": {
+      "repository": 1,
+      "peer-reviewed survey": 1,
+      "peer-reviewed paper and implementation": 1,
+      "preprint": 2
+    },
+    "publication_year": {
+      "2024": 2,
+      "2026": 2,
+      "unspecified": 1
+    },
+    "primary_secondary": {
+      "primary implementation": 1,
+      "primary scholarly synthesis": 1,
+      "primary research report": 3
+    },
+    "evidence_lineage": {
+      "earendil-works/pi v0.80.6": 1,
+      "Kamoi et al. TACL survey": 1,
+      "SWE-agent paper": 1,
+      "Beyond Compaction preprint": 1,
+      "Parallel Context Compaction preprint": 1
+    }
+  },
+  "searches": [
+    {
+      "event_id": "pi-search-001",
+      "query_id": "PI-Q001",
+      "query": "batch: [site:arxiv.org LLM agent context compaction summarization long horizon memory benchmark; site:arxiv.org agent computer interface tool design coding agents SWE-agent; site:aclanthology.org large language model self correction external feedback survey; site:arxiv.org coding agent trajectory evaluation tool use verification benchmark]",
+      "query_family": "targeted mechanism qualification",
+      "channel": "academic web search",
+      "tool_provider": "Codex web search",
+      "filters": "arxiv.org and aclanthology.org",
+      "requested_limit": null,
+      "observed_returned_count": 21,
+      "total_hits_reported": 21,
+      "result_capture_status": "complete",
+      "truncation": "none observed",
+      "purpose": "Find bounded empirical or scholarly evidence relevant to Pi compaction, action interfaces, and verification behavior",
+      "coverage_dimension": "Pi mechanism qualification and counterevidence"
+    }
+  ],
+  "search_updates": [],
+  "sources": [
+    {
+      "source_id": "CP2-S001",
+      "canonical_url": "https://github.com/earendil-works/pi/tree/2b3fda9921b5590f285165287bd442a25817f17b",
+      "host": "github.com",
+      "organization": "earendil-works",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "primary implementation",
+      "evidence_lineage": "earendil-works/pi v0.80.6",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "full substantive",
+      "surfaces": [
+        "README",
+        "documentation",
+        "code",
+        "tests",
+        "history",
+        "releases",
+        "command_output"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Primary evidence for every Pi implementation observation and the responsibility-lens friction report.",
+      "version_freshness_state": "pinned",
+      "record_path": "research/sources/cp2-pi-v0.80.6.md"
+    },
+    {
+      "source_id": "FL-S009",
+      "canonical_url": "https://aclanthology.org/2024.tacl-1.78/",
+      "host": "aclanthology.org",
+      "organization": "Kamoi et al.",
+      "source_type": "peer-reviewed survey",
+      "publication_year": 2024,
+      "primary_secondary": "primary scholarly synthesis",
+      "evidence_lineage": "Kamoi et al. TACL survey",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "abstract",
+        "paper"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports the scoped distinction between ungrounded intrinsic correction and reliable external feedback.",
+      "version_freshness_state": "published_2024_reopened_2026-07-12",
+      "record_path": "research/sources/kamoi-2024-self-correction-survey.md"
+    },
+    {
+      "source_id": "FL-S016",
+      "canonical_url": "https://arxiv.org/abs/2405.15793",
+      "host": "arxiv.org",
+      "organization": "Yang et al.",
+      "source_type": "peer-reviewed paper and implementation",
+      "publication_year": 2024,
+      "primary_secondary": "primary research report",
+      "evidence_lineage": "SWE-agent paper",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "abstract",
+        "paper"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports only the general importance of agent-computer interface design, not Pi's exact design or current-model outcomes.",
+      "version_freshness_state": "published_2024_reused_from_retained_record_2026-07-12",
+      "record_path": "research/sources/yang-2024-swe-agent.md"
+    },
+    {
+      "source_id": "PI-R002",
+      "canonical_url": "https://aclanthology.org/2024.tacl-1.27/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R004",
+      "canonical_url": "https://arxiv.org/abs/2601.07190",
+      "host": "arxiv.org",
+      "organization": "",
+      "source_type": "preprint",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R005",
+      "canonical_url": "https://arxiv.org/abs/2607.05378",
+      "host": "arxiv.org",
+      "organization": "",
+      "source_type": "preprint",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R007",
+      "canonical_url": "https://aclanthology.org/2025.acl-short.73/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R008",
+      "canonical_url": "https://aclanthology.org/people/ryo-kamoi/unverified/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "author index",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R009",
+      "canonical_url": "https://aclanthology.org/2026.findings-acl.86/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R010",
+      "canonical_url": "https://aclanthology.org/people/ryo-kamoi/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "author index",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R011",
+      "canonical_url": "https://aclanthology.org/2024.acl-long.826/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R012",
+      "canonical_url": "https://aclanthology.org/2024.emnlp-main.714/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R013",
+      "canonical_url": "https://aclanthology.org/2026.findings-acl.725/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R014",
+      "canonical_url": "https://aclanthology.org/people/liangming-pan/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "author index",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R015",
+      "canonical_url": "https://aclanthology.org/2026.acl-long.759/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "peer-reviewed paper",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R016",
+      "canonical_url": "https://aclanthology.org/volumes/2025.findings-ijcnlp/",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "proceedings index",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R017",
+      "canonical_url": "https://aclanthology.org/2024.tacl-1.27.pdf",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "paper PDF",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R018",
+      "canonical_url": "https://aclanthology.org/anthology-files/pdf/emnlp/2024.emnlp-main.714.pdf",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "paper PDF",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R019",
+      "canonical_url": "https://aclanthology.org/2025.trustnlp-main.5.pdf",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "paper PDF",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R020",
+      "canonical_url": "https://aclanthology.org/2025.acl-long.140.pdf",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "paper PDF",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-R021",
+      "canonical_url": "https://aclanthology.org/2025.findings-acl.331.pdf",
+      "host": "aclanthology.org",
+      "organization": "",
+      "source_type": "paper PDF",
+      "publication_year": "unspecified",
+      "primary_secondary": "unspecified",
+      "evidence_lineage": "unspecified",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "PI-S002",
+      "canonical_url": "https://arxiv.org/abs/2606.11213",
+      "host": "arxiv.org",
+      "organization": "Semenov et al.",
+      "source_type": "preprint",
+      "publication_year": 2026,
+      "primary_secondary": "primary research report",
+      "evidence_lineage": "Beyond Compaction preprint",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "abstract",
+        "paper"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Qualifies the assumption that Pi's summary compaction is predictably adequate; it does not directly test Pi.",
+      "version_freshness_state": "live_preprint_opened_2026-07-12",
+      "record_path": "research/sources/semenov-2026-beyond-compaction.md"
+    },
+    {
+      "source_id": "PI-S003",
+      "canonical_url": "https://arxiv.org/abs/2605.23296",
+      "host": "arxiv.org",
+      "organization": "Cim et al.",
+      "source_type": "preprint",
+      "publication_year": 2026,
+      "primary_secondary": "primary research report",
+      "evidence_lineage": "Parallel Context Compaction preprint",
+      "query_ids": [
+        "PI-Q001"
+      ],
+      "returned": true,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "abstract",
+        "paper"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Provides bounded empirical context for compaction latency and variability, not a direct Pi comparison.",
+      "version_freshness_state": "live_preprint_opened_2026-07-12",
+      "record_path": "research/sources/cim-2026-parallel-compaction.md"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "code": "host_concentration",
+      "message": "3/5 opened sources came from arxiv.org",
+      "host": "arxiv.org",
+      "count": 3,
+      "total": 5,
+      "resolved": true,
+      "resolution": "The 3/5 concentration reflects two deliberately targeted compaction preprints plus reuse of the admitted SWE-agent paper. The bounded pilot also uses the pinned implementation and a peer-reviewed ACL source; it does not claim landscape breadth or saturation."
+    }
+  ]
+}

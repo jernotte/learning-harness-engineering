@@ -12,11 +12,12 @@ The research is intended to do three things at once. The process itself should d
 - [`docs/source-provenance.md`](docs/source-provenance.md) defines the required search, reading, and claim-evidence audit trail.
 - [`docs/research-plan.md`](docs/research-plan.md) describes the initial program and its early human checkpoints.
 - [`research/STATUS.md`](research/STATUS.md) is the current human-readable control panel.
+- [`research/TAXONOMY-FRICTION.md`](research/TAXONOMY-FRICTION.md) accumulates case evidence about where the provisional responsibility lens works or breaks down.
 - [`outline.md`](outline.md) is a useful seed, not an approved or fixed taxonomy.
 
 ## Repository shape
 
-The structure remains intentionally small while the approved Pi pilot begins testing the first deep-dive method and the analytical lens. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
+The structure remains intentionally small. The maintainer has reviewed the Pi pilot and authorized the pinned OpenHands SDK case as the next test of the deep-dive method and analytical lens. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
 
 ```text
 docs/
@@ -32,6 +33,7 @@ research/
   syntheses/                cross-source and cross-harness findings
   cycles/                   plans, recon maps, and cycle reviews
   templates/                minimum schemas for research artifacts
+  TAXONOMY-FRICTION.md      cumulative cross-case responsibility-lens evidence
   COVERAGE.md               evolving landscape and gaps
   DECISIONS.md              consequential methodology decisions
   STATUS.md                 concise progress and review view
@@ -41,4 +43,4 @@ tools/provenance/            capture, transcript-ingest, validation, and audit C
 
 Large third-party repositories belong in `/Users/jernotte/dev/reference-materials/research`, not in this repository. Findings derived from them belong here and should identify the inspected commit or release.
 
-The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver. Checkpoint 2 is approved, and only the pinned Pi pilot is authorized before the next maintainer alignment review. An HTML dashboard and further speculative provenance work remain deferred.
+The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver. Checkpoint 2 and D-007 are approved; Pi is reviewed, and only the pinned OpenHands SDK case is authorized next. An HTML dashboard and further speculative provenance work remain deferred.

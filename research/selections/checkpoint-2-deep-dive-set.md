@@ -1,6 +1,6 @@
 # Checkpoint 2 Proposal: First Deep-Dive Set
 
-**Status:** Approved; Pi pilot only is authorized
+**Status:** Approved; Pi reviewed and OpenHands SDK authorized next
 **Cycle:** `field-landscape`
 **Artifact ID:** `field-landscape-selection-checkpoint-2-deep-dive-set`
 **Prepared:** 2026-07-12
@@ -10,7 +10,7 @@
 
 ## Maintainer decision
 
-On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. The remaining five cases stay blocked until the maintainer reviews the pilot. This is a selection decision, not a finding about how any system works.
+On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, and authorized OpenHands SDK next with a scope-first condition. LangGraph, Browser Use, OpenClaw, Claude Code, and all alternates remain blocked. This is a selection decision, not a finding about how any system works.
 
 Cycle 1 remains reconstructed. Its implementation report supplied leads, not evidence: exact provider result windows, screening breadth, and report-only inspection depth remain unknowable. This proposal independently captured the bounded selection searches, every observed returned result, every opened candidate, and exact public Git tag refs. It does not revalidate the landscape's breadth or the eleven-responsibility lens.
 
@@ -138,4 +138,4 @@ The maintainer review after the pilot should ask:
 
 ## Authorized next step
 
-Run only the Pi pilot at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b`. Pause again after that single case before beginning OpenHands SDK or any other batch member. Claude Code remains conditional on material admission.
+Run only the OpenHands SDK case at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`, beginning with a written scope boundary that excludes legacy OpenHands and defines deep versus survey treatment before code tracing expands. Claude Code remains conditional on material admission; every other case remains blocked.

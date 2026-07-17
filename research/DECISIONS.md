@@ -246,3 +246,38 @@ The generated audit proves interaction reconciliation but does not bind the cont
 ### Approval record
 
 The maintainer approved D-006 on 2026-07-12 after directly reviewing the selection logic, implementation-grounded progression, responsibility lens, and planned relationship between case evidence and academic or empirical research. The maintainer required the R1–R11 reference to be made self-contained and emphasized that cases must preserve and investigate agreement and disagreement between deployed practice and research evidence. An external review separately verified all eight pins, the selection audit, archive integrity, and the 35 manual result URLs. Only the pinned Pi pilot is authorized. Claude Code remains conditional, and OpenHands SDK, LangGraph, Browser Use, OpenClaw, and every alternate remain blocked until the post-Pi alignment review or a later explicit decision.
+
+## D-007 — Pi pilot method and next-case authorization
+
+**Status:** Approved
+**Date:** Proposed 2026-07-12; approved 2026-07-16
+
+### Proposed decision
+
+Accept the Pi v0.80.6 pilot as analyzed evidence and approve its case method for the next implementation: trace source-native control flow first, compare consequential mechanisms with narrowly relevant outcome evidence, and apply R1–R11 afterward as a friction diagnostic rather than as eleven narrative headings.
+
+Keep the taxonomy unchanged. Carry the Pi observations in `research/TAXONOMY-FRICTION.md` into the remaining batch: R1 may need explicit nested lifecycle scales, extension or policy-injection surfaces may be a cross-cutting dimension, and the R2/R3/R5 and R5/R6 boundaries need cross-case testing. Treat these couplings as multi-label friction, not a reason to force exclusive ownership after one case.
+
+Authorize the pinned OpenHands Software Agent SDK case next, at D-006's exact boundary, then pause only if it exposes a material method, taxonomy, or provenance failure. Claude Code remains conditional and every other authorization remains subject to the maintainer's explicit scope decision.
+
+### Why
+
+The Pi case follows the production path across three packages, distinguishes retained state from active context and runtime recovery from task verification, preserves absence and unsupported-practice findings, and uses external research to qualify rather than decorate implementation observations. Fifteen canonical claims have nineteen verified mappings, and the complete audit passes. The narrative is more readable when organized by mechanisms and control flow than when organized by responsibility IDs.
+
+The pilot also exposes genuine limitations without requiring a taxonomy rewrite. Pi is only one compact coding harness; its extension system and nested lifecycle may not recur in the same form. OpenHands is the best next contrast because its SDK/workspace and event/view architecture tests whether the method scales beyond a compact session orchestrator.
+
+### Alternatives
+
+- Require revisions before another case. Choose this if the maintainer finds the case too dense, insufficiently deep, or hard to audit.
+- Authorize the whole remaining open batch immediately. This is faster but gives up the opportunity to test whether the method scales to a platform-sized second case.
+- Replace OpenHands with LangGraph. This tests programmed control sooner but postpones the compact-versus-platform contrast selected for early method validation.
+
+### Consequences if approved
+
+Pi becomes a reviewed case only after the maintainer records the review basis and outcome; this proposal does not self-promote it. The implementation method remains stable for OpenHands, while taxonomy friction accumulates for Checkpoint 3. The reconstructed-provenance caveat continues to travel with claims that depend on the Cycle 1 landscape, but the Pi implementation evidence itself has complete provenance.
+
+The Pi pass required 27 manually represented generic-web interaction events in one batch, with all URLs and query strings verified against the retained archive. This is recorded overhead, not a provenance redesign trigger for the completed pilot. The existing D-006 trigger still blocks new search-heavy instrumented recon until its adapter condition is satisfied or the maintainer makes a new decision.
+
+### Approval record
+
+The maintainer approved D-007 on 2026-07-16, accepted Pi as a reviewed case, and authorized the pinned OpenHands Software Agent SDK case next. The review basis was the maintainer's direct assessment of the case, claim ledger, audit, and taxonomy-friction record, informed by an external review that independently checked representative load-bearing claims against the pinned source, regenerated the audit, rechecked all manual result URLs against the retained archive, and reran the validation suite. The Pi friction findings remain provisional questions for cross-case comparison; no taxonomy revision was approved.

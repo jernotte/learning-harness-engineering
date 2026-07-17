@@ -40,6 +40,8 @@ Identify meaningfully similar and contrasting approaches. Discuss dependence on 
 
 ## Responsibility-lens map and friction
 
+After analyzing the case, update the cumulative comparison in `research/TAXONOMY-FRICTION.md`. Test existing friction questions before adding new ones, and record counterexamples and distinctions that worked—not only boundary problems. Do not turn a single-case observation into a taxonomy change.
+
 Use source-native language in the narrative, then multi-label relevant mechanisms against the provisional responsibilities. The IDs are:
 
 - R1 — run lifecycle and ingress;

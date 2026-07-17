@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-07-13T00:29:00.000Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "field-landscape",
+  "pass": "pi-pilot-annotation",
+  "semantic_batch_id": "pi-pilot-semantic-batch-1",
+  "planned_channels": [
+    "academic web search",
+    "local repository inspection"
+  ],
+  "planning_basis": "The approved pilot required deep inspection of one pinned implementation and only targeted external evidence prompted by observed mechanisms. Previously admitted Cycle 1 sources could be reused from retained records without reopening broad recon.",
+  "artifact": {
+    "artifact_id": "field-landscape-case-pi-v0-80-6",
+    "artifact_type": "implementation case study",
+    "artifact_path": "research/case-studies/pi-v0.80.6.md"
+  },
+  "review_scope": {
+    "scope_id": "field-landscape-pi-pilot-review",
+    "scope_basis": "All material implementation, comparison, negative, and taxonomy-friction claims in the bounded Pi v0.80.6 pilot; the package is analyzed evidence awaiting maintainer review and is not a reviewed finding.",
+    "artifact_ids": [
+      "field-landscape-case-pi-v0-80-6"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "CP2-S001",
+      "inspection_extent": "full substantive",
+      "surfaces": ["README", "documentation", "code", "tests", "history", "releases", "command_output"],
+      "locations_inspected": ["repository tree", "packages/ai", "packages/agent", "packages/coding-agent", "packages/tui", "pinned docs", "representative tests", "release-adjacent history"],
+      "inspection_basis": "Primary agent traced the production coding path and adjacent provider, state, tool, extension, recovery, and observability mechanisms at the exact approved commit.",
+      "disposition": "referenced",
+      "reason": "Primary evidence for every Pi implementation observation and the responsibility-lens friction report.",
+      "record_path": "research/sources/cp2-pi-v0.80.6.md"
+    },
+    {
+      "source_id": "PI-S002",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["abstract and introduction lines 3-27", "evaluation/limitations lines 35-49"],
+      "inspection_basis": "Opened only to answer whether recent work identifies concrete limitations of summarization compaction and evaluates an alternative.",
+      "disposition": "referenced",
+      "reason": "Qualifies the assumption that Pi's summary compaction is predictably adequate; it does not directly test Pi.",
+      "record_path": "research/sources/semenov-2026-beyond-compaction.md"
+    },
+    {
+      "source_id": "PI-S003",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["abstract and introduction", "HotpotQA and LoCoMo evaluation summary", "latency and ten-run variability results"],
+      "inspection_basis": "Opened only to answer whether compaction blocking cost and output variability have been measured under any controlled protocol.",
+      "disposition": "referenced",
+      "reason": "Provides bounded empirical context for compaction latency and variability, not a direct Pi comparison.",
+      "record_path": "research/sources/cim-2026-parallel-compaction.md"
+    },
+    {
+      "source_id": "FL-S009",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["abstract", "critical-survey conclusion on prompted intrinsic and reliable external feedback"],
+      "inspection_basis": "Reopened the admitted source to qualify assumptions about voluntary self-verification in a model-directed loop.",
+      "disposition": "referenced",
+      "reason": "Supports the scoped distinction between ungrounded intrinsic correction and reliable external feedback.",
+      "record_path": "research/sources/kamoi-2024-self-correction-survey.md"
+    },
+    {
+      "source_id": "FL-S016",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained abstract", "retained ACI design and ablation locations from the admitted Cycle 1 record"],
+      "inspection_basis": "Reused previously admitted and verified evidence to ask whether action/observation interface design has any outcome support outside Pi.",
+      "disposition": "referenced",
+      "reason": "Supports only the general importance of agent-computer interface design, not Pi's exact design or current-model outcomes.",
+      "record_path": "research/sources/yang-2024-swe-agent.md"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C001",
+      "claim_text": "At v0.80.6, Pi's coding path layers pi-ai, the low-level Agent, and pi-coding-agent's AgentSession; the separate AgentHarness implementation is present but is not imported by coding-agent source and its pinned design document marks lifecycle work as provisional.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Implementation boundary and Two loop abstractions",
+      "confidence": "high for the pinned repository; the import absence is version-bounded",
+      "references": [{"source_id":"CP2-S001","location":"repository package tree; packages/agent/src/agent.ts; packages/coding-agent/src/core/agent-session.ts; packages/agent/src/agent-harness.ts; packages/agent/docs/agent-harness.md","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Direct code and pinned documentation; no claim about future migration intent."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C002",
+      "claim_text": "The low-level loop is model-directed over tool calls, with deterministic code owning event order, turn snapshots, queue-drain points, tool scheduling, termination hints, cancellation, and provider-failure normalization.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "The production control loop",
+      "confidence": "high for v0.80.6; no effectiveness implication",
+      "references": [{"source_id":"CP2-S001","location":"packages/agent/src/agent-loop.ts:155-270, 413-585; packages/agent/src/agent.ts:424-570; packages/agent/test/agent-loop.test.ts:525-1305","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Control flow and representative regression tests inspected directly."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C003",
+      "claim_text": "Pi builds each coding prompt from active tools and guidelines, project/global instruction files, skills metadata, date, and cwd, while refreshing model, tools, system prompt, and thinking level between tool turns.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "What the model sees",
+      "confidence": "high; concrete runs remain configuration- and extension-dependent",
+      "references": [{"source_id":"CP2-S001","location":"packages/coding-agent/src/core/system-prompt.ts:28-173; resource-loader.ts:85-119; agent-session.ts:473-499, 983-1021","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Direct prompt and per-turn refresh paths."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C004",
+      "claim_text": "Pi validates tool arguments, exposes pre/post extension hooks, defaults to parallel tool execution unless a tool or configuration forces sequential execution, bounds tool observations, and refuses to execute calls from a length-truncated assistant response; trusted pre-call hooks can mutate the validated argument object before execution.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Tools and observations",
+      "confidence": "high for mechanics; trusted hooks are inside the trust boundary",
+      "references": [{"source_id":"CP2-S001","location":"packages/agent/src/agent-loop.ts:383-747; packages/coding-agent/src/core/tools/read.ts:212-315; bash.ts:301-397; agent-loop tests:310-969","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Code and tests cover validation, scheduling, hook mutation, truncation, and fail-closed length handling."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C005",
+      "claim_text": "Pi preserves an append-only tree-shaped session separately from the compaction-aware active model context, enabling retained history and branching even when older entries leave the model view.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Durable state and projected context",
+      "confidence": "high; in-memory mode is not durable",
+      "references": [{"source_id":"CP2-S001","location":"packages/coding-agent/src/core/session-manager.ts:414-465, 974-1050, 1187-1365 and branching/compaction tests","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Direct storage and context-projection paths."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C006",
+      "claim_text": "Default coding-session compaction uses a model-generated structured summary plus a retained recent tail, triggered manually, by threshold, or by overflow; overflow may compact and retry once.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Compaction and recovery",
+      "confidence": "high for implementation; semantic retention and task benefit are unmeasured",
+      "references": [{"source_id":"CP2-S001","location":"packages/coding-agent/src/core/agent-session.ts:1729-2050; compaction.ts; docs/compaction.md; compaction tests","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Mechanism and recovery paths verified; no outcome metric found."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C007",
+      "claim_text": "Delegation is not a primitive of the default core loop; the pinned repository demonstrates single, parallel, and chained subagents as an optional extension that spawns separate Pi processes.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Extensions and delegation",
+      "confidence": "high for the inspected boundary; extensions make deployed behavior open-ended",
+      "references": [{"source_id":"CP2-S001","location":"absence in packages/agent and default coding core; packages/coding-agent/examples/extensions/subagent/index.ts:1-700","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Repository-wide search plus direct optional-extension inspection."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C008",
+      "claim_text": "Pi intentionally provides no built-in permission system or sandbox; project trust gates resource loading, while execution containment is assigned to extensions or external OS/virtualization boundaries.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "Containment and trust",
+      "confidence": "high for declared and code-consistent policy; no security-effectiveness claim",
+      "references": [{"source_id":"CP2-S001","location":"README.md:39-45; packages/coding-agent/docs/security.md:3-59; docs/containerization.md","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Pinned vendor documentation and consistent resource-loading behavior."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C009",
+      "claim_text": "Pi provides retry and context-overflow recovery for runtime failures, but the default inspected path has no independent task-success verifier, acceptance gate, or rollback policy.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Verification, recovery, and stopping",
+      "confidence": "high for present and absent code at the pin; extensions can add policy",
+      "references": [{"source_id":"CP2-S001","location":"packages/coding-agent/src/core/agent-session.ts:1027-1062, 1890-2050, 2574-2640; default tool and prompt paths","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Direct recovery implementation and bounded absence search."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C010",
+      "claim_text": "Pi records rich operational evidence—events, JSONL sessions, model/tool metadata, usage, cache and cost data, exports, and regression tests—but the inspected repository does not contain a task-level evaluation harness or pinned coding-outcome result for v0.80.6.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Observability without outcome evaluation",
+      "confidence": "high for the inspected repository; private external evaluations remain unknowable",
+      "references": [{"source_id":"CP2-S001","location":"event types, session entries, export/stat code, package tests and scripts; repository-wide evaluation search","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Operational mechanisms observed; task-level evaluation absence is version- and repository-bounded."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C011",
+      "claim_text": "Pi's recent fixes for truncated tool arguments, stale next-turn state, and settled event timing indicate that action integrity and lifecycle boundaries are active failure surfaces rather than incidental implementation detail.",
+      "epistemic_kind": "inference",
+      "artifact_location": "What recent fixes reveal",
+      "confidence": "moderate; illustrative history, not a failure-frequency measurement",
+      "references": [{"source_id":"CP2-S001","location":"commits 351efc82, e547bb9f, e9fa5a68 and associated regression tests","relationship":"supports","outcome":"supports_scope","inspected_version":"history reachable from v0.80.6 commit","notes":"The commits establish concrete defects; the failure-surface interpretation is an inference."}]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C012",
+      "claim_text": "SWE-agent's historical experiments support the proposition that coding-agent action/observation interface design can materially affect outcomes, but do not validate Pi's exact interface or current models.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "Practice versus outcome evidence: action interfaces",
+      "confidence": "moderate transfer confidence across different implementation, model, benchmark, and date",
+      "references": [
+        {"source_id":"FL-S016","location":"abstract, ACI design sections, and reported ablations retained in the admitted source record","relationship":"supports","outcome":"supports_scope","inspected_version":"2024 paper evidence retained and verified during Cycle 1","notes":"Supports general ACI importance, not Pi's interface."},
+        {"source_id":"CP2-S001","location":"Pi tool schemas, dispatch, observations, and default coding-tool implementation at v0.80.6","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Establishes the Pi mechanism being compared; no Pi outcome evaluation found."}
+      ]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C013",
+      "claim_text": "Recent preprints report that synchronous LLM summarization compaction can be lossy, blocking, and variable, and propose deterministic or parallel alternatives; these results qualify rather than directly refute Pi's unmeasured default compaction.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "Practice versus outcome evidence: compaction",
+      "confidence": "moderate-low due to recent preprints, different tasks and models, and no direct Pi comparison",
+      "references": [
+        {"source_id":"PI-S002","location":"abstract and introduction lines 3-27; evaluation and limitations lines 35-49","relationship":"supports","outcome":"supports_scope","inspected_version":"live arXiv preprint opened 2026-07-12","notes":"Reports limitations and a structured alternative; broader evaluations and ablations are explicitly future work."},
+        {"source_id":"PI-S003","location":"abstract, HotpotQA/LoCoMo protocol, latency and ten-run variability results","relationship":"supports","outcome":"supports_scope","inspected_version":"live arXiv preprint opened 2026-07-12","notes":"Reports blocking cost and variability under a different serving/evaluation setup."},
+        {"source_id":"CP2-S001","location":"Pi compaction implementation and pinned docs at v0.80.6","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Establishes the mechanism; Pi contains no direct retention/outcome measurement."}
+      ]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C014",
+      "claim_text": "The Kamoi et al. survey found reliable external feedback substantially more credible for correction than prompted intrinsic self-feedback, qualifying any assumption that a model-directed coding loop will verify itself without an explicit policy.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "Practice versus outcome evidence: verification",
+      "confidence": "moderate transfer confidence; the survey predates current models and does not evaluate Pi",
+      "references": [
+        {"source_id":"FL-S009","location":"abstract and critical-survey conclusion on prompted intrinsic correction and reliable external feedback","relationship":"supports","outcome":"supports_scope","inspected_version":"TACL 2024 page reopened 2026-07-12","notes":"Supports the scoped evidence distinction, not a universal impossibility claim."},
+        {"source_id":"CP2-S001","location":"default stopping, retry, tool, and verification paths at v0.80.6","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Shows why the external-feedback distinction matters to this case; no direct behavior test was run."}
+      ]
+    },
+    {
+      "claim_id": "field-landscape-case-pi-v0-80-6-C015",
+      "claim_text": "Pi suggests the lens may need explicit nested lifecycle scales and a cross-cutting extension/policy-injection dimension, because session lifecycle and turn lifecycle differ while extensions span most responsibilities.",
+      "epistemic_kind": "hypothesis",
+      "artifact_location": "Responsibility-lens friction",
+      "confidence": "low until contrasted with remaining cases; no taxonomy change authorized",
+      "references": [{"source_id":"CP2-S001","location":"case-wide lifecycle, turn loop, AgentSession, AgentHarness, resource, tool-hook, provider, and extension evidence","relationship":"supports","outcome":"supports_scope","inspected_version":"v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Evidence-backed taxonomy question from one case, not a validated revision."}]
+    }
+  ]
+}

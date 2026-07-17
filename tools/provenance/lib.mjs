@@ -277,13 +277,114 @@ function outputText(value) {
 }
 
 function stringProp(source, key) {
-  const match = source.match(new RegExp(`${key}\\s*:\\s*(["'])([\\s\\S]*?)\\1`));
-  return match?.[2]?.replaceAll("\\\"", "\"") || null;
+  return stringProps(source, key)[0] || null;
 }
 
 function numberProp(source, key) {
-  const match = source.match(new RegExp(`${key}\\s*:\\s*(\\d+)`));
+  const match = source.match(new RegExp(`(?:["']?${key}["']?)\\s*:\\s*(\\d+)`));
   return match ? Number(match[1]) : null;
+}
+
+function readStringLiteral(source, start) {
+  const quote = source[start];
+  if (quote !== "\"" && quote !== "'") return null;
+  let escaped = false;
+  for (let index = start + 1; index < source.length; index += 1) {
+    const character = source[index];
+    if (escaped) { escaped = false; continue; }
+    if (character === "\\") { escaped = true; continue; }
+    if (character !== quote) continue;
+    const raw = source.slice(start, index + 1);
+    if (quote === "\"") {
+      try { return { value: JSON.parse(raw), end: index + 1 }; } catch {}
+    }
+    return {
+      value: raw.slice(1, -1)
+        .replaceAll("\\'", "'")
+        .replaceAll('\\"', '"')
+        .replaceAll("\\n", "\n")
+        .replaceAll("\\r", "\r")
+        .replaceAll("\\t", "\t")
+        .replaceAll("\\\\", "\\"),
+      end: index + 1,
+    };
+  }
+  return null;
+}
+
+function stringBindings(source) {
+  const bindings = new Map();
+  const pattern = /\b(?:const|let)\s+([A-Za-z_$][\w$]*)\s*=\s*/g;
+  for (const match of source.matchAll(pattern)) {
+    const literal = readStringLiteral(source, match.index + match[0].length);
+    if (literal) bindings.set(match[1], literal.value);
+  }
+  return bindings;
+}
+
+function stringProps(source, key) {
+  const values = [];
+  const bindings = stringBindings(source);
+  const pattern = new RegExp(`(?:["']?${key}["']?)\\s*:\\s*`, "g");
+  for (const match of source.matchAll(pattern)) {
+    const start = match.index + match[0].length;
+    const literal = readStringLiteral(source, start);
+    if (literal) { values.push(literal.value); continue; }
+    const identifier = source.slice(start).match(/^([A-Za-z_$][\w$]*)/i)?.[1];
+    if (identifier && bindings.has(identifier)) values.push(bindings.get(identifier));
+  }
+  return values;
+}
+
+function execEnvelope(input, projectRoot) {
+  const workdirs = stringProps(input, "workdir");
+  const repositoryPaths = [...input.matchAll(/\/(?:Users|private|tmp)\/[^\s"'`;,)]+\/reference-materials\/research\/[^\s"'`;,)]+/g)].map((match) => match[0]);
+  const externalWorkdir = workdirs.find((candidate) => {
+    const resolved = path.resolve(candidate);
+    return resolved !== projectRoot && !resolved.startsWith(`${projectRoot}${path.sep}`);
+  });
+  const repositoryPath = externalWorkdir || repositoryPaths[0] || workdirs[0] || projectRoot;
+  const commands = stringProps(input, "cmd");
+  return { repositoryPath, commandText: commands.length ? commands.join("\n") : input };
+}
+
+function httpUrls(text) {
+  const urls = [];
+  const seen = new Set();
+  for (const match of text.matchAll(/https?:\/\/[^\s"'<>\\)\]]+/g)) {
+    const candidate = match[0].replace(/[.,;:]+$/, "");
+    try {
+      const canonical = canonicalUrl(candidate);
+      if (!seen.has(canonical)) { seen.add(canonical); urls.push(candidate); }
+    } catch {}
+  }
+  return urls;
+}
+
+function genericWebSearchOutput(text) {
+  if (/Warning:\s*truncated output/i.test(text)) return { status: "incomplete_truncated", urls: [], truncation: "runtime output truncation detected; returned-result window is incomplete" };
+  const urls = httpUrls(text);
+  if (urls.length) return { status: "complete", urls, truncation: "none observed" };
+  if (/\b(?:no results|0 results|nothing found)\b/i.test(text)) return { status: "complete", urls: [], truncation: "none observed" };
+  return { status: "incomplete_unparseable", urls: [], truncation: "generic web output did not expose a mechanically parseable result window" };
+}
+
+function webSourceType(url) {
+  const host = new URL(url).host;
+  if (host === "arxiv.org") return "preprint";
+  if (host === "doi.org") return "paper identifier";
+  if (host === "github.com") return "repository";
+  return "web source";
+}
+
+function webMarkerMatches(input, marker) {
+  const action = marker.action || {};
+  if (action.type === "search" && Array.isArray(action.queries)) {
+    const queries = stringProps(input, "q");
+    return action.queries.length > 0 && action.queries.every((query) => queries.includes(query));
+  }
+  if (action.type === "open_page" && action.url) return stringProps(input, "ref_id").includes(action.url);
+  return false;
 }
 
 function parseJsonText(text) {
@@ -474,8 +575,9 @@ function classifyNativeCall(call, options = {}) {
   if (/tools\.(?:update_plan|get_goal|create_goal)/.test(input)) return { research_capable: false, classification: "local_control_operation", automatic_reason: "Task-control operation does not access research material." };
   if (/tools\.(?:mcp__[A-Za-z0-9_]+|web__run)\s*\(/i.test(input) || /^(?:mcp__[A-Za-z0-9_]+|web__run)$/i.test(call.toolName || "")) return { research_capable: true, classification: "external_or_research_capable" };
   if (/tools\.exec_command/.test(input)) {
-    const cmd = stringProp(input, "cmd") || input;
-    const workdir = stringProp(input, "workdir") || projectRoot;
+    const envelope = execEnvelope(input, projectRoot);
+    const cmd = envelope.commandText;
+    const workdir = envelope.repositoryPath;
     const text = `${cmd} ${workdir}`;
     if (externalPatterns.some((pattern) => pattern.test(text)) || !insideProject(workdir)) return { research_capable: true, classification: "external_or_research_capable" };
     if (/(?:^|[;&|]\s*|\s)(?:git|rg|sed|find)\s/.test(cmd)) return { research_capable: true, classification: "generic_shell_requires_review" };
@@ -507,10 +609,11 @@ export function ingestCodexRollout(file, options = {}) {
       outputs.set(payload.call_id, { line: row.__line, output_sha256: sha(rawOutput(payload.output ?? "")), value: payload.output });
     }
     if (row.type === "event_msg" && payload.type === "web_search_end") {
-      webMarkers.set(payload.call_id, { line: row.__line, timestamp: row.timestamp, query_sha256: sha(String(payload.query ?? "")) });
+      webMarkers.set(payload.call_id, { line: row.__line, timestamp: row.timestamp, query_sha256: sha(String(payload.query ?? "")), action: payload.action || null });
     }
   }
   const capturedCallIds = new Set();
+  const wrappedWebCalls = [];
   for (const row of rows) {
     if (!inWindow(row)) continue;
     const call = nativeCall(row);
@@ -547,12 +650,21 @@ export function ingestCodexRollout(file, options = {}) {
     }
     observations.push(observation);
     derived.push(...automatic);
+    if (/tools\.web__run\s*\(/.test(String(call.rawInput || "")) && automatic.length) wrappedWebCalls.push({ timestamp: row.timestamp, input: String(call.rawInput || ""), eventIds: automatic.map((event) => event.event_id), used: false });
   }
   for (const [callId, marker] of webMarkers) {
     if (capturedCallIds.has(callId) || !inWindow(marker)) continue;
     const fingerprint = sha(`${marker.timestamp}\n${callId}\nnative_web_search\n${marker.query_sha256}`);
+    const markerEventId = `native-${fingerprint.slice(0, 20)}`;
+    const match = wrappedWebCalls
+      .filter((candidate) => !candidate.used && Date.parse(candidate.timestamp) <= Date.parse(marker.timestamp) && webMarkerMatches(candidate.input, marker))
+      .sort((left, right) => Date.parse(right.timestamp) - Date.parse(left.timestamp))[0];
+    if (match) {
+      match.used = true;
+      for (const event of derived.filter((candidate) => match.eventIds.includes(candidate.event_id))) event.native_refs = [...new Set([...(event.native_refs || []), markerEventId])];
+    }
     observations.push({
-      event_id: `native-${fingerprint.slice(0, 20)}`,
+      event_id: markerEventId,
       timestamp: marker.timestamp,
       agent: options.agent || "primary",
       cycle: options.cycle || "unknown",
@@ -561,7 +673,8 @@ export function ingestCodexRollout(file, options = {}) {
       native_ref: { rollout_path: path.resolve(file), line: marker.line, call_id: callId, tool_name: "native_web_search", input_sha256: fingerprint, web_query_sha256: marker.query_sha256 },
       research_capable: true,
       classification: "external_or_research_capable",
-      resolution: "unreconciled",
+      resolution: match ? "linked" : "unreconciled",
+      ...(match ? { linked_event_ids: match.eventIds } : {}),
     });
   }
   const knownResponseTypes = new Set(["message", "reasoning", "agent_message", "function_call", "function_call_output", "custom_tool_call", "custom_tool_call_output"]);
@@ -636,15 +749,77 @@ function deriveResearchEvents({ row, call, output, nativeEventId, options }) {
       events.push({ ...common, event_id: derivedId("inspect", nativeEventId), event_type: "source_inspected", source_id: id, inspection_extent: "partial_substantive", surfaces: ["documentation"], locations_inspected: ["complete fetched page delivered to model context"], inspection_basis: "automatic conservative default; semantic batch may revise", capture_mode: "automatic" });
     }
   }
+  if (/tools\.web__run\s*\(/.test(input) || call.toolName === "web__run") {
+    const queries = stringProps(input, "q");
+    if (queries.length) {
+      const parsed = genericWebSearchOutput(text);
+      const query = queries.join(" || ");
+      const queryId = `auto-Q-${sha(`${nativeEventId}:${query}`).slice(0, 14)}`;
+      events.push({
+        ...common,
+        event_id: derivedId("search", nativeEventId),
+        event_type: "search",
+        query_id: queryId,
+        query,
+        query_family: null,
+        channel: "generic web search",
+        tool_provider: "web.run",
+        filters: "as submitted to generic web search",
+        purpose: null,
+        requested_limit: null,
+        observed_returned_count: parsed.status === "complete" ? parsed.urls.length : null,
+        total_hits_reported: null,
+        cursor_pagination: "single captured response",
+        truncation: parsed.truncation,
+        pages_examined: parsed.status === "complete" ? 1 : null,
+        coverage_dimension: null,
+        semantic_status: "pending",
+        result_capture_status: parsed.status,
+        capture_mode: "automatic",
+      });
+      parsed.urls.forEach((exactUrl, rank) => {
+        const url = canonicalUrl(exactUrl);
+        const host = new URL(url).host;
+        events.push({
+          ...common,
+          event_id: derivedId("result", nativeEventId, exactUrl),
+          event_type: "result_returned",
+          query_id: queryId,
+          result_rank: rank + 1,
+          source_id: sourceId(exactUrl),
+          canonical_url: url,
+          exact_result_url: exactUrl,
+          host,
+          organization: host,
+          source_type: webSourceType(url),
+          primary_secondary: "unknown until inspected",
+          evidence_lineage: "generic web search result",
+          publication_year: null,
+          result_set_partial: false,
+          capture_mode: "automatic",
+        });
+      });
+    }
+    for (const exactUrl of [...new Set(stringProps(input, "ref_id").filter((value) => /^https?:\/\//.test(value)))]) {
+      const url = canonicalUrl(exactUrl);
+      const id = sourceId(exactUrl);
+      const host = new URL(url).host;
+      events.push({ ...common, event_id: derivedId("open", nativeEventId, exactUrl), event_type: "source_opened", source_id: id, canonical_url: url, host, organization: host, source_type: webSourceType(url), direct_discovery_reason: "Opened through generic web tool", primary_secondary: "unknown until inspected", evidence_lineage: "generic web open", publication_year: null, version_freshness_state: "live_unpinned", capture_mode: "automatic" });
+      events.push({ ...common, event_id: derivedId("inspect", nativeEventId, exactUrl), event_type: "source_inspected", source_id: id, inspection_extent: "partial_substantive", surfaces: ["other"], locations_inspected: ["captured web response"], inspection_basis: "automatic conservative default; semantic batch may revise", capture_mode: "automatic" });
+    }
+  }
   if (/tools\.exec_command/.test(input)) {
-    const cmd = stringProp(input, "cmd");
-    const workdir = stringProp(input, "workdir") || options.projectRoot || options["project-root"] || process.cwd();
+    const projectRoot = path.resolve(options.projectRoot || options["project-root"] || process.cwd());
+    const envelope = execEnvelope(input, projectRoot);
+    const cmd = envelope.commandText;
+    const workdir = envelope.repositoryPath;
     if (cmd && /(git\s|rg\s|sed\s|find\s)/.test(cmd)) {
       const surfaces = [];
       if (/git\s+(?:rev-parse|log|show|status)/.test(cmd)) surfaces.push("history");
-      if (/rg\s|sed\s/.test(cmd)) surfaces.push("code");
+      if (/rg\s|sed\s|nl\s/.test(cmd)) surfaces.push("code");
       if (/(?:test|spec)/i.test(cmd)) surfaces.push("tests");
-      const commit = text.match(/\b[0-9a-f]{40}\b/)?.[0] || null;
+      if (/(?:README|AGENTS\.md|docs\/|pyproject\.toml)/i.test(cmd)) surfaces.push("documentation");
+      const commit = /git(?:\s+-C\s+\S+)?\s+rev-parse\s+HEAD/.test(cmd) ? text.match(/\b[0-9a-f]{40}\b/)?.[0] || null : null;
       events.push({ ...common, event_id: derivedId("repository", nativeEventId), event_type: "repository_inspected", repository_path: workdir, command_sha256: sha(cmd), surfaces: [...new Set(surfaces)], commit, capture_mode: "automatic" });
     }
   }

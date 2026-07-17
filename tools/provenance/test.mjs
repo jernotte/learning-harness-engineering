@@ -89,6 +89,45 @@ assert.equal(parsedSearch.purpose, null);
 assert.equal(parsedSearch.coverage_dimension, null);
 assert.equal(parsedSearch.semantic_status, "pending");
 
+const unifiedRollout = path.join(temp, "unified-exec-rollout.jsonl");
+const unifiedRows = [
+  { timestamp: "2026-07-16T01:00:00Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "json-repo", name: "exec", input: 'const r = await tools.exec_command({"cmd":"git rev-parse HEAD\\nrg -n fixture src","workdir":"/fixture/external-json","yield_time_ms":10000}); text(r.output);' } },
+  { timestamp: "2026-07-16T01:00:01Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "json-repo", output: [{ type: "input_text", text: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\nsource" }] } },
+  { timestamp: "2026-07-16T01:00:02Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "batch-repo", name: "exec", input: 'const wd="/fixture/external-batch"; const cmds=["sed -n \'1,20p\' src/a.py","rg -n test tests"]; const out=await Promise.all(cmds.map(cmd=>tools.exec_command({cmd,workdir:wd}))); text(out.length);' } },
+  { timestamp: "2026-07-16T01:00:03Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "batch-repo", output: [{ type: "input_text", text: "2" }] } },
+  { timestamp: "2026-07-16T01:00:04Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "git-c-repo", name: "exec", input: 'const r=await tools.exec_command({"cmd":"git -C /Users/fixture/dev/reference-materials/research/target rev-parse HEAD","workdir":"/fixture/project"}); text(r.output);' } },
+  { timestamp: "2026-07-16T01:00:05Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "git-c-repo", output: [{ type: "input_text", text: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" }] } },
+  { timestamp: "2026-07-16T01:00:06Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "generic-search", name: "exec", input: 'const r = await tools.web__run({search_query:[{q:"first query"},{q:"second query"}],response_length:"long"}); text(JSON.stringify(r,null,2));' } },
+  { timestamp: "2026-07-16T01:00:06.500Z", type: "event_msg", payload: { type: "web_search_end", call_id: "inner-search", query: "first query ...", action: { type: "search", queries: ["first query", "second query"] } } },
+  { timestamp: "2026-07-16T01:00:07Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "generic-search", output: [{ type: "input_text", text: "First (https://arxiv.org/abs/1234.56789)\\nSecond (https://github.com/example/repo)" }] } },
+  { timestamp: "2026-07-16T01:00:08Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "generic-open", name: "exec", input: 'const r = await tools.web__run({open:[{ref_id:"https://arxiv.org/html/1234.56789","lineno":10}],response_length:"long"}); text(JSON.stringify(r,null,2));' } },
+  { timestamp: "2026-07-16T01:00:08.500Z", type: "event_msg", payload: { type: "web_search_end", call_id: "inner-open", query: "https://arxiv.org/html/1234.56789", action: { type: "open_page", url: "https://arxiv.org/html/1234.56789" } } },
+  { timestamp: "2026-07-16T01:00:09Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "generic-open", output: [{ type: "input_text", text: "Paper content" }] } },
+  { timestamp: "2026-07-16T01:00:10Z", type: "response_item", payload: { type: "custom_tool_call", call_id: "unknown-nested", name: "exec", input: 'const r = await tools.unknown_nested({value:"fixture"}); text(r);' } },
+  { timestamp: "2026-07-16T01:00:11Z", type: "response_item", payload: { type: "custom_tool_call_output", call_id: "unknown-nested", output: [{ type: "input_text", text: "unknown" }] } },
+];
+fs.writeFileSync(unifiedRollout, `${unifiedRows.map(JSON.stringify).join("\n")}\n`);
+const unified = ingestCodexRollout(unifiedRollout, { cycle: "unified-validation", pass: "capture", agent: "primary", projectRoot: "/fixture/project", derive: true });
+const unifiedRepositories = unified.filter((item) => item.event_type === "repository_inspected");
+assert.equal(unifiedRepositories.length, 3);
+assert(unifiedRepositories.some((item) => item.repository_path === "/fixture/external-json"));
+assert(unifiedRepositories.some((item) => item.repository_path === "/fixture/external-batch"));
+assert(unifiedRepositories.some((item) => item.repository_path === "/Users/fixture/dev/reference-materials/research/target"));
+assert(!unifiedRepositories.some((item) => item.repository_path === "/fixture/project"));
+assert.equal(unifiedRepositories.find((item) => item.repository_path === "/fixture/external-batch").commit, null);
+const genericSearch = unified.find((item) => item.event_type === "search");
+assert.equal(genericSearch.query, "first query || second query");
+assert.equal(genericSearch.observed_returned_count, 2);
+assert.equal(genericSearch.result_capture_status, "complete");
+assert.equal(unified.filter((item) => item.event_type === "result_returned").length, 2);
+assert.equal(unified.filter((item) => item.event_type === "source_opened").length, 1);
+assert.equal(unified.filter((item) => item.event_type === "source_inspected").length, 1);
+assert(unified.filter((item) => item.event_type === "capture_observation" && ["inner-search", "inner-open"].includes(item.native_ref.call_id)).every((item) => item.resolution === "linked"));
+const unknownNested = unified.find((item) => item.event_type === "capture_observation" && item.native_ref.call_id === "unknown-nested");
+assert.equal(unknownNested.research_capable, true);
+assert.equal(unknownNested.resolution, "unreconciled");
+assert(unified.filter((item) => item.event_type === "capture_observation" && ["json-repo", "batch-repo", "git-c-repo", "generic-search", "generic-open"].includes(item.native_ref.call_id)).every((item) => item.resolution === "linked"));
+
 function ingestSearchCase(name, output) {
   const rollout = path.join(temp, `${name}-search-rollout.jsonl`);
   const rows = [

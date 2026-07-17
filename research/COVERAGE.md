@@ -16,7 +16,7 @@ This is the human and search entry point. Query families are provisional because
 | --- | --- | --- | --- |
 | Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | Referenced general records are mapped; implementation breadth remains reconstructed |
 | Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP are mapped; current production interfaces still need pinned cases |
-| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence is mapped; Pi/OpenHands remain unadmitted leads |
+| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence is mapped; Pi and OpenHands are reviewed at exact pins |
 | Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, and MemoryAgentBench evidence is mapped; procedural memory remains thin |
 | Planning and workflows | plan-and-execute, replanning, tree search, deterministic workflow | 4, 8, 9 | Agentless and practitioner guidance are mapped; ReAct/ReWOO/LATS remain unadmitted leads |
 | Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Mostly framing and product documentation; empirical depth pending |
@@ -36,7 +36,7 @@ This is the human and search entry point. Query families are provisional because
 | Control flow and execution semantics | Anthropic patterns, Google ADK, and Agentless records | ReAct/ReWOO/LATS leads; matched model/code/hybrid comparisons needed |
 | Action and environment mediation | SWE-agent and MCP records | smolagents, browser/desktop, and current coding-interface leads need pinning |
 | Observation and feedback construction | SWE-agent and Anthropic agent-loop/tool guidance | Browser/GUI grounding and event-integrity leads need verification |
-| Durable state and persistence | LangGraph, Google ADK, and MemoryAgentBench records | OpenHands event/view lead; procedural memory and provenance remain thin |
+| Durable state and persistence | LangGraph, Google ADK, MemoryAgentBench, reviewed Pi, and reviewed OpenHands records | Procedural memory and cross-run adaptation remain thin |
 | Decomposition, coordination, and aggregation | Anthropic patterns, Claude/OpenAI orchestration docs, and BenchAgent | Current implementation comparisons and compute-control evidence needed |
 | Verification, recovery, and control boundaries | Kamoi self-correction survey and production evaluation guidance | Programmatic-verifier and rollback bundles remain leads |
 | Observability and external evaluation | Anthropic evals, OpenAI tracing, General AgentBench, and BenchAgent | Long-horizon trials, evaluator bias, and normalized ablations remain thin |
@@ -49,7 +49,7 @@ The table below comes from the implementation recon report. It is a candidate co
 | Family | Examples encountered | Current status |
 | --- | --- | --- |
 | Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Reported by reconstructed recon; no batch selected |
-| Event-sourced workspace agents | OpenHands Software Agent SDK | Reported lead; not yet admitted as a pinned case |
+| Event-sourced workspace agents | OpenHands Software Agent SDK | Maintainer-reviewed case at v1.35.0 |
 | Explicit state graphs and durable workflows | LangGraph, Microsoft Agent Framework, OpenAI Agents SDK, PydanticAI | LangGraph/OpenAI documentation is mapped; the other repository families remain unadmitted |
 | Conversational/message-passing multi-agent systems | AutoGen and successors | Reported lineage lead; not yet verified for selection |
 | Code-as-action agents | smolagents | Reported lead; not yet admitted |
@@ -81,8 +81,8 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 
 ## Known gaps at Checkpoint 1
 
-- Candidate repositories have not been cloned and pinned; moving-branch observations are provisional.
-- The responsibility map has not yet been tested through a shared case-study schema.
+- Three remaining open cases have not yet been cloned for analysis; their selection pins do not establish mechanisms.
+- The responsibility map has been tested through Pi and OpenHands but remains provisional until the first batch supplies broader friction and counterexamples.
 - Closed production systems provide controls and declared behavior but little causal visibility.
 - Few studies isolate a single harness mechanism while keeping model, tools, context, budget, and evaluator fixed.
 - Cost, latency, variance, and long-horizon reliability are inconsistently reported.
@@ -98,7 +98,7 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 
 ## Checkpoint 2 selection coverage
 
-Checkpoint 2 selects Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. The five open cases have exact tags and commits; smolagents, STORM, and SWE-agent are pinned alternates. The other inherited leads remain deferred or historically excluded rather than silently disappearing. Pi is reviewed, and only the pinned OpenHands SDK case is authorized next.
+Checkpoint 2 originally selected Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. D-009 accepts Pi and OpenHands as reviewed cases, defers LangGraph from the concrete-harness sequence to a future framework/substrate comparison, leaves its slot unreplaced, and authorizes only OpenClaw next. Browser Use and Claude Code remain selected but blocked; smolagents, STORM, and SWE-agent remain pinned alternates. No popularity-first or convergence-cohort resequencing has been approved.
 
 The responsibility matrix is a sampling hypothesis. Responsibilities 1–10 have at least two expected open-case contrasts, while Responsibility 11 remains weak and uncertain. Claude Code remains unknown across the matrix until its bounded evidence set is supplied. Pi tested only its own expected row; the remaining expectations are still unverified.
 
@@ -112,6 +112,14 @@ The case exercises R1–R10 and identifies R11 as absent by default. Its stronge
 
 Targeted comparison evidence supports the general importance of action/observation interface design, qualifies assumptions about prompted self-verification, and identifies plausible loss, latency, and variability risks in summarization compaction. None of that evidence directly evaluates Pi's current interface, compaction prompt, or task outcomes. The most important empirical gaps are compaction retention, voluntary verification, exact tool-interface effects, and optional-subagent cost/quality.
 
+## OpenHands SDK case coverage
+
+The bounded OpenHands case directly inspects `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`. The written scope kept the analysis on the standalone `LocalConversation` path with targeted agent-server treatment and excluded the legacy application. The case covers nested lifecycle and ingress, frozen agent policy and runtime capability materialization, active event views versus durable event-tree state, typed action/execution/observation mediation, optional containment, condensation, delegation, recovery, optional critic and goal-judge layers, telemetry/external evaluation, and the bounded absence of across-run optimization.
+
+The reviewed implementation comparison strengthens all four Pi friction questions and adds one new R9 question: protocol integrity and operational recovery can be extensive while independent task-success verification remains optional. D-009 also records a framework-versus-application ownership question after LangGraph proved mismatched to the current concrete-harness case question. These are reviewed friction observations and selection evidence, not an approved taxonomy change.
+
+The approved D-008 compatibility correction reprocessed the retained subject window without rerunning research. All 55 native observations now resolve automatically; 43 repository events carry corrected paths, the one two-query web search carries nine mechanically derived result identities, and both paper opens reconcile with their internal markers. The complete audit passes with eight referenced sources, 17 claims, 28 exact mappings, 28 primary verifications, and one resolved concentration warning. The exact transcript prefix is retained and cryptographically verified.
+
 ## Next coverage decision
 
-D-007 approved the control-flow-first method, kept the responsibility lens as a final diagnostic, and authorized the pinned OpenHands SDK contrast without changing the taxonomy. The next work must scope that platform-sized repository before deep analysis and then test Pi's friction questions against its event/view and workspace architecture. Every other deep dive remains blocked, and Claude Code cannot begin until the maintainer-supplied material is enumerated and admitted.
+D-007 approved the control-flow-first method and the OpenHands contrast; D-008 restored dependable capture for the current runtime shape and is frozen again. D-009 accepted OpenHands, deferred LangGraph to a future framework/substrate comparison, preserved the contrast-oriented sampling rationale, and authorized only OpenClaw next. OpenClaw's scope must be written before deep analysis. After that case, an interim maintainer review—not Checkpoint 3—will reconsider sampling order using actual three-case evidence. Every other deep dive remains blocked, and Claude Code cannot begin until the maintainer-supplied material is enumerated and admitted.

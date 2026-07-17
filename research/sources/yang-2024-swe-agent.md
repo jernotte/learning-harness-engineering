@@ -1,7 +1,7 @@
 # Source Record: SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering
 
 **Source ID:** FL-S016
-**Maturity:** Captured source
+**Maturity:** Analyzed evidence
 **Source type:** Peer-reviewed research paper and open implementation
 **Author or organization:** John Yang and collaborators
 **Publication date:** 2024-05-06; revised 2024-11-11
@@ -11,9 +11,9 @@
 **Inspection extent:** Partial substantive, reconstructed from retained abstract/design excerpts and the legacy record
 **Surfaces inspected:** abstract, paper
 **Provenance events:** `fl-open-s016`, `fl-inspect-s016`, `fl-disposition-s016`
-**Related claim IDs:** C007, C008, and C022 in `field-landscape-synthesis-field-landscape`
-**Canonical mapping locations:** C007 — abstract, ACI design sections, and reported ablations; C008 — ACI design sections; C022 — ACI design and ablations
-**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
+**Related claim IDs:** `field-landscape-synthesis-field-landscape-C007`, `-C008`, and `-C022`; `field-landscape-case-pi-v0-80-6-C012`; `field-landscape-case-openhands-sdk-v1-35-0-C017`
+**Canonical mapping locations:** Cycle 1 — abstract, ACI design sections, and reported ablations; Pi C012 — retained abstract, ACI design, and ablation evidence; OpenHands C017 — the same retained evidence, bounded as indirect comparison
+**Primary verification events:** Listed per mapping in the Cycle 1, Pi, and OpenHands canonical event logs
 
 ## Why this source matters
 

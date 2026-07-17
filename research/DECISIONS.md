@@ -204,7 +204,7 @@ Approved by the maintainer on 2026-07-12 as part of the Checkpoint 1 waiver, pro
 
 ## D-006 — First deep-dive set and single-case pilot
 
-**Status:** Approved — Pi pilot only
+**Status:** Approved; execution sequence later amended by D-007 and D-009
 **Date:** 2026-07-12
 
 ### Decision
@@ -281,3 +281,84 @@ The Pi pass required 27 manually represented generic-web interaction events in o
 ### Approval record
 
 The maintainer approved D-007 on 2026-07-16, accepted Pi as a reviewed case, and authorized the pinned OpenHands Software Agent SDK case next. The review basis was the maintainer's direct assessment of the case, claim ledger, audit, and taxonomy-friction record, informed by an external review that independently checked representative load-bearing claims against the pinned source, regenerated the audit, rechecked all manual result URLs against the retained archive, and reran the validation suite. The Pi friction findings remain provisional questions for cross-case comparison; no taxonomy revision was approved.
+
+## D-008 — Recover unified-exec provenance for the OpenHands case
+
+**Status:** Approved and completed
+**Date:** 2026-07-16
+
+### Observed consequential failure
+
+After the Codex restart, the OpenHands case used the current unified `exec` tool envelope for ordinary shell, repository, web, and project operations. The first native-transcript ingestion captured 56 observations, but the frozen adapter derived only six repository events. Thirty-nine observations remained unreconciled because the adapter saw the outer `exec` call without unwrapping the nested tool invocation. The six derived repository events incorrectly used the research workspace path rather than `/Users/jernotte/dev/reference-materials/research/openhands-sdk-v1.35.0`, even though one happened to carry the OpenHands commit.
+
+The promotion-profile audit therefore blocks with 41 errors: missing review scope, one error for each of the 39 unreconciled observations, and an incomplete semantic package. Recovering the case manually would require classifying and linking ordinary interactions approximately one-for-one, violating D-004's near-zero-overhead criterion and the OpenHands goal's explicit stop condition.
+
+This is a consequential failure observed during real research, not speculative hardening. It prevents a deeply inspected implementation from producing a trustworthy source and claim audit and can misattribute external repository evidence to the local project.
+
+### Proposed decision
+
+Invoke the narrow D-005 freeze exception only to teach the Codex rollout adapter to unwrap the current unified `exec` envelope and pass nested calls through the already approved derivation and reconciliation rules. The minimum correction should:
+
+- recognize nested `exec_command` and generic web-search/open calls;
+- derive the actual nested working directory, repository path, commit, and inspected surfaces;
+- preserve fail-closed treatment for unknown nested shapes;
+- re-ingest the retained OpenHands transcript window rather than rerun or expand the research;
+- add fixtures for this exact post-restart envelope and path-attribution failure;
+- make no schema, audit-policy, UI, or general provenance redesign.
+
+After the adapter passes focused and existing tests, resume only the OpenHands provenance closeout: semantic batch, archive, generated audit, case validation, and maintainer checkpoint.
+
+### Alternatives
+
+1. **Manual reconstruction of all 39 observations.** This could close the current audit but makes bookkeeping scale with ordinary interactions and would normalize the failure D-004 was built to prevent. Not recommended.
+2. **Mark the case partial and request a provenance waiver.** The draft claims can remain readable, but source-coverage and interaction-completeness assertions would be unavailable. This is disproportionate when the full native transcript survives and the adapter mismatch is identifiable. Not recommended.
+3. **Discard and repeat the case through a compatible runtime path.** This wastes completed analysis, may not be possible in the current desktop runtime, and adds no research value. Not recommended.
+4. **Narrow adapter recovery from the retained transcript.** This preserves ordinary workflow, reuses existing architecture, and confines the exception to a demonstrated runtime shape. Recommended.
+
+### Consequences if approved
+
+The provenance freeze remains in force outside this exact runtime compatibility fix. No subject research, new source discovery, case expansion, or new harness begins during remediation. D-007 and the reviewed Pi boundary remain unchanged. Under this decision the OpenHands draft would remain unpromoted until re-ingestion and all existing promotion gates passed.
+
+### Approval and implementation record
+
+The maintainer approved D-008 on 2026-07-16 after the agent explained that the failure was confined to post-restart unified-`exec` compatibility. The implementation recognizes the exact nested `exec_command` and generic `web__run` search/open forms used by the retained case, resolves literal and shared-variable working directories, attributes repository events to the external checkout, binds internal web markers bidirectionally, derives returned URLs mechanically, and leaves unknown nested shapes unreconciled. Focused fixtures cover JSON-style calls, batched `wd` calls, `git -C` path attribution, generic search/open, internal marker reconciliation, and an unknown nested call.
+
+Re-ingestion used the retained subject window ending before the first provenance-capture command, so the adapter correction did not rerun or expand research. The final window contains 55 native observations: all 55 resolve automatically, including 49 linked research-capable observations and six automatic non-research classifications. It yields 43 repository inspections at the correct paths, one complete two-query search with nine mechanically captured results, and two paper opens. The complete OpenHands audit passes with 17 claims, 28 mappings, 28 primary verifications, one resolved concentration warning, and an exact-prefix archive. The provenance freeze is reinstated; this approval does not authorize further adapter work.
+
+## D-009 — Accept OpenHands, defer LangGraph, and authorize OpenClaw
+
+**Status:** Approved
+**Date:** Proposed and approved 2026-07-16
+
+### Decision
+
+Accept the OpenHands SDK v1.35.0 package as a maintainer-reviewed case. Preserve the eleven-responsibility taxonomy unchanged. Carry the recurring lifecycle-scale, R2/R3/R5, R5/R6, and cross-cutting-extension questions forward, and add the R9 runtime-integrity-versus-task-success-verification question to the Checkpoint 3 evidence set.
+
+Do not analyze LangGraph as a harness under the current case question. Its framework supplies mechanisms whose policy is chosen by an application, so the existing template would produce a primitive inventory rather than a comparable account of one concrete harness. Defer LangGraph to a future framework/substrate comparison with a framework-appropriate question. Record framework-versus-application control ownership as taxonomy friction, but do not revise the canonical lens. Do not replace the LangGraph slot now.
+
+Preserve D-006's contrast-oriented sampling rationale pending more evidence; do not adopt a popularity-first or convergence-cohort resequencing. Authorize only OpenClaw `v2026.6.6` at dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59` next. Require a written scope boundary before deep analysis. After OpenClaw, pause for an interim maintainer sampling-strategy review that considers the existing sequence, an adoption-weighted cohort, a lineage comparison such as Hermes, and Browser Use as the next contrast. This review does not constitute Checkpoint 3 and does not silently redefine the batch.
+
+### Why
+
+OpenHands kept the case method readable and evidence-disciplined at platform scale. Its strongest contribution is the consistent distinction between default execution behavior and optional platform capability. Its complete audit, pinned implementation boundary, 17-claim ledger, 28 verified mappings, and source records support promotion, while its outcome limits remain explicit.
+
+The original LangGraph selection already identified framework fit as its principal risk. Subsequent maintainer review made that risk decisive: Responsibilities 2, 3, 5, 6, and 9 would mostly be answered by “the application decides,” which is a different research object from Pi and OpenHands. OpenClaw remains inside the approved D-006 portfolio and is justified without changing sampling strategy: it provides the long-lived lifecycle, ingress, channel, scheduling, and persistent-operation contrast the first two cases do not.
+
+The maintainer considered but did not approve a wholesale move toward popularity-first sampling. Adoption may later become an explicit selection dimension, but it requires operationalized evidence and lineage analysis; implementation repetition is not independent corroboration. Because OpenClaw is the next case under both the existing contrast rationale and an adoption-aware rationale, it can proceed without resolving that larger strategy question prematurely.
+
+### Alternatives considered
+
+- Analyze LangGraph next as originally proposed. Rejected for the current batch because it is a framework/substrate rather than one opinionated harness; retain it for a dedicated comparison.
+- Replace LangGraph with a LangGraph-built harness. Deferred: no replacement is needed to authorize OpenClaw, and choosing one now would reopen selection without sufficient benefit.
+- Resequence immediately around OpenClaw, Hermes, and popular coding harnesses. Deferred: this reverses D-006's concentration and contrast protections before adoption criteria, lineage confounds, and counterexample timing are resolved.
+- Analyze Browser Use next. Still a valid contrast and a leading candidate after OpenClaw, but OpenClaw is already pinned and uniquely strengthens lifecycle and persistent-operation coverage.
+
+### Consequences
+
+OpenHands is a reviewed case based on the maintainer's direct review and the external verification described below. LangGraph remains selected historically in D-006 but is removed from the active concrete-harness sequence and gains no replacement. Only OpenClaw is authorized; Browser Use, Claude Code, Hermes, every alternate, and all other cases remain blocked. Claude Code remains conditional on a bounded, dated, maintainer-supplied evidence set. No cross-harness synthesis, taxonomy revision, or Checkpoint 3 promotion begins.
+
+D-008 remains approved as the first consequential D-005 freeze exception. Its correction was narrowly limited to the observed unified-`exec` runtime envelope, the infrastructure is frozen again, and the remaining generic-web/search-heavy-recon requirement stays open until tested at the appropriate scale.
+
+### Approval record
+
+The maintainer approved D-009 on 2026-07-16 after directly reviewing the OpenHands deliverables and considering an external review that verified representative load-bearing claims against the pinned source, regenerated the audit, and reran validation. The maintainer also considered an adversarial review of the proposed sampling-strategy change and explicitly declined both a LangGraph-built replacement and a popularity-first resequencing. The accepted decision authorizes OpenClaw only and requires an interim sampling review after that case.

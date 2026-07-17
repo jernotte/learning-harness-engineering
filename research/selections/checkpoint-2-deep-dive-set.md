@@ -1,6 +1,6 @@
 # Checkpoint 2 Proposal: First Deep-Dive Set
 
-**Status:** Approved; Pi reviewed and OpenHands SDK authorized next
+**Status:** Approved and amended by D-009; Pi and OpenHands reviewed, OpenClaw authorized next
 **Cycle:** `field-landscape`
 **Artifact ID:** `field-landscape-selection-checkpoint-2-deep-dive-set`
 **Prepared:** 2026-07-12
@@ -10,7 +10,7 @@
 
 ## Maintainer decision
 
-On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, and authorized OpenHands SDK next with a scope-first condition. LangGraph, Browser Use, OpenClaw, Claude Code, and all alternates remain blocked. This is a selection decision, not a finding about how any system works.
+On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer approved D-007 and D-009, accepted Pi and OpenHands SDK as reviewed cases, and authorized only OpenClaw next with a scope-first condition. D-009 defers LangGraph to a future framework/substrate comparison because it does not answer the current concrete-harness case question; its slot is not replaced. Browser Use, Claude Code, Hermes, and all alternates remain blocked. This is a selection decision, not a finding about how any system works.
 
 Cycle 1 remains reconstructed. Its implementation report supplied leads, not evidence: exact provider result windows, screening breadth, and report-only inspection depth remain unknowable. This proposal independently captured the bounded selection searches, every observed returned result, every opened candidate, and exact public Git tag refs. It does not revalidate the landscape's breadth or the eleven-responsibility lens.
 
@@ -35,12 +35,12 @@ Popularity is not a criterion. Expected responsibility coverage below is a hypot
 | --- | --- | --- | --- | --- |
 | 1 | **Pi** | Compact, explicitly named agent harness and coding runtime; useful first test of whether the method can trace a small core without flattening context, policy, actions, and state | Open primary implementation; `earendil-works/pi` tag `v0.80.6`, commit `2b3fda9921b5590f285165287bd442a25817f17b`; tag verified 2026-07-12 ([CP2-S001](../sources/cp2-pi-v0.80.6.md)) | Its compact coding focus may underexercise durable workflow and external evaluation concerns |
 | 2 | **OpenHands Software Agent SDK** | Contrasts Pi with an SDK/workspace substrate and a larger state/event surface | Open primary implementation; tag `v1.35.0`, commit `9028562e2d5eda76de662ec9b7584125760eb83f`; verified 2026-07-12 ([CP2-S002](../sources/cp2-openhands-sdk-v1.35.0.md)) | Must not mix the current SDK with legacy `OpenHands/OpenHands` architecture |
-| 3 | **LangGraph** | Supplies an explicit programmed-graph and durability counterpoint to model-directed loops | Open primary implementation; Python package tag `1.2.5`, commit `7ab79f9f3e94fb4357334d902f5fd69ec0088eb4`; verified 2026-07-12 ([CP2-S003](../sources/cp2-langgraph-1.2.5.md)) | A framework may expose possible mechanisms rather than one opinionated production harness |
+| Deferred by D-009 | **LangGraph** | Originally selected as an explicit programmed-graph and durability counterpoint; now retained for a future framework/substrate comparison rather than treated as a concrete harness | Open primary implementation; Python package tag `1.2.5`, commit `7ab79f9f3e94fb4357334d902f5fd69ec0088eb4`; verified 2026-07-12 ([CP2-S003](../sources/cp2-langgraph-1.2.5.md)) | Framework capability does not establish downstream application policy; the current case question would produce a primitive inventory rather than a comparable harness analysis |
 | 4 | **Browser Use** | Moves the batch outside coding and makes observation/action grounding and recovery central | Open primary implementation; tag `0.13.4`, commit `68afe46456a23009a7d5eec2017ec7ab51b7c027`; verified 2026-07-12 ([CP2-S004](../sources/cp2-browser-use-0.13.4.md)) | Rapid releases and cloud/open-source boundaries can blur the inspected product |
 | 5 | **OpenClaw** | Adds long-lived ingress, channels, scheduling, persistent state, and operational lifecycle as questions the other open cases are unlikely to foreground | Open primary implementation; annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`; verified 2026-07-12 ([CP2-S005](../sources/cp2-openclaw-v2026.6.6.md)) | Large, fast-moving surface and many integrations can overwhelm the harness core unless scope is tightly bounded |
 | 6 | **Claude Code** | Deliberate closed production reference case; tests whether the method can compare externally supported behavior without inventing internals | Conditional `closed-production / maintainer-supplied bounded set`; no material has yet been found in the repository or approved reference-material directory | Cannot begin until the supplied set is enumerated, dated, and logged; internal causal architecture remains unknowable |
 
-Six is the smallest defensible first batch. Removing Browser Use collapses the observation/environment contrast; removing OpenClaw leaves lifecycle and persistent operation weak; removing LangGraph loses the explicit programmed-control counterpoint; removing either Pi or OpenHands removes the compact-versus-platform contrast needed for the pilot; removing Claude Code violates the deliberate closed-production evidence test.
+The original six-case proposal was the smallest set preserving all five planned contrasts. D-009 deliberately defers LangGraph and leaves the programmed-control slot open because case-type comparability now outweighs filling the matrix with a framework. Removing Browser Use would still collapse the observation/environment contrast; removing OpenClaw would leave lifecycle and persistent operation weak; and Claude Code remains necessary for the deliberate closed-production evidence test once its evidence set exists. The batch is not silently backfilled or resized before the post-OpenClaw sampling review.
 
 ## Responsibility-coverage hypothesis
 
@@ -66,7 +66,7 @@ The columns refer to the provisional architectural responsibilities defined in t
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Pi | ○ | ● | ● | ● | ● | ○ | ○ | ? | ○ | ○ | ? |
 | OpenHands SDK | ○ | ○ | ● | ● | ● | ● | ● | ○ | ● | ● | ? |
-| LangGraph | ○ | ? | ○ | ● | ○ | ○ | ● | ● | ● | ● | ? |
+| LangGraph (deferred framework) | ○ | ? | ○ | ● | ○ | ○ | ● | ● | ● | ● | ? |
 | Browser Use | ○ | ○ | ● | ● | ● | ● | ○ | ? | ● | ○ | ? |
 | OpenClaw | ● | ● | ● | ○ | ● | ○ | ● | ○ | ● | ○ | ? |
 | Claude Code | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
@@ -103,7 +103,7 @@ The remaining inherited leads stay deferred or excluded from this batch:
 | --- | --- | --- |
 | Codex CLI | Reconstructed read-only lead; unpinned in this pass | Deferred: large and overlaps the closed coding case |
 | Gemini CLI, OpenCode, Goose, Aider | Reconstructed read-only leads; unpinned | Deferred: would overconcentrate the first batch in coding loops |
-| Microsoft Agent Framework, PydanticAI, OpenAI Agents SDK | Reconstructed read-only leads; unpinned | Deferred: LangGraph supplies the first explicit workflow/runtime case |
+| Microsoft Agent Framework, PydanticAI, OpenAI Agents SDK | Reconstructed read-only leads; unpinned | Deferred with LangGraph to a future framework/substrate comparison; none is currently a concrete-harness replacement |
 | AutoGen | Reconstructed lineage lead; unpinned | Deferred pending current-successor and maintenance-lineage verification |
 | Agent S | Reconstructed read-only lead; unpinned | Deferred: Browser Use is the first perception/environment case |
 | GPT Researcher, DeerFlow | Reconstructed read-only leads; unpinned | Deferred: STORM is the pinned research-pipeline alternate; DeerFlow lineage is version-sensitive |
@@ -138,4 +138,4 @@ The maintainer review after the pilot should ask:
 
 ## Authorized next step
 
-Run only the OpenHands SDK case at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`, beginning with a written scope boundary that excludes legacy OpenHands and defines deep versus survey treatment before code tracing expands. Claude Code remains conditional on material admission; every other case remains blocked.
+Only OpenClaw `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` is authorized next, and its goal prompt requires separate maintainer approval. The case must begin with a written scope boundary. After OpenClaw, pause for an interim sampling-strategy review; this is not Checkpoint 3 and does not preauthorize Hermes, Browser Use, or an adoption-weighted cohort. LangGraph is deferred, Claude Code remains conditional on material admission, and every other case remains blocked.

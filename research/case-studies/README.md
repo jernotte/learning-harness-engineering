@@ -9,3 +9,4 @@ Case-specific responsibility friction also enters the cumulative [Taxonomy Frict
 ## Current cases
 
 - [Pi v0.80.6](pi-v0.80.6.md) — maintainer-reviewed case at commit `2b3fda9921b5590f285165287bd442a25817f17b`.
+- [OpenHands Software Agent SDK v1.35.0](openhands-sdk-v1.35.0.md) — maintainer-reviewed case at commit `9028562e2d5eda76de662ec9b7584125760eb83f`.

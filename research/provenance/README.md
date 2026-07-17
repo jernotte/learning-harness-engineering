@@ -1,8 +1,10 @@
 # Provenance Capture and Bootstrap
 
-The approved D-004 implementation is documented in `docs/provenance-architecture.md` and lives under `tools/provenance/`. Its fixtures, archive-enforced real acceptance, and claim closeout pass. The realistic preflight retains its overhead finding but blocks honestly on one truncated search-result window. The reconstructed Cycle 1 audit passes the fixed `provisional-promotion` profile under an explicit maintainer waiver. The bounded Checkpoint 2 selection audit also passes. The maintainer-reviewed Pi case has its own `complete` audit under the fixed promotion profile.
+The approved D-004 implementation is documented in `docs/provenance-architecture.md` and lives under `tools/provenance/`. Its fixtures, archive-enforced real acceptance, and claim closeout pass. The realistic preflight retains its overhead finding but blocks honestly on one truncated search-result window. The reconstructed Cycle 1 audit passes the fixed `provisional-promotion` profile under an explicit maintainer waiver. The bounded Checkpoint 2 selection audit also passes. The maintainer-reviewed Pi and OpenHands SDK cases each have `complete` audits under the fixed promotion profile.
 
 The Pi package is rooted at `pi-pilot-events.jsonl`; `pi-pilot-audit.md` and JSON are generated source and claim-evidence views. The exact-prefix archive is retained outside this repository. Its one manual generic-web result batch was separately checked against that archive: all 21 canonical result URLs and all four component queries were present.
+
+The OpenHands package is rooted at `openhands-sdk-case-events.jsonl`; `openhands-sdk-case-audit.md` and JSON are its combined generated source and claim-evidence views. D-008 was the first invoked D-005 freeze exception: a real post-restart case showed that unified `exec` wrappers hid nested repository and web calls and could misattribute repository paths. The approved correction recognizes only the observed nested shell/web forms, reconciles internal web markers, and preserves fail-closed handling for unknown shapes. Re-ingestion of the retained window resolved all 55 observations automatically and mechanically captured all nine returned result identities. No manual `result_returned` event or archive-grep substitute was needed. The exact-prefix archive remains outside this repository with mode `0600`; infrastructure is frozen again.
 
 Search-result updates are monotonic and visible in generated audits. The named promotion profile enforces promotion-critical gates without optional caller flags. Provenance infrastructure is now frozen except for consequential failures observed during real research.
 
@@ -20,7 +22,7 @@ node tools/provenance/test.mjs
 
 `append` accepts one JSON event through `--event` and validates the whole target log before appending. Parallel agents should still use separate event logs and let the primary merge them deliberately.
 
-Native ingestion emits one `capture_boundary`, fingerprint-only `capture_observation` records, and adapter-derived interaction events. It does not persist raw tool inputs or outputs. Supported search, fetch, and repository interactions are linked automatically; unknown shapes remain unreconciled and block completeness. `annotate` adds one batch of semantic judgments and capture-overhead metrics.
+Native ingestion emits one `capture_boundary`, fingerprint-only `capture_observation` records, and adapter-derived interaction events. It does not persist raw tool inputs or outputs. Supported search, fetch, repository, and observed unified-`exec` wrapper interactions are linked automatically; unknown shapes remain unreconciled and block completeness. `annotate` adds one batch of semantic judgments and capture-overhead metrics.
 
 Known search calls record `result_capture_status`. A parsed empty hit array is a real zero; explicit runtime truncation or any other unparseable output produces unknown counts and incomplete capture. Purpose, query family, and coverage intent remain pending until a semantic batch supplies them.
 

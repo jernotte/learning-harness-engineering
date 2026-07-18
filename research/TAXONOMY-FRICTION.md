@@ -1,8 +1,8 @@
 # Taxonomy Friction Register
 
-**Last updated:** 2026-07-16  
-**Taxonomy status:** Unchanged and provisional  
-**Current evidence:** Maintainer-reviewed Pi v0.80.6 and OpenHands SDK v1.35.0; selection-level framework/application friction from the deferred LangGraph case
+**Last updated:** 2026-07-17
+**Taxonomy status:** Unchanged and provisional
+**Current evidence:** Maintainer-reviewed Pi v0.80.6, OpenHands SDK v1.35.0, and OpenClaw v2026.6.6; selection-level framework/application friction from the deferred LangGraph case
 
 This register accumulates evidence about where the provisional R1–R11 responsibility lens clarifies real harnesses and where it blurs, splits, or omits their mechanisms. It exists so that taxonomy changes at Checkpoint 3 are based on comparisons across implementations rather than reactions to whichever case was analyzed most recently.
 
@@ -23,12 +23,13 @@ Checkpoint 3 should consider a taxonomy change only when friction recurs across 
 
 | ID | Friction question | Pi | OpenHands SDK | LangGraph | Browser Use | OpenClaw | Claude Code | Current interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TF-001 | Does R1 need explicit lifecycle scales? | Observed: product/session and inner-turn lifecycles differ | Observed: server, conversation, run, step, and tool-call lifecycles differ | Pending | Pending | Pending | Pending | Recurs across two coding architectures; test whether scale annotations suffice |
-| TF-002 | Can R2, R3, and R5 be applied consistently when one runtime path refreshes policy, visible capabilities, and executable tools? | Observed | Observed with partial counter-shape: separate agent policy, view, and tool types reunite during runtime materialization | Pending | Pending | Pending | Pending | Keep distinct and multi-label coupling; OpenHands shows separation is possible but not total |
-| TF-003 | Where should tool-output shaping live when it is both part of tool mediation and the construction of model-visible evidence? | Observed across R5/R6 | Observed: distinct action/observation types, but tool executors shape model-visible results | Pending | Pending | Pending | Pending | Boundary is useful; implementation ownership can still cross it |
-| TF-004 | Is extension or policy injection a cross-cutting analytical dimension rather than another responsibility? | Observed: extensions span most responsibilities | Observed: plugins, hooks, skills, MCP, rules, profiles, and agent definitions alter several responsibilities | Pending | Pending | Pending | Pending | Recurring cross-cutting dimension; wait for non-coding counterexamples |
-| TF-005 | Does R9 need an explicit distinction between runtime integrity/recovery and task-success verification? | Observed as recovery stronger than task verification | Observed: extensive protocol recovery plus optional, separate critic and goal judge | Pending | Pending | Pending | Pending | New two-case asymmetry; test whether a subdimension is clearer than a taxonomy split |
-| TF-006 | Does each responsibility need an explicit framework-versus-application-versus-model control-owner dimension? | Harness chooses concrete policy | SDK supplies defaults and extension mechanisms while callers choose optional policy | Selection-level mismatch: framework mechanisms do not establish application policy | Pending | Pending | Pending | Cross-cutting ownership question; LangGraph is deferred until a framework-specific study can test it properly |
+| TF-001 | Does R1 need explicit lifecycle scales? | Observed: product/session and inner-turn lifecycles differ | Observed: server, conversation, run, step, and tool-call lifecycles differ | Pending | Pending | Observed: gateway, account, worker, durable update, lane, reply operation, session, attempt, schedule, tool, and delivery differ | Pending | Recurs across three architectures; scale and ingress-origin annotations look stronger than a top-level split so far |
+| TF-002 | Can R2, R3, and R5 be applied consistently when one runtime path refreshes policy, visible capabilities, and executable tools? | Observed | Observed with partial counter-shape: separate agent policy, view, and tool types reunite during runtime materialization | Pending | Pending | Observed: model/provider, hooks, skills, context engine, prompt, and effective tools converge at each call | Pending | Keep distinct and multi-label coupling; component separation varies but dependency recurs |
+| TF-003 | Where should tool-output shaping live when it is both part of tool mediation and the construction of model-visible evidence? | Observed across R5/R6 | Observed: distinct action/observation types, but tool executors shape model-visible results | Pending | Pending | Observed: canonical transcript, provider projection, overflow rewrite, and channel payload are distinct layers | Pending | Boundary is useful; implementation and persistence ownership legitimately cross it |
+| TF-004 | Is extension or policy injection a cross-cutting analytical dimension rather than another responsibility? | Observed: extensions span most responsibilities | Observed: plugins, hooks, skills, MCP, rules, profiles, and agent definitions alter several responsibilities | Pending | Pending | Observed strongly: hook vocabulary spans model, prompt, message, tool, persistence, session, scheduling, gateway, and delivery | Pending | Recurs across three systems; retain as a cross-cutting dimension pending later consolidation |
+| TF-005 | Does R9 need an explicit distinction between runtime integrity/recovery and task-success verification? | Observed as recovery stronger than task verification | Observed: extensive protocol recovery plus optional, separate critic and goal judge | Pending | Pending | Observed: transport/replay/liveness/delivery integrity is extensive; semantic acceptance is optional or external | Pending | Three-case asymmetry; explicit R9 subdimensions are increasingly warranted, but no split is approved |
+| TF-006 | Does each responsibility need an explicit framework-versus-application-versus-model control-owner dimension? | Harness chooses concrete policy | SDK supplies defaults and extension mechanisms while callers choose optional policy | Selection-level mismatch: framework mechanisms do not establish application policy | Pending | Observed: core, operator, channel, agent, model, provider, and plugin own different decisions | Pending | Cross-cutting owner annotation works across concrete products and explains the LangGraph case-type mismatch |
+| TF-007 | Does R11 need to distinguish adaptive memory/context from outcome-driven optimization? | Absent in bounded path | Absent in bounded path | Pending | Pending | Observed: disabled-by-default dreaming changes future memory using recall/diversity/recency, not task outcomes | Pending | One positive and two bounded-negative cases; keep as a Checkpoint 3 question |
 
 ## Pi v0.80.6
 
@@ -162,6 +163,96 @@ OpenHands has extensive runtime integrity and recovery: typed actions, view-prop
 | R9 in-loop control vs. R10 external evaluation | Critics and `/goal` can affect continuation; regression tests, telemetry, production analysis, and benchmarks evaluate from outside. |
 | R8 coordination vs. R5 tool execution | Delegation is implemented as an optional tool over child conversations rather than as a core scheduler primitive. |
 
+## OpenClaw v2026.6.6
+
+**Case boundary:** `openclaw/openclaw`, annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`
+
+**Case study:** [OpenClaw v2026.6.6](case-studies/openclaw-v2026.6.6.md)
+
+**Claim ledger:** [OpenClaw claims](claims/openclaw-v2026.6.6.md)
+
+**Evidence status:** Maintainer-reviewed case evidence; classifications remain provisional taxonomy evidence until Checkpoint 3
+
+### TF-001 — Lifecycle scale expands beyond the model run
+
+One admitted Telegram message crosses a gateway account task, polling worker, durable ingress record, chat/topic lane, reply fence, per-session reply operation, follow-up queue, embedded run, model attempt, tool execution, transcript update, stream draft, and final delivery. Cron and heartbeat introduce scheduled-job and wake lifecycles with different session and delivery rules.
+
+**Classification:** `observed`.
+
+**Evidence:** [C002](claims/openclaw-v2026.6.6.md#c002), [C005](claims/openclaw-v2026.6.6.md#c005), and [C013](claims/openclaw-v2026.6.6.md#c013).
+
+**Effect on the existing hypothesis:** A scale annotation now recurs across three concrete systems. OpenClaw additionally suggests naming ingress origin—human channel, schedule, heartbeat, or background completion—inside R1. The evidence still favors annotation over several new top-level responsibilities.
+
+### TF-002 — Call materialization joins R2, R3, and R5
+
+Model/provider/auth selection, hook and provider instruction contributions, bootstrap files, skills, context-engine projection, tool schemas, and executable tool policy converge during the embedded attempt. The effective tool inventory simultaneously determines runtime registration, prompt-visible names, context-engine availability, and transcript replay acceptance.
+
+**Classification:** `observed`.
+
+**Evidence:** [C006](claims/openclaw-v2026.6.6.md#c006) and [C008](claims/openclaw-v2026.6.6.md#c008).
+
+**Effect on earlier cases:** OpenClaw resembles Pi's runtime coupling but distributes ownership across more components. OpenHands remains the stronger partial counter-shape because it separates agent policy, active view, and typed tools more explicitly. The responsibilities should remain distinct and multi-label.
+
+### TF-003 — One result has canonical, provider, recovery, and delivery forms
+
+OpenClaw can retain a canonical append-only tool result, present a bounded clone to the provider, persist a rewritten result only during overflow recovery, and separately turn agent output into channel delivery payloads. The same environment event therefore crosses action mediation, observation construction, active context, persistence, and outbound presentation.
+
+**Classification:** `observed`.
+
+**Evidence:** [C009](claims/openclaw-v2026.6.6.md#c009) and [C010](claims/openclaw-v2026.6.6.md#c010).
+
+**Effect on earlier cases:** This strengthens the R5/R6 distinction while making exclusive ownership even less plausible. Browser evidence remains the strongest planned test of whether perception-grounded systems need additional observation subdimensions.
+
+### TF-004 — Injection is broader than an extension subsystem
+
+The pinned hook vocabulary spans model resolution, prompt construction, messages, tools, transcript persistence, sessions, subagents, gateway lifecycle, heartbeat, cron, dispatch, and execution environment. Memory slots, context engines, channel plugins, skills, and alternate harness plugins add other injection forms.
+
+**Classification:** `observed`.
+
+**Evidence:** [C015](claims/openclaw-v2026.6.6.md#c015).
+
+**Effect on earlier cases:** Cross-cutting injection now recurs in three systems. The evidence supports carrying it as a comparison dimension; adding a twelfth “extensions” responsibility would still confuse a technique with an architectural outcome.
+
+### TF-005 — Runtime integrity remains different from task acceptance
+
+OpenClaw checks and repairs transport, authorization, deduplication, lane ownership, session locks, transcript pairing, schema/policy, replay safety, liveness, context overflow, and delivery. The ordinary path can still accept a model completion without an independent semantic judge. Finalization hooks and repository QA are optional or external layers.
+
+**Classification:** `observed`.
+
+**Evidence:** [C007](claims/openclaw-v2026.6.6.md#c007), [C016](claims/openclaw-v2026.6.6.md#c016), and [C017](claims/openclaw-v2026.6.6.md#c017).
+
+**Effect on earlier cases:** The three-case recurrence makes an explicit R9 internal vocabulary increasingly useful: protocol/runtime integrity, operational recovery, authorization/containment, and task-success acceptance. Whether those become formal subdimensions or disciplined narrative labels remains a Checkpoint 3 decision.
+
+### TF-006 — Control owner is multi-party even in a concrete product
+
+Core routing and runtime code establishes defaults, but operator configuration selects session scope, models, sandboxing, tools, schedules, and plugins; channels own admission and delivery constraints; agent definitions and skills contribute policy; the model selects actions; providers constrain schemas and execution; plugins can modify or short-circuit several stages.
+
+**Classification:** `observed`.
+
+**Evidence:** [C004](claims/openclaw-v2026.6.6.md#c004), [C006](claims/openclaw-v2026.6.6.md#c006), [C008](claims/openclaw-v2026.6.6.md#c008), and [C015](claims/openclaw-v2026.6.6.md#c015).
+
+**Effect on framework/application friction:** The owner axis is useful inside concrete products as well as framework studies. It explains why a mechanism being available does not establish the effective deployment policy and why LangGraph needs a framework-appropriate case question.
+
+### TF-007 — Adaptation is not necessarily outcome optimization
+
+OpenClaw's disabled-by-default memory dreaming can change future context by promoting snippets that meet score, recall/signal, query-diversity, recency, contamination, and deduplication rules. The inspected selection path contains no task-success signal. It is an across-run adaptive policy, but not demonstrated optimization of task outcomes.
+
+**Classification:** `observed`.
+
+**Evidence:** [C012](claims/openclaw-v2026.6.6.md#c012).
+
+**Hypothesis to test:** R11 may need to distinguish adaptive state/context, operator-directed improvement, and outcome-driven optimization. Pi and OpenHands were bounded-negative cases for automatic cross-run policy optimization; OpenClaw supplies one positive counter-shape without validating the mechanism's benefit.
+
+## Distinctions that worked in OpenClaw
+
+| Distinction | What it revealed |
+| --- | --- |
+| R1 lifecycle vs. R4 scheduling | A durable update, lane, reply operation, follow-up queue, and model attempt have different completion and retry semantics. |
+| R3 active context vs. R7 durable state | JSONL history, workspace memory, session metadata, and the provider-visible projection are not interchangeable. |
+| R5 action mediation vs. R6 observation construction | Canonical tool results, provider projections, overflow rewrites, and channel payloads expose distinct decisions. |
+| R9 runtime control vs. R10 external evaluation | Replay/liveness and delivery integrity govern live execution; scenario packs and judged QA assess from outside. |
+| R11 adaptation vs. R10 evaluation | Memory promotion changes future context without measuring task outcomes, so adaptation and evaluation must not be collapsed. |
+
 ## Selection-level friction: framework versus application ownership
 
 D-009 deferred LangGraph from the concrete-harness sequence because the current case question asks what choices one operational harness made. A framework instead exposes mechanisms while downstream applications choose consequential policy: models and instructions, prompt materialization, tools and authorization, observation shaping, stopping rules, and verification defaults. Applying the same case template would therefore mix framework capability with application behavior or repeatedly answer that the application decides.
@@ -179,4 +270,4 @@ The next implementation should not merely repeat Pi's labels. It should ask:
 - Which R1–R11 distinctions reveal an important asymmetry rather than creating classification overhead?
 - Does the implementation expose a new mechanism the current lens cannot describe without distortion?
 
-The Pi and OpenHands cells are reviewed case evidence. The LangGraph TF-006 cell records a reviewed selection mismatch, not a mechanism discovered through a case study. No expected matrix cell from Checkpoint 2 counts as observed implementation evidence, and no friction entry changes the canonical taxonomy before Checkpoint 3.
+The Pi, OpenHands, and OpenClaw cells are reviewed case evidence. The LangGraph TF-006 cell records a reviewed selection mismatch, not a mechanism discovered through a case study. No expected matrix cell from Checkpoint 2 counts as observed implementation evidence, and no friction entry changes the canonical taxonomy before Checkpoint 3.

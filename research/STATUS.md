@@ -1,13 +1,13 @@
 # Research Status
 
 **Governance mode:** Early alignment — checkpoints require maintainer review
-**Current phase:** OpenHands SDK reviewed — OpenClaw scope and case authorized next
+**Current phase:** OpenClaw reviewed and D-010 approved — Browser Use scope-first case authorized
 **Active cycle:** `research/cycles/field-landscape.md`
-**Last updated:** 2026-07-16
+**Last updated:** 2026-07-17
 
 ## Current objective
 
-Prepare the bounded OpenClaw case at `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59`, beginning with a written scope boundary before deep analysis. Do not begin it until the maintainer separately approves its goal prompt. LangGraph is deferred to a future framework/substrate comparison; no replacement, popularity-first resequencing, or other case is authorized.
+Prepare the bounded Browser Use case at `0.13.4` / `68afe46456a23009a7d5eec2017ec7ab51b7c027`, beginning with a written scope boundary. Browser Use is the only authorized implementation. Do not begin Claude Code, Hermes, a programmed-control replacement, another cohort member, cross-harness synthesis, or taxonomy revision.
 
 ## What now exists
 
@@ -39,10 +39,15 @@ Prepare the bounded OpenClaw case at `v2026.6.6` / `8c802aa683510c7f7503597b54c3
 - An approved D-008 compatibility correction with exact unified-exec fixtures, correct external repository attribution, generic-web derivation, internal marker reconciliation, and fail-closed unknown-shape handling
 - A complete OpenHands audit: one two-query search, nine returned identities, nine opened identities, eight referenced records, 55 automatically resolved native observations, 43 repository inspections, 17 claims, 28 mappings, 28 primary verifications, and one resolved concentration warning
 - A fingerprint-verified OpenHands transcript prefix retained outside the repository with owner-only permissions
+- A maintainer-reviewed, scope-first OpenClaw case at the exact approved pin, covering Telegram ingress and delivery, shared routing/session behavior, the embedded model/tool loop, federated persistence, memory and dreaming, cron/heartbeat, subagents, hooks, runtime recovery, QA, and targeted history
+- A canonical OpenClaw ledger with 20 material claims, 31 exact claim/source/location mappings, 31 primary verifications, ten referenced source records, and a passing complete promotion-profile audit
+- Three fingerprint-verified OpenClaw transcript prefixes retained outside the repository with owner-only permissions; 262 of 272 observations resolved automatically and ten bounded exceptions were reviewed in one batch
+- A three-case taxonomy-friction update, including the new question whether R11 should distinguish adaptive context or memory from outcome-driven optimization
+- An approved D-010 interim sampling decision that authorizes Browser Use alone, records rolling-selection precedence, prevents silent resequencing, and establishes the Checkpoint 3 and Claude Code decision trigger
 
 ## Decisions and checkpoints
 
-The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, preserved its friction as provisional cross-case questions, and authorized the pinned OpenHands SDK case. The maintainer then approved D-008's narrow freeze exception and D-009's OpenHands review and bounded batch amendment. OpenHands is reviewed, LangGraph is deferred to a future framework/substrate comparison, and only OpenClaw is authorized next after separate goal-prompt approval.
+The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, approved D-008's narrow freeze exception, and approved D-009's OpenHands review and bounded batch amendment. On 2026-07-17, the maintainer accepted OpenClaw after the C003 acknowledgement-policy reconciliation and approved D-010's selection criteria, Browser Use authorization, Checkpoint 3 trigger, test-policy agenda question, and Claude Code evidence deadline.
 
 ## Confidence and risks
 
@@ -52,8 +57,10 @@ The Checkpoint 2 selection audit passes with all 11 warnings explicitly resolved
 
 The Pi generic-web path required 27 manually represented interaction events in one batch. D-008 closed the current runtime compatibility failure without broad redesign: the OpenHands case mechanically derives its nine returned identities and needs no manually authored result event or human observation-resolution batch. Its eight manual capture actions are stable source admissions performed in one semantic pass, not per-interaction reconstruction. The infrastructure is frozen again.
 
-The reviewed OpenHands case audit passes under the fixed promotion profile with zero blocking errors. Its sole host-concentration warning is explicitly resolved because this is a bounded implementation case, not a breadth or saturation claim. The strongest remaining research risks are substantive rather than infrastructural: optional platform mechanisms can be mistaken for defaults; author-reported bundled outcomes do not isolate individual mechanisms; runtime integrity/recovery must not be confused with task-success verification; and framework mechanisms must not be misrepresented as application policy.
+The reviewed OpenHands case audit passes under the fixed promotion profile with zero blocking errors. The reviewed OpenClaw audit also passes with zero blocking errors: 20 declared claims, 31 verified mappings, ten referenced source records, 272 native observations, 262 automatic resolutions, ten human-reviewed exceptions in one batch, and one resolved warning that Browser Use remains selection-depth evidence. The three exact transcript prefixes regenerate against retained archives. C003 remains a moderate-confidence inference after explicit reconciliation with `after_agent_dispatch`: the acknowledgement mapping and buffer/spool sequence are directly observed, but no crash reproduction or incidence measurement was performed. Minor command-derived path-display noise remains in several repository-observation rows, but exact source records, claim locations, and transcript evidence are intact; it cannot materially affect a research conclusion and does not justify reopening the provenance freeze.
+
+The strongest remaining risks are substantive: optional mechanisms can be mistaken for defaults; the Telegram path cannot represent every OpenClaw channel; shared-main DM state is configuration-dependent; implementation presence does not establish effectiveness; runtime integrity/recovery must not be confused with task-success verification; and three cases are still too few to approve a taxonomy revision or convergence claim.
 
 ## Next highest-value action
 
-Draft the bounded OpenClaw goal prompt for maintainer approval. The eventual case must begin with a written scope boundary and remain at the approved immutable pin. After OpenClaw, pause for the explicitly authorized interim sampling-strategy review; do not call it Checkpoint 3 or begin Browser Use, Hermes, Claude Code, or another case without a new decision.
+Prepare the bounded Browser Use goal and written scope, then analyze only that pinned implementation after the maintainer approves the goal boundary. Browser Use is the final unconditional pre-Checkpoint-3 case. At its review, authorize Claude Code only if the maintainer-supplied set has already been enumerated, dated, bounded, and admitted; otherwise defer Claude Code and convene Checkpoint 3. Do not add a replacement case before that checkpoint.

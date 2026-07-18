@@ -46,6 +46,8 @@ The goal is not merely to learn each product. It is to test whether the responsi
 
 **Checkpoint 3:** review the first completed batch before scaling the same template across further cases. Each case must report responsibility boundaries that blurred, mechanisms that spanned categories, missing concepts, and forced classifications. The checkpoint compares this friction across cases and proposes evidence-driven taxonomy changes. Modify the schema if it encourages shallow or misleading analysis.
 
+D-010 operationalizes the trigger for this first Checkpoint 3 review. Browser Use is the final unconditional case before the checkpoint. At Browser Use review, a bounded and admitted Claude Code evidence set may be explicitly authorized as the final pre-checkpoint case; otherwise Claude Code is deferred and Checkpoint 3 convenes after Browser Use. The checkpoint will also make an explicit method decision about whether and when pinned target tests should be executed, rather than allowing repository mechanics to decide that question incidentally.
+
 ## Cycle 1 consolidation and refinement
 
 Build the first cross-harness comparison around architectural decisions rather than product profiles. Reconcile vocabulary, trace apparent agreement back to independent evidence, and investigate important contradictions. Turn recurring observations into provisional patterns without promoting frequency into effectiveness.

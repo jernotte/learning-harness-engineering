@@ -1,9 +1,9 @@
 # Research Cycle: The Architectural Landscape of Modern Harnesses
 
 **Status:** Checkpoint 1 provisionally promoted under reconstructed-provenance waiver
-**Current phase:** Pi and OpenHands SDK reviewed; OpenClaw authorized next after goal-prompt approval
+**Current phase:** OpenClaw reviewed; Browser Use scope-first case authorized under D-010
 **Governance:** Early alignment
-**Provenance status:** Landscape recon remains `reconstructed`; the Pi and OpenHands case logs are `complete`. Exact Cycle 1 query bundles were recovered from three rollout files, while complete provider result windows, result ranks, all screening decisions, and exact inspection depth for report-only leads remain unrecoverable
+**Provenance status:** Landscape recon remains `reconstructed`; the Pi, OpenHands, and OpenClaw case logs are `complete`. Exact Cycle 1 query bundles were recovered from three rollout files, while complete provider result windows, result ranks, all screening decisions, and exact inspection depth for report-only leads remain unrecoverable
 
 ## Decision-oriented question
 
@@ -66,7 +66,7 @@ The same word often hides different semantics. In particular, a handoff that tra
 
 The academic pass mapped control loops, tool/action interfaces, context and memory, planning/search, multi-agent organization, feedback and verification, evaluation, and compound-system optimization. It preserved contrary findings rather than selecting one narrative. The implementation recon report described 22 current or historically important systems across eight architectural families. The primary pass checked selected production documentation and implementation material. Because source-event capture did not exist, these activity counts are reconstructed from tool history, agent reports, and artifacts rather than a complete provenance ledger.
 
-Sixteen narrative records cited or used in the synthesis now have referenced dispositions, canonical claim mappings, and primary verification. Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other Cycle 1 implementation details remain read-only leads without the durable source lifecycle required to support claims. Checkpoint 2 independently pinned its selected repositories, but no reported mechanism was inherited as evidence.
+Sixteen narrative records cited or used in the synthesis now have referenced dispositions, canonical claim mappings, and primary verification. Browser Use, smolagents, Hermes, Letta, and other Cycle 1 implementation details remain read-only leads without the durable source lifecycle required to support claims. Checkpoint 2 independently admitted Pi, OpenHands, and OpenClaw through pinned implementation cases; no mechanism was inherited from the reconstructed report merely because it appeared there.
 
 The cycle also retains a larger lead inventory for later deep dives, including ReAct, ReWOO, LATS, LLM+P, ToolBench/StableToolBench, tau-bench/tau2-bench, LoCoMo, LongMemEval, PlanBench, AgentBoard, DSPy, ADAS, SICA, and the open implementations listed in the synthesis. Leads are not evidence.
 
@@ -124,7 +124,15 @@ The proposed set is documented in `research/selections/checkpoint-2-deep-dive-se
 
 The Pi pilot is a maintainer-reviewed case at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b`. It produced 15 canonical claims with 19 verified mappings across the pinned implementation and four narrowly relevant research records. The complete audit passes with one explicitly resolved concentration warning. Its four boundary questions and the distinctions that worked are seeded in `research/TAXONOMY-FRICTION.md` for cross-case testing.
 
-The maintainer approved D-007 and authorized OpenHands SDK at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`. The written scope preceded analysis, the final case stayed within it, and D-008's approved compatibility fix recovered complete provenance from the retained transcript. D-009 accepts the case as reviewed with 17 canonical claims, 28 verified mappings, eight referenced records, and a passing complete audit. Only OpenClaw is authorized next, contingent on separate approval of its goal prompt and a written scope boundary before deep analysis. Claude Code remains blocked until its evidence set is supplied, enumerated, dated, and admitted.
+The maintainer approved D-007 and authorized OpenHands SDK at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`. The written scope preceded analysis, the final case stayed within it, and D-008's approved compatibility fix recovered complete provenance from the retained transcript. D-009 accepts the case as reviewed with 17 canonical claims, 28 verified mappings, eight referenced records, and a passing complete audit.
+
+OpenClaw was then analyzed at `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` under a written scope established before deep analysis. The case traces a Telegram polling/direct-message path and targeted memory, scheduling, subagent, hook, recovery, QA, and history surfaces. Its complete audit passes with ten referenced records, 20 canonical claims, 31 verified mappings, 272 native observations, 262 automatic resolutions, ten exceptions resolved in one batch, and no blocking error. On 2026-07-17, the maintainer accepted it as reviewed after C003 was reconciled with the tracker implementation of `after_agent_dispatch`. D-010 authorizes only Browser Use next. Claude Code remains blocked until its evidence set is supplied, enumerated, dated, bounded, and admitted.
+
+### Checkpoint 3 trigger and agenda
+
+Browser Use is the final unconditional pre-Checkpoint-3 case. At its maintainer review, Claude Code may be separately authorized as the final pre-checkpoint case only if its maintainer-supplied evidence set has already been enumerated, dated, bounded, and admitted. Otherwise Claude Code is formally deferred and Checkpoint 3 convenes immediately after Browser Use. No replacement case may be inserted before that checkpoint.
+
+Checkpoint 3 will compare TF-001 through TF-007 across the completed concrete cases and decide whether the responsibility lens needs evidence-driven revision. It must also deliberately decide the upstream-test execution policy that the first three cases left implicit: whether focused pinned tests should be authorized for load-bearing ambiguities, without making full target suites a universal promotion requirement. This agenda does not itself change the current method.
 
 The bounded selection pass captured two GitHub search batches with 35 returned identities, screened eight exact-tag repository pages, resolved eight public Git refs, and retained three exact native transcript prefixes. All eight referenced repositories have full screening records and all 14 claim mappings have primary verification. Eleven audit warnings are resolved as expected selection limits: GitHub concentration, README/release-only inspection, and missing user-provided Claude Code material.
 
@@ -134,7 +142,7 @@ The provisional consolidation is `research/syntheses/field-landscape.md`. Comple
 
 ## Refinement and saturation review
 
-Checkpoint 1 evaluated landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. Reconstruction recovered exact query bundles but not complete result windows or screening activity, so it cannot support an accurate breadth, balance, absence-of-evidence, saturation, or marginal-information claim. The waiver preserves that limitation until a complete cycle revalidates the landscape. The next action is a bounded OpenClaw goal prompt for maintainer approval, not further landscape recon, a LangGraph case, or batch resequencing.
+Checkpoint 1 evaluated landscape coverage, sourcing coverage, and the three-layer taxonomy, not full topic saturation. Reconstruction recovered exact query bundles but not complete result windows or screening activity, so it cannot support an accurate breadth, balance, absence-of-evidence, saturation, or marginal-information claim. The waiver preserves that limitation until a complete cycle revalidates the landscape. The next action is the bounded Browser Use scope and case at its approved pin—not further landscape recon, another implementation, cross-harness synthesis, or silent batch resequencing.
 
 ## Process retrospective
 
@@ -151,7 +159,7 @@ The parallel split produced complementary maps, but the cycle lacked per-agent p
 | Pi pilot alignment | `research/case-studies/pi-v0.80.6.md`, claim ledger, source records, complete audit, taxonomy-friction register, and D-007 | 2026-07-16 | Approved | Maintainer accepted Pi as a reviewed case and approved the control-flow-first method | Keep taxonomy unchanged; test Pi friction across later cases; scope OpenHands before deep analysis | OpenHands SDK only |
 | OpenHands provenance compatibility | D-008, exact unified-exec fixtures, retained-window re-ingestion, and complete audit | 2026-07-16 | Approved and completed | Maintainer approved the narrow D-005 freeze exception | All 55 observations now resolve automatically; paths and generic-web events derive correctly; infrastructure frozen again | OpenHands package closeout only |
 | OpenHands case alignment | Scope, case, 17-claim ledger, eight source records, complete audit, friction comparison, and D-009 | 2026-07-16 | Approved | Maintainer accepted OpenHands as a reviewed case based on direct review and external verification | Preserve taxonomy; defer LangGraph as a framework; preserve contrast strategy pending three-case evidence | OpenClaw only, after separate goal-prompt approval and scope-first start |
-| Post-OpenClaw sampling review | Pi, OpenHands, and OpenClaw case evidence plus D-006/D-009 rationale |  | Required after OpenClaw | Not reached | Compare existing sequence, adoption-weighted cohort, Hermes lineage case, and Browser Use contrast without treating repetition as independent corroboration | No later case until maintainer decision; not Checkpoint 3 |
-| Checkpoint 3 | First case-study batch |  | Not reached |  |  |  |
+| Post-OpenClaw sampling review | OpenClaw scope, case, 20-claim ledger, ten source records, complete audit, three-case friction register, interim sampling review, and D-010 | 2026-07-17 | Approved | Maintainer accepted OpenClaw after C003 reconciliation and approved the explicit rolling-selection precedence | Preserve taxonomy; Browser Use is final unconditional pre-Checkpoint-3 case; Claude deadline is its review | Browser Use only, scope-first; not Checkpoint 3 |
+| Checkpoint 3 | First concrete case-study batch | After Browser Use, or after one separately authorized Claude Code case if its evidence is admitted by the Browser Use review | Not reached |  | Compare TF-001–TF-007 and decide focused target-test execution policy | No replacement before checkpoint |
 | Checkpoint 4 | First cross-harness synthesis |  | Not reached |  |  |  |
 | Checkpoint 5 | First refine and saturation review |  | Not reached |  |  |  |

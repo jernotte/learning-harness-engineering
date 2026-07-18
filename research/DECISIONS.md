@@ -362,3 +362,65 @@ D-008 remains approved as the first consequential D-005 freeze exception. Its co
 ### Approval record
 
 The maintainer approved D-009 on 2026-07-16 after directly reviewing the OpenHands deliverables and considering an external review that verified representative load-bearing claims against the pinned source, regenerated the audit, and reran validation. The maintainer also considered an adversarial review of the proposed sampling-strategy change and explicitly declined both a LangGraph-built replacement and a popularity-first resequencing. The accepted decision authorizes OpenClaw only and requires an interim sampling review after that case.
+
+## D-010 — Accept OpenClaw and choose the next sampling direction
+
+**Status:** Approved
+**Date:** Proposed 2026-07-16; approved 2026-07-17
+
+### Decision
+
+Accept OpenClaw v2026.6.6 as the third maintainer-reviewed implementation case after explicitly reconciling C003 with Telegram's configured `after_agent_dispatch` acknowledgement policy. The clarification preserves C003 as a moderate-confidence inference: the tracker maps successful middleware-chain completion to that stage, buffered handlers can return before timer-driven dispatch, and polling then deletes the claimed spool record, but no crash reproduction or incidence measurement was performed. Preserve the canonical eleven-responsibility taxonomy unchanged and carry TF-001 through TF-007 into Checkpoint 3.
+
+Authorize only Browser Use `0.13.4` at commit `68afe46456a23009a7d5eec2017ec7ab51b7c027` next. Require a written scope boundary before deep analysis. Browser Use tests perception-grounded action and observation, environmental drift, and the still-open R5/R6 boundary under a less symbolic environment. This authorization does not begin the case, authorize any other implementation, validate the taxonomy, or permit cross-harness synthesis.
+
+### Rolling-selection precedence
+
+D-006's portfolio criteria remain in force. When ordering or replacing later cases, use the following precedence as structured judgment rather than a numeric score:
+
+1. Expected marginal information gain on uncovered or high-friction responsibilities.
+2. Falsification value and protection against conclusions anchored in the earliest cases.
+3. Evidence quality, versionability, and readiness for a defensible case.
+4. Evidence-mode, domain, environment, and control-allocation diversity.
+5. Analysis cost and governance cost relative to expected learning.
+6. Lineage and independence risks that could make apparent recurrence non-independent.
+7. Operationalized adoption evidence, not raw popularity, repository attention, or presumed team size.
+
+A later sampling pivot must state which criterion changed, which evidence supports the change, or which higher-priority criterion now outweighs the previous decision. Maintainer feedback remains authoritative, but it does not erase the burden to explain a reversal against the recorded criteria.
+
+### Batch completion and Checkpoint 3 trigger
+
+Browser Use is the final unconditional case before Checkpoint 3. At the Browser Use maintainer review:
+
+- if the Claude Code evidence set has already been enumerated, dated, bounded, and admitted, the maintainer may explicitly authorize Claude Code as the final pre-Checkpoint-3 case; after its review, convene Checkpoint 3;
+- otherwise, formally defer Claude Code and convene Checkpoint 3 immediately after Browser Use.
+
+Do not add a replacement case before Checkpoint 3. This trigger resolves the ambiguity created when LangGraph was removed from the concrete-harness sequence; it does not claim that four cases establish saturation or prevent later analysis.
+
+Checkpoint 3 must compare TF-001 through TF-007 and deliberately decide the target-test execution policy that the first three cases left implicit. The candidate baseline is to inspect pinned tests by default, authorize focused execution only when it resolves a load-bearing ambiguity, avoid making full upstream suites a promotion requirement, and record what was and was not executed. Until that review, the existing rule requiring explicit authorization for behavioral checks remains controlling.
+
+### Why
+
+The OpenClaw scope held despite the repository's breadth. The case traces one message through durable channel ingress, routing and session policy, the embedded model/tool loop, transcript and session persistence, and final delivery, then uses targeted inspection for memory, scheduling, subagents, hooks, recovery, and QA. Its central findings are architectural rather than a feature inventory: one turn crosses several transaction boundaries; default-account DMs can share a durable main-agent session; model-directed action is bounded by programmed replay, liveness, timeout, and compaction policy; and optional memory adaptation is not the same as outcome optimization.
+
+An adversarial review found that C003's original prose omitted an apparent safeguard visible in its own evidence. Primary reinspection showed that the safeguard's name did not overturn the claim: `finishUpdate(completed: true)` advances the tracker's `agent_dispatch` acknowledgement stage when the middleware chain returns, including buffered branches that dispatch later from process-local timers. The case, source record, canonical declaration, exact mapping, verification notes, and prose attestation were corrected before promotion. The claim remains an inference because the crash consequence was not behaviorally reproduced.
+
+The resulting complete package contains 20 declared claims, 31 claim/source/location mappings, 31 primary verifications, ten referenced source records, three archive-verified transcript boundaries, no unresolved observation, and no blocking error. Its one warning is resolved by keeping Browser Use at selection depth. Implementation presence establishes architecture, never effectiveness.
+
+Browser Use is the strongest next discriminating case under the approved precedence because Pi, OpenHands, and OpenClaw primarily expose structured tools or events despite their different lifecycle and state designs. A browser harness supplies a direct falsification opportunity through perception, page-state projection, action grounding, observation loss, and recovery from environmental drift. Adoption-weighted replication, Hermes lineage, a programmed-control replacement, and Claude Code remain legitimate later choices, but none currently provides greater information gain without an unresolved admission, lineage, or selection decision.
+
+### Alternatives retained
+
+- **Adoption-weighted cohort.** Potentially useful for common-practice and replication questions, but it requires operationalized adoption evidence and explicit treatment of shared lineage, provider constraints, and ecosystem compatibility.
+- **Hermes lineage.** Potentially useful for descent and deliberate divergence, but it must be framed as lineage rather than independent convergence and needs a separately verified pin and relationship boundary.
+- **Concrete programmed-control harness.** Still relevant after LangGraph's reclassification, but selection is deferred until Checkpoint 3 rather than silently replacing the vacated slot.
+- **Claude Code.** The intended closed-production contrast, still blocked on the maintainer-supplied bounded evidence set and the explicit branch at the Browser Use review.
+- **Stop before Browser Use.** Rejected because the current method is working and Browser Use addresses a material environment/observation gap without broadening the batch.
+
+### Consequences
+
+OpenClaw is a reviewed finding. Browser Use alone is authorized, scope-first, at the existing immutable pin. LangGraph remains deferred, Claude Code remains conditional, Hermes remains a lineage candidate, and no adoption cohort or replacement case is added. The provenance infrastructure remains frozen. The reconstructed Cycle 1 limitation continues to travel into any artifact that relies on the original landscape.
+
+### Approval record
+
+On 2026-07-17, the maintainer accepted the adversarial review and the primary agent's independently justified response. The review basis included external verification of the pinned checkout and representative claims, regeneration of the complete audit and validation suite, direct identification of C003's omitted `after_agent_dispatch` countermechanism, and primary reinspection of the tracker, buffered-handler, dispatch, and spool-deletion paths. The maintainer approved the C003 reconciliation, the rolling-selection precedence, Browser Use as the only next case, the hard Checkpoint 3 trigger, the target-test policy question for that checkpoint, and the Claude Code evidence deadline at the Browser Use review.

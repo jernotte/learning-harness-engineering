@@ -1,6 +1,6 @@
 # Checkpoint 2 Proposal: First Deep-Dive Set
 
-**Status:** Approved and amended by D-009; Pi and OpenHands reviewed, OpenClaw authorized next
+**Status:** Approved and amended by D-009 and D-010; Pi, OpenHands, and OpenClaw reviewed; Browser Use alone authorized next
 **Cycle:** `field-landscape`
 **Artifact ID:** `field-landscape-selection-checkpoint-2-deep-dive-set`
 **Prepared:** 2026-07-12
@@ -10,7 +10,7 @@
 
 ## Maintainer decision
 
-On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer approved D-007 and D-009, accepted Pi and OpenHands SDK as reviewed cases, and authorized only OpenClaw next with a scope-first condition. D-009 defers LangGraph to a future framework/substrate comparison because it does not answer the current concrete-harness case question; its slot is not replaced. Browser Use, Claude Code, Hermes, and all alternates remain blocked. This is a selection decision, not a finding about how any system works.
+On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer approved D-007 and D-009, accepted Pi and OpenHands SDK as reviewed cases, and authorized only OpenClaw with a scope-first condition. On 2026-07-17, the maintainer accepted OpenClaw after the C003 reconciliation and approved D-010, authorizing Browser Use alone next with the same scope-first discipline. D-009 defers LangGraph to a future framework/substrate comparison because it does not answer the current concrete-harness case question; its slot is not replaced. Claude Code, Hermes, every cohort member, and every alternate remain blocked. This is a selection record, not a finding about how an uninspected system works.
 
 Cycle 1 remains reconstructed. Its implementation report supplied leads, not evidence: exact provider result windows, screening breadth, and report-only inspection depth remain unknowable. This proposal independently captured the bounded selection searches, every observed returned result, every opened candidate, and exact public Git tag refs. It does not revalidate the landscape's breadth or the eleven-responsibility lens.
 
@@ -27,7 +27,9 @@ The batch is chosen as a portfolio, not by an aggregate score. A useful first se
 - transfer value beyond coding agents;
 - redundancy, analysis cost, and feasibility.
 
-Popularity is not a criterion. Expected responsibility coverage below is a hypothesis to test against code and admitted evidence, not an implementation claim.
+Raw popularity is not evidence of implementation value, team size, adoption, or effectiveness. D-010 permits operationalized adoption evidence as a subordinate selection dimension after information gain, falsification value, evidence readiness, diversity, cost, and lineage risk. Expected responsibility coverage below is a hypothesis to test against code and admitted evidence, not an implementation claim.
+
+For rolling case order, D-010 records explicit precedence: marginal information gain on uncovered or high-friction responsibilities; falsification and anchoring protection; evidence quality and readiness; evidence-mode and domain diversity; analysis and governance cost; lineage and independence risk; and only then operationalized adoption. A later pivot must name the evidence or higher-priority criterion that outweighs this decision.
 
 ## Recommended batch
 
@@ -36,11 +38,11 @@ Popularity is not a criterion. Expected responsibility coverage below is a hypot
 | 1 | **Pi** | Compact, explicitly named agent harness and coding runtime; useful first test of whether the method can trace a small core without flattening context, policy, actions, and state | Open primary implementation; `earendil-works/pi` tag `v0.80.6`, commit `2b3fda9921b5590f285165287bd442a25817f17b`; tag verified 2026-07-12 ([CP2-S001](../sources/cp2-pi-v0.80.6.md)) | Its compact coding focus may underexercise durable workflow and external evaluation concerns |
 | 2 | **OpenHands Software Agent SDK** | Contrasts Pi with an SDK/workspace substrate and a larger state/event surface | Open primary implementation; tag `v1.35.0`, commit `9028562e2d5eda76de662ec9b7584125760eb83f`; verified 2026-07-12 ([CP2-S002](../sources/cp2-openhands-sdk-v1.35.0.md)) | Must not mix the current SDK with legacy `OpenHands/OpenHands` architecture |
 | Deferred by D-009 | **LangGraph** | Originally selected as an explicit programmed-graph and durability counterpoint; now retained for a future framework/substrate comparison rather than treated as a concrete harness | Open primary implementation; Python package tag `1.2.5`, commit `7ab79f9f3e94fb4357334d902f5fd69ec0088eb4`; verified 2026-07-12 ([CP2-S003](../sources/cp2-langgraph-1.2.5.md)) | Framework capability does not establish downstream application policy; the current case question would produce a primitive inventory rather than a comparable harness analysis |
-| 4 | **Browser Use** | Moves the batch outside coding and makes observation/action grounding and recovery central | Open primary implementation; tag `0.13.4`, commit `68afe46456a23009a7d5eec2017ec7ab51b7c027`; verified 2026-07-12 ([CP2-S004](../sources/cp2-browser-use-0.13.4.md)) | Rapid releases and cloud/open-source boundaries can blur the inspected product |
-| 5 | **OpenClaw** | Adds long-lived ingress, channels, scheduling, persistent state, and operational lifecycle as questions the other open cases are unlikely to foreground | Open primary implementation; annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`; verified 2026-07-12 ([CP2-S005](../sources/cp2-openclaw-v2026.6.6.md)) | Large, fast-moving surface and many integrations can overwhelm the harness core unless scope is tightly bounded |
+| Next by D-010 | **Browser Use** | Moves the batch outside coding and makes observation/action grounding and recovery central | Open primary implementation; tag `0.13.4`, commit `68afe46456a23009a7d5eec2017ec7ab51b7c027`; verified 2026-07-12 ([CP2-S004](../sources/cp2-browser-use-0.13.4.md)) | Rapid releases and cloud/open-source boundaries can blur the inspected product |
+| 3, reviewed | **OpenClaw** | Adds long-lived ingress, channels, scheduling, persistent state, and operational lifecycle as questions the other open cases are unlikely to foreground | Open primary implementation; annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`; verified 2026-07-12 ([CP2-S005](../sources/cp2-openclaw-v2026.6.6.md)) | Large, fast-moving surface and many integrations can overwhelm the harness core unless scope is tightly bounded |
 | 6 | **Claude Code** | Deliberate closed production reference case; tests whether the method can compare externally supported behavior without inventing internals | Conditional `closed-production / maintainer-supplied bounded set`; no material has yet been found in the repository or approved reference-material directory | Cannot begin until the supplied set is enumerated, dated, and logged; internal causal architecture remains unknowable |
 
-The original six-case proposal was the smallest set preserving all five planned contrasts. D-009 deliberately defers LangGraph and leaves the programmed-control slot open because case-type comparability now outweighs filling the matrix with a framework. Removing Browser Use would still collapse the observation/environment contrast; removing OpenClaw would leave lifecycle and persistent operation weak; and Claude Code remains necessary for the deliberate closed-production evidence test once its evidence set exists. The batch is not silently backfilled or resized before the post-OpenClaw sampling review.
+The original six-case proposal was the smallest set preserving all five planned contrasts. D-009 deliberately defers LangGraph and leaves the programmed-control slot open because case-type comparability now outweighs filling the matrix with a framework. D-010 preserves Browser Use because removing it would collapse the observation/environment contrast and makes it the final unconditional case before Checkpoint 3. If the Claude Code evidence set is admitted by the Browser Use review, the maintainer may explicitly authorize it as the final pre-Checkpoint-3 case; otherwise it is deferred and Checkpoint 3 convenes after Browser Use. No replacement is added before that checkpoint.
 
 ## Responsibility-coverage hypothesis
 
@@ -131,11 +133,11 @@ The maintainer review after the pilot should ask:
 
 - The search pass was intentionally GitHub-concentrated because its decision was repository identity and pinning, not landscape breadth. The audit preserves irrelevant returned results and this concentration rather than treating it as broad recon.
 - No code, tests, or history were inspected. Expected responsibility coverage may be wrong; that is a reason to run cases, not a defect to hide in selection.
-- Claude Code is conditional until the maintainer provides and bounds the evidence set.
+- Claude Code is conditional until the maintainer provides and bounds the evidence set. If it is not enumerated, dated, bounded, and admitted by the Browser Use review, it is formally deferred and Checkpoint 3 proceeds without it.
 - Responsibility 11 remains weak. A later case may need to target adaptation explicitly, but adding one now would enlarge the first batch based on reconstructed leads rather than admitted evidence.
 - Fast release cadence makes every pin immediately historical. The commit—not the moving release label—is the analysis boundary.
 - Native reconciliation proves the generic-web interactions occurred but does not mechanically bind the 35 manually authored result URLs to the archived output. Before approval, the primary agent confirmed every URL and both batched query strings in the three retained archives. Any later checkpoint relying on manual result events must repeat and record that comparison unless the maintainer explicitly changes the policy.
 
 ## Authorized next step
 
-Only OpenClaw `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` is authorized next, and its goal prompt requires separate maintainer approval. The case must begin with a written scope boundary. After OpenClaw, pause for an interim sampling-strategy review; this is not Checkpoint 3 and does not preauthorize Hermes, Browser Use, or an adoption-weighted cohort. LangGraph is deferred, Claude Code remains conditional on material admission, and every other case remains blocked.
+Browser Use `0.13.4` at `68afe46456a23009a7d5eec2017ec7ab51b7c027` is the only authorized implementation case. A written scope boundary must precede deep analysis. This is not Checkpoint 3. LangGraph remains deferred, Claude Code remains conditional on material admission and the Browser Use review branch, and Hermes, every cohort member, every programmed-control replacement, and all alternates remain blocked.

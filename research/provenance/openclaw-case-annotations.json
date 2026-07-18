@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-07-17T04:24:00.000Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "field-landscape",
+  "pass": "openclaw-case-annotation",
+  "semantic_batch_id": "openclaw-case-semantic-batch-1",
+  "artifact": {
+    "artifact_id": "field-landscape-case-openclaw-v2026-6-6",
+    "artifact_type": "implementation case study",
+    "artifact_path": "research/case-studies/openclaw-v2026.6.6.md"
+  },
+  "review_scope": {
+    "scope_id": "field-landscape-openclaw-case-review",
+    "scope_basis": "All material implementation, comparison, negative, taxonomy-friction, and bounded sampling-recommendation claims in the OpenClaw case package; the package is analyzed evidence awaiting maintainer review and is not a reviewed finding.",
+    "artifact_ids": ["field-landscape-case-openclaw-v2026-6-6"]
+  },
+  "sources": [
+    {
+      "source_id": "CP2-S005",
+      "inspection_extent": "full substantive",
+      "surfaces": ["README", "documentation", "code", "tests", "history", "releases", "command_output"],
+      "locations_inspected": ["repository identity and tag dereference", "Telegram polling, direct-message admission, routing, buffering, dispatch, and delivery", "embedded run, model, prompt, context, skill, tool, and result paths", "session and transcript persistence", "memory, compaction, cron, heartbeat, subagents, hooks, observability, QA", "representative tests and targeted reachable history"],
+      "inspection_basis": "Primary agent verified the written end-to-end path and targeted adjacent mechanisms at the exact approved commit; two bounded subagent traces supplied candidate locations that the primary rechecked before admitting claims.",
+      "disposition": "referenced",
+      "reason": "Primary evidence for the pinned implementation, negative findings, history-based inferences, taxonomy friction, and case-specific sampling judgment.",
+      "record_path": "research/sources/cp2-openclaw-v2026.6.6.md"
+    },
+    {
+      "source_id": "FL-S008",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained task taxonomy and reported all-competencies limitation"],
+      "inspection_basis": "Reused retained admitted evidence to test whether OpenClaw memory mechanisms cover the broader lifecycle competencies used in a benchmark.",
+      "disposition": "referenced",
+      "reason": "Qualifies memory capability and evaluation scope; it does not evaluate OpenClaw.",
+      "record_path": "research/sources/hou-2026-memoryagentbench.md"
+    },
+    {
+      "source_id": "PI-S002",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained introduction, mechanism, evaluation, and limitations excerpts"],
+      "inspection_basis": "Reused the Pi case retained record to qualify summarization-compaction assumptions.",
+      "disposition": "referenced",
+      "reason": "Supplies a bounded counter-design and failure hypotheses under a different protocol.",
+      "record_path": "research/sources/semenov-2026-beyond-compaction.md"
+    },
+    {
+      "source_id": "PI-S003",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained protocol, latency, and repeated-run variability findings"],
+      "inspection_basis": "Reused the Pi case retained record for bounded compaction cost and variance context.",
+      "disposition": "referenced",
+      "reason": "Qualifies compaction without directly testing OpenClaw's prompt, provider, or workloads.",
+      "record_path": "research/sources/cim-2026-parallel-compaction.md"
+    },
+    {
+      "source_id": "FL-S006",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained controlled workflow comparison and separately scoped external-runtime result"],
+      "inspection_basis": "Reused retained evidence to prevent implementation presence from becoming a subagent-effectiveness claim.",
+      "disposition": "referenced",
+      "reason": "Qualifies coordination claims under a different workflow substrate and evaluation protocol.",
+      "record_path": "research/sources/fu-2026-benchagent.md"
+    },
+    {
+      "source_id": "FL-S009",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["abstract", "paper"],
+      "locations_inspected": ["retained critical-survey conclusion about intrinsic correction and reliable external feedback"],
+      "inspection_basis": "Reused retained evidence to distinguish runtime completion from independent semantic feedback.",
+      "disposition": "referenced",
+      "reason": "Qualifies feedback and acceptance claims without evaluating OpenClaw.",
+      "record_path": "research/sources/kamoi-2024-self-correction-survey.md"
+    },
+    {
+      "source_id": "FL-S002",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["retained agent/evaluation harness definitions and trajectory-versus-outcome guidance"],
+      "inspection_basis": "Reused retained vendor guidance to separate observability, trajectory review, and task outcomes.",
+      "disposition": "referenced",
+      "reason": "Provides bounded evaluation terminology; it is guidance, not a controlled OpenClaw result.",
+      "record_path": "research/sources/anthropic-2026-agent-evals.md"
+    },
+    {
+      "source_id": "CP2-S001",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["code", "documentation", "tests", "history"],
+      "locations_inspected": ["maintainer-reviewed Pi case, claim ledger, friction record, and retained source record"],
+      "inspection_basis": "Reused reviewed evidence only for taxonomy recurrence and portfolio-sampling comparison.",
+      "disposition": "referenced",
+      "reason": "Contextualizes the provisional friction and next-case recommendation.",
+      "record_path": "research/sources/cp2-pi-v0.80.6.md"
+    },
+    {
+      "source_id": "CP2-S002",
+      "inspection_extent": "partial substantive",
+      "surfaces": ["code", "documentation", "tests", "history"],
+      "locations_inspected": ["maintainer-reviewed OpenHands case, claim ledger, friction record, and retained source record"],
+      "inspection_basis": "Reused reviewed evidence only for taxonomy recurrence and portfolio-sampling comparison.",
+      "disposition": "referenced",
+      "reason": "Contextualizes the provisional friction and next-case recommendation.",
+      "record_path": "research/sources/cp2-openhands-sdk-v1.35.0.md"
+    },
+    {
+      "source_id": "CP2-S004",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases", "command_output"],
+      "locations_inspected": ["retained Checkpoint 2 repository identity, exact pin, and selection-level browser-agent purpose"],
+      "inspection_basis": "Reused the already admitted selection record only to assess Browser Use as the next contrast; no implementation analysis began.",
+      "disposition": "referenced",
+      "reason": "Supports only the selection premise for the proposed next case.",
+      "record_path": "research/sources/cp2-browser-use-0.13.4.md"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C001",
+      "claim_text": "The pinned repository is a long-lived, multi-channel agent runtime; the bounded case follows one Telegram direct-message path through durable ingress, routing/session state, OpenClaw's embedded-agent runtime, and Telegram delivery rather than treating every bundled integration as ordinary behavior.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Boundary and representative path",
+      "confidence": "high for the pin and traced path; other channels, hosted services, ACP, Codex, and alternate harness plugins are outside the deep boundary",
+      "references": [{"source_id":"CP2-S005","location":"annotated tag and dereferenced commit; extensions/telegram/src/channel.ts:974-1088; monitor.ts:169-309; bot-message-dispatch.ts:1852-1940; src/agents/embedded-agent-runner/run.ts:499-808","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary rechecked the tag and representative path in the pinned clone."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C002",
+      "claim_text": "The representative polling path uses isolated ingress by default, a SQLite-backed deduplicating queue, lane-scoped draining, centralized authorization before cache/dedupe mutation, and retry or dead-letter handling before an update reaches the agent dispatcher.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Durable Telegram ingress before the model",
+      "confidence": "high for admitted text DMs in polling mode; webhook, group/topic, media, and non-default policy branches differ",
+      "references": [{"source_id":"CP2-S005","location":"extensions/telegram/src/monitor.ts:169-309; telegram-ingress-worker.runtime.ts:144-192; telegram-ingress-spool.ts:120-139; src/channels/message/ingress-queue.ts:319-388; polling-session.ts:521-586,613-682,901-979; bot-handlers.runtime.ts:2746-2848,2887-3015","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Queue, authorization, retry, and dispatch boundaries were traced directly."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C003",
+      "claim_text": "Telegram labels its receive-acknowledgement policy after_agent_dispatch, but the implementation acknowledges that stage when the bot middleware chain returns successfully. Near-limit text and media-group handlers can return after placing admitted content only in process-local timer buffers, after which polling deletes the claimed spool record; a process failure before timer-driven dispatch can therefore lose those buffered updates.",
+      "epistemic_kind": "inference",
+      "artifact_location": "A bounded pre-dispatch crash-loss interval",
+      "confidence": "moderate; the acknowledgement mapping and buffer/spool sequence are directly observed, but no crash reproduction, incidence measurement, or cross-branch behavioral test was performed",
+      "references": [{"source_id":"CP2-S005","location":"extensions/telegram/src/bot-core.ts:191-221; bot-update-tracker.ts:163-181,232-258; bot-update-tracker.test.ts:78-114; bot-handlers.runtime.ts:803-960,1125-1150,1695-1821; polling-session.ts:521-545","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified that bot-core configures after_agent_dispatch but calls finishUpdate(completed:true) on middleware-chain return; the tracker maps that completion to the agent_dispatch acknowledgement stage; buffered handlers return before timer-driven processing and actual reply-chain dispatch; polling then deletes the claimed spool. The tracker unit test covers finishUpdate semantics but not this buffered composition, so the crash consequence remains an explicit inference."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C004",
+      "claim_text": "Routing and session identity are separate from channel delivery identity: an ordinary default-account direct message resolves through sender-aware routing but, with the default dmScope, normally uses the shared agent:main:main session; named-account fallback and explicit bindings can isolate it.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Routing is not the same as session isolation",
+      "confidence": "high for the stated configuration; deployments can select peer-scoped sessions, topics, agents, or bindings",
+      "references": [{"source_id":"CP2-S005","location":"extensions/telegram/src/conversation-route.ts:45-193; src/routing/session-key.ts:203-264; bot-message-context.ts:404-480; bot-message-context.session.ts:447-667","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary traced routing output into the default DM session-key policy."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C005",
+      "claim_text": "Execution ownership is nested: Telegram sequential lanes and reply fences protect channel-local ordering, a canonical per-session reply operation coordinates overlapping turns, configured queue policy handles follow-ups, and the embedded runtime serializes work through session and global lanes with cancellation and timeouts.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Nested execution ownership",
+      "confidence": "high for mechanics; which layer dominates depends on channel, session sharing, and queue configuration",
+      "references": [{"source_id":"CP2-S005","location":"extensions/telegram/src/sequential-key.ts:101-155; bot-message-dispatch.ts:1364-1381; src/auto-reply/reply/reply-turn-admission.ts:26-83; reply-run-registry.ts:229-416; queue/settings.ts:12-63; src/agents/embedded-agent-runner/run.ts:514-576","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified each ownership layer and preserved configuration limits."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C006",
+      "claim_text": "Each ordinary embedded run resolves model/provider and harness policy, loads runtime plugins and skills, materializes bootstrap files and context-engine state, builds the effective system prompt, and exposes the final policy-filtered tool set to both the model and context engine.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Model, instruction, context, and capability construction",
+      "confidence": "high for the normal OpenClaw harness; raw model mode, plugin context engines, provider contributions, and alternate harnesses change the assembly",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/embedded-agent-runner/run.ts:614-808; run/attempt.ts:1042-1201,1309-1710,1818-2145,2269-2317,2910-3074; src/agents/system-prompt.ts:973-1040,1095-1329; bootstrap-files.ts:64-149,202-217; src/skills/loading/workspace.ts:1425-1490","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary traced per-run policy and materialization order."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C007",
+      "claim_text": "The model chooses actions inside a programmed acceptance envelope: OpenClaw owns queueing, retries, replay-safety decisions, liveness contracts, compaction recovery, timeout behavior, and terminal payload construction; those controls verify progress and protocol shape, not task correctness.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "A model-directed loop inside a programmed envelope",
+      "confidence": "high for mechanics; the not-task-correctness conclusion is bounded to the ordinary path and inspected acceptance conditions",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/embedded-agent-runner/run.ts:1201-1207,1966-2450,3052-3742; run/attempt.ts:3402-3526,4400-4900,5090-5282; representative incomplete-turn, compaction, and retry tests","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary separated runtime acceptance predicates from semantic outcome grading."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C008",
+      "claim_text": "Tool authority is assembled from several policy layers and hooks; schemas are projected for the provider, calls may be modified, blocked, or require approval, and sandboxing is optional with `mode: \"off\"` as the default.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Tool authority is layered and operator-dependent",
+      "confidence": "high for construction and defaults; configuration, plugins, approval backends, and individual tools remain in the trust boundary, and this is not a security-effectiveness claim",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/agent-tools.ts:414-740; embedded-agent-runner/effective-tool-policy.ts:26-35; run/attempt.ts:1143-1201,1458-1710; tool-schema-projection.ts:193-289; openclaw-tools.ts:316-590; sandbox/config.ts:230-285; plugins/hooks.ts:1255-1324","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Policy, schema, hook, approval, and sandbox defaults were directly verified."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C009",
+      "claim_text": "Tool evidence has distinct representations: append-only canonical transcript content, provider-facing bounded/truncated copies that preserve canonical history, and an explicit last-resort persisted rewrite used during overflow recovery.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "One tool result has three representations",
+      "confidence": "high for the embedded runtime; individual tool formatting and external-service responses were not exhaustively inspected",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/embedded-agent-runner/tool-result-truncation.ts:29-47,205-250,680-799; tool-result-context-guard.ts:462-555; embedded-agent-subscribe.handlers.tools.ts:1152-1235; run/attempt.ts:3531-3574","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified canonical, provider projection, and recovery rewrite paths."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C010",
+      "claim_text": "OpenClaw separates several durable structures: a sessions.json registry, append-only JSONL transcript trees, the SQLite channel-ingress queue, workspace files, and process-local attempt state. Session locks, repair, pairing guards, compaction, and optional transcript rotation mediate reconstruction rather than one atomic turn transaction.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "State is federated across durability boundaries",
+      "confidence": "high for the pinned structures; filesystem durability and crash behavior vary by configured paths and environment",
+      "references": [{"source_id":"CP2-S005","location":"src/config/sessions/paths.ts:37,258-322; store.ts:680-770,895-924,1071-1224; src/agents/sessions/session-manager.ts:1-174,727-923; run/attempt.ts:1965-2136,2910-3074,4598-4866","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary traced the registry, transcript, queue, workspace, and in-process state boundaries."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C011",
+      "claim_text": "The documented default memory plugin supplies file-backed retrieval tools and a prompt-time recall contract; pre-compaction memory flush can append selected durable notes, while ordinary session history, active context, and workspace memory remain different stores and projections.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Memory is not the transcript",
+      "confidence": "high for implementation capability and documented slot default; retrieval quality, write quality, and deployment configuration are unmeasured",
+      "references": [{"source_id":"CP2-S005","location":"pinned docs/concepts/memory.md:117-159; extensions/memory-core/index.ts:125-205; src/prompt-section.ts:4-38; src/flush-plan.ts:12-43,97-141; src/agents/workspace.ts:193-203,1020-1106","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified the plugin default in pinned docs and separated stores in code."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C012",
+      "claim_text": "Optional memory “dreaming,” disabled by default, can promote short-term snippets into `MEMORY.md` based on score, recall/signal count, query diversity, recency, contamination checks, and deduplication; it is across-run adaptation without a task-outcome optimization signal.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Across-run adaptation without outcome optimization",
+      "confidence": "high for selection and default; absence of a task-outcome signal is bounded to the inspected promotion path",
+      "references": [{"source_id":"CP2-S005","location":"src/memory-host-sdk/dreaming.ts:13-50,366-467,529-544; extensions/memory-core/src/short-term-promotion.ts:2320-2465; extensions/memory-core/src/dreaming.ts:388-447","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified disabled defaults, promotion signals, and persisted output."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C013",
+      "claim_text": "Cron and heartbeat are alternate lifecycle/ingress paths that reuse agent execution: isolated cron prepares its own run/session/delivery context and invokes the embedded agent, while heartbeat applies enablement, active-hours, busy-lane, pending-delivery, and session checks before calling the ordinary reply path with heartbeat-specific policy.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Alternate ingress: cron and heartbeat",
+      "confidence": "high for targeted paths; scheduler persistence and every delivery branch were not deeply traced",
+      "references": [{"source_id":"CP2-S005","location":"src/cron/isolated-agent/run.ts:1248-1395; run-executor.ts:230-335,366-455; src/infra/heartbeat-runner.ts:1295-1495,1560-1800","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified both alternate ingress paths and their convergence on agent execution."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C014",
+      "claim_text": "Optional coordination is exposed through session and subagent tools: a child may receive isolated or forked context, run once or persist when a channel can bind a thread, and return through lifecycle/delivery machinery; this does not itself provide an independent task-success verifier.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Optional coordination and delegation",
+      "confidence": "high for available mechanics; ACP and alternate harness execution were excluded, and effectiveness or verifier independence is not established",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/openclaw-tools.ts:394-526; tools/sessions-spawn-tool.ts:98-220; subagent-spawn.ts:500-775 and lifecycle registration; src/agents/system-prompt-config.ts:34-54","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified context modes, lifecycle options, and lack of an inherent independent acceptance role."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C015",
+      "claim_text": "Plugins and hooks form a cross-cutting injection surface over model selection, prompts, messages, tools, transcript persistence, sessions, subagents, gateway lifecycle, heartbeat, cron, dispatch, and execution environment rather than one self-contained architectural responsibility.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Hooks are cross-cutting architecture",
+      "confidence": "high for available hook surfaces; only installed and enabled plugins affect a deployment, and third-party behavior is outside scope",
+      "references": [{"source_id":"CP2-S005","location":"src/plugins/hook-types.ts:74-161; src/plugins/hooks.ts:824-970,1255-1324; src/agents/openclaw-tools.ts:551-589","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary enumerated and sampled hook invocation surfaces without inferring installed behavior."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C016",
+      "claim_text": "OpenClaw invests heavily in transport, protocol, session, replay, liveness, and delivery integrity, while the ordinary traced path has no independent semantic acceptance gate. A before_agent_finalize plugin and repository QA systems are optional, external layers rather than default proof of task success.",
+      "epistemic_kind": "inference",
+      "artifact_location": "Recovery is stronger than task acceptance",
+      "confidence": "moderate-high; presence and absence in the bounded path are verified, while investment is an architectural inference rather than an effort or defect-frequency metric",
+      "references": [{"source_id":"CP2-S005","location":"case-wide recovery paths; src/agents/embedded-agent-runner/run/attempt.ts:3158-3268; run.ts:3600-3742; docs/concepts/personal-agent-benchmark-pack.md:10-28; docs/concepts/qa-e2e-automation.md:905-971","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified default completion conditions and optional external/plugin evaluation layers."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C017",
+      "claim_text": "The repository provides run diagnostics, trajectory events, usage/cache/compaction accounting, regression tests, local scenario packs, and optional multi-model judged QA; none of those artifacts establishes the effectiveness of a particular OpenClaw mechanism at this pin.",
+      "epistemic_kind": "verified implementation fact",
+      "artifact_location": "Observability and external evaluation",
+      "confidence": "high for observability and evaluation capability; private production data and unrun benchmark outcomes remain unknowable",
+      "references": [{"source_id":"CP2-S005","location":"src/agents/embedded-agent-runner/run/attempt.ts:1104-1142,5090-5282; pinned QA docs:905-971; extensions/qa-lab/src/character-eval.ts; representative tests","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Primary verified capability and preserved the absence of run outcome evidence."}]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C018",
+      "claim_text": "Existing research qualifies rather than validates OpenClaw's mechanisms: memory benchmarks test broader lifecycle competencies than retrieval alone; compaction studies report retention, latency, and variability risks under other protocols; controlled multi-agent evidence warns against crediting subagents without matched comparisons; and feedback/evaluation literature separates reliable external signals, trajectories, and outcomes from intrinsic completion.",
+      "epistemic_kind": "source-reported claim",
+      "artifact_location": "Practice versus research evidence",
+      "confidence": "moderate to low transfer confidence depending on mechanism; none directly evaluates OpenClaw v2026.6.6 or isolates its implementation choices",
+      "references": [
+        {"source_id":"FL-S008","location":"retained benchmark task taxonomy and reported all-competencies limitation","relationship":"supports","outcome":"supports_scope","inspected_version":"ICLR 2026 retained admitted record","notes":"Qualifies memory coverage; does not evaluate OpenClaw."},
+        {"source_id":"PI-S002","location":"retained introduction, structured eviction alternative, initial evaluation, and limitations","relationship":"supports","outcome":"supports_scope","inspected_version":"arXiv preprint retained from Pi review, opened 2026-07-12","notes":"Supplies failure hypotheses and an alternative, not a direct comparison."},
+        {"source_id":"PI-S003","location":"retained HotpotQA and LoCoMo protocol, latency, and ten-run variability findings","relationship":"supports","outcome":"supports_scope","inspected_version":"arXiv preprint retained from Pi review, opened 2026-07-12","notes":"Provides different-system compaction cost and variance context only."},
+        {"source_id":"FL-S006","location":"retained controlled workflow comparison and separately scoped external-runtime study","relationship":"supports","outcome":"supports_scope","inspected_version":"2026 preprint retained and verified in Cycle 1","notes":"Prevents a causal subagent benefit claim; does not test OpenClaw."},
+        {"source_id":"FL-S009","location":"retained abstract and critical-survey conclusion on intrinsic correction and reliable external feedback","relationship":"supports","outcome":"supports_scope","inspected_version":"TACL 2024 retained and verified in Cycle 1 and Pi","notes":"Qualifies feedback independence; does not test OpenClaw."},
+        {"source_id":"FL-S002","location":"retained agent/evaluation harness definitions and trajectory-versus-outcome guidance","relationship":"supports","outcome":"supports_scope","inspected_version":"Anthropic engineering article dated 2026, retained admitted record","notes":"Operational guidance rather than a controlled OpenClaw result."},
+        {"source_id":"CP2-S005","location":"OpenClaw memory, compaction, subagent, completion, observability, and QA paths at v2026.6.6","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Establishes the mechanisms being qualified; no isolating outcome evidence was found."}
+      ]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C019",
+      "claim_text": "OpenClaw reinforces TF-001 through TF-006 and adds a new R11 question: adaptive memory/context policy and outcome-driven optimization are materially different across-run mechanisms even when both change future calls.",
+      "epistemic_kind": "hypothesis",
+      "artifact_location": "Responsibility-lens friction",
+      "confidence": "low pending additional cases; this is taxonomy friction, not an approved revision or cross-harness pattern",
+      "references": [
+        {"source_id":"CP2-S005","location":"case-wide lifecycle, policy/context/tool, observation, state, extension, integrity/acceptance, and dreaming evidence; OpenClaw entries in research/TAXONOMY-FRICTION.md","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Supplies OpenClaw recurrence, counterdetail, and TF-007 only."},
+        {"source_id":"CP2-S001","location":"maintainer-reviewed Pi v0.80.6 case and Pi entries in research/TAXONOMY-FRICTION.md","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"Pi v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b, reviewed 2026-07-16","notes":"Supplies earlier case evidence; recurrence across three cases still does not validate a taxonomy revision."},
+        {"source_id":"CP2-S002","location":"maintainer-reviewed OpenHands SDK v1.35.0 case and OpenHands entries in research/TAXONOMY-FRICTION.md","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"OpenHands SDK v1.35.0 at 9028562e2d5eda76de662ec9b7584125760eb83f, reviewed 2026-07-16","notes":"Supplies earlier case evidence and the framework/application split."}
+      ]
+    },
+    {
+      "claim_id": "field-landscape-case-openclaw-v2026-6-6-C020",
+      "claim_text": "After OpenClaw, Browser Use is the highest-information next case under the existing batch because it directly tests perception-grounded action/observation and R5/R6 questions; an adoption cohort, Hermes lineage study, programmed-control replacement, or Claude Code should remain alternatives until their specific evidence and selection prerequisites are met.",
+      "epistemic_kind": "engineering recommendation",
+      "artifact_location": "Interim sampling recommendation",
+      "confidence": "moderate as a sampling judgment, not a factual outcome claim; the maintainer may value replication, adoption, or the supplied closed-source evidence differently",
+      "references": [
+        {"source_id":"CP2-S004","location":"retained Checkpoint 2 identity, pin, and selection-level browser-agent purpose; research/selections/checkpoint-2-deep-dive-set.md responsibility matrix","relationship":"supports","outcome":"supports_scope","inspected_version":"Browser Use 0.13.4 at 68afe46456a23009a7d5eec2017ec7ab51b7c027, selection record only","notes":"Supports the perception/environment contrast premise; no Browser Use deep analysis has begun."},
+        {"source_id":"CP2-S005","location":"OpenClaw case findings and friction matrix","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"v2026.6.6 at 8c802aa683510c7f7503597b54c3021733245e59","notes":"Establishes what the third case did and did not test."},
+        {"source_id":"CP2-S001","location":"maintainer-reviewed Pi case and friction record","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"Pi v0.80.6 at 2b3fda9921b5590f285165287bd442a25817f17b","notes":"Supplies the compact coding-harness contrast already covered."},
+        {"source_id":"CP2-S002","location":"maintainer-reviewed OpenHands SDK case and friction record","relationship":"contextualizes","outcome":"supports_scope","inspected_version":"OpenHands SDK v1.35.0 at 9028562e2d5eda76de662ec9b7584125760eb83f","notes":"Supplies the event/workspace platform contrast already covered."}
+      ]
+    }
+  ]
+}

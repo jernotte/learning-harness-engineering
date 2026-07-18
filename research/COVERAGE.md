@@ -22,7 +22,7 @@ This is the human and search entry point. Query families are provisional because
 | Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Mostly framing and product documentation; empirical depth pending |
 | Subagents and multi-agent systems | handoff, agent-as-tool, worker, delegation, debate, voting | 3, 4, 8, 9 | Claude/OpenAI and BenchAgent records are mapped; implementation comparisons remain pending |
 | Verification and evaluation | tests, critic, judge, grader, trajectory, benchmark, self-correction | 6, 9, 10 | Empirical and production records are mapped; judge/evaluator gaps remain |
-| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph evidence is mapped; OpenClaw/Hermes/Letta remain unadmitted leads |
+| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph evidence is mapped; OpenClaw is reviewed at an exact pin; Hermes/Letta remain leads |
 | Model routing and instruction policy | model selection, fallback, effort, role model, system prompt | 2, 3 | Claude/ADK documentation is mapped; controlled comparisons remain scarce |
 | Self-improvement | context optimization, workflow search, self-editing harness, regression gate | 7, 10, 11 | Weng is mapped as framing; the primary research bundle remains unadmitted |
 
@@ -30,7 +30,7 @@ This is the human and search entry point. Query families are provisional because
 
 | Provisional responsibility | Referenced evidence mapped during reconstruction | Unadmitted leads and gap before durable conclusions |
 | --- | --- | --- |
-| Run lifecycle and ingress | Google ADK runtime/session record | OpenClaw, Hermes, and Letta lifecycle leads; comparative research thin |
+| Run lifecycle and ingress | Google ADK runtime/session record plus analyzed OpenClaw ingress/lifecycle evidence | Hermes and Letta lifecycle leads; comparative outcome research thin |
 | Model and instruction policy | Claude subagent and Google ADK records | Browser Use/provider normalization leads; few controlled routing comparisons |
 | Active-context and capability construction | Claude context/memory and MCP records | Pi/OpenHands leads; compaction loss and admission effects need analysis |
 | Control flow and execution semantics | Anthropic patterns, Google ADK, and Agentless records | ReAct/ReWOO/LATS leads; matched model/code/hybrid comparisons needed |
@@ -55,7 +55,7 @@ The table below comes from the implementation recon report. It is a candidate co
 | Code-as-action agents | smolagents | Reported lead; not yet admitted |
 | Browser and computer-use agents | Browser Use, Agent S | Reported leads; one may later represent perception/grounding |
 | Research pipelines | STORM, GPT Researcher, DeerFlow | Reported leads; version lineage not yet admitted |
-| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | Reported leads; code and lifecycle claims not yet admitted |
+| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | OpenClaw reviewed at v2026.6.6; Letta and Hermes remain unadmitted leads |
 
 ## Empirical question coverage
 
@@ -81,8 +81,8 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 
 ## Known gaps at Checkpoint 1
 
-- Three remaining open cases have not yet been cloned for analysis; their selection pins do not establish mechanisms.
-- The responsibility map has been tested through Pi and OpenHands but remains provisional until the first batch supplies broader friction and counterexamples.
+- Browser Use is authorized but not yet analyzed; Claude Code remains conditional, and no programmed-control replacement is selected. Their selection status does not establish mechanisms.
+- The responsibility map has been tested through Pi, OpenHands, and OpenClaw but remains provisional until Checkpoint 3 supplies broader friction, counterexamples, and a maintainer-approved consolidation.
 - Closed production systems provide controls and declared behavior but little causal visibility.
 - Few studies isolate a single harness mechanism while keeping model, tools, context, budget, and evaluator fixed.
 - Cost, latency, variance, and long-horizon reliability are inconsistently reported.
@@ -90,7 +90,7 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 - The field lacks stable vocabulary for runtime, workflow engine, environment service, gateway, session, memory, and agent.
 - Historical and current architectures are easily mixed in fast-moving or rewritten projects.
 - Exact query bundles were recovered from the primary and two subagent rollouts, but complete provider result windows, result ranks, and all screening decisions are not recoverable.
-- Browser Use, smolagents, Pi, OpenHands, OpenClaw, Hermes, Letta, and other details appeared as recon leads without completing the source-record lifecycle.
+- Browser Use, smolagents, Hermes, Letta, and other details appeared as recon leads without completing an implementation source lifecycle; Pi, OpenHands, and OpenClaw are now reviewed through independently admitted pinned cases.
 - All 16 referenced sources now have full records; the canonical ledger contains 24 material claims, 50 claim/source/location mappings, and 50 primary verification events.
 - The generated audit shows 24 GitHub repository leads, none admitted or pinned for claim support; this is visible breadth, not verified implementation depth.
 - The audit's GitHub host concentration warning is explained, not erased: the implementation pass intentionally sampled repositories, while referenced evidence remains distributed across papers, documentation, a specification, and a synthesis.
@@ -98,9 +98,11 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 
 ## Checkpoint 2 selection coverage
 
-Checkpoint 2 originally selected Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. D-009 accepts Pi and OpenHands as reviewed cases, defers LangGraph from the concrete-harness sequence to a future framework/substrate comparison, leaves its slot unreplaced, and authorizes only OpenClaw next. Browser Use and Claude Code remain selected but blocked; smolagents, STORM, and SWE-agent remain pinned alternates. No popularity-first or convergence-cohort resequencing has been approved.
+Checkpoint 2 originally selected Pi, OpenHands Software Agent SDK, LangGraph, Browser Use, OpenClaw, and a conditional maintainer-supplied Claude Code case. D-009 accepts Pi and OpenHands as reviewed cases and defers LangGraph from the concrete-harness sequence without replacement. D-010 accepts OpenClaw and authorizes Browser Use alone next at its existing pin. Claude Code remains conditional; smolagents, STORM, SWE-agent, Hermes, every cohort member, and any programmed-control replacement remain blocked.
 
-The responsibility matrix is a sampling hypothesis. Responsibilities 1–10 have at least two expected open-case contrasts, while Responsibility 11 remains weak and uncertain. Claude Code remains unknown across the matrix until its bounded evidence set is supplied. Pi tested only its own expected row; the remaining expectations are still unverified.
+D-010 orders rolling selection by marginal information gain on uncovered or high-friction responsibilities, falsification and anchoring protection, evidence readiness, evidence-mode and domain diversity, analysis and governance cost, lineage and independence risk, and only then operationalized adoption. Browser Use is the final unconditional pre-Checkpoint-3 case. If the Claude Code set is admitted by the Browser Use review, the maintainer may explicitly authorize it before Checkpoint 3; otherwise Claude Code is deferred and the checkpoint proceeds after Browser Use.
+
+The responsibility matrix remains a sampling hypothesis. Pi, OpenHands, and OpenClaw have now tested their own expected rows; OpenClaw supplies the first observed R11 mechanism but not outcome-driven optimization. Browser Use and Claude Code remain untested, and Claude Code remains unknown across the matrix until its bounded evidence set is supplied.
 
 The selection source audit is `complete` for its two bounded search batches and direct pin checks: 35 returned identities, ten opened sources, eight referenced repository records, two excluded operational sources, and 14 verified claim mappings. GitHub concentration and shallow repository inspection are intentional and resolved for a repository-selection decision, not evidence of landscape breadth or implementation depth. The 35 manually authored result URLs and both batched query strings were separately confirmed in the retained native archives before approval because the generated audit cannot establish that content binding itself. Cycle 1's reconstructed limitation still governs the landscape from which the candidates originated.
 
@@ -120,6 +122,16 @@ The reviewed implementation comparison strengthens all four Pi friction question
 
 The approved D-008 compatibility correction reprocessed the retained subject window without rerunning research. All 55 native observations now resolve automatically; 43 repository events carry corrected paths, the one two-query web search carries nine mechanically derived result identities, and both paper opens reconcile with their internal markers. The complete audit passes with eight referenced sources, 17 claims, 28 exact mappings, 28 primary verifications, and one resolved concentration warning. The exact transcript prefix is retained and cryptographically verified.
 
+## OpenClaw case coverage
+
+The bounded OpenClaw case inspects `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` through one Telegram polling/direct-message path. The written scope preceded deep analysis and kept the case on durable ingress, authorization, routing and shared-session policy, nested execution ownership, embedded model/context/tool construction, action and result mediation, federated persistence, compaction, final delivery, and targeted adjacent mechanisms. Other channels, hosted services, ACP, alternate harnesses, and third-party plugins remain outside the deep boundary.
+
+The case exercises R1–R11 and adds three substantive contrasts. First, one user-visible turn crosses multiple durable and process-local transaction boundaries rather than one run loop. Second, runtime integrity, replay, liveness, and delivery are extensive while independent semantic acceptance remains optional or external. Third, disabled-by-default memory dreaming is genuine across-run adaptation driven by recall, diversity, recency, and deduplication—not task-outcome optimization. The taxonomy register records TF-001 through TF-006 as observed and adds TF-007 to preserve that R11 distinction without revising the lens.
+
+The complete promotion-profile audit passes with ten referenced records, 20 declared claims, 31 exact mappings, 31 primary verifications, and no blocking error. Across three retained boundaries, 262 of 272 observations resolve automatically; ten exceptions were handled in one batch and none remains unresolved. The sole warning is resolved because Browser Use was used only at selection depth for the sampling decision. No live search or manually authored result event was needed.
+
+OpenClaw is a maintainer-reviewed finding. During review, C003 was explicitly reconciled with the configured `after_agent_dispatch` policy: the tracker applies that acknowledgement stage on successful middleware-chain completion even when a buffered handler returns before timer-driven dispatch, and polling then deletes the claimed spool record. The sequence is directly observed, but the crash consequence remains an inference because it was not behaviorally reproduced or frequency-measured. D-010 authorizes Browser Use as the highest-information next contrast while keeping adoption-weighted replication, Hermes lineage, a concrete programmed-control harness, and Claude Code blocked pending later decisions.
+
 ## Next coverage decision
 
-D-007 approved the control-flow-first method and the OpenHands contrast; D-008 restored dependable capture for the current runtime shape and is frozen again. D-009 accepted OpenHands, deferred LangGraph to a future framework/substrate comparison, preserved the contrast-oriented sampling rationale, and authorized only OpenClaw next. OpenClaw's scope must be written before deep analysis. After that case, an interim maintainer review—not Checkpoint 3—will reconsider sampling order using actual three-case evidence. Every other deep dive remains blocked, and Claude Code cannot begin until the maintainer-supplied material is enumerated and admitted.
+D-007 approved the control-flow-first method, D-008 restored dependable capture for the observed runtime shape, D-009 accepted OpenHands and deferred LangGraph, and D-010 accepted OpenClaw and resolved the interim sampling decision. Browser Use is the only next case and must begin with a written scope boundary. At its review, either admit and separately authorize the bounded Claude Code evidence set as the final pre-Checkpoint-3 case or formally defer it and convene Checkpoint 3. No replacement case is added before that decision.

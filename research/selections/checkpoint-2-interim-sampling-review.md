@@ -1,10 +1,12 @@
 # Checkpoint 2 Interim Sampling Review after OpenClaw
 
-**Status:** Approved under D-010; Browser Use alone authorized next
+**Status:** Historical D-010 decision; immediate order later amended by approved D-011
 
 **Date:** 2026-07-16
 
 **Evidence boundary:** Maintainer-reviewed Pi v0.80.6, OpenHands SDK v1.35.0, and OpenClaw v2026.6.6; D-006, D-009, and D-010
+
+**Later amendment:** On 2026-07-18, D-011 selected pinned Hermes Agent as the final pre-Checkpoint-3 case and deferred Browser Use until after the first learning-oriented synthesis. The analysis below is preserved as the evidence and tradeoff record for D-010; its active authorization and trigger are superseded by [`hermes-selection-and-pinning.md`](hermes-selection-and-pinning.md).
 
 **Reconstruction caveat:** The original Cycle 1 landscape remains provisionally promoted under reconstructed provenance. This review uses Cycle 1 leads only as leads; it does not inherit their reported behavior or breadth as evidence.
 

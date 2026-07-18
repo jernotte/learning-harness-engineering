@@ -204,7 +204,7 @@ Approved by the maintainer on 2026-07-12 as part of the Checkpoint 1 waiver, pro
 
 ## D-006 — First deep-dive set and single-case pilot
 
-**Status:** Approved; execution sequence later amended by D-007 and D-009
+**Status:** Approved; execution sequence later amended by D-007 and D-009 through D-011
 **Date:** 2026-07-12
 
 ### Decision
@@ -424,3 +424,52 @@ OpenClaw is a reviewed finding. Browser Use alone is authorized, scope-first, at
 ### Approval record
 
 On 2026-07-17, the maintainer accepted the adversarial review and the primary agent's independently justified response. The review basis included external verification of the pinned checkout and representative claims, regeneration of the complete audit and validation suite, direct identification of C003's omitted `after_agent_dispatch` countermechanism, and primary reinspection of the tracker, buffered-handler, dispatch, and spool-deletion paths. The maintainer approved the C003 reconciliation, the rolling-selection precedence, Browser Use as the only next case, the hard Checkpoint 3 trigger, the target-test policy question for that checkpoint, and the Claude Code evidence deadline at the Browser Use review.
+
+## D-011 — Select pinned Hermes before Checkpoint 3 and defer Browser Use
+
+**Status:** Approved
+**Date:** Proposed and approved 2026-07-18
+
+### Decision
+
+Select `NousResearch/hermes-agent` as the final implementation case before Checkpoint 3 at annotated tag `v2026.7.7.2`, tag object `b7751df34688835a108e0d630f3495fc11f3df79`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`, package version `0.18.2`. Require a written scope boundary before deep analysis. Hermes is the only authorized next implementation; this selection amendment does not itself begin the case.
+
+Amend D-010 only in immediate ordering and the Checkpoint 3 trigger. Preserve D-010's rolling-selection criteria and their precedence. Defer Browser Use until after the first learning-oriented synthesis rather than removing it. Preserve its role as the strongest outstanding perception-grounded action/observation and environmental-drift contrast, especially for R5/R6. Convene Checkpoint 3 immediately after the reviewed Hermes case and add no Claude Code case, Browser Use case, cohort member, alternate, or replacement before that checkpoint.
+
+Classify the Hermes/OpenClaw relationship as separately rooted repositories with later migration compatibility and selective documented influence. The Hermes repository root predates the recorded OpenClaw repository root; pinned Hermes later added an explicit OpenClaw data/configuration migration, an OpenClaw-inspired permissions change, and a named port of an OpenClaw Telegram fix. Do not describe the repositories as direct whole-repository descent, and do not count recurrent mechanisms as independent convergence without mechanism-specific evidence.
+
+The future Hermes case remains a standalone, source-native implementation analysis. Its comparison question is:
+
+> How does Hermes Agent v0.18.2 connect models to users and environments, and—only where pinned evidence supports comparison—which OpenClaw concepts are translated, selectively borrowed, deliberately unmapped, or independently implemented? What tradeoffs follow from those choices?
+
+After maintainer review of Hermes, the authorized sequence is Checkpoint 3 taxonomy-friction and method review, the first cross-harness synthesis, human-oriented learning material derived from reviewed evidence, and later reopening of Browser Use and other contrast cases against explicit gaps.
+
+### Why
+
+The bounded selection pass established a defensible immutable boundary and concrete-harness fit. The pinned repository contains several production entry points feeding a shared agent runtime plus prompt/provider/tool machinery, session persistence, gateway, cron, plugins, skills, tests, and repository-contained architecture documentation. It can support the existing case method without projecting moving default-branch behavior backward.
+
+The maintainer wants one more practical implementation followed by an earlier shift into understanding and learning. Hermes offers an unusually teachable comparison with the already reviewed OpenClaw case: it makes the project distinguish state translation, explicit borrowing, compatibility pressure, unresolved similarity, and independent implementation rather than treating recurrence as convergence. It may also sharpen the current R11 adaptation-versus-optimization question, but its “self-improving” description remains a source claim until the future case inspects the mechanism and its feedback.
+
+This is a conscious trade against D-010's highest-information recommendation. Browser Use would provide greater architectural breadth, better anchoring protection, and the clearest test of perception-grounded R5/R6. Hermes provides lower independence and less new environment coverage. The maintainer accepts that cost for comparative-teaching value and an earlier learning phase. The first synthesis must retain the resulting browser/perception gap rather than implying the batch is broadly representative.
+
+### Adoption evidence and limits
+
+The 2026-07-18 GitHub snapshot reports substantial repository attention, while the pinned history contains high commit, author-identity, and release-tag activity. Nous Research ownership, active releases, migration support, and broad integrations support continuity and ecosystem investment. They do not establish user count, production deployments, dependents, team size, quality, or effectiveness. Adoption is not the decisive criterion for D-011; the selection rests on case readiness, relationship value, and the maintainer's learning priority.
+
+### Alternatives considered
+
+- **Keep Browser Use next under D-010.** Strongest for new architectural information, R5/R6, and anchoring protection. Deferred rather than rejected so the first learning phase retains an explicit counterexample target.
+- **Analyze Hermes as independent convergence.** Rejected. Migration and named influence/ports make independence mechanism-specific and presently unestablished.
+- **Treat Hermes as an OpenClaw fork.** Rejected. Git roots differ and Hermes predates the recorded OpenClaw root; only later compatibility and selective influence are directly evidenced.
+- **Insert Claude Code or another implementation before Checkpoint 3.** Rejected. The maintainer wants a fixed transition, the Claude Code evidence set remains unavailable, and another rolling addition would move the checkpoint again.
+- **Begin synthesis immediately.** Rejected for now. The maintainer authorized one final concrete case, and Hermes supplies a bounded comparison question worth answering before consolidation.
+
+### Consequences
+
+Hermes is newly admitted at selection depth only; no mechanism finding is promoted by this decision. Browser Use remains pinned at `0.13.4` / `68afe46456a23009a7d5eec2017ec7ab51b7c027` and deferred until after the first learning-oriented synthesis. Claude Code remains blocked and is no longer a possible pre-Checkpoint-3 branch. LangGraph remains deferred to a framework/substrate study. The eleven-responsibility taxonomy and D-010 criteria remain unchanged. Provenance infrastructure remains frozen.
+
+The Cycle 1 landscape still carries reconstructed provenance. Together, CP2-S009 and HS-S001 admit only Hermes identity, pin, bounded relationship evidence, and dated activity/attention indicators; they derive from the same repository ecosystem and do not constitute independent corroboration. They do not retroactively validate the reconstructed Hermes lead or its reported mechanisms.
+
+### Approval record
+
+The maintainer first agreed on 2026-07-18 that Hermes should replace Browser Use as the intended final pre-Checkpoint-3 case and then explicitly stated “agree with D-011” while authorizing the bounded selection-and-pinning goal. Because no D-011 package yet existed, the primary agent treated that as approval of the direction contingent on evidence rather than fabricating a completed decision. The subsequent bounded pass verified the exact pin, concrete-harness boundary, distinct Git roots, migration layer, selective influence history, and limited adoption indicators. Those findings support the approved amendment with the qualified relationship language above; no Hermes deep dive, taxonomy change, synthesis, or learning artifact began.

@@ -1,0 +1,1812 @@
+{
+  "generated_at": "2026-07-18T05:37:19.377Z",
+  "cycle": "field-landscape",
+  "completeness": "complete",
+  "profile": "provisional-promotion",
+  "gate_passed": true,
+  "counts": {
+    "searches": 1,
+    "search_updates": 1,
+    "applied_search_updates": 1,
+    "rejected_search_updates": 0,
+    "searches_with_incomplete_result_capture": 0,
+    "returned": 20,
+    "returned_source_identities_recovered": 20,
+    "opened": 4,
+    "read_only": 0,
+    "referenced": 4,
+    "excluded": 0,
+    "declared_claims": 10,
+    "claims": 18,
+    "claim_evidence_mappings": 18,
+    "verifications": 18,
+    "unverified_claim_evidence_mappings": 0,
+    "native_boundaries": 2,
+    "native_observations": 51,
+    "automatically_resolved_observations": 47,
+    "human_resolved_observations": 4,
+    "unresolved_observations": 0,
+    "linked_observations": 47,
+    "not_research_observations": 4,
+    "observation_resolution_batches": 1,
+    "manual_capture_actions": 8,
+    "semantic_batch_actions": 1
+  },
+  "planned_channels": [
+    "generic web search",
+    "local repository inspection"
+  ],
+  "actual_channels": [
+    "generic web search",
+    "local repository inspection"
+  ],
+  "host_distribution": {
+    "github.com": 3,
+    "api.github.com": 1
+  },
+  "repository_depth": [
+    {
+      "source_id": "auto-source-a17476e9d7955152",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-1c536b49866b2838",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-397deee3f229d6bb",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-40f3221b225b449b",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-97dace3f420d9eb6",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-b76d7b99528f89e5",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-875de05d2e10d849",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-48d05d6898c43c61",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-f885b06776bfe135",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-da7cfb35827ca758",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-1dd03a5ac20fd65a",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-e6f85fe0b04350de",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-2cc99bf857fd4bff",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-ea725dbd777a05a3",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-2ca07098833756ce",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-696f0f1aedf66103",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-c02e8aa8748fa613",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-6b89f07a31abfec1",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-bb5eeb6a5fd34aaa",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-6c2983b19c28bff3",
+      "surfaces": [],
+      "pinned": false
+    },
+    {
+      "source_id": "CP2-S009",
+      "surfaces": [
+        "README",
+        "documentation",
+        "code",
+        "tests",
+        "history",
+        "releases",
+        "command_output"
+      ],
+      "pinned": true
+    },
+    {
+      "source_id": "CP2-S005",
+      "surfaces": [
+        "code",
+        "history"
+      ],
+      "pinned": true
+    },
+    {
+      "source_id": "CP2-S004",
+      "surfaces": [
+        "README",
+        "releases"
+      ],
+      "pinned": true
+    }
+  ],
+  "repository_observations": [
+    {
+      "timestamp": "2026-07-18T05:00:45.649Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-c159abfbb81e7343c9d6",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-09a3327cedbda7b7ee",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "e105b839b45ba56a1fc66c54dc64e54fe3213e47249628238805861a812c8789",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 42
+    },
+    {
+      "timestamp": "2026-07-18T05:00:55.236Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-0d77763d4a5042852f3b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-81909df83f88148ae8",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "36abaa9b48371e76ad5de99d3f58bdfee803a60fef8ebd68a6954fdfda2672bb",
+      "surfaces": [
+        "history",
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 43
+    },
+    {
+      "timestamp": "2026-07-18T05:01:42.673Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-da99893b758a501004b9",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f9896d782b4a5da2e0",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "d40571af6259db319ccef327c2c73fa52e94c4e4f15eaf4b60f98d70aa669952",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 44
+    },
+    {
+      "timestamp": "2026-07-18T05:02:27.412Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-c8a568734d6543bd3317",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-0cb1f83fa6cf5f18d4",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "6df8acd4bac8ca6299d0b1b107af4cf2c0154b92457aea17bf5fc554f6271d27",
+      "surfaces": [
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 66
+    },
+    {
+      "timestamp": "2026-07-18T05:02:49.535Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-bd1db6dd4dc8f6d7618f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-10405c57e63ede958d",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "f6a951c655ed38cd4cd8422f64b126331832d887f9959ae8f4b161f91164cc1a",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 67
+    },
+    {
+      "timestamp": "2026-07-18T05:03:01.296Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-dd0203915826388add6b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-faa8a5da0060b7bdf8",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "611a7b2a266c010c0a96ee6c8700d0d0a7b55d674b776ca05b484a232d0d54c4",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 68
+    },
+    {
+      "timestamp": "2026-07-18T05:03:23.853Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-99a990a5a2df5925c553",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f4f36585ec67729715",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "c28742576036c9dd7ce57b6a4b5d38e0f91202622a62cfa5199a9ad00e13e4b4",
+      "surfaces": [
+        "history",
+        "code",
+        "tests",
+        "documentation"
+      ],
+      "commit": "9de9c25f620ff7f1ce0fd5457d596052d5159596",
+      "capture_mode": "automatic",
+      "__line": 69
+    },
+    {
+      "timestamp": "2026-07-18T05:04:01.013Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-6062d1d3a711da9b31ea",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-3e29396b15e8629262",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "97d484c0e0634ad1f5fd7e1fe36464b610c7be6ed25a43da5ababdd08c0b6743",
+      "surfaces": [
+        "history",
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 70
+    },
+    {
+      "timestamp": "2026-07-18T05:04:20.195Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-a1add090069cee5f6179",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-66dd6a7141cfe676ee",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "58647b2f171c8938a036a2a24d23c9827931cbe1639651199787782cc5b387a4",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 71
+    },
+    {
+      "timestamp": "2026-07-18T05:04:48.154Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-c041fa769ee1f48b3177",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-3c2a52db19877d2c44",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "35522c3abf9a011614c43deec2d3481b7f984636707afc639ff822d79ff79e95",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 72
+    },
+    {
+      "timestamp": "2026-07-18T05:05:03.615Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-cedf0091594dfb000cf7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-8668224120fe08bad7",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "1f73f418781c4347426575206e2c9f9558b9ae0e4d2a32f5e9eb096d3444f8c9",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 73
+    },
+    {
+      "timestamp": "2026-07-18T05:05:07.969Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-287d386848dbdcfe0a2c",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-dcd2809bd491fa0bd3",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "7d8f2ecb97a4837ee8cef8418dc3ac21a92ad3ed8d6d49a28a261481ee2e0876",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 74
+    },
+    {
+      "timestamp": "2026-07-18T05:05:28.322Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-24d9118165eca1916da3",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-2de564131f62cb6524",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "ac10eead76c0dabb2f05d5767cabab84ae22d394e4378d349f9735c860188150",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 75
+    },
+    {
+      "timestamp": "2026-07-18T05:05:52.480Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-7ec7ab009154811a9d92",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d3360a33ea9f926b46",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "9631cc2b954d22378c3e71688aa632066d756b88f3e4fed5aecee4ef41f4a0c6",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 76
+    },
+    {
+      "timestamp": "2026-07-18T05:06:05.652Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-b293c63e64a070254b13",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-800a821cfeb0324094",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "ebcf3c03a4ca1e7cdd56f6962b181d6de8e3cc5cc43e8526ce86c446f9cdd8d0",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 77
+    },
+    {
+      "timestamp": "2026-07-18T05:06:12.474Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-4a98796ebdbc87efb137",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-9cb9d8bbeaf2dbf2b7",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "5f5e0f2afa33746d6f29b666636990cff35c316f7a70190c00af0fc90bbb3344",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 78
+    },
+    {
+      "timestamp": "2026-07-18T05:06:50.944Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-de37e59d5b8b4c7db4de",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c2824455a48e0653c9",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "ee2080b33471064dcae531f15ee974e860769598b9d0c6e527cab3d3c65fcbb7",
+      "surfaces": [
+        "code",
+        "tests",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 79
+    },
+    {
+      "timestamp": "2026-07-18T05:06:56.706Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-aa21a026eaf7eeed9b69",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-1494f005424263819d",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "4613d7d254d0a80150e8712bdf345662bdd6e7cbcd099e119ae676876b721cea",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 80
+    },
+    {
+      "timestamp": "2026-07-18T05:07:27.633Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-23708808fd6a06a1c0cc",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-538772358887db3b3c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "3346d63f31a857597a50aec6ed0af2d6d9fc479a4e3af820a57f6d5630c3224c",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 81
+    },
+    {
+      "timestamp": "2026-07-18T05:08:52.494Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-49131284ec2d21d24dea",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-5406b400846ff7046a",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "8401f89f67e25864072676f9a3c15896ae46bd40453d7eec1a8448968afcc799",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 82
+    },
+    {
+      "timestamp": "2026-07-18T05:08:58.563Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-cc0bd6b890290b1a7a8d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ff19be26c497313060",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "889531cccfe2bb7d0987c33131ddcc89ea7671be7c345c120d34bc7f06307710",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 83
+    },
+    {
+      "timestamp": "2026-07-18T05:09:05.206Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-d4ade521615e1ea25601",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-a414c74ed5b297977e",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "f013c3f673de4f558553f8bcccbdbb5b8934b6043f6ee015ad0b09e8b89d26da",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 84
+    },
+    {
+      "timestamp": "2026-07-18T05:09:10.482Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-bf43da30e42f567aa908",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-85c4e645fba1202104",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "26efa86ed1d452d48eeca023646c1015ec1b621363d9327eb6cc3b9abe8fe20d",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 85
+    },
+    {
+      "timestamp": "2026-07-18T05:09:15.006Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-7f9102c8b5053ef36564",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-d94ad9cae32c294b3c",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "f7a63013e0df060113d5c38d39d5d066af2f3dc4b08c0d6ee4ec909b8ce4684e",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 86
+    },
+    {
+      "timestamp": "2026-07-18T05:09:23.217Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-1e2cf0e9611a93215e7f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-760424a2dd1b5926fb",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "39789472d6fbd1ae40bc6e2d4e9442e392fe7e9a4001f09aa7f1a6f37c0cad7f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 87
+    },
+    {
+      "timestamp": "2026-07-18T05:09:30.783Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-1349e7a27ade227a1131",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-6ae716a86519f296cf",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "81ff51b0f9561d32d3bfd05560d2581f3adb95827e17f1e67f5ec4856ca0b3b6",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 88
+    },
+    {
+      "timestamp": "2026-07-18T05:09:40.871Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-c3a4c067e490721c34c7",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-628d2bb0fd26be98e2",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "652b035b73e33249f581c7d1a8f1b9f14c0e1d4f3285f3b054925ac0a56c31f1",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 89
+    },
+    {
+      "timestamp": "2026-07-18T05:09:49.511Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-cb2a42bf28e78f80533c",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-a123e1d7afd044c567",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "73f3abdc5ddd81b0f50da6bd8532c5cc6197ebdf28f2e113f6f01483f40e87c5",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 90
+    },
+    {
+      "timestamp": "2026-07-18T05:10:22.545Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-5b8766b704a734289573",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-1dafb5f2e97e4dedb1",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "57c773694f1a514207832bb99471ef10b8ece6bd62382e35f37a8845ee1609db",
+      "surfaces": [
+        "history",
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 91
+    },
+    {
+      "timestamp": "2026-07-18T05:10:38.479Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-d3eac1ee7ae05cb0bd0f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-419242de423afedaac",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "d668c56a03d36e2800645edb32b0dec0256a0157f6641fdbac3a8c91156d6939",
+      "surfaces": [
+        "history",
+        "tests"
+      ],
+      "commit": "9de9c25f620ff7f1ce0fd5457d596052d5159596",
+      "capture_mode": "automatic",
+      "__line": 92
+    },
+    {
+      "timestamp": "2026-07-18T05:10:48.616Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "derived_from_native_event": "native-567c47d62c2f90f4a93f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-669becc20fd9d0517a",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "37dc4e495528aa7723d1e6a4ffb6951bbd2d4343a09143da38a815311ef288e7",
+      "surfaces": [
+        "history",
+        "code"
+      ],
+      "commit": "b7751df34688835a108e0d630f3495fc11f3df79",
+      "capture_mode": "automatic",
+      "__line": 93
+    },
+    {
+      "timestamp": "2026-07-18T05:31:42.164Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-92b7f4db87b9d2053f2f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-edb99153151ca00f7f",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "bb365a64883743a65d7203f550b87c6bc35e2c23d463bc408ba1b328b92041e7",
+      "surfaces": [
+        "history"
+      ],
+      "commit": "9de9c25f620ff7f1ce0fd5457d596052d5159596",
+      "capture_mode": "automatic",
+      "__line": 106
+    },
+    {
+      "timestamp": "2026-07-18T05:31:51.440Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-be24a36969b15d5733d9",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-23602e0cff69913845",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/hermes-selection/hermes-selection-prefix.jsonl",
+      "command_sha256": "797d4fd01c99b75955ce8b3f29dd7e539bcdf741e1d3555cbe8d111d84bc636d",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 107
+    },
+    {
+      "timestamp": "2026-07-18T05:31:57.311Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-ef67ab5b18f86d6118dc",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-da18eddf90bbef4f48",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/hermes-selection/hermes-selection-prefix.jsonl",
+      "command_sha256": "3e30070dcc792b83c5a615eee33a828f67b651d2ad933bdd95fc5dd298669f0d",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 108
+    },
+    {
+      "timestamp": "2026-07-18T05:32:07.497Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-6b1ab152b450d9ed4ddb",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-55a8f6a174e3a9545b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "2088c4c2bc94bef3ba8c53f214c00c5a1190e893f9ea4cc0f2c3d014c57e8fa7",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 109
+    },
+    {
+      "timestamp": "2026-07-18T05:32:16.347Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-8d539029de7e5bccc343",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-a7bb3d53444c1797bf",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "6d7eb3e52d2ffa9ec508aad6e57ea49e107471be1df97367a619218e0efd57d8",
+      "surfaces": [
+        "history"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 110
+    },
+    {
+      "timestamp": "2026-07-18T05:32:23.821Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-3b14ae71bec7442651fc",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-0d303801e31640d36f",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "58cb14ad6dcd51fcf6acc27cd734c2216a2abdac762d5568d1637b3c2dbc82af",
+      "surfaces": [
+        "history"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 111
+    },
+    {
+      "timestamp": "2026-07-18T05:32:29.246Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-11b5af5f3d133245cc70",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-726acf425b82e44761",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "ebe71bb099b74e22719e3a719ae112944aaf2e78b228894e7cffe8d124ad7a58",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 112
+    },
+    {
+      "timestamp": "2026-07-18T05:32:51.085Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-117b5d9029505d90b8e0",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-5c70fb70a7a6b37748",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "e1e7b50ac5e1d21cce0357c7dbab0f021e39d6b31d0cf62fe7de796fa43b1416",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 113
+    },
+    {
+      "timestamp": "2026-07-18T05:33:13.510Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-d89d19174fffc1fa9e31",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-8b8fa7c98ba2ba47f6",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "a709e3cd9d34f49a7970e4e1b15dad47e1bae90ad204b41eeee5335f39df625d",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 114
+    },
+    {
+      "timestamp": "2026-07-18T05:34:17.314Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection-correction",
+      "derived_from_native_event": "native-bb38250d21fd33ce20a6",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ff477d59a51969fe44",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/learning-harness-engineering",
+      "command_sha256": "4a1aeea3bacb6b538e538d8f16c65db86bdb8c4a11dcbb6301a0253a4b32f76a",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 115
+    },
+    {
+      "event_id": "hermes-selection-cache-path-check",
+      "timestamp": "2026-07-18T05:02:43.279Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2",
+      "command_sha256": "24aa86956db3e813c082af0d58c43fb6e15791dfe7911a03d2e0787322cf1c92",
+      "surfaces": [
+        "command_output"
+      ],
+      "commit": null,
+      "capture_mode": "semantic_batch",
+      "native_refs": [
+        "native-24aa86956db3e813c082"
+      ],
+      "__line": 116
+    },
+    {
+      "event_id": "hermes-selection-rollout-stat-check",
+      "timestamp": "2026-07-18T05:06:21.286Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/sessions",
+      "command_sha256": "e99bbe7d6bb1e9f56d55d1e752b84df92f74bbf0bbf0750e0f37b1869cf7f8bf",
+      "surfaces": [
+        "command_output"
+      ],
+      "commit": null,
+      "capture_mode": "semantic_batch",
+      "native_refs": [
+        "native-e99bbe7d6bb1e9f56d55"
+      ],
+      "__line": 117
+    },
+    {
+      "event_id": "hermes-selection-rollout-tail-check",
+      "timestamp": "2026-07-18T05:06:34.040Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/sessions",
+      "command_sha256": "3ca7d0d04301176fd48b448656cc700f8fbd8003e6340f3153ff0156795571cd",
+      "surfaces": [
+        "command_output"
+      ],
+      "commit": null,
+      "capture_mode": "semantic_batch",
+      "native_refs": [
+        "native-3ca7d0d04301176fd48b"
+      ],
+      "__line": 118
+    },
+    {
+      "event_id": "hermes-selection-rollout-parse-check",
+      "timestamp": "2026-07-18T05:09:57.842Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "hermes-selection",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/sessions",
+      "command_sha256": "10d90d9ca5779d95fa726273dc1eaaf8db2238db9d12a4a5fb37999cb06fb5a3",
+      "surfaces": [
+        "command_output"
+      ],
+      "commit": null,
+      "capture_mode": "semantic_batch",
+      "native_refs": [
+        "native-10d90d9ca5779d95fa72"
+      ],
+      "__line": 119
+    }
+  ],
+  "repository_summary": {
+    "returned": 20,
+    "opened": 3,
+    "readme_only": 1,
+    "code_inspected": 2,
+    "test_inspected": 1,
+    "history_inspected": 2,
+    "pinned": 3,
+    "referenced": 3
+  },
+  "local_repository_summary": {
+    "observations": 45,
+    "code_inspected": 30,
+    "test_inspected": 4,
+    "history_inspected": 14,
+    "commit_captured": 4
+  },
+  "claim_evidence": [
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C001",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "The selected immutable Hermes boundary is canonical repository `NousResearch/hermes-agent`, annotated tag `v2026.7.7.2`, tag object `b7751df34688835a108e0d630f3495fc11f3df79`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`, package version `0.18.2`; GitHub published the release on 2026-07-08.",
+      "artifact_location": "Exact implementation boundary",
+      "confidence": "high for identity and commit",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [
+        "CP2-S009",
+        "HS-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C002",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "The pinned repository contains a concrete agent harness/runtime with CLI, gateway, ACP, batch/API/library entry points feeding `AIAgent`, plus prompt/provider/tool machinery, session persistence, cron, plugins, skills, documentation, and tests; it is suitable for the existing implementation case method.",
+      "artifact_location": "Exact implementation boundary",
+      "confidence": "high for classification, moderate for future scope feasibility",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S009"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C003",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Hermes and OpenClaw have different Git roots, and Hermes later added an OpenClaw migration that translates selected persona, memory, instruction, skill, model/provider, behavior, session, MCP, messaging, approval, browser, and secret state while archiving unsupported concepts.",
+      "artifact_location": "OpenClaw relationship",
+      "confidence": "high for roots and migration surface",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [
+        "CP2-S009",
+        "CP2-S005"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C004",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "Pinned Hermes history explicitly labels one permissions change as inspired by OpenClaw v2026.3.7 and one Telegram fresh-final change as a port of `openclaw/openclaw#72038`, demonstrating selective documented influence after Hermes already existed.",
+      "artifact_location": "OpenClaw relationship",
+      "confidence": "high for the two documented examples",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S009"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C005",
+      "epistemic_kind": "inference",
+      "claim_text": "The defensible relationship classification is separately rooted repositories with later migration compatibility and selective documented influence—not direct whole-repository descent and not independent convergence.",
+      "artifact_location": "OpenClaw relationship",
+      "confidence": "moderate-high",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [
+        "CP2-S009",
+        "CP2-S005"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C006",
+      "epistemic_kind": "source-reported claim",
+      "claim_text": "On 2026-07-18, GitHub reported 216,532 stars, 40,588 forks, 836 subscribers, 23,538 open issues, and Nous Research organization ownership for `NousResearch/hermes-agent`; these are repository-attention and metadata signals, not user, deployment, team-size, quality, or effectiveness evidence.",
+      "artifact_location": "Bounded adoption assessment",
+      "confidence": "high for snapshot, low applicability to adoption",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "HS-S001"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C007",
+      "epistemic_kind": "verified implementation fact",
+      "claim_text": "At the selected commit, Hermes history contains 14,857 reachable commits, 2,014 `git shortlog -sne` identities, 3,953 commits at or after 2026-06-08T00:00:00Z, 11,391 at or after 2026-04-08T00:00:00Z, and 21 version tags from `v2026.3.12` through `v2026.7.7.2`; these establish continuity and activity, not users or team size.",
+      "artifact_location": "Bounded adoption assessment",
+      "confidence": "high for counts, bounded interpretation",
+      "mapping_count": 1,
+      "verified_mapping_count": 1,
+      "supporting_sources": [
+        "CP2-S009"
+      ],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C008",
+      "epistemic_kind": "engineering recommendation",
+      "claim_text": "Select Hermes as the final pre-Checkpoint-3 case and defer Browser Use until after the first learning-oriented synthesis: Hermes offers high comparative and teaching value, while the accepted cost is less architectural breadth and an explicitly unresolved perception-grounded R5/R6 gap.",
+      "artifact_location": "Why Hermes earns the slot; D-011 tradeoff",
+      "confidence": "moderate",
+      "mapping_count": 3,
+      "verified_mapping_count": 3,
+      "supporting_sources": [],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C009",
+      "epistemic_kind": "engineering recommendation",
+      "claim_text": "The future case should ask how Hermes connects models to users and environments and, only where pinned evidence supports comparison, which OpenClaw concepts are translated, selectively borrowed, deliberately unmapped, or independently implemented and what tradeoffs follow.",
+      "artifact_location": "Recommended future case question",
+      "confidence": "moderate-high",
+      "mapping_count": 2,
+      "verified_mapping_count": 2,
+      "supporting_sources": [],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    },
+    {
+      "claim_id": "field-landscape-selection-hermes-pinning-C010",
+      "epistemic_kind": "engineering recommendation",
+      "claim_text": "After maintainer review of Hermes, convene Checkpoint 3 immediately, then create the first cross-harness synthesis and derive learning material from reviewed evidence; add no other implementation before that checkpoint and reopen Browser Use later against explicit gaps.",
+      "artifact_location": "Approved D-011 tradeoff and transition",
+      "confidence": "high as approved governance",
+      "mapping_count": 3,
+      "verified_mapping_count": 3,
+      "supporting_sources": [],
+      "opposing_sources": [],
+      "contextual_sources": [],
+      "missing_verification_count": 0
+    }
+  ],
+  "capture_archives": [
+    {
+      "event_id": "capture-archive-81173f615800b3f68c",
+      "timestamp": "2026-07-18T05:28:14.832Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "retention",
+      "event_type": "capture_archive",
+      "boundary_id": "native-boundary-7a7bced6fabbee080408",
+      "archive_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/hermes-selection/hermes-selection-prefix.jsonl",
+      "archive_sha256": "7a7bced6fabbee0804084ef8b4b3925cfb20b56a407db8e4f1055f81869c4f4b",
+      "archive_bytes": 32492304,
+      "line_start": 1,
+      "line_end": 8425,
+      "source_runtime_path": "/Users/jernotte/.codex/sessions/2026/07/10/rollout-2026-07-10T20-20-05-019f4ec2-9fba-7033-a71b-0e34e29bf2ae.jsonl",
+      "captured_at": "2026-07-18T05:28:14.840Z",
+      "archive_mode": "0600",
+      "__line": 194
+    },
+    {
+      "event_id": "capture-archive-ade03823dc67f5ac71",
+      "timestamp": "2026-07-18T05:35:43.749Z",
+      "agent": "primary",
+      "cycle": "field-landscape",
+      "pass": "retention",
+      "event_type": "capture_archive",
+      "boundary_id": "native-boundary-b0f5a079978d68ed8f69",
+      "archive_path": "/Users/jernotte/dev/reference-materials/research/provenance-transcripts/hermes-selection/hermes-selection-correction-prefix.jsonl",
+      "archive_sha256": "b0f5a079978d68ed8f69af12acf3f0f42e7bbff566ef6f5c8f43cf9933df3ea1",
+      "archive_bytes": 34018633,
+      "line_start": 1,
+      "line_end": 8790,
+      "source_runtime_path": "/Users/jernotte/.codex/sessions/2026/07/10/rollout-2026-07-10T20-20-05-019f4ec2-9fba-7033-a71b-0e34e29bf2ae.jsonl",
+      "captured_at": "2026-07-18T05:35:43.753Z",
+      "archive_mode": "0600",
+      "__line": 195
+    }
+  ],
+  "provenance_waivers": [],
+  "distributions": {
+    "host": {
+      "github.com": 3,
+      "api.github.com": 1
+    },
+    "organization": {
+      "Browser Use": 1,
+      "OpenClaw": 1,
+      "Nous Research": 1,
+      "GitHub / Nous Research": 1
+    },
+    "source_type": {
+      "repository": 3,
+      "repository metadata": 1
+    },
+    "publication_year": {
+      "2026": 4
+    },
+    "primary_secondary": {
+      "primary implementation selection record": 1,
+      "primary implementation retained record": 1,
+      "primary implementation": 1,
+      "primary platform metadata": 1
+    },
+    "evidence_lineage": {
+      "Browser Use 0.13.4": 1,
+      "OpenClaw v2026.6.6 reviewed case": 1,
+      "NousResearch/hermes-agent v0.18.2": 1,
+      "NousResearch/hermes-agent GitHub metadata": 1
+    }
+  },
+  "searches": [
+    {
+      "event_id": "auto-search-b16962d068edc842ab",
+      "query_id": "auto-Q-b38c4e22e81bc7",
+      "query": "site:github.com/NousResearch/hermes-agent releases tags Hermes Agent || site:github.com/NousResearch/hermes-agent OpenClaw migration || site:github.com/NousResearch/hermes-agent README architecture agent loop memory skills",
+      "query_family": "Hermes repository identity, release, architecture, and OpenClaw relationship",
+      "channel": "generic web search",
+      "tool_provider": "web.run",
+      "filters": "as submitted to generic web search",
+      "requested_limit": null,
+      "observed_returned_count": 20,
+      "total_hits_reported": null,
+      "result_capture_status": "complete",
+      "truncation": "none observed",
+      "semantic_status": "pending",
+      "purpose": "Locate the canonical Hermes repository and bounded selection-level evidence for pinning, concrete-harness suitability, and the stated OpenClaw relationship.",
+      "coverage_dimension": "Hermes selection identity, evidence boundary, and comparison suitability"
+    }
+  ],
+  "search_updates": [
+    {
+      "event_id": "hermes-selection-search-semantics",
+      "search_event_id": "auto-search-b16962d068edc842ab",
+      "applied": true,
+      "from_status": "complete",
+      "to_status": "complete",
+      "reason": "Supply the agent-owned semantics for the mechanically captured targeted repository search without changing its result-capture facts."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "auto-source-1c536b49866b2838",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/guides/migrate-from-openclaw.md",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-1dd03a5ac20fd65a",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_cli/setup.py",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-2ca07098833756ce",
+      "canonical_url": "https://github.com/parsa/simh/wiki/docs/architecture18b.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-2cc99bf857fd4bff",
+      "canonical_url": "https://github.com/user-attachments/files/19668328/DSP-Optimized_Fully-Pipelined_NTT_for_FHE-2.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-397deee3f229d6bb",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/issues/5191",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-40f3221b225b449b",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/developer-guide/architecture.md",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-48d05d6898c43c61",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/issues/8502",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-696f0f1aedf66103",
+      "canonical_url": "https://github.com/seaweedfs/seaweedfs/wiki/SeaweedFS_Architecture.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-6b89f07a31abfec1",
+      "canonical_url": "https://github.com/Shared-Reality-",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-6c2983b19c28bff3",
+      "canonical_url": "https://github.com/pulsarIO/realtime-analytics/wiki/documents/Whitepaper_Pulsar_Real-timeAnalyticsatScale.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-875de05d2e10d849",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/releases?ref=blockainews.com",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-97dace3f420d9eb6",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/releases",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-a17476e9d7955152",
+      "canonical_url": "https://github.com/nousresearch/hermes-agent",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-b76d7b99528f89e5",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/migration/openclaw-migration/SKILL.md",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-bb5eeb6a5fd34aaa",
+      "canonical_url": "https://github.com/mrdrivingduck/paper-outline/files/14018926/A_Top-Down_method_for_performance_analysis_and_counters_architecture.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-c02e8aa8748fa613",
+      "canonical_url": "https://github.com/Shared-Reality-Lab/IMAGE-server/wiki/resource/IMAGE-W4A-author-copy.pdf",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-da7cfb35827ca758",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/issues/24945",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-e6f85fe0b04350de",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/issues/4112",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-ea725dbd777a05a3",
+      "canonical_url": "https://github.com/encrypt-on/TP-NTT",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-f885b06776bfe135",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/issues/8188",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web search result",
+      "query_ids": [
+        "auto-Q-b38c4e22e81bc7"
+      ],
+      "returned": true,
+      "opened": false,
+      "inspection_extent": "not_inspected",
+      "surfaces": [],
+      "disposition": "none",
+      "disposition_reason": "",
+      "version_freshness_state": "unspecified",
+      "record_path": ""
+    },
+    {
+      "source_id": "CP2-S004",
+      "canonical_url": "https://github.com/browser-use/browser-use/tree/68afe46456a23009a7d5eec2017ec7ab51b7c027",
+      "host": "github.com",
+      "organization": "Browser Use",
+      "source_type": "repository",
+      "publication_year": 2026,
+      "primary_secondary": "primary implementation selection record",
+      "evidence_lineage": "Browser Use 0.13.4",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "README",
+        "releases"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports only the selection-level perception and environment contrast premise.",
+      "version_freshness_state": "pinned selection record",
+      "record_path": "research/sources/cp2-browser-use-0.13.4.md"
+    },
+    {
+      "source_id": "CP2-S005",
+      "canonical_url": "https://github.com/openclaw/openclaw/tree/8c802aa683510c7f7503597b54c3021733245e59",
+      "host": "github.com",
+      "organization": "OpenClaw",
+      "source_type": "repository",
+      "publication_year": 2026,
+      "primary_secondary": "primary implementation retained record",
+      "evidence_lineage": "OpenClaw v2026.6.6 reviewed case",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "code",
+        "history"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Contextualizes the relationship classification, comparison question, and sampling recommendation.",
+      "version_freshness_state": "pinned reviewed record",
+      "record_path": "research/sources/cp2-openclaw-v2026.6.6.md"
+    },
+    {
+      "source_id": "CP2-S009",
+      "canonical_url": "https://github.com/NousResearch/hermes-agent/tree/9de9c25f620ff7f1ce0fd5457d596052d5159596",
+      "host": "github.com",
+      "organization": "Nous Research",
+      "source_type": "repository",
+      "publication_year": 2026,
+      "primary_secondary": "primary implementation",
+      "evidence_lineage": "NousResearch/hermes-agent v0.18.2",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "partial substantive",
+      "surfaces": [
+        "README",
+        "documentation",
+        "code",
+        "tests",
+        "history",
+        "releases",
+        "command_output"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Primary evidence for the Hermes boundary, harness classification, relationship facts, history counts, and selection suitability.",
+      "version_freshness_state": "pinned",
+      "record_path": "research/sources/cp2-hermes-agent-v0.18.2.md"
+    },
+    {
+      "source_id": "HS-S001",
+      "canonical_url": "https://api.github.com/repos/NousResearch/hermes-agent",
+      "host": "api.github.com",
+      "organization": "GitHub / Nous Research",
+      "source_type": "repository metadata",
+      "publication_year": 2026,
+      "primary_secondary": "primary platform metadata",
+      "evidence_lineage": "NousResearch/hermes-agent GitHub metadata",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "releases",
+        "command_output"
+      ],
+      "disposition": "referenced",
+      "disposition_reason": "Supports only the dated repository metadata and release snapshot.",
+      "version_freshness_state": "live snapshot 2026-07-18",
+      "record_path": "research/sources/hermes-github-metadata-2026-07-18.md"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "code": "host_concentration",
+      "message": "3/4 opened sources came from github.com",
+      "host": "github.com",
+      "count": 3,
+      "total": 4,
+      "resolved": true,
+      "resolution": "This is a bounded repository selection and pinning amendment, not a landscape breadth pass. GitHub is the primary location for the exact implementation, history, release, and retained comparison records; the amendment makes no source-balance or saturation claim."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "CP2-S004 was inspected without code, tests, or history",
+      "source_id": "CP2-S004",
+      "surfaces": [
+        "README",
+        "releases"
+      ],
+      "pinned": true,
+      "resolved": true,
+      "resolution": "Browser Use is reused only as the existing pinned selection contrast whose deferral cost must remain visible. No Browser Use implementation finding relies on it, and deep inspection would violate the bounded Hermes selection amendment."
+    }
+  ]
+}

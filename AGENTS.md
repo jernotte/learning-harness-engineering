@@ -20,11 +20,35 @@ Read these files in order:
 
 Treat `outline.md` as an informed starting hypothesis. Do not silently adopt its modules as the final taxonomy.
 
+## Independent review and agreement
+
+This repository opts into the independent Claude reviewer through
+`.codex/claude-review.md`. After meaningful implementation, use the globally
+configured review workflow with the original requirement, explicit acceptance
+criteria, material review-scope paths, approved evidence directories, and
+deterministic checks. The reviewer must have direct read-only access to the
+actual artifacts; a packet summary is not a substitute for inspecting them.
+
+Codex independently evaluates every finding, concern, and recommendation.
+Accepted routine items are agreed and may be fixed without a maintainer
+disposition. For a consequential disagreement, perform a targeted check when
+useful and use exactly one bounded Claude reconciliation. Escalate only an
+unresolved consequential disagreement or an action requiring new authority.
+After agreed fixes, rerun validation and use at most one focused Claude
+verification pass. This quality loop must support learning delivery rather than
+become an open-ended reviewer project or a recurring delivery gate.
+
+Claude review, reconciliation, and verification are read-only. They do not
+authorize maturity promotion, scope expansion, taxonomy or methodology change,
+or content generation. The future human-facing HTML writer is a separate tool
+and must receive explicit write scope and validation in a separately approved
+task.
+
 ## Current authorization
 
-Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Checkpoint 2 and D-007 through D-010 are approved. Pi at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b`, OpenHands Software Agent SDK at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`, and OpenClaw at `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` are maintainer-reviewed cases. Browser Use `0.13.4` / `68afe46456a23009a7d5eec2017ec7ab51b7c027` is the only next authorized implementation and requires a written scope boundary before deep analysis. LangGraph remains deferred to a future framework/substrate comparison; Claude Code, Hermes, every cohort member, every alternate, and every replacement for the LangGraph slot remain blocked.
+Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Checkpoint 2 and D-007 through D-011 are approved. Pi at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b`, OpenHands Software Agent SDK at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`, and OpenClaw at `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` are maintainer-reviewed cases. Hermes Agent `v2026.7.7.2` / `9de9c25f620ff7f1ce0fd5457d596052d5159596` is the only next authorized implementation and requires a written scope boundary before deep analysis. LangGraph remains deferred to a future framework/substrate comparison; Browser Use is deferred until after the first learning-oriented synthesis rather than discarded; Claude Code, every cohort member, every alternate, and every replacement for the LangGraph slot remain blocked.
 
-D-010 orders rolling selection by marginal information gain on uncovered or high-friction responsibilities, falsification and anchoring protection, evidence readiness, evidence-mode and domain diversity, analysis and governance cost, lineage and independence risk, and only then operationalized adoption evidence. Browser Use is the final unconditional case before Checkpoint 3. At its maintainer review, Claude Code may proceed only if its maintainer-supplied evidence set has been enumerated, dated, bounded, admitted, and separately authorized; otherwise defer it and convene Checkpoint 3 immediately. Add no replacement before that checkpoint. Checkpoint 3 must also decide deliberately when focused upstream test execution belongs in the case method; until then, lightweight behavioral checks still require explicit authorization. The eleven-responsibility lens remains provisional until that checkpoint consolidates taxonomy friction across the first batch.
+D-010's rolling criteria remain controlling: marginal information gain on uncovered or high-friction responsibilities, falsification and anchoring protection, evidence readiness, evidence-mode and domain diversity, analysis and governance cost, lineage and independence risk, and only then operationalized adoption evidence. D-011 consciously amends only the immediate order and trigger: Hermes is the final pre-Checkpoint-3 case because its migration-compatible, selectively influenced relationship with OpenClaw offers high comparative-teaching value before the maintainer's requested learning phase. Do not call recurrence between the two independent corroboration. Convene Checkpoint 3 immediately after the reviewed Hermes case; add no other implementation first. Checkpoint 3 must also decide deliberately when focused upstream test execution belongs in the case method; until then, lightweight behavioral checks still require explicit authorization. The eleven-responsibility lens remains provisional until that checkpoint consolidates taxonomy friction across the first batch.
 
 D-004 remains approved. Its overhead preflight result stands, while one historical truncated search remains honestly marked incomplete. The fixed promotion profile and monotonic `search_update` safeguard are enforced. D-008 invoked one narrow D-005 freeze exception after real OpenHands work exposed a post-restart unified-`exec` compatibility failure; the focused fix passed, the retained case window re-ingested completely, and provenance infrastructure is frozen again. Change it only when real research exposes another consequential failure, not to address speculative or immaterial imperfections. Until manual `result_returned` events are mechanically bound to native output, any checkpoint relying on them must verify their canonical URLs against the retained native archive and record the check. Bootstrap activity remains segregated and `partial`; do not mix it into the subject corpus.
 
@@ -110,7 +134,7 @@ Do not place a lead or an agent summary directly into reviewed synthesis. The ca
 
 Every opened source receives a lightweight catalog/event entry. A source used to support, oppose, or materially contextualize a claim also requires a full narrative source record. Read-only sources remain visible with their reading depth and disposition reason; they do not require full narrative records.
 
-Maturity is promoted deliberately. The primary agent may promote captured material through analyzed evidence only after verifying its sources. An artifact cannot become a provisional finding until its canonical claim-evidence ledger is complete, a prose-to-ledger attestation is recorded, all referenced sources have full records, every referenced claim/source/location mapping has a primary verification event, no subagent has self-verified its own evidence, and the cycle source audit passes. A reviewed finding additionally requires a documented claim/source check with reviewer, date, and review basis. During early alignment, the maintainer is the reviewer at the applicable checkpoint. After the process is explicitly graduated, the primary agent may review routine findings; the maintainer still reviews material reversals and changes to scope, taxonomy, or evidence policy. A consolidated pattern must be based on reviewed findings from a synthesis, not on recurrence alone.
+Maturity is promoted deliberately. The primary agent may promote captured material through analyzed evidence only after verifying its sources. An artifact cannot become a provisional finding until its canonical claim-evidence ledger is complete, a prose-to-ledger attestation is recorded, all referenced sources have full records, every referenced claim/source/location mapping has a primary verification event, no subagent has self-verified its own evidence, and the cycle source audit passes. A reviewed finding additionally requires a documented claim/source check with reviewer, date, and review basis. During early alignment, the maintainer remains the decision authority at the applicable checkpoint; the independent Claude/Codex agreement loop may close routine review feedback before that checkpoint without making the promotion decision itself. After the process is explicitly graduated, the primary agent may review routine findings; the maintainer still reviews material reversals and changes to scope, taxonomy, or evidence policy. A consolidated pattern must be based on reviewed findings from a synthesis, not on recurrence alone.
 
 At the end of meaningful work, update:
 

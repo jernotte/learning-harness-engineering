@@ -1,13 +1,13 @@
 # Research Status
 
 **Governance mode:** Early alignment — checkpoints require maintainer review
-**Current phase:** OpenClaw reviewed and D-010 approved — Browser Use scope-first case authorized
+**Current phase:** D-011 approved — pinned Hermes Agent is the final scope-first case before Checkpoint 3
 **Active cycle:** `research/cycles/field-landscape.md`
-**Last updated:** 2026-07-17
+**Last updated:** 2026-07-18
 
 ## Current objective
 
-Prepare the bounded Browser Use case at `0.13.4` / `68afe46456a23009a7d5eec2017ec7ab51b7c027`, beginning with a written scope boundary. Browser Use is the only authorized implementation. Do not begin Claude Code, Hermes, a programmed-control replacement, another cohort member, cross-harness synthesis, or taxonomy revision.
+Prepare a separate, scope-first Hermes case goal at `v2026.7.7.2` / `9de9c25f620ff7f1ce0fd5457d596052d5159596`. D-011 authorizes Hermes as the only next implementation, but this selection pass did not begin its analysis. Do not begin Browser Use, Claude Code, another implementation, Checkpoint 3, cross-harness synthesis, learning material, or taxonomy revision.
 
 ## What now exists
 
@@ -43,11 +43,13 @@ Prepare the bounded Browser Use case at `0.13.4` / `68afe46456a23009a7d5eec2017e
 - A canonical OpenClaw ledger with 20 material claims, 31 exact claim/source/location mappings, 31 primary verifications, ten referenced source records, and a passing complete promotion-profile audit
 - Three fingerprint-verified OpenClaw transcript prefixes retained outside the repository with owner-only permissions; 262 of 272 observations resolved automatically and ten bounded exceptions were reviewed in one batch
 - A three-case taxonomy-friction update, including the new question whether R11 should distinguish adaptive context or memory from outcome-driven optimization
-- An approved D-010 interim sampling decision that authorizes Browser Use alone, records rolling-selection precedence, prevents silent resequencing, and establishes the Checkpoint 3 and Claude Code decision trigger
+- An approved D-010 interim sampling decision that records rolling-selection precedence and the evidence burden for later pivots
+- An approved D-011 Hermes selection amendment with exact tag/commit, two full source records, ten canonical selection claims, a bounded OpenClaw relationship assessment, limited adoption indicators, and a complete promotion-profile audit
+- A fixed post-Hermes transition: maintainer review, immediate Checkpoint 3, first cross-harness synthesis, learning-oriented material, and later reopening of Browser Use against the explicit perception-grounded R5/R6 gap
 
 ## Decisions and checkpoints
 
-The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, approved D-008's narrow freeze exception, and approved D-009's OpenHands review and bounded batch amendment. On 2026-07-17, the maintainer accepted OpenClaw after the C003 acknowledgement-policy reconciliation and approved D-010's selection criteria, Browser Use authorization, Checkpoint 3 trigger, test-policy agenda question, and Claude Code evidence deadline.
+The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, approved D-008's narrow freeze exception, and approved D-009's OpenHands review and bounded batch amendment. On 2026-07-17, the maintainer accepted OpenClaw and approved D-010's rolling criteria and then-current Browser Use trigger. On 2026-07-18, the maintainer approved D-011 after directing the bounded Hermes selection pass; that decision changes only the immediate order and trigger, not the taxonomy or D-010 criteria.
 
 ## Confidence and risks
 
@@ -59,8 +61,10 @@ The Pi generic-web path required 27 manually represented interaction events in o
 
 The reviewed OpenHands case audit passes under the fixed promotion profile with zero blocking errors. The reviewed OpenClaw audit also passes with zero blocking errors: 20 declared claims, 31 verified mappings, ten referenced source records, 272 native observations, 262 automatic resolutions, ten human-reviewed exceptions in one batch, and one resolved warning that Browser Use remains selection-depth evidence. The three exact transcript prefixes regenerate against retained archives. C003 remains a moderate-confidence inference after explicit reconciliation with `after_agent_dispatch`: the acknowledgement mapping and buffer/spool sequence are directly observed, but no crash reproduction or incidence measurement was performed. Minor command-derived path-display noise remains in several repository-observation rows, but exact source records, claim locations, and transcript evidence are intact; it cannot materially affect a research conclusion and does not justify reopening the provenance freeze.
 
-The strongest remaining risks are substantive: optional mechanisms can be mistaken for defaults; the Telegram path cannot represent every OpenClaw channel; shared-main DM state is configuration-dependent; implementation presence does not establish effectiveness; runtime integrity/recovery must not be confused with task-success verification; and three cases are still too few to approve a taxonomy revision or convergence claim.
+The Hermes selection audit passes under the promotion profile with a complete bounded source trail. The pin and concrete-harness boundary are high confidence. The relationship is narrower: distinct Git roots plus later migration compatibility and two explicit influence/port examples support a selective-influence comparison, not direct whole-repository descent or independent convergence. Repository attention, history volume, author identities, release tags, organization ownership, and integrations do not establish users, deployments, team size, quality, or effectiveness.
+
+The strongest remaining risks are substantive: optional mechanisms can be mistaken for defaults; the Telegram path cannot represent every OpenClaw channel; shared-main DM state is configuration-dependent; implementation presence does not establish effectiveness; runtime integrity/recovery must not be confused with task-success verification; and three reviewed cases plus one selected case are still too few to approve a taxonomy revision or convergence claim. Selecting Hermes also postpones the strongest perception-grounded R5/R6 counterexample, so the first synthesis must retain that gap.
 
 ## Next highest-value action
 
-Prepare the bounded Browser Use goal and written scope, then analyze only that pinned implementation after the maintainer approves the goal boundary. Browser Use is the final unconditional pre-Checkpoint-3 case. At its review, authorize Claude Code only if the maintainer-supplied set has already been enumerated, dated, bounded, and admitted; otherwise defer Claude Code and convene Checkpoint 3. Do not add a replacement case before that checkpoint.
+Prepare the bounded Hermes case goal with a written scope boundary, then analyze only the pinned implementation after the maintainer approves that goal. The case must remain standalone and source-native, using OpenClaw only for explicit evidence-bounded comparison questions. After maintainer review, convene Checkpoint 3 immediately. Do not insert Browser Use, Claude Code, or another implementation before that checkpoint.

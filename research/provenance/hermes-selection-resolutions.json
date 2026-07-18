@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-07-18T05:20:00Z",
+  "agent": "primary",
+  "cycle": "field-landscape",
+  "pass": "hermes-selection-resolution",
+  "resolution_batch_id": "hermes-selection-resolution-batch-1",
+  "resolutions": [
+    {
+      "observation_id": "native-24aa86956db3e813c082",
+      "previous_resolution_event_id": "native-24aa86956db3e813c082",
+      "resolution": "linked",
+      "reason": "The external-cache existence check determined whether the approved Hermes checkout path already existed and is represented by the matching operational repository event.",
+      "linked_event_ids": ["hermes-selection-cache-path-check"]
+    },
+    {
+      "observation_id": "native-e99bbe7d6bb1e9f56d55",
+      "previous_resolution_event_id": "native-e99bbe7d6bb1e9f56d55",
+      "resolution": "linked",
+      "reason": "The transcript-file stat check was operational provenance-boundary discovery and is represented by the matching session-path event.",
+      "linked_event_ids": ["hermes-selection-rollout-stat-check"]
+    },
+    {
+      "observation_id": "native-3ca7d0d04301176fd48b",
+      "previous_resolution_event_id": "native-3ca7d0d04301176fd48b",
+      "resolution": "linked",
+      "reason": "The transcript tail inspection was operational provenance-boundary discovery and is represented by the matching session-path event.",
+      "linked_event_ids": ["hermes-selection-rollout-tail-check"]
+    },
+    {
+      "observation_id": "native-10d90d9ca5779d95fa72",
+      "previous_resolution_event_id": "native-10d90d9ca5779d95fa72",
+      "resolution": "linked",
+      "reason": "The transcript parsing command identified the exact primary research window and is represented by the matching session-path event.",
+      "linked_event_ids": ["hermes-selection-rollout-parse-check"]
+    }
+  ]
+}

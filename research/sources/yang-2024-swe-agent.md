@@ -39,3 +39,7 @@ Supports Anthropic's tool-interface guidance and suggests separating action repr
 ## Leads and open questions
 
 Pin the evaluated implementation, reconstruct ablations, compare with raw shell and current coding-agent tools, and identify which gains survive newer models.
+
+## First-batch synthesis claim references
+
+The retained abstract, ACI design, and ablation evidence materially contextualize `field-landscape-synthesis-first-batch-harness-architecture-C004` and support source-reported claim `C011`. Transfer remains limited by historical models, benchmark state, implementation differences, and the absence of a direct comparison to the four pins.

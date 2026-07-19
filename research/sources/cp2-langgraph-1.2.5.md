@@ -25,6 +25,10 @@ LangGraph is the proposed programmed-control and durable-runtime counterpoint. I
 | CP2-S003-E01 | Public Git tag resolves to the recorded commit | `refs/tags/1.2.5` | `field-landscape-selection-checkpoint-2-deep-dive-set-C001` | supports | Pin is for the Python package tag |
 | CP2-S003-E02 | README positions LangGraph as a low-level orchestration framework for long-running, stateful agents | `README.md` at `1.2.5`, lines 257-275 | `field-landscape-selection-checkpoint-2-deep-dive-set-C002` | material premise | Vendor self-description; no mechanism verified |
 
+## Checkpoint 3 reuse mappings
+
+The Gate B proposal reuses this selection-depth record for field-landscape-checkpoint-taxonomy-method-review-C007 and C014. It establishes only the framework study-object boundary and missing framework/substrate case, not a LangGraph implementation mechanism.
+
 ## Evidence assessment
 
 Tag resolution is direct. The monorepo carries multiple package tag families; the case must not mix SDK or unrelated package versions with the `1.2.5` Python boundary.
@@ -36,3 +40,7 @@ Existing Cycle 1 LangGraph documentation supported landscape claims, but this re
 ## Leads and open questions
 
 The eventual case should bound which packages constitute the harness surface and whether a framework case is comparable to opinionated agent products.
+
+## First-batch synthesis claim references
+
+The selection-depth framework record supports only the framework/substrate gap in `field-landscape-synthesis-first-batch-harness-architecture-C017`. It supports no mechanism claim about a concrete downstream harness.

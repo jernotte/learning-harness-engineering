@@ -12,7 +12,7 @@
 **Inspection extent:** Partial substantive  
 **Surfaces inspected:** abstract, introduction, methodology summary, reported latency and stability results  
 **Provenance events:** Pi pilot search/open/inspection events  
-**Primary verification events:** Pi pilot mapping for `field-landscape-case-pi-v0-80-6-C013`
+**Primary verification events:** Pi pilot mapping for `field-landscape-case-pi-v0-80-6-C013`; Hermes case mapping for `field-landscape-case-hermes-agent-v0-18-2-C019`
 
 ## Why this source matters
 
@@ -22,9 +22,9 @@ Pi's default compaction is a synchronous model call over accumulated history. Th
 
 | Evidence item ID | Source observation or statement | Exact child page/file/section/commit | Related claim IDs | Relationship | Limits |
 | --- | --- | --- | --- | --- | --- |
-| PI-S003-E01 | Authors describe sequential summarization as lossy, blocking, and difficult to control in length and retained content | Abstract and introduction, lines 3–18 | `field-landscape-case-pi-v0-80-6-C013` | contextualizes | General baseline, not Pi's exact prompt or coding workload |
-| PI-S003-E02 | Across four backbones on HotpotQA and LoCoMo, synchronous compaction consumed up to 62% of wall time in tested low-threshold settings | Reported motivating measurements, line 54 | `field-landscape-case-pi-v0-80-6-C013` | contextualizes | Non-coding benchmarks and self-hosted model set limit transfer |
-| PI-S003-E03 | Ten-run measurements showed material summary-volume and semantic variability and little monotonic improvement from prompt-length instructions | Stability results, lines 161–172 | `field-landscape-case-pi-v0-80-6-C013` | contextualizes | Metrics and 4k stability slice do not directly measure downstream Pi task success |
+| PI-S003-E01 | Authors describe sequential summarization as lossy, blocking, and difficult to control in length and retained content | Abstract and introduction, lines 3–18 | `field-landscape-case-pi-v0-80-6-C013`, `field-landscape-case-hermes-agent-v0-18-2-C019` | contextualizes | General baseline, not Pi's or Hermes's exact prompt or coding workload |
+| PI-S003-E02 | Across four backbones on HotpotQA and LoCoMo, synchronous compaction consumed up to 62% of wall time in tested low-threshold settings | Reported motivating measurements, line 54 | `field-landscape-case-pi-v0-80-6-C013`, `field-landscape-case-hermes-agent-v0-18-2-C019` | contextualizes | Non-coding benchmarks and self-hosted model set limit transfer |
+| PI-S003-E03 | Ten-run measurements showed material summary-volume and semantic variability and little monotonic improvement from prompt-length instructions | Stability results, lines 161–172 | `field-landscape-case-pi-v0-80-6-C013`, `field-landscape-case-hermes-agent-v0-18-2-C019` | contextualizes | Metrics and 4k stability slice do not directly measure downstream Pi or Hermes task success |
 
 ## Evidence assessment
 
@@ -37,3 +37,7 @@ The paper agrees with Pi that active context must remain bounded but challenges 
 ## Leads and open questions
 
 Measure Pi compaction latency, retention, rediscovery cost, and run-to-run variance on coding trajectories using the models and prompt format Pi actually supports.
+
+## First-batch synthesis claim references
+
+PI-S003-E01–E03 materially contextualize `field-landscape-synthesis-first-batch-harness-architecture-C003` and support the contested-practice inference in `C012`. The tested models, tasks, thresholds, and metrics differ from the reviewed implementation pins.

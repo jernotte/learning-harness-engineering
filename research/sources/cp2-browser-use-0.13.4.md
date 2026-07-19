@@ -25,6 +25,10 @@ Browser Use supplies a non-coding, perception-and-environment case. Its reposito
 | CP2-S004-E01 | Public Git tag resolves to the recorded commit | `refs/tags/0.13.4` | `field-landscape-selection-checkpoint-2-deep-dive-set-C001` | supports | Identity/pin only |
 | CP2-S004-E02 | Repository presents an agent-facing browser task surface | `README.md` at `0.13.4`, lines 316-344 | `field-landscape-selection-checkpoint-2-deep-dive-set-C002` | material premise | Cloud and open-source surfaces may differ |
 
+## Checkpoint 3 reuse mappings
+
+The Gate B proposal reuses this selection-depth record for field-landscape-checkpoint-taxonomy-method-review-C004, C014, and C016. It establishes only the pinned browser task surface and planned perception/environment contrast, not Browser Use implementation behavior, effectiveness, or completeness.
+
 ## Evidence assessment
 
 The pin is direct primary evidence. Rapid release cadence and a separate cloud product create freshness and boundary risk; neither is resolved at selection time.
@@ -36,3 +40,7 @@ The inherited Browser Use mechanism descriptions remain unadmitted. This record 
 ## Leads and open questions
 
 The case should distinguish open-source runtime, browser service, DOM/visual observation, action grounding, and any cloud-only behavior.
+
+## First-batch synthesis claim references
+
+The selection-depth Browser Use record supports only the perception-grounded action/observation gap in `field-landscape-synthesis-first-batch-harness-architecture-C017`. It supports no implementation mechanism or transfer conclusion before a deep case.

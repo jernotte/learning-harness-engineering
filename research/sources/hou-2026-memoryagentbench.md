@@ -11,9 +11,9 @@
 **Inspection extent:** Partial substantive, reconstructed from retained project/paper excerpts and the legacy record
 **Surfaces inspected:** abstract, paper
 **Provenance events:** `fl-open-s008`, `fl-inspect-s008`, `fl-disposition-s008`
-**Related claim IDs:** C009 and C016 in `field-landscape-synthesis-field-landscape`
-**Canonical mapping locations:** C009 and C016 — task taxonomy; the reported all-competencies limitation remains contextual evidence in this record
-**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
+**Related claim IDs:** C009 and C016 in `field-landscape-synthesis-field-landscape`; `field-landscape-case-hermes-agent-v0-18-2-C019`
+**Canonical mapping locations:** C009 and C016 — task taxonomy; the reported all-competencies limitation remains contextual evidence in this record; Hermes C019 — both evidence rows below
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl` and the Hermes case event log
 
 ## Why this source matters
 
@@ -39,3 +39,7 @@ Challenges architectures and evaluations that equate memory with vector retrieva
 ## Leads and open questions
 
 Compare with LoCoMo, LongMemEval, LongMemEval-V2, and production memory write policies. Pin dataset and code versions because benchmark cleanup is common.
+
+## First-batch synthesis claim references
+
+The task taxonomy and reported all-competencies limitation materially contextualize `field-landscape-synthesis-first-batch-harness-architecture-C010`. They qualify the inference from across-run memory mutation to competent memory behavior; they do not directly evaluate OpenClaw dreaming, Hermes background review, or any other reviewed implementation.

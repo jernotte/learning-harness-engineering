@@ -7,12 +7,12 @@
 **Publication date:** Release train identifies 2026-06-06; pinned commit dated 2026-06-12; pin first verified 2026-07-12
 **URL:** https://github.com/openclaw/openclaw/tree/v2026.6.6
 **Inspected version:** Annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`
-**Related cycle or question:** Field landscape, Checkpoint 2 OpenClaw case
+**Related cycle or question:** Field landscape, Checkpoint 2 OpenClaw case, and Hermes lineage/taxonomy-friction context
 **Source family / parent:** OpenClaw repository
 **Inspection extent:** Full substantive within the written OpenClaw case boundary
 **Surfaces inspected:** Repository identity, pinned documentation, Telegram polling/direct-message path, routing/session state, embedded runtime, prompts/context/tools, transcript persistence, compaction, memory, scheduling, subagents, hooks, QA, representative test source, and targeted reachable history
 **Provenance events:** Checkpoint 2 selection events plus the OpenClaw case event log
-**Primary verification events:** Selection-ledger pin verification and OpenClaw case claim/source/location verification events
+**Primary verification events:** Selection-ledger pin verification, OpenClaw case claim/source/location verification events, and the Hermes case C017/C020 mappings in `research/provenance/hermes-agent-case-events.jsonl`
 
 ## Why this source matters
 
@@ -44,6 +44,20 @@ A targeted local test invocation did not execute because the package manager att
 | CP2-S005-E16 | Plugin hooks cross model, prompt, message, tool, persistence, session, subagent, gateway, scheduling, dispatch, and environment stages | `src/plugins/hook-types.ts` 74–161; `src/plugins/hooks.ts` 824–970, 1255–1324 | C015, C019 | supports | Only installed/enabled hooks affect a deployment |
 | CP2-S005-E17 | Runtime integrity is extensive while task-success checking is optional/external; the repo contains scenario and judged-QA systems | `run/attempt.ts` 3158–3268; `run.ts` 3600–3742; pinned `docs/concepts/personal-agent-benchmark-pack.md` 10–28; `qa-e2e-automation.md` 905–971 | C016, C017 | supports inference/context | QA presence does not establish mechanism effectiveness or ordinary-path acceptance |
 | CP2-S005-E18 | Reachable fixes identify concrete ingress, session-lock, transcript-pairing, prompt-cache, lifecycle, and delivery failure surfaces | Commits `05a3b44c93be`, `1af55bc6654`, `210adf1d118`, `613f51a7aa9`, `95890fe1506`, `d5c8e90e284`, `88dc177afc2` | C002, C010, C016 | supports/contextualizes | Corrective history does not measure incidence or prove complete resolution |
+| CP2-S005-E19 | The reviewed OpenClaw history has recorded root `f6dd362d39b8e30bd79ef7560aab9575712ccc11`, distinct from Hermes's recorded root | Repository root `f6dd362d39b8e30bd79ef7560aab9575712ccc11`; reviewed case boundary `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59` | `field-landscape-case-hermes-agent-v0-18-2-C017`, `field-landscape-case-hermes-agent-v0-18-2-C020` | contextualizes | Recorded roots establish separate repository histories, not absence of later copying, shared ancestry outside the recorded histories, or independent convergence |
+| CP2-S005-E20 | The reviewed OpenClaw case supplies a counter-shape for the Hermes taxonomy hypothesis across nested lifecycle scales, per-call context and capability materialization, action/result projections, cross-cutting hooks, runtime integrity versus task acceptance, and outcome-agnostic memory adaptation | Combined CP2-S005-E05–E17 and the reviewed OpenClaw taxonomy-friction entries | `field-landscape-case-hermes-agent-v0-18-2-C020` | contextualizes | Cross-case taxonomy evidence only; it does not establish a canonical taxonomy change or Hermes behavior |
+
+## Checkpoint 3 reuse mappings
+
+The Gate B proposal reuses this reviewed record without adding an OpenClaw implementation claim:
+
+- field-landscape-checkpoint-taxonomy-method-review-C001 (E02–E20)
+- C002 (E05–E06, E14, E20); C003 (E07, E09, E20); C004 (E09–E10, E20)
+- C005 (E09, E16, E20); C006 (E08, E17, E20); C007 (E05–E17)
+- C008 (E13, E20); C010 (E19–E20); C011 (E17, E20); C012 (E04, E08, E18)
+- C013 (E02–E17); C014 (reviewed case boundary); C015 (E08, E17); C016 (E09–E10, E20)
+
+All abbreviated IDs in this list use the prefix field-landscape-checkpoint-taxonomy-method-review-. OpenClaw/Hermes recurrence remains lineage-confounded where a mechanism's origin is explicit or unresolved.
 
 ## Evidence assessment
 
@@ -66,3 +80,7 @@ OpenClaw includes migration and compatibility surfaces, but this case did not in
 - Compare subagent modes under matched compute, state, artifacts, and verification.
 - Evaluate finalization hooks and QA judges against executable outcomes.
 - Inspect other channels only when a later question requires a channel-specific counterexample.
+
+## First-batch synthesis claim references
+
+The first-batch synthesis maps CP2-S005-E05–E20 to `field-landscape-synthesis-first-batch-harness-architecture-C001` through `C005`, `C007` through `C010`, `C012`, `C015` through `C017` where the canonical ledger names this record. OpenClaw/Hermes recurrence remains mechanism-level and lineage-confounded where migration, influence, or unresolved copying can explain similarity.

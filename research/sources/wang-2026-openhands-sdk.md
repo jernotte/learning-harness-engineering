@@ -56,3 +56,7 @@ The paper reports that the V1 redesign preserves or improves benchmark capabilit
 - Separate the reliability effect of co-located execution from event sourcing, configuration immutability, and other simultaneous redesign changes.
 - Reproduce event-store overhead on larger and branching histories and on non-local stores.
 - Test condensation retention and the `/goal` judge against executable end-state graders rather than broad system benchmarks.
+
+## First-batch synthesis claim references
+
+OH-S001-E03–E05 materially contextualize `field-landscape-synthesis-first-batch-harness-architecture-C009` and support source-reported claim `C013`. The synthesis preserves the report's author-produced, bundled, non-randomized, version-family limits and does not attribute the result to one mechanism.

@@ -10,9 +10,9 @@
 **Inspection extent:** Partial substantive, reconstructed from retained transcript output and the legacy record
 **Surfaces inspected:** documentation
 **Provenance events:** `fl-open-s002`, `fl-inspect-s002`, `fl-disposition-s002`
-**Related claim IDs:** C012 and C020 in `field-landscape-synthesis-field-landscape`
-**Canonical mapping locations:** C012 — “The structure of an evaluation”; C020 — the same section plus transcript/trajectory, outcome, and non-determinism guidance
-**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
+**Related claim IDs:** C012 and C020 in `field-landscape-synthesis-field-landscape`; `field-landscape-case-hermes-agent-v0-18-2-C019`
+**Canonical mapping locations:** C012 — “The structure of an evaluation”; C020 — the same section plus transcript/trajectory, outcome, and non-determinism guidance; Hermes C019 — all three evidence rows below
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl` and the Hermes case event log
 
 ## Why this source matters
 
@@ -39,3 +39,7 @@ Supports separating in-loop verification/feedback from outside-loop evaluation. 
 ## Leads and open questions
 
 Compare its recommendations with independent benchmark methodology and research on judge reliability, reward hacking, and trajectory evaluation.
+
+## First-batch synthesis claim references
+
+“The structure of an evaluation,” the trajectory/outcome distinction, and the non-determinism guidance support `field-landscape-synthesis-first-batch-harness-architecture-C006`, materially contextualize `C009`, and support C016's decision to keep external evaluation distinct from the seven active-system control contracts. These are source-reported production recommendations, not direct tests of the four implementation pins.

@@ -6,7 +6,7 @@ This is the concise human view of what the project has examined, what remains pr
 
 Cycle 1 used three complementary, separately executed passes: academic/empirical research, an implementation recon report describing 22 systems, and production/cross-cutting documentation with selected code checks. The passes shared the same project framing and are not independent corroboration. Because search and source events were not instrumented, Cycle 1 coverage is `reconstructed` and its exact query, result, and screening breadth is incomplete.
 
-The maintainer provisionally promoted the three-layer model under a reconstructed-provenance waiver: source-native vocabulary for discovery/navigation, the responsibilities below as a multi-label analytical lens, and a later human-facing narrative. Bounded reconstruction recovered 27 exact query bundles, 40 opened source identities, 16 referenced records, and 24 unadmitted implementation leads. The limitation must remain visible until a complete cycle revalidates the landscape, and Checkpoint 3 must test the responsibility lens through recorded taxonomy friction.
+The maintainer provisionally promoted the three-layer model under a reconstructed-provenance waiver and then approved Checkpoint 3's bounded responsibility refinements through D-013: source-native vocabulary for discovery/navigation, stable R1–R11 IDs as a multi-label analytical lens, and human-oriented Markdown from which static HTML is generated. Bounded reconstruction recovered 27 exact query bundles, 40 opened source identities, 16 referenced records, and 24 unadmitted implementation leads. The original landscape limitation remains visible until a complete cycle revalidates it.
 
 ## Source-native topic index
 
@@ -14,33 +14,33 @@ This is the human and search entry point. Query families are provisional because
 
 | Familiar topic | Example query/alias families | Related analytical responsibilities | Current coverage state |
 | --- | --- | --- | --- |
-| Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | Referenced general records are mapped; implementation breadth remains reconstructed |
-| Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP are mapped; current production interfaces still need pinned cases |
-| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence is mapped; Pi and OpenHands are reviewed at exact pins |
-| Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, and MemoryAgentBench evidence is mapped; procedural memory remains thin |
+| Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | General records plus reviewed Pi, OpenHands, OpenClaw, and Hermes loops are mapped; broader implementation breadth remains reconstructed |
+| Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP are mapped; four pinned cases now expose structured action/observation paths, while perception-grounded interfaces remain untested |
+| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence and all four pinned case mechanisms are mapped; outcome effects remain thin |
+| Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, MemoryAgentBench, and four pinned cases are mapped; memory quality and outcome-driven adaptation remain thin |
 | Planning and workflows | plan-and-execute, replanning, tree search, deterministic workflow | 4, 8, 9 | Agentless and practitioner guidance are mapped; ReAct/ReWOO/LATS remain unadmitted leads |
-| Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Mostly framing and product documentation; empirical depth pending |
-| Subagents and multi-agent systems | handoff, agent-as-tool, worker, delegation, debate, voting | 3, 4, 8, 9 | Claude/OpenAI and BenchAgent records are mapped; implementation comparisons remain pending |
-| Verification and evaluation | tests, critic, judge, grader, trajectory, benchmark, self-correction | 6, 9, 10 | Empirical and production records are mapped; judge/evaluator gaps remain |
-| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph evidence is mapped; OpenClaw is reviewed; Hermes is pinned at selection depth; Letta remains a lead |
-| Model routing and instruction policy | model selection, fallback, effort, role model, system prompt | 2, 3 | Claude/ADK documentation is mapped; controlled comparisons remain scarce |
-| Self-improvement | context optimization, workflow search, self-editing harness, regression gate | 7, 10, 11 | Weng is mapped as framing; the primary research bundle remains unadmitted |
+| Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Hermes supplies pinned skill review, curation, `/learn`, and learning-graph mechanisms; outcome evidence remains absent |
+| Subagents and multi-agent systems | handoff, agent-as-tool, worker, delegation, debate, voting | 3, 4, 8, 9 | Claude/OpenAI and BenchAgent records plus delegation in four pinned cases are mapped; causal comparisons remain thin |
+| Verification and evaluation | tests, critic, judge, grader, trajectory, benchmark, self-correction | 6, 9, 10 | Empirical and production records plus four pinned case layers are mapped; independent outcome evidence remains sparse |
+| Runtime, sessions, and lifecycle | resume, interrupt, cancel, scheduler, gateway, background agent | 1, 5, 7, 9 | ADK/LangGraph evidence, reviewed OpenClaw, and analyzed Hermes lifecycle evidence are mapped; Letta remains a lead |
+| Model routing and instruction policy | model selection, fallback, effort, role model, system prompt | 2, 3 | Claude/ADK documentation and Hermes's pinned route/fallback path are mapped; controlled outcome comparisons remain scarce |
+| Self-improvement | context optimization, workflow search, self-editing harness, regression gate | 7, 10, 11 | Weng frames the topic; OpenClaw and Hermes show outcome-agnostic adaptation, while the broader optimization bundle remains unadmitted |
 
 ## Analytical responsibility view
 
-| Provisional responsibility | Referenced evidence mapped during reconstruction | Unadmitted leads and gap before durable conclusions |
+| Provisional responsibility | Referenced evidence, including later pinned cases | Remaining gap before durable conclusions |
 | --- | --- | --- |
-| Run lifecycle and ingress | Google ADK runtime/session record plus analyzed OpenClaw ingress/lifecycle evidence | Hermes is selected but unanalysed; Letta remains a lead; comparative outcome research thin |
-| Model and instruction policy | Claude subagent and Google ADK records | Browser Use/provider normalization leads; few controlled routing comparisons |
-| Active-context and capability construction | Claude context/memory and MCP records | Pi/OpenHands leads; compaction loss and admission effects need analysis |
-| Control flow and execution semantics | Anthropic patterns, Google ADK, and Agentless records | ReAct/ReWOO/LATS leads; matched model/code/hybrid comparisons needed |
-| Action and environment mediation | SWE-agent and MCP records | smolagents, browser/desktop, and current coding-interface leads need pinning |
-| Observation and feedback construction | SWE-agent and Anthropic agent-loop/tool guidance | Browser/GUI grounding and event-integrity leads need verification |
-| Durable state and persistence | LangGraph, Google ADK, MemoryAgentBench, reviewed Pi, and reviewed OpenHands records | Procedural memory and cross-run adaptation remain thin |
-| Decomposition, coordination, and aggregation | Anthropic patterns, Claude/OpenAI orchestration docs, and BenchAgent | Current implementation comparisons and compute-control evidence needed |
-| Verification, recovery, and control boundaries | Kamoi self-correction survey and production evaluation guidance | Programmatic-verifier and rollback bundles remain leads |
-| Observability and external evaluation | Anthropic evals, OpenAI tracing, General AgentBench, and BenchAgent | Long-horizon trials, evaluator bias, and normalized ablations remain thin |
-| Adaptation and optimization across runs | Weng synthesis as framing | DSPy, TextGrad, ADAS, SICA, Self-Harness, and regression evidence remain leads |
+| Run lifecycle and ingress | Google ADK plus reviewed OpenClaw and analyzed Hermes nested-lifecycle evidence | Letta remains a lead; comparative outcome research is thin |
+| Model and instruction policy | Claude and ADK records plus policy evidence across Pi, OpenHands, OpenClaw, and Hermes | Few controlled routing or policy comparisons |
+| Active-context and capability construction | Claude/MCP records plus four pinned case projections | Compaction loss and admission effects need direct evaluation |
+| Control flow and execution semantics | Anthropic patterns, ADK, Agentless, and four pinned implementation cases | ReAct/ReWOO/LATS remain leads; matched model/code/hybrid comparisons are needed |
+| Action and environment mediation | SWE-agent/MCP plus structured mediation in all four pinned cases | Browser/desktop perception and action grounding remain the major gap |
+| Observation and feedback construction | SWE-agent/Anthropic guidance plus explicit result-to-observation layers in all four pinned cases | Browser/GUI grounding and environment-drift recovery remain untested |
+| Durable state and persistence | LangGraph, ADK, MemoryAgentBench, and all four pinned cases | Memory quality, forgetting, and cross-run outcome effects remain thin |
+| Decomposition, coordination, and aggregation | Anthropic/Claude/OpenAI guidance, BenchAgent, and delegation evidence across the four cases | Normalized cost/quality and independence evidence is still needed |
+| Runtime integrity, recovery, and task acceptance | Kamoi/evaluation guidance plus layered integrity, recovery, coding-evidence, critic, and goal-judge mechanisms in the four cases | Task-acceptance validity and rollback evidence remain thin |
+| Observability and external evaluation | Anthropic evals, OpenAI tracing, General AgentBench, BenchAgent, and case-level trace/evaluation surfaces | Long-horizon trials, evaluator bias, and normalized ablations remain thin |
+| Across-run adaptation | Weng framing plus reviewed OpenClaw and Hermes adaptation mechanisms | No inspected case establishes outcome-driven optimization; DSPy/TextGrad/ADAS/SICA/Self-Harness remain leads |
 
 ## Reported implementation-family coverage
 
@@ -48,14 +48,14 @@ The table below comes from the implementation recon report. It is a candidate co
 
 | Family | Examples encountered | Current status |
 | --- | --- | --- |
-| Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Reported by reconstructed recon; no batch selected |
+| Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Pi is a reviewed pinned case; the wider family remains reconstructed or deferred |
 | Event-sourced workspace agents | OpenHands Software Agent SDK | Maintainer-reviewed case at v1.35.0 |
 | Explicit state graphs and durable workflows | LangGraph, Microsoft Agent Framework, OpenAI Agents SDK, PydanticAI | LangGraph/OpenAI documentation is mapped; the other repository families remain unadmitted |
 | Conversational/message-passing multi-agent systems | AutoGen and successors | Reported lineage lead; not yet verified for selection |
 | Code-as-action agents | smolagents | Reported lead; not yet admitted |
 | Browser and computer-use agents | Browser Use, Agent S | Browser Use is pinned but deferred until after the first learning synthesis; perception/grounding remains untested |
 | Research pipelines | STORM, GPT Researcher, DeerFlow | Reported leads; version lineage not yet admitted |
-| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | OpenClaw reviewed; Hermes separately pinned and admitted at selection depth; Letta remains an unadmitted lead |
+| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | OpenClaw and Hermes are reviewed at their pins; Letta remains an unadmitted lead |
 
 ## Empirical question coverage
 
@@ -81,8 +81,8 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 
 ## Known gaps at Checkpoint 1
 
-- Hermes is authorized but not yet analyzed; Browser Use is pinned but deferred, Claude Code is blocked, and no programmed-control replacement is selected. Selection status does not establish mechanisms.
-- The responsibility map has been tested through Pi, OpenHands, and OpenClaw but remains provisional until Checkpoint 3 supplies broader friction, counterexamples, and a maintainer-approved consolidation.
+- Hermes is maintainer-reviewed; Browser Use is pinned but deferred, Claude Code is blocked, and no programmed-control replacement is selected.
+- The responsibility map has been tested through four reviewed cases. D-013 retains stable IDs while approving the R9/R11 refinements and cross-cutting annotations; the map remains revisable rather than field-complete.
 - Closed production systems provide controls and declared behavior but little causal visibility.
 - Few studies isolate a single harness mechanism while keeping model, tools, context, budget, and evaluator fixed.
 - Cost, latency, variance, and long-horizon reliability are inconsistently reported.
@@ -90,7 +90,7 @@ Two material areas proposed by recon are run lifecycle/ingress and model mediati
 - The field lacks stable vocabulary for runtime, workflow engine, environment service, gateway, session, memory, and agent.
 - Historical and current architectures are easily mixed in fast-moving or rewritten projects.
 - Exact query bundles were recovered from the primary and two subagent rollouts, but complete provider result windows, result ranks, and all screening decisions are not recoverable.
-- Browser Use, smolagents, Hermes, Letta, and other details appeared as reconstructed leads. Pi, OpenHands, and OpenClaw are now reviewed through separately admitted pinned cases; Hermes identity, pin, relationship boundary, and activity metadata are newly admitted at selection depth, while its reported mechanisms remain unanalysed.
+- Browser Use, smolagents, Hermes, Letta, and other details appeared as reconstructed leads. Pi, OpenHands, OpenClaw, and Hermes are reviewed through separately admitted pinned cases. Nothing is inherited as evidence merely because it appeared in Cycle 1.
 - All 16 referenced sources now have full records; the canonical ledger contains 24 material claims, 50 claim/source/location mappings, and 50 primary verification events.
 - The generated audit shows 24 GitHub repository leads, none admitted or pinned for claim support; this is visible breadth, not verified implementation depth.
 - The audit's GitHub host concentration warning is explained, not erased: the implementation pass intentionally sampled repositories, while referenced evidence remains distributed across papers, documentation, a specification, and a synthesis.
@@ -102,7 +102,7 @@ Checkpoint 2 originally selected Pi, OpenHands Software Agent SDK, LangGraph, Br
 
 D-010 orders rolling selection by marginal information gain on uncovered or high-friction responsibilities, falsification and anchoring protection, evidence readiness, evidence-mode and domain diversity, analysis and governance cost, lineage and independence risk, and only then operationalized adoption. D-011 consciously accepts less architectural breadth and independence for Hermes's comparative-teaching value and the maintainer's requested learning transition. Checkpoint 3 now follows reviewed Hermes immediately; no Claude Code branch or replacement precedes it.
 
-The responsibility matrix remains a sampling hypothesis. Pi, OpenHands, and OpenClaw have tested their own expected rows; OpenClaw supplies the first observed R11 mechanism but not outcome-driven optimization. Hermes has an expected but unverified row, with particular potential to test R11 claims and long-lived state. Browser Use and Claude Code remain untested, and the perception-grounded R5/R6 gap remains explicit.
+The original responsibility matrix remains a sampling hypothesis rather than proof. Pi, OpenHands, OpenClaw, and Hermes have now tested their expected rows; OpenClaw and Hermes both expose across-run adaptation without establishing outcome-driven optimization. Browser Use and Claude Code remain untested, and the perception-grounded R5/R6 gap remains explicit.
 
 The selection source audit is `complete` for its two bounded search batches and direct pin checks: 35 returned identities, ten opened sources, eight referenced repository records, two excluded operational sources, and 14 verified claim mappings. GitHub concentration and shallow repository inspection are intentional and resolved for a repository-selection decision, not evidence of landscape breadth or implementation depth. The 35 manually authored result URLs and both batched query strings were separately confirmed in the retained native archives before approval because the generated audit cannot establish that content binding itself. Cycle 1's reconstructed limitation still governs the landscape from which the candidates originated.
 
@@ -132,14 +132,20 @@ The complete promotion-profile audit passes with ten referenced records, 20 decl
 
 OpenClaw is a maintainer-reviewed finding. During review, C003 was explicitly reconciled with the configured `after_agent_dispatch` policy: the tracker applies that acknowledgement stage on successful middleware-chain completion even when a buffered handler returns before timer-driven dispatch, and polling then deletes the claimed spool record. The sequence is directly observed, but the crash consequence remains an inference because it was not behaviorally reproduced or frequency-measured. D-011 now authorizes Hermes as a qualified migration/selective-influence comparison while preserving Browser Use as the later highest-value perception contrast.
 
-## Hermes selection boundary
+## Hermes case coverage
 
-Hermes Agent is pinned at annotated tag `v2026.7.7.2`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`, package version `0.18.2`. Selection evidence confirms a concrete multi-entry harness and a defensible future case boundary. It does not establish normal runtime behavior, defaults, mechanism effectiveness, or the advertised self-improvement claim.
+Hermes Agent is analyzed at annotated tag `v2026.7.7.2`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`, package version `0.18.2`. The written scope kept the narrative on the classic `hermes chat` path while targeted inspection covered alternate ingress, provider routing, persistent goals, delegation, plugins, memory providers, curation, observability, tests, and selected history. Hosted services, moving branches, third-party plugins, behavioral test execution, private evaluations, and causal effectiveness claims remain outside the boundary.
 
-Hermes and OpenClaw have different Git roots. Hermes later added a detailed OpenClaw migration plus two explicit history examples of inspiration or porting. The approved comparison is therefore separately rooted repositories with later migration compatibility and selective documented influence. Any recurrence remains non-independent until mechanism-specific evidence establishes otherwise.
+The case exercises R1–R11 and supplies evidence for TF-001 through TF-007. Its principal contrasts are: a cached session prompt versus request-local projection; structured action authority versus transformed model observations; fresh versus migrated defaults; runtime integrity, verification-on-stop, and optional goal acceptance as separate contracts; and durable memory/skill adaptation without an inspected outcome objective. It adds provisional configuration-generation and mechanism-level-lineage questions, not a taxonomy change.
 
-Dated GitHub attention, organization ownership, commit volume, author identities, release cadence, and integrations show substantial attention and activity. They do not establish users, deployments, dependents, team size, quality, or effectiveness. Browser Use's deferred perception-grounded R5/R6 contrast remains a material coverage loss to carry into the first synthesis.
+Hermes and OpenClaw have different recorded Git roots. Hermes later added a detailed OpenClaw migration and named mechanism-level inspiration or ports. The supported relationship is separately rooted repositories with later migration compatibility and selective documented influence. Recurrence is not independent evidence where lineage is unresolved or explicit.
+
+The complete audit passes with ten referenced records, 24 declared claims, 34 exact mappings, 34 primary verifications, and six verified archives. Of 352 native observations, 349 were classified automatically and three repository-inspection exceptions were linked in one batch; none remains unresolved. No web search, manual result batch, upstream target-test execution, blocking error, or warning occurred. The maintainer accepted Hermes as a reviewed finding under D-012. Browser Use's deferred perception-grounded R5/R6 contrast remains a material coverage loss to carry through Checkpoint 3 and into the first synthesis.
 
 ## Next coverage decision
 
-D-007 approved the control-flow-first method, D-008 restored dependable capture for the observed runtime shape, D-009 accepted OpenHands and deferred LangGraph, D-010 accepted OpenClaw and recorded the rolling criteria, and D-011 selected Hermes as the final pre-Checkpoint-3 case. Hermes alone may proceed after a separate scope-first goal approval. Checkpoint 3 convenes immediately after its maintainer review. Browser Use reopens only after the first learning-oriented synthesis; no other case is added first.
+D-007 approved the control-flow-first method, D-008 restored dependable capture for the observed runtime shape, D-009 accepted OpenHands and deferred LangGraph, D-010 accepted OpenClaw and recorded the rolling criteria, D-011 selected Hermes as the final pre-Checkpoint-3 case, and D-012 accepted Hermes and authorized Checkpoint 3.
+
+The approved Checkpoint 3 package compares the four reviewed cases and retains stable R1–R11 identifiers with sharper R9 integrity/recovery/acceptance facets, an R11 adaptation boundary, separate R10 observability/evaluation reporting, and cross-cutting lifecycle, owner, injection, configuration-population, and mechanism-lineage annotations. These changes do not increase coverage: the sample remains concentrated in open coding and personal-agent systems, outcome evidence is thin, the OpenClaw/Hermes pair is lineage-confounded where links are explicit or unresolved, and the browser/perception, closed-production, and framework/substrate gaps remain open.
+
+The four-case synthesis, canonical learning Markdown, and generated static learning site now exist. This delivery layer adds no subject coverage and closes none of the browser/perception, closed-production, framework/substrate, outcome-evidence, or lineage-independence gaps above. Browser Use remains the leading next falsification case, but it may reopen only after the maintainer reads the first learning experience and provides direction. No other case is added first.

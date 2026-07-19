@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T05:37:19.377Z",
+  "generated_at": "2026-07-18T23:44:04.844Z",
   "cycle": "field-landscape",
   "completeness": "complete",
   "profile": "provisional-promotion",
@@ -1041,9 +1041,9 @@
     {
       "claim_id": "field-landscape-selection-hermes-pinning-C002",
       "epistemic_kind": "verified implementation fact",
-      "claim_text": "The pinned repository contains a concrete agent harness/runtime with CLI, gateway, ACP, batch/API/library entry points feeding `AIAgent`, plus prompt/provider/tool machinery, session persistence, cron, plugins, skills, documentation, and tests; it is suitable for the existing implementation case method.",
+      "claim_text": "The pinned repository contains a concrete agent harness/runtime with CLI, gateway, ACP, batch/API/library entry points feeding `AIAgent`, plus prompt/provider/tool machinery, session persistence, cron, plugins, skills, documentation, and tests.",
       "artifact_location": "Exact implementation boundary",
-      "confidence": "high for classification, moderate for future scope feasibility",
+      "confidence": "high for structural classification",
       "mapping_count": 1,
       "verified_mapping_count": 1,
       "supporting_sources": [

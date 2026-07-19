@@ -161,7 +161,9 @@ repository and the evidence directories explicitly declared in the review reques
 It may use the web to verify a cited external fact, but new material does not
 become project evidence until the normal admission rules are satisfied.
 
-Review, reconciliation, and verification must remain read-only. The planned
-human-facing HTML layer will use a different Claude tool call with explicit
-write permissions, output paths, and validation. Never infer that authority
-from this contract.
+Review, reconciliation, and verification must remain read-only. Two separate
+HTML-authoring implementations now exist: a deterministic Codex writer for the
+current site and an isolated, write-bounded Fable-high writer retained for
+independent authoring iterations. Neither receives authority from this review
+contract, and neither may modify canonical research or learning Markdown.
+Never combine authoring and review authority in one tool or process.

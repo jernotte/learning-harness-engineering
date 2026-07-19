@@ -1,13 +1,13 @@
 # Research Status
 
 **Governance mode:** Early alignment — checkpoints require maintainer review
-**Current phase:** D-011 approved — pinned Hermes Agent is the final scope-first case before Checkpoint 3
+**Current phase:** First learning experience awaiting independent review and maintainer reading
 **Active cycle:** `research/cycles/field-landscape.md`
-**Last updated:** 2026-07-18
+**Last updated:** 2026-07-19
 
 ## Current objective
 
-Prepare a separate, scope-first Hermes case goal at `v2026.7.7.2` / `9de9c25f620ff7f1ce0fd5457d596052d5159596`. D-011 authorizes Hermes as the only next implementation, but this selection pass did not begin its analysis. Do not begin Browser Use, Claude Code, another implementation, Checkpoint 3, cross-harness synthesis, learning material, or taxonomy revision.
+Complete the bounded read-only Fable review of the generated learning experience, disposition any in-scope feedback, and present the complete evidence-to-learning chain for maintainer reading. Browser Use and every other implementation remain blocked until the maintainer reads the chapter and directs the next cycle.
 
 ## What now exists
 
@@ -17,7 +17,7 @@ Prepare a separate, scope-first Hermes case goal at `v2026.7.7.2` / `9de9c25f620
 - Canonical trackers for coverage, decisions, and status
 - Minimum templates for source records, case studies, topic syntheses, and cycle reviews
 - Agent instructions defining concurrency, repository use, evidence discipline, and human review gates
-- A provisionally promoted three-layer direction: source-native discovery vocabulary, a multi-label responsibility lens, and a later human-facing narrative; the responsibility lens remains provisional until Checkpoint 3 friction testing
+- An approved three-layer direction: source-native discovery vocabulary, a multi-label responsibility lens, and a human-oriented Markdown layer from which static HTML is generated
 - An approved provenance and source-coverage specification in `docs/source-provenance.md`
 - Updated source-audit and claim-ledger requirements in the research templates
 - An approved native-transcript reconciliation architecture in `docs/provenance-architecture.md`
@@ -45,11 +45,25 @@ Prepare a separate, scope-first Hermes case goal at `v2026.7.7.2` / `9de9c25f620
 - A three-case taxonomy-friction update, including the new question whether R11 should distinguish adaptive context or memory from outcome-driven optimization
 - An approved D-010 interim sampling decision that records rolling-selection precedence and the evidence burden for later pivots
 - An approved D-011 Hermes selection amendment with exact tag/commit, two full source records, ten canonical selection claims, a bounded OpenClaw relationship assessment, limited adoption indicators, and a complete promotion-profile audit
-- A fixed post-Hermes transition: maintainer review, immediate Checkpoint 3, first cross-harness synthesis, learning-oriented material, and later reopening of Browser Use against the explicit perception-grounded R5/R6 gap
+- A maintainer-reviewed, scope-first Hermes implementation case at the exact approved pin, with one traced classic CLI path, targeted alternate surfaces, explicit default-versus-optional boundaries, bounded OpenClaw lineage analysis, and no upstream target-test execution
+- A canonical Hermes ledger with 24 material claims, 34 exact source/location mappings, 34 primary verifications, ten referenced records, and a complete promotion-profile audit covering 352 native observations with no unresolved interaction, error, or warning
+- A four-case taxonomy-friction register in which Hermes supplies evidence for TF-001 through TF-007 and adds provisional configuration-generation and mechanism-level-lineage questions without changing R1–R11
+- An initial read-only Fable-high Hermes review with no findings, three independently dispositioned concerns, two low-priority recommendations, and nine survived adversarial challenges, followed by a passing focused verification that closed the access-limited scope-order check and inspected every initially omitted source path
+- An approved D-012 Gate A transition: Hermes is the fourth reviewed case and Checkpoint 3 was authorized
+- An approved four-case Checkpoint 3 package that retains stable R1–R11 identifiers, sharpens R9 and R11, adds bounded cross-cutting annotations, and explicitly preserves the browser/perception, closed-production, framework, outcome-evidence, and lineage limits
+- A proposed static-first, question-triggered target-test policy that permits exact-pin focused execution only for predeclared load-bearing ambiguities and does not turn full upstream suites into routine promotion gates
+- Approved D-013, which retains stable R1–R11 identifiers, enacts the R9/R11 refinements and bounded cross-cutting annotations, adopts the focused target-test policy, and authorizes the first synthesis and learning Markdown
+- A complete Checkpoint 3 promotion-profile audit with 16 declared claims, 65 exact mappings, 65 primary verifications, 97 native observations, 94 automatic classifications, three linked governance exceptions in one batch, one verified archive, no unresolved observation or error, and three bounded-scope warnings explicitly resolved rather than erased
+- A completed read-only Fable-high Checkpoint 3 review: one low-severity readable-ledger mapping drift was accepted and corrected, two presentation/scope concerns were dispositioned without new infrastructure, one non-consequential captured-path concern was retained, no reconciliation was needed, and focused verification passed with no finding or inconclusive reason
+- A complete first-batch synthesis package with 14 referenced records, 17 declared claims, 65 exact claim/source/location mappings, 65 primary verifications, 95 native observations, one human resolution, one verified archive, and a passing promotion-profile audit
+- Canonical human-oriented learning Markdown under `learning/`, including the first chapter and a durable reader-feedback loop
+- A deterministic Codex Markdown-to-site writer with focused tests, atomic output, renderer/input/output hashes, page-to-source mappings, responsive and print validation, and a generated two-page static site under `site/`
+- A retained, separately isolated Fable-high HTML writer under `tools/html-writer/`; it is a second authoring implementation, not the current site's author and not the read-only reviewer
+- A pending independent site-review record: two reviewer processes returned no report because Fable hit its session limit; no PASS or finding set is claimed, and one fresh read-only review remains required after the documented reset
 
 ## Decisions and checkpoints
 
-The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, approved D-008's narrow freeze exception, and approved D-009's OpenHands review and bounded batch amendment. On 2026-07-17, the maintainer accepted OpenClaw and approved D-010's rolling criteria and then-current Browser Use trigger. On 2026-07-18, the maintainer approved D-011 after directing the bounded Hermes selection pass; that decision changes only the immediate order and trigger, not the taxonomy or D-010 criteria.
+The maintainer approved D-001 on 2026-07-10. On 2026-07-11, the maintainer conditionally approved D-002, approved D-003, and approved D-004 after its archive-enforced acceptance passed. A post-approval correction marks one historical preflight search result window incomplete instead of falsely empty; D-004 remains approved. On 2026-07-12, the maintainer authorized bounded reconstruction, approved the resulting reconstructed-provenance waiver, provisionally promoted Checkpoint 1, and approved D-006's six-case selection. On 2026-07-16, the maintainer approved D-007, accepted Pi as a reviewed case, approved D-008's narrow freeze exception, and approved D-009's OpenHands review and bounded batch amendment. On 2026-07-17, the maintainer accepted OpenClaw and approved D-010's rolling criteria and then-current Browser Use trigger. On 2026-07-18, the maintainer approved D-011, accepted Hermes through D-012, and approved D-013 at Gate B. After Phase 3 content validation, the maintainer directed Codex to generate the current HTML site while retaining the separate Fable-high writer; read-only Fable review remains distinct from both authoring paths.
 
 ## Confidence and risks
 
@@ -61,10 +75,12 @@ The Pi generic-web path required 27 manually represented interaction events in o
 
 The reviewed OpenHands case audit passes under the fixed promotion profile with zero blocking errors. The reviewed OpenClaw audit also passes with zero blocking errors: 20 declared claims, 31 verified mappings, ten referenced source records, 272 native observations, 262 automatic resolutions, ten human-reviewed exceptions in one batch, and one resolved warning that Browser Use remains selection-depth evidence. The three exact transcript prefixes regenerate against retained archives. C003 remains a moderate-confidence inference after explicit reconciliation with `after_agent_dispatch`: the acknowledgement mapping and buffer/spool sequence are directly observed, but no crash reproduction or incidence measurement was performed. Minor command-derived path-display noise remains in several repository-observation rows, but exact source records, claim locations, and transcript evidence are intact; it cannot materially affect a research conclusion and does not justify reopening the provenance freeze.
 
-The Hermes selection audit passes under the promotion profile with a complete bounded source trail. The pin and concrete-harness boundary are high confidence. The relationship is narrower: distinct Git roots plus later migration compatibility and two explicit influence/port examples support a selective-influence comparison, not direct whole-repository descent or independent convergence. Repository attention, history volume, author identities, release tags, organization ownership, and integrations do not establish users, deployments, team size, quality, or effectiveness.
+The Hermes selection audit and implementation audit both pass under the promotion profile. The case records 352 observations, 349 automatic classifications, three linked exceptions in one batch, ten referenced records, 24 claims, 34 mappings, 34 primary verifications, and six verified archives. The pin and scoped classic-CLI mechanisms are high confidence. The relationship remains narrower: distinct Git roots plus later migration compatibility and named influence/port examples support a selective-influence comparison, not direct whole-repository descent or independent convergence. The case establishes persistent adaptation but not outcome-driven optimization, and its focused verification and optional goal-judge mechanisms do not become universal task-success evidence. Upstream tests were inspected but not executed under the current policy.
 
-The strongest remaining risks are substantive: optional mechanisms can be mistaken for defaults; the Telegram path cannot represent every OpenClaw channel; shared-main DM state is configuration-dependent; implementation presence does not establish effectiveness; runtime integrity/recovery must not be confused with task-success verification; and three reviewed cases plus one selected case are still too few to approve a taxonomy revision or convergence claim. Selecting Hermes also postpones the strongest perception-grounded R5/R6 counterexample, so the first synthesis must retain that gap.
+The strongest remaining risks are substantive: optional mechanisms can be mistaken for defaults; fresh and migrated configuration populations can differ; implementation presence does not establish effectiveness; runtime integrity/recovery must not be confused with task-success verification; and OpenClaw/Hermes recurrence is lineage-confounded. Four reviewed cases support bounded comparison proposals, not taxonomy saturation, representative coverage, or independent convergence. Deferring Browser Use also postpones the strongest perception-grounded R5/R6 counterexample, so Checkpoint 3 and the first synthesis must retain that gap. A single Browser Use case can test transfer; it cannot close the taxonomy or coverage question by itself.
+
+The HTML layer adds no evidence, coverage, maturity, or confidence. It is a generated reading view subordinate to the canonical learning Markdown, which is itself subordinate to the research artifacts. The two writer implementations and the read-only reviewer must remain separate so authoring convenience cannot silently change evidence or approval state.
 
 ## Next highest-value action
 
-Prepare the bounded Hermes case goal with a written scope boundary, then analyze only the pinned implementation after the maintainer approves that goal. The case must remain standalone and source-native, using OpenClaw only for explicit evidence-bounded comparison questions. After maintainer review, convene Checkpoint 3 immediately. Do not insert Browser Use, Claude Code, or another implementation before that checkpoint.
+Finish the read-only Fable review, then have the maintainer read the generated chapter and record feedback about clarity, depth, uncertainty, and missing questions. Do not begin Browser Use or another implementation until that learning checkpoint supplies direction.

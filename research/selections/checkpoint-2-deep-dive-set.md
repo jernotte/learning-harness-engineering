@@ -1,6 +1,6 @@
 # Checkpoint 2 Proposal: First Deep-Dive Set
 
-**Status:** Approved and amended through D-011; Pi, OpenHands, and OpenClaw reviewed; pinned Hermes alone authorized next
+**Status:** Approved and amended through D-012; Pi, OpenHands, OpenClaw, and Hermes reviewed; Checkpoint 3 in progress
 **Cycle:** `field-landscape`
 **Artifact ID:** `field-landscape-selection-checkpoint-2-deep-dive-set`
 **Prepared:** 2026-07-12
@@ -10,7 +10,7 @@
 
 ## Maintainer decision
 
-On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer accepted Pi and OpenHands SDK as reviewed cases and authorized only OpenClaw. On 2026-07-17, the maintainer accepted OpenClaw and approved D-010's rolling criteria and then-current Browser Use order. On 2026-07-18, D-011 selected pinned Hermes as the final pre-Checkpoint-3 case and deferred Browser Use until after the first learning-oriented synthesis. D-009 still defers LangGraph to a future framework/substrate comparison. Claude Code, every cohort member, every alternate, and every other pre-checkpoint implementation remain blocked. This is a selection record, not a finding about how an uninspected system works.
+On 2026-07-12, the maintainer approved the six-case first batch—five pinned open implementations plus one conditional closed-production case—and authorized only the Pi pilot. On 2026-07-16, the maintainer accepted Pi and OpenHands SDK as reviewed cases and authorized only OpenClaw. On 2026-07-17, the maintainer accepted OpenClaw and approved D-010's rolling criteria and then-current Browser Use order. On 2026-07-18, D-011 selected pinned Hermes as the final pre-Checkpoint-3 case and deferred Browser Use until after the first learning-oriented synthesis; D-012 then accepted the completed Hermes case and authorized only Checkpoint 3. This document preserves the original selection hypotheses rather than substituting later findings. D-009 still defers LangGraph to a future framework/substrate comparison. Claude Code, every cohort member, every alternate, and every other pre-checkpoint implementation remain blocked.
 
 Cycle 1 remains reconstructed. Its implementation report supplied leads, not evidence: exact provider result windows, screening breadth, and report-only inspection depth remain unknowable. This proposal independently captured the bounded selection searches, every observed returned result, every opened candidate, and exact public Git tag refs. It does not revalidate the landscape's breadth or the eleven-responsibility lens.
 
@@ -40,7 +40,7 @@ For rolling case order, D-010 records explicit precedence: marginal information 
 | Deferred by D-009 | **LangGraph** | Originally selected as an explicit programmed-graph and durability counterpoint; now retained for a future framework/substrate comparison rather than treated as a concrete harness | Open primary implementation; Python package tag `1.2.5`, commit `7ab79f9f3e94fb4357334d902f5fd69ec0088eb4`; verified 2026-07-12 ([CP2-S003](../sources/cp2-langgraph-1.2.5.md)) | Framework capability does not establish downstream application policy; the current case question would produce a primitive inventory rather than a comparable harness analysis |
 | Deferred by D-011 | **Browser Use** | Moves the batch outside coding and makes observation/action grounding and recovery central; retained as the first post-synthesis contrast | Open primary implementation; tag `0.13.4`, commit `68afe46456a23009a7d5eec2017ec7ab51b7c027`; verified 2026-07-12 ([CP2-S004](../sources/cp2-browser-use-0.13.4.md)) | Deferral leaves perception-grounded R5/R6 weak in the first synthesis |
 | 3, reviewed | **OpenClaw** | Adds long-lived ingress, channels, scheduling, persistent state, and operational lifecycle as questions the other open cases are unlikely to foreground | Open primary implementation; annotated tag `v2026.6.6`, dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`; verified 2026-07-12 ([CP2-S005](../sources/cp2-openclaw-v2026.6.6.md)) | Large, fast-moving surface and many integrations can overwhelm the harness core unless scope is tightly bounded |
-| Next by D-011 | **Hermes Agent** | Adds a separately rooted but migration-compatible and selectively influenced OpenClaw comparison, plus an explicit R11 claim to falsify | Open primary implementation; annotated tag `v2026.7.7.2`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`; verified 2026-07-18 ([CP2-S009](../sources/cp2-hermes-agent-v0.18.2.md)) | Lower independence and breadth than Browser Use; migration or borrowing could be mislabeled convergence |
+| Reviewed under D-012 | **Hermes Agent** | Adds a separately rooted but migration-compatible and selectively influenced OpenClaw comparison, plus an explicit R11 claim to falsify | Open primary implementation; annotated tag `v2026.7.7.2`, dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`; reviewed 2026-07-18 ([CP2-S009](../sources/cp2-hermes-agent-v0.18.2.md)) | Lower independence and breadth than Browser Use; migration or borrowing could be mislabeled convergence |
 | Blocked before Checkpoint 3 | **Claude Code** | Deliberate closed production reference case; tests whether the method can compare externally supported behavior without inventing internals | Conditional `closed-production / maintainer-supplied bounded set`; no material has yet been found in the repository or approved reference-material directory | Cannot begin until the supplied set is enumerated, dated, and logged; internal causal architecture remains unknowable |
 
 The original six-case proposal was the smallest set preserving all five planned contrasts. D-009 deliberately defers LangGraph and leaves the programmed-control slot open. D-011 consciously trades Browser Use's observation/environment contrast for Hermes's comparison and teaching value before the maintainer's requested learning phase. Browser Use is deferred, not removed, and its lost R5/R6 coverage must remain explicit. Hermes is the final case before Checkpoint 3; no Claude Code branch or replacement is added first.
@@ -72,10 +72,10 @@ The columns refer to the provisional architectural responsibilities defined in t
 | LangGraph (deferred framework) | ○ | ? | ○ | ● | ○ | ○ | ● | ● | ● | ● | ? |
 | Browser Use | ○ | ○ | ● | ● | ● | ● | ○ | ? | ● | ○ | ? |
 | OpenClaw | ● | ● | ● | ○ | ● | ○ | ● | ○ | ● | ○ | ? |
-| Hermes Agent (selection hypothesis) | ● | ● | ● | ● | ● | ? | ● | ? | ? | ? | ? |
+| Hermes Agent (original selection hypothesis; analyzed separately) | ● | ● | ● | ● | ● | ? | ● | ? | ? | ? | ? |
 | Claude Code | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 
-Responsibilities 1–10 originally received at least two contrasting open-case hypotheses. D-011 reduces immediate environmental diversity but adds a direct opportunity to test how migration, borrowing, and claimed self-improvement should be classified. Hermes's expected row is unverified and must not fill gaps before analysis. Responsibility 11 remains uncertain, and Claude Code remains all `?` until a bounded evidence set exists.
+Responsibilities 1–10 originally received at least two contrasting open-case hypotheses. D-011 reduced immediate environmental diversity but added a direct opportunity to test how migration, borrowing, and claimed self-improvement should be classified. Hermes has now tested this row in its separate case and friction artifacts; the marks above remain the pre-analysis hypothesis rather than retroactive evidence. Claude Code remains all `?` until a bounded evidence set exists.
 
 ## Documentation and version alignment
 
@@ -111,13 +111,13 @@ The remaining inherited leads stay deferred or excluded from this batch:
 | AutoGen | Reconstructed lineage lead; unpinned | Deferred pending current-successor and maintenance-lineage verification |
 | Agent S | Reconstructed read-only lead; unpinned | Deferred: Browser Use is the first perception/environment case |
 | GPT Researcher, DeerFlow | Reconstructed read-only leads; unpinned | Deferred: STORM is the pinned research-pipeline alternate; DeerFlow lineage is version-sensitive |
-| Hermes Agent | Reconstructed read-only mechanism lead; independently pinned by D-011 | Selected at `v2026.7.7.2` / `9de9c25...`; only identity, relationship, and activity evidence admitted so far |
+| Hermes Agent | Reconstructed lead independently re-admitted under D-011 and a complete pinned case | Reviewed at `v2026.7.7.2` / `9de9c25...` under D-012; case evidence does not inherit Cycle 1's reported mechanisms |
 | Letta Code | Reconstructed read-only lead; unpinned | Deferred: OpenClaw remains the first reviewed long-lived-runtime case |
 | AutoGPT, BabyAGI archive | Reconstructed historical/lineage leads; unpinned | Excluded from the first batch; useful later only for a bounded historical question |
 
 ## Pilot recommendation
 
-Only **Pi** is authorized as the pilot. Pi is the best pilot because its tagged repository identifies an agent loop, state management, model-provider layer, coding CLI, and explicit external containment boundary within a comparatively compact project. That makes it likely to reveal whether the case method can distinguish Responsibilities 2, 3, and 5 without requiring a platform-scale investigation.
+At the original Checkpoint 2 pilot gate, only **Pi** was authorized. Pi was chosen because its tagged repository identifies an agent loop, state management, model-provider layer, coding CLI, and explicit external containment boundary within a comparatively compact project. That made it likely to reveal whether the case method could distinguish Responsibilities 2, 3, and 5 without requiring a platform-scale investigation.
 
 The pilot is implementation-grounded but not implementation-deferential. For consequential mechanisms it must ask whether academic research, controlled evaluations, benchmarks, or credible operational evidence support, qualify, contradict, or have not tested the observed practice. Disagreement is a research result to investigate, not noise to reconcile away; agreement supports a reusable pattern only within the shared conditions of the evidence.
 
@@ -143,4 +143,4 @@ The maintainer review after the pilot should ask:
 
 ## Authorized next step
 
-Hermes Agent `v2026.7.7.2` at dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596` is the only authorized implementation case. A written scope boundary and separately approved case goal must precede deep analysis. Browser Use is deferred until after the first learning-oriented synthesis; LangGraph remains deferred; Claude Code and every other implementation remain blocked before Checkpoint 3.
+Hermes Agent `v2026.7.7.2` at dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596` completed scope-first analysis and was accepted under D-012. Checkpoint 3 and D-013 are approved; the first canonical synthesis and learning experience are the only authorized subject work. Browser Use is deferred until afterward; LangGraph remains deferred; Claude Code and every other implementation remain blocked before the final learning checkpoint.

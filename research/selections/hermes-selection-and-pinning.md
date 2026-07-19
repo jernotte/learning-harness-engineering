@@ -1,6 +1,6 @@
 # Hermes Selection and Pinning Amendment
 
-**Status:** Approved selection amendment; Hermes analysis has not begun
+**Status:** Approved selection amendment; Hermes analysis is complete and maintainer-reviewed under D-012
 **Cycle:** `field-landscape`
 **Artifact ID:** `field-landscape-selection-hermes-pinning`
 **Decision:** D-011
@@ -30,7 +30,7 @@ This amendment deliberately trades Browser Use's stronger perception-grounded R5
 | Local retained checkout | `/Users/jernotte/dev/reference-materials/research/hermes-agent-v2026.7.7.2` |
 | Evidence cutoff | Pinned repository, contained documentation, tests, and reachable history as of 2026-07-18 |
 
-The tagged tree contains a shared `AIAgent` runtime reached through interactive CLI, messaging gateway, ACP, batch, API, and library entry points. It also contains prompt/provider/tool machinery, session persistence, cron, plugins, skills, platform adapters, documentation, and tests. That is sufficient to support a source-native, control-flow-first case comparable to Pi, OpenHands SDK, and OpenClaw. It does not establish that every packaged entry point or optional subsystem is ordinary behavior. ([C002](../claims/hermes-selection-and-pinning.md#c002))
+The tagged tree contains a shared `AIAgent` runtime reached through interactive CLI, messaging gateway, ACP, batch, API, and library entry points. It also contains prompt/provider/tool machinery, session persistence, cron, plugins, skills, platform adapters, documentation, and tests. ([C002](../claims/hermes-selection-and-pinning.md#c002)) Selecting that concrete boundary for a source-native, control-flow-first case was an engineering judgment recorded by D-011 and C008, not a verified implementation fact. The structural inventory does not establish that every packaged entry point or optional subsystem is ordinary behavior. ([C008](../claims/hermes-selection-and-pinning.md#c008))
 
 The GitHub release object reports `immutable: false`; the future case must use the dereferenced commit, not trust a moving release page or default branch. The local tag contains an SSH signature block, but authenticity was not independently verified because no allowed-signers trust file was configured. Pinning rests on the observed public tag object and exact commit hash, not on a signature-verification claim.
 

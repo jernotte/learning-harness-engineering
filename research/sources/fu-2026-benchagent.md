@@ -10,9 +10,9 @@
 **Inspection extent:** Partial substantive, reconstructed from retained abstract/evaluation excerpts and the legacy record
 **Surfaces inspected:** abstract, paper
 **Provenance events:** `fl-open-s006`, `fl-inspect-s006`, `fl-disposition-s006`
-**Related claim IDs:** C010, C017, and C023 in `field-landscape-synthesis-field-landscape`
-**Canonical mapping locations:** C010, C017, and C023 — abstract, substrate-internal evaluation, and protocol-aligned external study
-**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl`
+**Related claim IDs:** C010, C017, and C023 in `field-landscape-synthesis-field-landscape`; `field-landscape-case-hermes-agent-v0-18-2-C019`
+**Canonical mapping locations:** C010, C017, and C023 — abstract, substrate-internal evaluation, and protocol-aligned external study; Hermes C019 — both evidence rows below
+**Primary verification events:** Listed per mapping in `research/provenance/field-landscape-events.jsonl` and the Hermes case event log
 
 ## Why this source matters
 
@@ -38,3 +38,7 @@ Challenges role-count narratives and suggests studying delegation contracts, div
 ## Leads and open questions
 
 Audit protocol parity, implementation fidelity for each workflow, uncertainty treatment, compute accounting, and the causal contribution of artifacts and verifier stages in the external runtime.
+
+## First-batch synthesis claim references
+
+The substrate-internal evaluation and separately scoped external-runtime study support `field-landscape-synthesis-first-batch-harness-architecture-C014`. The synthesis preserves the protocol split and does not turn the result into a universal anti-delegation claim.

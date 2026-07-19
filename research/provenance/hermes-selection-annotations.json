@@ -78,10 +78,10 @@
     },
     {
       "claim_id": "field-landscape-selection-hermes-pinning-C002",
-      "claim_text": "The pinned repository contains a concrete agent harness/runtime with CLI, gateway, ACP, batch/API/library entry points feeding `AIAgent`, plus prompt/provider/tool machinery, session persistence, cron, plugins, skills, documentation, and tests; it is suitable for the existing implementation case method.",
+      "claim_text": "The pinned repository contains a concrete agent harness/runtime with CLI, gateway, ACP, batch/API/library entry points feeding `AIAgent`, plus prompt/provider/tool machinery, session persistence, cron, plugins, skills, documentation, and tests.",
       "epistemic_kind": "verified implementation fact",
       "artifact_location": "Exact implementation boundary",
-      "confidence": "high for classification, moderate for future scope feasibility",
+      "confidence": "high for structural classification",
       "references": [
         {"source_id":"CP2-S009","location":"website/docs/developer-guide/architecture.md:7-180 and pinned root/package/test structure","relationship":"supports","outcome":"supports_scope","inspected_version":"v2026.7.7.2 at 9de9c25f620ff7f1ce0fd5457d596052d5159596","notes":"Selection-depth inspection establishes a concrete runtime and available surfaces, not default use or full behavior."}
       ]

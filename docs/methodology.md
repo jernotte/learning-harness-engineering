@@ -52,11 +52,19 @@ Use the following provisional responsibilities as a multi-label analytical lens.
 | R6 | Observation and feedback construction | How are results, errors, tests, and environment changes turned into usable model feedback? |
 | R7 | Durable state and persistence | What survives beyond a call or run, and how is it retained, recovered, updated, or forgotten? |
 | R8 | Decomposition, coordination, and aggregation | How is work divided, coordinated, isolated, and recombined? |
-| R9 | Verification, recovery, and control boundaries | How is acceptability judged, and how do failure, retry, rollback, escalation, and stopping work? |
-| R10 | Observability and external evaluation | How do developers trace, measure, benchmark, and evaluate the harness outside the active task? |
-| R11 | Adaptation and optimization across runs | How does evidence from completed runs change future prompts, skills, memory, workflows, tools, or code? |
+| R9 | Runtime integrity, recovery, and task acceptance | What policies define protocol integrity, operational recovery, evidence acquisition, escalation, and whether work is acceptable? |
+| R10 | Observability and external evaluation | How do developers inspect operation and, separately, assess outcomes outside the active task? |
+| R11 | Across-run adaptation | How do experience, usage, correction, evaluation, or outcome signals intentionally change future prompts, skills, memory, workflows, tools, or code? |
 
 The full rationale and current evidence for these boundaries live in `research/syntheses/field-landscape.md`. Case studies must record where the lens clarifies a mechanism and where it blurs, omits, or distorts one.
+
+The stable IDs do not imply that every responsibility is internally uniform. R4 owns progression mechanics such as scheduling, branching, retry, and termination. R6 owns construction of model-facing evidence. R9 owns criteria and policies for failure, recovery, verification, escalation, and acceptance; cases report protocol/runtime integrity, operational recovery, evidence acquisition, and task verification/acceptance separately. R10 reports operational observability separately from external outcome evaluation. Shared mechanisms may be multi-labeled.
+
+R11 requires a signal from experience, usage, correction, evaluation, or outcomes to intentionally change future behavior. Ordinary persistence remains R7, and manually selected policy remains R2. Reserve **outcome-driven optimization** for a mechanism in which measured outcomes select future changes; persistent mutation or curation alone is adaptation, not demonstrated improvement.
+
+When they materially change interpretation, cases also annotate lifecycle scale and ingress origin, control owner and study-object type, injection authority, effective configuration population, and mechanism-level lineage. These are cross-cutting comparison dimensions, not additional top-level responsibilities.
+
+Implementation analysis is static-first. Inspect pinned code, tests, documentation, and targeted history by default. A focused upstream test may run without a new per-command maintainer decision only when a predeclared load-bearing ambiguity can materially change a claim or method decision, an exact target discriminates among plausible explanations, and execution is local, bounded, repeatable, and free of credentials, paid APIs, live services, or uncontrolled side effects. Run it from an exact-pin disposable writable copy; record environment, command, result, and claim consequence; interpret a pass narrowly. Full upstream suites and broader experiments are not routine promotion gates and require a separately approved objective.
 
 Implementation prevalence is evidence that a design is used, not that it is effective or best. For each consequential mechanism, ask whether academic work, controlled experiments, benchmarks, or credible operational evidence support, qualify, contradict, or simply have not tested the practice. Preserve disagreement rather than automatically privileging either industry adoption or academic results: deployed systems may optimize for conditions absent from a study, while common practice may also persist without valid outcome evidence. Agreement across independent implementation and outcome evidence can strengthen a pattern only within the conditions both actually support.
 

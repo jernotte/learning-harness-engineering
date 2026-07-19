@@ -1,6 +1,6 @@
 # Provenance Audit: field-landscape
 
-**Generated:** 2026-07-18T05:37:19.377Z
+**Generated:** 2026-07-18T23:44:04.844Z
 **Completeness:** `complete`
 **Audit profile:** `provisional-promotion`
 **Promotion gate:** PASS
@@ -147,7 +147,7 @@ Captured local-repository observation totals: observations=45, code_inspected=30
 | Claim ID | Kind | Supporting sources | Opposing sources | Mappings | Verified | Missing verification | Confidence |
 | --- | --- | --- | --- | ---: | ---: | ---: | --- |
 | field-landscape-selection-hermes-pinning-C001 | verified implementation fact | CP2-S009, HS-S001 | — | 2 | 2 | 0 | high for identity and commit |
-| field-landscape-selection-hermes-pinning-C002 | verified implementation fact | CP2-S009 | — | 1 | 1 | 0 | high for classification, moderate for future scope feasibility |
+| field-landscape-selection-hermes-pinning-C002 | verified implementation fact | CP2-S009 | — | 1 | 1 | 0 | high for structural classification |
 | field-landscape-selection-hermes-pinning-C003 | verified implementation fact | CP2-S009, CP2-S005 | — | 2 | 2 | 0 | high for roots and migration surface |
 | field-landscape-selection-hermes-pinning-C004 | verified implementation fact | CP2-S009 | — | 1 | 1 | 0 | high for the two documented examples |
 | field-landscape-selection-hermes-pinning-C005 | inference | CP2-S009, CP2-S005 | — | 2 | 2 | 0 | moderate-high |

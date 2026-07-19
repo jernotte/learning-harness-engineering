@@ -473,3 +473,93 @@ The Cycle 1 landscape still carries reconstructed provenance. Together, CP2-S009
 ### Approval record
 
 The maintainer first agreed on 2026-07-18 that Hermes should replace Browser Use as the intended final pre-Checkpoint-3 case and then explicitly stated “agree with D-011” while authorizing the bounded selection-and-pinning goal. Because no D-011 package yet existed, the primary agent treated that as approval of the direction contingent on evidence rather than fabricating a completed decision. The subsequent bounded pass verified the exact pin, concrete-harness boundary, distinct Git roots, migration layer, selective influence history, and limited adoption indicators. Those findings support the approved amendment with the qualified relationship language above; no Hermes deep dive, taxonomy change, synthesis, or learning artifact began.
+
+**Post-approval epistemic correction, 2026-07-18:** Selection claim C002 originally combined a verified structural inventory with the judgment that Hermes was suitable for the case method. Revision 2 narrows C002 to the inspected structural fact; C008 and D-011 remain the engineering judgment. The canonical projection and audit were regenerated at the Gate A boundary. Git commit `66cead3` preserves the prior wording; no source, selection decision, evidence maturity, or implementation conclusion changed.
+
+## D-012 — Accept Hermes and authorize Checkpoint 3
+
+**Status:** Approved
+**Date:** Proposed and approved 2026-07-18
+
+### Decision
+
+Accept Hermes Agent v0.18.2 at annotated tag `v2026.7.7.2` / dereferenced commit `9de9c25f620ff7f1ce0fd5457d596052d5159596` as the fourth maintainer-reviewed implementation case. Preserve the canonical R1–R11 taxonomy unchanged until Checkpoint 3 compares the complete friction register. Preserve every version, default/optional, lineage, and outcome-evidence limitation recorded by the case.
+
+Authorize Checkpoint 3 only after this Gate A disposition. Checkpoint 3 must consolidate Pi, OpenHands SDK, OpenClaw, and Hermes; decide which friction observations justify annotations, cross-cutting dimensions, or responsibility changes; and deliberately decide when focused upstream target-test execution belongs in the case method. It must not add another implementation, self-approve a taxonomy change, or begin synthesis or learning material before Gate B.
+
+### Why
+
+The written scope preceded deep analysis and held. The case follows one source-native classic CLI path while using alternate ingress, goals, delegation, memory, plugins, curation, observability, tests, and history only for explicit questions. It separates fresh from migrated defaults, durable state from active projection, action authority from model-visible observation, runtime integrity from task acceptance, and across-run artifact adaptation from measured optimization.
+
+The package declares 24 claims with 34 exact source/location mappings and 34 primary verifications across ten records. Its complete promotion-profile audit covers 352 native observations, 349 automatic classifications, three linked exceptions in one batch, six cryptographically verified archives, and no unresolved interaction, error, or warning. No new landscape search, manual search-result batch, upstream behavioral test, moving-branch projection, or provenance implementation change occurred.
+
+The OpenClaw relationship remains mechanism-specific. The evidence supports distinct recorded roots followed by explicit migration compatibility and selected named influence or ports. It does not support whole-repository fork descent, semantic equivalence, or independent convergence. Hermes adds useful Checkpoint 3 evidence on configuration generation and lineage, but Browser Use's deferred perception-grounded R5/R6 gap remains open.
+
+### Alternatives
+
+- **Request bounded case corrections before promotion.** Choose this if review finds a load-bearing claim unsupported, a default/optional distinction wrong, or the narrative impractical to reuse.
+- **Require focused upstream test execution before accepting Hermes.** Not recommended under the current method unless review identifies a load-bearing ambiguity that static code and pinned tests cannot resolve; Checkpoint 3 is the authorized venue for the general policy decision.
+- **Begin Browser Use before Checkpoint 3.** Rejected by D-011. It remains the strongest post-synthesis perception contrast, but inserting it now moves the checkpoint again.
+- **Promote taxonomy changes directly from Hermes.** Rejected. Hermes is one analyzed case and the OpenClaw relationship is lineage-confounded; changes require four-case consolidation and maintainer review at Gate B.
+
+### Consequences
+
+Hermes becomes a reviewed finding based on the maintainer's documented review basis. Checkpoint 3 becomes the only next authorized phase. Browser Use remains deferred until after the first learning-oriented synthesis; Claude Code, LangGraph-as-harness, every cohort member, alternate, and replacement remains blocked. The provenance infrastructure stays frozen, and upstream target tests remain inspect-only until Checkpoint 3 decides otherwise.
+
+### Independent review and approval record
+
+The initial read-only Claude review used Fable 5 at high effort and directly inspected the pinned Hermes checkout. It reported no findings and said the package held up under roughly ten adversarial mechanism checks. Its `inconclusive` headline was mechanical: its access tracker did not record the central case plus nine reused source records, and the retained archive needed to verify scope-first ordering was outside the originally declared evidence directory.
+
+Codex independently accepted the three concerns and two recommendations with bounded dispositions recorded in [the Hermes review artifact](case-studies/hermes-agent-v0.18.2-review.md). The only material precision change expands configuration generation from a fresh/migrated binary to no-file fresh, versionless existing, versioned migrated, explicit, and runtime-effective populations. The generated audit remains complete. Scope-first ordering was independently reconstructed from the retained rollout: the scope file completed at `2026-07-18T21:58:41.375Z`; the first deep-trace task began at `21:59:02.815Z`; and the first primary runtime trace began at `21:59:40.915Z`. No consequential disagreement remained, so reconciliation was not used.
+
+The one focused Fable-high verification then passed with no findings or inconclusive reasons. It directly inspected the exact transcript lines, central case, every initially omitted reused source record, corrected claims and annotations, generated events and audit, and governing state. It confirmed all five agreed dispositions and the unchanged audit counts. Its only low-confidence limit was inability to run a shell hash check; Codex independently recomputed the archive hash and inode identity and confirmed the audit record.
+
+On 2026-07-18, after receiving the complete Gate A package, the maintainer explicitly approved D-012. That decision accepts Hermes as a reviewed finding on the review basis above and authorizes Checkpoint 3 only. It does not approve any taxonomy or methodology proposal that Checkpoint 3 may produce, and it does not authorize synthesis, learning material, HTML, or another implementation before Gate B.
+
+## D-013 — Refine the responsibility lens and adopt focused target-test execution
+
+**Status:** Approved
+**Date:** 2026-07-18
+
+### Decision
+
+Retain R1–R11 as stable analytical identifiers. Do not merge R2, R3, and R5; do not merge R5 and R6; and do not add top-level responsibilities merely for lifecycle scales, extensions, configuration, lineage, or study-object type.
+
+- R1 remains run lifecycle and ingress, with lifecycle-scale and ingress-origin annotations required when they change ownership or failure semantics.
+- R9 becomes **Runtime integrity, recovery, and task acceptance**, with separate reporting of protocol/runtime integrity, operational recovery, evidence acquisition, and task verification/acceptance. Pre-action authorization and containment remain primarily R5 questions.
+- R10 remains observability and external evaluation, but cases report those two layers separately.
+- R11 becomes **Across-run adaptation**. “Outcome-driven optimization” is reserved for mechanisms in which measured outcomes select future changes.
+- Control owner and study-object type, injection authority, effective configuration population, and mechanism-level lineage become explicit cross-cutting annotations.
+
+Adjacent ownership remains explicit: R4 owns progression mechanics such as scheduling, branching, retries, and termination; R6 owns construction of model-facing evidence; R9 owns the criteria and policies for failure, recovery, verification, escalation, and acceptance; R10 owns assessment outside the active run. Shared mechanisms are multi-labeled. R11 applies only when experience, usage, correction, evaluation, or outcome signals intentionally change future behavior; ordinary persistence remains R7 and manually selected policy remains R2.
+
+Adopt a static-first, question-triggered target-test policy. Pinned test source and history remain the default evidence. A narrowly selected upstream test may run without a new per-command maintainer decision only when a predeclared load-bearing ambiguity can materially change a claim or method decision, an exact target can discriminate among explanations, and execution is local, bounded, repeatable, and free of credentials, paid APIs, live services, or uncontrolled side effects. Use an exact-pin disposable writable copy; record the environment, command, result, and claim consequence; interpret a pass narrowly; and do not make full upstream suites routine promotion gates. Broader experiments still require a separately approved objective.
+
+Approve the first synthesis direction as **Where Harnesses Put Control: Model-Directed Loops Inside Programmed Execution and Recovery Envelopes**, emphasizing why runtime integrity is not task acceptance. Preserve Browser Use as the explicit post-learning perception/observation falsification case.
+
+### Evidence and limits
+
+The proposal consolidates four pinned, maintainer-reviewed cases: Pi v0.80.6, OpenHands SDK v1.35.0, OpenClaw v2026.6.6, and Hermes Agent v0.18.2. The cases recur on lifecycle resolution, joined-but-distinct policy/context/action construction, action-to-observation transformation, cross-cutting injection, integrity-versus-acceptance, distributed control ownership, and adaptation without demonstrated optimization. OpenHands supplies component-separation counterevidence; Hermes supplies conditioned task verification and configuration-population detail; OpenClaw and Hermes expose why lineage must be mechanism-specific.
+
+The sample is not field-representative. It remains concentrated in open coding and personal-agent systems, lacks a reviewed browser/perception harness, contains no admitted closed-production case or framework/substrate comparison, and rarely has mechanism-isolating outcome evidence. OpenClaw/Hermes recurrence is not independent corroboration where migration or influence is explicit or unresolved. The reconstructed Cycle 1 caveat persists.
+
+### Alternatives
+
+- **Replace R1 with several lifecycle responsibilities.** Rejected for now because the scales differ by system; annotations preserve the distinction without claiming a universal hierarchy.
+- **Merge R2/R3/R5 or R5/R6 where code joins them.** Rejected because the cases expose different owners, policies, and failure modes even when one implementation path materializes them together.
+- **Add an extensions responsibility.** Rejected because injection is how control enters several responsibilities, not one architectural outcome.
+- **Split R9 into new top-level IDs immediately.** Deferred. Mandatory facets under a stable ID capture the current asymmetry without renumbering the corpus before perception-grounded and closed-production cases test it.
+- **Keep optimization as ordinary R11 language.** Rejected because no reviewed case demonstrates an outcome-to-change optimization loop.
+- **Require every target suite to run, or prohibit all target execution.** Both rejected. Universal execution is costly and weakly tied to architectural claims; universal prohibition leaves some dynamic ambiguities needlessly unresolved.
+
+### Consequences
+
+The approved labels and annotations will govern the first cross-harness synthesis and future cases, while source-native vocabulary remains the discovery and narrative layer. The first four cases do not require retroactive test execution. Framework/substrate work will use a framework-appropriate study question rather than masquerading as a concrete-harness case. Browser Use remains deferred until after the first learning experience and then receives priority as the clearest perception-grounded falsification case.
+
+Approval authorizes Phase 3 of the current goal: the canonical synthesis and human-oriented learning Markdown. HTML remains downstream of validated learning Markdown and must be generated from it by the separately bounded writer; another implementation remains blocked before the final learning checkpoint.
+
+### Approval record
+
+On 2026-07-18, the maintainer explicitly approved D-013 and authorized Phase 3: the canonical cross-harness synthesis and human-oriented learning Markdown. The maintainer then confirmed the intended layer boundary: Markdown is the canonical human-oriented intermediate layer, and HTML follows as a generated presentation layer rather than an independently edited source of knowledge. This approval enacts the responsibility-label refinements, cross-cutting annotations, and focused target-test policy above. It does not authorize another implementation before the final learning checkpoint, and HTML may not begin until the Markdown exists and passes content validation.
+
+On 2026-07-19, after the synthesis and learning Markdown passed content validation, the maintainer revised only the HTML execution arrangement. Codex's deterministic Markdown-to-site writer generated the current static site. The separate write-bounded Fable-high writer remains intact as a second authoring implementation. Fable review, reconciliation, and verification remain a third, read-only role. Neither writer may modify canonical research or learning Markdown. This delivery-mechanics change does not alter D-013's taxonomy, target-test policy, evidence limits, or maturity decisions.

@@ -11,3 +11,4 @@ Case-specific responsibility friction also enters the cumulative [Taxonomy Frict
 - [Pi v0.80.6](pi-v0.80.6.md) — maintainer-reviewed case at commit `2b3fda9921b5590f285165287bd442a25817f17b`.
 - [OpenHands Software Agent SDK v1.35.0](openhands-sdk-v1.35.0.md) — maintainer-reviewed case at commit `9028562e2d5eda76de662ec9b7584125760eb83f`.
 - [OpenClaw v2026.6.6](openclaw-v2026.6.6.md) — maintainer-reviewed case at commit `8c802aa683510c7f7503597b54c3021733245e59`.
+- [Hermes Agent v0.18.2](hermes-agent-v0.18.2.md) — maintainer-reviewed evidence at commit `9de9c25f620ff7f1ce0fd5457d596052d5159596`, with [independent review and Gate A disposition](hermes-agent-v0.18.2-review.md) complete under D-012.

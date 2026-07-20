@@ -3,7 +3,7 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 and V2-D006, approved 2026-07-20
-**Current pass:** Seed-only
+**Current pass:** First-hop Wave 1
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
@@ -13,6 +13,15 @@ Map the range of plausible outline vocabulary, topics, prerequisites,
 organizational principles, omissions, tensions, and counterframes exposed by
 the three approved seeds. The pass prepares an unopened first-hop Wave 1
 proposal; it does not choose a taxonomy or draft an outline.
+
+## Wave 1 authorization
+
+At the seed-only gate on 2026-07-20, the maintainer approved the exact six
+registered Wave 1 source families without revision. Approval authorizes only
+their direct inspection for structural effect on the recorded outline
+decisions. It does not authorize following their references, treating their
+claims as established, promoting evidence, drafting an outline, or substituting
+unregistered sources.
 
 ## Mandatory seed coverage
 

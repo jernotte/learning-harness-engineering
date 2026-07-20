@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Seed-only checkpoint — awaiting maintainer decision
+**Current phase:** First-hop Wave 1 — approved and in progress
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,9 +9,9 @@
 
 ## Current objective
 
-Review the completed source-native map of the three mandatory seeds and decide
-whether to approve, revise, or reject the proposed unopened first-hop Wave 1.
-No additional source interaction is authorized before that decision.
+Inspect exactly the six approved first-hop Wave 1 source families for their
+effect on the recorded outline decisions, then stop at the first-hop wave gate
+with an exact unopened Wave 2 proposal or a reason to stop below the cap.
 
 ## Authority state
 
@@ -48,9 +48,12 @@ Completed within the approved seed-only pass:
 
 No resolution query was needed or used. No first-hop source was opened.
 
-Not authorized:
+The maintainer approved the exact six-source Wave 1 without revision on
+2026-07-20. Direct structural inspection of those six registered sources is now
+authorized under the existing primary-only provenance boundary.
 
-- opening any first-hop source before the seed-only maintainer gate;
+Still not authorized:
+
 - topical or ecosystem search, second-hop traversal, or bibliography
   harvesting;
 - implementation or technique deep dives;
@@ -136,9 +139,7 @@ The reviewer contract is now versioned with bounded Stage 4 criteria.
 
 ## Next gate
 
-The maintainer may approve, revise, or reject the exact six-source Wave 1 in
-`research/outline-development/first-hop-register.md`. Approval would authorize
-only the bounded Wave 1 opens under the existing Stage 4 controls; it would not
-adopt a source's taxonomy, authorize second-hop traversal, or approve an
-outline. Selective raw conversation packets remain separately gated per
-packet.
+After Wave 1, the maintainer will review what changed and approve, revise, or
+reject an exact unopened Wave 2 proposal of at most six sources. No Wave 2
+source may be opened before that decision. Selective raw conversation packets
+remain separately gated per packet.

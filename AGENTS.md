@@ -33,27 +33,28 @@ post-outline research sequence.
 ## Current authorization
 
 The maintainer accepted the completed V2 repository reset and approved V2-D005,
-V2-D006, and the Stage 4 catalog correction V2-D007 on 2026-07-20. The original
-three-seed pass and six-source Wave 1 are complete. The unopened Wave 2 is
-withdrawn and has no active authority.
+V2-D006, the Stage 4 catalog correction V2-D007, and the catalog-gate decision
+V2-D008 on 2026-07-20. The original three-seed pass, six-source Wave 1,
+Walking Labs curriculum inspection, and complete pinned-catalog census are
+complete. The unopened Wave 2 is withdrawn and has no active authority.
 
-Current work is the catalog phase in
-`research/outline-development/brief.md`. Pin and structurally inspect
-`walkinglabs/learn-harness-engineering` as a curriculum candidate without
-adopting it. From the already pinned
-`ai-boost/awesome-harness-engineering` README, mechanically enumerate every
-qualifying outbound resource occurrence, preserve category and curator context,
-deduplicate canonical source families, record exclusions and unresolved
-identities, and prepare catalog-context triage. Check the lineage of the
-similarly named Walking Labs Awesome repository before treating recurrence as
-independent.
+The catalog gate is approved. The maintainer ratified the bounded Git-lineage
+interpretation and approved the complete 21-batch program as intended scope.
+Only `awesome-screen-core-01` is authorized for execution. Its exact 20-family
+register is the batch of that name in
+`research/outline-development/awesome-screening-plan.json` as committed at
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D008 supersedes only that
+batch's historical `proposed_not_authorized` field; its membership and
+inspection constraints remain fixed, and all other batches remain blocked.
 
-Do not open or query a previously unopened outbound catalog source before the
-catalog gate. Do not run a topical or ecosystem search, follow a second hop,
-perform an implementation deep dive, draft an outline, select cases, synthesize
-findings, produce or adopt curriculum, build a site, promote evidence maturity,
-or re-admit legacy evidence. An exact-title or identifier-resolution query for
-an ambiguous catalog identity requires separate preapproval and logging.
+For `awesome-screen-core-01`, open only each registered direct URL and inspect
+only the predeclared screening surface needed to establish identity,
+accessibility, actual relevance, scope, evidence posture, and visible lineage.
+Do not run a topical or ecosystem search, follow a second hop, perform an
+implementation or technique deep dive, draft an outline, select cases,
+synthesize findings, produce or adopt curriculum, build a site, promote
+evidence maturity, or re-admit legacy evidence. Identity-resolution queries
+remain separately preapproved and none is authorized for this batch.
 
 ## Clean-slate boundary
 

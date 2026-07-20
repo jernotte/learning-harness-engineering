@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** Wave 1 complete; V2-D007 catalog gate awaiting maintainer review
+**Status:** Wave 1 complete; V2-D008 authorizes `awesome-screen-core-01`
 
 **Authority:** Approved outline-development brief
 

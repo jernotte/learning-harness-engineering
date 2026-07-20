@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Catalog gate — complete and awaiting maintainer review
+**Current phase:** Direct-screen calibration — `awesome-screen-core-01` authorized
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,10 @@
 
 ## Current objective
 
-Review the completed Walking Labs curriculum-candidate analysis, complete
-pinned-catalog census, offline family accounting, catalog-context triage,
-lineage limit, and exact source-opening program. No new outbound family opens
-until the maintainer approves an exact batch.
+Execute the exact 20-source `awesome-screen-core-01` direct-screen calibration.
+Establish source identity, accessibility, actual relevance, scope, evidence
+posture, visible lineage, and schema friction without deep reading or following
+any second hop. Stop at its source-screening gate.
 
 ## Authority state
 
@@ -27,7 +27,7 @@ until the maintainer approves an exact batch.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005, V2-D006, and V2-D007 were explicitly approved on 2026-07-20.
+- V2-D005 through V2-D008 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
@@ -89,10 +89,22 @@ That authorized catalog work is complete:
 - the two Awesome repositories are not Git forks or mirrors in the bounded
   inspected lineage, but editorial/source independence remains unassessed.
 
+Authorized by V2-D008:
+
+- the catalog accounting, curriculum analysis, and catalog-gate package are
+  approved;
+- the bounded Git-lineage interpretation is ratified without treating shared
+  URLs as editorial independence or corroboration;
+- the complete 21-batch direct-screening program is approved as intended scope;
+- only `awesome-screen-core-01`, exactly as registered in the screening plan at
+  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now; and
+- each of its 20 sources receives direct screening only, with no identity query,
+  second hop, bibliography traversal, or implementation deep dive.
+
 Still not authorized:
 
-- opening or querying a previously unopened outbound catalog family before the
-  catalog gate;
+- opening any catalog family outside `awesome-screen-core-01`;
+- querying even a registered family through search or identity resolution;
 - topical or ecosystem search or second-hop traversal;
 - implementation or technique deep dives;
 - case selection, synthesis, or site work;
@@ -197,7 +209,7 @@ transmitted, the configured external reviewer did not review this revision, and
 it will not be retried or circumvented. V2-D006 records the one-time
 local-review fallback and its limits.
 
-The maintainer explicitly approved V2-D005, V2-D006, and V2-D007 on 2026-07-20.
+The maintainer explicitly approved V2-D005 through V2-D008 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
 amended brief is controlling, and only the catalog phase is currently
@@ -214,13 +226,9 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the complete Awesome occurrence inventory,
-mechanical exclusions, offline family-key accounting, Walking Labs curriculum
-analysis, repository lineage, catalog-context triage, unresolved identities,
-and exact proposed source-opening batches. The recommendation is to approve the
-complete 21-batch program as intended scope but authorize only
-`awesome-screen-core-01` first as a 20-source, 18-category calibration batch.
-The maintainer must also ratify or reject the bounded Git-lineage interpretation
-recorded in `catalog-gate.md`. No new outbound catalog family is opened before
-those decisions. Selective raw conversation packets remain separately gated per
-packet.
+The maintainer will review the completed `awesome-screen-core-01` source
+lifecycles, accessibility and identity corrections, relevance and evidence-
+posture distribution, lineage and alias findings, schema friction, provenance
+audit, and recommendation for the next batch or a method correction. No other
+batch opens before that review. Selective raw conversation packets remain
+separately gated per packet.

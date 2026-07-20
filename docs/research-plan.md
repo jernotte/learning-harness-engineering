@@ -37,9 +37,9 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Structural landscape and catalog investigation
 
-**Status:** At the catalog gate under V2-D007. The original seed pass
-and six-source Wave 1 are complete. The former Wave 2 proposal is withdrawn and
-has no authority.
+**Status:** Catalog gate approved under V2-D008; the 20-source
+`awesome-screen-core-01` calibration batch is the only active source-opening
+authority. The former Wave 2 proposal is withdrawn and has no authority.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -54,16 +54,16 @@ category context, derive offline family keys under declared normalization and
 deduplication rules, and record catalog-context triage and unresolved
 identities. Present the complete inventory,
 curriculum analysis, repository lineage, and exact proposed source-opening
-batches at the catalog gate. No new outbound catalog source is opened before
+batches at the catalog gate. No new outbound catalog source was opened before
 approval. Throughout Stage 4, extract structural possibilities without
 promoting findings.
 
-The complete census and curriculum-candidate analysis are now awaiting
-maintainer review. No previously unopened catalog destination was opened during
-this phase. The proposed 21-batch program covers all 395 previously unopened
-family keys; the recommended first
-authorization is the 20-source, cross-category `awesome-screen-core-01`
-calibration batch.
+The complete census and curriculum-candidate analysis were approved. The
+maintainer ratified the bounded Git-lineage interpretation and approved the
+21-batch program as intended scope, while authorizing only
+`awesome-screen-core-01` for execution. That pass directly screens its exact 20
+registered URLs and stops before any additional batch, search, second hop, or
+deep reading.
 
 ## Stage 5 — Competing outline skeletons
 

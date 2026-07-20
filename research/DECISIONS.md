@@ -353,3 +353,61 @@ or manifest is approved.
 
 The maintainer explicitly agreed with this assessment and plan and directed it
 to be implemented on 2026-07-20.
+
+## V2-D008 — Catalog gate approved and first calibration authorized
+
+**Status:** Approved
+**Date:** 2026-07-20
+
+### Decision
+
+Approve the completed catalog gate and its accounting, exclusions, Walking
+Labs curriculum-candidate analysis, catalog-context triage, and proposed
+screening program. Ratify the bounded Git-lineage interpretation: the two
+Awesome repositories are not Git forks or mirrors in the inspected identity
+metadata, while editorial/source independence remains unassessed and shared
+URLs are not corroboration.
+
+Approve the complete 21-batch program as intended direct-screening scope, but
+authorize only `awesome-screen-core-01` for execution. The exact authorized
+register is the 20-family batch in
+`research/outline-development/awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`, file SHA-256
+`8ce00b2a284a2f789972f3322586497ff0450b734d3cf2d3ad8aec5d8f0169fc`.
+This decision supersedes only the batch's historical
+`proposed_not_authorized` field in that gate-proposal snapshot; its source
+membership, inspection extent, and second-hop boundary remain immutable.
+
+Direct screening may establish identity, accessibility, actual relevance,
+scope, evidence posture, visible lineage, and schema friction. It does not
+authorize deep reading, search, identity-resolution queries, second-hop or
+bibliography traversal, outline drafting, evidence promotion, legacy
+readmission, or any other batch.
+
+### Why the staged authorization remains controlling
+
+The first batch spans 20 sources, 18 catalog categories, and five apparent
+source forms. It is a calibration of the screening method rather than a sample
+whose results may stand in for the catalog. Reviewing it before further opens
+prevents a mistaken schema, inspection depth, or provenance treatment from
+being repeated across the remaining 375 destinations.
+
+### Consequences and next gate
+
+Complete `awesome-screen-core-01`, reconcile its diagnostic provenance, and
+present actual identity/accessibility results, source-form and relevance
+corrections, evidence-posture and lineage observations, schema friction, and a
+recommendation for the next authorization. Every other batch remains blocked
+until the maintainer reviews that checkpoint.
+
+### Design-history disposition
+
+`none` — the prior catalog-correction rationale, the staged-calibration
+explanation, and this exact approval record fully preserve the decision; the
+approval exchange adds no essential raw context.
+
+### Approval record
+
+The maintainer explicitly approved the catalog gate, ratified the bounded
+Git-lineage interpretation, approved the 21-batch program as intended scope,
+and authorized only `awesome-screen-core-01` on 2026-07-20.

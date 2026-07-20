@@ -457,14 +457,15 @@ catalog counts.
    later Wave 2 proposal was never approved or opened.
 3. **Catalog-correction gate — satisfied.** The maintainer approved V2-D007,
    adding Walking Labs and comprehensive treatment of the Awesome catalog.
-4. **Catalog gate — current.** Review the complete occurrence inventory,
+4. **Catalog gate — satisfied.** The maintainer approved the complete occurrence inventory,
    mechanical exclusions, deduplicated families, Walking Labs curriculum
    analysis, repository lineage, catalog-context triage, unresolved identities,
-   concentration risks, and exact proposed source-opening batches. No new
-   outbound catalog family is opened before approval.
-5. **Source-screening gate or gates — conditional.** Review each approved
-   direct-screening batch and any resulting change to the proposed substantive
-   reading set. No second-hop source is opened implicitly.
+   concentration risks, and 21-batch intended program; ratified the bounded
+   lineage interpretation; and authorized only `awesome-screen-core-01`.
+5. **Source-screening gate or gates — current.** Review the authorized
+   `awesome-screen-core-01` calibration and any resulting change to the later
+   batch order or proposed substantive reading set. No second-hop source or
+   additional batch is opened implicitly.
 6. **Seed-map gate.** Review the completed audited structural landscape and
    remaining gaps before skeleton drafting.
 7. **Skeleton gate.** Review three materially different skeletons and select,

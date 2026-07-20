@@ -3,10 +3,11 @@
 ## Project goal
 
 Harness Engineering V2 is rebuilding its research program from a clean
-conceptual slate. The authority reset is complete. V2-D005, V2-D006, and
-V2-D007 approve an outline-first process whose active implementation stage is
-the gated `v2-outline-seed-map` catalog task. The final goal continues through a
-maintainer-approved outline and stops before substantive research.
+conceptual slate. The authority reset is complete. V2-D005 through V2-D008
+approve an outline-first process whose active implementation stage is the
+20-source `awesome-screen-core-01` calibration within
+`v2-outline-seed-map`. The final goal continues through a maintainer-approved
+outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -54,7 +55,8 @@ authority.
 
 - V2-D005 and V2-D006 were approved before the first seed interaction;
   V2-D007 records the later catalog-method correction and explicitly withdraws
-  the never-opened Wave 2.
+  the never-opened Wave 2; V2-D008 approves the catalog gate and authorizes only
+  the exact `awesome-screen-core-01` batch.
 - The original repository seed is pinned to the observed commit, the local PDF
   has a verified fingerprint, and the Walking Labs curriculum repository is
   pinned before structural inspection.
@@ -73,14 +75,18 @@ authority.
   its curriculum.
 - Similarly named Awesome repositories are not treated as independent until
   their lineage is checked.
-- No previously unopened outbound catalog family is opened before the catalog
-  gate. No topical search, second hop, implementation deep dive, or legacy
-  readmission occurs.
+- Before V2-D008, no previously unopened outbound catalog family was opened.
+  During `awesome-screen-core-01`, exactly its 20 registered direct URLs—and no
+  other family—may open. No topical search, identity query, second hop,
+  implementation deep dive, or legacy readmission occurs.
+- Every authorized direct screen records actual identity, accessibility,
+  relevance, scope, evidence posture, visible lineage, inspection extent, and a
+  final disposition without treating the screen as deep reading or evidence.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
-- Work stops at the catalog gate with a complete pinned-file census,
-  catalog-context triage, unresolved items, and exact proposed source-opening
-  batches.
+- Work stops at the `awesome-screen-core-01` source-screening gate with its
+  complete source lifecycles, reconciled diagnostic provenance, schema
+  friction, and recommendation; all other batches remain blocked.
 
 ## Quality bar
 
@@ -145,9 +151,9 @@ reported command output.
 - For Stage 4, an incomplete pinned-catalog census, unaccounted or silently
   discarded link occurrences, lossy deduplication, unpinned repository
   identity, curator metadata presented as source evaluation, unverified
-  repository lineage, an outbound source opened before its gate, hidden
-  taxonomy or curriculum adoption, unsupported cross-source judgment, or
-  provenance overstatement.
+  repository lineage, a source outside the authorized batch, a search or second
+  hop, hidden taxonomy or curriculum adoption, unsupported cross-source
+  judgment, or provenance overstatement.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

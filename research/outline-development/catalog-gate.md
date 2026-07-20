@@ -1,7 +1,7 @@
 # V2 Catalog Gate
 
-**Status:** Awaiting maintainer review<br>
-**Authority:** V2-D007 structural landscape work only<br>
+**Status:** Approved 2026-07-20<br>
+**Authority:** V2-D007 package; approved by V2-D008<br>
 **Promotion:** None
 **New catalog destinations opened:** Zero
 
@@ -12,22 +12,34 @@ and proposes an exact program for evaluating every catalog family. It does not
 choose a taxonomy, draft an outline, admit evidence, or treat curator metadata
 as source evaluation.
 
-## Decisions requested
+## Approval outcome
 
-1. Accept or revise the catalog occurrence/exclusion rules and offline family
-   accounting.
-2. Accept or revise the Walking Labs curriculum analysis and ratify the bounded
-   Git-lineage interpretation described below.
-3. Accept, revise, or reject the complete 21-batch direct-screening program.
-4. Authorize `awesome-screen-core-01` as the first calibration batch, or name a
-   different exact batch. All other batches remain blocked unless explicitly
-   approved.
+The maintainer approved this gate, ratified the bounded Git-lineage
+interpretation, approved all 21 proposed batches as intended screening scope,
+and authorized only `awesome-screen-core-01` for execution. The other 20
+batches remain blocked pending later source-screening gates. The authorized
+batch is anchored to `awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c` (SHA-256
+`8ce00b2a284a2f789972f3322586497ff0450b734d3cf2d3ad8aec5d8f0169fc`).
+V2-D008 supersedes only `awesome-screen-core-01`'s historical
+`proposed_not_authorized` field in that immutable gate proposal; the batch's
+membership and constraints remain controlling.
 
-The recommendation is to approve the complete program as the intended route to
-evaluating the aggregator, but authorize execution of only
-`awesome-screen-core-01` now. Its 20 sources span 18 catalog categories and
-five apparent source forms, which makes it a useful test of the direct-screen
-schema before hundreds of opens compound a classification mistake.
+## Approved decision package
+
+1. The catalog occurrence/exclusion rules and offline family accounting were
+   accepted.
+2. The Walking Labs curriculum analysis was accepted and the bounded
+   Git-lineage interpretation was ratified.
+3. The complete 21-batch direct-screening program was approved as intended
+   scope.
+4. Only `awesome-screen-core-01` was authorized for execution; every other
+   batch remains blocked unless explicitly approved later.
+
+This accepted recommendation preserves calibration before scale. The first 20
+sources span 18 catalog categories and five apparent source forms, making the
+batch a useful test of the direct-screen schema before hundreds of opens could
+compound a classification mistake.
 
 ## Complete pinned-catalog accounting
 
@@ -118,7 +130,7 @@ outline baseline:
 The complete structural analysis and exact pinned evidence locations are in
 [`walkinglabs-curriculum.md`](walkinglabs-curriculum.md).
 
-## Repository lineage and the interpretation to ratify
+## Repository lineage and the ratified interpretation
 
 The two Awesome repositories have different roots and initial H2 structures,
 zero commit hash in common across the complete local graphs, different current
@@ -133,9 +145,8 @@ repository warning should be resolved without prohibited “implementation code
 or history.” The pass interpreted the explicit lineage requirement as allowing
 Git identity metadata only—heads, roots, commit graphs, README hashes/headings,
 the course-link introduction, and URL overlap—while implementation history
-remained prohibited. The maintainer must ratify or reject that interpretation.
-Rejecting it removes the lineage conclusion but does not invalidate the
-curriculum or catalog accounting.
+remained prohibited. The maintainer ratified that bounded interpretation in
+V2-D008. It does not establish editorial or source independence.
 
 ## Proposed evaluation program
 

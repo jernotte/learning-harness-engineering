@@ -2,19 +2,19 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005, V2-D006, and V2-D007, approved 2026-07-20
-**Current pass:** Catalog gate — inventory and curriculum-candidate analysis complete
+**Authority:** V2-D005 through V2-D008, approved 2026-07-20
+**Current pass:** Direct-screen calibration — `awesome-screen-core-01` only
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-Account for every qualifying resource occurrence in the pinned Awesome README,
-deduplicate source families without losing category context, analyze Walking
-Labs as an existing curriculum proposal, establish similarly named repository
-lineage, and prepare catalog-context triage plus exact source-opening batches
-for maintainer review. The pass does not open catalog destinations, choose a
-taxonomy, or draft an outline.
+Directly screen the exact 20 families in `awesome-screen-core-01` to test source
+identity, accessibility, relevance, scope, evidence posture, visible lineage,
+and the screening schema. The batch is anchored to
+`awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass does not search, follow a
+second hop, deep-read a source, choose a taxonomy, or draft an outline.
 
 ## Wave 1 authorization
 
@@ -149,8 +149,8 @@ and are explicitly retained in the source lifecycle and curriculum artifact.
 ## Search and traversal limits
 
 - No topical or ecosystem search.
-- No outbound catalog destination open without maintainer approval of an exact
-  batch.
+- Only the 20 direct URLs registered in `awesome-screen-core-01` may open.
+- Every other catalog batch and identity-resolution query remains blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -160,11 +160,9 @@ and are explicitly retained in the source lifecycle and curriculum artifact.
 
 ## Stop and checkpoint
 
-The stop condition is satisfied: the Walking Labs curriculum-bearing surface
-and repository lineage are structurally mapped; every Awesome README link
-occurrence is accounted for under declared rules; every qualifying occurrence
-has an offline family key or syntactically unresolved mapping plus catalog-
-context triage; and the diagnostic provenance state is reconciled. The pass now
-presents the complete census, exclusions, uncertainties, and exact proposed
-source-opening batches for maintainer approval before any new outbound family
-is opened.
+Stop when all 20 `awesome-screen-core-01` families have an honest direct-screen
+result or recorded access failure; each opened source has identity, inspected
+surface, accessibility, relevance, scope, evidence posture, visible lineage,
+and final disposition; schema friction and catalog-metadata corrections are
+explicit; and the batch's diagnostic native boundary is reconciled. Present
+that complete calibration for maintainer review before opening another batch.

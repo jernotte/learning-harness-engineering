@@ -14,9 +14,12 @@ curriculum, and learning artifacts do not constrain V2.
 The V2 authority reset and outline-development brief were approved on
 2026-07-20. V2-D007 later corrected Stage 4 after the maintainer clarified that
 the Awesome repository must be treated as a comprehensive lead catalog and the
-Walking Labs course as a curriculum candidate. The completed catalog inventory
-is now at its maintainer gate. Work remains on `codex/harness-engineering-v2`,
-which began at commit `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
+Walking Labs course as a curriculum candidate. The maintainer approved the
+completed catalog gate, ratified its bounded lineage interpretation, approved
+the 21-batch screening program as intended scope, and authorized only the
+20-source `awesome-screen-core-01` calibration batch. Work remains on
+`codex/harness-engineering-v2`, which began at commit
+`2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 
 The complete pre-pivot history remains recoverable from
 `codex/archive-pre-pivot-2026-07-20` at

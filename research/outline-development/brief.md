@@ -1,22 +1,27 @@
 # Harness Engineering V2 — Outline-Development Brief
 
-- **Status:** Approved by the maintainer on 2026-07-20
+- **Status:** Approved on 2026-07-20; amended by V2-D007 on 2026-07-20
 - **Stage:** 3 — outline-development brief
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
-**Approval effect:** V2-D005 and the linked review-limit decision V2-D006 are
-approved. This contract authorizes only bounded seed mapping. Each later
-checkpoint separately unlocks the next stage; brief approval does not approve
-an outline, authorize substantive research, or grant blanket
-conversation-export permission.
+**Approval effect:** V2-D005, the linked review-limit decision V2-D006, and the
+catalog-landscape correction V2-D007 are approved. This contract authorizes
+only structural seed, curriculum, and catalog mapping. Each later checkpoint
+separately unlocks the next stage; brief approval does not approve an outline,
+authorize substantive research, or grant blanket conversation-export
+permission.
 
 ## Approval record
 
 The maintainer explicitly approved V2-D005 and V2-D006 on 2026-07-20, adopting
 the audience, outcomes, scope, decision targets, organizational criteria,
-sequence criteria, seed boundary, provenance treatment, checkpoints, non-goals,
-outline approval test, and selective design-history policy below.
+sequence criteria, initial seed boundary, provenance treatment, checkpoints,
+non-goals, outline approval test, and selective design-history policy below.
+After Wave 1, the maintainer approved V2-D007: the unopened Wave 2 was
+withdrawn, Walking Labs became a mandatory curriculum candidate, and the
+Awesome repository became a comprehensive lead catalog with a new inventory
+gate before further outbound-source opens.
 
 The earlier configured external review covered the pre-hybrid version of this
 brief. The reviewer could not inspect the selective-history revision because a
@@ -205,96 +210,120 @@ No reading mode or sequence is preferred before the seed map. The skeleton
 comparison must evaluate linear, non-linear, hybrid, or other plausible modes
 against the approved audience and outcomes, and explain any option it omits.
 
-## Bounded seed investigation
+## Comprehensive seed, curriculum, and catalog investigation
 
-Brief approval authorizes only the following seed-mapping task. It is not a
-general literature review.
+Brief approval authorizes only the structural landscape work below. It is not a
+general literature review and does not establish findings.
 
-### Mandatory seed set
+### Mandatory structural inputs
 
 1. `https://asixiv.org/pdf/curated/2606.00001`
 2. `https://github.com/ai-boost/awesome-harness-engineering`
 3. `/Users/jernotte/Downloads/2606.24937v1_copy.pdf`
+4. `https://github.com/walkinglabs/learn-harness-engineering`
 
-The repository seed will be pinned to the commit observed when inspection
-begins. The local PDF will be identified by path, SHA-256, byte count, and
-modification time before content is used.
+The first three inputs and six-source Wave 1 were completed under the original
+V2-D005 boundary. V2-D007 adds the Walking Labs repository and changes the
+treatment of the Awesome repository. Repositories are pinned to observed
+commits. The local PDF remains identified by path, SHA-256, byte count, and
+modification time.
 
 For each PDF, inspect the complete outline-bearing surface: metadata, abstract,
 introduction, headings, section summaries or prose needed to understand the
-structure, conclusion or limitations, and references. For the repository,
-inspect its complete category/list organization and relevant repository-local
-framing or contribution documentation. Do not inspect implementation code or
-history beyond pinning identity.
+structure, conclusion or limitations, and references. Extract, without
+adopting, source-native vocabulary, topics, audience and outcomes, organization,
+prerequisites, assumptions, reference shape, omissions, tensions,
+counterframes, anchoring hazards, and materially different organizational
+possibilities.
 
-Extract, without adopting:
+### Walking Labs curriculum candidate
 
-- source-native definitions and vocabulary;
-- candidate topics and stated audience or outcomes;
-- organizational structure and implied prerequisites;
-- assumptions and reference shape;
-- tensions, omissions, and counterframes;
-- anchoring hazards; and
-- materially different organizational possibilities.
+Inspect the repository's complete English curriculum-bearing surface needed to
+understand its objectives, scope, definition, organizing model, lecture and
+project sequence, prerequisites, exercises, resource library, evidence claims,
+references, omissions, and intended outcomes. Translations, screenshots, build
+artifacts, generated coursebooks, and implementation templates need only be
+enumerated unless they materially change that structure.
 
-### First-hop eligibility
+Treat the course as an existing curriculum proposal, not as V2 authority or
+evidence that its five-subsystem framing, coding focus, sequence, projects, or
+claims are correct. Because its README names
+`walkinglabs/awesome-harness-engineering`, establish that repository's lineage
+with `ai-boost/awesome-harness-engineering` before treating their recurrence as
+independent.
 
-A first-hop candidate must be directly cited, named, or linked by one of the
-three seeds. A curated repository entry counts as one hop. Anything discovered
-inside a first-hop source is second hop and prohibited.
+### Awesome catalog inventory
 
-Before opening a first-hop source, record the unresolved outline decision it
-may affect:
+At the pinned `ai-boost/awesome-harness-engineering` commit:
 
-- definition or technical boundary;
-- audience or intended outcome;
-- organizing principle;
-- section granularity;
-- prerequisite or sequence;
-- treatment of a cross-cutting concern; or
-- material omission, tension, or counterframe.
+- declare a versioned catalog-rule manifest and extractor identity before
+  classification; the manifest defines recognized Markdown link constructs,
+  relative-target resolution, URL normalization, family-deduplication rules,
+  exclusion classes, and fail-closed handling of an unrecognized construct;
+- mechanically extract every Markdown link occurrence;
+- classify and record non-resource exclusions such as badges, navigation,
+  translations, assets, anchors, licenses, and community links;
+- retain every substantive outbound resource occurrence with its exact label,
+  URL, nearest category path, curator annotation, and source line;
+- canonicalize URLs and deduplicate them into source families while preserving
+  every occurrence and cross-category placement;
+- identify obvious repository, paper, documentation, standard, article,
+  benchmark, talk, course, collection, and tool forms without inferring quality;
+  and
+- merge known Wave 1 dispositions into the inventory without granting them
+  priority over the rest of the catalog.
 
-Selection precedence is:
+The deterministic catalog audit must prove that every extracted occurrence is
+exactly one of qualifying or mechanically excluded, and that every qualifying
+occurrence maps to exactly one canonical family or one unresolved identity.
+Neither URL normalization nor family grouping may perform a network request or
+silently resolve an uncertain alias.
 
-1. expected material effect on one of those outline decisions;
-2. a framing distinct from or adverse to the dominant seed framing;
-3. an original or primary source over a summary when practical;
-4. distinct evidence lineage; and
-5. low inspection cost for the expected structural information.
+Inventorying a URL is not opening or evaluating its source. Titles, categories,
+and annotations supplied by the aggregator remain curator-reported metadata.
+They may support catalog triage but cannot establish relevance, reliability,
+independence, implementation behavior, effectiveness, or an outline choice.
 
-Repetition, popularity, list prominence, and citation count are not selection
-reasons.
+### Catalog triage and source-opening boundary
 
-### Caps and search boundary
+Every unique catalog family receives a `catalog_triage_status` based only on the
+pinned catalog context: `candidate_for_direct_screening`, `defer`,
+`out_of_current_scope`, `unresolved_identity`, or `already_screened`. Each
+triage record states its reason, source-native category contexts, apparent
+evidence form, domain, likely outline-decision relevance, and known lineage or
+anchoring risk. These values are lead-management metadata, not provenance
+dispositions. Unopened leads emit no `disposition` event; `excluded` remains
+reserved for a source that was actually opened and inspected.
 
-- The three seeds are mandatory and do not count against the first-hop cap.
-- Open at most 12 unique first-hop source families, in two waves of at most six.
-- Overlapping references count once.
-- No more than six total first-hop sources may be attributable solely to one
-  seed without a documented reason accepted at a checkpoint.
-- Across the entire Stage 4 task, at most three exact-title or
-  identifier-resolution queries may locate already named direct citations. Run
-  one resolution query per tool call and count it in the first-hop register.
-- During the seed-only pass, such a query is permitted only when a seed's own
-  metadata is insufficient to identify an unopened Wave 1 candidate. Record
-  the resolution intent before the query; do not open the result before Wave 1
-  approval.
-- No topical search, ecosystem search, second-hop traversal, implementation
-  deep dive, or bibliography harvesting is authorized.
-- Stop below the cap when additional candidates are unlikely to change the
-  outline space.
+Accessibility for a previously unopened destination is `not_assessed` at this
+gate. Only an authorized prior open or access attempt may establish an
+accessible or inaccessible state; catalog wording alone may not.
 
-Exceeding 12 requires a maintainer-approved request naming the unresolved
-outline decision, why current material is insufficient, the exact direct
-first-hop candidates, and their expected decision impact. One extension of at
-most four sources is permitted. Otherwise preserve the uncertainty as an open
-question.
+The completed Wave 1 remains six `read_only` structural screens. The unopened
+Wave 2 is withdrawn and confers no priority. No previously unopened outbound
+catalog resource may be queried or opened before the catalog gate. At that
+gate, present:
 
-The first-hop register is the controlling cap record because the retained audit
-engine does not mechanically enforce hop eligibility or wave size. Each row
-must record source-family ID, direct seed attribution, exact direct-hop
-evidence, proposed wave, approving checkpoint, unresolved decision, selection
-reason, query use, and whether the source was opened.
+1. extraction completeness and exclusion classes;
+2. the deduplicated catalog and occurrence counts;
+3. Walking Labs curriculum analysis and Awesome-repository lineage;
+4. triage rules, statuses, uncertainty, accessibility state, and concentration
+   risks; and
+5. an exact proposed direct-screening or deep-reading set, divided into
+   reviewable batches when necessary.
+
+After approval, each direct-screening batch requires an exact register of source
+families, intended inspection depth, unresolved outline decision, expected
+structural effect, and any identity-resolution query. No global catalog-count
+ceiling applies, but the maintainer approves every source-opening batch.
+Anything discovered inside an opened catalog source is second hop and remains
+prohibited unless separately proposed and approved.
+
+No topical or ecosystem search, implementation deep dive, evidence promotion,
+legacy access, or outline drafting is authorized. Exact-title or identifier
+resolution may be proposed only for an already cataloged family whose identity
+cannot be determined from its URL; every query must be approved and logged
+before use.
 
 ## Provenance and evidence treatment
 
@@ -303,8 +332,8 @@ first external interaction.
 
 - Use the retained `diagnostic` audit profile. This stage performs no evidence
   promotion and must not use the `provisional-promotion` profile.
-- Capture the native interaction boundary from the first seed open through the
-  last authorized first-hop interaction.
+- Retain the completed seed and Wave 1 boundaries, and declare a separate native
+  boundary for each authorized curriculum, catalog, or later screening pass.
 - Reconcile the adapter immediately after the first authorized external
   interaction. Stop before widening activity if the runtime shape does not
   reconcile.
@@ -376,23 +405,25 @@ promotion.
 ### Stage 4 outputs
 
 - `research/outline-development/seed-map.md`
-- `research/outline-development/first-hop-register.md`
+- `research/outline-development/first-hop-register.md` as the historical Wave 1
+  and withdrawn-Wave-2 record
+- `research/outline-development/awesome-catalog-rules.json`
+- `research/outline-development/awesome-link-occurrences.jsonl`
+- `research/outline-development/awesome-source-families.json`
+- `research/outline-development/awesome-catalog-summary.md`
+- `research/outline-development/walkinglabs-curriculum.md`
 - `research/outline-development/claim-ledger.md` when the first material claim
   is declared
 - V2 source records for referenced material under `research/sources/`
 - `research/provenance/v2-outline-seed-map-auto.jsonl`
 - `research/provenance/v2-outline-seed-map-seed-annotations.json`
 - `research/provenance/v2-outline-seed-map-wave-1-annotations.json`
-- `research/provenance/v2-outline-seed-map-wave-2-annotations.json` when wave
-  two is approved
-- `research/provenance/v2-outline-seed-map-extension-annotations.json` when the
-  extension is approved
+- `research/provenance/v2-outline-seed-map-catalog-annotations.json`
+- separately named screening-batch annotations only after the catalog gate
 - `research/provenance/v2-outline-seed-map-seed-events.jsonl`
 - `research/provenance/v2-outline-seed-map-wave-1-events.jsonl`
-- `research/provenance/v2-outline-seed-map-wave-2-events.jsonl` when wave two
-  is approved
-- `research/provenance/v2-outline-seed-map-extension-events.jsonl` when the
-  extension is approved
+- `research/provenance/v2-outline-seed-map-catalog-events.jsonl`
+- separately named screening-batch event packages only after the catalog gate
 - `research/provenance/v2-outline-seed-map-events.jsonl`
 - `research/provenance/v2-outline-seed-map-resolutions.json` and
   `research/provenance/v2-outline-seed-map-resolved.jsonl` only if resolution
@@ -407,30 +438,38 @@ that artifact's authority, not its path.
 The seed map must separate per-source extraction from cross-source structural
 judgment. It will not claim field coverage or saturation.
 
+`awesome-catalog-summary.md` is a separate deterministic catalog audit derived
+from the rule manifest, occurrence stream, and family artifact. The retained
+provenance audit continues to validate runtime interactions, source lifecycle,
+claims, and completeness; it does not ingest unopened catalog leads or generate
+catalog counts.
+
 ### Maintainer checkpoints
 
 1. **Brief gate — satisfied.** V2-D005 and V2-D006 were approved before any
    seed was opened.
-2. **Seed-only gate — current.** After the three seeds are inspected, review
-   their source-native map, candidate register, provenance state, and the
-   proposed first wave of at most six first-hop sources. No first-hop source is
-   opened before approval.
-3. **First-hop wave gate.** After wave one, review what changed and approve,
-   revise, or reject the exact second wave of at most six sources.
-4. **Extension gate — conditional.** After wave two, if the 12-source cap is
-   exhausted while a material outline decision remains unresolved, review the
-   exact extension request and approve, revise, or reject at most four direct
-   first-hop sources. Register extension rows under this checkpoint. Skip this
-   gate when no extension is requested.
-5. **Seed-map gate.** Review the completed audited seed map and remaining gaps
-   before skeleton drafting.
-6. **Skeleton gate.** Review three materially different skeletons and select,
+2. **Seed-only and Wave 1 gates — satisfied historically.** The original three
+   seeds and six approved first-hop sources were structurally screened. The
+   later Wave 2 proposal was never approved or opened.
+3. **Catalog-correction gate — satisfied.** The maintainer approved V2-D007,
+   adding Walking Labs and comprehensive treatment of the Awesome catalog.
+4. **Catalog gate — current.** Review the complete occurrence inventory,
+   mechanical exclusions, deduplicated families, Walking Labs curriculum
+   analysis, repository lineage, catalog-context triage, unresolved identities,
+   concentration risks, and exact proposed source-opening batches. No new
+   outbound catalog family is opened before approval.
+5. **Source-screening gate or gates — conditional.** Review each approved
+   direct-screening batch and any resulting change to the proposed substantive
+   reading set. No second-hop source is opened implicitly.
+6. **Seed-map gate.** Review the completed audited structural landscape and
+   remaining gaps before skeleton drafting.
+7. **Skeleton gate.** Review three materially different skeletons and select,
    combine, reorder, or reject them.
-7. **Detailed-outline iteration.** Expand only the maintainer-directed
+8. **Detailed-outline iteration.** Expand only the maintainer-directed
    structure and visibly disposition requested changes.
-8. **Final outline gate.** Explicitly approve objectives, scope, organization,
+9. **Final outline gate.** Explicitly approve objectives, scope, organization,
    and sequence.
-9. **Post-outline stop.** A separate goal must define and authorize
+10. **Post-outline stop.** A separate goal must define and authorize
    substantive research.
 
 ## Stop conditions
@@ -440,20 +479,25 @@ Stop immediately and ask for direction if:
 - an unknown or unreconciled research-capable runtime interaction appears;
 - search or result capture is truncated, unparseable, or otherwise unknown;
 - the local PDF identity changes or cannot be verified;
-- a seed cannot be accessed or the repository cannot be pinned;
-- progress would require topical search, second-hop traversal, credentials,
-  paid access, or deep implementation inspection;
-- a cap is exhausted while a material structural question remains;
+- a mandatory source cannot be accessed or a repository cannot be pinned;
+- the catalog extractor cannot account for every README link occurrence under
+  the declared versioned rules, or either accounting invariant fails;
+- progress would require opening an outbound resource before the catalog gate,
+  topical search, second-hop traversal, credentials, paid access, or deep
+  implementation inspection;
 - a proposed factual claim requires evidence outside the approved boundary;
   or
 - evidence suggests changing the brief's objectives, scope, or method.
 
-Normal seed-map completion occurs when all three seeds and selected first-hop
-sources have final dispositions, the extraction matrix is complete, the
-diagnostic audit gate passes with zero errors and zero unresolved warnings, and
-further authorized first-hop inspection is unlikely to add a materially
-different organizational option. This is bounded seed-map completion, not
-field coverage or saturation.
+Normal structural-landscape completion occurs when the original seeds and Wave
+1 retain final dispositions; Walking Labs is structurally inspected; every
+qualifying Awesome occurrence is accounted for; canonical families,
+duplicates, exclusions, unresolved identities, and lineage are explicit; the
+maintainer-approved direct-screening or deep-reading set is complete; the
+diagnostic audit gate passes with zero errors and zero unresolved warnings; and
+further authorized screening is unlikely to add a materially different
+organizational option. This is completion against the pinned catalog and
+approved structural inputs, not field coverage or saturation.
 
 ## Non-goals
 
@@ -465,7 +509,7 @@ This program stage will not:
 - conduct implementation deep dives or effectiveness evaluation;
 - consult or re-admit legacy evidence;
 - finalize the post-outline research method;
-- produce curriculum, a site, or presentation tooling;
+- produce or adopt curriculum, a site, or presentation tooling;
 - promote source or claim maturity; or
 - authorize substantive research after outline approval.
 
@@ -492,7 +536,9 @@ Outline approval does not admit seed claims or authorize substantive research.
 
 ## Approved brief checklist
 
-The maintainer approved each of these decisions on 2026-07-20:
+The maintainer approved each of these decisions with V2-D005 on 2026-07-20;
+V2-D007 later superseded items 7, 8, 9, and the Stage 4 portion of item 11 as
+described below:
 
 1. builder-first primary audience and assumed baseline knowledge;
 2. design judgment and evidence-based evaluation as the leading outcomes;
@@ -502,15 +548,17 @@ The maintainer approved each of these decisions on 2026-07-20:
    section count;
 6. deferral of the reading mode and sequence until competing skeletons can be
    compared with explicit dependency tests;
-7. exact three-seed boundary and complete outline-bearing inspection surface;
+7. original three-seed boundary and complete outline-bearing inspection
+   surface — superseded for Stage 4 inputs by V2-D007;
 8. first-hop eligibility, two waves of six, and one optional four-source
-   extension;
+   extension — superseded by V2-D007;
 9. diagnostic, primary-only provenance; disposition, claim, output, and
-   stop-condition rules;
+   stop-condition rules — retained, with catalog-specific outputs and stops
+   amended by V2-D007;
 10. deliberate deferral of whether implementations, products, domains, cases,
    or sources organize the outline or play a supporting role;
-11. the nine-step maintainer-control sequence, including its conditional
-    extension gate;
+11. the original nine-step maintainer-control sequence — its Stage 4 wave and
+    extension gates are superseded by the V2-D007 catalog and screening gates;
 12. non-goals and post-outline stop; and
 13. the nine-part detailed-outline approval test; and
 14. selective design-history retention: concise canonical decision records,
@@ -520,3 +568,22 @@ The maintainer approved each of these decisions on 2026-07-20:
 This approval adopts the selective design-history policy but authorizes no raw
 packet export. Each proposed packet requires explicit approval of its exact
 selection manifest.
+
+### Approved V2-D007 amendment checklist
+
+The maintainer approved these corrections on 2026-07-20:
+
+1. Walking Labs as a pinned curriculum candidate, not outline authority;
+2. complete, auditable extraction of qualifying outbound occurrences from the
+   pinned Awesome README;
+3. canonical-family deduplication that preserves every category occurrence;
+4. explicit mechanical exclusion classes and unresolved identities;
+5. curator-context triage separated from direct source evaluation;
+6. repository-lineage verification before treating similarly named Awesome
+   repositories as independent;
+7. withdrawal of the unopened Wave 2 and removal of its caps and query
+   intentions from active authority;
+8. a blocking catalog gate before any new outbound source open; and
+9. continued prohibition of topical search, second-hop traversal,
+   implementation deep dives, evidence promotion, outline drafting, curriculum
+   adoption, and legacy readmission.

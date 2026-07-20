@@ -3,9 +3,9 @@
 ## Project goal
 
 Harness Engineering V2 is rebuilding its research program from a clean
-conceptual slate. The authority reset is complete. V2-D005 and V2-D006 approve
-an outline-first process whose active implementation stage is the bounded
-`v2-outline-seed-map` task. The final goal continues through a
+conceptual slate. The authority reset is complete. V2-D005, V2-D006, and
+V2-D007 approve an outline-first process whose active implementation stage is
+the gated `v2-outline-seed-map` catalog task. The final goal continues through a
 maintainer-approved outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
@@ -50,28 +50,37 @@ authority.
 - The reset does not inspect seed sources, admit subject evidence, define a
   substantive taxonomy, or begin downstream research.
 
-## Stage 4 acceptance criteria when seed mapping is in scope
+## Stage 4 acceptance criteria when structural mapping is in scope
 
-- V2-D005 and V2-D006 were approved before the first seed interaction.
-- The task inspects exactly the three mandatory seeds before the seed-only
-  checkpoint and does not open a first-hop source early.
-- The repository seed is pinned to the observed commit, and the local PDF has
-  path, SHA-256, byte count, modification time, and an independent recheck.
-- The native capture boundary is declared before interaction, reconciled after
-  the first external interaction, and audited under the `diagnostic` profile
-  with honest `complete_with_declared_manual_sources` treatment.
+- V2-D005 and V2-D006 were approved before the first seed interaction;
+  V2-D007 records the later catalog-method correction and explicitly withdraws
+  the never-opened Wave 2.
+- The original repository seed is pinned to the observed commit, the local PDF
+  has a verified fingerprint, and the Walking Labs curriculum repository is
+  pinned before structural inspection.
+- The completed seed and Wave 1 boundaries remain immutable. Each later
+  curriculum, catalog, or screening pass has an honest, separately declared
+  native boundary under the `diagnostic` profile.
 - Every opened source has identity, discovery path, inspected locations,
   reading depth, lineage, freshness or version state, and final disposition.
-- The seed map separates source-native extraction from cross-source structural
-  judgment and does not adopt a seed taxonomy or claim field completeness.
-- The first-hop register counts exact direct-hop evidence, seed attribution,
-  unresolved outline decision, wave, query use, approval checkpoint, and open
-  state. No topical search, second hop, implementation deep dive, or legacy
+- Every pinned Awesome README link occurrence is accounted for by an explicit
+  resource inclusion or mechanical exclusion rule. Deduplication preserves all
+  occurrence and category contexts, and unresolved identities remain visible.
+- Catalog titles, categories, ordering, recurrence, and curator annotations are
+  labeled as catalog metadata rather than direct source evaluation or evidence.
+- The Walking Labs analysis identifies objectives, scope, organizing model,
+  sequence, projects, assumptions, references, and omissions without adopting
+  its curriculum.
+- Similarly named Awesome repositories are not treated as independent until
+  their lineage is checked.
+- No previously unopened outbound catalog family is opened before the catalog
+  gate. No topical search, second hop, implementation deep dive, or legacy
   readmission occurs.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
-- Work stops at the seed-only gate with an unopened Wave 1 proposal of at most
-  six source families.
+- Work stops at the catalog gate with a complete pinned-file census,
+  catalog-context triage, unresolved items, and exact proposed source-opening
+  batches.
 
 ## Quality bar
 
@@ -133,9 +142,12 @@ reported command output.
 - Claims that historical adapter validation proves current or universal
   runtime coverage.
 - Scope drift into seed analysis, outline content, or substantive research.
-- For Stage 4, early first-hop access, incomplete seed surfaces, unpinned source
-  identity, weak direct-hop evidence, cap/query drift, hidden taxonomy adoption,
-  unsupported cross-source judgment, or provenance overstatement.
+- For Stage 4, an incomplete pinned-catalog census, unaccounted or silently
+  discarded link occurrences, lossy deduplication, unpinned repository
+  identity, curator metadata presented as source evaluation, unverified
+  repository lineage, an outbound source opened before its gate, hidden
+  taxonomy or curriculum adoption, unsupported cross-source judgment, or
+  provenance overstatement.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

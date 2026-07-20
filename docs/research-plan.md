@@ -35,23 +35,27 @@ criteria, evidence rules, non-goals, checkpoints, and outline approval criteria.
 **Exit gate:** Satisfied. Selective design-history exports still require
 separate packet-specific approval but do not otherwise block Stage 4.
 
-## Stage 4 — Bounded seed investigation
+## Stage 4 — Structural landscape and catalog investigation
 
-**Status:** Active at the first-hop wave gate. The seed-only pass and the exact
-six-source Wave 1 are complete. No Wave 2 identity query or source may be
-opened before the maintainer approves, revises, or rejects the registered
-proposal.
+**Status:** Active at the catalog phase under V2-D007. The original seed pass
+and six-source Wave 1 are complete. The former Wave 2 proposal is withdrawn and
+has no authority.
 
-Using the approved provenance path, inspect only:
+Using the approved provenance path, treat these as mandatory structural inputs:
 
 - `https://asixiv.org/pdf/curated/2606.00001`
 - `https://github.com/ai-boost/awesome-harness-engineering`
 - `/Users/jernotte/Downloads/2606.24937v1_copy.pdf`
+- `https://github.com/walkinglabs/learn-harness-engineering`
 
-At later maintainer-approved waves, screen only the first-hop references needed
-to understand the outline space. Throughout Stage 4, extract vocabulary,
-topics, assumptions, reference structure, omissions, tensions, and
-organizational possibilities without promoting findings.
+Inspect Walking Labs as a curriculum proposal, not authority. Inventory every
+qualifying outbound occurrence from the pinned AI Boost README, preserve its
+category context, deduplicate canonical source families, and record catalog-
+context triage and unresolved identities. Present the complete inventory,
+curriculum analysis, repository lineage, and exact proposed source-opening
+batches at the catalog gate. No new outbound catalog source is opened before
+approval. Throughout Stage 4, extract structural possibilities without
+promoting findings.
 
 ## Stage 5 — Competing outline skeletons
 

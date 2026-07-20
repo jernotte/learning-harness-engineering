@@ -32,23 +32,28 @@ post-outline research sequence.
 
 ## Current authorization
 
-The maintainer accepted the completed V2 repository reset and approved V2-D005
-and V2-D006 on 2026-07-20. The current authorized work is the seed-only pass of
-the bounded Stage 4 task in `research/outline-development/brief.md`. Inspect
-only the three mandatory seeds and their complete outline-bearing surfaces.
-Pin the repository identity and fingerprint the local PDF before using its
-content. Do not open a first-hop source before the seed-only gate. Do not run a
-topical or ecosystem search, follow a second hop, perform an implementation
-deep dive, draft an outline, select cases, synthesize findings, produce
-curriculum, build a site, promote evidence maturity, or re-admit legacy
-evidence.
+The maintainer accepted the completed V2 repository reset and approved V2-D005,
+V2-D006, and the Stage 4 catalog correction V2-D007 on 2026-07-20. The original
+three-seed pass and six-source Wave 1 are complete. The unopened Wave 2 is
+withdrawn and has no active authority.
 
-The only search permitted during the seed-only pass is an exact-title or
-identifier-resolution query for an already named direct citation whose seed
-metadata is insufficient to identify an unopened Wave 1 candidate. The
-stage-wide maximum is three, each query runs in its own tool call, and every
-query is recorded in the first-hop register. Do not open a resolved result
-before Wave 1 approval.
+Current work is the catalog phase in
+`research/outline-development/brief.md`. Pin and structurally inspect
+`walkinglabs/learn-harness-engineering` as a curriculum candidate without
+adopting it. From the already pinned
+`ai-boost/awesome-harness-engineering` README, mechanically enumerate every
+qualifying outbound resource occurrence, preserve category and curator context,
+deduplicate canonical source families, record exclusions and unresolved
+identities, and prepare catalog-context triage. Check the lineage of the
+similarly named Walking Labs Awesome repository before treating recurrence as
+independent.
+
+Do not open or query a previously unopened outbound catalog source before the
+catalog gate. Do not run a topical or ecosystem search, follow a second hop,
+perform an implementation deep dive, draft an outline, select cases, synthesize
+findings, produce or adopt curriculum, build a site, promote evidence maturity,
+or re-admit legacy evidence. An exact-title or identifier-resolution query for
+an ambiguous catalog identity requires separate preapproval and logging.
 
 ## Clean-slate boundary
 
@@ -181,8 +186,8 @@ requires them. That location may require explicit write approval. Do not copy
 large third-party repositories into this project or work around permission
 boundaries.
 
-The three named seed resources remain unopened under V2 until the
-outline-development brief is approved.
+Third-party curriculum and catalog repositories are structural inputs only;
+their internal organization and outbound links confer no V2 authority.
 
 ## Working discipline
 

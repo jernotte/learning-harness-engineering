@@ -21,36 +21,57 @@ Before seed inspection, define the intended audience and outcomes, technical
 scope choices, organizing and sequencing criteria, evidence treatment,
 non-goals, and approval test for the outline itself.
 
-### 3. Inspect the bounded seed set
+### 3. Inspect the named structural inputs
 
-Capture and inspect only the three maintainer-named resources plus the bounded
-first-hop references needed to understand the outline space. Treat headings,
-topic lists, and terminology as source-native proposals. Do not turn recurrence
-into an adopted taxonomy or use the old repository structure as a comparison
-baseline.
+Capture the original seeds and the maintainer-named Walking Labs curriculum
+candidate. Treat headings, topic lists, learning objectives, projects,
+terminology, and sequence as source-native proposals. Do not turn recurrence
+into an adopted taxonomy, adopt an existing curriculum, or use the old V2
+repository structure as a comparison baseline.
 
-### 4. Separate extraction from organization
+### 4. Enumerate the complete pinned catalog
+
+Mechanically extract every qualifying outbound occurrence from the pinned AI
+Boost README. Preserve exact location, category, label, annotation, and repeated
+placements; record non-resource exclusion rules and counts. Canonicalize and
+deduplicate source families without discarding the occurrence-level record.
+
+List order, category placement, recurrence, and curator descriptions are
+metadata, not evidence. Apparent independence must be checked for forks,
+mirrors, shared authorship, shared datasets, and derivative summaries.
+Inaccessible or ambiguous targets remain visible rather than disappearing from
+the census.
+
+### 5. Triage before opening
+
+Give every catalog family an explicit preliminary recommendation and reason
+using only catalog-visible information. Separate likely harness relevance,
+source form, domain, evidence mode, lineage risk, and possible outline impact
+from claims about the source itself. Stop for maintainer approval of the exact
+source-opening batches before direct screening or substantive reading.
+
+### 6. Separate extraction from organization
 
 First record vocabulary, candidate topics, assumptions, omissions, tensions,
 and reference structure. Only then develop multiple organizations. This keeps
 the sources from silently supplying both the content universe and its final
 shape.
 
-### 5. Compare competing skeletons
+### 7. Compare competing skeletons
 
 Each candidate structure must identify its organizing principle, sequence,
 dependency logic, fit to the approved objectives, benefits, risks, blind spots,
 and anchoring hazards. The primary recommends one, but the maintainer may
 select, combine, reorder, or reject them.
 
-### 6. Develop the detailed outline
+### 8. Develop the detailed outline
 
 The selected direction expands into objectives, scope and exclusions, sections
 and subsections, inclusion and ordering rationales, research questions,
 dependencies, cross-cutting concerns, required evidence types, open choices,
 uncertainty, and deliberate omissions.
 
-### 7. Stop for explicit approval
+### 9. Stop for explicit approval
 
 The outline becomes governing only when the maintainer approves its objectives,
 scope, organization, and sequence. Approval of the outline does not admit seed
@@ -61,6 +82,9 @@ plan is a separate task.
 
 - Do not import pre-pivot labels as neutral vocabulary.
 - Do not assume the seed sources are complete, independent, or correct.
+- Do not confuse complete coverage of one pinned catalog with field coverage.
+- Do not treat catalog recurrence, ordering, or curator language as source
+  evaluation or independent corroboration.
 - Distinguish a topic's presence in a source from evidence that the topic is
   important, general, effective, or pedagogically prior.
 - Preserve competing definitions and structures when the seed set cannot

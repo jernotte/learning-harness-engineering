@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** First-hop Wave 1 complete; awaiting Wave 2 gate
+**Status:** Wave 1 complete; V2-D007 catalog correction active
 
 **Authority:** Approved outline-development brief
 
@@ -426,7 +426,8 @@ unapproved:
    entropy pressures.
 
 This is not a draft outline. It is a compact statement of the dependency
-pressure that Wave 2 should try to falsify or complicate.
+pressure that the catalog landscape and any later maintainer-approved source
+openings should test rather than inherit.
 
 ### Shared omissions and risks
 
@@ -460,8 +461,19 @@ The most consequential remaining structural questions are:
 - whether a trust-boundary failure source materially strengthens a
   failure-first route or only imports an adjacent security track.
 
-The exact unopened Wave 2 proposal in `first-hop-register.md` targets those
-questions while shifting attribution away from the curated repository.
+The former Wave 2 proposal in `first-hop-register.md` was withdrawn before
+approval. V2-D007 requires the complete pinned Awesome catalog and Walking Labs
+curriculum candidate to be mapped before new outbound sources are selected.
+
+## V2-D007 method correction
+
+Wave 1 remains a completed six-source structural screen, but it no longer
+defines the selection path forward. The Awesome repository is now treated as a
+lead catalog whose complete qualifying outbound occurrence universe must be
+inventoried and deduplicated without turning curator categories into evidence.
+Walking Labs is evaluated as an existing curriculum proposal, not adopted as an
+outline. The next cross-source structural judgment will be made only after the
+catalog and curriculum artifacts reach their maintainer gate.
 
 ## Provenance state
 

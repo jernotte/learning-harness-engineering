@@ -2,18 +2,19 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005 and V2-D006, approved 2026-07-20
-**Current pass:** First-hop wave gate after completed Wave 1
+**Authority:** V2-D005, V2-D006, and V2-D007, approved 2026-07-20
+**Current pass:** Catalog inventory and curriculum-candidate analysis
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-Determine how the six approved first-hop Wave 1 source families change the
-plausible boundary, organizing principles, prerequisites, sequence, omissions,
-tensions, and counterframes exposed by the mandatory seeds. The pass prepares
-an exact unopened Wave 2 proposal; it does not choose a taxonomy or draft an
-outline.
+Account for every qualifying resource occurrence in the pinned Awesome README,
+deduplicate source families without losing category context, analyze Walking
+Labs as an existing curriculum proposal, establish similarly named repository
+lineage, and prepare catalog-context triage plus exact source-opening batches
+for maintainer review. The pass does not open catalog destinations, choose a
+taxonomy, or draft an outline.
 
 ## Wave 1 authorization
 
@@ -27,7 +28,8 @@ unregistered sources.
 Wave 1 is complete. All six approved source families received `read_only`
 structural dispositions. No search, resolution query, second-hop open,
 implementation deep dive, claim declaration, or evidence promotion occurred.
-The exact Wave 2 proposal remains unopened pending the first-hop wave gate.
+The exact Wave 2 proposal was never approved or opened and is withdrawn by
+V2-D007. Its planned queries were never used.
 
 ## Mandatory seed coverage
 
@@ -36,6 +38,7 @@ The exact Wave 2 proposal remains unopened pending the first-hop wave gate.
 | `v2-seed-asixiv-2606-00001` | `https://asixiv.org/pdf/curated/2606.00001` | Direct public seed URL | Metadata, abstract, introduction, headings, section summaries or necessary structural prose, conclusion or limitations, references |
 | `v2-seed-awesome-harness-engineering` | `https://github.com/ai-boost/awesome-harness-engineering` | Public repository, structure-only | Repository identity, README and repository-local framing, complete category/list organization, contribution guidance when relevant; no implementation code or history beyond identity pinning |
 | `v2-seed-local-2606-24937v1` | `/Users/jernotte/Downloads/2606.24937v1_copy.pdf` | Declared manual source | Path, SHA-256, bytes, modification time, independent recheck, metadata, abstract, introduction, headings, section summaries or necessary structural prose, conclusion or limitations, references |
+| `v2-curriculum-walkinglabs-learn-harness-engineering` | `https://github.com/walkinglabs/learn-harness-engineering` | Public repository, curriculum structure | Repository identity and pin; English curriculum-bearing README, lecture/project navigation and objectives, sequence, resource-library and reference surface, omissions and assumptions; no implementation deep dive or history beyond identity/lineage checking |
 
 ### Post-declaration manual-source access note
 
@@ -65,15 +68,34 @@ For each seed, record without adopting:
 - anchoring hazards; and
 - materially different organizational possibilities.
 
+For the Awesome README catalog, additionally record every Markdown occurrence,
+mechanical inclusion or exclusion, exact line and heading path, label, raw and
+normalized URL, curator annotation, canonical-family mapping, duplicate or
+alias relation, apparent source form, catalog-only triage, and uncertainty.
+Catalog metadata never substitutes for opening a source.
+
+Before classification, record a versioned rule manifest and extractor identity
+that define the recognized Markdown constructs, relative-target resolution,
+URL normalization, family-deduplication rules, exclusion classes, and
+fail-closed handling. The generated catalog audit must prove:
+
+- all occurrences = qualifying occurrences + mechanically excluded
+  occurrences; and
+- every qualifying occurrence maps to exactly one canonical family or one
+  unresolved identity.
+
+An unopened destination has accessibility state `not_assessed`. Only an
+authorized earlier open or access attempt may establish accessibility.
+
 ## Interaction boundary
 
 - Primary agent only for every external interaction.
 - Native rollout:
   `/Users/jernotte/.codex/sessions/2026/07/20/rollout-2026-07-20T00-42-48-019f7e0c-5fbb-7121-873a-3d2df5c0aa79.jsonl`.
-- The capture window begins immediately before the first seed interaction and
-  remains open through the last authorized Stage 4 first-hop interaction.
-- Re-ingest and reconcile immediately after the first external interaction and
-  at every Stage 4 checkpoint.
+- Completed seed and Wave 1 boundaries remain immutable. Each catalog,
+  curriculum, or later screening pass receives a separate declared window.
+- Re-ingest and reconcile immediately after the first external interaction in
+  each new pass and at every Stage 4 checkpoint.
 - No transcript-prefix archive is requested and no selective conversation
   packet is authorized.
 
@@ -93,22 +115,32 @@ authorized same-seed reinspection used to identify unopened Wave 2 leads. The
 window contains no topical query or second-hop open. Semantic annotation and
 append-only observation resolution are recorded in the Wave 1 event package.
 
+A user-requested, top-level Walking Labs README orientation occurred after the
+Wave 1 checkpoint but before V2-D007 was recorded. It followed no outbound
+link and informed only the method correction. The catalog provenance package
+must retro-ingest and explicitly label that tight native window; it may not
+pretend the interaction occurred after the amendment. It receives the normal
+`source_opened` -> `source_inspected` -> `read_only` lifecycle with inspection
+extent `screening` and the exact scope `top-level README; no outbound links
+followed`.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
-- No second-hop traversal, bibliography harvesting, implementation deep dive,
-  or legacy-material access.
-- During the seed-only pass, use an exact-title or identifier-resolution query
-  only when seed metadata is insufficient to identify an unopened Wave 1
-  candidate. Record intent first, run one query per tool call, count it against
-  the Stage 4 maximum of three, and do not open the result before Wave 1
-  approval.
-- No first-hop source open before the seed-only maintainer gate.
+- No outbound catalog destination open before the catalog gate.
+- No second-hop traversal, destination bibliography harvesting,
+  implementation deep dive, or legacy-material access.
+- Mechanical README extraction performs no network request and creates no
+  source-open event for outbound URLs.
+- An exact-title or identifier-resolution query for an ambiguous catalog
+  identity requires separate maintainer approval and predeclared intent.
 
 ## Stop and checkpoint
 
-Stop after all six Wave 1 families have final dispositions, their structural
-effects and lineage limits are recorded, the diagnostic provenance state is
-reconciled, and an exact unopened Wave 2 proposal of at most six direct source
-families is ready. Present those artifacts for maintainer approval before any
-Wave 2 identity query or source open.
+Stop when the Walking Labs curriculum-bearing surface and repository lineage
+are structurally mapped, every Awesome README link occurrence is accounted for
+under declared rules, every qualifying occurrence has a canonical or unresolved
+family mapping and catalog-context triage, and the diagnostic provenance state
+is reconciled. Present the complete census, exclusions, uncertainties, and
+exact proposed source-opening batches for maintainer approval before any new
+outbound family is opened.

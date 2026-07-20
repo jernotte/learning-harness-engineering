@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** First-hop wave gate — Wave 1 complete, Wave 2 proposed
+**Current phase:** Catalog phase — V2-D007 amendment approved, inventory pending
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,9 +9,10 @@
 
 ## Current objective
 
-Present the completed six-source Wave 1 structural map and exact unopened
-six-source Wave 2 proposal for maintainer review. Stop before any Wave 2
-identity query or source open.
+Inspect Walking Labs as a curriculum candidate and produce a complete,
+deduplicated, curator-context triage of every qualifying outbound resource in
+the pinned Awesome README. Stop at the catalog gate before opening any new
+outbound family.
 
 ## Authority state
 
@@ -26,11 +27,11 @@ identity query or source open.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 and V2-D006 were explicitly approved on 2026-07-20.
+- V2-D005, V2-D006, and V2-D007 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
-Completed within the approved seed-only pass and Wave 1:
+Completed before the V2-D007 correction:
 
 - initialized task `v2-outline-seed-map` and its diagnostic provenance boundary;
 - inspected the complete eleven-page asixiv seed and the complete
@@ -52,22 +53,36 @@ Completed within the approved seed-only pass and Wave 1:
   and therefore do not independently corroborate one another;
 - recorded the resulting pressure toward a constraints-to-decisions journey
   without adopting it as an outline; and
-- prepared an exact unopened Wave 2 proposal that shifts attribution away from
-  the curated repository and targets the remaining structural questions.
+- prepared an exact unopened Wave 2 proposal that was never approved, queried,
+  or opened and is now withdrawn in full.
 
 No search or resolution query was needed or used. No reference discovered
-inside a first-hop source was opened. Wave 2 has not been approved.
+inside a first-hop source was opened.
+
+Currently authorized by V2-D007:
+
+- pin and structurally inspect `walkinglabs/learn-harness-engineering` as a
+  curriculum candidate without adopting it;
+- mechanically extract every Markdown link occurrence from the pinned
+  `ai-boost/awesome-harness-engineering` README;
+- record auditable non-resource exclusions, preserve every qualifying category
+  occurrence, normalize URLs, and deduplicate canonical source families;
+- prepare catalog-context triage, unresolved identities, lineage risks, and an
+  exact proposed source-opening set; and
+- check the relationship between the `ai-boost` repository and the similarly
+  named Walking Labs Awesome repository.
 
 Still not authorized:
 
-- topical or ecosystem search, second-hop traversal, or bibliography
-  harvesting;
+- opening or querying a previously unopened outbound catalog family before the
+  catalog gate;
+- topical or ecosystem search or second-hop traversal;
 - implementation or technique deep dives;
-- case selection, synthesis, curriculum, or site work;
+- case selection, synthesis, or site work;
 - evidence maturity promotion;
 - legacy evidence readmission;
 - drafting the subject outline itself; and
-- any Wave 2 identity query or source open before the first-hop wave gate.
+- producing or adopting curriculum or learning artifacts.
 
 ## Validation and review state
 
@@ -145,16 +160,26 @@ transmitted, the configured external reviewer did not review this revision, and
 it will not be retried or circumvented. V2-D006 records the one-time
 local-review fallback and its limits.
 
-The maintainer explicitly approved V2-D005 and V2-D006 on 2026-07-20. The
-one-time fallback is closed for the selective-history documentation revision
-only; it does not waive configured review for Stage 4 source work. The approved
-brief is now controlling, and the seed-only pass is authorized.
+The maintainer explicitly approved V2-D005, V2-D006, and V2-D007 on 2026-07-20.
+The one-time fallback is closed for the selective-history documentation
+revision only; it does not waive configured review for Stage 4 source work. The
+amended brief is controlling, and only the catalog phase is currently
+authorized.
 
-The reviewer contract is now versioned with bounded Stage 4 criteria.
+The reviewer contract now states the V2-D007 catalog criteria. The provenance
+suite, local Markdown-link check, and `git diff --check` pass for the amendment.
+Two bounded local audits accepted and closed six issues: catalog triage now has
+non-disposition vocabulary; extraction uses a versioned rule manifest and two
+accounting invariants; unopened accessibility is `not_assessed`; catalog metrics
+come from a separate deterministic audit; the stale active Wave 2 instruction
+is gone; and its original selection rationales remain preserved as withdrawn,
+non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review what changed and approve, revise, or reject the exact
-unopened Wave 2 proposal in `research/outline-development/first-hop-register.md`.
-No Wave 2 resolution query or source may be opened before that decision.
-Selective raw conversation packets remain separately gated per packet.
+The maintainer will review the complete Awesome occurrence inventory,
+mechanical exclusions, canonical-family deduplication, Walking Labs curriculum
+analysis, repository lineage, catalog-context triage, unresolved identities,
+and exact proposed source-opening batches. No new outbound catalog family is
+opened before that decision. Selective raw conversation packets remain
+separately gated per packet.

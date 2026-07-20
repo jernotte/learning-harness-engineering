@@ -25,12 +25,52 @@ search executed
 A search snippet is never evidence. If its content affects analysis, open and
 log the source.
 
+Catalog-led discovery has a separate pre-open funnel:
+
+```text
+catalog link occurrence enumerated
+  -> non-resource exclusion or candidate occurrence
+  -> canonical source family assigned or identity left unresolved
+  -> catalog-context triage recommendation
+  -> maintainer-approved source opening
+  -> source inspected
+  -> read_only, referenced, or excluded
+```
+
+Enumeration and triage do not mean a destination was opened. A catalog title,
+category, or annotation remains curator-reported metadata until the linked
+source is directly inspected.
+
 `Read only` means the source was inspected and retained as context or a lead but
 does not support a current artifact. `Referenced` means it supports, opposes, or
 materially contextualizes a declared claim. `Excluded` is available only after
 inspection and requires a reason. Disposition changes are append-only.
 
-## Two source levels
+## Catalog occurrences and source levels
+
+A catalog occurrence is below the source-family level. Each occurrence retains
+the pinned catalog identity, exact README line and heading path, displayed
+label, raw and normalized URL, curator annotation, mechanical inclusion or
+exclusion class, and canonical-family mapping when one can be established
+without network access. Repeated placements remain separate occurrences even
+when they map to one family.
+
+Counts must distinguish all Markdown link occurrences, mechanically excluded
+non-resource occurrences, qualifying resource occurrences, normalized URLs,
+canonical families, unresolved identities, opened families, and accessibility
+states. A previously unopened destination is `not_assessed`; only an authorized
+open or access attempt may establish accessible or inaccessible. “Complete
+catalog” means complete against one pinned file and its declared qualifying-link
+rules, not complete coverage of the field or Internet.
+
+The versioned catalog rule manifest records the extractor identity, recognized
+Markdown constructs, relative-target resolution, URL normalization,
+family-deduplication rules, exclusion classes, and fail-closed behavior. Its
+deterministic audit must enforce both accounting invariants: all extracted
+occurrences equal qualifying plus mechanically excluded occurrences, and each
+qualifying occurrence maps to exactly one canonical family or one unresolved
+identity. Catalog triage fields and values are not provenance dispositions and
+must not generate lifecycle events for unopened leads.
 
 Every opened source receives a lightweight identity and source events. A source
 used by a material claim also receives a full narrative record under
@@ -71,6 +111,11 @@ Each opened source event records:
 - artifact and claim IDs when referenced;
 - version or freshness state and primary-verification state.
 
+For catalog-discovered sources, discovery provenance additionally retains all
+catalog occurrence IDs and any known duplicate, alias, fork, mirror, shared-
+author, shared-dataset, or derivative-summary relationship. Unverified
+canonicalization remains explicit rather than being forced into one family.
+
 Host and lineage are separate. Shared hosting does not imply common origin, and
 separate articles do not imply independence.
 
@@ -105,9 +150,11 @@ claims. Maintainer approval of an outline approves objectives, scope,
 organization, and sequence; it does not promote seed statements into research
 findings.
 
-Every opened seed or first-hop source still requires source events and a final
-disposition. If the outline or supporting rationale must make a material factual
-claim, the normal record, ledger, mapping, and verification rules apply.
+Every opened seed, curriculum candidate, catalog-screened family, or approved
+substantive source still requires source events and a final disposition.
+Unopened catalog occurrences remain lead inventory and do not receive false
+source-open events. If the outline or supporting rationale must make a material
+factual claim, the normal record, ledger, mapping, and verification rules apply.
 
 ## Native observation resolution
 
@@ -152,6 +199,16 @@ Generated audits report:
 - missing records, mappings, verification, or review scope;
 - concentration warnings and their dispositions;
 - native-observation resolution and completeness status.
+
+At a catalog checkpoint, a separate deterministic catalog audit reports raw
+occurrence totals, qualifying and mechanically excluded counts, normalized URL
+and canonical-family counts, duplicate and unresolved mappings, triage
+distribution, and accessibility state. It is derived from the versioned rule
+manifest plus the occurrence and family artifacts. The retained provenance
+audit remains unchanged and continues to report only source lifecycle, runtime
+capture, claims, and evidence completeness; unopened catalog leads never become
+synthetic source events. These catalog measures do not change evidence
+maturity.
 
 Warnings are prompts for judgment, not quotas. A checkpoint either performs
 more work or explains why the concentration fits the bounded question.

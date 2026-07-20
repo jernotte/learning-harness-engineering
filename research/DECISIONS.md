@@ -275,3 +275,81 @@ The maintainer explicitly approved this one-time fallback together with
 V2-D005 on 2026-07-20. The limitation and reopening condition remain in force;
 this approval does not characterize the selective-history revision as
 externally reviewed or waive configured review for Stage 4 source work.
+
+## V2-D007 — Comprehensive catalog landscape correction
+
+**Status:** Approved
+**Date:** 2026-07-20
+
+### Context
+
+After the first six-source structural wave, the maintainer clarified that
+`walkinglabs/learn-harness-engineering` must be examined as an existing learning
+and curriculum artifact, and that `ai-boost/awesome-harness-engineering` is a
+resource aggregator whose outbound resources must be inventoried and evaluated
+rather than sampled as though the repository itself were one ordinary source.
+The preceding 12-source first-hop design therefore answered a narrower question
+than the maintainer intended.
+
+### Decision
+
+Amend V2-D005 and the Stage 4 brief as follows:
+
+- withdraw the unopened Wave 2 proposal in full; its six rows remain historical
+  leads and confer no priority or authority;
+- add `walkinglabs/learn-harness-engineering` as a mandatory structural and
+  curriculum candidate, to be inspected without adopting its objectives,
+  taxonomy, sequence, projects, or claims;
+- treat the pinned `ai-boost/awesome-harness-engineering` README as a lead
+  catalog: mechanically extract every substantive outbound resource,
+  preserve all category and curator contexts, canonicalize and deduplicate
+  source families, and record mechanical exclusions;
+- distinguish catalog-context triage from direct source evaluation. An
+  aggregator title or annotation is curator-reported metadata, not evidence
+  that the linked source is relevant, reliable, independent, or effective;
+- inspect the relationship between the `ai-boost` repository and the
+  `walkinglabs/awesome-harness-engineering` identity named by the course before
+  treating either as independent; and
+- stop at a catalog gate with the complete inventory, curriculum analysis,
+  lineage result, triage rules, and proposed direct-screening or deep-reading
+  set. No previously unopened outbound resource may be opened before that gate.
+
+The comprehensive inventory has no arbitrary source-count ceiling. Later
+source opens remain bounded by explicit maintainer-approved batches. Topical
+or ecosystem search, second-hop traversal, implementation deep dives, evidence
+promotion, outline drafting, and legacy readmission remain unauthorized.
+
+### Alternatives considered
+
+- **Retain the 12-source sample.** Rejected because it leaves most of the
+  maintainer-named aggregator unevaluated and lets the curator's unexplored
+  selection silently define the visible landscape.
+- **Adopt the Walking Labs course structure as the outline baseline.** Rejected
+  because it is an existing coding-agent curriculum with its own objectives and
+  sequence; clean-slate V2 must evaluate it as a candidate artifact rather than
+  inherit it.
+- **Deep-read every aggregated source immediately.** Rejected because inventory,
+  metadata triage, direct screening, and evidence-bearing analysis are
+  different maturity levels. Collapsing them would create large unreviewed
+  scope before the maintainer can inspect the landscape and selection rules.
+
+### Consequences and next gate
+
+The completed Wave 1 remains valid only as six `read_only` structural screens.
+The old Wave 2, extension, three-query ceiling, and 12-source completion rule no
+longer control Stage 4. The next blocking checkpoint is the catalog gate. The
+maintainer will review the inventory's completeness and exclusions, the
+Walking Labs analysis, repository lineage, triage framework, and exact proposed
+source-opening set before any new outbound source is opened.
+
+### Design-history disposition
+
+Candidate `V2-HIST-003` — the maintainer's clarification that the Awesome
+repository must be treated as an aggregator and evaluated through its linked
+resources, together with the resulting withdrawal of Wave 2. No packet export
+or manifest is approved.
+
+### Approval record
+
+The maintainer explicitly agreed with this assessment and plan and directed it
+to be implemented on 2026-07-20.

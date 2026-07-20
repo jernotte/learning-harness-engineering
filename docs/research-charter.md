@@ -19,7 +19,8 @@ The program is therefore outline-first:
 
 1. establish a clean repository authority boundary;
 2. approve the criteria by which an outline will be judged;
-3. inspect a bounded seed set without adopting its structure;
+3. inspect the maintainer-named structural inputs and complete pinned catalog
+   without adopting their structures;
 4. compare materially different organizations;
 5. develop and approve one detailed outline;
 6. create a separate substantive research plan only afterward.
@@ -37,8 +38,8 @@ Until the outline-development brief is approved, V2 has not fixed:
 - the appropriate case-study, synthesis, or curriculum structure;
 - the order, depth, or stopping criteria of later research.
 
-The repository name and the three seed resources identify an area of inquiry,
-not an accepted answer to these questions.
+The repository name and maintainer-named structural inputs identify an area of
+inquiry, not an accepted answer to these questions.
 
 ## Evidence standards retained during the reset
 

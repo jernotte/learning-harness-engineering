@@ -4,10 +4,11 @@
 
 V2 currently has **zero admitted subject-evidence coverage**.
 
-No seed source, first-hop reference, implementation, paper, documentation set,
-case, claim, synthesis, taxonomy, or learning artifact has been admitted into
-the V2 subject corpus. The completed seed and Wave 1 inspections are
-`read_only` outline-development inputs, not promoted evidence or findings.
+No seed source, first-hop reference, catalog-screened family, curriculum
+candidate, implementation, paper, documentation set, case, claim, synthesis,
+taxonomy, or learning artifact has been admitted into the V2 subject corpus.
+The completed seed and Wave 1 inspections are `read_only` outline-development
+inputs, not promoted evidence or findings.
 
 ## Outline-development screening coverage
 
@@ -25,11 +26,12 @@ engineering articles, and it remains coding-agent weighted. The two Hu Wei
 papers have substantial corpus-lineage overlap and do not independently
 corroborate one another.
 
-The exact unopened Wave 2 proposal targets six remaining structural questions:
-long-running control, retained human authority and operating economics, an
-older cognitive-architecture counterframe, protocol boundaries, non-coding
-evaluation, and adversarial environmental input. It remains a proposal, not
-coverage, until the maintainer approves it and the sources are inspected.
+The prior six-source Wave 2 proposal was withdrawn before approval. None of its
+sources or planned identity queries was opened, so it contributes no coverage.
+The next authorized work is a complete census of one pinned Awesome catalog,
+catalog-context triage of its unique resource families, and structural analysis
+of the Walking Labs curriculum candidate. Catalog completeness will describe
+only that pinned README under declared link rules, not the field.
 
 ## Legacy boundary
 
@@ -47,5 +49,5 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the Wave 2 gate and inspection, or earlier if the
-maintainer revises the structural questions or stops Stage 4 below the cap.
+Update this file at the catalog gate with occurrence, exclusion, canonical-
+family, unresolved-identity, and curriculum-analysis coverage.

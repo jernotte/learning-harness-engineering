@@ -2,10 +2,11 @@
 
 There are currently no admitted V2 subject sources.
 
-After the outline-development brief authorizes bounded seed inspection, every
-opened source receives a lightweight identity, inspection event, and final
-disposition. Create a full narrative record here only when the source supports,
-opposes, or materially contextualizes a material claim. Use
+During authorized outline development, every opened source receives a
+lightweight identity, inspection event, and final disposition. Catalog link
+occurrences that have not been opened remain lead inventory and do not receive
+false source events. Create a full narrative record here only when the source
+supports, opposes, or materially contextualizes a material claim. Use
 `../templates/source.md` as a starting point.
 
 Name records with stable source IDs and readable filenames. Preserve exact

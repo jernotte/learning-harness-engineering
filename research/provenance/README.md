@@ -5,9 +5,10 @@ under `tools/provenance/` plus its validation evidence under `validation/`.
 Pre-pivot subject event packages are available only from the archive described
 in `research/LEGACY.md`.
 
-No V2 subject event log exists yet. Create one only after the
-outline-development brief declares the bounded seed-investigation task, capture
-boundary, agent responsibilities, manual-source treatment, and audit output.
+The active `v2-outline-seed-map` packages record structural outline-development
+interactions only; they do not admit V2 subject evidence. V2-D007 adds a
+separate catalog pass whose outbound URL inventory remains lead metadata until
+a source is explicitly opened after its gate.
 
 ## Commands
 

@@ -1,9 +1,9 @@
 {
   "schema_version": "harness-learning-site-v1",
   "canonical_layer": "learning Markdown",
-  "chapter_id": "where-harnesses-put-control",
+  "chapter_id": "context-management-in-agent-harnesses",
   "chapter_status": "provisional",
-  "chapter_updated": "2026-07-18",
+  "chapter_updated": "2026-07-19",
   "renderer": {
     "name": "marked",
     "version": "17.0.5"
@@ -12,46 +12,106 @@
     {
       "path": "learning/README.md",
       "role": "rendered",
-      "bytes": 3156,
-      "sha256": "c9cd39957a205edbb9576ff2f04ba54f2777cafa4f2d2182de92aa20351d2f29"
+      "bytes": 3656,
+      "sha256": "29a54fc38a15a8a1e267cb8d5273a26d4f08ec1b0ddefa57e11b81b6f64c372f"
     },
     {
-      "path": "learning/chapters/where-harnesses-put-control.md",
+      "path": "learning/chapters/context-management-in-agent-harnesses.md",
       "role": "rendered",
-      "bytes": 34949,
-      "sha256": "9622c7ccf67f08208d5144507e8382d537c3830bd9b083a8eedf88f739a67fd1"
+      "bytes": 61178,
+      "sha256": "34fa9067625679dbb07451357e5b8f6aa766922ca393df443b6e596efbb4e3d5"
     },
     {
-      "path": "research/syntheses/first-batch-harness-architecture.md",
+      "path": "research/syntheses/context-management-across-harnesses.md",
       "role": "evidence boundary",
-      "bytes": 26012,
-      "sha256": "3adaf2a60bda9bd1b039c5976b8dc1b8ee13113debcd6a505722229269fae330"
+      "bytes": 18800,
+      "sha256": "6203914219b77504f38b5d17d3b4ca5d09d71a0950e6e7e0507b8658ed60e2ac"
     },
     {
-      "path": "research/claims/first-batch-harness-architecture.md",
+      "path": "research/claims/context-management-across-harnesses.md",
       "role": "evidence boundary",
-      "bytes": 12867,
-      "sha256": "7b9922bacc8eb30e5ae721b165c321c1b3df374d242a7750dc2ab4733bb6f6f8"
+      "bytes": 8346,
+      "sha256": "68130b73d8e0840844fc307a8c46ec923dd59a13b385592c7e69d54fcf0006e7"
+    },
+    {
+      "path": "research/sources/cp2-pi-v0.80.6.md",
+      "role": "evidence boundary",
+      "bytes": 9176,
+      "sha256": "05dc9f44611d33499f66d6b0f389466201eafb396399c2150ab97dec61df172c"
+    },
+    {
+      "path": "research/sources/cp2-openhands-sdk-v1.35.0.md",
+      "role": "evidence boundary",
+      "bytes": 10088,
+      "sha256": "05af1048fb0ae586fe0446a10e737ca3e95286c1cec39780a2401f4da719d821"
+    },
+    {
+      "path": "research/sources/cp2-openclaw-v2026.6.6.md",
+      "role": "evidence boundary",
+      "bytes": 15941,
+      "sha256": "8910ebf37a4af303d59e6022078e00c7d5d3a20ae909158eb855b43ce87d7d2a"
+    },
+    {
+      "path": "research/sources/cp2-hermes-agent-v0.18.2.md",
+      "role": "evidence boundary",
+      "bytes": 22071,
+      "sha256": "57eb37a22b24689e3b43bf514de33837eb2e28ef180fa24a1e8e43271ec5e6fa"
+    },
+    {
+      "path": "research/sources/codex-cli-v0.144.6-context.md",
+      "role": "evidence boundary",
+      "bytes": 5159,
+      "sha256": "9e9d8970f379a63d9cd9189b07fc2c0e75a6311329026f550bbce637aaf88518"
+    },
+    {
+      "path": "research/sources/letta-code-v0.28.11-context.md",
+      "role": "evidence boundary",
+      "bytes": 6878,
+      "sha256": "7e94557361f0159bba8f1ed711055bb79d91bd410cb31cf909dc8364625617a1"
+    },
+    {
+      "path": "research/sources/arize-2026-context-management-harnesses.md",
+      "role": "evidence boundary",
+      "bytes": 4715,
+      "sha256": "5872c4dea48117e90d934338cb02ae43b0d856f3112db529c509362544f11b04"
+    },
+    {
+      "path": "research/sources/semenov-2026-beyond-compaction.md",
+      "role": "evidence boundary",
+      "bytes": 3767,
+      "sha256": "a7d5be56935ce417982041a6625c3f4765806dd0a2af98a9f2c088127f657f46"
+    },
+    {
+      "path": "research/sources/cim-2026-parallel-compaction.md",
+      "role": "evidence boundary",
+      "bytes": 3722,
+      "sha256": "53e8b5bf0f0fd0d74b5cdb8d10b86c61168b690b615cb2880bba2bcea3a5d69d"
+    },
+    {
+      "path": "research/sources/hou-2026-memoryagentbench.md",
+      "role": "evidence boundary",
+      "bytes": 3054,
+      "sha256": "d5fdb43954e907979f87b370653427fa6e79e1212c94cbf57e0ae55fdaa5e7fa"
     }
   ],
   "tooling": [
     {
       "path": "tools/learning-site/generate.cjs",
       "role": "generator",
-      "bytes": 24634,
-      "sha256": "953e41a09e9605576901f594371963b833889ea8baac60c3df141e1541bf7211"
+      "bytes": 27978,
+      "sha256": "0a71efe23a5feb2752f5ee893630ad37f13a91339f560074233e50a4be7759f7"
     },
     {
       "path": "tools/learning-site/assets/styles.css",
       "role": "generator",
-      "bytes": 24507,
-      "sha256": "2201500b2d33fea8a674f5050a7df0546c3958828b8d6d8970e9e30d741afd74"
+      "bytes": 28256,
+      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
     },
     {
       "path": "tools/learning-site/assets/site.js",
       "role": "generator",
-      "bytes": 3101,
-      "sha256": "c313ac7a9de370baeaffef95bf6d3e8efc4662d22bde3f02f0f6623d44f595ee"
+      "bytes": 3151,
+      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
     }
   ],
   "pages": [
@@ -59,38 +119,38 @@
       "output": "index.html",
       "derived_from": [
         "learning/README.md",
-        "learning/chapters/where-harnesses-put-control.md"
+        "learning/chapters/context-management-in-agent-harnesses.md"
       ]
     },
     {
-      "output": "chapters/where-harnesses-put-control.html",
+      "output": "chapters/context-management-in-agent-harnesses.html",
       "derived_from": [
-        "learning/chapters/where-harnesses-put-control.md",
-        "research/syntheses/first-batch-harness-architecture.md",
-        "research/claims/first-batch-harness-architecture.md"
+        "learning/chapters/context-management-in-agent-harnesses.md",
+        "research/syntheses/context-management-across-harnesses.md",
+        "research/claims/context-management-across-harnesses.md"
       ]
     }
   ],
   "outputs": [
     {
       "path": "assets/site.js",
-      "bytes": 3101,
-      "sha256": "c313ac7a9de370baeaffef95bf6d3e8efc4662d22bde3f02f0f6623d44f595ee"
+      "bytes": 3151,
+      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
     },
     {
       "path": "assets/styles.css",
-      "bytes": 24507,
-      "sha256": "2201500b2d33fea8a674f5050a7df0546c3958828b8d6d8970e9e30d741afd74"
+      "bytes": 28256,
+      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
     },
     {
-      "path": "chapters/where-harnesses-put-control.html",
-      "bytes": 54702,
-      "sha256": "a0719786486440ef1e7f527e7b8ea91c6d54899716fc1c2c2ca151f9acaaa7e4"
+      "path": "chapters/context-management-in-agent-harnesses.html",
+      "bytes": 104638,
+      "sha256": "fca8b507688c0c26f7f76f433969a0f0ad022f4d8a6070dcdf25d524c686d1db"
     },
     {
       "path": "index.html",
-      "bytes": 8696,
-      "sha256": "060554653621488a8361400b570989c75fdd0d21d0a333ad2d8b87368c9f3718"
+      "bytes": 9303,
+      "sha256": "fdbffe392672b238b9d4b67ea7583a546c337a0d250f90e31841a7156a8b525f"
     }
   ]
 }

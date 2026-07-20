@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Why Agents Forget · Chapter 1 candidates</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
+  .variant-bar strong { margin-right: 0.6rem; }
+  .variant-bar a { padding: 0.25rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; }
+  .variant-bar a[aria-current="page"] { border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .variant-note { max-width: var(--measure); margin: 1rem auto 0; padding: 0.7rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius-small); color: var(--ink-faint); font-size: 0.8rem; }
+  .variant-article { max-width: calc(var(--measure) + 4rem); margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  .variant-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; max-width: 70rem; margin: 2rem auto; padding: 0 1.2rem; }
+  .variant-cards article { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .variant-cards h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+  .variant-cards p { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.88rem; }
+  .variant-cards .meta { color: var(--ink-faint); font-size: 0.75rem; margin-bottom: 0.6rem; }
+
+  /* Version E comparison figures */
+  .prose figure[class^="fig-"] { margin: 2rem 0; padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+  .prose figure[class^="fig-"] figcaption { margin-bottom: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .fig-note { margin: 0.8rem 0 0; font-size: 0.75rem; color: var(--ink-faint); }
+  /* per-harness mechanism flows */
+  .flow { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+  .flow + .flow { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--line); }
+  .fnode { display: inline-flex; flex-direction: column; gap: 1px; max-width: 15rem; padding: 0.45rem 0.75rem; border: 1.5px solid var(--line-strong); border-radius: 8px; background: var(--surface-raised); font-size: 0.75rem; font-weight: 700; }
+  .fnode small { font-weight: 450; color: var(--ink-faint); }
+  .fnode.src { border-style: dashed; font-weight: 600; }
+  .fnode.cache { border-color: var(--gold); }
+  .fnode.call { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+  .fnode.risk { border-style: dashed; border-color: var(--rust); }
+  .farrow { color: var(--ink-faint); font-weight: 800; }
+  /* assembly stack */
+  .stack-rows { display: flex; flex-direction: column; gap: 0.45rem; }
+  .stack-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.6rem; align-items: stretch; }
+  .stack-label { align-self: center; font-size: 0.72rem; font-weight: 750; color: var(--ink-faint); text-align: right; }
+  .stack-seg { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.78rem; }
+  .stack-seg.core { background: var(--teal-soft); color: var(--teal-strong); }
+  .stack-seg.session { background: var(--blue-soft); color: var(--blue); }
+  .stack-seg.turn { background: var(--gold-soft); color: var(--gold); }
+  /* window bars */
+  .win-rows, .fate-rows { display: flex; flex-direction: column; gap: 0.55rem; }
+  .win-row { display: grid; grid-template-columns: 13rem 1fr 9rem; gap: 0.7rem; align-items: center; }
+  .win-label { font-size: 0.76rem; font-weight: 700; }
+  .win-label small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .win-bar { display: flex; height: 14px; overflow: hidden; border-radius: 999px; border: 1px solid var(--line); }
+  .win-bar i.keep { background: var(--teal); }
+  .win-bar i.drop { background: var(--line); opacity: 0.45; }
+  .win-note { font-size: 0.7rem; color: var(--ink-faint); }
+  /* result fates */
+  .fate-row { display: grid; grid-template-columns: 6.5rem 1fr 1fr; gap: 0.7rem; align-items: stretch; }
+  .fate-label { align-self: center; font-size: 0.78rem; font-weight: 750; }
+  .fate-model { padding: 0.45rem 0.7rem; border-radius: 8px; background: var(--teal-soft); color: var(--teal-strong); font-size: 0.74rem; }
+  .fate-durable { padding: 0.45rem 0.7rem; border: 1px dashed var(--line-strong); border-radius: 8px; color: var(--ink-faint); font-size: 0.74rem; }
+  /* branch projection */
+  .branch-canvas { display: flex; flex-direction: column; gap: 0.9rem; overflow-x: auto; padding: 0.3rem 0; }
+  .branch-lane { display: flex; align-items: center; gap: 0; white-space: nowrap; }
+  .branch-lane.faded { opacity: 0.45; }
+  .bnode { padding: 0.3rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 8px; font-size: 0.72rem; background: var(--surface-raised); }
+  .bnode.active { border-color: var(--teal); color: var(--teal); font-weight: 750; }
+  .bnode.summary { border-color: var(--gold); color: var(--gold); }
+  .bnode.abandoned { border-style: dashed; }
+  .bedge { width: 1.4rem; height: 1px; background: var(--line-strong); flex: none; }
+  /* posture + inheritance axes */
+  .posture-axis { display: grid; grid-template-columns: 7rem 1fr 7rem; gap: 0.6rem; align-items: start; }
+  .pole { padding-top: 0.1rem; font-size: 0.72rem; font-weight: 750; color: var(--ink-soft); text-align: center; }
+  .pole small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .axis-line, .inherit-axis { position: relative; display: block; height: 9.5rem; }
+  .axis-line::before, .inherit-axis::before { content: ""; position: absolute; top: 0.55rem; right: 0; left: 0; height: 3px; border-radius: 999px; background: linear-gradient(90deg, var(--teal), var(--rust)); }
+  .ptick, .itick { position: absolute; top: 0; width: 8.5rem; margin-left: -4.25rem; text-align: center; font-size: 0.68rem; }
+  .ptick::before, .itick::before { content: ""; display: block; width: 11px; height: 11px; margin: 0 auto 0.35rem; border: 2px solid var(--paper); border-radius: 50%; background: var(--ink); }
+  .ptick b, .itick b { display: block; }
+  .ptick small, .itick small { color: var(--ink-faint); line-height: 1.25; display: block; }
+  .axis-line .ptick:nth-of-type(even) b, .inherit-axis .itick:nth-of-type(even) b { margin-top: 3.4rem; }
+  .inherit-axis { height: 9rem; margin: 0.4rem 0 0; }
+  /* placement quadrant */
+  .quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .quad-cell { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; font-size: 0.74rem; }
+  .quad-cell b { font-size: 0.8rem; }
+  .quad-cell small { color: var(--ink-faint); }
+  .q-cost { margin-top: 0.2rem; color: var(--ink-soft); font-style: italic; }
+  .q-tl { background: var(--teal-soft); } .q-tr { background: var(--blue-soft); } .q-bl { background: var(--gold-soft); } .q-br { background: var(--violet-soft); }
+  /* profiles */
+  .profile-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.6rem; }
+  .p-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.85rem 0.95rem; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; background: var(--surface-raised); font-size: 0.74rem; }
+  .p-card b { font-size: 0.85rem; }
+  .p-card em { color: var(--rust); font-style: normal; font-weight: 650; }
+  .p-card span { color: var(--ink-soft); }
+  @media (max-width: 700px) {
+    .win-row { grid-template-columns: 1fr; gap: 0.25rem; }
+    .fate-row { grid-template-columns: 1fr; }
+    .posture-axis { grid-template-columns: 1fr; }
+    .quad-grid { grid-template-columns: 1fr; }
+    .axis-line, .inherit-axis { height: auto; min-height: 8rem; }
+  }
+</style>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/annotator.js"></script>
+</head>
+<body class="chapter-page">
+  <div class="variant-bar" role="navigation" aria-label="Chapter versions">
+    <strong>Chapter 1 candidates:</strong>
+    <a href="index.html">Overview</a>
+    <a href="version-a.html">Version A</a>
+    <a href="version-b.html">Version B</a>
+    <a href="version-c.html" aria-current="page">Version C</a>
+    <a href="version-d.html">Version D</a>
+    <a href="version-e.html">Version E</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme" style="margin-left:auto"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  </div>
+  
+  <p class="variant-note"><strong>Version C — Failure-first diagnosis.</strong> Starts from five familiar operator complaints (“the error was right there”) and works backward from each symptom to the mechanism. Diagnostic-led: the framework becomes a debugging checklist. Same verified facts and citations in every version — only the structure and voice differ. About 13 min read (3,092 words).</p>
+  <main id="main-content" tabindex="-1">
+    <article class="chapter-article variant-article">
+      <header class="chapter-header">
+        <p class="eyebrow">Harness architecture · Context and memory</p>
+        <h1>Why Agents Forget</h1>
+        <p class="chapter-subtitle">Diagnosing context failure in production harnesses</p>
+        <p class="chapter-summary">Five context failures every agent operator meets, traced backward to the harness mechanisms that cause and contain them.</p>
+        <div class="chapter-objectives">
+          <p id="chapter-objectives-title">After this chapter you should be able to</p>
+          <ul aria-labelledby="chapter-objectives-title">
+            <li>Diagnose the five recurring context failures from their observable symptoms</li>
+            <li>Trace each failure to the harness mechanism that produces or contains it</li>
+            <li>Compare how four production harnesses defend against each failure class</li>
+            <li>Design a context policy that keeps failures observable and recoverable</li>
+          </ul>
+        </div>
+        <div class="evidence-legend" aria-labelledby="evidence-legend-title">
+          <p id="evidence-legend-title">How to read evidence</p>
+          <ul class="epistemic-key">
+            <li class="kind-fact">Verified fact</li>
+            <li class="kind-reported">Source-reported</li>
+            <li class="kind-inference">Inference</li>
+            <li class="kind-recommendation">Recommendation</li>
+            <li class="kind-contested">Contested</li>
+            <li class="kind-open">Open question</li>
+          </ul>
+        </div>
+      </header>
+      <div class="prose chapter-prose"><p>Anyone who operates coding or long-lived agents has said at least one of these sentences:</p>
+<ol>
+<li><em>&quot;The error was right there in the build output—why did it say the build passed?&quot;</em></li>
+<li><em>&quot;It knew the requirement an hour ago. Where did it go?&quot;</em></li>
+<li><em>&quot;The rule is in the repo. It read the directory. It still violated it.&quot;</em></li>
+<li><em>&quot;The subagent broke a constraint the main agent knew perfectly well.&quot;</em></li>
+<li><em>&quot;It keeps confidently repeating something that was never true.&quot;</em></li>
+</ol>
+<p>Each sentence is a <strong>context failure</strong>: the model reasoned correctly over the evidence it received, and the evidence was wrong—bounded, stale, projected, compacted, transferred, or polluted somewhere between the world and the prompt. Industry writing calls the discipline of controlling that evidence <strong>context engineering</strong>; this chapter approaches it the way an operator meets it, failure first, then works backward into the machinery.</p>
+<p>The machinery comes from four pinned, reviewed harnesses—Pi, OpenHands Software Agent SDK, OpenClaw, and Hermes Agent—plus bounded pinned inspections of Codex CLI and Letta, and one clearly labeled source-reported comparator, Claude Code. What makes these failures dangerous is a shared property worth stating up front: <strong>context failures usually remove the evidence needed to notice them.</strong> The rest of this chapter is about designing so that they can&#39;t hide.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — persistence is not model awareness.</strong></p>
+<p>In every failure below, the missing information still existed somewhere—on disk, in an event log, in a memory store. &quot;We did not lose the data&quot; and &quot;the agent can use the data now&quot; are different claims, and confusing them is how these failures stay invisible.</p>
+</blockquote>
+<h2 id="failure-1-the-answer-was-in-the-output">Failure 1: &quot;The answer was in the output&quot;<a class="heading-anchor" href="#failure-1-the-answer-was-in-the-output" aria-label="Link to Failure 1: &quot;The answer was in the output&quot;">#</a></h2>
+<p><strong>Symptom.</strong> A build produces 80,000 characters. The only decisive assertion sits near character 53,000. The agent reads the result, declares a different cause, and starts editing the wrong file.</p>
+<p><strong>Diagnosis.</strong> No harness sends the model raw reality. Between execution and the next call sits a shaping step that bounds and represents the result—and the middle of a long output is the least protected region in every pinned design.</p>
+<ul>
+<li><strong>Pi</strong> keeps the last 2,000 lines and 50 KB of shell output and writes the complete output to a temporary file: the loss is visible, and a recovery pointer exists—if the model uses it. For file reads, Pi keeps the head instead (first 2,000 lines and 50 KB, with an offset for continuation): declarations live at the top, errors at the bottom.</li>
+<li><strong>OpenHands</strong> converts executor output into a typed observation capped at 30,000 characters (16,000 for file-editor responses), optionally persisting full content. The transformation is explicit and durable—which also means a lossy conversion writes a clean record of the wrong evidence.</li>
+<li><strong>OpenClaw</strong> caps live results by context tier—16,000 characters on smaller windows, 32,000 at 100K tokens, 64,000 at 200K—never exceeding 30 percent of the model window. It keeps the beginning by default, but detects diagnostic-looking tails (error language, tracebacks, closing JSON) and preserves head plus tail with a middle-omission marker.</li>
+<li><strong>Hermes</strong> budgets per result and per turn, spills large bodies to disk, and returns a 1,500-character preview (the pinned default) plus the path. Complete content survives; the risk moves into behavior—the model may accept the preview as sufficient.</li>
+</ul>
+<p><strong>What contains it.</strong> Obvious omission markers, a recoverable handle, and—the part mechanical tests miss—evidence that the model actually follows the handle. There is no context-free winner among head, tail, head-plus-tail, preview-plus-path, and typed observation; each pairs a different gain with a different silent loss. (<a href="../research/claims/context-management-across-harnesses.md#c004">Context synthesis C004</a>)</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for result shaping</summary>
+
+<ul>
+<li>Pi: exact head/tail limits, continuation, and spill behavior in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: exact file/terminal caps and persistence condition in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a>, plus the typed action/observation boundary in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E08</a></li>
+<li>OpenClaw: exact bootstrap and live-result budgets in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E21</a>, plus canonical/provider/recovery projections in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E10</a></li>
+<li>Hermes: exact read, per-result, aggregate, preview, and spill limits in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; information-value tradeoffs are engineering inference</li>
+</ul>
+</details>
+
+<h2 id="failure-2-it-knew-that-an-hour-ago">Failure 2: &quot;It knew that an hour ago&quot;<a class="heading-anchor" href="#failure-2-it-knew-that-an-hour-ago" aria-label="Link to Failure 2: &quot;It knew that an hour ago&quot;">#</a></h2>
+<p><strong>Symptom.</strong> Early in a long session the agent read the acceptance criteria. Hours and one compaction later, it ships something that violates them—while the transcript shows it once knew better.</p>
+<p><strong>Diagnosis.</strong> When history outgrows the window, every pinned harness compacts: a protected head and recent tail survive, and an older middle is summarized or evicted.</p>
+<figure class="compaction-map" aria-labelledby="compaction-map-caption">
+  <figcaption id="compaction-map-caption">
+    <strong>The common compaction shape</strong>
+    <span>A protected head and recent tail surround a transformed middle; storage retention and model visibility remain separate.</span>
+  </figcaption>
+  <div class="history-before" aria-label="History before compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment middle">Older middle</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-arrow" aria-hidden="true"><span>summarize or evict</span>↓</div>
+  <div class="history-after" aria-label="Active context after compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment summary">Summary or retained structure</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-notes">
+    <p><strong>Durable store</strong><span>The raw middle may still exist.</span></p>
+    <p><strong>Active uncertainty</strong><span>Omission and hallucination can survive as fluent context.</span></p>
+  </div>
+</figure>
+
+<blockquote class="callout confusion"><p><strong>Common confusion — a fluent summary reads as complete.</strong></p>
+<p>Truncation announces itself; a summary that silently dropped one requirement does not. That asymmetry is why failure posture and retention testing often matter more than the summarizer prompt.</p>
+</blockquote>
+<p>The four postures differ more than the four algorithms:</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Harness</th>
+<th>Mechanics at the pin</th>
+<th>When summary work fails</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Pi</strong></td>
+<td>Default-on; 16,384 reserved tokens, 20,000-token recent region, legal-boundary walk, structured summary folding in the previous one, appended lists of files read/modified</td>
+<td>Compact-and-retry once, then stop—predictable termination</td>
+</tr>
+<tr>
+<td><strong>OpenHands</strong></td>
+<td>Bare <code>Agent</code> has no condenser; the default preset installs an LLM summarizer at 80 events keeping the first four (generic defaults differ); condensation is a durable event with the forgotten IDs</td>
+<td>Soft pressure may leave the view unchanged; hard pressure retries smaller, then propagates failure</td>
+</tr>
+<tr>
+<td><strong>OpenClaw</strong></td>
+<td>Compaction inside a liveness envelope: raised reserve floor, overflow/timeout detection, bounded retries, resume-from-transcript, last-resort persisted result truncation</td>
+<td>Escalate through recovery, then return reset guidance</td>
+</tr>
+<tr>
+<td><strong>Hermes</strong></td>
+<td>In-place compression near 50 percent of the window; protects system prompt, first three non-system messages (protection decays after first pass), and a recent region; prunes old tool output; soft-archives replaced rows</td>
+<td>Default <code>abort_on_summary_failure=false</code>: continue with a deterministic lossy placeholder; auth/network failures preserve history; repeated compaction warns</td>
+</tr>
+</tbody></table></div>
+<p>Codex compacts automatically at 90 percent of its effective window, warns that repeated compaction can reduce accuracy, and retains recent real user messages within a 20,000-token budget locally (64,000 in its remote v2 path). Letta&#39;s inspected server defaults to a sliding-window summarizer and keeps older conversation durably searchable—the summary is not the only way back.</p>
+<p><strong>What research adds—and does not.</strong> Semenov and Dorofeev characterize summary compaction as potentially lossy, blocking, destructive, and hallucination-prone (evidence: one very long run). Cim and collaborators measured compaction consuming up to 62 percent of wall time in low-threshold settings, with ten-run summaries varying semantically—on different tasks, models, and serving architectures. Neither tests these pins. The honest status is <strong>contested implementation practice</strong>: widely implemented, plausibly useful, exposed to demonstrated general risks, unmeasured here. (<a href="../research/claims/context-management-across-harnesses.md#c005">Context synthesis C005</a>, <a href="../research/claims/context-management-across-harnesses.md#c009">C009</a>)</p>
+<p><strong>What contains it.</strong> Structured summaries with protected anchors; durable raw history (all four keep it—Pi&#39;s session tree, OpenHands&#39; event log, OpenClaw&#39;s transcript, Hermes&#39; soft-archived rows); a deliberate failure posture; and retention probes that test whether the agent still knows the acceptance criteria, not merely whether a summary event was emitted.</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for compaction defaults and failure posture</summary>
+
+<ul>
+<li>Pi: trigger, protected recent region, structured summary, and defaults in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: bare-agent versus preset defaults and the 80-event/four-event policy in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a></li>
+<li>OpenClaw: runtime compaction and bounded recovery in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E08</a></li>
+<li>Hermes: threshold, protected regions, pruning, soft archival, and summary-failure split in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; the stated priorities and semantic-retention risks are engineering inferences</li>
+</ul>
+</details>
+
+<h2 id="failure-3-the-rule-was-in-the-repo-the-whole-time">Failure 3: &quot;The rule was in the repo the whole time&quot;<a class="heading-anchor" href="#failure-3-the-rule-was-in-the-repo-the-whole-time" aria-label="Link to Failure 3: &quot;The rule was in the repo the whole time&quot;">#</a></h2>
+<p><strong>Symptom.</strong> A project convention sits in an instruction file. The agent read neighboring files all morning and never consulted it—or consulted a version that a mid-session update had already made stale.</p>
+<p><strong>Diagnosis.</strong> This failure lives in <strong>initial construction</strong>: what enters the prompt before the agent asks for anything, and how it goes stale afterward.</p>
+<ul>
+<li><strong>Pi</strong> walks the repository ancestry for project instruction files and advertises skills through metadata, loading full bodies on demand—<strong>progressive disclosure</strong>. The bet saves tokens; the cost is that retrieval must trigger at the right moment.</li>
+<li><strong>OpenHands</strong> freezes agent policy and materializes it with runtime tool schemas into an inspectable <code>SystemPromptEvent</code>; dynamic state arrives through the active <code>View</code>.</li>
+<li><strong>OpenClaw</strong> injects bootstrap files by default under separate budgets—20,000 characters per file, 60,000 aggregate, head-and-tail with a visible warning when oversized—while keeping a cache-stable prefix apart from run-specific material. Heartbeat and cron routes can receive lighter or empty bootstrap sets: the same agent, differently informed, by route.</li>
+<li><strong>Hermes</strong> caches the assembled system prompt for the session and adds request-local material per call; project instruction files carry a model-window-scaled budget. A successful mid-session profile update may not appear until invalidation or rebuild—staleness by design, in exchange for cache stability.</li>
+</ul>
+<p>Codex bounds combined AGENTS files at a default 32 KiB. The general tension: automatic injection avoids retrieval misses but crowds attention and can go stale; advertising resources saves tokens but relies on the model retrieving at the right moment. (<a href="../research/claims/context-management-across-harnesses.md#c003">Context synthesis C003</a>)</p>
+<p><strong>What contains it.</strong> An explicit inventory of what is active on <em>this exact call</em>; freshness rules stated in the prompt or enforced by invalidation; and task-level traces that reveal retrieval misses, which look like model stupidity and are usually policy.</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for initial construction</summary>
+
+<ul>
+<li>Pi: active-tool, instruction-file, skills-metadata, and extension-refresh assembly in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E04</a></li>
+<li>OpenHands: frozen agent policy materialized with runtime tools, plugins, skills, MCP, and the model view in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E06</a></li>
+<li>OpenClaw: per-run materialization of provider, prompt, bootstrap, skills, context-engine state, and the effective tool set in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E07</a></li>
+<li>Hermes: session-cached system prompt with request-local additions and restore-or-rebuild invalidation in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E10</a></li>
+<li>Status: verified implementation facts for the assembly and caching paths; the staleness tradeoff framing is inference</li>
+</ul>
+</details>
+
+<h2 id="failure-4-the-subagent-broke-a-rule-it-never-saw">Failure 4: &quot;The subagent broke a rule it never saw&quot;<a class="heading-anchor" href="#failure-4-the-subagent-broke-a-rule-it-never-saw" aria-label="Link to Failure 4: &quot;The subagent broke a rule it never saw&quot;">#</a></h2>
+<p><strong>Symptom.</strong> The main agent delegates a subtask. The child does competent work that violates a constraint the parent knew—because the constraint never crossed the boundary.</p>
+<p><strong>Diagnosis.</strong> A child agent is a new projection boundary, and at the reviewed pins isolation is the dominant default:</p>
+<ul>
+<li><strong>Pi&#39;s</strong> example extension launches a separate process with an explicit task—no parent transcript; bounded child output returns.</li>
+<li><strong>OpenHands</strong> starts a new <code>LocalConversation</code> with the explicit task and shared workspace; the parent receives aggregated final text.</li>
+<li><strong>OpenClaw</strong> spawns isolated by default; same-agent transcript forking is an explicit call-site request; cross-agent spawning must remain isolated.</li>
+<li><strong>Hermes</strong> gives children fresh sessions with explicit goal, context, and workspace—no parent context files, no durable memory, capability no broader than the parent.</li>
+</ul>
+<p>Codex&#39;s multi-agent v2 defaults <code>fork_turns</code> to <code>all</code>—and &quot;all&quot; is still a projection: system, developer, and user messages plus final assistant answers cross; tool calls, tool results, reasoning, and non-final assistant work are filtered as implementation debris. A tool result that carried the key evidence disappears with the debris. Letta offers both stateless ephemeral children (no MemFS, no memory blocks) and an explicit conversation fork.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — a fresh context is not an independent mind.</strong></p>
+<p>If the same parent model writes the brief, the same model executes it, and the parent accepts a text summary, correlated errors remain likely. (<a href="../research/claims/context-management-across-harnesses.md#c006">Context synthesis C006</a>)</p>
+</blockquote>
+<p><strong>What contains it.</strong> Treating inheritance as a written policy—which roles, message types, tool evidence, memory stores, and capabilities cross—plus a handoff contract for briefs, and comparing the brief against parent requirements as a test, not a hope.</p>
+<h2 id="failure-5-it-remembered-the-wrong-thing">Failure 5: &quot;It remembered the wrong thing&quot;<a class="heading-anchor" href="#failure-5-it-remembered-the-wrong-thing" aria-label="Link to Failure 5: &quot;It remembered the wrong thing&quot;">#</a></h2>
+<p><strong>Symptom.</strong> Weeks in, the agent states a &quot;fact&quot; about your codebase that was never true. It appears in every session now. Deleting it feels impossible because nobody knows where it lives.</p>
+<p><strong>Diagnosis.</strong> Five words are routinely collapsed, and this failure grows in the gap between them: <strong>history</strong> (what happened), <strong>active context</strong> (what the model sees now), <strong>memory</strong> (what is meant to survive), <strong>adaptation</strong> (future artifacts change from experience), and <strong>optimization</strong> (changes selected because measured outcomes improved).</p>
+<p>The reviewed mechanisms adapt; none of them optimizes. OpenClaw&#39;s memory plugin exposes retrieval tools, a pre-compaction flush can write durable notes, and disabled-by-default dreaming promotes repeatedly recalled, diverse material. Hermes updates memory and skills from conversation experience through background processes. Letta makes placement explicit—<code>system/</code> memory is always visible and permanently expensive; other memory requires an explicit read; old conversation stays searchable; reflection periodically rewrites committed memory, and MemFS edits require a reason, validation, and a git commit. Codex&#39;s cross-run memory is experimental and disabled by default.</p>
+<p>The signals doing the promoting—recall frequency, diversity, recency, model interpretation—are not task outcomes. <strong>A frequently recalled mistake is promoted as readily as a frequently recalled truth.</strong> MemoryAgentBench separates accurate retrieval, test-time learning, long-range understanding, and conflict resolution, and reports no evaluated method mastering all four; it does not test these harnesses, but it explains why &quot;has memory&quot; predicts nothing. (<a href="../research/claims/context-management-across-harnesses.md#c007">Context synthesis C007</a>, <a href="../research/claims/context-management-across-harnesses.md#c010">C010</a>)</p>
+<p><strong>What contains it.</strong> Provenance on memory writes; conflict representation instead of silent overwrite; a correction and forgetting path (Letta&#39;s git-committed MemFS edits are one legible design); and skepticism toward any &quot;self-improving&quot; label until outcome evidence exists.</p>
+<h2 id="the-mechanism-under-every-failure">The mechanism under every failure<a class="heading-anchor" href="#the-mechanism-under-every-failure" aria-label="Link to The mechanism under every failure">#</a></h2>
+<p>All five failures are one mechanism seen from five angles. The model never consumes the durable transcript, workspace, memory store, or raw environment—it consumes the output of a pipeline:</p>
+<figure class="context-map" aria-labelledby="context-map-caption">
+  <figcaption id="context-map-caption">
+    <strong>The context pipeline</strong>
+    <span>Durable information becomes model evidence only after selection, retrieval, transformation, and budgeting.</span>
+  </figcaption>
+  <div class="context-sources" aria-label="Candidate information sources">
+    <article><span>Durable state</span><small>events, transcript, branches</small></article>
+    <article><span>Instructions</span><small>policy, tools, skills</small></article>
+    <article><span>Workspace</span><small>files, environment, results</small></article>
+    <article><span>Long-term memory</span><small>retrieved or injected state</small></article>
+  </div>
+  <ol class="context-flow" aria-label="Context construction stages">
+    <li><b>1</b><span><strong>Select or retrieve</strong><small>Choose candidates for this call.</small></span></li>
+    <li><b>2</b><span><strong>Transform and budget</strong><small>Truncate, summarize, normalize, order.</small></span></li>
+    <li class="active-context"><b>3</b><span><strong>Active model context</strong><small>The only representation the model can use now.</small></span></li>
+    <li><b>4</b><span><strong>Action and observation</strong><small>Effects create new candidate evidence.</small></span></li>
+  </ol>
+  <p class="omission-note"><strong>Omitted material</strong> can remain durable while being completely invisible to the model on this turn.</p>
+</figure>
+
+<p>Every failure above is a defect or an accepted loss in one pipeline stage. That yields a diagnostic checklist—six questions that locate any context failure (<a href="../research/claims/context-management-across-harnesses.md#c001">Context synthesis C001</a>, <a href="../research/claims/context-management-across-harnesses.md#c002">C002</a>):</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>When you see…</th>
+<th>Interrogate this decision</th>
+<th>Ask</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Rules ignored, stale profile behavior</td>
+<td><strong>Initial construction</strong></td>
+<td>What entered automatically, and how does it go stale?</td>
+</tr>
+<tr>
+<td>Missing file or log evidence</td>
+<td><strong>Acquisition</strong></td>
+<td>What window bounded the read, and what continuation exists?</td>
+</tr>
+<tr>
+<td>Confident claims contradicting raw output</td>
+<td><strong>Observation shaping</strong></td>
+<td>What did shaping drop, and was omission marked?</td>
+</tr>
+<tr>
+<td>Behavior inconsistent with the stored transcript</td>
+<td><strong>History projection</strong></td>
+<td>Which branch and event types are active?</td>
+</tr>
+<tr>
+<td>Knowledge loss after long sessions</td>
+<td><strong>Compaction</strong></td>
+<td>What was protected, what summarized, what happens on failure?</td>
+</tr>
+<tr>
+<td>Children violating known constraints</td>
+<td><strong>Context transfer</strong></td>
+<td>What crossed the boundary, under which policy?</td>
+</tr>
+</tbody></table></div>
+<h2 id="the-full-catalog">The full catalog<a class="heading-anchor" href="#the-full-catalog" aria-label="Link to The full catalog">#</a></h2>
+<p>The five stories above are the most common entries in a longer catalog worth keeping at hand:</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>Example</th>
+<th>Detection strategy</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Silent omission</strong></td>
+<td>middle of a tool result disappears without a marker</td>
+<td>compare raw and model-visible artifacts</td>
+<td>explicit truncation metadata, recoverable handle</td>
+</tr>
+<tr>
+<td><strong>Retrieval miss</strong></td>
+<td>a project rule never enters the call</td>
+<td>task-level trace of missing retrieval</td>
+<td>better triggers, resource inventory</td>
+</tr>
+<tr>
+<td><strong>Stale injection</strong></td>
+<td>cached memory lags a successful write</td>
+<td>inspect the effective prompt after mutation</td>
+<td>selective invalidation, stated freshness</td>
+</tr>
+<tr>
+<td><strong>Projection drift</strong></td>
+<td>canonical history and active branch disagree</td>
+<td>replay projection from durable events</td>
+<td>branch IDs, deterministic projection tests</td>
+</tr>
+<tr>
+<td><strong>Summary omission</strong></td>
+<td>an original constraint disappears</td>
+<td>retention probes against requirements</td>
+<td>structured fields, protected anchors</td>
+</tr>
+<tr>
+<td><strong>Summary hallucination</strong></td>
+<td>compacted state invents a completed action</td>
+<td>compare summary facts with durable events</td>
+<td>fact extraction, references, validation</td>
+</tr>
+<tr>
+<td><strong>Tool-pair corruption</strong></td>
+<td>an action survives without its result</td>
+<td>protocol invariant checks</td>
+<td>atomic pair handling and repair</td>
+</tr>
+<tr>
+<td><strong>Memory pollution</strong></td>
+<td>model interpretation becomes durable fact</td>
+<td>conflict and provenance review</td>
+<td>source links, confidence, forgetting policy</td>
+</tr>
+<tr>
+<td><strong>Child starvation</strong></td>
+<td>a delegated worker lacks a hidden constraint</td>
+<td>compare brief with parent requirements</td>
+<td>explicit handoff contract, controlled fork</td>
+</tr>
+<tr>
+<td><strong>Attention crowding</strong></td>
+<td>everything fits; the relevant is buried</td>
+<td>task performance by context composition</td>
+<td>priority budgets, progressive disclosure</td>
+</tr>
+</tbody></table></div>
+<p>Capacity is not usable attention: a one-million-token prompt can still be a poor context if the relevant evidence is hard to locate or surrounded by low-value output. (<a href="../research/claims/context-management-across-harnesses.md#c008">Context synthesis C008</a>)</p>
+<h2 id="building-so-failures-cannot-hide">Building so failures cannot hide<a class="heading-anchor" href="#building-so-failures-cannot-hide" aria-label="Link to Building so failures cannot hide">#</a></h2>
+<p>The constructive conclusion of five diagnoses is a <strong>context contract</strong>, written per information surface before choosing any component:</p>
+<ol>
+<li><strong>Name the source of truth</strong> — if two stores disagree, which wins?</li>
+<li><strong>Define admission</strong> — every call, per session or route, or explicit retrieval only?</li>
+<li><strong>Define the transformation</strong> — selection rule, budget, window policy, omission marker, recoverability path, for each source type.</li>
+<li><strong>Define failure posture</strong> — keep the full view, retry smaller, continue lossily, or stop and ask?</li>
+<li><strong>Define boundary crossing</strong> — what survives a crash, a resume, a compaction, a child spawn, a new day?</li>
+<li><strong>Test retention, not mechanics</strong> — probe whether the agent still knows the constraints, finds the decisive middle, and whether children obey unbriefed rules; a test that proves &quot;a summary event was emitted&quot; proves nothing about knowledge.</li>
+</ol>
+<p>This is an engineering recommendation, not a claim that one contract fits every product. (<a href="../research/claims/context-management-across-harnesses.md#c011">Context synthesis C011</a>)</p>
+<h2 id="status-of-the-evidence">Status of the evidence<a class="heading-anchor" href="#status-of-the-evidence" aria-label="Link to Status of the evidence">#</a></h2>
+<p><strong>Strongly supported at the pins:</strong> durable state and active context are separate objects; tool output is transformed before becoming evidence; harness caps survive large windows; compaction differs most in failure posture; inheritance is explicit policy.</p>
+<p><strong>Contested:</strong> semantic retention, latency, and variance of LLM-summary compaction.</p>
+<p><strong>Open:</strong> which policies win on matched long-horizon tasks; closed-harness behavior (the Claude Code reporting describes a 256 KiB pre-read gate, an approximately 25,000-token post-read budget, read deduplication, spill-with-preview, structured continuation summaries, and both blank and forked child paths—architecturally interesting, source-reported, version-unstable, and occasionally contradicted by pinned code it describes); when inheritance beats isolation; whether outcome-based memory curation is affordable.</p>
+<p>Four cases and two bounded inspections are a serious comparison, not a census. OpenClaw and Hermes share migration and influence links, so recurrence between them is not independent convergence. (<a href="../research/claims/context-management-across-harnesses.md#c012">Context synthesis C012</a>)</p>
+<h2 id="recap">Recap<a class="heading-anchor" href="#recap" aria-label="Link to Recap">#</a></h2>
+<p>Agents forget because harnesses choose—reasonably, deliberately, and sometimes wrongly—what the model gets to see. The five symptoms that open this chapter are not model failures; they are policy outcomes, each traceable to a pipeline stage, each testable, each containable.</p>
+<p>If you remember one question, make it this:</p>
+<blockquote class="callout">
+<p><strong>What exact evidence will the model receive on the next call, and what happened to everything else?</strong></p>
+</blockquote>
+<h2 id="reflection-questions">Reflection questions<a class="heading-anchor" href="#reflection-questions" aria-label="Link to Reflection questions">#</a></h2>
+<ol>
+<li>Which of the five symptoms has your agent shown most recently, and which pipeline stage produced it?</li>
+<li>Do your logs let you compare raw output against model-visible output?</li>
+<li>After a compaction, could you prove which requirements the agent still knows?</li>
+<li>Could a bad memory in your system be found, corrected, and forgotten?</li>
+<li>What would you instrument first, given one week?</li>
+</ol>
+<h2 id="suggested-next-reading">Suggested next reading<a class="heading-anchor" href="#suggested-next-reading" aria-label="Link to Suggested next reading">#</a></h2>
+<ul>
+<li><a href="../research/syntheses/context-management-across-harnesses.md">Agent-grade context synthesis</a></li>
+<li><a href="../research/case-studies/pi-v0.80.6.md">Pi case study</a> · <a href="../research/case-studies/openhands-sdk-v1.35.0.md">OpenHands SDK case study</a> · <a href="../research/case-studies/openclaw-v2026.6.6.md">OpenClaw case study</a> · <a href="../research/case-studies/hermes-agent-v0.18.2.md">Hermes Agent case study</a></li>
+<li><a href="../research/sources/codex-cli-v0.144.6-context.md">Codex CLI bounded context inspection</a> · <a href="../research/sources/letta-code-v0.28.11-context.md">Letta bounded context inspection</a></li>
+<li><a href="../research/sources/hou-2026-memoryagentbench.md">MemoryAgentBench source record</a></li>
+</ul>
+</div>
+    </article>
+  </main>
+</body>
+</html>

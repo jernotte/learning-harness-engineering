@@ -16,7 +16,7 @@ This is the human and search entry point. Query families are provisional because
 | --- | --- | --- | --- |
 | Agent loop and orchestration | agent loop, ReAct, run loop, workflow, graph, routing | 1, 4, 9 | General records plus reviewed Pi, OpenHands, OpenClaw, and Hermes loops are mapped; broader implementation breadth remains reconstructed |
 | Tools and agent-computer interfaces | tool use, function calling, ACI, commands, environment, sandbox | 3, 5, 6, 9 | SWE-agent and MCP are mapped; four pinned cases now expose structured action/observation paths, while perception-grounded interfaces remain untested |
-| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Claude context evidence and all four pinned case mechanisms are mapped; outcome effects remain thin |
+| Context engineering | prompt assembly, compaction, condensation, retrieval, progressive disclosure | 2, 3, 6 | Four reviewed cases plus bounded pinned Codex CLI and Letta topic inspections now support a mechanism-level comparison; Claude Code remains secondary reporting and outcome effects remain thin |
 | Memory and persistent state | session, checkpoint, event log, long-term memory, artifacts, forgetting | 3, 7, 11 | LangGraph, ADK, MemoryAgentBench, and four pinned cases are mapped; memory quality and outcome-driven adaptation remain thin |
 | Planning and workflows | plan-and-execute, replanning, tree search, deterministic workflow | 4, 8, 9 | Agentless and practitioner guidance are mapped; ReAct/ReWOO/LATS remain unadmitted leads |
 | Skills and procedural knowledge | skills, recipes, prompt modules, learned procedures | 2, 3, 7, 11 | Hermes supplies pinned skill review, curation, `/learn`, and learning-graph mechanisms; outcome evidence remains absent |
@@ -48,14 +48,14 @@ The table below comes from the implementation recon report. It is a candidate co
 
 | Family | Examples encountered | Current status |
 | --- | --- | --- |
-| Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Pi is a reviewed pinned case; the wider family remains reconstructed or deferred |
+| Model-driven coding loops | Codex CLI, Pi, Gemini CLI, OpenCode, Goose, Aider, SWE-agent | Pi is a reviewed pinned case; Codex CLI has a bounded pinned context-management record but is not a full case; the wider family remains reconstructed or deferred |
 | Event-sourced workspace agents | OpenHands Software Agent SDK | Maintainer-reviewed case at v1.35.0 |
 | Explicit state graphs and durable workflows | LangGraph, Microsoft Agent Framework, OpenAI Agents SDK, PydanticAI | LangGraph/OpenAI documentation is mapped; the other repository families remain unadmitted |
 | Conversational/message-passing multi-agent systems | AutoGen and successors | Reported lineage lead; not yet verified for selection |
 | Code-as-action agents | smolagents | Reported lead; not yet admitted |
 | Browser and computer-use agents | Browser Use, Agent S | Browser Use is pinned but deferred until after the first learning synthesis; perception/grounding remains untested |
 | Research pipelines | STORM, GPT Researcher, DeerFlow | Reported leads; version lineage not yet admitted |
-| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | OpenClaw and Hermes are reviewed at their pins; Letta remains an unadmitted lead |
+| Long-lived personal agents | OpenClaw, Letta Code, Hermes Agent | OpenClaw and Hermes are reviewed at their pins; Letta Code and one open-server pin have bounded context-management records but are not a reviewed product case |
 
 ## Empirical question coverage
 
@@ -148,4 +148,6 @@ D-007 approved the control-flow-first method, D-008 restored dependable capture 
 
 The approved Checkpoint 3 package compares the four reviewed cases and retains stable R1–R11 identifiers with sharper R9 integrity/recovery/acceptance facets, an R11 adaptation boundary, separate R10 observability/evaluation reporting, and cross-cutting lifecycle, owner, injection, configuration-population, and mechanism-lineage annotations. These changes do not increase coverage: the sample remains concentrated in open coding and personal-agent systems, outcome evidence is thin, the OpenClaw/Hermes pair is lineage-confounded where links are explicit or unresolved, and the browser/perception, closed-production, and framework/substrate gaps remain open.
 
-The four-case synthesis, canonical learning Markdown, and generated static learning site now exist. This delivery layer adds no subject coverage and closes none of the browser/perception, closed-production, framework/substrate, outcome-evidence, or lineage-independence gaps above. Browser Use remains the leading next falsification case, but it may reopen only after the maintainer reads the first learning experience and provides direction. No other case is added first.
+The maintainer rejected the first broad learning pilot as too abstract and shallow. Its four-case research synthesis remains valid evidence, but its human derivative is no longer active. D-014 replaces it with a mechanism-level context-management synthesis, working claim ledger, human chapter, and regenerated static site.
+
+That replacement adds bounded, pinned context evidence from Codex CLI and Letta Code/open server plus secondary Claude Code reporting. It does **not** promote Codex or Letta to full reviewed cases, establish client/server/cloud equivalence, or close the browser/perception, closed-production, framework/substrate, outcome-evidence, or lineage-independence gaps above. Its own generated provenance/source/claim audit is still pending, so it is a content-review draft rather than a promoted finding. Browser Use remains the leading next falsification case, but it may reopen only after the maintainer reads the replacement and provides direction. Independent Fable review is deferred by capacity and is not a PASS.

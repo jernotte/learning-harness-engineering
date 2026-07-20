@@ -42,16 +42,18 @@ const ALLOWED_OUTPUT_EXTENSIONS = new Set([
 export const DEFAULT_INPUT_PATHS = [
   "README.md",
   "learning/README.md",
-  "learning/chapters/where-harnesses-put-control.md",
+  "learning/chapters/context-management-in-agent-harnesses.md",
   "learning/READER-FEEDBACK.md",
-  "research/syntheses/first-batch-harness-architecture.md",
-  "research/claims/first-batch-harness-architecture.md",
+  "research/syntheses/context-management-across-harnesses.md",
+  "research/claims/context-management-across-harnesses.md",
+  "research/sources/codex-cli-v0.144.6-context.md",
+  "research/sources/letta-code-v0.28.11-context.md",
+  "research/sources/arize-2026-context-management-harnesses.md",
   "research/case-studies/pi-v0.80.6.md",
   "research/case-studies/openhands-sdk-v1.35.0.md",
   "research/case-studies/openclaw-v2026.6.6.md",
   "research/case-studies/hermes-agent-v0.18.2.md",
   "research/cycles/checkpoint-3-taxonomy-and-method-review.md",
-  "research/provenance/first-batch-synthesis-audit.md",
 ];
 
 const RESULT_SCHEMA = {

@@ -24,7 +24,7 @@ Create the smallest polished static learning experience that faithfully renders
 the supplied Markdown:
 
 - `site/index.html`: a welcoming landing page and learning-program orientation;
-- `site/chapters/where-harnesses-put-control.html`: the complete first chapter;
+- `site/chapters/context-management-in-agent-harnesses.html`: the complete first chapter;
 - local CSS and JavaScript assets under `site/assets/`;
 - a small deterministic generator under `tooling/` that rebuilds `site/` from
   the canonical Markdown and approved research inputs;
@@ -41,7 +41,7 @@ Optimize for comprehension and retention rather than visual novelty. Include:
 
 - clear chapter navigation and a visible learning progression;
 - a strong conceptual opening and the full chapter narrative;
-- responsive comparison tables and a small accessible control-flow diagram;
+- responsive comparison tables and accessible context-pipeline and compaction diagrams;
 - visually distinct but restrained treatments for verified facts,
   source-reported claims, inferences, recommendations, contradictions, and open
   questions;

@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Context Engineering · Chapter 1 candidates</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
+  .variant-bar strong { margin-right: 0.6rem; }
+  .variant-bar a { padding: 0.25rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; }
+  .variant-bar a[aria-current="page"] { border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .variant-note { max-width: var(--measure); margin: 1rem auto 0; padding: 0.7rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius-small); color: var(--ink-faint); font-size: 0.8rem; }
+  .variant-article { max-width: calc(var(--measure) + 4rem); margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  .variant-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; max-width: 70rem; margin: 2rem auto; padding: 0 1.2rem; }
+  .variant-cards article { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .variant-cards h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+  .variant-cards p { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.88rem; }
+  .variant-cards .meta { color: var(--ink-faint); font-size: 0.75rem; margin-bottom: 0.6rem; }
+
+  /* Version E comparison figures */
+  .prose figure[class^="fig-"] { margin: 2rem 0; padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+  .prose figure[class^="fig-"] figcaption { margin-bottom: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .fig-note { margin: 0.8rem 0 0; font-size: 0.75rem; color: var(--ink-faint); }
+  /* per-harness mechanism flows */
+  .flow { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+  .flow + .flow { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--line); }
+  .fnode { display: inline-flex; flex-direction: column; gap: 1px; max-width: 15rem; padding: 0.45rem 0.75rem; border: 1.5px solid var(--line-strong); border-radius: 8px; background: var(--surface-raised); font-size: 0.75rem; font-weight: 700; }
+  .fnode small { font-weight: 450; color: var(--ink-faint); }
+  .fnode.src { border-style: dashed; font-weight: 600; }
+  .fnode.cache { border-color: var(--gold); }
+  .fnode.call { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+  .fnode.risk { border-style: dashed; border-color: var(--rust); }
+  .farrow { color: var(--ink-faint); font-weight: 800; }
+  /* assembly stack */
+  .stack-rows { display: flex; flex-direction: column; gap: 0.45rem; }
+  .stack-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.6rem; align-items: stretch; }
+  .stack-label { align-self: center; font-size: 0.72rem; font-weight: 750; color: var(--ink-faint); text-align: right; }
+  .stack-seg { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.78rem; }
+  .stack-seg.core { background: var(--teal-soft); color: var(--teal-strong); }
+  .stack-seg.session { background: var(--blue-soft); color: var(--blue); }
+  .stack-seg.turn { background: var(--gold-soft); color: var(--gold); }
+  /* window bars */
+  .win-rows, .fate-rows { display: flex; flex-direction: column; gap: 0.55rem; }
+  .win-row { display: grid; grid-template-columns: 13rem 1fr 9rem; gap: 0.7rem; align-items: center; }
+  .win-label { font-size: 0.76rem; font-weight: 700; }
+  .win-label small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .win-bar { display: flex; height: 14px; overflow: hidden; border-radius: 999px; border: 1px solid var(--line); }
+  .win-bar i.keep { background: var(--teal); }
+  .win-bar i.drop { background: var(--line); opacity: 0.45; }
+  .win-note { font-size: 0.7rem; color: var(--ink-faint); }
+  /* result fates */
+  .fate-row { display: grid; grid-template-columns: 6.5rem 1fr 1fr; gap: 0.7rem; align-items: stretch; }
+  .fate-label { align-self: center; font-size: 0.78rem; font-weight: 750; }
+  .fate-model { padding: 0.45rem 0.7rem; border-radius: 8px; background: var(--teal-soft); color: var(--teal-strong); font-size: 0.74rem; }
+  .fate-durable { padding: 0.45rem 0.7rem; border: 1px dashed var(--line-strong); border-radius: 8px; color: var(--ink-faint); font-size: 0.74rem; }
+  /* branch projection */
+  .branch-canvas { display: flex; flex-direction: column; gap: 0.9rem; overflow-x: auto; padding: 0.3rem 0; }
+  .branch-lane { display: flex; align-items: center; gap: 0; white-space: nowrap; }
+  .branch-lane.faded { opacity: 0.45; }
+  .bnode { padding: 0.3rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 8px; font-size: 0.72rem; background: var(--surface-raised); }
+  .bnode.active { border-color: var(--teal); color: var(--teal); font-weight: 750; }
+  .bnode.summary { border-color: var(--gold); color: var(--gold); }
+  .bnode.abandoned { border-style: dashed; }
+  .bedge { width: 1.4rem; height: 1px; background: var(--line-strong); flex: none; }
+  /* posture + inheritance axes */
+  .posture-axis { display: grid; grid-template-columns: 7rem 1fr 7rem; gap: 0.6rem; align-items: start; }
+  .pole { padding-top: 0.1rem; font-size: 0.72rem; font-weight: 750; color: var(--ink-soft); text-align: center; }
+  .pole small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .axis-line, .inherit-axis { position: relative; display: block; height: 9.5rem; }
+  .axis-line::before, .inherit-axis::before { content: ""; position: absolute; top: 0.55rem; right: 0; left: 0; height: 3px; border-radius: 999px; background: linear-gradient(90deg, var(--teal), var(--rust)); }
+  .ptick, .itick { position: absolute; top: 0; width: 8.5rem; margin-left: -4.25rem; text-align: center; font-size: 0.68rem; }
+  .ptick::before, .itick::before { content: ""; display: block; width: 11px; height: 11px; margin: 0 auto 0.35rem; border: 2px solid var(--paper); border-radius: 50%; background: var(--ink); }
+  .ptick b, .itick b { display: block; }
+  .ptick small, .itick small { color: var(--ink-faint); line-height: 1.25; display: block; }
+  .axis-line .ptick:nth-of-type(even) b, .inherit-axis .itick:nth-of-type(even) b { margin-top: 3.4rem; }
+  .inherit-axis { height: 9rem; margin: 0.4rem 0 0; }
+  /* placement quadrant */
+  .quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .quad-cell { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; font-size: 0.74rem; }
+  .quad-cell b { font-size: 0.8rem; }
+  .quad-cell small { color: var(--ink-faint); }
+  .q-cost { margin-top: 0.2rem; color: var(--ink-soft); font-style: italic; }
+  .q-tl { background: var(--teal-soft); } .q-tr { background: var(--blue-soft); } .q-bl { background: var(--gold-soft); } .q-br { background: var(--violet-soft); }
+  /* profiles */
+  .profile-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.6rem; }
+  .p-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.85rem 0.95rem; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; background: var(--surface-raised); font-size: 0.74rem; }
+  .p-card b { font-size: 0.85rem; }
+  .p-card em { color: var(--rust); font-style: normal; font-weight: 650; }
+  .p-card span { color: var(--ink-soft); }
+  @media (max-width: 700px) {
+    .win-row { grid-template-columns: 1fr; gap: 0.25rem; }
+    .fate-row { grid-template-columns: 1fr; }
+    .posture-axis { grid-template-columns: 1fr; }
+    .quad-grid { grid-template-columns: 1fr; }
+    .axis-line, .inherit-axis { height: auto; min-height: 8rem; }
+  }
+</style>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/annotator.js"></script>
+</head>
+<body class="chapter-page">
+  <div class="variant-bar" role="navigation" aria-label="Chapter versions">
+    <strong>Chapter 1 candidates:</strong>
+    <a href="index.html">Overview</a>
+    <a href="version-a.html">Version A</a>
+    <a href="version-b.html">Version B</a>
+    <a href="version-c.html">Version C</a>
+    <a href="version-d.html">Version D</a>
+    <a href="version-e.html" aria-current="page">Version E</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme" style="margin-left:auto"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  </div>
+  
+  <p class="variant-note"><strong>Version E — The deep guide.</strong> Depth-first for technical readers. Every mechanism area follows a fixed method: how it works (algorithm-level, per harness) → what each choice optimizes for → what the research actually found (with numbers and limits) → design guidance. Seven comparison diagrams, and a closing goal-driven design procedure: name your dominant goal, get the policies that serve it. Same verified facts and citations in every version — only the structure and voice differ. About 40 min read (9,210 words).</p>
+  <main id="main-content" tabindex="-1">
+    <article class="chapter-article variant-article">
+      <header class="chapter-header">
+        <p class="eyebrow">Harness architecture · Context and memory</p>
+        <h1>Context Engineering</h1>
+        <p class="chapter-subtitle">How agent harnesses decide what the model sees</p>
+        <p class="chapter-summary">How four production harnesses decide what the model sees, what each design optimizes for, what the research supports, and how to choose for your own goal.</p>
+        <div class="chapter-objectives">
+          <p id="chapter-objectives-title">After this chapter you should be able to</p>
+          <ul aria-labelledby="chapter-objectives-title">
+            <li>Explain the exact mechanisms four production harnesses use for each context decision</li>
+            <li>Identify what each design choice optimizes for and what it deliberately sacrifices</li>
+            <li>Weigh each choice against the available research evidence and its limits</li>
+            <li>Design a context policy for your own harness that optimizes for your specific goal</li>
+          </ul>
+        </div>
+        <div class="evidence-legend" aria-labelledby="evidence-legend-title">
+          <p id="evidence-legend-title">How to read evidence</p>
+          <ul class="epistemic-key">
+            <li class="kind-fact">Verified fact</li>
+            <li class="kind-reported">Source-reported</li>
+            <li class="kind-inference">Inference</li>
+            <li class="kind-recommendation">Recommendation</li>
+            <li class="kind-contested">Contested</li>
+            <li class="kind-open">Open question</li>
+          </ul>
+        </div>
+      </header>
+      <div class="prose chapter-prose"><p>A harness is the software around a language model that turns it into a working agent: it builds the prompts, runs the tools, stores the history, and decides what happens when things fail. This chapter is about the part of that job the industry calls <strong>context engineering</strong>: choosing what enters the model&#39;s limited attention on every call, in what form, at what cost.</p>
+<p>The chapter is written for engineers who want to build or seriously evaluate a harness. Each section covers one mechanism and follows the same method:</p>
+<ol>
+<li><strong>How it works.</strong> The mechanism explained from scratch, then traced through four pinned, reviewed implementations: Pi, OpenHands Software Agent SDK, OpenClaw, and Hermes Agent. Each harness gets its own explanation and its own diagram. Two extra pinned inspections, Codex CLI and Letta, appear where they widen the design space.</li>
+<li><strong>What each choice optimizes for.</strong> None of these designs is careless. Each gives something up on purpose, and you need to know what.</li>
+<li><strong>What the evidence says.</strong> Verified mechanics at exact commits, research findings with their actual numbers and limits, and an honest &quot;unmeasured&quot; label where the field has shipped ahead of its evidence.</li>
+<li><strong>Design guidance.</strong> How to choose, based on your goal.</li>
+</ol>
+<p>The final section turns those guidance blocks into a design procedure for your own harness.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion: persistence is not model awareness.</strong></p>
+<p>The most important invariant in this chapter: &quot;we stored it&quot; and &quot;the model can use it now&quot; are different claims. Every mechanism below manages the distance between them.</p>
+</blockquote>
+<h3 id="the-system-under-discussion">The system under discussion<a class="heading-anchor" href="#the-system-under-discussion" aria-label="Link to The system under discussion">#</a></h3>
+<p>Everything in this chapter is one pipeline. The model never reads the full stored history, the workspace, or the memory database directly. It reads a small artifact assembled from them on every call:</p>
+<figure class="context-map" aria-labelledby="context-map-caption">
+  <figcaption id="context-map-caption">
+    <strong>The context pipeline</strong>
+    <span>Durable information becomes model evidence only after selection, retrieval, transformation, and budgeting.</span>
+  </figcaption>
+  <div class="context-sources" aria-label="Candidate information sources">
+    <article><span>Durable state</span><small>events, transcript, branches</small></article>
+    <article><span>Instructions</span><small>policy, tools, skills</small></article>
+    <article><span>Workspace</span><small>files, environment, results</small></article>
+    <article><span>Long-term memory</span><small>retrieved or injected state</small></article>
+  </div>
+  <ol class="context-flow" aria-label="Context construction stages">
+    <li><b>1</b><span><strong>Select or retrieve</strong><small>Choose candidates for this call.</small></span></li>
+    <li><b>2</b><span><strong>Transform and budget</strong><small>Truncate, summarize, normalize, order.</small></span></li>
+    <li class="active-context"><b>3</b><span><strong>Active model context</strong><small>The only representation the model can use now.</small></span></li>
+    <li><b>4</b><span><strong>Action and observation</strong><small>Effects create new candidate evidence.</small></span></li>
+  </ol>
+  <p class="omission-note"><strong>Omitted material</strong> can remain durable while being completely invisible to the model on this turn.</p>
+</figure>
+
+<p>Seven mechanism areas structure that pipeline and this chapter: initial construction, acquisition, observation shaping, history projection, compaction, context transfer, and memory. (<a href="../research/claims/context-management-across-harnesses.md#c001">Context synthesis C001</a>)</p>
+<p>One framing to carry throughout: the four harnesses are four coherent optimization profiles, not four attempts at the same design. Pi is built to be a predictable, auditable interactive coding tool. OpenHands is built as a platform where every step can be inspected and replayed. OpenClaw is built to keep a long-lived, multi-channel personal agent alive. Hermes is built to keep making progress and to adapt across sessions, even when parts of it fail. Their context policies follow from those goals. That is why studying all four teaches you how to design for yours.</p>
+<h2 id="1-initial-construction-the-model-s-starting-world">1. Initial construction: the model&#39;s starting world<a class="heading-anchor" href="#1-initial-construction-the-model-s-starting-world" aria-label="Link to 1. Initial construction: the model&#39;s starting world">#</a></h2>
+<p><strong>The problem.</strong> Before the agent does anything, the harness compiles a starting prompt. Getting this right is harder than it sounds, because the ingredients change at different speeds, and two forces pull against each other: stability (cacheable, predictable, cheap prompts) and freshness (the prompt reflects the actual current world).</p>
+<p>First, the ingredients, since the rest of the section depends on them:</p>
+<ul>
+<li>The <strong>system prompt</strong> is the harness-authored instruction block sent with every call. In a real harness it is not a paragraph of personality. It is a compiled document: who the agent is, how it should work, which tools exist and how to use them, and facts about the environment (working directory, date, project).</li>
+<li><strong>Instruction files</strong> are files a user or team leaves in a repository or config directory to shape the agent, such as an <code>AGENTS.md</code> with project conventions. The harness finds them and injects them.</li>
+<li><strong>Skills</strong> are named packets of instructions for a specific job (&quot;release a version&quot;, &quot;review a PR&quot;). They matter here because a harness must decide whether to inject their full text up front or only advertise their names.</li>
+<li><strong>Tool schemas</strong> are the JSON descriptions of callable tools that the model sees. What the model believes it can do comes entirely from these.</li>
+</ul>
+<p>Every harness assembles some mix of these, plus live state, into each call. The design question is where to draw the cache boundary: which parts are compiled once and reused, and which are rebuilt fresh.</p>
+<h3 id="pi-rebuild-between-turns-advertise-instead-of-inject">Pi: rebuild between turns, advertise instead of inject<a class="heading-anchor" href="#pi-rebuild-between-turns-advertise-instead-of-inject" aria-label="Link to Pi: rebuild between turns, advertise instead of inject">#</a></h3>
+<p>Pi builds its prompt from the working directory, the current date, guidance for each currently active tool, instruction files, and a skills index. Two mechanisms define it.</p>
+<p>First, discovery: Pi walks up the directory tree from the working directory and collects instruction files from every ancestor, so repository conventions apply without configuration. Second, <strong>progressive disclosure</strong>: skills enter the prompt as names and one-line descriptions only. The model reads a skill&#39;s full text with a file-read call when it decides it needs it. This keeps the prompt small and current, and it bets that the model will ask at the right moment.</p>
+<p>Pi refreshes the prompt, the model choice, and the tool list between tool turns, never during one. A change made mid-turn (by the user or by a plug-in) applies cleanly to the next model call. The payoff is coherence: the tool list described in the prompt and the tool list the runtime will actually execute are rebuilt together, so they cannot drift apart.</p>
+<figure class="fig-flow" aria-label="Pi prompt assembly flow">
+  <div class="flow">
+    <span class="fnode src">instruction files<small>found by walking ancestor dirs</small></span>
+    <span class="fnode src">skills<small>names + descriptions only</small></span>
+    <span class="fnode src">active tools<small>guidance per tool</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">system prompt<small>compiled fresh</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">refresh point<small>between tool turns</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model call</span>
+  </div>
+</figure>
+
+<h3 id="openhands-freeze-the-policy-record-the-prompt">OpenHands: freeze the policy, record the prompt<a class="heading-anchor" href="#openhands-freeze-the-policy-record-the-prompt" aria-label="Link to OpenHands: freeze the policy, record the prompt">#</a></h3>
+<p>OpenHands treats agent configuration as an immutable object. An <code>Agent</code> is a frozen record holding the model choice, the tool list, the prompt policy, and optional components. When a conversation starts, the harness materializes that record: it resolves the tool specifications into runnable tools, renders the system prompt, and then stores the rendered prompt and the exact tool schemas <em>as an event</em> in the conversation&#39;s permanent log (a <code>SystemPromptEvent</code>).</p>
+<p>That last step is the distinctive move. Most harnesses can tell you what the prompt template is. OpenHands can tell you exactly what prompt any historical call received, because the prompt is data in the same log as everything else. The qualification: plug-ins discovered from the environment are re-resolved when a conversation resumes, and they are not pinned, so a resumed run is not guaranteed to reconstruct the identical capability set.</p>
+<figure class="fig-flow" aria-label="OpenHands prompt assembly flow">
+  <div class="flow">
+    <span class="fnode src">frozen Agent config<small>model + tools + prompt policy</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">materialize<small>resolve tools, render prompt</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">SystemPromptEvent<small>prompt stored in the event log</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model call<small>prompt + current view + schemas</small></span>
+  </div>
+</figure>
+
+<h3 id="openclaw-a-stable-prefix-a-changing-tail-a-different-world-per-route">OpenClaw: a stable prefix, a changing tail, a different world per route<a class="heading-anchor" href="#openclaw-a-stable-prefix-a-changing-tail-a-different-world-per-route" aria-label="Link to OpenClaw: a stable prefix, a changing tail, a different world per route">#</a></h3>
+<p>OpenClaw runs one agent across many channels (Telegram, other chat platforms, scheduled jobs), so its prompt assembly answers a question the others do not have: which parts of the prompt can be reused across calls to keep provider prompt caching cheap, and which parts must change per run?</p>
+<p>Its answer is a two-part prompt. The stable prefix holds policy, identity, and <strong>bootstrap files</strong>: workspace files like <code>AGENTS.md</code>, <code>SOUL.md</code>, <code>TOOLS.md</code>, and <code>MEMORY.md</code> that define the agent&#39;s standing knowledge, injected under per-file and total size budgets. The dynamic tail holds session, channel, and provider details that change per run. On top of that, the injection itself varies by route: a normal message gets the full bootstrap set, a scheduled heartbeat gets a lightweight set, and a cron job gets none. There is no single &quot;OpenClaw prompt&quot;; there is a prompt per route.</p>
+<p>One honest detail worth copying: the prompt explicitly warns the model that a tool being described in <code>TOOLS.md</code> does not mean the tool is currently available. Documentation and capability are kept separate even inside the prompt.</p>
+<figure class="fig-flow" aria-label="OpenClaw prompt assembly flow">
+  <div class="flow">
+    <span class="fnode cache">stable prefix<small>policy + identity + bootstrap files</small></span>
+    <span class="fnode src">dynamic tail<small>session + channel + provider</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">route policy<small>full / lightweight / none</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model call<small>prefix reused for provider caching</small></span>
+  </div>
+</figure>
+
+<h3 id="hermes-cache-the-whole-prompt-add-per-call-extras-invalidate-explicitly">Hermes: cache the whole prompt, add per-call extras, invalidate explicitly<a class="heading-anchor" href="#hermes-cache-the-whole-prompt-add-per-call-extras-invalidate-explicitly" aria-label="Link to Hermes: cache the whole prompt, add per-call extras, invalidate explicitly">#</a></h3>
+<p>Hermes compiles identity, work guidance, project files (selected by priority rules rather than concatenating everything), a filtered skills index, its memory and user-profile files, environment facts, and the date into one system prompt, and then caches that whole prompt for the session. Each call adds per-call extras on top: freshly retrieved memory, plug-in context, and tool schemas. The extras are never written back into stored history; they exist only for that call.</p>
+<p>The consequence to understand: once cached, the prompt is a snapshot. If a background process writes a new fact to the memory file mid-session, that fact is durably saved and <em>not visible to the model</em> until something rebuilds the prompt. Hermes rebuilds on three explicit triggers: context compression, a model change, and a profile change. This is the stability-versus-freshness trade taken to its stable extreme, with the staleness window as the accepted price.</p>
+<figure class="fig-flow" aria-label="Hermes prompt assembly flow">
+  <div class="flow">
+    <span class="fnode src">identity + project files + skills index + memory files</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">session cache<small>compiled once, snapshot until invalidated</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">per-call extras<small>retrieved memory + plugin context + schemas</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model call</span>
+  </div>
+  <p class="fig-note">Cache invalidated by: compression · model change · profile change. A memory write between invalidations is stored but not visible.</p>
+</figure>
+
+<h3 id="summary-and-tradeoffs">Summary and tradeoffs<a class="heading-anchor" href="#summary-and-tradeoffs" aria-label="Link to Summary and tradeoffs">#</a></h3>
+<figure class="fig-stack" aria-label="Prompt assembly layers across four harnesses">
+  <figcaption><strong>The same three layers, four different cache boundaries.</strong></figcaption>
+  <div class="stack-rows">
+    <div class="stack-row"><span class="stack-label">Stable / cacheable</span><span class="stack-seg core">identity · policy · tool guidance</span></div>
+    <div class="stack-row"><span class="stack-label">Session-scoped</span><span class="stack-seg session">project instructions · skills index · environment · memory snapshot</span></div>
+    <div class="stack-row"><span class="stack-label">Per-call</span><span class="stack-seg turn">history · retrieved memory · plugin context · tool schemas</span></div>
+  </div>
+  <p class="fig-note">Pi rebuilds at every turn boundary. OpenHands freezes policy and records the rendered prompt. OpenClaw reuses a stable prefix and varies the tail by route. Hermes caches everything for the session and adds per-call extras.</p>
+</figure>
+
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Harness</th>
+<th>Optimizes for</th>
+<th>Accepts in exchange</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pi</td>
+<td>The tools described in the prompt always match the tools the runtime can execute; skills cost nothing until used</td>
+<td>Skill details arrive only if the model asks for them; plug-ins that change tools or prompts directly reshape what the model sees</td>
+</tr>
+<tr>
+<td>OpenHands</td>
+<td>Any historical call can be reconstructed exactly, because the rendered prompt is stored as data</td>
+<td>Environment-discovered plug-ins are re-resolved on resume, so a resumed run may differ from the original</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Cheap provider prompt caching; each route (chat, heartbeat, cron) gets an appropriately sized world</td>
+<td>Reasoning about behavior requires knowing which route ran; there is no single canonical prompt</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>Maximum prompt stability across a session; per-call additions stay flexible</td>
+<td>New memory or profile writes are invisible until an explicit invalidation rebuilds the prompt</td>
+</tr>
+</tbody></table></div>
+<h3 id="what-the-evidence-says">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> every assembly path and cache boundary above. (<a href="../research/claims/context-management-across-harnesses.md#c003">Context synthesis C003</a>)</p>
+<p><em>Research:</em> no admitted study measures prompt-assembly policies directly. The nearest evidence is SWE-agent&#39;s 2024 experiments, which showed that interface and instruction presentation choices materially changed coding outcomes under its models. That supports treating these choices as consequential. It does not rank the four designs.</p>
+<p><em>Unmeasured, and how you would measure it:</em> staleness cost (instrument the gap between a state write and its first model-visible appearance, and correlate with task errors) and retrieval-miss rate for progressive disclosure (trace tasks where a needed skill or instruction file was never loaded).</p>
+<h3 id="design-guidance">Design guidance<a class="heading-anchor" href="#design-guidance" aria-label="Link to Design guidance">#</a></h3>
+<p>Choose the cache boundary from your session shape. Short interactive sessions tolerate Pi-style rebuilding, since freshness is cheap when prompts are small. Long-lived services with provider prompt caching want OpenClaw&#39;s stable-prefix discipline; measure your cache hit rate, because it is real money. If you must be able to reconstruct any historical call (debugging, compliance, research), OpenHands&#39; stored-prompt design is the only one here that makes that trivial. If you cache like Hermes, write the invalidation rules first. Every cached element needs a stated trigger, or you have designed a staleness bug.</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for initial construction</summary>
+
+<ul>
+<li>Pi: active-tool, instruction-file, skills-metadata, and refresh assembly in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E04</a></li>
+<li>OpenHands: frozen agent policy materialized with runtime tools, plugins, skills, MCP, and the model view in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E06</a></li>
+<li>OpenClaw: per-run materialization of provider, prompt, bootstrap, skills, context-engine state, and the effective tool set in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E07</a></li>
+<li>Hermes: session-cached system prompt with request-local additions and restore-or-rebuild invalidation in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E10</a></li>
+<li>Status: verified implementation facts for the assembly and caching paths; the staleness and cache-boundary tradeoff framing is inference</li>
+</ul>
+</details>
+
+<h2 id="2-acquisition-reading-a-world-larger-than-the-window">2. Acquisition: reading a world larger than the window<a class="heading-anchor" href="#2-acquisition-reading-a-world-larger-than-the-window" aria-label="Link to 2. Acquisition: reading a world larger than the window">#</a></h2>
+<p><strong>The problem.</strong> The agent needs to read files, logs, and pages that are bigger than any sensible budget. So every harness imposes a <strong>window</strong>: a rule for which part of an oversized source actually reaches the model. The shape of that window decides which evidence silently disappears. A window can keep the head (the start), the tail (the end), a caller-chosen range, or a page at a time with an offset for continuing.</p>
+<h3 id="pi-head-for-files-tail-for-commands">Pi: head for files, tail for commands<a class="heading-anchor" href="#pi-head-for-files-tail-for-commands" aria-label="Link to Pi: head for files, tail for commands">#</a></h3>
+<p>Pi&#39;s file reader returns the first 2,000 lines or 50 KB, whichever limit is hit first, and never returns a partial line. Its shell tool does the opposite: it keeps the <em>last</em> 2,000 lines or 50 KB and writes the complete output to a temporary file whose path the model is told. The asymmetry is deliberate and task-shaped. File declarations and structure live near the top; compiler errors and stack traces end at the bottom. The model can continue a file read with an offset. Anything in the middle of a long file, or the start of a long build log, is invisible unless the model goes back for it.</p>
+<figure class="fig-flow" aria-label="Pi read and shell window flow">
+  <div class="flow">
+    <span class="fnode src">read(file)</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">keep head<small>2,000 lines / 50 KB, whole lines only</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees head + "use offset to continue"</span>
+  </div>
+  <div class="flow">
+    <span class="fnode src">bash(cmd)</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">keep tail<small>2,000 lines / 50 KB</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode risk">full output<small>written to temp file</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees tail + file path</span>
+  </div>
+</figure>
+
+<h3 id="openhands-the-caller-picks-the-range">OpenHands: the caller picks the range<a class="heading-anchor" href="#openhands-the-caller-picks-the-range" aria-label="Link to OpenHands: the caller picks the range">#</a></h3>
+<p>OpenHands&#39; file editor takes an explicit line range from its caller and caps the response at 16,000 characters. There is no default head or tail heuristic to be wrong. Instead, choosing a bad window becomes a visible mistake the model can correct with a new range, rather than a silent truncation it never learns about. Terminal output gets a 30,000-character cap on what the model sees, with the full output optionally persisted to disk.</p>
+<figure class="fig-flow" aria-label="OpenHands range read flow">
+  <div class="flow">
+    <span class="fnode src">edit/view(file, lines 400..900)</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">selected range<small>capped at 16,000 chars</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees the range it asked for</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">wrong range?<small>ask again with a new range</small></span>
+  </div>
+</figure>
+
+<h3 id="openclaw-different-budgets-for-different-kinds-of-content">OpenClaw: different budgets for different kinds of content<a class="heading-anchor" href="#openclaw-different-budgets-for-different-kinds-of-content" aria-label="Link to OpenClaw: different budgets for different kinds of content">#</a></h3>
+<p>OpenClaw&#39;s sharpest acquisition idea is that instruction content and data content deserve different rules. Its bootstrap files (the standing instruction files from section 1) have their own budgets: 20,000 characters per file and 60,000 in total, and an oversized file is cut to 75 percent head and 25 percent tail with an always-on warning marker showing where the cut happened. Live tool results are governed by a completely separate rule described in section 3. Instructions are protected as a class, not fought over call by call.</p>
+<figure class="fig-flow" aria-label="OpenClaw bootstrap budget flow">
+  <div class="flow">
+    <span class="fnode src">bootstrap files<small>AGENTS.md, SOUL.md, MEMORY.md ...</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">per-file budget<small>20,000 chars</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">total budget<small>60,000 chars</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">75% head + 25% tail<small>with visible truncation warning</small></span>
+  </div>
+</figure>
+
+<h3 id="hermes-pagination-as-a-first-class-protocol">Hermes: pagination as a first-class protocol<a class="heading-anchor" href="#hermes-pagination-as-a-first-class-protocol" aria-label="Link to Hermes: pagination as a first-class protocol">#</a></h3>
+<p>Hermes&#39; file reader defaults to 500 lines, allows up to 2,000 lines per call, and caps the response at 100,000 characters. It trims to complete lines and, when it truncates, returns the next offset explicitly. Reading a huge file completely is a supported loop, not a workaround: read, receive the next offset, read again. Project instruction files get a separate budget scaled to the model window.</p>
+<figure class="fig-flow" aria-label="Hermes paginated read flow">
+  <div class="flow">
+    <span class="fnode src">read_file(path, offset, limit)</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">window<small>500 lines default, 2,000 max, 100K chars</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees page + next offset</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">repeat until done</span>
+  </div>
+</figure>
+
+<h3 id="summary-and-tradeoffs-2">Summary and tradeoffs<a class="heading-anchor" href="#summary-and-tradeoffs-2" aria-label="Link to Summary and tradeoffs">#</a></h3>
+<figure class="fig-windows" aria-label="Read-window shapes across four harnesses">
+  <figcaption><strong>The same 10,000-line file under each policy.</strong> Green regions reach the model; faded regions exist only in storage.</figcaption>
+  <div class="win-rows">
+    <div class="win-row"><span class="win-label">Pi read <small>head</small></span><span class="win-bar"><i class="keep" style="width:22%"></i><i class="drop" style="width:78%"></i></span><span class="win-note">offset to continue</span></div>
+    <div class="win-row"><span class="win-label">Pi shell <small>tail</small></span><span class="win-bar"><i class="drop" style="width:78%"></i><i class="keep" style="width:22%"></i></span><span class="win-note">full copy in temp file</span></div>
+    <div class="win-row"><span class="win-label">OpenHands <small>range</small></span><span class="win-bar"><i class="drop" style="width:30%"></i><i class="keep" style="width:25%"></i><i class="drop" style="width:45%"></i></span><span class="win-note">caller picks the range</span></div>
+    <div class="win-row"><span class="win-label">OpenClaw bootstrap <small>head + tail</small></span><span class="win-bar"><i class="keep" style="width:30%"></i><i class="drop" style="width:55%"></i><i class="keep" style="width:15%"></i></span><span class="win-note">visible warning at the cut</span></div>
+    <div class="win-row"><span class="win-label">Hermes <small>pages</small></span><span class="win-bar"><i class="keep" style="width:38%"></i><i class="drop" style="width:62%"></i></span><span class="win-note">next offset returned</span></div>
+  </div>
+</figure>
+
+<p>Head windows optimize for understanding structure. Caller-chosen ranges optimize for deliberate navigation and make window mistakes visible. Separate budgets per content type optimize for protecting instructions from data. Pagination optimizes for completeness at the price of extra turns. Codex and Letta agree on the underlying principle: Codex gives instruction files (32 KiB) and shell output (10,000 tokens and one MiB per process) separate rules; Letta caps inline shell output at 30,000 characters while keeping a larger copy outside the prompt. No inspected system uses one universal truncation rule. <strong>Acquisition is typed by source.</strong></p>
+<blockquote class="callout confusion"><p><strong>Common confusion: a 200K model window does not mean the harness sends 200K of this file.</strong></p>
+<p>Capacity is reserved for instructions, history, schemas, and the model&#39;s own output. Local caps stop any single source from monopolizing attention. A bigger window loosens the budgets; it does not remove them.</p>
+</blockquote>
+<h3 id="what-the-evidence-says-2">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-2" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> every number and window shape above. <em>Research:</em> SWE-agent&#39;s interface ablations are again the strongest available signal that observation-interface design changes outcomes; they predate and do not rank these designs. <em>Unmeasured:</em> how often the decisive evidence sits in a dropped region, and how often models actually continue paginated reads. Both are cheap to instrument: log window positions against where the agent eventually found its answer. (<a href="../research/claims/context-management-across-harnesses.md#c004">Context synthesis C004</a>)</p>
+<h3 id="design-guidance-2">Design guidance<a class="heading-anchor" href="#design-guidance-2" aria-label="Link to Design guidance">#</a></h3>
+<p>Type your budgets by source from day one; it is the one practice every inspected system shares. Pick window shapes per content type: head for code, tail for command output, ranges for model-driven navigation. If your tasks bury evidence mid-file (generated logs, data dumps), a pagination protocol beats a bigger window, because the model needs a way to be <em>complete</em>, not just more room. Always keep the remainder reachable. The window is a policy; the stored full copy is the safety net.</p>
+<h2 id="3-observation-shaping-what-happened-versus-what-the-model-was-told">3. Observation shaping: what happened versus what the model was told<a class="heading-anchor" href="#3-observation-shaping-what-happened-versus-what-the-model-was-told" aria-label="Link to 3. Observation shaping: what happened versus what the model was told">#</a></h2>
+<p><strong>The problem.</strong> A tool ran and something happened in the world. The model will only ever see a <em>representation</em> of it, produced by the harness. That representation is an evidence policy. It decides whether the model learns the truth, a summary of the truth, or a well-formatted fragment that happens to omit the decisive line.</p>
+<p>The running example for this section: a build produces 80,000 characters of output, and the only failing assertion sits near character 53,000, in the middle.</p>
+<h3 id="pi-visible-loss-recoverable-copy-and-a-fail-closed-action-boundary">Pi: visible loss, recoverable copy, and a fail-closed action boundary<a class="heading-anchor" href="#pi-visible-loss-recoverable-copy-and-a-fail-closed-action-boundary" aria-label="Link to Pi: visible loss, recoverable copy, and a fail-closed action boundary">#</a></h3>
+<p>For our build, Pi keeps the tail (where most build tools print their verdict) and writes the complete output to a temporary file whose path appears in the result. The loss is visible and the recovery route is explicit; using it costs the model another read call.</p>
+<p>Pi extends the same integrity thinking to the <em>input</em> side of tools. If a provider cuts off a response mid-stream so that a tool call&#39;s arguments may be incomplete, Pi refuses to execute every tool call in that response and asks the model to reissue them. A truncated argument could change the action (imagine a path with its last directory missing), so the safe move is to not act at all. Hermes independently implements the same rule.</p>
+<figure class="fig-flow" aria-label="Pi observation flow">
+  <div class="flow">
+    <span class="fnode src">80K build output</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">keep tail<small>2,000 lines / 50 KB</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode risk">full copy<small>temp file, path in result</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees tail + path<small>error at char 53,000 is in the file, not the prompt</small></span>
+  </div>
+</figure>
+
+<h3 id="openhands-every-result-becomes-a-typed-record">OpenHands: every result becomes a typed record<a class="heading-anchor" href="#openhands-every-result-becomes-a-typed-record" aria-label="Link to OpenHands: every result becomes a typed record">#</a></h3>
+<p>OpenHands routes every tool result through a typed conversion. The executor&#39;s raw output becomes an <code>Observation</code> object; the terminal version adds the working directory, the interpreter, and the exit status; large output is truncated to 30,000 characters, with the full version optionally saved. That object is wrapped in an event, appended to the permanent log, and only then converted into the message the model sees.</p>
+<p>The benefit is instrumentation and consistency: every observation has structure, status, and a durable record. The risk concentrates in the converter: if the conversion drops the decisive line, the durable log now contains a clean, well-formed record of incomplete evidence. Even interruption respects the record: when a run is interrupted, OpenHands writes error observations for any tool calls left hanging, so the history never contains a call without a result.</p>
+<figure class="fig-flow" aria-label="OpenHands observation flow">
+  <div class="flow">
+    <span class="fnode src">raw executor output</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">typed Observation<small>+ cwd + exit status, truncate at 30K</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">ObservationEvent<small>appended to permanent log</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">to_llm_message()<small>what the model sees</small></span>
+  </div>
+</figure>
+
+<h3 id="openclaw-three-representations-of-one-result">OpenClaw: three representations of one result<a class="heading-anchor" href="#openclaw-three-representations-of-one-result" aria-label="Link to OpenClaw: three representations of one result">#</a></h3>
+<p>OpenClaw keeps separate representations for separate audiences. The canonical transcript stores the fullest version of the result. The provider gets a bounded clone: capped at 16,000, 32,000, or 64,000 characters depending on the model&#39;s window size, and never more than 30 percent of the window, so one result cannot crowd out everything else. And during overflow recovery only, a persisted rewrite can shrink the stored version itself, as a last resort to keep the session alive.</p>
+<p>The cap normally keeps the beginning of a result. But a detector scans the tail for error language, stack traces, closing JSON, and summary-like phrasing, and when the tail looks diagnostic it keeps head plus tail with an explicit middle-omission marker. For our build failure at character 53,000: if the tail contains the failure summary, the model sees it; the middle stays in the canonical transcript.</p>
+<figure class="fig-flow" aria-label="OpenClaw observation flow">
+  <div class="flow">
+    <span class="fnode src">80K result</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">canonical transcript<small>fullest stored version</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">provider clone<small>16/32/64K by tier, ≤ 30% of window, diagnostic-tail detection</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees head + marked gap + diagnostic tail</span>
+  </div>
+  <p class="fig-note">Overflow recovery only: a persisted rewrite may shrink the stored version too. Liveness can become a durability decision.</p>
+</figure>
+
+<h3 id="hermes-spill-the-body-show-a-preview-order-the-writes">Hermes: spill the body, show a preview, order the writes<a class="heading-anchor" href="#hermes-spill-the-body-show-a-preview-order-the-writes" aria-label="Link to Hermes: spill the body, show a preview, order the writes">#</a></h3>
+<p>Hermes budgets results individually and per turn. Our 80K build exceeds both, so the full body is written to a scratch directory and the model receives a 1,500-character preview plus the file path; reading more is one <code>read_file</code> call away. Post-processing can also add guardrail guidance and navigation hints before the message is appended.</p>
+<p>Hermes also treats <em>when</em> things are written as part of correctness. The assistant&#39;s tool-call block is persisted before the tool runs, and each result is persisted right after it completes. A crash can never leave stored history claiming an action that did not happen, or missing one that did.</p>
+<figure class="fig-flow" aria-label="Hermes observation flow">
+  <div class="flow">
+    <span class="fnode src">80K result</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">over budget?<small>per-result and per-turn checks</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode risk">spill to disk<small>full body, readable later</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">model sees 1,500-char preview + path</span>
+  </div>
+  <p class="fig-note">Write order as a contract: tool-call block persisted → tool runs → result persisted. Crash-safe at every step.</p>
+</figure>
+
+<h3 id="summary-and-tradeoffs-3">Summary and tradeoffs<a class="heading-anchor" href="#summary-and-tradeoffs-3" aria-label="Link to Summary and tradeoffs">#</a></h3>
+<figure class="fig-fates" aria-label="Four fates of one oversized tool result">
+  <figcaption><strong>One 80,000-character failure, four representations.</strong> What reaches the model (solid) and where the complete result survives (outlined).</figcaption>
+  <div class="fate-rows">
+    <div class="fate-row"><span class="fate-label">Pi</span><span class="fate-model">last 2,000 lines / 50 KB</span><span class="fate-durable">complete copy in temp file, path shown</span></div>
+    <div class="fate-row"><span class="fate-label">OpenHands</span><span class="fate-model">typed observation ≤ 30,000 chars</span><span class="fate-durable">full content persisted when configured</span></div>
+    <div class="fate-row"><span class="fate-label">OpenClaw</span><span class="fate-model">head + diagnostic tail, ≤ 30% of window</span><span class="fate-durable">fuller canonical transcript entry</span></div>
+    <div class="fate-row"><span class="fate-label">Hermes</span><span class="fate-model">1,500-char preview + spill path</span><span class="fate-durable">complete body on disk, tool-readable</span></div>
+  </div>
+</figure>
+
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Harness</th>
+<th>Optimizes for</th>
+<th>Failure mode accepted</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pi</td>
+<td>Integrity at the action boundary; loss that is visible and recoverable</td>
+<td>The model must notice the spill pointer and act on it</td>
+</tr>
+<tr>
+<td>OpenHands</td>
+<td>Structured, instrumented, provider-independent observations</td>
+<td>A bad conversion produces a clean record of wrong evidence</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Small provider payloads without rewriting stored history</td>
+<td>The recovery path can make a temporary loss permanent</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>Protecting the next call while keeping everything recoverable</td>
+<td>The model may treat the preview as sufficient and never fetch the body</td>
+</tr>
+</tbody></table></div>
+<h3 id="what-the-evidence-says-3">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-3" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> all mechanisms above, including both independent fail-closed rules for truncated tool-call arguments. <em>Research:</em> nothing directly tests shaping policies; SWE-agent supports the general claim that interface choices matter. The structural risk is well characterized in this project&#39;s synthesis: shaping failures exhibit <strong>asymmetric observability</strong>, meaning the failure removes the very evidence the model would need to notice it. That is why omission markers and recovery routes matter more than cap sizes. <em>Unmeasured:</em> how often models follow preview and spill pointers, and the precision of OpenClaw&#39;s diagnostic-tail detector. Both are instrumentable in production. (<a href="../research/claims/context-management-across-harnesses.md#c004">Context synthesis C004</a>, <a href="../research/claims/context-management-across-harnesses.md#c008">C008</a>)</p>
+<h3 id="design-guidance-3">Design guidance<a class="heading-anchor" href="#design-guidance-3" aria-label="Link to Design guidance">#</a></h3>
+<p>Three rules apply regardless of goal: mark every omission, keep the complete result somewhere the agent can reach, and fail closed on truncated tool arguments (two systems converged on this independently; treat it as settled defensive practice). Then choose by operational profile: typed observations if you need instrumentation and provider independence; preview-plus-spill if outputs are huge and your model retrieves reliably; head-plus-diagnostic-tail if latency budgets rule out retrieval round-trips. Then test the behavioral half. A recovery route the model never takes is a comfort, not a mechanism.</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for result shaping</summary>
+
+<ul>
+<li>Pi: exact head/tail limits, continuation, spill, and fail-closed truncated-call behavior in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: exact file/terminal caps and persistence condition in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a>, plus the typed action/observation boundary in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E08</a></li>
+<li>OpenClaw: exact bootstrap and live-result budgets in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E21</a>, plus canonical/provider/recovery projections in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E10</a></li>
+<li>Hermes: exact read, per-result, aggregate, preview, and spill limits in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; information-value tradeoffs are engineering inference</li>
+</ul>
+</details>
+
+<h2 id="4-history-projection-the-stored-record-versus-the-active-view">4. History projection: the stored record versus the active view<a class="heading-anchor" href="#4-history-projection-the-stored-record-versus-the-active-view" aria-label="Link to 4. History projection: the stored record versus the active view">#</a></h2>
+<p><strong>The problem.</strong> A long session accumulates far more than any call can carry: every message, every tool result, every wrong turn. Every harness therefore maintains two distinct objects. The <strong>durable history</strong> is the permanent record of what happened. The <strong>active view</strong> (or projection) is the subset assembled for the next model call. Auditability, crash recovery, and branching all live in the mapping between them.</p>
+<figure class="fig-branch" aria-label="Durable tree with active-branch projection">
+  <figcaption><strong>The projection boundary.</strong> Storage keeps everything, including abandoned branches and pre-compaction entries. The model receives one traversal of it.</figcaption>
+  <div class="branch-canvas">
+    <div class="branch-lane faded"><span class="bnode">e1</span><span class="bedge"></span><span class="bnode">e2</span><span class="bedge"></span><span class="bnode abandoned">e3′ abandoned branch</span></div>
+    <div class="branch-lane"><span class="bnode">e1</span><span class="bedge"></span><span class="bnode">e2</span><span class="bedge"></span><span class="bnode summary">Σ summary</span><span class="bedge"></span><span class="bnode">e9</span><span class="bedge"></span><span class="bnode active">e10 · active leaf</span></div>
+  </div>
+  <p class="fig-note">Model view = the active leaf's path, the latest summary, the retained tail, and later events. Everything else is storage: recoverable, searchable, invisible.</p>
+</figure>
+
+<p><strong>Pi</strong> stores each session as an append-only tree in a JSONL file. Every entry names its parent, and messages, model changes, compactions, and plug-in entries are all distinct entry types. Moving the active leaf creates a new branch without deleting the old one, so &quot;undo&quot; is really &quot;branch&quot;; nothing is lost, and a human can audit every path taken. The projection function walks from the active leaf and, after a compaction, returns the summary entry plus the kept recent entries and everything since.</p>
+<p><strong>OpenHands</strong> separates three questions into three objects: the append-only event log answers <em>what happened</em> (one JSON file per event, each naming its parent); a leaf pointer answers <em>what is current</em>; and the <code>View</code>, which is computed and never stored, answers <em>what the model may see</em>. The <code>View</code> admits only model-convertible events on the active branch, applies condensation, and enforces pairing rules such as &quot;no tool call without its result.&quot; Because the view is derived, it can be rebuilt from the log at any time, which is what makes crash recovery and replay routine.</p>
+<p><strong>OpenClaw</strong> runs a federation of stores rather than one: an ingress queue in SQLite, delivery offsets, a session registry written atomically, an append-only transcript that is <em>repaired</em> on open (older or corrupt state normalized, tool pairing guarded), workspace files, and in-process buffers. Each store has its own durability rules because each answers a different failure: &quot;accepted&quot;, &quot;persisted&quot;, &quot;completed&quot;, and &quot;delivered&quot; are genuinely different events in a multi-channel service. The projection is built from the repaired transcript, never the raw stores.</p>
+<p><strong>Hermes</strong> keeps everything in SQLite: sessions, messages, usage, tool metadata. Append operations are idempotent (safe to retry after a crash without duplicating), and the write ordering from section 3 makes the record trustworthy at every instant. Compression archives old rows and inserts the compacted view atomically under the same session ID, so the active view shrinks while the archive stays queryable forever.</p>
+<h3 id="what-each-choice-optimizes-for">What each choice optimizes for<a class="heading-anchor" href="#what-each-choice-optimizes-for" aria-label="Link to What each choice optimizes for">#</a></h3>
+<p>Pi&#39;s tree buys branching and human audit with minimal machinery. OpenHands&#39; event sourcing buys replay and analysis: any historical state can be reconstructed. OpenClaw&#39;s federation buys independent failure domains for a service that must survive partial failure. Hermes&#39; single database buys operational simplicity with strong guarantees: one substrate, atomic transitions, nothing destroyed.</p>
+<h3 id="what-the-evidence-says-4">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-4" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> all structures and invariants above. <em>Research:</em> the strongest implementation evidence in this chapter. The OpenHands technical report describes a 15-day parallel production rollout with a <strong>61 percent reduction in system-attributable errors</strong> after the event-sourced redesign, and <strong>sub-millisecond median per-event persistence</strong> in a replay of 39,870 events. Read it carefully: the numbers are author-reported, cover a version family broader than this pin, and the rollout changed several things at once. It supports the plausibility of event-sourced designs in production; it is not a controlled ablation. <em>Unmeasured:</em> projection determinism under faults, which you can test mechanically: replay the stored history and assert the identical model view. (<a href="../research/claims/context-management-across-harnesses.md#c002">Context synthesis C002</a>)</p>
+<h3 id="design-guidance-4">Design guidance<a class="heading-anchor" href="#design-guidance-4" aria-label="Link to Design guidance">#</a></h3>
+<p>Make this decision first, because everything else composes with it. If forensics, compliance, or agent research matter, event-source: the replay property is priceless in debugging and the production signal, with its limits, is favorable. If you run a multi-channel service, accept the federation and name every commit boundary explicitly; OpenClaw&#39;s lesson is that pretending a turn is one transaction creates hidden loss windows, while naming the boundaries lets each be hardened. If you want simplicity with strong recovery, copy Hermes: one database, idempotent appends, explicit write ordering, soft archival. In every case, write the projection as a pure function of durable state, and test it as one.</p>
+<h2 id="5-compaction-when-the-history-no-longer-fits">5. Compaction: when the history no longer fits<a class="heading-anchor" href="#5-compaction-when-the-history-no-longer-fits" aria-label="Link to 5. Compaction: when the history no longer fits">#</a></h2>
+<p><strong>The problem.</strong> Eventually the projected history exceeds the window and something must shrink it. Compaction is the only mechanism in this chapter that deliberately destroys model-visible information the agent may later need. Treat it as a transaction with a failure model, not a feature.</p>
+<p>The common shape first, then each implementation:</p>
+<figure class="compaction-map" aria-labelledby="compaction-map-caption">
+  <figcaption id="compaction-map-caption">
+    <strong>The common compaction shape</strong>
+    <span>A protected head and recent tail surround a transformed middle; storage retention and model visibility remain separate.</span>
+  </figcaption>
+  <div class="history-before" aria-label="History before compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment middle">Older middle</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-arrow" aria-hidden="true"><span>summarize or evict</span>↓</div>
+  <div class="history-after" aria-label="Active context after compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment summary">Summary or retained structure</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-notes">
+    <p><strong>Durable store</strong><span>The raw middle may still exist.</span></p>
+    <p><strong>Active uncertainty</strong><span>Omission and hallucination can survive as fluent context.</span></p>
+  </div>
+</figure>
+
+<blockquote class="callout confusion"><p><strong>Common confusion: a fluent summary reads as complete.</strong></p>
+<p>Truncation announces itself; a summary that silently dropped one requirement does not. This asymmetry drives the whole section. The failure posture matters more than the summarizer prompt.</p>
+</blockquote>
+<h3 id="pi-structured-summary-hard-anchors-bounded-retries">Pi: structured summary, hard anchors, bounded retries<a class="heading-anchor" href="#pi-structured-summary-hard-anchors-bounded-retries" aria-label="Link to Pi: structured summary, hard anchors, bounded retries">#</a></h3>
+<p>Pi compacts by default. It triggers manually, on overflow, or when the estimated context crosses a reserve threshold (16,384 tokens reserved for the response; a 20,000-token recent region is kept). The compactor walks backward to a legal cut point, never splitting a tool call from its result. It asks a model for a structured summary of the older region, folds any previous summary into the new one, and appends two lists that act as hard anchors against drift: files read and files modified. Overflow recovery may compact and retry exactly once. There is no path that loops compaction forever.</p>
+<figure class="fig-flow" aria-label="Pi compaction flow">
+  <div class="flow">
+    <span class="fnode src">threshold crossed<small>reserve 16,384 · keep 20,000 recent</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">legal cut point<small>never splits tool pairs</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">structured summary<small>+ files read + files modified</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">new view<small>summary + recent tail</small></span>
+  </div>
+  <p class="fig-note">On overflow: compact and retry once. On repeated failure: stop. Old tree stays stored.</p>
+</figure>
+
+<h3 id="openhands-forgetting-is-an-audited-event">OpenHands: forgetting is an audited event<a class="heading-anchor" href="#openhands-forgetting-is-an-audited-event" aria-label="Link to OpenHands: forgetting is an audited event">#</a></h3>
+<p>A bare OpenHands <code>Agent</code> has no compaction at all; the recommended preset installs a summarizing condenser with an event-count policy (at most 80 events, keeping the first four). What is distinctive is the record: condensation writes a durable event containing the summary <em>and the IDs of every forgotten event</em>. The log shows exactly what was forgotten and when, which no other harness here records. Pressure comes in two grades: soft pressure (event count) may fail without changing the view; hard pressure (token limits) retries with progressively smaller input, then propagates failure to the caller.</p>
+<figure class="fig-flow" aria-label="OpenHands condensation flow">
+  <div class="flow">
+    <span class="fnode src">pressure<small>80-event soft limit or token hard limit</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">summarize middle<small>keep first 4 + recent suffix</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode cache">Condensation event<small>summary + forgotten IDs, in the log</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">new view</span>
+  </div>
+  <p class="fig-note">Soft failure: keep the current view. Hard failure: retry smaller, then propagate.</p>
+</figure>
+
+<h3 id="openclaw-compaction-inside-a-liveness-envelope">OpenClaw: compaction inside a liveness envelope<a class="heading-anchor" href="#openclaw-compaction-inside-a-liveness-envelope" aria-label="Link to OpenClaw: compaction inside a liveness envelope">#</a></h3>
+<p>OpenClaw treats context pressure as one of many things that must not kill a long-lived service. The runtime raises its compaction reserve, watches for overflow and high-context timeouts, bounds retry counts, extends the timeout once if compaction is already running, resumes from the transcript without replaying the user&#39;s message, and can shrink stored tool results as a last resort before giving up with guidance to reset the session. An optional pre-compaction step lets the model write durable memory notes before the middle disappears.</p>
+<figure class="fig-flow" aria-label="OpenClaw compaction and recovery flow">
+  <div class="flow">
+    <span class="fnode src">overflow or timeout</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">optional memory flush<small>save notes before losing the middle</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">compact + bounded retries<small>resume without replaying input</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode risk">last resort<small>shrink stored tool results</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">keep the session alive<small>or advise a reset</small></span>
+  </div>
+</figure>
+
+<h3 id="hermes-early-trigger-cheap-losses-first-keep-moving">Hermes: early trigger, cheap losses first, keep moving<a class="heading-anchor" href="#hermes-early-trigger-cheap-losses-first-keep-moving" aria-label="Link to Hermes: early trigger, cheap losses first, keep moving">#</a></h3>
+<p>Hermes compresses in place at 50 percent of the effective window, the earliest trigger in this set: more headroom, more frequent summarization. Before anything lossy happens it takes the cheap wins deterministically, pruning old tool output and oversized call arguments. It protects the system prompt, the first three non-system messages, and a recent region (the early-message protection expires after the first compression so old turns do not stay pinned forever), then asks a second model for a structured summary of the middle. Old rows are archived, the new view inserted atomically.</p>
+<p>The failure policy is split explicitly. Login and network failures preserve history untouched. An ordinary summarizer failure, under the default setting, drops the middle and inserts a fixed placeholder marking the gap, and the session continues. Operators can flip one flag to make every failure preserve history instead. Repeated compression triggers a quality warning.</p>
+<figure class="fig-flow" aria-label="Hermes compression flow">
+  <div class="flow">
+    <span class="fnode src">50% of window reached</span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">deterministic pruning<small>old tool output, oversized args</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">protect<small>system prompt + early messages + recent tail</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode">summarize middle<small>second model</small></span>
+    <span class="farrow" aria-hidden="true">→</span>
+    <span class="fnode call">archive rows, insert new view atomically</span>
+  </div>
+  <p class="fig-note">Summarizer fails: continue with a marked gap (default) or abort and preserve (one flag). Network/auth fails: always preserve.</p>
+</figure>
+
+<h3 id="summary-the-failure-posture-spectrum">Summary: the failure-posture spectrum<a class="heading-anchor" href="#summary-the-failure-posture-spectrum" aria-label="Link to Summary: the failure-posture spectrum">#</a></h3>
+<p>Codex compacts automatically at 90 percent of its window, keeps recent real user messages within a 20,000-token budget locally (64,000 in its remote path), and warns in the product that repeated compaction can reduce accuracy. Letta&#39;s server defaults to sliding-window summarization with a separate cheap summarizer model, and keeps everything older searchable, so the summary is never the only way back.</p>
+<figure class="fig-posture" aria-label="Compaction failure postures across six systems">
+  <figcaption><strong>When the compression transaction is uncertain, what does each system protect?</strong></figcaption>
+  <div class="posture-axis">
+    <span class="pole">preserve context<br><small>stop / hold</small></span>
+    <span class="axis-line">
+      <span class="ptick" style="left:6%"><b>Pi</b><small>bounded retry, then stop</small></span>
+      <span class="ptick" style="left:30%"><b>OpenHands</b><small>soft holds view; hard propagates</small></span>
+      <span class="ptick" style="left:55%"><b>Letta</b><small>summarize, keep history searchable</small></span>
+      <span class="ptick" style="left:74%"><b>OpenClaw</b><small>escalate, truncate, reset guidance</small></span>
+      <span class="ptick" style="left:92%"><b>Hermes</b><small>marked gap, keep going</small></span>
+    </span>
+    <span class="pole">forward progress<br><small>degrade / continue</small></span>
+  </div>
+  <p class="fig-note">Codex sits near OpenClaw and Hermes: automatic compaction with an explicit accuracy warning. Positions reflect default failure posture at the pins, not quality.</p>
+</figure>
+
+<p>Pi protects predictable termination: an interactive tool should stop cleanly rather than degrade invisibly. OpenHands protects inspectability: forgetting is audited, and optional pressure is architecturally distinct from mandatory pressure. OpenClaw protects liveness: a service users depend on must keep moving. Hermes protects forward progress with a recoverable archive: for an autonomous agent, halting on a summarizer hiccup is worse than continuing past a marked gap.</p>
+<h3 id="what-the-evidence-says-5">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-5" aria-label="Link to What the evidence says">#</a></h3>
+<p>This is where the research is most direct, and worth reading precisely.</p>
+<p><strong>Semenov and Dorofeev (2026)</strong> characterize LLM-summary compaction as unpredictably lossy, structurally destructive, blocking, and prone to introducing hallucinations. Their proposed alternative removes the summarizer entirely: the agent maintains typed episodes with dependencies, and eviction is deterministic. Their evidence so far is one 89-task, 80-million-token session reporting parity with fresh sessions, in a first-release preprint with ablations deferred. Treat it as a credible counter-design and a source of failure hypotheses, not a verdict.</p>
+<p><strong>Cim and colleagues (2026)</strong> measured the standard baseline across four model backbones on two benchmarks: synchronous compaction consumed <strong>up to 62 percent of wall-clock time</strong> at low thresholds, and ten repeated runs produced summaries that varied materially in volume and semantic content, with prompt instructions providing little control. Two transferable warnings: low thresholds are expensive (relevant to Hermes&#39; 50 percent trigger, though never tested on it), and a summary is a random variable, so the agent&#39;s post-compaction knowledge differs run to run. Limits: non-coding benchmarks, self-hosted models, not these prompts or protected-region policies.</p>
+<p><em>Verified at the pins:</em> every mechanism above. <em>The honest status:</em> <strong>contested implementation practice</strong>. Universally shipped, plausibly necessary, exposed to demonstrated general risks, unmeasured for retention at these exact designs. Pi&#39;s file-list anchors, Hermes&#39; deterministic pre-pruning, and OpenHands&#39; forgotten-ID records each partially mitigate exactly the risks the papers name; none has published retention numbers. (<a href="../research/claims/context-management-across-harnesses.md#c005">Context synthesis C005</a>, <a href="../research/claims/context-management-across-harnesses.md#c009">C009</a>)</p>
+<h3 id="design-guidance-5">Design guidance<a class="heading-anchor" href="#design-guidance-5" aria-label="Link to Design guidance">#</a></h3>
+<p>Decide the failure posture first and make it configurable; it is the highest-leverage line in the design, and the four postures map cleanly onto product types (interactive: stop; audited: propagate; service: escalate; autonomous: degrade with markers). Steal the free mitigations: prune deterministically before summarizing, give summaries hard anchors such as file lists and IDs, protect regions with expiry, and record what was forgotten. Set the trigger from your latency budget with the 62 percent result in mind: early triggers smooth latency but accumulate loss risk across more summarizations; late triggers concentrate the cost. And build one retention probe before shipping: force a compaction, then ask the agent to state the original acceptance criteria. That single test measures the thing none of these systems measures.</p>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for compaction defaults and failure posture</summary>
+
+<ul>
+<li>Pi: trigger, protected recent region, structured summary, and defaults in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: bare-agent versus preset defaults and the 80-event/four-event policy in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a></li>
+<li>OpenClaw: runtime compaction and bounded recovery in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E08</a></li>
+<li>Hermes: threshold, protected regions, pruning, soft archival, and summary-failure split in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; the stated priorities and semantic-retention risks are engineering inferences</li>
+</ul>
+</details>
+
+<h2 id="6-context-transfer-what-a-child-agent-inherits">6. Context transfer: what a child agent inherits<a class="heading-anchor" href="#6-context-transfer-what-a-child-agent-inherits" aria-label="Link to 6. Context transfer: what a child agent inherits">#</a></h2>
+<p><strong>The problem.</strong> Delegation creates a second projection boundary. Everything the parent knows and does not transmit is, from the child&#39;s perspective, information that never existed.</p>
+<figure class="fig-inherit" aria-label="Inheritance spectrum from isolation to full fork">
+  <figcaption><strong>The inheritance spectrum.</strong> Production defaults cluster hard left; richer inheritance always requires an explicit request.</figcaption>
+  <div class="inherit-axis">
+    <span class="itick" style="left:4%"><b>nothing</b><small>Codex fork_turns=none</small></span>
+    <span class="itick" style="left:22%"><b>task brief</b><small>Pi ext · OpenHands · Hermes · OpenClaw default · Letta ephemeral</small></span>
+    <span class="itick" style="left:55%"><b>last N turns</b><small>Codex fork_turns=N</small></span>
+    <span class="itick" style="left:76%"><b>filtered projection</b><small>Codex "all": no tool calls/results, no reasoning</small></span>
+    <span class="itick" style="left:94%"><b>transcript fork</b><small>OpenClaw same-agent · Letta fork</small></span>
+  </div>
+</figure>
+
+<p><strong>Hermes</strong> has the most fully specified child contract. A child gets a fresh session, its own budget, and a focused prompt written by the parent. It inherits tool capability no broader than the parent&#39;s, and it does not receive the parent&#39;s project files or durable memory. Its final answer returns as a summary bounded against the parent&#39;s remaining space; anything bigger spills to a file the parent can read. Structure is enforced in code rather than prompts: top-level delegations are forced into the background, an orchestrator child aggregates its workers synchronously, and fresh defaults cap concurrency at three, depth at one, and child iterations at fifty.</p>
+<p><strong>OpenHands</strong> starts each delegated child as a new conversation with its own state, sharing the parent&#39;s workspace. Children run in threads; the parent waits for all of them, receives their final texts, and absorbs their token usage into its own metrics. The parent gets prose, not a verified artifact. <strong>OpenClaw</strong> spawns children isolated by default; forking the transcript into the child is an explicit request and only allowed for a same-agent child. <strong>Pi</strong> ships delegation as an example extension rather than a core feature, which is itself a statement: delegation is policy, not physics.</p>
+<p><strong>Codex</strong> answers the question &quot;what counts as context?&quot; with a filter. Its <code>fork_turns</code> option defaults to <code>all</code>, and <code>all</code> means: system, developer, and user messages, plus final assistant answers. Tool calls, tool results, reasoning, and intermediate assistant work are classified as implementation debris and stripped. That is a bet that conclusions are context and mechanics are noise, and it can lose: sometimes the filtered tool result was the evidence that mattered. <strong>Letta</strong> exposes both ends: ordinary children are stateless with no memory access (the code denies it with a comment saying there is no opt-out), while an explicit fork inherits the conversation.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion: a fresh context is not an independent mind.</strong></p>
+<p>If the same parent model writes the brief, the same model executes it, and the parent accepts a text summary, correlated errors survive every boundary you erect. Isolation buys focus and cost control. It does not buy independent verification. (<a href="../research/claims/context-management-across-harnesses.md#c006">Context synthesis C006</a>)</p>
+</blockquote>
+<h3 id="what-each-choice-optimizes-for-2">What each choice optimizes for<a class="heading-anchor" href="#what-each-choice-optimizes-for-2" aria-label="Link to What each choice optimizes for">#</a></h3>
+<p>Isolation with a brief optimizes cost, contamination control, and focus, and it creates brief-writing risk: every omitted constraint is unavailable unless the child rediscovers it in the shared environment. Forking optimizes completeness and imports irrelevance, staleness, and cost. The filter is a middle bet on conclusions over mechanics.</p>
+<h3 id="what-the-evidence-says-6">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-6" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> every policy above. <em>Research:</em> <strong>BenchAgent&#39;s</strong> controlled comparison found <strong>five of six multi-agent workflows underperforming a matched single-agent baseline</strong> under its protocol, while a separately evaluated Claude-Code-style runtime performed well without isolating subagents as the cause. The transferable finding is not that multi-agent is bad; it is that decomposition has real coordination and information-loss costs, and the benefit is the thing to prove, not assume. No study compares inheritance policies (brief versus filter versus fork) under matched conditions; that is arguably the most valuable missing experiment in this chapter. <em>Unmeasured:</em> child-starvation rates and summary-compression loss on the return path.</p>
+<h3 id="design-guidance-6">Design guidance<a class="heading-anchor" href="#design-guidance-6" aria-label="Link to Design guidance">#</a></h3>
+<p>Treat inheritance as a written policy over roles, message types, tool evidence, memory, and capability, not a boolean. Default to briefs, as every production default here does, but engineer the brief: state acceptance constraints explicitly, test child output against the <em>parent&#39;s</em> requirements, and give children a path to rediscover context from the shared environment. Cap structure in code, not prompts. And before adopting multi-agent at all, run the BenchAgent test on your own workload: same task, same budget, one agent versus your decomposition. The burden of proof sits with the architecture that adds boundaries.</p>
+<h2 id="7-memory-what-survives-the-session-and-what-it-costs">7. Memory: what survives the session, and what it costs<a class="heading-anchor" href="#7-memory-what-survives-the-session-and-what-it-costs" aria-label="Link to 7. Memory: what survives the session, and what it costs">#</a></h2>
+<p><strong>The problem.</strong> Sessions end and users come back. Five words get collapsed into &quot;memory,&quot; and each hides a different design decision: <strong>history</strong> (what was recorded), <strong>active context</strong> (what the model sees now), <strong>memory</strong> (what is meant to survive and influence later work), <strong>adaptation</strong> (future behavior changes based on experience), and <strong>optimization</strong> (changes kept because a measured outcome improved).</p>
+<figure class="fig-quadrant" aria-label="Memory placement economy: visibility versus cost">
+  <figcaption><strong>The placement economy.</strong> Where information lives determines what it costs on every call and how it can fail to arrive.</figcaption>
+  <div class="quad-grid">
+    <div class="quad-cell q-tl"><b>Always in the prompt</b><small>Letta <code>system/</code> · OpenClaw bootstrap · Hermes MEMORY.md</small><span class="q-cost">guaranteed visibility · permanent token cost · staleness risk</span></div>
+    <div class="quad-cell q-tr"><b>Advertised, read on demand</b><small>Letta memory files · skills in Pi, OpenClaw, Hermes</small><span class="q-cost">cheap · fails by the model not asking</span></div>
+    <div class="quad-cell q-bl"><b>Retrieved by trigger</b><small>OpenClaw memory_search · Hermes recall provider</small><span class="q-cost">scales well · fails on trigger and query quality</span></div>
+    <div class="quad-cell q-br"><b>Searchable archive</b><small>Letta history · Hermes archived rows · Pi session tree</small><span class="q-cost">complete · reachable only through deliberate search</span></div>
+  </div>
+</figure>
+
+<p><strong>OpenClaw</strong> keeps memory operations deliberate. Its default memory plug-in adds search and read tools and tells the model, in the prompt, when to use them. Before compaction destroys the middle of a session, an optional flush asks the model to write durable notes to a dated file. Its adaptation mechanism, called dreaming, is off by default and precisely specified: a scheduled sweep promotes short-term snippets into long-term memory based on how often they were recalled, how diverse the queries were, and how recent they are, with contamination checks and a size budget.</p>
+<p><strong>Hermes</strong> runs the most active adaptation loop in this set, and both halves of it are instructive. The write path: every ten eligible turns, a background process reviews the conversation and can update memory files or skills, with fresh defaults allowing writes without approval. The isolation engineering exists because it failed before: the reviewer runs as a separate forked process that cannot write into the live session, cannot compress it, and cannot finalize its rows, and the repository&#39;s own comments and tests document the earlier bugs where a review leaked into the live conversation. A separate curator archives stale skills by usage and age, recoverably, with backups.</p>
+<p><strong>Letta</strong> prices placement explicitly, as the quadrant shows, and governs mutation: memory edits require a stated reason, validation, and a git commit, and a periodic reflection process can rewrite committed memory. <strong>Codex</strong> ships cross-run memory as experimental and off by default, keeping implemented capability and default behavior honestly separate.</p>
+<p>Note what every one of these signals has in common: recall counts, diversity, recency, and model judgment are all <strong>usage signals</strong>. None of them is a task outcome. A frequently recalled mistake is promoted exactly as readily as a frequently recalled truth, because nothing in the loop knows which one it was.</p>
+<h3 id="what-the-evidence-says-7">What the evidence says<a class="heading-anchor" href="#what-the-evidence-says-7" aria-label="Link to What the evidence says">#</a></h3>
+<p><em>Verified at the pins:</em> all mechanisms above, including Hermes&#39; isolation invariants and their documented failure history. <em>Research:</em> <strong>MemoryAgentBench</strong> splits memory competence into four parts: accurate retrieval, learning during use, long-range understanding, and conflict resolution with selective forgetting. Its reported result: <strong>no evaluated method mastered all four</strong>. It does not score these harnesses. Its value is blocking a category error: persistence plus retrieval is not competent memory, and memory mutation is not improvement. No admitted study measures whether any of these memory systems makes later tasks go better. (<a href="../research/claims/context-management-across-harnesses.md#c007">Context synthesis C007</a>, <a href="../research/claims/context-management-across-harnesses.md#c010">C010</a>)</p>
+<h3 id="design-guidance-7">Design guidance<a class="heading-anchor" href="#design-guidance-7" aria-label="Link to Design guidance">#</a></h3>
+<p>Budget the always-visible tier ruthlessly; it is the only tier whose cost every call pays forever. Put provenance and a correction path on every write from the start (Letta&#39;s reason-plus-commit is the legible pattern; retrofitting governance onto polluted memory is miserable). If you automate adaptation, copy Hermes&#39; isolation invariants wholesale; that failure history is a free gift. And hold the vocabulary line: your system <em>adapts</em>. It does not <em>learn</em> or <em>self-improve</em> until you measure outcomes against the changes. MemoryAgentBench&#39;s four competencies are a ready-made test plan.</p>
+<h2 id="8-building-for-your-goal">8. Building for your goal<a class="heading-anchor" href="#8-building-for-your-goal" aria-label="Link to 8. Building for your goal">#</a></h2>
+<p>Everything above compresses into a procedure. The four harnesses are four consistent answers to one question: what do you protect when you cannot protect everything? Your harness has to answer it too.</p>
+<figure class="fig-profiles" aria-label="Four optimization profiles">
+  <figcaption><strong>Four coherent profiles.</strong> Every context decision in each column serves that column's goal.</figcaption>
+  <div class="profile-cards">
+    <div class="p-card"><b>Pi</b><em>interactive coding tool</em><span>predictable termination · visible loss · branchable audit trail · minimal machinery · integrity-first action boundary</span></div>
+    <div class="p-card"><b>OpenHands</b><em>inspectable platform</em><span>policy as artifact · prompt and forgetting recorded as events · typed boundaries · replayable projection</span></div>
+    <div class="p-card"><b>OpenClaw</b><em>long-lived service</em><span>liveness envelopes · durable ingress · federated stores · cache-economical prompts · route-specific worlds</span></div>
+    <div class="p-card"><b>Hermes</b><em>resilient autonomy</em><span>forward progress under failure · nothing destroyed in storage · early compression · isolated adaptation loops</span></div>
+  </div>
+</figure>
+
+<p><strong>Step 1: name your dominant goal.</strong> Not all of them. The one that wins conflicts.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Your dominant goal</th>
+<th>Decisions that matter most</th>
+<th>Policies to adopt</th>
+<th>Study first</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Long-horizon task success</td>
+<td>compaction, acquisition</td>
+<td>structured summaries with hard anchors; deterministic pre-pruning; retention probes in CI; pagination protocols</td>
+<td>Pi&#39;s summary anchors; Hermes&#39; pruning</td>
+</tr>
+<tr>
+<td>Auditability and debugging</td>
+<td>history projection, observation shaping</td>
+<td>event sourcing; prompt stored as data; records of what was forgotten; a replayable projection</td>
+<td>OpenHands end to end</td>
+</tr>
+<tr>
+<td>Always-on reliability</td>
+<td>history projection, compaction posture</td>
+<td>federated stores with named commit boundaries; escalating recovery; delivery decoupled from computation</td>
+<td>OpenClaw end to end</td>
+</tr>
+<tr>
+<td>Autonomous resilience</td>
+<td>compaction posture, memory</td>
+<td>degrade-with-markers failure posture; archives instead of deletion; isolated adaptation; idempotent writes</td>
+<td>Hermes end to end</td>
+</tr>
+<tr>
+<td>Cost and latency</td>
+<td>initial construction, compaction trigger</td>
+<td>cache-stable prompt prefixes (measure the hit rate); later compaction triggers; typed budgets; brief-based delegation</td>
+<td>OpenClaw&#39;s prefix split; Cim et al. on trigger cost</td>
+</tr>
+<tr>
+<td>Personalization across sessions</td>
+<td>memory</td>
+<td>a priced always-visible tier; provenance and a correction path on writes; isolation on automatic writers</td>
+<td>Letta&#39;s governance; Hermes&#39; isolation</td>
+</tr>
+</tbody></table></div>
+<p><strong>Step 2: write the context contract.</strong> For each information surface, one page: the source of truth (and which store wins a disagreement); the admission rule (every call, per session or route, or retrieval only, with stated invalidation triggers); the transformation (selection rule, budget, window shape, omission marker, recovery path); the failure posture (hold, retry smaller, degrade with markers, or stop, chosen from your row above before the incident happens); and the boundary crossings (what survives a crash, a resume, a compaction, a child spawn, a new day). (<a href="../research/claims/context-management-across-harnesses.md#c011">Context synthesis C011</a>)</p>
+<p><strong>Step 3: adopt the settled invariants.</strong> These recur across independent implementations and defend against the shared failure classes: omission is always marked; complete results survive somewhere reachable; truncated tool-call arguments fail closed; tool-call and result pairs stay atomic; durable history outlives every projection; memory writes carry provenance.</p>
+<p><strong>Step 4: test retention, not mechanics.</strong> This is the investment none of the four systems made, and the first place your harness can beat them. After a forced compaction, the agent restates the acceptance criteria. After a large shaped result, it finds the decisive middle. A child obeys a constraint left out of its brief, or the brief-writing process catches the omission. A planted false memory gets corrected. These probes convert this chapter&#39;s biggest &quot;unmeasured&quot; labels into your competitive information.</p>
+<p><strong>Step 5: steal coherence, not components.</strong> The deepest lesson of the comparison: no harness here mixes postures arbitrarily. Pi does not bolt Hermes&#39; keep-going compaction onto its predictable-termination loop. OpenClaw does not adopt Pi&#39;s stop-on-failure inside a service that must stay alive. When you borrow a mechanism, borrow it because its optimization target matches yours. That is what the comparison is for.</p>
+<h2 id="what-this-chapter-can-and-cannot-claim">What this chapter can and cannot claim<a class="heading-anchor" href="#what-this-chapter-can-and-cannot-claim" aria-label="Link to What this chapter can and cannot claim">#</a></h2>
+<p>Every implementation mechanism above is a verified fact at an exact pinned commit, traceable through the linked evidence anchors. The optimization-target analyses are engineering inferences from those mechanisms: strong ones, but inferences. The research findings carry their limits inline: two compaction preprints on other tasks and models, one multi-agent comparison under its own protocol, one memory benchmark that scores none of these systems, one author-reported production rollout. Claude Code&#39;s reported design (a 256 KiB pre-read gate, a roughly 25,000-token post-read budget, read deduplication, spill with preview, structured continuation summaries, and both blank and forked children) remains source-reported, version-unstable, and outside the verified matrix.</p>
+<p>Four cases and two bounded inspections are a serious comparison, not a census. OpenClaw and Hermes share documented migration and influence links, so their agreements are not independent convergence. No perception-heavy browser harness is represented, and closed production systems remain closed. The largest open questions are ones your own retention probes and matched experiments could answer before the research community does: retention across repeated compaction, inheritance policies under matched budgets, and whether any memory system&#39;s writes improve measured outcomes. (<a href="../research/claims/context-management-across-harnesses.md#c012">Context synthesis C012</a>)</p>
+<h2 id="recap">Recap<a class="heading-anchor" href="#recap" aria-label="Link to Recap">#</a></h2>
+<p>Context engineering is deciding, mechanism by mechanism, what the model gets to see, what that costs, what it risks, and what happens when the machinery fails. Four production harnesses answer those questions in four coherent, opposite, defensible ways because they serve four different masters: predictability, inspectability, liveness, and resilience. The research qualifies the sharpest edge (summarization is expensive, variable, and unmeasured for retention) and removes two comfortable assumptions (decomposition is not free; memory mutation is not improvement). Your harness will be good not because it copies any of them, but because every context decision in it serves the same goal, yours, on purpose.</p>
+<blockquote class="callout">
+<p><strong>What exact evidence will the model receive on the next call, and what happened to everything else?</strong></p>
+</blockquote>
+<h2 id="reflection-questions">Reflection questions<a class="heading-anchor" href="#reflection-questions" aria-label="Link to Reflection questions">#</a></h2>
+<ol>
+<li>Which of the four optimization profiles is closest to your product, and where does your current design contradict its own profile?</li>
+<li>What is your compaction failure posture, and could you defend it to an operator at 3 a.m.?</li>
+<li>Which tier of the placement economy holds your always-visible memory, and what does it cost per call?</li>
+<li>Which retention probe from Step 4 would most likely fail on your system today?</li>
+<li>What would the 62 percent wall-time result look like measured on your workload and threshold?</li>
+</ol>
+<h2 id="suggested-next-reading">Suggested next reading<a class="heading-anchor" href="#suggested-next-reading" aria-label="Link to Suggested next reading">#</a></h2>
+<ul>
+<li><a href="../research/syntheses/context-management-across-harnesses.md">Agent-grade context synthesis</a></li>
+<li><a href="../research/case-studies/pi-v0.80.6.md">Pi case study</a> · <a href="../research/case-studies/openhands-sdk-v1.35.0.md">OpenHands SDK case study</a> · <a href="../research/case-studies/openclaw-v2026.6.6.md">OpenClaw case study</a> · <a href="../research/case-studies/hermes-agent-v0.18.2.md">Hermes Agent case study</a></li>
+<li><a href="../research/sources/codex-cli-v0.144.6-context.md">Codex CLI bounded context inspection</a> · <a href="../research/sources/letta-code-v0.28.11-context.md">Letta bounded context inspection</a></li>
+<li><a href="../research/sources/semenov-2026-beyond-compaction.md">Beyond Compaction</a> · <a href="../research/sources/cim-2026-parallel-compaction.md">Parallel Context Compaction</a> · <a href="../research/sources/hou-2026-memoryagentbench.md">MemoryAgentBench</a></li>
+</ul>
+</div>
+    </article>
+  </main>
+</body>
+</html>

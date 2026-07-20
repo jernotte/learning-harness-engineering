@@ -137,8 +137,8 @@ function validateStatic(repoRoot, siteRoot) {
     }
   }
 
-  const chapterMarkdown = fs.readFileSync(path.join(repoRoot, "learning/chapters/where-harnesses-put-control.md"), "utf8");
-  const chapterHtml = fs.readFileSync(path.join(siteRoot, "chapters/where-harnesses-put-control.html"), "utf8");
+  const chapterMarkdown = fs.readFileSync(path.join(repoRoot, "learning/chapters/context-management-in-agent-harnesses.md"), "utf8");
+  const chapterHtml = fs.readFileSync(path.join(siteRoot, "chapters/context-management-in-agent-harnesses.html"), "utf8");
   const parsedChapter = extractFrontmatter(chapterMarkdown);
   const opening = extractOpeningHeadings(parsedChapter.body, parsedChapter.attributes.title);
   if (!chapterHtml.includes(`<p class="chapter-subtitle">${opening.subtitle}</p>`)) {
@@ -148,8 +148,11 @@ function validateStatic(repoRoot, siteRoot) {
     const id = slugify(match[1]);
     if (!chapterHtml.includes(`id="${id}"`)) errors.push(`chapter output omitted canonical H2: ${match[1]}`);
   }
-  if (!chapterHtml.includes('data-evidence-kind="inference"')) errors.push("chapter lacks epistemic detail markup");
-  if (chapterHtml.includes('evidence-detail kind-fact')) errors.push("chapter strengthened an inference evidence trail to fact");
+  for (const kind of ["fact", "reported", "inference"]) {
+    if (!chapterHtml.includes(`data-evidence-kind="${kind}"`)) {
+      errors.push(`chapter lacks ${kind} epistemic detail markup`);
+    }
+  }
   if (!chapterHtml.includes("commit 9de9c25f620ff7f1ce0fd5457d596052d5159596")) errors.push("chapter omits accessible full commit pins");
 
   const css = fs.readFileSync(path.join(siteRoot, "assets/styles.css"), "utf8");
@@ -219,7 +222,7 @@ async function validateBrowser(repoRoot, artifactRoot) {
           const target = new URL(request.url());
           if (target.hostname !== "127.0.0.1" && target.protocol !== "data:") runtimeErrors.push(`remote request: ${request.url()}`);
         });
-        await page.goto(`${baseUrl}/site/chapters/where-harnesses-put-control.html`, { waitUntil: "networkidle" });
+        await page.goto(`${baseUrl}/site/chapters/context-management-in-agent-harnesses.html`, { waitUntil: "networkidle" });
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
         if (overflow > 1) errors.push(`${viewport.name}: horizontal overflow ${overflow}px`);
         const contrastFailures = await page.evaluate(() => {
@@ -311,7 +314,7 @@ async function validateBrowser(repoRoot, artifactRoot) {
 
       const darkContext = await browser.newContext({ viewport: { width: 1440, height: 1000 }, colorScheme: "dark" });
       const dark = await darkContext.newPage();
-      await dark.goto(`${baseUrl}/site/chapters/where-harnesses-put-control.html`, { waitUntil: "networkidle" });
+      await dark.goto(`${baseUrl}/site/chapters/context-management-in-agent-harnesses.html`, { waitUntil: "networkidle" });
       await dark.evaluate(() => localStorage.setItem("harness-learning-theme", "dark"));
       await dark.reload({ waitUntil: "networkidle" });
       const darkShot = path.join(artifactRoot, "chapter-dark.png");

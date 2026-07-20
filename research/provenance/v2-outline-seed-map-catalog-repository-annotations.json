@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-07-20T20:40:00Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "v2-d007-catalog-repository-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-catalog-repository-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-95e2f11879a290a0",
+      "disposition": "read_only",
+      "reason": "The pinned AI Boost README was used as the complete catalog-enumeration input and for bounded repository-lineage metadata only. Catalog destinations were not opened, catalog categories were not adopted, and no evidence maturity was promoted.",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "history"],
+      "locations_inspected": [
+        "README.md in full at commit 09bda3af8c32b95958f0158e0f356076d6ab44c8 for deterministic link enumeration",
+        "head, root commit metadata, root README headings, complete commit-hash set, current README SHA-256, and literal outbound-URL set for bounded lineage comparison",
+        "no outbound catalog destination followed"
+      ],
+      "inspection_basis": "Pinned local repository clone under the declared V2-D007 catalog boundary; catalog extraction made no network request."
+    },
+    {
+      "source_id": "v2-source-walkinglabs-learn-harness-engineering",
+      "disposition": "read_only",
+      "reason": "The pinned repository was inspected as a curriculum candidate only. Its coding focus, objectives, subsystem models, sequence, projects, references, and claims were not adopted, no outbound destination was followed, and no finding was promoted.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["README", "documentation", "history", "code"],
+      "locations_inspected": [
+        "README.md structural and curriculum-bearing sections at commit e587e4cce9cfe9b0523fd79d6e0152d4a1f1dfc3",
+        "docs/en/index.md; all 13 docs/en/lectures/*/index.md curriculum pages; docs/en/projects/index.md and seven project navigation pages",
+        "docs/en/resources/index.md, templates/index.md navigation, openai-advanced/index.md, reference/index.md, reference/method-map.md, and docs/en/skills/index.md navigation",
+        "head, root metadata, and exact Git -S introduction commits for the course-named Walking Labs Awesome link",
+        "one later evidence-location diagnostic over-broadly pattern-scanned docs/en Markdown and returned isolated matches from some code/template navigation files; those matches were not used for analysis and did not authorize implementation inspection",
+        "no course reference or outbound link followed"
+      ],
+      "inspection_basis": "Pinned local repository clone under the V2-D007 curriculum boundary; exact evidence locations are recorded in walkinglabs-curriculum.md."
+    },
+    {
+      "source_id": "v2-source-walkinglabs-awesome-harness-engineering",
+      "disposition": "read_only",
+      "reason": "The course-named Walking Labs catalog was inspected only to establish bounded repository identity and lineage with the AI Boost catalog. Its categories and linked resources were not evaluated or adopted, and no outbound destination was followed.",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "history"],
+      "locations_inspected": [
+        "README.md at commit f84f1701974cf1ad67dd774b025b33e613275cee for current SHA-256 and literal outbound-URL overlap only",
+        "head, root commit metadata, root README headings, and complete commit-hash set for bounded lineage comparison",
+        "no outbound catalog destination followed"
+      ],
+      "inspection_basis": "Pinned local repository clone under the explicit V2-D007 lineage check."
+    }
+  ],
+  "claims": []
+}

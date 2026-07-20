@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-20T20:40:30Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "v2-d007-catalog-repository-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-catalog-repository-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-44f43050ba6e47775bcc",
+      "previous_resolution_event_id": "native-44f43050ba6e47775bcc",
+      "resolution": "linked",
+      "reason": "This external-classified unified exec only obtained the UTC start-boundary timestamp. The reciprocal manual control event records the exact non-source action; it opened no research material.",
+      "linked_event_ids": ["v2-catalog-repository-control-start-clock"]
+    },
+    {
+      "observation_id": "native-9f2f025b1639b7f8bfa6",
+      "previous_resolution_event_id": "native-9f2f025b1639b7f8bfa6",
+      "resolution": "linked",
+      "reason": "The unified exec cloned and pinned exactly the three repositories authorized by V2-D007. The automatic repository event is retained, while reciprocal manual source-open events correct its incomplete one-repository interpretation.",
+      "linked_event_ids": [
+        "auto-repository-b9543ed5e81e66fae8",
+        "v2-catalog-repository-open-ai-boost-awesome",
+        "v2-catalog-repository-open-walkinglabs-learn",
+        "v2-catalog-repository-open-walkinglabs-awesome"
+      ]
+    },
+    {
+      "observation_id": "native-6ef8b9673ce11d3ffa17",
+      "previous_resolution_event_id": "native-6ef8b9673ce11d3ffa17",
+      "resolution": "linked",
+      "reason": "This external-classified unified exec only obtained the UTC immediate-capture cutoff. The reciprocal manual control event records the exact non-source action; it opened no research material.",
+      "linked_event_ids": ["v2-catalog-repository-control-cutoff-clock"]
+    }
+  ]
+}

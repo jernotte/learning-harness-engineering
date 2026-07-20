@@ -10,6 +10,21 @@ interactions only; they do not admit V2 subject evidence. V2-D007 adds a
 separate catalog pass whose outbound URL inventory remains lead metadata until
 a source is explicitly opened after its gate.
 
+The catalog pass is split into four deliberately bounded packages: the
+pre-V2-D007 orientation, immediate repository pinning, structural inspection,
+and final extractor regeneration. Their resolved streams are consolidated into
+`v2-outline-seed-map-events.jsonl`; the diagnostic audit reports six total
+Stage 4 boundaries, 230 native observations, and zero unreconciled observations.
+Outbound catalog URLs exist only in the occurrence/family ledgers and do not
+receive synthetic source events.
+
+Because the worktree and native rollout both live below `.codex`, the frozen
+adapter conservatively classified several local fixture/provenance commands as
+external. Manual reconciliation links those observations reciprocally to
+explicit local-control events instead of pretending they were source opens or
+changing frozen infrastructure. One over-broad course evidence-location grep
+is also retained and bounded rather than omitted.
+
 ## Commands
 
 ```sh

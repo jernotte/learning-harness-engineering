@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-07-20T20:43:30Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "v2-d007-catalog-finalization-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-catalog-finalization-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-e1619c73ab30f7c700e3",
+      "previous_resolution_event_id": "native-e1619c73ab30f7c700e3",
+      "resolution": "linked",
+      "reason": "Local provenance resolution/validation command; no subject source was accessed. Grouped reciprocal control linkage records the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-finalization-control-local-project"]
+    },
+    {
+      "observation_id": "native-27a4766733131e0c2804",
+      "previous_resolution_event_id": "native-27a4766733131e0c2804",
+      "resolution": "linked",
+      "reason": "Local provenance diagnostic parsed only native call metadata; no subject output was printed. Grouped reciprocal control linkage records this non-source action.",
+      "linked_event_ids": ["v2-catalog-finalization-control-local-project"]
+    },
+    {
+      "observation_id": "native-191405c29f76175112c5",
+      "previous_resolution_event_id": "native-191405c29f76175112c5",
+      "resolution": "linked",
+      "reason": "Local provenance ingest command against the declared rollout; no subject source was accessed. Grouped reciprocal control linkage records this non-source action.",
+      "linked_event_ids": ["v2-catalog-finalization-control-local-project"]
+    },
+    {
+      "observation_id": "native-33ae7320b6f7d210563c",
+      "previous_resolution_event_id": "native-33ae7320b6f7d210563c",
+      "resolution": "linked",
+      "reason": "Local generated provenance JSON inspection only; no subject source was accessed. Grouped reciprocal control linkage records the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-finalization-control-local-project"]
+    },
+    {
+      "observation_id": "native-8c7db4fd47a5d0b27772",
+      "previous_resolution_event_id": "native-8c7db4fd47a5d0b27772",
+      "resolution": "linked",
+      "reason": "Final deterministic offline extraction read the already pinned AI Boost README and opened no destination. Reciprocal source-inspection linkage records the exact use.",
+      "linked_event_ids": ["v2-catalog-finalization-ai-boost"]
+    }
+  ]
+}

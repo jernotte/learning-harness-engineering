@@ -2,13 +2,13 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Checkpoint:** Wave 1 complete; Wave 2 withdrawn by V2-D007; catalog phase active
+**Checkpoint:** Wave 1 complete; Wave 2 withdrawn by V2-D007; catalog gate complete
 
 **Opened first-hop families:** 6 historical Wave 1 families
 
 **Resolution queries used:** 0; all former Wave 2 intentions canceled
 
-**Controlling census:** The forthcoming machine-readable Awesome catalog
+**Controlling census:** The completed machine-readable Awesome catalog
 
 This file preserves the completed Wave 1 and the never-opened Wave 2 proposal as
 design and audit history. It no longer controls source caps or future selection.

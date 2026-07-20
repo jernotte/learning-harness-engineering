@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Catalog phase — V2-D007 amendment approved, inventory pending
+**Current phase:** Catalog gate — complete and awaiting maintainer review
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,10 @@
 
 ## Current objective
 
-Inspect Walking Labs as a curriculum candidate and produce a complete,
-deduplicated, curator-context triage of every qualifying outbound resource in
-the pinned Awesome README. Stop at the catalog gate before opening any new
-outbound family.
+Review the completed Walking Labs curriculum-candidate analysis, complete
+pinned-catalog census, offline family accounting, catalog-context triage,
+lineage limit, and exact source-opening program. No new outbound family opens
+until the maintainer approves an exact batch.
 
 ## Authority state
 
@@ -66,11 +66,28 @@ Currently authorized by V2-D007:
 - mechanically extract every Markdown link occurrence from the pinned
   `ai-boost/awesome-harness-engineering` README;
 - record auditable non-resource exclusions, preserve every qualifying category
-  occurrence, normalize URLs, and deduplicate canonical source families;
+  occurrence, normalize URLs, and derive offline family keys under declared
+  deduplication rules;
 - prepare catalog-context triage, unresolved identities, lineage risks, and an
   exact proposed source-opening set; and
 - check the relationship between the `ai-boost` repository and the similarly
   named Walking Labs Awesome repository.
+
+That authorized catalog work is complete:
+
+- 652 link-like occurrences are accounted as 415 qualifying resource
+  occurrences plus 237 mechanical exclusions;
+- the 415 occurrences map to 401 offline family keys, with zero syntactically
+  unresolved keys, 155 provisional normalized-URL keys, 240 structurally
+  canonicalized GitHub/arXiv keys, and six previously opened identities;
+- all 401 families have catalog-context triage: 337 candidates, 44 deferred,
+  14 collection-boundary/out-of-scope leads, and six already screened;
+- all 401 families appear exactly once in six prior-screen reuses or 21 proposed
+  new direct-screening batches covering 395 families;
+- the Walking Labs curriculum candidate is pinned and structurally analyzed
+  without adoption; and
+- the two Awesome repositories are not Git forks or mirrors in the bounded
+  inspected lineage, but editorial/source independence remains unassessed.
 
 Still not authorized:
 
@@ -87,13 +104,32 @@ Still not authorized:
 ## Validation and review state
 
 - The combined Stage 4 diagnostic provenance audit passes at
-  `complete_with_declared_manual_sources` with zero errors, four resolved
-  warnings, zero unresolved native observations, zero claims, and zero promoted
+  `complete_with_declared_manual_sources` with zero errors, three resolved
+  historical channel-counter warnings, six native boundaries, 230 native
+  observations, zero unreconciled observations, zero claims, and zero promoted
   evidence.
+- The catalog extractor and planner tests pass. The deterministic catalog audit
+  proves both accounting invariants and binds the pinned README, rule manifest,
+  extractor, planner, occurrence ledger, family set, and proposed batches by
+  hash.
+- A bounded catalog-accounting audit found reachable-unresolved, multi-category
+  precedence, reference-image, provisional-identity, source-form, and manifest
+  wording defects. All were accepted and fixed; the final audit passes with no
+  remaining defect. A separate curriculum-authority audit found a lineage-
+  authority tension, insufficient exact locations, and an overbroad V2-gap
+  label. The artifact now exposes the tension for maintainer ratification,
+  provides an exact evidence-location map, narrows the gap list to an inference
+  against the provisional brief, and passed focused verification.
+- A final gate/control audit pair found stale in-progress labels, one overbroad
+  no-open statement, and user-facing `canonical family` wording that overstated
+  155 provisional URL keys. The accepted corrections now use the live approval
+  boundary and `offline family key`; repo-local planner regeneration matches the
+  plan, triage, and batch artifacts byte for byte, and the full hash chain passes.
 - Both the Wave 1 and combined event streams pass schema validation. The
   provenance test suite, local Markdown-link check, and `git diff --check`
   pass.
-- Two bounded local audits reviewed the finalized checkpoint. The content audit
+- At the preceding Wave 1 checkpoint, two bounded local audits reviewed the
+  finalized checkpoint. The content audit
   found one stale sentence that blurred the preceding seed-only audit with the
   current Wave 1 audit; the label was corrected and focused verification
   passed. The provenance audit found one actual multi-window reporting defect:
@@ -106,9 +142,10 @@ Still not authorized:
   machine-readable pin mismatch, one reconciliation-traceability concern, one
   stale audit snapshot, and three content anchoring/authority issues. All were
   accepted and fixed; focused local verification closed the findings.
-- The configured external review has not been invoked for these new Stage 4
-  source and evidence paths. Earlier authorization and the one-time V2-D006
-  fallback were scope-specific and do not authorize a new transfer.
+- The configured external reviewer did not inspect these new Stage 4 paths
+  because the documented hard tenant transfer rule remains controlling even
+  after maintainer authorization. It was not retried or circumvented; bounded
+  local audits supplied the available independent review.
 
 - The post-reset provenance suite, local Markdown-link check, and
   `git diff --check` pass.
@@ -178,8 +215,12 @@ non-authoritative history. Focused verification passed with no residual defect.
 ## Next gate
 
 The maintainer will review the complete Awesome occurrence inventory,
-mechanical exclusions, canonical-family deduplication, Walking Labs curriculum
+mechanical exclusions, offline family-key accounting, Walking Labs curriculum
 analysis, repository lineage, catalog-context triage, unresolved identities,
-and exact proposed source-opening batches. No new outbound catalog family is
-opened before that decision. Selective raw conversation packets remain
-separately gated per packet.
+and exact proposed source-opening batches. The recommendation is to approve the
+complete 21-batch program as intended scope but authorize only
+`awesome-screen-core-01` first as a 20-source, 18-category calibration batch.
+The maintainer must also ratify or reject the bounded Git-lineage interpretation
+recorded in `catalog-gate.md`. No new outbound catalog family is opened before
+those decisions. Selective raw conversation packets remain separately gated per
+packet.

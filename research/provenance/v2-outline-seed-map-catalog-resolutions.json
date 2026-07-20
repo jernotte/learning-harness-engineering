@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-07-20T20:08:00Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "pre-d007-walkinglabs-orientation-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-catalog-orientation-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-47c7eca5cd75b79c47ac",
+      "previous_resolution_event_id": "native-47c7eca5cd75b79c47ac",
+      "resolution": "linked",
+      "reason": "The unified exec contained exactly two GitHub connector fetch_file calls: the pinned AI Boost top-level README and the live Walking Labs top-level README. Reciprocal source lifecycles record both clarification-only opens, screening inspections, and read_only dispositions; no outbound link was followed.",
+      "linked_event_ids": [
+        "v2-catalog-orientation-open-ai-boost-awesome",
+        "v2-catalog-orientation-open-walkinglabs-learn"
+      ]
+    }
+  ]
+}

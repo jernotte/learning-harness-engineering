@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-07-20T20:07:02Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "pre-d007-walkinglabs-orientation-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-catalog-orientation-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-95e2f11879a290a0",
+      "disposition": "read_only",
+      "reason": "The already pinned catalog README was re-opened only to answer the maintainer's scope clarification. No outbound resource was followed, no catalog category was adopted, and no claim or evidence maturity was promoted.",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": [
+        "top-level README.md at commit 09bda3af8c32b95958f0158e0f356076d6ab44c8",
+        "repository overview and visible catalog organization only; no outbound links followed"
+      ],
+      "inspection_basis": "GitHub connector fetch of the pinned top-level README during a clarification-only pass."
+    },
+    {
+      "source_id": "v2-source-walkinglabs-learn-harness-engineering",
+      "disposition": "read_only",
+      "reason": "The live top-level README was opened only to establish that this is an existing curriculum candidate and to correct the Stage 4 method. Its objectives, five-subsystem framing, sequence, projects, and linked resources were not adopted; no outbound link was followed and no claim was promoted.",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": [
+        "live top-level README.md as delivered by the GitHub connector",
+        "repository overview, lecture/project listing, and visible resource-library reference; no outbound links followed"
+      ],
+      "inspection_basis": "GitHub connector fetch of the unpinned live top-level README during a clarification-only pass; pinning and bounded structural inspection occur later under V2-D007."
+    }
+  ],
+  "claims": []
+}

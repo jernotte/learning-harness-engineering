@@ -1,0 +1,119 @@
+{
+  "schema_version": "v2-awesome-catalog-rules-v1",
+  "extractor": {
+    "path": "tools/catalog/extract-awesome-catalog.mjs",
+    "version": "1.0.0"
+  },
+  "catalog": {
+    "source_id": "auto-source-95e2f11879a290a0",
+    "repository": "https://github.com/ai-boost/awesome-harness-engineering",
+    "commit": "09bda3af8c32b95958f0158e0f356076d6ab44c8",
+    "readme_path": "README.md",
+    "readme_sha256": "4b7f0642e294fb528499b0920a03ec54035f1dc6b0630db5e045e4781fd77c7e"
+  },
+  "recognized_constructs": [
+    "markdown_inline_link",
+    "markdown_inline_image",
+    "markdown_reference_link",
+    "markdown_reference_image",
+    "html_anchor",
+    "html_image",
+    "markdown_autolink",
+    "bare_http_url"
+  ],
+  "non_occurrence_constructs": [
+    "reference_definition",
+    "link-like text inside fenced or inline code"
+  ],
+  "curated_top_level_sections": [
+    "Foundations",
+    "Design Primitives",
+    "Reference Implementations",
+    "Security, Sandbox & Permissions",
+    "Evals & Verification",
+    "Templates",
+    "Production Infrastructure & Operations",
+    "Related Awesome Lists"
+  ],
+  "exclusion_classes": [
+    "presentation_image",
+    "in_page_navigation",
+    "repository_local_or_relative",
+    "header_badge_or_repository_chrome",
+    "translation_link",
+    "contribution_governance",
+    "license",
+    "acknowledgment_or_profile",
+    "outside_curated_resource_list"
+  ],
+  "normalization": {
+    "network_requests": false,
+    "lowercase_scheme_and_host": true,
+    "remove_default_ports": true,
+    "strip_fragment_for_identity": true,
+    "preserve_nontracking_query": true,
+    "github_repository_family": "Group github.com/<owner>/<repo> paths at repository root unless the first path segment is reserved.",
+    "arxiv_family": "Group abs and pdf forms by lowercase arXiv identifier.",
+    "relative_targets": "Preserve the raw relative target and mechanically exclude it; no display or network resolution is performed.",
+    "uncertain_aliases": "Do not merge different normalized URLs without direct identity evidence. Keep each as a provisional offline family key with cross_url_alias_state not_assessed; emit unresolved_identity only when a target cannot be parsed into an offline key."
+  },
+  "known_opened_families": [
+    {
+      "canonical_url": "https://openai.com/index/harness-engineering",
+      "source_id": "auto-source-293d0f9661696880",
+      "disposition": "read_only"
+    },
+    {
+      "canonical_url": "https://arxiv.org/abs/2606.10106",
+      "source_id": "auto-source-1afa2530b3e1f412",
+      "disposition": "read_only"
+    },
+    {
+      "canonical_url": "https://arxiv.org/abs/2604.18071",
+      "source_id": "auto-source-523b6fa0a1bdab02",
+      "disposition": "read_only"
+    },
+    {
+      "canonical_url": "https://arxiv.org/abs/2604.11378",
+      "source_id": "auto-source-107da49445a23241",
+      "disposition": "read_only"
+    },
+    {
+      "canonical_url": "https://arxiv.org/abs/2603.25723",
+      "source_id": "auto-source-88fd75feed929931",
+      "disposition": "read_only"
+    },
+    {
+      "canonical_url": "https://www.anthropic.com/research/building-effective-agents",
+      "source_id": "auto-source-38c43325a50c50c6",
+      "disposition": "read_only"
+    }
+  ],
+  "triage": {
+    "catalog_only": true,
+    "allowed_statuses": [
+      "candidate_for_direct_screening",
+      "defer",
+      "out_of_current_scope",
+      "unresolved_identity",
+      "already_screened"
+    ],
+    "category_defaults": {
+      "Adjacent Collections": "out_of_current_scope",
+      "Related Awesome Lists": "out_of_current_scope",
+      "Tutorials & Educational": "defer",
+      "Demo Harnesses": "defer",
+      "Templates": "defer"
+    },
+    "multi_category_precedence": [
+      "candidate_for_direct_screening",
+      "defer",
+      "out_of_current_scope"
+    ],
+    "default": "candidate_for_direct_screening"
+  },
+  "accounting_invariants": [
+    "all_occurrences = qualifying_occurrences + mechanically_excluded_occurrences",
+    "each_qualifying_occurrence maps to exactly one offline_family_key or one syntactically unresolved_identity"
+  ]
+}

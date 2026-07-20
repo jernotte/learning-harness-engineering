@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-07-20T20:41:00Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "v2-d007-catalog-inspection-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-catalog-inspection-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-0482e2f98085a77acd81",
+      "previous_resolution_event_id": "native-0482e2f98085a77acd81",
+      "resolution": "linked",
+      "reason": "Local provenance-ingest control command; it accessed the declared native rollout but no subject source. The grouped reciprocal control event records this schema-required linkage.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-72b6d39d88142705355c",
+      "previous_resolution_event_id": "native-72b6d39d88142705355c",
+      "resolution": "linked",
+      "reason": "Bounded structural enumeration of the pinned Walking Labs course files; reciprocal source-inspection linkage records the exact scope.",
+      "linked_event_ids": ["v2-catalog-inspection-walkinglabs-course"]
+    },
+    {
+      "observation_id": "native-1f70c091250124961dbd",
+      "previous_resolution_event_id": "native-1f70c091250124961dbd",
+      "resolution": "linked",
+      "reason": "Bounded structural reading of four pinned Walking Labs lecture navigation pages; reciprocal source-inspection linkage records the scope.",
+      "linked_event_ids": ["v2-catalog-inspection-walkinglabs-course"]
+    },
+    {
+      "observation_id": "native-fb026cc26b634331b1ca",
+      "previous_resolution_event_id": "native-fb026cc26b634331b1ca",
+      "resolution": "linked",
+      "reason": "Local catalog fixture test only; no external source was accessed. The adapter classified the .codex worktree path as external, so the grouped reciprocal control event records the correction without changing frozen infrastructure.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-1b002eb5a14adc4a6685",
+      "previous_resolution_event_id": "native-1b002eb5a14adc4a6685",
+      "resolution": "linked",
+      "reason": "Local catalog fixture test only; no external source was accessed. Grouped reciprocal control linkage corrects the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-2a1ee54ecf1be6965510",
+      "previous_resolution_event_id": "native-2a1ee54ecf1be6965510",
+      "resolution": "linked",
+      "reason": "Local catalog fixture test only; no external source was accessed. Grouped reciprocal control linkage corrects the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-aff7087997a27367c8a6",
+      "previous_resolution_event_id": "native-aff7087997a27367c8a6",
+      "resolution": "linked",
+      "reason": "Deterministic offline extraction read the already pinned AI Boost README and opened no destination; reciprocal source-inspection linkage records that mechanical use.",
+      "linked_event_ids": ["v2-catalog-inspection-ai-boost"]
+    },
+    {
+      "observation_id": "native-16405a504ebec6620022",
+      "previous_resolution_event_id": "native-16405a504ebec6620022",
+      "resolution": "linked",
+      "reason": "Local generated-family JSON inspection only; no source or destination was opened. Grouped reciprocal control linkage corrects the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-65957576902b36e1f18d",
+      "previous_resolution_event_id": "native-65957576902b36e1f18d",
+      "resolution": "linked",
+      "reason": "Local generated-family JSON inspection only; no source or destination was opened. Grouped reciprocal control linkage corrects the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-d10adc9aaf9fe87e7994",
+      "previous_resolution_event_id": "native-d10adc9aaf9fe87e7994",
+      "resolution": "linked",
+      "reason": "Planner validation plus deterministic offline re-extraction read the already pinned AI Boost README and opened no destination; reciprocal source-inspection linkage records the use.",
+      "linked_event_ids": ["v2-catalog-inspection-ai-boost"]
+    },
+    {
+      "observation_id": "native-0791cd4736c008188ae4",
+      "previous_resolution_event_id": "native-0791cd4736c008188ae4",
+      "resolution": "linked",
+      "reason": "A local fixture test failed before the chained extractor could read the pinned README. No source or destination was opened; grouped reciprocal control linkage records the adapter false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-693f657b8829b8624bf8",
+      "previous_resolution_event_id": "native-693f657b8829b8624bf8",
+      "resolution": "linked",
+      "reason": "Successful deterministic offline re-extraction read the already pinned AI Boost README and opened no destination; reciprocal source-inspection linkage records the use.",
+      "linked_event_ids": ["v2-catalog-inspection-ai-boost"]
+    },
+    {
+      "observation_id": "native-65a42c7bee859c806d95",
+      "previous_resolution_event_id": "native-65a42c7bee859c806d95",
+      "resolution": "linked",
+      "reason": "Local generated-family JSON inspection only; no source or destination was opened. Grouped reciprocal control linkage corrects the adapter's .codex-path false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-2726203df2d5b2f5236b",
+      "previous_resolution_event_id": "native-2726203df2d5b2f5236b",
+      "resolution": "linked",
+      "reason": "A local Node expression failed to parse before any repository command ran. No source was read; grouped reciprocal control linkage records the adapter false positive.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-a14597b1311ed0450b4e",
+      "previous_resolution_event_id": "native-a14597b1311ed0450b4e",
+      "resolution": "linked",
+      "reason": "Bounded offline lineage computation read the three pinned repositories' Git identity metadata and README hashes/URL sets. Reciprocal source-inspection events record all three sources and no outbound destination was opened.",
+      "linked_event_ids": [
+        "v2-catalog-inspection-ai-boost",
+        "v2-catalog-inspection-walkinglabs-course",
+        "v2-catalog-inspection-walkinglabs-awesome"
+      ]
+    },
+    {
+      "observation_id": "native-657d53f5e6342a194b29",
+      "previous_resolution_event_id": "native-657d53f5e6342a194b29",
+      "resolution": "linked",
+      "reason": "Bounded offline lineage computation read only the two Awesome repositories' root README headings and Git root identities. Reciprocal source-inspection events record both sources.",
+      "linked_event_ids": [
+        "v2-catalog-inspection-ai-boost",
+        "v2-catalog-inspection-walkinglabs-awesome"
+      ]
+    },
+    {
+      "observation_id": "native-1acb841d41a43570e75b",
+      "previous_resolution_event_id": "native-1acb841d41a43570e75b",
+      "resolution": "linked",
+      "reason": "Local provenance diagnostic parsed only native event metadata from the declared rollout and printed no subject output. Grouped reciprocal control linkage records this non-source action.",
+      "linked_event_ids": ["v2-catalog-inspection-control-local-project"]
+    },
+    {
+      "observation_id": "native-df81c0898f73a6f2d5a9",
+      "previous_resolution_event_id": "native-df81c0898f73a6f2d5a9",
+      "resolution": "linked",
+      "reason": "Final deterministic offline re-extraction read the already pinned AI Boost README and opened no destination; reciprocal source-inspection linkage records the use.",
+      "linked_event_ids": ["v2-catalog-inspection-ai-boost"]
+    }
+  ]
+}

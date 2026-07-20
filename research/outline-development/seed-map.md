@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** Wave 1 complete; V2-D007 catalog correction active
+**Status:** Wave 1 complete; V2-D007 catalog gate awaiting maintainer review
 
 **Authority:** Approved outline-development brief
 
@@ -462,18 +462,19 @@ The most consequential remaining structural questions are:
   failure-first route or only imports an adjacent security track.
 
 The former Wave 2 proposal in `first-hop-register.md` was withdrawn before
-approval. V2-D007 requires the complete pinned Awesome catalog and Walking Labs
-curriculum candidate to be mapped before new outbound sources are selected.
+approval. The V2-D007 mapping of the complete pinned Awesome catalog and Walking
+Labs curriculum candidate is complete; its maintainer gate now controls whether
+any new outbound source may be selected or opened.
 
 ## V2-D007 method correction
 
 Wave 1 remains a completed six-source structural screen, but it no longer
 defines the selection path forward. The Awesome repository is now treated as a
-lead catalog whose complete qualifying outbound occurrence universe must be
+lead catalog whose complete qualifying outbound occurrence universe has been
 inventoried and deduplicated without turning curator categories into evidence.
 Walking Labs is evaluated as an existing curriculum proposal, not adopted as an
-outline. The next cross-source structural judgment will be made only after the
-catalog and curriculum artifacts reach their maintainer gate.
+outline. The next cross-source structural judgment is blocked pending
+maintainer review of the completed catalog and curriculum artifacts.
 
 ## Provenance state
 

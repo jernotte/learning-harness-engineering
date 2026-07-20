@@ -37,7 +37,7 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Structural landscape and catalog investigation
 
-**Status:** Active at the catalog phase under V2-D007. The original seed pass
+**Status:** At the catalog gate under V2-D007. The original seed pass
 and six-source Wave 1 are complete. The former Wave 2 proposal is withdrawn and
 has no authority.
 
@@ -50,12 +50,20 @@ Using the approved provenance path, treat these as mandatory structural inputs:
 
 Inspect Walking Labs as a curriculum proposal, not authority. Inventory every
 qualifying outbound occurrence from the pinned AI Boost README, preserve its
-category context, deduplicate canonical source families, and record catalog-
-context triage and unresolved identities. Present the complete inventory,
+category context, derive offline family keys under declared normalization and
+deduplication rules, and record catalog-context triage and unresolved
+identities. Present the complete inventory,
 curriculum analysis, repository lineage, and exact proposed source-opening
 batches at the catalog gate. No new outbound catalog source is opened before
 approval. Throughout Stage 4, extract structural possibilities without
 promoting findings.
+
+The complete census and curriculum-candidate analysis are now awaiting
+maintainer review. No previously unopened catalog destination was opened during
+this phase. The proposed 21-batch program covers all 395 previously unopened
+family keys; the recommended first
+authorization is the 20-source, cross-category `awesome-screen-core-01`
+calibration batch.
 
 ## Stage 5 — Competing outline skeletons
 

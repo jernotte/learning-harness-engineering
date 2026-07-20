@@ -3,7 +3,7 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005, V2-D006, and V2-D007, approved 2026-07-20
-**Current pass:** Catalog inventory and curriculum-candidate analysis
+**Current pass:** Catalog gate — inventory and curriculum-candidate analysis complete
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
@@ -68,9 +68,9 @@ For each seed, record without adopting:
 - anchoring hazards; and
 - materially different organizational possibilities.
 
-For the Awesome README catalog, additionally record every Markdown occurrence,
+For the Awesome README catalog, additionally record every recognized link-like occurrence,
 mechanical inclusion or exclusion, exact line and heading path, label, raw and
-normalized URL, curator annotation, canonical-family mapping, duplicate or
+normalized URL, curator annotation, offline family-key mapping, duplicate or
 alias relation, apparent source form, catalog-only triage, and uncertainty.
 Catalog metadata never substitutes for opening a source.
 
@@ -81,8 +81,8 @@ fail-closed handling. The generated catalog audit must prove:
 
 - all occurrences = qualifying occurrences + mechanically excluded
   occurrences; and
-- every qualifying occurrence maps to exactly one canonical family or one
-  unresolved identity.
+- every qualifying occurrence maps to exactly one offline family key or one
+  syntactically unresolved identity.
 
 An unopened destination has accessibility state `not_assessed`. Only an
 authorized earlier open or access attempt may establish accessibility.
@@ -124,10 +124,33 @@ pretend the interaction occurred after the amendment. It receives the normal
 extent `screening` and the exact scope `top-level README; no outbound links
 followed`.
 
+The V2-D007 repository and catalog window begins at
+`2026-07-20T20:08:52Z`, immediately before pinning and inspecting only
+`walkinglabs/learn-harness-engineering`, the already pinned
+`ai-boost/awesome-harness-engineering`, and the course-named
+`walkinglabs/awesome-harness-engineering` lineage identity. Repository-local
+curriculum and catalog surfaces are authorized; no outbound catalog destination
+or course resource is opened in this window.
+
+The immediate pinning window closes at `2026-07-20T20:09:35Z`. The declared
+structural inspection window runs from `20:09:35Z` through `20:38:25Z`, and a
+focused finalization window runs from `20:38:25Z` through `20:43:00Z`. The
+slightly adjacent boundaries contain no duplicate call at their shared cutoff.
+All six total Stage 4 native boundaries reconcile: 230 observations, zero
+unreconciled observations, zero claims, and no catalog-destination source-open
+event. The consolidated diagnostic audit passes at
+`complete_with_declared_manual_sources`.
+
+One evidence-location diagnostic over-broadly pattern-scanned `docs/en`
+Markdown and returned isolated matches from code/template navigation files.
+Those matches support no analysis, did not trigger implementation inspection,
+and are explicitly retained in the source lifecycle and curriculum artifact.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
-- No outbound catalog destination open before the catalog gate.
+- No outbound catalog destination open without maintainer approval of an exact
+  batch.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -137,10 +160,11 @@ followed`.
 
 ## Stop and checkpoint
 
-Stop when the Walking Labs curriculum-bearing surface and repository lineage
-are structurally mapped, every Awesome README link occurrence is accounted for
-under declared rules, every qualifying occurrence has a canonical or unresolved
-family mapping and catalog-context triage, and the diagnostic provenance state
-is reconciled. Present the complete census, exclusions, uncertainties, and
-exact proposed source-opening batches for maintainer approval before any new
-outbound family is opened.
+The stop condition is satisfied: the Walking Labs curriculum-bearing surface
+and repository lineage are structurally mapped; every Awesome README link
+occurrence is accounted for under declared rules; every qualifying occurrence
+has an offline family key or syntactically unresolved mapping plus catalog-
+context triage; and the diagnostic provenance state is reconciled. The pass now
+presents the complete census, exclusions, uncertainties, and exact proposed
+source-opening batches for maintainer approval before any new outbound family
+is opened.

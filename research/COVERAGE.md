@@ -28,10 +28,31 @@ corroborate one another.
 
 The prior six-source Wave 2 proposal was withdrawn before approval. None of its
 sources or planned identity queries was opened, so it contributes no coverage.
-The next authorized work is a complete census of one pinned Awesome catalog,
-catalog-context triage of its unique resource families, and structural analysis
-of the Walking Labs curriculum candidate. Catalog completeness will describe
-only that pinned README under declared link rules, not the field.
+
+The pinned Awesome census is now complete under its declared rule manifest:
+652 extracted occurrences divide into 415 qualifying resources and 237
+mechanical exclusions. The qualifying occurrences map to 401 offline family
+keys; 11 families recur, 10 span multiple categories, and zero targets are
+syntactically unkeyable. Of the 401 keys, 155 are provisional normalized URLs,
+240 are structurally canonicalized GitHub/arXiv identities, and six were
+previously opened. Cross-URL aliases and all unopened accessibility remain
+`not_assessed`.
+
+Catalog-context triage yields 337 direct-screen candidates, 44 deferred
+applied/tutorial/demo/template families, 14 collection-boundary/out-of-scope
+families, and six prior read-only screens. This is complete coverage of one
+pinned catalog's declared link universe, not field coverage or source
+evaluation.
+
+The Walking Labs curriculum candidate is structurally covered at its pinned
+commit: 13 lectures, seven projects, 15 displayed language variants, its
+resource/reference navigation, objectives, assumptions, sequence, omissions,
+and internal subsystem-model friction. It remains a `read_only`, coding-agent-
+and-repository-centered curriculum proposal, not V2 authority. The two Awesome
+repositories have distinct Git roots and zero common commit hash in the bounded
+lineage check, but their editorial/source independence is unassessed and their
+20 shared substantive resource URLs are not corroboration. The brief's
+lineage-versus-history ambiguity remains explicit for maintainer ratification.
 
 ## Legacy boundary
 
@@ -49,5 +70,6 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file at the catalog gate with occurrence, exclusion, canonical-
-family, unresolved-identity, and curriculum-analysis coverage.
+Update this file after the first maintainer-approved direct-screening batch with
+actual accessibility, identity/alias, relevance, lineage, domain, and evidence-
+posture coverage. Until then, all 395 proposed new destinations remain unopened.

@@ -411,6 +411,10 @@ promotion.
 - `research/outline-development/awesome-link-occurrences.jsonl`
 - `research/outline-development/awesome-source-families.json`
 - `research/outline-development/awesome-catalog-summary.md`
+- `research/outline-development/awesome-catalog-triage.md`
+- `research/outline-development/awesome-screening-plan.json`
+- `research/outline-development/awesome-screening-batches.md`
+- `research/outline-development/catalog-gate.md`
 - `research/outline-development/walkinglabs-curriculum.md`
 - `research/outline-development/claim-ledger.md` when the first material claim
   is declared

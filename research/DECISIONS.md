@@ -138,3 +138,29 @@ until the maintainer approves the brief.
 
 After the reset evidence and limits were presented, the maintainer explicitly
 confirmed acceptance on 2026-07-20.
+
+## V2-D005 — Outline-development brief
+
+**Status:** Proposed — awaiting maintainer decision
+**Date:** 2026-07-20
+
+### Proposed decision
+
+Approve `research/outline-development/brief.md` as the controlling Stage 4
+authorization. The proposal defines a builder-first audience, intended
+decision outcomes, a fixed-model surrounding-system boundary, organizational
+and sequence criteria, three competing skeletons, an exact three-seed boundary,
+two maintainer-approved first-hop waves of at most six sources, one optional
+four-source extension, primary-only diagnostic provenance, claim and
+disposition rules, deterministic outputs, stop conditions, and blocking
+checkpoints through final outline approval.
+
+Transcript-prefix archiving remains a separate privacy choice. Approval of the
+brief alone does not authorize that external write, and Stage 4 cannot begin
+until the maintainer records Option A or Option B from the brief.
+
+### Authority while proposed
+
+This entry records the decision presented for review; it grants no authority.
+Seed inspection, first-hop screening, skeleton drafting, and outline drafting
+remain blocked until the maintainer approves or revises the brief.

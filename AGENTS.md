@@ -32,8 +32,9 @@ post-outline research sequence.
 ## Current authorization
 
 The maintainer accepted the completed V2 repository reset on 2026-07-20. The
-current authorized work is the outline-development brief. Do not inspect the
-three seed resources, follow
+current authorized work is the proposed outline-development brief at
+`research/outline-development/brief.md`. Do not inspect the three seed
+resources, follow
 their references, perform implementation deep dives, select cases, synthesize
 findings, produce curriculum, build a site, promote evidence maturity, or
 re-admit legacy evidence until the applicable maintainer gate recorded in
@@ -55,7 +56,7 @@ re-admit legacy evidence until the applicable maintainer gate recorded in
 
 ## Maintainer gates
 
-The current program has these blocking gates:
+The current program has these baseline blocking gates:
 
 1. Approve the repository triage before reset changes.
 2. Review the completed V2 authority reset and its validation/review evidence.
@@ -64,6 +65,11 @@ The current program has these blocking gates:
    outline finalization.
 5. Explicitly approve the final outline's objectives, scope, organization, and
    sequence before substantive research planning or execution.
+
+An approved active brief may add narrower blocking checkpoints between these
+baseline gates. Once approved, those checkpoints are binding and must be
+reflected in `research/STATUS.md`; while a brief remains proposed, it grants no
+authority.
 
 At a gate, pause. Record the decision in `research/DECISIONS.md` and update
 `research/STATUS.md` only after the maintainer responds.

@@ -21,7 +21,8 @@ The complete pre-pivot history remains recoverable from
 
 No V2 subject outline, taxonomy, case set, synthesis, or reviewed finding
 currently exists. The named seed sources remain unopened pending approval of
-the outline-development brief.
+the proposed
+[`research/outline-development/brief.md`](research/outline-development/brief.md).
 
 ## Where to begin
 
@@ -30,6 +31,8 @@ the outline-development brief.
 - [`research/DECISIONS.md`](research/DECISIONS.md) contains V2 decisions only.
 - [`research/LEGACY.md`](research/LEGACY.md) defines the archive and selective
   readmission boundary.
+- [`research/outline-development/brief.md`](research/outline-development/brief.md)
+  is the proposed Stage 3 decision packet; it is not yet approved.
 - [`docs/source-provenance.md`](docs/source-provenance.md) defines evidence
   capture and audit rules.
 - [`docs/provenance-architecture.md`](docs/provenance-architecture.md) documents
@@ -49,6 +52,7 @@ research/
   COVERAGE.md               admitted V2 subject coverage only
   DECISIONS.md              V2 decisions only
   LEGACY.md                 archive and selective-readmission contract
+  outline-development/      proposed brief; no subject outline yet
   provenance/validation/    retained infrastructure validation evidence
   sources/README.md         rules for future V2 source records
   templates/                taxonomy-neutral evidence templates only

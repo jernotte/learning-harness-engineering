@@ -1,14 +1,15 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Outline-development brief — drafting
+**Current phase:** Outline-development brief — maintainer review
 **Active subject-research cycle:** None
+**Active brief:** `research/outline-development/brief.md` — proposed, not approved
 **Last updated:** 2026-07-20
 
 ## Current objective
 
-Develop and present the Stage 3 outline-development brief for maintainer
-approval without inspecting the seed resources or drafting the outline itself.
+Present the reviewed Stage 3 outline-development brief for maintainer approval
+without inspecting the seed resources or drafting the outline itself.
 
 ## Authority state
 
@@ -48,9 +49,9 @@ Not authorized:
 
 - The post-reset provenance suite, local Markdown-link check, and
   `git diff --check` pass.
-- The active filesystem contains 44 files. The reset exposes 178 tracked
-  deletions, 14 adaptations, and one new legacy/readmission contract, with no
-  skip-worktree or assume-unchanged flags.
+- At reset acceptance, the active filesystem contained 44 files. The reset
+  recorded 178 tracked deletions, 14 adaptations, and one new
+  legacy/readmission contract, with no skip-worktree or assume-unchanged flags.
 - The configured independent review found no correctness findings. Its three
   concerns were accepted: the temporary review-transport flags were cleared
   and the full deletion set verified; the retained validation README now marks
@@ -69,9 +70,23 @@ The archive and V2 start commits are verified. Historical adapter validation
 does not by itself prove compatibility with the first future V2 research
 boundary.
 
+The proposed brief passed two bounded local read-only audits after agreed
+clean-slate, authorization, provenance, and tooling corrections. Tenant policy
+initially blocked the configured external review before transmission; after the
+maintainer explicitly authorized export of the declared V2 review scope, the
+review ran and found no correctness findings. Three immediate concerns were
+accepted and fixed: the resolution-query ceiling is stage-wide, the optional
+extension has a named gate, and the decision packet's rendering is corrected.
+The recommendation to version the reviewer contract for Stage 4 is accepted
+and deferred until this brief is approved. The focused verification directly
+inspected `.codex/claude-review.md` and passed with no findings, concerns,
+recommendations requiring immediate action, or inconclusive paths. The
+configured Stage 3 review workflow is complete.
+
 ## Next gate
 
 Present the outline-development brief and obtain explicit maintainer approval
 of its audience, outcomes, scope, decision targets, organizational and sequence
 criteria, seed boundary, checkpoints, non-goals, and approval test. Seed
-inspection remains blocked until that response is recorded.
+inspection remains blocked until that response is recorded and the maintainer
+explicitly selects transcript-archive Option A or Option B.

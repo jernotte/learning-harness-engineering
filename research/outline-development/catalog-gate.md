@@ -29,8 +29,12 @@ The authorized batch has now completed and is recorded in
 `awesome-screen-core-01.md`: 20 unique registered families, 19 `read_only`
 dispositions, one redirect-shell exclusion, no search, no second hop, and no
 promotion. V2-D009 approves its method and dispositions and authorizes only the
-exact `awesome-screen-core-02` batch under the same boundary. The other 19
-batches remain blocked pending later maintainer gates.
+exact `awesome-screen-core-02` batch under the same boundary. That second batch
+has also completed and is recorded in `awesome-screen-core-02.md`: 20 unique
+registered families, 19 proposed `read_only` dispositions, one proposed
+substantive-inspectability exclusion, no search, no second hop, and no
+promotion. Its authorization is exhausted. The other 19 batches remain blocked
+pending this source-screening gate and later maintainer decisions.
 
 ## Approved decision package
 
@@ -41,8 +45,9 @@ batches remain blocked pending later maintainer gates.
 3. The complete 21-batch direct-screening program was approved as intended
    scope.
 4. V2-D008 authorized only `awesome-screen-core-01`; after its completion,
-   V2-D009 authorized only `awesome-screen-core-02`. Every other batch remains
-   blocked unless explicitly approved later.
+   V2-D009 authorized only `awesome-screen-core-02`. Both authorizations are
+   now exhausted. Every other batch remains blocked unless explicitly approved
+   later.
 
 This accepted recommendation preserves calibration before scale. The first 20
 sources span 18 catalog categories and five apparent source forms, making the

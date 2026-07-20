@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-07-20T23:02:02Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-02-observation-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-awesome-screen-core-02-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-4725f6e3c34fe619a186",
+      "previous_resolution_event_id": "native-4725f6e3c34fe619a186",
+      "resolution": "linked",
+      "reason": "Local UTC batch-start timestamp command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-a24c9d4fc8ed062c47d6",
+      "previous_resolution_event_id": "native-a24c9d4fc8ed062c47d6",
+      "resolution": "linked",
+      "reason": "Local UTC first-interaction cutoff timestamp command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-c3dcaa05f09372a82c40",
+      "previous_resolution_event_id": "native-c3dcaa05f09372a82c40",
+      "resolution": "linked",
+      "reason": "Local first-interaction provenance ingest command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-b01d28c81f8b7fd03357",
+      "previous_resolution_event_id": "native-b01d28c81f8b7fd03357",
+      "resolution": "linked",
+      "reason": "Local first-interaction provenance validation and invariant inspection; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-68e13dbea7d8cadae060",
+      "previous_resolution_event_id": "native-68e13dbea7d8cadae060",
+      "resolution": "linked",
+      "reason": "Local UTC reconciliation timestamp command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-0d63eedf2a6fc517b842",
+      "previous_resolution_event_id": "native-0d63eedf2a6fc517b842",
+      "resolution": "linked",
+      "reason": "Local mechanical copy of the first-interaction generated stream; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-1914c2e9481e8a28f3eb",
+      "previous_resolution_event_id": "native-1914c2e9481e8a28f3eb",
+      "resolution": "linked",
+      "reason": "Local append of reciprocal first-interaction control metadata; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-ec89346962a7452eb8ef",
+      "previous_resolution_event_id": "native-ec89346962a7452eb8ef",
+      "resolution": "linked",
+      "reason": "Local first-interaction observation-resolution command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-d9ab0178e63d3e131e16",
+      "previous_resolution_event_id": "native-d9ab0178e63d3e131e16",
+      "resolution": "linked",
+      "reason": "Local first-interaction resolved-stream validation; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    },
+    {
+      "observation_id": "native-0904d4ce09d062e37c5b",
+      "previous_resolution_event_id": "native-0904d4ce09d062e37c5b",
+      "resolution": "linked",
+      "reason": "Local first-interaction final invariant check; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core02-control-local-project"]
+    }
+  ]
+}

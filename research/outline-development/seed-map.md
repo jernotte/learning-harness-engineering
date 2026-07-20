@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** `awesome-screen-core-02` authorized for direct screening
+**Status:** `awesome-screen-core-02` complete; awaiting maintainer review
 
 **Authority:** Approved outline-development brief
 
@@ -464,8 +464,9 @@ The most consequential remaining structural questions are:
 The former Wave 2 proposal in `first-hop-register.md` was withdrawn before
 approval. The V2-D007 mapping of the complete pinned Awesome catalog and Walking
 Labs curriculum candidate is complete, and V2-D008 approved that catalog gate.
-V2-D009 approved the first calibration and authorizes only exact
-`awesome-screen-core-02` under the current direct-screen boundary.
+V2-D009 approved the first calibration and authorized only exact
+`awesome-screen-core-02` under the current direct-screen boundary. That
+authorization is now exhausted and no later batch is authorized.
 
 ## V2-D007 method correction
 
@@ -494,18 +495,31 @@ cross-source finding. The joined register is
 ## V2-D009 second direct-screen calibration
 
 The maintainer approved the core-01 method and dispositions and authorized only
-the exact 20-family `awesome-screen-core-02` batch. It must retain the expanded
-per-family register, use only registered direct URLs, and stop without search,
+the exact 20-family `awesome-screen-core-02` batch. The batch is complete under
+the expanded per-family register: 19 sources have proposed `read_only`
+dispositions and the GitHub Governing Agents route has a proposed exclusion
+because two same-URL direct attempts exposed no substantive content. Nine
+repository screens remained top-level and live-unpinned. The register records
+archived or changed project scope, automatic route changes, source-form and
+catalog-category corrections, visible-version-versus-pin distinctions,
+evidence posture, and lineage limits without promoting any finding. The joined
+register is `research/outline-development/awesome-screen-core-02.md`.
+
+The execution used only the frozen direct URLs and stopped without search,
 identity resolution, core-01 reopening, second-hop traversal, deep reading,
-claim or evidence promotion, or outline drafting.
+claim or evidence promotion, or outline drafting. Its opening authority is
+exhausted. The core-02 dispositions and any next batch now require maintainer
+review.
 
 ## Provenance state
 
 The consolidated diagnostic audit passes at
-`complete_with_declared_manual_sources`: zero errors, ten resolved warnings,
-seven native boundaries, 289 native observations, and zero unresolved
-observations. Across the structural program to date it records 32 unique opened
-source identities, 30 `read_only` dispositions, two exclusions, zero searches,
-zero claims, and zero promoted evidence. The `awesome-screen-core-01` package
-contributes 20 unique opened identities, 19 `read_only` dispositions, one
-exclusion, and seven intentionally resolved `repository_shallow` warnings.
+`complete_with_declared_manual_sources`: zero errors, 19 resolved warnings,
+eight native boundaries, 346 native observations, and zero unresolved
+observations. Across the structural program to date it records 52 unique opened
+source identities, 49 `read_only` dispositions, three exclusions, zero
+searches, zero claims, and zero promoted evidence. The standalone
+`awesome-screen-core-02` package passes at `complete` with 20 unique opened
+identities from 21 direct-open events, 19 `read_only` dispositions, one
+exclusion, zero unresolved observations, and nine intentionally resolved
+`repository_shallow` warnings.

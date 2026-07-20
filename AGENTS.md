@@ -35,30 +35,28 @@ post-outline research sequence.
 The maintainer accepted the completed V2 repository reset and approved V2-D005
 through V2-D009 on 2026-07-20. The original three-seed pass, six-source Wave 1,
 Walking Labs curriculum inspection, complete pinned-catalog census, and first
-catalog calibration are complete. The unopened Wave 2 is withdrawn and has no
-active authority.
+two catalog calibrations are complete. The unopened Wave 2 is withdrawn and
+has no active authority.
 
 The catalog gate is approved. The maintainer ratified the bounded Git-lineage
 interpretation and approved the complete 21-batch program as intended scope.
 The completed `awesome-screen-core-01` method and its 19 `read_only` / one
-`excluded` dispositions are approved. Only `awesome-screen-core-02` is now
-authorized. Its exact 20-family register is the batch of that name in
-`research/outline-development/awesome-screening-plan.json` as committed at
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D009 supersedes only that
-batch's historical `proposed_not_authorized` field; its membership and
-inspection constraints remain fixed. Use the expanded per-family screening
-register established by core-01.
+`excluded` dispositions are approved. V2-D009 authorized only the exact
+20-family `awesome-screen-core-02` batch from
+`research/outline-development/awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`; that authorization is now
+exhausted. Core-02 directly screened its exact registered URLs under the
+expanded core-01 register method and produced 19 proposed `read_only`
+dispositions and one proposed exclusion. Those dispositions, catalog
+corrections, and the method's continued use now await maintainer review.
 
-For `awesome-screen-core-02`, open only each registered direct URL and inspect
-only the predeclared surface needed to establish requested and observed
-identity, transport accessibility, substantive inspectability, actual
-relevance, scope, source form, evidence posture, visible lineage or alias state,
-version or pin state, catalog correction, schema friction, and disposition. Do
-not reopen a core-01 page, open another catalog family, run an identity query,
-perform a topical or ecosystem search, follow a second hop, deep-read an
-implementation or technique, draft an outline, select cases, synthesize
-findings, produce or adopt curriculum, build a site, promote evidence maturity,
-or re-admit legacy evidence. Every other batch remains blocked.
+No later batch is authorized. Do not reopen a completed core-01 or core-02
+page, open another catalog family, run an identity query, perform a topical or
+ecosystem search, follow a second hop, deep-read an implementation or
+technique, draft an outline, select cases, synthesize findings, produce or
+adopt curriculum, build a site, promote evidence maturity, or re-admit legacy
+evidence. Stop at the core-02 source-screening gate until the maintainer makes
+the next explicit decision.
 
 ## Clean-slate boundary
 

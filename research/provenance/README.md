@@ -29,6 +29,18 @@ package, the consolidated diagnostic audit reports seven native boundaries,
 289 native observations, zero unreconciled observations, zero claims, and no
 promoted evidence.
 
+V2-D009 adds the separately bounded `awesome-screen-core-02` package. Its
+resolved stream records 57 native observations, 20 unique direct-source
+lifecycles from 21 same-boundary open events, 19 `read_only` dispositions, one
+exclusion, zero searches, and zero unresolved observations. Nine
+`repository_shallow` warnings are preserved and resolved as intentional direct-
+screen limits. The package audit uses completeness `complete`. After merging
+only its full resolved stream, the consolidated diagnostic audit reports eight
+native boundaries, 346 native observations, 52 unique opened source identities,
+zero unreconciled observations, zero searches, zero claims, and no promoted
+evidence. The separate first-interaction proof is validation evidence and is
+not merged into the consolidated stream.
+
 Because the worktree and native rollout both live below `.codex`, the frozen
 adapter conservatively classified several local fixture/provenance commands as
 external. Manual reconciliation links those observations reciprocally to

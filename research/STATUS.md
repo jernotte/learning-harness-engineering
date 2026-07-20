@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Direct-screen calibration — `awesome-screen-core-02` authorized
+**Current phase:** Source-screening gate — `awesome-screen-core-02` complete
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,11 @@
 
 ## Current objective
 
-Execute the exact 20-family `awesome-screen-core-02` direct-screen calibration
-using the core-01 method approved by the maintainer. Establish the registered
-fields without search, identity resolution, second-hop traversal, deep reading,
-evidence promotion, or outline drafting, then stop at its maintainer gate.
+Present the completed `awesome-screen-core-02` direct-screen calibration for
+maintainer review. Its source lifecycles, joined register, proposed
+dispositions, catalog corrections, and diagnostic provenance are complete. No
+later batch or deeper source work is authorized before the maintainer decides
+the gate.
 
 ## Authority state
 
@@ -123,14 +124,36 @@ Authorized by V2-D009:
 - later batches must retain the expanded per-family register fields established
   by that calibration;
 - only `awesome-screen-core-02`, exactly as registered in the screening plan at
-  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now; and
-- each of its 20 sources receives direct screening only, with no query, core-01
-  reopen, second hop, bibliography traversal, or implementation deep dive.
+  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, was authorized; and
+- each of its 20 sources was limited to direct screening, with no query,
+  core-01 reopen, second hop, bibliography traversal, or implementation deep
+  dive.
+
+That one authorized execution is now exhausted:
+
+- all 20 frozen source families received an honest direct result;
+- 21 direct-open events map to exactly 20 requested URLs and 20 source IDs,
+  with only the GitHub Governing Agents URL repeated after its first response
+  exposed no substantive content;
+- 19 sources have proposed `read_only` dispositions, while GitHub Governing
+  Agents has a proposed exclusion because neither same-URL attempt exposed a
+  screenable article body;
+- nine GitHub repositories remained deliberately `repository_shallow` and
+  live-unpinned under the direct-screen boundary;
+- the joined register records requested and observed route changes, visible
+  version versus actual pin, source-form and category corrections, evidence
+  posture, and lineage limits;
+- no query, search result, unregistered URL, core-01 reopen, manual redirect
+  traversal, second hop, implementation deep dive, claim, reference, evidence
+  promotion, legacy access, or outline drafting occurred; and
+- `research/outline-development/awesome-screen-core-02.md` is the durable join
+  from every source lifecycle to its frozen family and occurrence context.
 
 Still not authorized:
 
-- opening any catalog family outside `awesome-screen-core-02`;
-- reopening any completed `awesome-screen-core-01` page;
+- opening any catalog family, including `awesome-screen-core-03`;
+- reopening any completed `awesome-screen-core-01` or
+  `awesome-screen-core-02` page;
 - querying even a registered family through search or identity resolution;
 - topical or ecosystem search or second-hop traversal;
 - implementation or technique deep dives;
@@ -146,11 +169,20 @@ access.
 ## Validation and review state
 
 - The consolidated Stage 4 diagnostic provenance audit passes at
-  `complete_with_declared_manual_sources` with zero errors, ten resolved
-  warnings, seven native boundaries, 289 native observations, zero unreconciled
+  `complete_with_declared_manual_sources` with zero errors, 19 resolved
+  warnings, eight native boundaries, 346 native observations, zero unreconciled
   observations, zero searches, zero claims, and zero promoted evidence. It
-  records 32 unique opened identities, 30 `read_only` dispositions, and two
+  records 52 unique opened identities, 49 `read_only` dispositions, and three
   exclusions across all completed structural passes.
+- The `awesome-screen-core-02` package independently passes schema validation
+  and its diagnostic `complete` audit: 57 native observations, zero unresolved
+  observations, 20 unique opened identities from 21 direct-open events, 19
+  `read_only` dispositions, one exclusion, zero searches or claims, and nine
+  intentionally resolved `repository_shallow` warnings.
+- Two bounded local audits independently checked the completed core-02 content
+  and provenance joins. Both found the same mistyped Mendral occurrence ID; the
+  ID was corrected to the exact frozen-plan value and both focused verification
+  passes closed their sole finding without a new inconsistency.
 - The `awesome-screen-core-01` package independently passes schema validation
   and its diagnostic `complete` audit: 59 native observations, zero unresolved
   observations, 20 unique opened identities from 22 direct-open events, 19
@@ -253,8 +285,9 @@ local-review fallback and its limits.
 The maintainer explicitly approved V2-D005 through V2-D009 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
-amended brief is controlling. The first catalog calibration is approved, and
-only its exact second calibration batch is active.
+amended brief is controlling. The first catalog calibration is approved. The
+second calibration is complete and awaiting its maintainer gate; no batch is
+active.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.

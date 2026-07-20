@@ -39,7 +39,8 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 **Status:** The V2-D008 catalog gate is approved, `awesome-screen-core-01` is
 complete, and V2-D009 approves its calibration method and dispositions. Only
-the exact 20-source `awesome-screen-core-02` batch is currently authorized.
+the exact 20-source `awesome-screen-core-02` batch was authorized; that batch
+is now complete and awaiting maintainer review. No later batch is authorized.
 The former Wave 2 proposal is withdrawn and has no authority.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
@@ -68,6 +69,11 @@ hop, or deep reading. It retains 19 sources `read_only`, excludes one
 redirect-only shell, and promotes no claim or evidence. The maintainer approved
 that calibration and authorized only unchanged `awesome-screen-core-02` under
 the same direct-URL-only, no-query, no-second-hop, no-deep-reading boundary.
+Core-02 has now screened its exact 20 registered URLs, recorded 19 proposed
+`read_only` dispositions and one proposed exclusion for a substantively empty
+redirected page, and promoted no claim or evidence. The program is paused at
+the core-02 source-screening gate pending explicit maintainer disposition;
+`core-03` and every other batch remain blocked.
 
 ## Stage 5 — Competing outline skeletons
 

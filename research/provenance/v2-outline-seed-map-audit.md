@@ -1,6 +1,6 @@
 # Provenance Audit: v2-outline-seed-map
 
-**Generated:** 2026-07-20T22:11:37.327Z
+**Generated:** 2026-07-20T23:10:56.784Z
 **Completeness:** `complete_with_declared_manual_sources`
 **Audit profile:** `diagnostic`
 **Promotion gate:** PASS
@@ -16,25 +16,25 @@
 | searches_with_incomplete_result_capture | 0 |
 | returned | 0 |
 | returned_source_identities_recovered | 0 |
-| opened | 32 |
-| read_only | 30 |
+| opened | 52 |
+| read_only | 49 |
 | referenced | 0 |
-| excluded | 2 |
+| excluded | 3 |
 | declared_claims | 0 |
 | claims | 0 |
 | claim_evidence_mappings | 0 |
 | verifications | 0 |
 | unverified_claim_evidence_mappings | 0 |
-| native_boundaries | 7 |
-| native_observations | 289 |
-| automatically_resolved_observations | 173 |
-| human_resolved_observations | 116 |
+| native_boundaries | 8 |
+| native_observations | 346 |
+| automatically_resolved_observations | 220 |
+| human_resolved_observations | 126 |
 | unresolved_observations | 0 |
-| linked_observations | 254 |
-| not_research_observations | 35 |
-| observation_resolution_batches | 7 |
+| linked_observations | 309 |
+| not_research_observations | 37 |
+| observation_resolution_batches | 8 |
 | manual_capture_actions | 8 |
-| semantic_batch_actions | 5 |
+| semantic_batch_actions | 6 |
 
 ## Channel coverage
 
@@ -56,27 +56,32 @@
 ## Host distribution
 
 - asixiv.org: 1
-- github.com: 10
+- github.com: 19
 - api.github.com: 1
 - local filesystem: 1
-- openai.com: 2
-- arxiv.org: 6
-- www.anthropic.com: 4
+- openai.com: 3
+- arxiv.org: 7
+- www.anthropic.com: 5
 - blog.langchain.com: 1
-- platform.claude.com: 2
+- platform.claude.com: 5
 - modelcontextprotocol.io: 1
 - genai.owasp.org: 1
 - developers.openai.com: 1
 - langchain-ai.github.io: 1
+- platform.openai.com: 1
+- wellarchitected.github.com: 1
+- www.letta.com: 1
+- www.mendral.com: 1
+- blog.modelcontextprotocol.io: 1
 
 ## Source distributions
 
-- host: modelcontextprotocol.io=1, arxiv.org=6, www.anthropic.com=4, api.github.com=1, github.com=10, openai.com=2, langchain-ai.github.io=1, blog.langchain.com=1, platform.claude.com=2, developers.openai.com=1, genai.owasp.org=1, asixiv.org=1, local filesystem=1
-- organization: modelcontextprotocol.io=1, arxiv.org=6, www.anthropic.com=4, api.github.com=1, github.com=7, openai.com=2, langchain-ai.github.io=1, blog.langchain.com=1, platform.claude.com=2, ai-boost=1, developers.openai.com=1, genai.owasp.org=1, asixiv.org=1, maintainer-provided=1, walkinglabs=2
-- source_type: web source=15, preprint=6, repository=10, manual local PDF=1
-- publication_year: 2026=1, unspecified=31
-- primary_secondary: unknown until inspected=28, primary=3, independent survey and educational synthesis=1
-- evidence_lineage: generic web open=28, AI Boost curated catalog repository=1, declared manual source; repository-staged readable copy=1, Walking Labs curated catalog repository=1, Walking Labs curriculum repository=1
+- host: wellarchitected.github.com=1, github.com=19, modelcontextprotocol.io=1, arxiv.org=7, www.anthropic.com=5, api.github.com=1, openai.com=3, langchain-ai.github.io=1, blog.langchain.com=1, platform.claude.com=5, www.letta.com=1, developers.openai.com=1, www.mendral.com=1, genai.owasp.org=1, platform.openai.com=1, asixiv.org=1, blog.modelcontextprotocol.io=1, local filesystem=1
+- organization: wellarchitected.github.com=1, github.com=16, modelcontextprotocol.io=1, arxiv.org=7, www.anthropic.com=5, api.github.com=1, openai.com=3, langchain-ai.github.io=1, blog.langchain.com=1, platform.claude.com=5, www.letta.com=1, ai-boost=1, developers.openai.com=1, www.mendral.com=1, genai.owasp.org=1, platform.openai.com=1, asixiv.org=1, blog.modelcontextprotocol.io=1, maintainer-provided=1, walkinglabs=2
+- source_type: web source=25, repository=19, preprint=7, manual local PDF=1
+- publication_year: 2026=1, unspecified=51
+- primary_secondary: unknown until inspected=48, primary=3, independent survey and educational synthesis=1
+- evidence_lineage: generic web open=48, AI Boost curated catalog repository=1, declared manual source; repository-staged readable copy=1, Walking Labs curated catalog repository=1, Walking Labs curriculum repository=1
 
 ## Repository depth
 
@@ -90,6 +95,15 @@
 - auto-source-721d7c06c94b6351: other, README, releases; unpinned
 - auto-source-257ed09536576a04: other, README, releases; unpinned
 - auto-source-b2dde8d2b4d70b66: other, README; unpinned
+- auto-source-dad4c9f3ba7f1da9: other, README, releases; unpinned
+- auto-source-cb8f252ccaaf10b0: other, README, releases; unpinned
+- auto-source-c785b5a9d8fcdc9f: other, README; unpinned
+- auto-source-8028887117fae6cb: other, README, releases; unpinned
+- auto-source-cc9be4621c6c116e: other, README; unpinned
+- auto-source-85f5c040be9f452b: other, README, releases; unpinned
+- auto-source-97dcab4759c83fdb: other, README, releases; unpinned
+- auto-source-0439b639378468c6: other, README, releases; unpinned
+- auto-source-46c5f25a10670fc7: other, README, releases; unpinned
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
@@ -184,10 +198,14 @@
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code, tests; commit=unresolved
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
 - captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=command_output; commit=unresolved
+- captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
+- captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code, tests, documentation; commit=unresolved
+- captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=code; commit=unresolved
+- captured local inspection: /Users/jernotte/.codex/worktrees/6101/learning-harness-engineering; surfaces=command_output; commit=unresolved
 
-GitHub source-funnel totals: returned=0, opened=10, readme_only=7, code_inspected=1, test_inspected=0, history_inspected=3, pinned=3, referenced=0
+GitHub source-funnel totals: returned=0, opened=19, readme_only=16, code_inspected=1, test_inspected=0, history_inspected=3, pinned=3, referenced=0
 
-Captured local-repository observation totals: observations=94, code_inspected=76, test_inspected=6, history_inspected=6, commit_captured=1
+Captured local-repository observation totals: observations=98, code_inspected=79, test_inspected=7, history_inspected=6, commit_captured=1
 
 ## Claim-evidence coverage
 
@@ -207,6 +225,8 @@ Captured local-repository observation totals: observations=94, code_inspected=76
 
 | Source ID | Host | Type | Returned | Opened | Inspection | Surfaces | Disposition | Version | Record |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| auto-source-03c873afc5afad1c | wellarchitected.github.com | web source | no | yes | none | other | excluded | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-0439b639378468c6 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-0668b361cac37fb4 | modelcontextprotocol.io | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-107da49445a23241 | arxiv.org | preprint | no | yes | partial_substantive | other, paper, abstract | read_only | live_unpinned | — |
 | auto-source-126e07cf0d684e03 | www.anthropic.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
@@ -219,23 +239,41 @@ Captured local-repository observation totals: observations=94, code_inspected=76
 | auto-source-2b0bbc572c83b1d8 | langchain-ai.github.io | web source | no | yes | none | other | excluded | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-38c43325a50c50c6 | www.anthropic.com | web source | no | yes | full_substantive | other, documentation | read_only | live_unpinned | — |
 | auto-source-3cdc3bbb8a55263b | blog.langchain.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-46c5f25a10670fc7 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-4bc641a728ca0582 | platform.claude.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-523b6fa0a1bdab02 | arxiv.org | preprint | no | yes | partial_substantive | other, paper, abstract | read_only | live_unpinned | — |
+| auto-source-54d4071243dd4517 | platform.claude.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-58a5a7279791ce2c | arxiv.org | preprint | no | yes | screening | other, paper, abstract | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-64af1d1a2fd48283 | www.anthropic.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-721d7c06c94b6351 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-7647307fe49844a0 | arxiv.org | preprint | no | yes | screening | other, paper, abstract | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-7fe841355559703a | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-8028887117fae6cb | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-82747c62f33e4f20 | platform.claude.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-855185e3d07e09ad | www.letta.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-85f5c040be9f452b | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-88fd75feed929931 | arxiv.org | preprint | no | yes | partial_substantive | other, paper, abstract | read_only | live_unpinned | — |
+| auto-source-907e72292eae9f69 | arxiv.org | preprint | no | yes | screening | other, paper, abstract | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-95e2f11879a290a0 | github.com | repository | no | yes | screening | other, README, documentation, history, command_output | read_only | pinned | — |
+| auto-source-97dcab4759c83fdb | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-9a17e7add848af00 | developers.openai.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-9fa759b72385cdec | www.anthropic.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-ab8062b62991ffcf | platform.claude.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-ae10eb4597fe2dea | openai.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-b2dde8d2b4d70b66 | github.com | repository | no | yes | screening | other, README | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-baf9cbcdf7e11126 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-c1baaa073231686d | www.mendral.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-c785b5a9d8fcdc9f | github.com | repository | no | yes | screening | other, README | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-cb8f252ccaaf10b0 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-cc9be4621c6c116e | github.com | repository | no | yes | screening | other, README | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-cecce92d753337bd | genai.owasp.org | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
 | auto-source-dab460140f5c7122 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-01.md |
+| auto-source-dad4c9f3ba7f1da9 | github.com | repository | no | yes | screening | other, README, releases | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-db41d6bba0d86a4e | platform.claude.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-e205ffac9d9f156d | openai.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
+| auto-source-ec4f8c98c7439855 | platform.openai.com | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | auto-source-f608d57e93e6c8c4 | asixiv.org | web source | no | yes | full_substantive | other, paper, abstract | read_only | live_unpinned | — |
+| auto-source-fc75dde1b88ed17e | blog.modelcontextprotocol.io | web source | no | yes | screening | other, documentation | read_only | live_unpinned | research/outline-development/awesome-screen-core-02.md |
 | v2-seed-local-2606-24937v1 | local filesystem | manual local PDF | no | yes | partial_substantive | paper, other | read_only | Version 1.2.2 dated 22 June 2026 | — |
 | v2-source-walkinglabs-awesome-harness-engineering | github.com | repository | no | yes | screening | README, history, command_output | read_only | pinned | — |
 | v2-source-walkinglabs-learn-harness-engineering | github.com | repository | no | yes | partial_substantive | README, documentation, history, code, command_output | read_only | pinned | — |
@@ -256,3 +294,12 @@ Captured local-repository observation totals: observations=94, code_inspected=76
 - `repository_shallow` (resolved): auto-source-721d7c06c94b6351 was inspected without code, tests, or history — V2-D008 intentionally authorized only a top-level direct screen. The README was sufficient to identify four sample patterns; code, deployment, tests, and the linked article remained prohibited.
 - `repository_shallow` (resolved): auto-source-257ed09536576a04 was inspected without code, tests, or history — V2-D008 intentionally authorized only a top-level direct screen. The automatic rename and expanded cross-harness scope were observable on the repository home; guides, architecture, skills, code, tests, and release files remained prohibited.
 - `repository_shallow` (resolved): auto-source-b2dde8d2b4d70b66 was inspected without code, tests, or history — V2-D008 intentionally authorized only a top-level direct screen. Metric implementation, tests, documentation, research citations, and hosted-platform behavior remain outside the calibration boundary.
+- `repository_shallow` (resolved): auto-source-dad4c9f3ba7f1da9 was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README, archive notice, and visible release metadata were sufficient to establish identity and lifecycle; code, tests, history, documentation, and release contents were prohibited.
+- `repository_shallow` (resolved): auto-source-cb8f252ccaaf10b0 was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README established the educational reference-implementation scope and production caveat; individual servers, code, tests, history, registry, and release contents were prohibited.
+- `repository_shallow` (resolved): auto-source-c785b5a9d8fcdc9f was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README was sufficient to correct the gateway and provider-infrastructure scope; code, tests, history, documentation, benchmarks, and hosted behavior were prohibited.
+- `repository_shallow` (resolved): auto-source-8028887117fae6cb was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README exposed benchmark identity and its material scope change; task files, code, tests, history, paper, leaderboard, and result reproduction were prohibited.
+- `repository_shallow` (resolved): auto-source-cc9be4621c6c116e was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README established the observability-platform scope; code, tests, history, documentation, integrations, benchmarks, and hosted behavior were prohibited.
+- `repository_shallow` (resolved): auto-source-85f5c040be9f452b was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README and visible release metadata established the debugging surface; code, tests, history, transcript parsing, privacy behavior, packages, and release contents were prohibited.
+- `repository_shallow` (resolved): auto-source-97dcab4759c83fdb was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The root README was sufficient to expose the broad-platform versus named-node mismatch; node documentation, code, tests, history, feature pages, and release contents were prohibited.
+- `repository_shallow` (resolved): auto-source-0439b639378468c6 was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README exposed benchmark scope and its reproducibility caveat; task data, code, tests, history, paper, leaderboard, dataset, fixtures, and result reproduction were prohibited.
+- `repository_shallow` (resolved): auto-source-46c5f25a10670fc7 was inspected without code, tests, or history — V2-D009 intentionally authorized only a top-level direct screen. The README and visible release metadata established the prompt-compression research series; implementation, code, tests, history, papers, experiments, examples, and release contents were prohibited.

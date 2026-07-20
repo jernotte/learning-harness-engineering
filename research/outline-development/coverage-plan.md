@@ -3,21 +3,22 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D009, approved 2026-07-20
-**Current pass:** `awesome-screen-core-02` authorized
+**Current pass:** `awesome-screen-core-02` complete; awaiting maintainer gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The direct screen of the exact 20 families in `awesome-screen-core-02` tests
-the core-01 method across another source mix while preserving requested and
-observed identity, accessibility, substantive inspectability, relevance, scope,
+The completed direct screen of the exact 20 families in
+`awesome-screen-core-02` tests the core-01 method across another source mix
+while preserving requested and observed identity, accessibility, substantive
+inspectability, relevance, scope,
 source form, evidence posture, visible lineage, version or pin state, catalog
 correction, schema friction, and disposition. The batch is anchored to
 `awesome-screening-plan.json` at commit
 `3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass may not search, follow a
 second hop, reopen core-01, deep-read a source, choose a taxonomy, or draft an
-outline.
+outline. It is now closed and grants no further opening authority.
 
 ## Wave 1 authorization
 
@@ -158,14 +159,25 @@ interaction completed before `2026-07-20T22:03:36Z`; that timestamp closes the
 external-interaction portion of this batch boundary. Later local reconciliation
 and checkpoint actions do not extend permission to open another source.
 
+The `awesome-screen-core-02` native boundary is declared from
+`2026-07-20T22:54:34Z`, after the committed V2-D009 authority checkpoint at
+`ea39a73121ca005cd19f136e03967ccf57cf1e48`. It closes before
+`2026-07-20T22:59:08Z` and contains 57 native observations, 21 direct opens for
+exactly 20 frozen source IDs and URLs, and no search or returned-result event.
+The GitHub Governing Agents URL is the sole repeated direct open. Ten
+conservative local provenance-control observations are reciprocally linked;
+zero observations remain unresolved. Later reconciliation and checkpoint
+actions do not extend permission to open another source.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
 - During the now-closed batch boundary, only the 20 direct URLs registered in
   `awesome-screen-core-01` were permitted to open.
-- During the current batch boundary, only the 20 direct URLs registered in
-  `awesome-screen-core-02` may open. Core-01 reopening, every other catalog
-  batch, and every identity-resolution query remain blocked.
+- During the now-closed second batch boundary, only the 20 direct URLs
+  registered in `awesome-screen-core-02` were permitted to open. Core-01 and
+  core-02 reopening, every other catalog batch, and every identity-resolution
+  query remain blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -175,9 +187,9 @@ and checkpoint actions do not extend permission to open another source.
 
 ## Stop and checkpoint
 
-Stop when all 20 `awesome-screen-core-02` families have an honest direct-screen
-result or recorded access failure; each opened source has identity, inspected
-surface, accessibility, relevance, scope, evidence posture, visible lineage,
-and final disposition; schema friction and catalog-metadata corrections are
-explicit; and the batch's diagnostic native boundary is reconciled. Present
-that complete calibration for maintainer review before opening another batch.
+The stop condition is satisfied: all 20 `awesome-screen-core-02` families have
+an honest direct-screen result or recorded access failure; each source has the
+required identity, surface, accessibility, relevance, scope, evidence posture,
+lineage, and proposed disposition; schema friction and catalog corrections are
+explicit; and the diagnostic boundary is reconciled. Present this complete
+calibration for maintainer review before opening another batch.

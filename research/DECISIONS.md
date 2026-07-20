@@ -473,3 +473,29 @@ this canonical decision; the surrounding exchange adds no essential rationale.
 
 The maintainer explicitly approved the proposed core-01 method and dispositions
 and authorized core-02 on 2026-07-20.
+
+### Execution record
+
+Core-02 completed under this authorization on 2026-07-20. Its native boundary
+contains 21 direct-open events for exactly the 20 frozen source IDs and URLs;
+the sole repeat was a second same-literal-URL attempt after the GitHub
+Governing Agents route returned no substantive content. No search, identity
+query, manual redirect traversal, second hop, core-01 reopen, implementation
+deep dive, claim, reference, evidence promotion, legacy access, or outline
+drafting occurred.
+
+The joined register records 19 proposed `read_only` dispositions and one
+proposed exclusion, nine intentionally shallow repository screens, requested
+and observed redirects, visible-version-versus-pin state, evidence posture,
+lineage limits, and material catalog corrections. The standalone diagnostic
+audit passes at `complete` with 57 native observations, zero unresolved
+observations, zero claims, and nine resolved `repository_shallow` warnings.
+The consolidated diagnostic audit also passes at
+`complete_with_declared_manual_sources` with eight native boundaries, 346
+native observations, 52 unique opened source identities, 49 `read_only`
+dispositions, three exclusions, zero searches, zero claims, and zero unresolved
+observations.
+
+This execution record exhausts V2-D009's opening authority. It does not approve
+the core-02 dispositions or authorize core-03. The maintainer must review the
+completed package before the next decision.

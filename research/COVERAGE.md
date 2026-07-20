@@ -40,6 +40,19 @@ expanded ECC repository, plus narrower source-form and evidence-posture
 corrections across the set. These screens are catalog evaluation coverage, not
 admitted subject evidence or representative field coverage.
 
+The second approved catalog calibration directly screened all 20 families in
+`awesome-screen-core-02`. It records 19 proposed `read_only` dispositions and
+one proposed exclusion: the GitHub Governing Agents route automatically
+redirected but exposed no substantive page content in either same-URL attempt.
+Nine repository families were intentionally limited to top-level
+README/release surfaces and remain `repository_shallow` and live-unpinned. The
+batch records material catalog corrections for TaskWeaver's archived state,
+MCP servers as educational reference implementations rather than a registry,
+LiteLLM's gateway role, AgentBench's benchmark scope, the Dify root-versus-node
+label, and several article/documentation forms and category boundaries. These
+screens remain catalog evaluation coverage, not admitted subject evidence,
+approved dispositions, or representative field coverage.
+
 The pinned Awesome census is now complete under its declared rule manifest:
 652 extracted occurrences divide into 415 qualifying resources and 237
 mechanical exclusions. The qualifying occurrences map to 401 offline family
@@ -82,6 +95,6 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the authorized `awesome-screen-core-02` calibration is
-complete. Until then, its 20 destinations and the other 355 proposed new
-destinations remain unopened.
+Update this file after the maintainer reviews the completed
+`awesome-screen-core-02` gate or authorizes another exact batch. The remaining
+355 proposed new destinations remain unopened.

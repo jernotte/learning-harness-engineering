@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T22:11:37.327Z",
+  "generated_at": "2026-07-20T23:10:56.784Z",
   "cycle": "v2-outline-seed-map",
   "completeness": "complete_with_declared_manual_sources",
   "profile": "diagnostic",
@@ -12,25 +12,25 @@
     "searches_with_incomplete_result_capture": 0,
     "returned": 0,
     "returned_source_identities_recovered": 0,
-    "opened": 32,
-    "read_only": 30,
+    "opened": 52,
+    "read_only": 49,
     "referenced": 0,
-    "excluded": 2,
+    "excluded": 3,
     "declared_claims": 0,
     "claims": 0,
     "claim_evidence_mappings": 0,
     "verifications": 0,
     "unverified_claim_evidence_mappings": 0,
-    "native_boundaries": 7,
-    "native_observations": 289,
-    "automatically_resolved_observations": 173,
-    "human_resolved_observations": 116,
+    "native_boundaries": 8,
+    "native_observations": 346,
+    "automatically_resolved_observations": 220,
+    "human_resolved_observations": 126,
     "unresolved_observations": 0,
-    "linked_observations": 254,
-    "not_research_observations": 35,
-    "observation_resolution_batches": 7,
+    "linked_observations": 309,
+    "not_research_observations": 37,
+    "observation_resolution_batches": 8,
     "manual_capture_actions": 8,
-    "semantic_batch_actions": 5
+    "semantic_batch_actions": 6
   },
   "planned_channels": [
     "direct seed URL inspection",
@@ -43,18 +43,23 @@
   ],
   "host_distribution": {
     "asixiv.org": 1,
-    "github.com": 10,
+    "github.com": 19,
     "api.github.com": 1,
     "local filesystem": 1,
-    "openai.com": 2,
-    "arxiv.org": 6,
-    "www.anthropic.com": 4,
+    "openai.com": 3,
+    "arxiv.org": 7,
+    "www.anthropic.com": 5,
     "blog.langchain.com": 1,
-    "platform.claude.com": 2,
+    "platform.claude.com": 5,
     "modelcontextprotocol.io": 1,
     "genai.owasp.org": 1,
     "developers.openai.com": 1,
-    "langchain-ai.github.io": 1
+    "langchain-ai.github.io": 1,
+    "platform.openai.com": 1,
+    "wellarchitected.github.com": 1,
+    "www.letta.com": 1,
+    "www.mendral.com": 1,
+    "blog.modelcontextprotocol.io": 1
   },
   "repository_depth": [
     {
@@ -146,6 +151,85 @@
       "surfaces": [
         "other",
         "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-dad4c9f3ba7f1da9",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-cb8f252ccaaf10b0",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-c785b5a9d8fcdc9f",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-8028887117fae6cb",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-cc9be4621c6c116e",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-85f5c040be9f452b",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-97dcab4759c83fdb",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-0439b639378468c6",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-46c5f25a10670fc7",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
       ],
       "pinned": false
     }
@@ -1890,12 +1974,96 @@
         "native-9c41e73cac60e74c25d0"
       ],
       "__line": 674
+    },
+    {
+      "timestamp": "2026-07-20T22:55:03.963Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-02",
+      "derived_from_native_event": "native-c70352b3a7737754676b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-63f743b3d0376abad3",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "3984e9c10d1c6735710aaf4a03c5062b39e72168a160cc7497a039d38d3c13e2",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 750
+    },
+    {
+      "timestamp": "2026-07-20T22:55:10.400Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-02",
+      "derived_from_native_event": "native-3ee2a35f44d2286a61ff",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e384a2a2308e4240f1",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "0757cedac9b8805adc1abe66a0b1aa88e375aeb49d1ad972afef65dddb380535",
+      "surfaces": [
+        "code",
+        "tests",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 751
+    },
+    {
+      "timestamp": "2026-07-20T22:55:14.078Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-02",
+      "derived_from_native_event": "native-4ef3f992b44187781a7d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e0d464ac690202ec27",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "a9cb7f9cf426ff51434b3a4455ed219429dcfad865b81e88b45bc94a55e533ef",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 752
+    },
+    {
+      "event_id": "v2-core02-control-local-project",
+      "timestamp": "2026-07-20T23:02:02Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-02-manual-reconciliation",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "0904d4ce09d062e37c5b9c08b60954e9741bf36d6592765865dc003640224c90",
+      "surfaces": [
+        "command_output"
+      ],
+      "inspection_scope": "Grouped UTC timestamp, first-interaction provenance ingest, validation, copy, append, observation-resolution, and invariant-check commands falsely classified external because the worktree and native rollout live under .codex; no subject source was accessed.",
+      "capture_mode": "manual_reconciliation",
+      "native_refs": [
+        "native-4725f6e3c34fe619a186",
+        "native-a24c9d4fc8ed062c47d6",
+        "native-c3dcaa05f09372a82c40",
+        "native-b01d28c81f8b7fd03357",
+        "native-68e13dbea7d8cadae060",
+        "native-0d63eedf2a6fc517b842",
+        "native-1914c2e9481e8a28f3eb",
+        "native-ec89346962a7452eb8ef",
+        "native-d9ab0178e63d3e131e16",
+        "native-0904d4ce09d062e37c5b"
+      ],
+      "__line": 835
     }
   ],
   "repository_summary": {
     "returned": 0,
-    "opened": 10,
-    "readme_only": 7,
+    "opened": 19,
+    "readme_only": 16,
     "code_inspected": 1,
     "test_inspected": 0,
     "history_inspected": 3,
@@ -1903,9 +2071,9 @@
     "referenced": 0
   },
   "local_repository_summary": {
-    "observations": 94,
-    "code_inspected": 76,
-    "test_inspected": 6,
+    "observations": 98,
+    "code_inspected": 79,
+    "test_inspected": 7,
     "history_inspected": 6,
     "commit_captured": 1
   },
@@ -1914,54 +2082,64 @@
   "provenance_waivers": [],
   "distributions": {
     "host": {
+      "wellarchitected.github.com": 1,
+      "github.com": 19,
       "modelcontextprotocol.io": 1,
-      "arxiv.org": 6,
-      "www.anthropic.com": 4,
+      "arxiv.org": 7,
+      "www.anthropic.com": 5,
       "api.github.com": 1,
-      "github.com": 10,
-      "openai.com": 2,
+      "openai.com": 3,
       "langchain-ai.github.io": 1,
       "blog.langchain.com": 1,
-      "platform.claude.com": 2,
+      "platform.claude.com": 5,
+      "www.letta.com": 1,
       "developers.openai.com": 1,
+      "www.mendral.com": 1,
       "genai.owasp.org": 1,
+      "platform.openai.com": 1,
       "asixiv.org": 1,
+      "blog.modelcontextprotocol.io": 1,
       "local filesystem": 1
     },
     "organization": {
+      "wellarchitected.github.com": 1,
+      "github.com": 16,
       "modelcontextprotocol.io": 1,
-      "arxiv.org": 6,
-      "www.anthropic.com": 4,
+      "arxiv.org": 7,
+      "www.anthropic.com": 5,
       "api.github.com": 1,
-      "github.com": 7,
-      "openai.com": 2,
+      "openai.com": 3,
       "langchain-ai.github.io": 1,
       "blog.langchain.com": 1,
-      "platform.claude.com": 2,
+      "platform.claude.com": 5,
+      "www.letta.com": 1,
       "ai-boost": 1,
       "developers.openai.com": 1,
+      "www.mendral.com": 1,
       "genai.owasp.org": 1,
+      "platform.openai.com": 1,
       "asixiv.org": 1,
+      "blog.modelcontextprotocol.io": 1,
       "maintainer-provided": 1,
       "walkinglabs": 2
     },
     "source_type": {
-      "web source": 15,
-      "preprint": 6,
-      "repository": 10,
+      "web source": 25,
+      "repository": 19,
+      "preprint": 7,
       "manual local PDF": 1
     },
     "publication_year": {
       "2026": 1,
-      "unspecified": 31
+      "unspecified": 51
     },
     "primary_secondary": {
-      "unknown until inspected": 28,
+      "unknown until inspected": 48,
       "primary": 3,
       "independent survey and educational synthesis": 1
     },
     "evidence_lineage": {
-      "generic web open": 28,
+      "generic web open": 48,
       "AI Boost curated catalog repository": 1,
       "declared manual source; repository-staged readable copy": 1,
       "Walking Labs curated catalog repository": 1,
@@ -1971,6 +2149,50 @@
   "searches": [],
   "search_updates": [],
   "sources": [
+    {
+      "source_id": "auto-source-03c873afc5afad1c",
+      "canonical_url": "https://wellarchitected.github.com/library/governance/recommendations/governing-agents",
+      "host": "wellarchitected.github.com",
+      "organization": "wellarchitected.github.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "none",
+      "surfaces": [
+        "other"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "The registered GitHub Well-Architected route automatically redirected to learn.github.com but returned no substantive page lines in either of two same-URL recovery opens. Identity, relevance, authorship, date, mechanism, and evidence posture could not be established within the authorized boundary.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-0439b639378468c6",
+      "canonical_url": "https://github.com/claw-eval/claw-eval",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Claw-Eval repository home was used only to identify its current benchmark scope, human-verified task and rubric claims, Pass^3 policy, reproducibility caveat, and execution shape. Results and trustworthiness remain project-reported and unreproduced.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
     {
       "source_id": "auto-source-0668b361cac37fb4",
       "canonical_url": "https://modelcontextprotocol.io/introduction",
@@ -2237,6 +2459,29 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-46c5f25a10670fc7",
+      "canonical_url": "https://github.com/microsoft/llmlingua",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The LLMLingua repository home was used only to identify a research implementation series for prompt and KV-cache compression and its associated source-reported results. This is narrower than general conversation compaction or durable context management.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
       "source_id": "auto-source-4bc641a728ca0582",
       "canonical_url": "https://platform.claude.com/docs/en/agents-and-tools/mcp-tunnels/overview",
       "host": "platform.claude.com",
@@ -2280,6 +2525,28 @@
       "disposition_reason": "The study's decision dimensions, recurring bundles, and explicit non-exhaustiveness were used to test a decision-centered organizing possibility. Its public-project sample and descriptive associations do not establish causal outcomes, field saturation, or a V2 taxonomy.",
       "version_freshness_state": "live_unpinned",
       "record_path": ""
+    },
+    {
+      "source_id": "auto-source-54d4071243dd4517",
+      "canonical_url": "https://platform.claude.com/docs/en/build-with-claude/compaction",
+      "host": "platform.claude.com",
+      "organization": "platform.claude.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The live Claude Platform page was used only to identify current server-side compaction behavior, controls, accounting, and the visible beta header. Product documentation establishes vendor-described behavior, not comparative outcome quality.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
       "source_id": "auto-source-58a5a7279791ce2c",
@@ -2396,6 +2663,29 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-8028887117fae6cb",
+      "canonical_url": "https://github.com/thudm/agentbench",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The AgentBench repository home was used only to identify benchmark/evaluation scope, the 2025 shift to AgentBench FC, its current task packaging, and source-reported earlier benchmark results. It is not a CI-integration source.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
       "source_id": "auto-source-82747c62f33e4f20",
       "canonical_url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview",
       "host": "platform.claude.com",
@@ -2416,6 +2706,51 @@
       "disposition_reason": "The live Claude Platform page was used only to identify the documented tool-call/result contract, execution locations, schemas, choice controls, and product-specific scope. Documentation does not establish outcome quality.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-01.md"
+    },
+    {
+      "source_id": "auto-source-855185e3d07e09ad",
+      "canonical_url": "https://www.letta.com/blog/letta-v1-agent",
+      "host": "www.letta.com",
+      "organization": "www.letta.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Letta article was used only to identify its agent-loop redesign, model-harness co-adaptation argument, transition rationale, and reported tradeoffs. Its primary subject is broader than the catalog's Memory & State placement, and its observations remain first-party.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-85f5c040be9f452b",
+      "canonical_url": "https://github.com/matt1398/claude-devtools",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The claude-devtools repository home was used only to identify a local debugging interface for transcripts, tool calls, token usage, subagent trees, and compaction. Its operation, privacy implications, and reliability were not assessed.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
       "source_id": "auto-source-88fd75feed929931",
@@ -2439,6 +2774,29 @@
       "disposition_reason": "The natural-language/runtime/code ownership boundary and the paper's benchmark design were used to test representation as an implementation decision and auditability concern. Reported feasibility, mechanism metrics, and ablations remain specific to the paper's IHR, models, harness families, and benchmark conditions.",
       "version_freshness_state": "live_unpinned",
       "record_path": ""
+    },
+    {
+      "source_id": "auto-source-907e72292eae9f69",
+      "canonical_url": "https://arxiv.org/abs/2310.04406",
+      "host": "arxiv.org",
+      "organization": "arxiv.org",
+      "source_type": "preprint",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "paper",
+        "abstract"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The unversioned LATS arXiv work page was used only to identify the reasoning/action/planning tree-search mechanism, named evaluation domains, reported results, and visible current version. The paper's claims remain experiment-specific and unreproduced.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
       "source_id": "auto-source-95e2f11879a290a0",
@@ -2466,6 +2824,29 @@
       "record_path": ""
     },
     {
+      "source_id": "auto-source-97dcab4759c83fdb",
+      "canonical_url": "https://github.com/langgenius/dify",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Dify root repository was used only to identify a broad LLM application, workflow, RAG, agent, and observability platform. The direct surface did not substantiate the catalog label Dify Human-in-the-Loop Node; resolving that specific feature requires a prohibited second hop.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
       "source_id": "auto-source-9a17e7add848af00",
       "canonical_url": "https://developers.openai.com/blog/run-long-horizon-tasks-with-codex",
       "host": "developers.openai.com",
@@ -2486,6 +2867,50 @@
       "disposition_reason": "The OpenAI long-horizon article was used only as a first-party single-run case study of durable project memory, milestones, verification, repair, and the Codex loop. The author explicitly distinguishes the experiment from production evidence.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-01.md"
+    },
+    {
+      "source_id": "auto-source-9fa759b72385cdec",
+      "canonical_url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "host": "www.anthropic.com",
+      "organization": "www.anthropic.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Anthropic engineering article was used only to identify its first-party experiments with planning, generator/evaluator separation, context strategy, sprint contracts, verification, cost, simplification, and model-dependent load-bearing components. Reported outcomes remain source-reported and unreproduced.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-ab8062b62991ffcf",
+      "canonical_url": "https://platform.claude.com/docs/en/agent-sdk/overview",
+      "host": "platform.claude.com",
+      "organization": "platform.claude.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Claude Agent SDK overview was used only to identify the documented agent loop, built-in tools, hooks, subagents, MCP, permissions, sessions, observability, and deployment surface. It is broad product/SDK documentation rather than specifically a generator or meta-harness.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
       "source_id": "auto-source-ae10eb4597fe2dea",
@@ -2555,6 +2980,95 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-c1baaa073231686d",
+      "canonical_url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+      "host": "www.mendral.com",
+      "organization": "www.mendral.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Mendral article was used only to identify its first-party argument for placing a multi-user harness outside the sandbox and its stated durability, credential, lifecycle, state, and filesystem-virtualization tradeoffs. The account is practitioner rationale, not independent security or performance evidence.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-c785b5a9d8fcdc9f",
+      "canonical_url": "https://github.com/berriai/litellm",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The LiteLLM repository home was used only to identify a provider SDK and AI gateway spanning routing, keys, spend, guardrails, logging, load balancing, and MCP/A2A. That scope is better described as gateway and production infrastructure than task running or orchestration.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-cb8f252ccaaf10b0",
+      "canonical_url": "https://github.com/modelcontextprotocol/servers",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The MCP servers repository home was used only to identify a steering-group-maintained collection of educational reference implementations. The README explicitly distinguishes it from the server registry and warns that examples are not production-ready.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-cc9be4621c6c116e",
+      "canonical_url": "https://github.com/arize-ai/phoenix",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Phoenix repository home was used only to identify an AI-observability platform candidate covering tracing, evaluation, datasets, experiments, prompt management, and troubleshooting. All capability statements remain project self-description.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
       "source_id": "auto-source-cecce92d753337bd",
       "canonical_url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency",
       "host": "genai.owasp.org",
@@ -2600,6 +3114,95 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-dad4c9f3ba7f1da9",
+      "canonical_url": "https://github.com/microsoft/taskweaver",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The TaskWeaver repository home was used only to identify its broad code-first agent-framework scope and the material fact that the owner archived the registered repository. Planning is one capability, not proof of the catalog's framing or of effectiveness.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-db41d6bba0d86a4e",
+      "canonical_url": "https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes",
+      "host": "platform.claude.com",
+      "organization": "platform.claude.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The live Claude Platform page was used only to identify the documented self-hosted execution boundary, control-plane split, worker lifecycle, filesystem conventions, custom tools, and current product constraints. It does not establish general security or operational outcomes.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-e205ffac9d9f156d",
+      "canonical_url": "https://openai.com/index/unlocking-the-codex-harness",
+      "host": "openai.com",
+      "organization": "openai.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The OpenAI engineering article was used only to identify the first-party Codex harness and App Server architecture, thread/turn/item lifecycles, approval flow, persistence, protocol, client patterns, and integration tradeoffs. It is mechanism documentation, not comparative effectiveness evidence.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-ec4f8c98c7439855",
+      "canonical_url": "https://platform.openai.com/docs/guides/function-calling",
+      "host": "platform.openai.com",
+      "organization": "platform.openai.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The OpenAI function-calling guide was used only to identify the documented tools, tool-call/result, schema, custom-tool, and tool-search surface. It is product/API documentation rather than the catalog's apparent educational collection.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
       "source_id": "auto-source-f608d57e93e6c8c4",
       "canonical_url": "https://asixiv.org/pdf/curated/2606.00001",
       "host": "asixiv.org",
@@ -2621,6 +3224,28 @@
       "disposition_reason": "The complete eleven-page seed was used only to map its source-native structure and anchoring hazards. It supports no promoted V2 claim or adopted taxonomy at this checkpoint.",
       "version_freshness_state": "live_unpinned",
       "record_path": ""
+    },
+    {
+      "source_id": "auto-source-fc75dde1b88ed17e",
+      "canonical_url": "https://blog.modelcontextprotocol.io/posts/2026-03-16-tool-annotations",
+      "host": "blog.modelcontextprotocol.io",
+      "organization": "blog.modelcontextprotocol.io",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The MCP project blog post was used only to identify its maintainer-authored risk vocabulary for tool annotations, trust limits, host-layer policy uses, composition risk, and open proposal questions. It is an official project argument and status account, not the specification or empirical validation.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
       "source_id": "v2-seed-local-2606-24937v1",
@@ -2804,6 +3429,121 @@
       "pinned": false,
       "resolved": true,
       "resolution": "V2-D008 intentionally authorized only a top-level direct screen. Metric implementation, tests, documentation, research citations, and hosted-platform behavior remain outside the calibration boundary."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-dad4c9f3ba7f1da9 was inspected without code, tests, or history",
+      "source_id": "auto-source-dad4c9f3ba7f1da9",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README, archive notice, and visible release metadata were sufficient to establish identity and lifecycle; code, tests, history, documentation, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-cb8f252ccaaf10b0 was inspected without code, tests, or history",
+      "source_id": "auto-source-cb8f252ccaaf10b0",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README established the educational reference-implementation scope and production caveat; individual servers, code, tests, history, registry, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-c785b5a9d8fcdc9f was inspected without code, tests, or history",
+      "source_id": "auto-source-c785b5a9d8fcdc9f",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README was sufficient to correct the gateway and provider-infrastructure scope; code, tests, history, documentation, benchmarks, and hosted behavior were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-8028887117fae6cb was inspected without code, tests, or history",
+      "source_id": "auto-source-8028887117fae6cb",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README exposed benchmark identity and its material scope change; task files, code, tests, history, paper, leaderboard, and result reproduction were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-cc9be4621c6c116e was inspected without code, tests, or history",
+      "source_id": "auto-source-cc9be4621c6c116e",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README established the observability-platform scope; code, tests, history, documentation, integrations, benchmarks, and hosted behavior were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-85f5c040be9f452b was inspected without code, tests, or history",
+      "source_id": "auto-source-85f5c040be9f452b",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README and visible release metadata established the debugging surface; code, tests, history, transcript parsing, privacy behavior, packages, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-97dcab4759c83fdb was inspected without code, tests, or history",
+      "source_id": "auto-source-97dcab4759c83fdb",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The root README was sufficient to expose the broad-platform versus named-node mismatch; node documentation, code, tests, history, feature pages, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-0439b639378468c6 was inspected without code, tests, or history",
+      "source_id": "auto-source-0439b639378468c6",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README exposed benchmark scope and its reproducibility caveat; task data, code, tests, history, paper, leaderboard, dataset, fixtures, and result reproduction were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-46c5f25a10670fc7 was inspected without code, tests, or history",
+      "source_id": "auto-source-46c5f25a10670fc7",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D009 intentionally authorized only a top-level direct screen. The README and visible release metadata established the prompt-compression research series; implementation, code, tests, history, papers, experiments, examples, and release contents were prohibited."
     }
   ]
 }

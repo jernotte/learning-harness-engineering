@@ -19,10 +19,13 @@ completed catalog gate, ratified its bounded lineage interpretation, approved
 the 21-batch screening program as intended scope, and first authorized the
 20-source `awesome-screen-core-01` calibration batch. That batch is complete;
 the maintainer approved its method and 19 `read_only` / one `excluded`
-dispositions and authorized only `awesome-screen-core-02` next. Core-01's joined
-identity, accessibility, relevance, evidence-posture, and schema results are in
-[`research/outline-development/awesome-screen-core-01.md`](research/outline-development/awesome-screen-core-01.md).
-No other batch is authorized. Work remains on
+dispositions and authorized only `awesome-screen-core-02` next. Core-02 has now
+completed the same bounded 20-family screen with 19 proposed `read_only`
+dispositions and one proposed exclusion. Its joined identity, accessibility,
+relevance, evidence-posture, catalog-correction, and schema results are in
+[`research/outline-development/awesome-screen-core-02.md`](research/outline-development/awesome-screen-core-02.md).
+The maintainer must review that package before any later batch is authorized.
+Work remains on
 `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 

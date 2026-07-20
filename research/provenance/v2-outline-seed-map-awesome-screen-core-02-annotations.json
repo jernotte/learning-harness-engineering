@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-07-20T23:05:31Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-02-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-awesome-screen-core-02-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-dad4c9f3ba7f1da9",
+      "disposition": "read_only",
+      "reason": "The TaskWeaver repository home was used only to identify its broad code-first agent-framework scope and the material fact that the owner archived the registered repository. Planning is one capability, not proof of the catalog's framing or of effectiveness.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview, archive notice, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no file, code, tests, history, documentation, or release body opened."
+    },
+    {
+      "source_id": "auto-source-54d4071243dd4517",
+      "disposition": "read_only",
+      "reason": "The live Claude Platform page was used only to identify current server-side compaction behavior, controls, accounting, and the visible beta header. Product documentation establishes vendor-described behavior, not comparative outcome quality.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["direct documentation page sections on automatic compaction, compaction blocks, triggers, custom instructions, and usage accounting"],
+      "inspection_basis": "Live direct documentation page with visible beta header compact-2026-01-12 but no immutable page pin; linked documentation was not opened."
+    },
+    {
+      "source_id": "auto-source-ec4f8c98c7439855",
+      "disposition": "read_only",
+      "reason": "The OpenAI function-calling guide was used only to identify the documented tools, tool-call/result, schema, custom-tool, and tool-search surface. It is product/API documentation rather than the catalog's apparent educational collection.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official guide: function/tool definitions, tool calls and outputs, JSON schemas, custom tools, and tool search"],
+      "inspection_basis": "Direct registered URL and automatic redirect to developers.openai.com only; no linked guide, API reference, example repository, or second hop opened."
+    },
+    {
+      "source_id": "auto-source-cb8f252ccaaf10b0",
+      "disposition": "read_only",
+      "reason": "The MCP servers repository home was used only to identify a steering-group-maintained collection of educational reference implementations. The README explicitly distinguishes it from the server registry and warns that examples are not production-ready.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README scope and production-readiness caveat, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no server directory, implementation file, code, tests, history, registry, or release body opened."
+    },
+    {
+      "source_id": "auto-source-03c873afc5afad1c",
+      "disposition": "excluded",
+      "reason": "The registered GitHub Well-Architected route automatically redirected to learn.github.com but returned no substantive page lines in either of two same-URL recovery opens. Identity, relevance, authorship, date, mechanism, and evidence posture could not be established within the authorized boundary.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct opens of the same registered URL and its automatic redirect only; no manual redirect traversal, query, search, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-855185e3d07e09ad",
+      "disposition": "read_only",
+      "reason": "The Letta article was used only to identify its agent-loop redesign, model-harness co-adaptation argument, transition rationale, and reported tradeoffs. Its primary subject is broader than the catalog's Memory & State placement, and its observations remain first-party.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, date, agent-loop architecture, reasoning/action/termination discussion, transition rationale, and stated tradeoffs"],
+      "inspection_basis": "Direct article page only; linked repositories, prior architecture, documentation, and references were not opened."
+    },
+    {
+      "source_id": "auto-source-c785b5a9d8fcdc9f",
+      "disposition": "read_only",
+      "reason": "The LiteLLM repository home was used only to identify a provider SDK and AI gateway spanning routing, keys, spend, guardrails, logging, load balancing, and MCP/A2A. That scope is better described as gateway and production infrastructure than task running or orchestration.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity and capability overview, root listing, and visible default branch"],
+      "inspection_basis": "Repository-shallow screen of live litellm_internal_staging; no code, tests, history, documentation, benchmarks, hosted service, or release body opened."
+    },
+    {
+      "source_id": "auto-source-8028887117fae6cb",
+      "disposition": "read_only",
+      "reason": "The AgentBench repository home was used only to identify benchmark/evaluation scope, the 2025 shift to AgentBench FC, its current task packaging, and source-reported earlier benchmark results. It is not a CI-integration source.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README scope-change notice, current and original benchmark summaries, root listing, and visible no-releases state"],
+      "inspection_basis": "Repository-shallow screen of live main; no task file, code, tests, history, paper, result reproduction, or linked benchmark surface opened."
+    },
+    {
+      "source_id": "auto-source-cc9be4621c6c116e",
+      "disposition": "read_only",
+      "reason": "The Phoenix repository home was used only to identify an AI-observability platform candidate covering tracing, evaluation, datasets, experiments, prompt management, and troubleshooting. All capability statements remain project self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview and capability list, root listing, and visible default branch"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, integration, benchmark, or hosted service opened."
+    },
+    {
+      "source_id": "auto-source-85f5c040be9f452b",
+      "disposition": "read_only",
+      "reason": "The claude-devtools repository home was used only to identify a local debugging interface for transcripts, tool calls, token usage, subagent trees, and compaction. Its operation, privacy implications, and reliability were not assessed.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview and feature list, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, package, privacy behavior, transcript parser, or release body opened."
+    },
+    {
+      "source_id": "auto-source-97dcab4759c83fdb",
+      "disposition": "read_only",
+      "reason": "The Dify root repository was used only to identify a broad LLM application, workflow, RAG, agent, and observability platform. The direct surface did not substantiate the catalog label Dify Human-in-the-Loop Node; resolving that specific feature requires a prohibited second hop.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README platform overview, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no node documentation, code, tests, history, feature page, hosted product, or release body opened."
+    },
+    {
+      "source_id": "auto-source-ab8062b62991ffcf",
+      "disposition": "read_only",
+      "reason": "The Claude Agent SDK overview was used only to identify the documented agent loop, built-in tools, hooks, subagents, MCP, permissions, sessions, observability, and deployment surface. It is broad product/SDK documentation rather than specifically a generator or meta-harness.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official overview page: SDK identity, loop and context, built-in tools, hooks, subagents, MCP, permissions, sessions, observability, and deployment"],
+      "inspection_basis": "Direct registered URL and automatic redirect to code.claude.com only; no quickstart, SDK repository, API reference, sample, or linked documentation opened."
+    },
+    {
+      "source_id": "auto-source-c1baaa073231686d",
+      "disposition": "read_only",
+      "reason": "The Mendral article was used only to identify its first-party argument for placing a multi-user harness outside the sandbox and its stated durability, credential, lifecycle, state, and filesystem-virtualization tradeoffs. The account is practitioner rationale, not independent security or performance evidence.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, author/date, inside-versus-outside topology, durable execution, sandbox lifecycle, virtualized filesystem, and stated unresolved issues"],
+      "inspection_basis": "Direct article page only; linked vendors, prior posts, product pages, and supporting claims were not opened."
+    },
+    {
+      "source_id": "auto-source-0439b639378468c6",
+      "disposition": "read_only",
+      "reason": "The Claw-Eval repository home was used only to identify its current benchmark scope, human-verified task and rubric claims, Pass^3 policy, reproducibility caveat, and execution shape. Results and trustworthiness remain project-reported and unreproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README benchmark overview, task splits, evaluation logic, reproducibility note, root listing, and visible no-releases state"],
+      "inspection_basis": "Repository-shallow screen of live main; no task data, code, tests, history, paper, leaderboard, dataset, fixtures, or result reproduction opened."
+    },
+    {
+      "source_id": "auto-source-db41d6bba0d86a4e",
+      "disposition": "read_only",
+      "reason": "The live Claude Platform page was used only to identify the documented self-hosted execution boundary, control-plane split, worker lifecycle, filesystem conventions, custom tools, and current product constraints. It does not establish general security or operational outcomes.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["direct documentation page sections on control-plane and tool-execution boundaries, environment workers, sandbox lifecycle, filesystem paths, custom tools, and visible limitations"],
+      "inspection_basis": "Live direct documentation page with no visible immutable page version; security-model, provider, API-reference, and adjacent documentation links were not opened."
+    },
+    {
+      "source_id": "auto-source-9fa759b72385cdec",
+      "disposition": "read_only",
+      "reason": "The Anthropic engineering article was used only to identify its first-party experiments with planning, generator/evaluator separation, context strategy, sprint contracts, verification, cost, simplification, and model-dependent load-bearing components. Reported outcomes remain source-reported and unreproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article metadata and visible sections on failure modes, evaluator criteria, three-agent architecture, contracts, runs, costs, limitations, simplification, and conclusions"],
+      "inspection_basis": "Direct article page only; linked earlier experiments, skills, SDK docs, product posts, repositories, and references were not opened."
+    },
+    {
+      "source_id": "auto-source-e205ffac9d9f156d",
+      "disposition": "read_only",
+      "reason": "The OpenAI engineering article was used only to identify the first-party Codex harness and App Server architecture, thread/turn/item lifecycles, approval flow, persistence, protocol, client patterns, and integration tradeoffs. It is mechanism documentation, not comparative effectiveness evidence.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title/date, harness components, App Server architecture, conversation primitives, approval flow, client integrations, and protocol comparison"],
+      "inspection_basis": "Direct article page and automatic trailing-slash normalization only; linked Codex repository, App Server docs, SDKs, and related articles were not opened."
+    },
+    {
+      "source_id": "auto-source-907e72292eae9f69",
+      "disposition": "read_only",
+      "reason": "The unversioned LATS arXiv work page was used only to identify the reasoning/action/planning tree-search mechanism, named evaluation domains, reported results, and visible current version. The paper's claims remain experiment-specific and unreproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["arXiv title, authors, submission history, visible v3 metadata, abstract, and reported benchmark summary"],
+      "inspection_basis": "Direct unversioned arXiv abstract page only; PDF, experimental HTML, code, references, appendices, and result reproduction were not opened."
+    },
+    {
+      "source_id": "auto-source-46c5f25a10670fc7",
+      "disposition": "read_only",
+      "reason": "The LLMLingua repository home was used only to identify a research implementation series for prompt and KV-cache compression and its associated source-reported results. This is narrower than general conversation compaction or durable context management.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README project and paper overview, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no implementation file, code, tests, history, paper, documentation, example, experiment, model, or release body opened."
+    },
+    {
+      "source_id": "auto-source-fc75dde1b88ed17e",
+      "disposition": "read_only",
+      "reason": "The MCP project blog post was used only to identify its maintainer-authored risk vocabulary for tool annotations, trust limits, host-layer policy uses, composition risk, and open proposal questions. It is an official project argument and status account, not the specification or empirical validation.",
+      "record_path": "research/outline-development/awesome-screen-core-02.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct post title/date, current annotation interface, trust caveats, composition-risk discussion, stated uses and limits, proposal questions, and conclusion"],
+      "inspection_basis": "Direct post page and automatic trailing-slash normalization only; specification, SEPs, issue discussions, demonstrations, and cited sources were not opened."
+    }
+  ],
+  "artifact": {
+    "artifact_id": "v2-outline-awesome-screen-core-02-calibration",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/awesome-screen-core-02.md"
+  },
+  "claims": []
+}

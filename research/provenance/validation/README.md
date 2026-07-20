@@ -1,5 +1,7 @@
 # Bounded Provenance Validation
 
+> **V2 authority note:** D-004 and Stage 0.5 are pre-pivot, archived labels. This directory is retained only as infrastructure-regression evidence; it is neither active V2 authority nor V2 subject evidence.
+
 This directory contains the derived acceptance and preflight evidence for approved D-004.
 
 - `bounded-fail-audit.md` and `.json` are generated from the deliberately deficient fixture. Blocking is the expected result.

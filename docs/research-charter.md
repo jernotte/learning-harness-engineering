@@ -1,61 +1,67 @@
-# Research Charter
+# Harness Engineering V2 — Interim Charter
 
-## Why this project exists
+## Status
 
-Harness engineering is the discipline of shaping what a language model can accomplish through the software around it. The same model can behave like a limited chat interface, a capable coding agent, or a long-running research system depending on how the harness constructs context, exposes tools, preserves state, orders work, handles feedback, and evaluates results.
+This charter governs only the reset and outline-development period. It does not
+define the final subject taxonomy, curriculum, case set, or post-outline
+research program. Those decisions require the maintainer's explicit approval of
+the detailed V2 outline.
 
-The maintainer already builds harnesses. The aim is not to reach basic implementation competence or to produce one more framework. It is to formalize existing intuition, find gaps in it, learn what other builders have discovered, and establish a stronger foundation for designing and testing future systems. The most important product is a trustworthy learning process and the curated knowledge it leaves behind.
+## Purpose of the current program
 
-The eventual corpus should support three uses. It should be a living reference that can be maintained as the frontier moves; it should improve practical architectural judgment across different kinds of agents; and mature findings should be reusable in a course for colleagues who are technically capable but new to harness engineering.
+The current objective is to decide what a rigorous harness-engineering body of
+knowledge should cover and how that knowledge should be organized and
+sequenced. The outline must be useful enough for the maintainer to inspect its
+objectives, scope, structure, omissions, and dependencies before expensive
+research compounds an unwanted framing.
 
-## What counts as harness engineering here
+The program is therefore outline-first:
 
-The object of study is the orchestration layer connecting an unmodified language model to a task and an environment. We assume that a harness builder can select and call models but cannot retrain them, fine-tune their weights, or change their tokenizer.
+1. establish a clean repository authority boundary;
+2. approve the criteria by which an outline will be judged;
+3. inspect a bounded seed set without adopting its structure;
+4. compare materially different organizations;
+5. develop and approve one detailed outline;
+6. create a separate substantive research plan only afterward.
 
-This includes the agentic loop, prompt and policy construction, tool interfaces, context engineering, memory and persistent state, planning, workflows, delegation, multi-agent coordination, model routing, verification, evaluation, and mechanisms that allow a harness to learn or modify itself. Operational concerns such as permissions or observability are included when their design changes the loop or our ability to understand it.
+## Decisions deliberately left open
 
-Security, general user-interface design, model training, and other adjacent disciplines are not independent research tracks. They may enter a study when they explain a relevant architectural constraint, but they should not displace the central question: what can the harness developer control, and what does that choice do?
+Until the outline-development brief is approved, V2 has not fixed:
 
-The program deliberately spans coding agents, research agents, computer-use systems, scientific agents, and other domains. Studying several domains makes it possible to distinguish a general harness principle from a local convention.
+- the definition or technical boundary of harness engineering;
+- the intended audience beyond the maintainer's direct review role;
+- the ultimate learning or design outcomes;
+- a topic taxonomy or architectural lens;
+- the relationship between concepts, implementation families, domains, and
+  learning sequence;
+- the appropriate case-study, synthesis, or curriculum structure;
+- the order, depth, or stopping criteria of later research.
 
-## What good research looks like
+The repository name and the three seed resources identify an area of inquiry,
+not an accepted answer to these questions.
 
-The corpus should be backed by sources and implementation evidence rather than confident retellings. Academic work is valuable when its method supports the claim being made. Official documentation is valuable for establishing declared behavior. Code is especially important because it can confirm whether architectural assertions exist in a real implementation. Practitioner writing, talks, interviews, and informal testing can reveal lessons unavailable elsewhere, even when their confidence must remain lower.
+## Evidence standards retained during the reset
 
-No category is admitted or rejected wholesale. A polished paper can overgeneralize from a narrow benchmark; a marketing article can contain an excellent architectural disclosure; a social post can point to a real failure mode. We judge the specific claim and its evidence.
+The conceptual slate is clean; the epistemic slate is not careless. V2 retains
+the following standards because they govern how evidence is handled rather than
+what the field contains:
 
-Research breadth must also be auditable. The project records searches, returned results when available, opened sources, reading depth, disposition, and eventual claim use. This allows a reviewer to distinguish a justified source mix from clustering around a convenient host, organization, source type, or evidence lineage. Referenced claims require durable records; read-only and excluded sources remain visible without being promoted into evidence.
+- material factual claims require exact evidence;
+- implementation claims require a stable version or explicit live date;
+- source reports, observations, inferences, hypotheses, recommendations, and
+  open questions remain distinct;
+- source quality is evaluated for directness, rigor, recency, independence,
+  applicability, and confidence;
+- contradictions and negative evidence remain visible;
+- popularity and implementation presence do not prove effectiveness;
+- provenance completeness constrains what can be concluded about breadth,
+  balance, absence, or saturation;
+- the maintainer controls scope, organization, and maturity gates.
 
-Six questions guide that judgment:
+## Non-goals before outline approval
 
-1. **Directness:** How close is the evidence to the mechanism or outcome?
-2. **Rigor:** How strong and reproducible is the method?
-3. **Recency:** Could changes in models or harnesses have superseded it?
-4. **Independence:** Do corroborating sources actually have separate origins and incentives?
-5. **Applicability:** Under what models, tasks, and harness conditions does it transfer?
-6. **Confidence:** How strongly does the total evidence justify the conclusion?
-
-Recency is an important tie-breaker in a rapidly changing field, not an automatic trump card. Strong older evidence can remain more useful than a weak new claim. Conversely, conclusions that depend on a model limitation may age rapidly and should say so.
-
-## Truthful language
-
-The project distinguishes what we saw from what someone said and from what we inferred. A verified implementation fact is not the same as a source-reported claim. An inference is not a fact merely because it is plausible. A hypothesis remains open until evidence addresses it. An engineering recommendation adds judgment beyond description and must state its conditions.
-
-Similarly, common does not mean good. Patterns are classified according to the evidence behind them:
-
-- An **observed pattern** recurs in implementations without sufficient outcome evidence.
-- A **supported pattern** has credible evidence of benefit.
-- A **contextual pattern** is supported under identifiable conditions.
-- An **emerging pattern** is promising but too recent or thinly tested for confidence.
-- A **contested pattern** has credible conflicting evidence or interpretations.
-- An **anti-pattern** has evidence of recurring harm or failure.
-
-Negative findings are first-class knowledge. Failed mechanisms, null results, obsolete assumptions, and discarded hypotheses help builders avoid repeated mistakes. They should be summarized proportionately rather than hidden.
-
-## A living, useful corpus
-
-Historical lineage matters when it explains a current design, recurring failure, or shift in assumptions. It is not an end in itself. Superseded material may be trimmed when it no longer helps an engineer understand or decide anything.
-
-No subject is permanently complete. A research cycle reaches practical saturation when additional credible work provides little new information, its important conclusions are traceable, its contradictions and gaps are visible, and the synthesis can support engineering decisions. A new implementation, model capability, or result can reopen it.
-
-The original `outline.md` captures a valuable early view of the field, including tools, context, skills, memory, orchestration, evaluation, and self-improvement. It is evidence of our starting hypotheses—not a boundary on what the research may discover or how the final knowledge should be arranged.
+V2 will not conduct implementation deep dives, select a representative cohort,
+produce findings, revive legacy cases, build curriculum, generate a site, or
+claim field coverage before the detailed outline is approved. Seed inspection
+is permitted only after the outline-development brief defines its boundary and
+evidence treatment.

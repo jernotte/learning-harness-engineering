@@ -1,50 +1,60 @@
-# Learning Harness Engineering
+# Harness Engineering V2
 
-This repository is a living research program about the orchestration layer around language models: the code and instructions that let a model plan, act, observe, remember, delegate, and improve its work. Its purpose is not to build one particular harness. Its purpose is to develop a rigorous, current, and reusable body of knowledge that helps experienced builders reason about many kinds of harnesses.
+This repository is rebuilding its harness-engineering research program from a
+clean conceptual slate. The V2 program will begin with a maintainer-approved
+outline. Only after that outline fixes the objectives, scope, organization, and
+sequence will a separate research plan authorize substantive investigation.
 
-The research is intended to do three things at once. The process itself should deepen the maintainer's expertise; the reviewed findings should become a durable reference for designing and evaluating harnesses; and mature parts of the corpus should eventually support a course for technically capable newcomers. Research quality comes first. Teaching material is a derived view, not the canonical home of a finding.
+The prior program is preserved in Git history but is not active knowledge.
+Existing research questions, R1–R11 taxonomy, case order, findings, syntheses,
+curriculum, and learning artifacts do not constrain V2.
+
+## Current state
+
+The V2 authority reset was accepted on 2026-07-20. Current work is limited to
+the outline-development brief on `codex/harness-engineering-v2`, which began at
+commit `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
+
+The complete pre-pivot history remains recoverable from
+`codex/archive-pre-pivot-2026-07-20` at
+`071fd2d833c809723c881921956a50e46fa748f1`.
+
+No V2 subject outline, taxonomy, case set, synthesis, or reviewed finding
+currently exists. The named seed sources remain unopened pending approval of
+the outline-development brief.
 
 ## Where to begin
 
-- [`AGENTS.md`](AGENTS.md) is the operating contract for agents working in this repository.
-- [`docs/research-charter.md`](docs/research-charter.md) explains the mission, boundaries, and standards of evidence.
-- [`docs/methodology.md`](docs/methodology.md) defines the iterative `recon -> analyze -> consolidate -> refine` method.
-- [`docs/source-provenance.md`](docs/source-provenance.md) defines the required search, reading, and claim-evidence audit trail.
-- [`docs/research-plan.md`](docs/research-plan.md) describes the initial program and its early human checkpoints.
-- [`research/STATUS.md`](research/STATUS.md) is the current human-readable control panel.
-- [`research/TAXONOMY-FRICTION.md`](research/TAXONOMY-FRICTION.md) accumulates case evidence about where the provisional responsibility lens works or breaks down.
-- [`outline.md`](outline.md) is a useful seed, not an approved or fixed taxonomy.
+- [`AGENTS.md`](AGENTS.md) is the operating contract.
+- [`research/STATUS.md`](research/STATUS.md) states the active stage and gate.
+- [`research/DECISIONS.md`](research/DECISIONS.md) contains V2 decisions only.
+- [`research/LEGACY.md`](research/LEGACY.md) defines the archive and selective
+  readmission boundary.
+- [`docs/source-provenance.md`](docs/source-provenance.md) defines evidence
+  capture and audit rules.
+- [`docs/provenance-architecture.md`](docs/provenance-architecture.md) documents
+  the retained technical capture baseline.
 
 ## Repository shape
 
-The structure remains intentionally small. The maintainer has reviewed the Pi, OpenHands SDK, OpenClaw, and Hermes Agent cases and approved Checkpoint 3's bounded taxonomy and method refinements. The first cross-harness synthesis, human-oriented learning Markdown, and generated static learning site are complete and awaiting maintainer reading. Browser Use remains a deferred perception-grounded contrast for after that learning review. Source-native topics may later add navigation without forcing the responsibility lens into an exclusive directory tree.
-
 ```text
 docs/
-  research-charter.md       mission, scope, and evidence principles
-  methodology.md            research and maturity workflow
-  source-provenance.md      approved capture and audit contract
-  provenance-architecture.md approved and frozen minimum implementation architecture
-  research-plan.md          staged program and checkpoints
+  research-charter.md       interim V2 charter; final objectives remain pending
+  methodology.md            outline-first interim method
+  research-plan.md          current gated V2 plan
+  source-provenance.md      source, claim, and completeness rules
+  provenance-architecture.md retained technical capture architecture
 research/
-  provenance/               bootstrap log and generated validation evidence
-  sources/                  legacy/full narrative records
-  case-studies/             deep dives into implementations or techniques
-  syntheses/                cross-source and cross-harness findings
-  cycles/                   plans, recon maps, and cycle reviews
-  templates/                minimum schemas for research artifacts
-  TAXONOMY-FRICTION.md      cumulative cross-case responsibility-lens evidence
-  COVERAGE.md               evolving landscape and gaps
-  DECISIONS.md              consequential methodology decisions
-  STATUS.md                 concise progress and review view
-learning/                   canonical human-oriented learning Markdown and feedback loop
-site/                       generated static learning experience; never hand-maintained
-outline.md                  initial curriculum hypothesis
-tools/provenance/            capture, transcript-ingest, validation, and audit CLI
-tools/learning-site/         deterministic Codex Markdown-to-site writer and validator
-tools/html-writer/           separate isolated Fable-high authoring implementation
+  STATUS.md                 current stage and next gate
+  COVERAGE.md               admitted V2 subject coverage only
+  DECISIONS.md              V2 decisions only
+  LEGACY.md                 archive and selective-readmission contract
+  provenance/validation/    retained infrastructure validation evidence
+  sources/README.md         rules for future V2 source records
+  templates/                taxonomy-neutral evidence templates only
+tools/provenance/            capture, reconciliation, validation, and audit CLI
 ```
 
-Large third-party repositories belong in `/Users/jernotte/dev/reference-materials/research`, not in this repository. Findings derived from them belong here and should identify the inspected commit or release.
-
-The repository now contains the approved and frozen D-004 provenance implementation based on runtime adapters, native Codex transcript reconciliation, append-only exception resolution, durable transcript-prefix retention, and batched semantic judgments. Its fixtures, archive-enforced real acceptance, and claim-ledger dogfood pass. The realistic 38-observation preflight still validates exception-scaled overhead, while a preserved truncated search is reported as incomplete rather than as a false zero. Checkpoint 1 is provisionally promoted under a reconstructed-provenance waiver. Checkpoint 2 and D-007 through D-013 are approved. Pi, OpenHands SDK, OpenClaw, and Hermes are reviewed. The first synthesis, learning chapter, and generated site now form the evidence-to-learning chain awaiting maintainer review. The current site was generated by Codex; a separate write-bounded Fable-high writer is retained, while `.codex/claude-review.md` governs the distinct read-only Fable reviewer. Browser Use is deferred, LangGraph belongs to a later framework/substrate study, and the provenance infrastructure is frozen again after D-008's narrow compatibility correction.
+The repository deliberately has no active case-study, synthesis, curriculum,
+or site structure. Those shapes may be introduced only when the approved
+outline and a later research plan require them.

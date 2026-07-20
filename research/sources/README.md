@@ -1,21 +1,20 @@
-# Source Records
+# V2 Source Records
 
-Every opened source will receive a lightweight identity and source event through the approved provenance system. Create a full narrative record here only when a source materially supports, opposes, or contextualizes analysis. Use `../templates/source.md` as the starting point. A returned but unopened result remains a lead; a read-only source remains in the catalog/audit without requiring a narrative record.
+There are currently no admitted V2 subject sources.
 
-Name full records with a stable, readable combination of author or organization, year, and short title. Keep third-party content at its original location and record stable source IDs, provenance events, links, versions, exact supporting passages or code locations, reading depth, primary verification, and our assessment here. A direct external link in a synthesis does not replace this record.
+After the outline-development brief authorizes bounded seed inspection, every
+opened source receives a lightweight identity, inspection event, and final
+disposition. Create a full narrative record here only when the source supports,
+opposes, or materially contextualizes a material claim. Use
+`../templates/source.md` as a starting point.
 
-The sixteen Cycle 1 records created before D-003 now have stable source IDs, canonical claim mappings, provenance events, and primary verification under the reconstructed Cycle 1 log. They satisfy the record and mapping portions of the promotion gate. The package still requires a maintainer decision because reconstructed provenance cannot establish complete breadth, balance, absence of evidence, marginal information, or saturation.
+Name records with stable source IDs and readable filenames. Preserve exact
+URLs or local identities, versions, locations, inspection depth, lineage,
+limits, and provenance links. Search results that were not opened remain leads;
+read-only sources remain visible in the audit but do not require narrative
+records.
 
-Checkpoint 2 selection added eight screening-only repository records: five selected open cases and three alternates. They establish identity, exact Git pins, and top-level selection suitability only. They do not establish implementation mechanisms and must be deepened during an approved case before supporting architectural findings.
-
-The Pi pilot deepened `CP2-S001` to full substantive implementation evidence at its approved commit. It also added two targeted compaction-preprint records, reused the admitted SWE-agent and Kamoi records under their existing limits, and referenced no unopened search result. All five referenced sources appear in the complete Pi source and claim-evidence audit.
-
-The OpenHands case deepened `CP2-S002` to full substantive implementation evidence at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f` and added `OH-S001`, the separately dated SDK technical report. It reused the reviewed Pi record and five admitted research/guidance records under their existing limits. All eight referenced records appear in the complete combined OpenHands source and claim-evidence audit; the other eight mechanically captured web results remain unopened leads.
-
-The reviewed OpenClaw case deepens `CP2-S005` at annotated tag `v2026.6.6` / dereferenced commit `8c802aa683510c7f7503597b54c3021733245e59`. It traces one Telegram polling/direct-message path, reuses six admitted research records under their existing limits, and uses the reviewed Pi/OpenHands plus selection-depth Browser Use records only for taxonomy and sampling judgments. No live web source or other harness was inspected. All ten referenced records appear in the complete combined audit with 20 declared claims, 31 mappings, 31 primary verifications, and no blocking error. Maintainer review required C003 to reconcile the apparent `after_agent_dispatch` safeguard; the clarified mapping preserves the claim as an inference rather than treating static control flow as a reproduced crash.
-
-The D-011 amendment adds `CP2-S009`, a selection-depth record for Hermes Agent `v2026.7.7.2` / `9de9c25f620ff7f1ce0fd5457d596052d5159596`, and `HS-S001`, a dated GitHub metadata snapshot. Together with the retained OpenClaw and Browser Use records, they support ten bounded claims about identity, pinning, concrete-harness suitability, the qualified OpenClaw relationship, repository attention/activity limits, and the sampling decision. They do not establish Hermes mechanisms, adoption, effectiveness, or independent convergence. All four referenced records appear in the complete Hermes selection audit with 18 mappings and 18 primary verifications.
-
-The reviewed Hermes implementation case deepens `CP2-S009` at the same immutable tag and commit. It traces the classic CLI path, targeted alternate ingress and policy surfaces, persistence and compression, verification, goals, delegation, plugins, memory and skill adaptation, observability, and the mechanism-level OpenClaw relationship. It reuses nine previously admitted records only to qualify compaction, memory, delegation, self-correction, evaluation, lineage, and cross-case taxonomy-friction claims. Its complete audit references ten records and verifies all 34 mappings for 24 declared claims. The maintainer accepted the case under D-012; implementation presence is not used as effectiveness evidence.
-
-The first-batch synthesis reuses the four reviewed implementation records plus already admitted research records for targeted qualification only. It does not add a new external source or inherit unadmitted Cycle 1 leads. Its canonical claim ledger contains 17 claims, and the source records used by those claims now carry synthesis back-references. Its complete promotion-profile audit and bounded independent content review are complete; maintainer learning review remains.
+Pre-pivot source records are not active. Consult them only through the process
+in `../LEGACY.md`. Readmission creates a new V2 record after the underlying
+source and exact evidence location are reopened and reassessed. Do not copy an
+old record or inherit its maturity.

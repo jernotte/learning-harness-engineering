@@ -1,169 +1,114 @@
-# Claude adversarial review
+# Harness Engineering V2 — Independent Read-Only Review
 
 ## Project goal
 
-Maintain a living, evidence-backed research and learning program about AI-agent
-harness engineering. Its primary purpose is to gather trustworthy data, turn
-that data into durable understanding, and help its maintainers become experts
-who can teach the field. The repository must produce rigorous, current,
-reusable knowledge about orchestration-layer mechanisms, tradeoffs, failure
-modes, and design choices; it is not an effort to build one universal harness.
+Harness Engineering V2 is rebuilding its research program from a clean
+conceptual slate. The current implementation goal is a repository authority
+reset: preserve only content-independent research infrastructure, remove the
+retired conceptual and presentation corpus from the active branch, retain an
+exact archive/readmission boundary, and stop before seed inspection or outline
+development.
 
-Case studies are important industry data points, not isolated end products.
-They document how harnesses are designed and used in the present environment so
-the project can compare implementations, identify transferable mechanisms and
-frictions, and derive a broader model of the field.
+The final goal continues through a maintainer-approved outline, but the current
+review scope is only the completed reset unless the review request says
+otherwise.
 
-Preserve two connected knowledge layers when they materially help different
-consumers:
+## Governing authority
 
-1. An agent-oriented layer with structured, precise, provenance-rich material
-   that an AI agent can retrieve, compare, audit, and develop further.
-2. A human-oriented layer that explains the same knowledge clearly enough for
-   people to learn, retain, teach, and apply it.
+Judge the change against the explicit review request and the current:
 
-These layers may use different organization and presentation, but they must not
-silently disagree. Developing learning materials from the accumulated evidence
-is a core project deliverable, not an incidental byproduct.
+- `AGENTS.md`
+- `research/STATUS.md`
+- `research/DECISIONS.md`
+- `research/LEGACY.md`
+- `docs/source-provenance.md`
+- `docs/provenance-architecture.md`
 
-Judge each change against the task and authorization boundary stated in the
-review request plus the repository's current `AGENTS.md`, `research/STATUS.md`,
-and `research/DECISIONS.md`. Those governing artifacts, not this review
-contract, are authoritative for the active implementation and checkpoint. If
-they conflict, report the conflict rather than selecting whichever instruction
-appears most convenient.
+Historical Git content and pre-pivot decisions are inspectable only when the
+review request declares them as comparison evidence. They are never active
+authority.
+
+## Reset acceptance criteria
+
+- The active worktree is attached to `codex/harness-engineering-v2` and its
+  history descends from
+  `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
+- `codex/archive-pre-pivot-2026-07-20` still resolves to
+  `071fd2d833c809723c881921956a50e46fa748f1`.
+- No active governing file instructs agents to use the inherited R1–R11
+  taxonomy, old cases, case order, syntheses, curriculum, learning artifacts,
+  or checkpoint decisions.
+- Retired conceptual, legacy evidence, learning, site, and hard-coded writer
+  paths named by the approved reset manifest are absent from the active tree.
+- The archive/readmission contract prevents automatic transfer of old sources,
+  claims, IDs, maturity, approval, or review status.
+- The retained provenance code and taxonomy-neutral templates remain present.
+- Historical validation is labeled as infrastructure evidence rather than V2
+  subject evidence or proof of current runtime compatibility.
+- Deterministic provenance and local-link checks pass.
+- The reset does not inspect seed sources, admit subject evidence, define a
+  substantive taxonomy, or begin downstream research.
 
 ## Quality bar
 
-- Every material factual claim is traceable to durable, inspectable evidence at
-  the exact scope asserted; implementation claims are pinned to a version or
-  commit.
-- Facts, source reports, inferences, hypotheses, recommendations, and open
-  questions are distinguished. Vendor statements are not treated as proof of
-  behavior, and implementation presence is not treated as outcome evidence.
-- Claim declarations, source records, exact claim/source/location mappings,
-  primary verification events, artifact registrations, review scope, and prose
-  attestations agree with the human-readable artifacts and generated audits.
-- Negative findings, contradictions, missing evidence, provenance limitations,
-  and alternative explanations remain visible. Maturity language never exceeds
-  the applicable gate or review decision.
-- Synthesis is technically precise, readable by a capable newcomer, and useful
-  for later cross-case comparison without flattening meaningful differences.
-- Structured agent-facing knowledge and human-facing explanations preserve the
-  same evidentiary boundaries and meaning. Each layer is useful to its intended
-  consumer rather than being a cosmetic copy of the other.
-- Case studies contribute reusable observations, comparisons, concepts, and
-  teaching value. They do not stop at cataloging one implementation in
-  isolation.
-- Learning materials distinguish settled knowledge from provisional findings,
-  open questions, and accepted limitations, and support progressive mastery
-  without sacrificing traceability.
-- A change passes the repository's deterministic validation and does not create
-  stale links, inconsistent status/decision records, or misleading completeness
-  claims.
+- Authority is unambiguous across README, agent instructions, status, coverage,
+  decisions, legacy policy, and this review contract.
+- The reset is internally coherent: removed source records do not leave active
+  subject event packages or stale backlinks.
+- Retained provenance rules continue to require exact evidence, honest
+  completeness, append-only correction, source disposition, claim mapping,
+  primary verification, and fail-closed unknown interactions.
+- Historical infrastructure claims remain accurately scoped by runtime and
+  date.
+- No prose implies that the future outline's audience, objectives, technical
+  scope, organization, or sequence is already settled.
+- User changes outside the approved reset remain intact.
 
 ## Non-negotiable invariants
 
-- Stay inside the authorization and checkpoint boundaries recorded in
-  `AGENTS.md`, `research/STATUS.md`, and `research/DECISIONS.md`. Do not silently
-  expand the active case set, revise the taxonomy, promote maturity, or change
-  evidence policy.
-- Preserve the research loop and formal human checkpoints. Claude's report is
-  advisory evidence only; it cannot approve maturity, expand authorization, or
-  substitute for a maintainer decision. Codex and Claude may nevertheless
-  resolve and implement routine in-scope review feedback through the bounded
-  agreement workflow without asking the maintainer to disposition every item.
-- Preserve the audit funnel `returned -> opened -> read_only or referenced`,
-  with `excluded` only after inspection. Search-result snippets are leads, not
+- Review is advisory and read-only. It cannot edit files, approve the reset,
+  approve the outline, admit evidence, change scope, or promote maturity.
+- Do not recommend restoring pre-pivot concepts merely because they were
+  previously reviewed or well evidenced.
+- Do not browse or inspect the three seed resources during reset review.
+- Do not propose speculative provenance infrastructure. Report an actual defect
+  in the retained implementation only when it affects the reset or deterministic
   evidence.
-- Canonical claim IDs remain globally unique. Ledger mappings, source records,
-  verification events, review scope, archive boundaries, and generated audit
-  claims must remain mutually consistent and tamper-evident.
-- Do not conceal reconstructed provenance, incomplete capture, concentration,
-  independence, lineage, or applicability limits. Do not strengthen historical
-  evidence through an unverified metadata update.
-- Provenance infrastructure is frozen unless a consequential failure observed
-  during authorized real research justifies a separately approved exception.
-- Preserve unrelated user changes. Do not recommend broad cleanup, reformatting,
-  or architectural work outside the stated requirement.
-- Do not collapse the agent-oriented and human-oriented layers if doing so
-  harms either machine usability or human learning. Do not let presentation
-  differences create unsupported claims or inconsistent conclusions.
-- Treat the repository and explicitly declared evidence directories as directly
-  inspectable but read-only. Do not request or imply file edits, and do not
-  treat access to a source as admission of that source into the research corpus.
+- Preserve the audit funnel and the distinction between source reports,
+  implementation facts, inferences, hypotheses, recommendations, and open
+  questions.
+- A passing test establishes only what that test covers.
 
 ## Validation commands
 
-- `node tools/provenance/test.mjs`
-- `node tools/provenance/check-local-links.mjs`
-- For a changed case or promotion package, regenerate its documented audit with
-  `node tools/provenance/cli.mjs audit ...` using the exact event file, cycle,
-  completeness, profile, archive, and review-scope options recorded for that
-  package; compare both the exit status and generated content.
+```sh
+node tools/provenance/test.mjs
+node tools/provenance/check-local-links.mjs
+```
+
+The reviewer should inspect the actual diff and current tree in addition to the
+reported command output.
 
 ## Review emphasis
 
-- Unsupported, overstated, circular, version-drifting, or wrongly scoped factual
-  claims, especially claims inferred from names, comments, vendor prose, or mere
-  implementation presence.
-- Missing or inconsistent claim/source/location mappings, source records,
-  primary verification, ledger digests, prose attestations, review scope,
-  retained-archive binding, and generated-audit status.
-- Contradictions among `research/STATUS.md`, `research/COVERAGE.md`,
-  `research/DECISIONS.md`, case studies, claim ledgers, source records, taxonomy
-  friction notes, and provenance outputs.
-- Scope drift beyond the explicitly authorized implementation or checkpoint;
-  premature maturity promotion; silent taxonomy or methodology changes; and
-  provenance work not justified by an observed blocking failure.
-- Lost counterexamples, disagreement between practice and research, negative
-  findings, uncertainty, independence/lineage caveats, or outcome limitations.
-- Case studies that remain disconnected observations instead of feeding the
-  cross-case knowledge model, or that generalize beyond what the observed case
-  can support.
-- Drift between agent-facing structured knowledge and human-facing learning
-  materials, including missing concepts, changed certainty, lost provenance,
-  or pedagogical simplifications that change the technical meaning.
-- Material that is traceable but fails to help an agent reason further or a
-  human build durable understanding when the current task is intended to serve
-  one of those purposes.
-- For research prose, prioritize defects that change meaning, auditability,
-  authorization, or decision quality. Do not report taste-only wording edits.
+- Ghost authority or stale links to retired concepts.
+- Legacy records, generated artifacts, or hard-coded presentation inputs left
+  active accidentally.
+- A clean-slate statement contradicted by status, decisions, templates, or
+  review instructions.
+- Weak archive identity or a readmission rule that permits maturity transfer.
+- Missing validation fixtures required by the retained test suite.
+- Claims that historical adapter validation proves current or universal
+  runtime coverage.
+- Scope drift into seed analysis, outline content, or substantive research.
 
-## Accepted tradeoffs and non-goals
+Do not report taste-only wording changes. Prioritize defects that change
+authority, recoverability, evidence integrity, validation, or the maintainer's
+control of later gates.
 
-- This repository optimizes for learning, synthesis, traceability, and design
-  judgment, not application runtime performance or production product features.
-- It does not aim to build a universal harness, generic provenance platform, or
-  speculative automation layer. A static human learning layer may be separately
-  authorized because it serves the mission, but review opt-in does not authorize
-  its implementation.
-- Human learning materials are a core deliverable. However, an individual case
-  or research change does not by itself authorize building a full course,
-  curriculum platform, or unrelated educational infrastructure; that work must
-  follow an explicit project plan and checkpoint.
-- Bounded sampling and explicit open questions are acceptable when their limits
-  remain visible. Absence of exhaustive ecosystem coverage is not a defect by
-  itself.
-- Project-specific responsibility vocabulary may differ from a source's native
-  vocabulary; the mapping must remain explicit rather than forcing terms to
-  match.
-- A passing audit establishes the declared mechanical gates, not that every
-  prose claim is true or that the evidence is sufficient for every conclusion.
-- Do not report already documented and deliberately accepted historical or
-  reconstructed limitations unless the current change conceals, worsens, or
-  contradicts them.
+## Reviewer access
 
-## Reviewer access and authoring boundary
-
-The independent reviewer may use read-only file/search tools across this
-repository and the evidence directories explicitly declared in the review request.
-It may use the web to verify a cited external fact, but new material does not
-become project evidence until the normal admission rules are satisfied.
-
-Review, reconciliation, and verification must remain read-only. Two separate
-HTML-authoring implementations now exist: a deterministic Codex writer for the
-current site and an isolated, write-bounded Fable-high writer retained for
-independent authoring iterations. Neither receives authority from this review
-contract, and neither may modify canonical research or learning Markdown.
-Never combine authoring and review authority in one tool or process.
+The reviewer may inspect the current repository and the Git refs explicitly
+declared in the review request. External transcript archives and seed resources
+are outside the reset review unless specifically authorized as evidence paths.
+Review, reconciliation, and verification remain read-only.

@@ -1,189 +1,166 @@
-# Agent Instructions
+# Agent Instructions — Harness Engineering V2
 
-## Mission
+## Mission and current phase
 
-Build a living, evidence-backed body of knowledge about harness engineering: the orchestration code and instructions between an unmodified language model and the environment in which it works. Optimize first for learning and dependable synthesis, then for practical design judgment, and only afterward for teaching material.
+This repository is rebuilding its harness-engineering research program from a
+clean conceptual slate. The immediate objective is to establish an approved
+outline before deeper subject research begins. Existing research machinery may
+be reused when it is independent of the rejected program; inherited questions,
+taxonomies, cases, findings, syntheses, curriculum, and learning artifacts have
+no V2 authority.
 
-This is a research repository, not a project to build a single harness. Study many domains and implementations so that conclusions transfer beyond one product.
+The maintainer is the decision authority at every gate. Do not infer approval
+from earlier repository history or from the existence of an artifact.
 
 ## Read before working
 
 Read these files in order:
 
 1. `README.md`
-2. `docs/research-charter.md`
-3. `docs/methodology.md`
-4. `docs/source-provenance.md`
-5. `docs/research-plan.md`
-6. `research/STATUS.md`, `research/COVERAGE.md`, and `research/DECISIONS.md`
-7. The active cycle file named by `research/STATUS.md`, when one exists
+2. `research/STATUS.md`
+3. `research/DECISIONS.md`
+4. `research/LEGACY.md`
+5. `docs/source-provenance.md`
+6. `docs/provenance-architecture.md`
+7. Any active brief named by `research/STATUS.md`
 
-Treat `outline.md` as an informed starting hypothesis. Do not silently adopt its modules as the final taxonomy.
-
-## Independent review and agreement
-
-This repository opts into the independent Claude reviewer through
-`.codex/claude-review.md`. After meaningful implementation, use the globally
-configured review workflow with the original requirement, explicit acceptance
-criteria, material review-scope paths, approved evidence directories, and
-deterministic checks. The reviewer must have direct read-only access to the
-actual artifacts; a packet summary is not a substitute for inspecting them.
-
-Codex independently evaluates every finding, concern, and recommendation.
-Accepted routine items are agreed and may be fixed without a maintainer
-disposition. For a consequential disagreement, perform a targeted check when
-useful and use exactly one bounded Claude reconciliation. Escalate only an
-unresolved consequential disagreement or an action requiring new authority.
-After agreed fixes, rerun validation and use at most one focused Claude
-verification pass. This quality loop must support learning delivery rather than
-become an open-ended reviewer project or a recurring delivery gate.
-
-Claude review, reconciliation, and verification are read-only. They do not
-authorize maturity promotion, scope expansion, taxonomy or methodology change,
-or content generation. The future human-facing HTML writer is a separate tool
-and must receive explicit write scope and validation in a separately approved
-task.
+`docs/research-charter.md`, `docs/methodology.md`, and
+`docs/research-plan.md` are interim V2 control documents until the maintainer
+approves the detailed outline. They do not pre-approve a subject taxonomy or a
+post-outline research sequence.
 
 ## Current authorization
 
-Checkpoint 1 is provisionally promoted under an explicit reconstructed-provenance waiver. Checkpoint 2 and D-007 through D-013 are approved. Pi at `v0.80.6` / `2b3fda9921b5590f285165287bd442a25817f17b`, OpenHands Software Agent SDK at `v1.35.0` / `9028562e2d5eda76de662ec9b7584125760eb83f`, OpenClaw at `v2026.6.6` / `8c802aa683510c7f7503597b54c3021733245e59`, and Hermes Agent at `v2026.7.7.2` / `9de9c25f620ff7f1ce0fd5457d596052d5159596` are maintainer-reviewed cases. Gate B is approved. The first canonical four-case synthesis, human-oriented learning Markdown, and Codex-generated static site are complete and awaiting the final maintainer learning review. The deterministic Codex writer and the separate isolated Fable-high writer are both retained as distinct authoring implementations; the Fable review workflow remains a third, read-only role. Neither writer may modify canonical research or learning Markdown. Do not add another implementation before the final learning checkpoint. LangGraph remains deferred to a future framework/substrate comparison; Browser Use is deferred until after the first learning experience rather than discarded; Claude Code, every cohort member, every alternate, and every replacement for the LangGraph slot remain blocked.
+The maintainer accepted the completed V2 repository reset on 2026-07-20. The
+current authorized work is the outline-development brief. Do not inspect the
+three seed resources, follow
+their references, perform implementation deep dives, select cases, synthesize
+findings, produce curriculum, build a site, promote evidence maturity, or
+re-admit legacy evidence until the applicable maintainer gate recorded in
+`research/STATUS.md` has been satisfied.
 
-D-010's rolling criteria remain controlling: marginal information gain on uncovered or high-friction responsibilities, falsification and anchoring protection, evidence readiness, evidence-mode and domain diversity, analysis and governance cost, lineage and independence risk, and only then operationalized adoption evidence. D-011 consciously amended only the immediate order and trigger: Hermes was the final pre-Checkpoint-3 case because its migration-compatible, selectively influenced relationship with OpenClaw offered high comparative-teaching value before the maintainer's requested learning phase. Do not call recurrence between the two independent corroboration. D-013 retains stable R1–R11 identifiers, enacts the approved R9 and R11 labels and bounded cross-cutting annotations, and adopts the static-first, question-triggered target-test policy. It authorizes the first synthesis direction but does not establish field saturation or taxonomy finality.
+## Clean-slate boundary
 
-D-004 remains approved. Its overhead preflight result stands, while one historical truncated search remains honestly marked incomplete. The fixed promotion profile and monotonic `search_update` safeguard are enforced. D-008 invoked one narrow D-005 freeze exception after real OpenHands work exposed a post-restart unified-`exec` compatibility failure; the focused fix passed, the retained case window re-ingested completely, and provenance infrastructure is frozen again. Change it only when real research exposes another consequential failure, not to address speculative or immaterial imperfections. Until manual `result_returned` events are mechanically bound to native output, any checkpoint relying on them must verify their canonical URLs against the retained native archive and record the check. Bootstrap activity remains segregated and `partial`; do not mix it into the subject corpus.
+- `codex/harness-engineering-v2` is the active branch.
+- `codex/archive-pre-pivot-2026-07-20` at commit
+  `071fd2d833c809723c881921956a50e46fa748f1` is historical, not active
+  authority.
+- The V2 branch began at
+  `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
+- Never merge the archive branch into V2 merely to recover content.
+- Consult archived material only under the readmission process in
+  `research/LEGACY.md`.
+- Old claim IDs, maturity labels, approvals, and review outcomes never transfer
+  into V2 automatically.
 
-## Scope
+## Maintainer gates
 
-Focus on mechanisms a harness developer can control while treating model weights and tokenization as fixed. In scope are agent loops, prompts and policies, tools, context construction and compaction, persistent state and memory, planning, delegation and multi-agent orchestration, workflows, model routing, verification, evaluation, observability that supports harness improvement, permissions where they shape the loop, and self-improving harness mechanisms.
+The current program has these blocking gates:
 
-Model training, fine-tuning, tokenizer design, general HCI, and security as an independent discipline are out of scope. Include adjacent material only when it explains or evaluates a harness design decision. Do not let an adjacent field take over a research cycle.
+1. Approve the repository triage before reset changes.
+2. Review the completed V2 authority reset and its validation/review evidence.
+3. Approve the outline-development brief before seed investigation.
+4. Select, combine, or reject competing outline skeletons before detailed
+   outline finalization.
+5. Explicitly approve the final outline's objectives, scope, organization, and
+   sequence before substantive research planning or execution.
 
-## Non-negotiable epistemic rules
+At a gate, pause. Record the decision in `research/DECISIONS.md` and update
+`research/STATUS.md` only after the maintainer responds.
 
-- Trace every material factual claim to evidence. Prefer links to the exact paper section, documentation page, source file, commit, experiment, or firsthand account.
-- Identify source-code observations by commit, tag, or release whenever possible. Do not describe a moving default branch as timeless architecture.
-- Distinguish `verified implementation fact`, `source-reported claim`, `inference`, `hypothesis`, `engineering recommendation`, and `open question`. Never blur these categories for smoother prose.
-- A vendor statement establishes what the vendor says, not that the mechanism works. A paper establishes what its experiment found under stated conditions, not a universal rule.
-- Repetition is not necessarily independent corroboration. Check whether apparently separate articles derive from the same announcement, paper, benchmark, or author.
-- Evaluate evidence along several axes: directness, rigor, recency, independence, applicability, and confidence. Do not reduce quality to a source-type hierarchy.
-- Prefer current findings when evidence is otherwise comparable, but allow unusually rigorous older work to outweigh weak recent claims. Mark conclusions whose validity is especially sensitive to model or harness version.
-- Preserve credible contradictions, negative results, failed approaches, and uncertainty. Do not force consensus or discard failures merely to make the synthesis cleaner.
-- Seek evidence that could falsify the maintainer's beliefs and the agent's emerging thesis. Prior experience is a useful hypothesis, never assumed truth.
-- Never equate popularity, polish, citation count, or confident language with evidence.
-- Do not call a recurring technique a best practice without outcome evidence. Use the pattern vocabulary in `docs/methodology.md`.
-- A direct external link in analysis does not replace a durable source record. Referenced evidence must be represented in the source catalog and a full source record before it supports a material claim.
-- Count claim coverage, not source files. Every material claim must have a globally unique claim ID derived from `<cycle-id>-<artifact-type>-<artifact-slug>-C###` in one canonical artifact claim ledger and map to supporting and, when applicable, opposing source records. Source records reference claim IDs rather than owning duplicate claim text.
+## Evidence discipline
 
-## Taxonomy and navigation
+Retain these process invariants independent of any future taxonomy:
 
-Use three complementary layers instead of forcing one hierarchy to do every job:
+- Trace every material factual claim to exact, inspectable evidence.
+- Pin implementation observations to a commit, tag, release, or explicit live
+  date.
+- Distinguish verified implementation fact, source-reported claim, inference,
+  hypothesis, engineering recommendation, and open question.
+- A vendor statement establishes what the vendor says, not that a mechanism
+  works.
+- A paper establishes what its stated method found under stated conditions,
+  not a universal rule.
+- Repetition is not independent corroboration. Track source and mechanism
+  lineage.
+- Evaluate directness, rigor, recency, independence, applicability, and
+  confidence without reducing quality to a source-type hierarchy.
+- Preserve credible contradictions, negative results, failed approaches, and
+  uncertainty.
+- Do not equate popularity, implementation presence, polish, or confident
+  language with effectiveness.
+- Search snippets and agent summaries are leads, not evidence.
+- A direct link does not replace a durable source record and exact claim/source
+  mapping when a source supports a material claim.
 
-1. **Source-native vocabulary** drives recon and human navigation. Preserve common terms such as tools, context, memory, planning, skills, workflows, subagents, evaluation, runtime, routing, and self-improvement, plus the aliases used by sources.
-2. **Architectural responsibilities** provide a multi-label analytical lens for comparing control, state, capability, and evidence. They are questions to apply, not exclusive folders into which a source must fit.
-3. **Narrative and curriculum structure** is a later human-centered view derived from reviewed research. It may recombine responsibilities into fewer approachable modules.
+## Provenance
 
-Search using source-native terms, aliases, product terminology, mechanism terms, and failure terms. Never restrict discovery to the names in the analytical lens. Record taxonomy friction rather than forcing a mechanism into a category.
+Use `tools/provenance/` and the rules in `docs/source-provenance.md` for every
+authorized external search, source open, external repository inspection, or
+maintainer-provided research file. Local reads of governing repository files do
+not need subject-source events.
 
-## Research loop
+The retained adapter is a tested baseline, not assumed proof of every future
+runtime shape. Unknown interactions fail closed. If authorized work exposes a
+consequential capture failure, stop and present the observed failure and a
+bounded correction proposal; do not silently weaken completeness.
 
-Every substantial topic follows an iterative `recon -> analyze -> consolidate -> refine` loop. The phases may send work backward when a gap or contradiction appears.
+Raw transcript-prefix archiving is privacy-sensitive and requires explicit
+authorization before writing outside this repository.
 
-### Recon
+## Independent review and agreement
 
-Search broadly before settling on an explanation. Map vocabulary, architectural questions, influential and recent sources, open and closed implementations, competing approaches, benchmarks, negative reports, and unresolved questions. Run multiple breadth passes; later deep dives should be allowed to reopen recon.
+This repository opts into independent review through
+`.codex/claude-review.md`. After meaningful implementation:
 
-Produce a source inventory and coverage map before choosing all deep-dive targets. Search beyond familiar products and beyond the seed outline. Record why a source is promising, but do not promote an unread search result into evidence.
+1. Run deterministic validation.
+2. Invoke the configured read-only reviewer with the original requirement,
+   acceptance criteria, repository path, material review paths, approved
+   evidence paths, and validation evidence.
+3. Independently classify every finding, concern, and recommendation as
+   `accept`, `reject`, `partially_accept`, or
+   `needs_targeted_verification`.
+4. For a consequential disagreement, perform a targeted check when useful and
+   use exactly one bounded reconciliation.
+5. Implement agreed, in-scope fixes. Escalate only unresolved consequential
+   disagreement or work requiring new authority.
+6. Rerun deterministic validation and use at most one focused verification
+   pass for agreed items.
+7. Report dispositions, evidence, changes, and remaining limits.
 
-Use the approved provenance capture path for every query and source interaction. The audit funnel is `returned -> opened -> read_only or referenced`, with `excluded` available after inspection. Search results may be leads, but an agent may not rely on a result snippet as evidence. If a snippet matters, open and log the source.
-
-### Analyze
-
-Read primary material and inspect code deeply. For an implementation, trace actual control flow, prompts, tool schemas, state transitions, persistence, error handling, and verification rather than relying on the README. Use history and tests when they clarify design intent or real behavior.
-
-Use `research/templates/case-study.md` as a starting schema, adapting it when the subject requires different treatment. Separate observed mechanism from explanation of why it may work. State assumptions, tradeoffs, failure modes, evaluation support, transfer limits, and open questions.
-
-Treat implementation prevalence as evidence of use, not effectiveness. For consequential mechanisms, compare the code and stated rationale with relevant academic research, controlled evaluations, benchmarks, negative results, and credible operational evidence. Record whether those sources support, qualify, contradict, or have not tested the practice. Preserve industry–research disagreement and investigate differing models, tasks, versions, metrics, budgets, and production constraints rather than automatically privileging either side.
-
-At Checkpoint 3, each case must report where the responsibility lens was difficult to apply, which mechanisms spanned boundaries, what did not fit, and what taxonomy change—if any—the evidence suggests. Record each case's observations and counterexamples in `research/TAXONOMY-FRICTION.md` so Checkpoint 3 can compare them across implementations. Do not silently repair the taxonomy during a case study.
-
-Closed-source systems may be studied through official material and credible firsthand or third-party reports. Describe only externally supported behavior; do not invent internal architecture. Multiple reports increase confidence only to the extent that they are independent.
-
-### Consolidate
-
-Compare evidence across implementations and source types. Organize primarily around architectural problems and decisions, while tailoring substructure to the topic. Individual products are evidence and case studies, not necessarily the top-level taxonomy.
-
-Deduplicate claims, expose disagreements, identify the conditions behind apparently conflicting results, and turn isolated observations into provisional findings. Keep each finding linked to its supporting and opposing evidence.
-
-### Refine
-
-Reduce accumulated material into useful, defensible knowledge. Check claims against sources, look for counterexamples, resolve or bound contradictions, remove low-value duplication, improve the taxonomy, and make conclusions actionable without overstating them.
-
-Classify recurring techniques as `observed`, `supported`, `contextual`, `emerging`, `contested`, or `anti-pattern`. Record confidence and transfer limits. Refine both what was learned and how the research process should improve.
-
-Stop a cycle when credible new searches mostly repeat known mechanisms and conclusions, material claims are traceable, important contradictions have been investigated, gaps are explicit, and the synthesis can inform an engineering decision. This is saturation for now, not permanent completion. Reopen work when new evidence adds meaningful information.
-
-## Artifacts and maturity
-
-Use the templates under `research/templates/` as minimum prompts, not forms that must be filled mechanically. Prefer readable analytical prose supported by tables or lists where those make comparison easier.
-
-Keep evidence at an honest maturity level:
-
-`lead -> captured source -> analyzed evidence -> provisional finding -> reviewed finding -> consolidated pattern`
-
-Do not place a lead or an agent summary directly into reviewed synthesis. The canonical research artifacts live in this repository. A dashboard or other human view, if added, must be derived from them.
-
-Every opened source receives a lightweight catalog/event entry. A source used to support, oppose, or materially contextualize a claim also requires a full narrative source record. Read-only sources remain visible with their reading depth and disposition reason; they do not require full narrative records.
-
-Maturity is promoted deliberately. The primary agent may promote captured material through analyzed evidence only after verifying its sources. An artifact cannot become a provisional finding until its canonical claim-evidence ledger is complete, a prose-to-ledger attestation is recorded, all referenced sources have full records, every referenced claim/source/location mapping has a primary verification event, no subagent has self-verified its own evidence, and the cycle source audit passes. A reviewed finding additionally requires a documented claim/source check with reviewer, date, and review basis. During early alignment, the maintainer remains the decision authority at the applicable checkpoint; the independent Claude/Codex agreement loop may close routine review feedback before that checkpoint without making the promotion decision itself. After the process is explicitly graduated, the primary agent may review routine findings; the maintainer still reviews material reversals and changes to scope, taxonomy, or evidence policy. A consolidated pattern must be based on reviewed findings from a synthesis, not on recurrence alone.
-
-At the end of meaningful work, update:
-
-- `research/STATUS.md` with progress, confidence, blockers, and the next highest-value action;
-- `research/COVERAGE.md` when scope coverage or gaps changed;
-- `research/DECISIONS.md` when methodology, taxonomy, scope, or evidence policy changed;
-- the active cycle artifact with sources examined and the saturation assessment.
-- the cycle source audit and global source-coverage view after research activity.
-
-Write for a technically capable newcomer without talking down to an experienced engineer. Favor clear, enjoyable prose over curt fragments and dense walls of bullets. Do not polish narrative beyond the maturity of its evidence.
-
-## Human checkpoints
-
-The early cycles require close review because early drift compounds. Pause for maintainer review after:
-
-1. the first landscape recon and proposed taxonomy;
-2. selection of the first deep-dive set;
-3. the first completed case-study batch;
-4. the first cross-harness synthesis;
-5. the first refine/saturation review.
-
-Also pause before materially changing scope, methodology, taxonomy, or canonical schemas, and when evidence would reverse a consequential reviewed conclusion. Record the proposed decision and alternatives in `research/DECISIONS.md` before requesting review.
-
-After the maintainer explicitly graduates the process, these become inspectable milestones rather than blocking approvals, except for material changes and major reversals. `research/STATUS.md` must state which governance mode is active.
+Review, reconciliation, and verification are read-only. They cannot approve a
+gate, change scope, admit legacy evidence, promote maturity, or author project
+content.
 
 ## Agents and concurrency
 
-The primary agent owns research design, source verification, deduplication, synthesis, shared control state, maturity promotion, provenance consolidation, and final quality. It may use at most two research subagents concurrently. The overall cap is one primary plus two subagents; nested delegation counts against the same cap and must never bypass it.
+The primary agent owns research design, source verification, shared control
+state, evidence admission, synthesis, and final quality. Use at most two
+subagents concurrently, including nested delegation. Give each a bounded,
+non-overlapping task and separate provenance responsibility. Subagent work is
+not independent corroboration and remains unverified until the primary checks
+the cited evidence.
 
-Use subagents for bounded, separately executed work such as complementary landscape searches or implementation deep dives. Do not call their results independent corroboration merely because different agents produced them. Give each a distinct question, required output, and non-overlapping provenance log. Subagents should normally return reports or edit only explicitly assigned artifacts and their own event logs. Only the primary updates `STATUS.md`, `COVERAGE.md`, `DECISIONS.md`, checkpoint state, cross-case syntheses, maturity labels, and consolidated provenance. Treat subagent reports and edits as unverified until the primary records verification of the cited evidence. Do not split synthesis into disconnected fragments merely to create parallel work.
+Only the primary updates `research/STATUS.md`, `research/DECISIONS.md`, shared
+coverage state, maturity, or cross-artifact synthesis.
 
-## Repositories and external material
+## External material
 
-Clone or cache third-party implementations under `/Users/jernotte/dev/reference-materials/research`. This path may require environment approval before writing. Never work around that restriction or copy large third-party repositories into this project. Keep curated source records, commit identifiers, relevant permalinks, and our analysis here.
+Third-party repositories and durable external evidence belong under
+`/Users/jernotte/dev/reference-materials/research` when an approved task
+requires them. That location may require explicit write approval. Do not copy
+large third-party repositories into this project or work around permission
+boundaries.
 
-Gather sources from anywhere useful: papers, documentation, repositories and history, prompts and tool definitions, benchmarks, technical blogs, talks, podcasts, interviews, practitioner reports, and social posts. Judge each item individually. Prefer original material over summaries, but use lower-formality evidence when it provides unique implementation knowledge and label its limits.
-
-Direct empirical reproduction is not the initial program's main goal. Inspect implementations deeply and record proposed experiments when published evidence cannot answer an important question. Conduct lightweight behavioral checks only when explicitly included in an approved cycle.
+The three named seed resources remain unopened under V2 until the
+outline-development brief is approved.
 
 ## Working discipline
 
-- Begin with the active question and the decision the research should eventually inform.
-- Search with multiple names for the same mechanism; terminology is inconsistent across harnesses.
-- Read the sources that support a claim before writing the claim. Never cite a search snippet.
-- Register and log the source before using it in analysis. Do not backfill evidence only after prose has been written.
-- Do not present a checkpoint without its generated source audit, claim-evidence coverage audit, and provenance-completeness status.
-- Prefer primary sources and implementation evidence, then use independent secondary sources to challenge or contextualize them.
-- Capture negative and disconfirming evidence alongside positive evidence.
-- Separate notes about what exists from recommendations about what to build.
-- Avoid redundant searching once marginal information gain is low; redirect effort to an explicit gap or contradiction.
-- Do not build the course, a harness, a dashboard, or elaborate automation unless an approved plan makes it the next useful step.
-- Preserve user changes and avoid unrelated repository edits.
+- Begin from the active decision and gate, not from inherited subject matter.
+- Preserve user changes and avoid unrelated edits.
+- Do not build infrastructure speculatively.
+- Keep canonical source data distinct from generated audits and presentation.
+- Keep status concise and current.
+- Stop when the authorized stage is complete; do not roll through a maintainer
+  gate.

@@ -462,9 +462,11 @@ catalog counts.
    analysis, repository lineage, catalog-context triage, unresolved identities,
    concentration risks, and 21-batch intended program; ratified the bounded
    lineage interpretation; and authorized only `awesome-screen-core-01`.
-5. **Source-screening gate or gates — current.** Review the authorized
-   `awesome-screen-core-01` calibration and any resulting change to the later
-   batch order or proposed substantive reading set. No second-hop source or
+5. **Source-screening gate or gates — current.** The authorized
+   `awesome-screen-core-01` calibration is complete. Review its actual source
+   identities, access limits, dispositions, evidence postures, catalog
+   corrections, schema friction, and any resulting change to the later batch
+   order or proposed substantive reading set. No second-hop source or
    additional batch is opened implicitly.
 6. **Seed-map gate.** Review the completed audited structural landscape and
    remaining gaps before skeleton drafting.

@@ -17,7 +17,11 @@ the Awesome repository must be treated as a comprehensive lead catalog and the
 Walking Labs course as a curriculum candidate. The maintainer approved the
 completed catalog gate, ratified its bounded lineage interpretation, approved
 the 21-batch screening program as intended scope, and authorized only the
-20-source `awesome-screen-core-01` calibration batch. Work remains on
+20-source `awesome-screen-core-01` calibration batch. That batch is complete
+and awaits maintainer review at its source-screening gate; its joined identity,
+accessibility, relevance, evidence-posture, and schema results are in
+[`research/outline-development/awesome-screen-core-01.md`](research/outline-development/awesome-screen-core-01.md).
+No other batch is authorized. Work remains on
 `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 

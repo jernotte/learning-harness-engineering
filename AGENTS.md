@@ -40,21 +40,24 @@ complete. The unopened Wave 2 is withdrawn and has no active authority.
 
 The catalog gate is approved. The maintainer ratified the bounded Git-lineage
 interpretation and approved the complete 21-batch program as intended scope.
-Only `awesome-screen-core-01` is authorized for execution. Its exact 20-family
-register is the batch of that name in
+The one authorized batch, `awesome-screen-core-01`, is complete. Its exact
+20-family register is the batch of that name in
 `research/outline-development/awesome-screening-plan.json` as committed at
 `3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D008 supersedes only that
 batch's historical `proposed_not_authorized` field; its membership and
-inspection constraints remain fixed, and all other batches remain blocked.
+inspection constraints remain fixed. The completed screen records 20 unique
+source families, 19 `read_only` dispositions, one redirect-shell exclusion,
+zero searches, zero second hops, and zero promoted claims or evidence.
 
-For `awesome-screen-core-01`, open only each registered direct URL and inspect
-only the predeclared screening surface needed to establish identity,
-accessibility, actual relevance, scope, evidence posture, and visible lineage.
-Do not run a topical or ecosystem search, follow a second hop, perform an
-implementation or technique deep dive, draft an outline, select cases,
-synthesize findings, produce or adopt curriculum, build a site, promote
-evidence maturity, or re-admit legacy evidence. Identity-resolution queries
-remain separately preapproved and none is authorized for this batch.
+Current work is the maintainer's source-screening gate over
+`research/outline-development/awesome-screen-core-01.md` and its reconciled
+provenance. V2-D008's immediate source-opening authority is exhausted. Do not
+reopen a screened page, open another catalog family, run an identity query,
+perform a topical or ecosystem search, follow a second hop, deep-read an
+implementation or technique, draft an outline, select cases, synthesize
+findings, produce or adopt curriculum, build a site, promote evidence maturity,
+or re-admit legacy evidence. Every other batch remains blocked until the
+maintainer explicitly authorizes it.
 
 ## Clean-slate boundary
 

@@ -25,6 +25,12 @@ V2-D008 supersedes only `awesome-screen-core-01`'s historical
 `proposed_not_authorized` field in that immutable gate proposal; the batch's
 membership and constraints remain controlling.
 
+The authorized batch has now completed and is recorded in
+`awesome-screen-core-01.md`: 20 unique registered families, 19 `read_only`
+dispositions, one redirect-shell exclusion, no search, no second hop, and no
+promotion. Its immediate opening authority is exhausted. The other 20 batches
+remain blocked pending maintainer review of that calibration.
+
 ## Approved decision package
 
 1. The catalog occurrence/exclusion rules and offline family accounting were
@@ -174,7 +180,7 @@ Review surfaces:
 - [raw occurrence ledger](awesome-link-occurrences.jsonl)
 - [offline family set](awesome-source-families.json)
 
-## Limits preserved
+## Limits preserved at catalog-gate approval
 
 - No previously unopened catalog destination was opened or queried.
 - No destination bibliography, course reference, or second-hop link was
@@ -186,7 +192,7 @@ Review surfaces:
   Markdown and returned isolated lines from some code/template navigation
   files. Those lines support no analysis; the incident is explicit in the
   curriculum artifact and provenance.
-- The diagnostic provenance audit passes at
+- At that gate checkpoint, the diagnostic provenance audit passed at
   `complete_with_declared_manual_sources`, with six native boundaries, 230
   observations, zero unreconciled observations, zero claims, and three
   resolved historical channel-counter warnings.

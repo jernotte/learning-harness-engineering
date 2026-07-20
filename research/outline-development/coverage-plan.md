@@ -3,17 +3,18 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D008, approved 2026-07-20
-**Current pass:** Direct-screen calibration — `awesome-screen-core-01` only
+**Current pass:** `awesome-screen-core-01` complete — maintainer checkpoint
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-Directly screen the exact 20 families in `awesome-screen-core-01` to test source
-identity, accessibility, relevance, scope, evidence posture, visible lineage,
-and the screening schema. The batch is anchored to
+The completed direct screen of the exact 20 families in
+`awesome-screen-core-01` tests source identity, accessibility, relevance,
+scope, evidence posture, visible lineage, and the screening schema. The batch
+is anchored to
 `awesome-screening-plan.json` at commit
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass does not search, follow a
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass did not search, follow a
 second hop, deep-read a source, choose a taxonomy, or draft an outline.
 
 ## Wave 1 authorization
@@ -146,10 +147,21 @@ Markdown and returned isolated matches from code/template navigation files.
 Those matches support no analysis, did not trigger implementation inspection,
 and are explicitly retained in the source lifecycle and curriculum artifact.
 
+The `awesome-screen-core-01` native boundary is declared from
+`2026-07-20T21:57:45Z`, after the V2-D008 authority checkpoint at commit
+`949f3f1b61449c9fc15581e836bfb680b185918d`. It covers only direct opens of the
+20 registered URLs, the immediate adapter-reconciliation check, and the local
+control actions needed to close the batch. The last authorized direct-source
+interaction completed before `2026-07-20T22:03:36Z`; that timestamp closes the
+external-interaction portion of this batch boundary. Later local reconciliation
+and checkpoint actions do not extend permission to open another source.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
-- Only the 20 direct URLs registered in `awesome-screen-core-01` may open.
+- During the now-closed batch boundary, only the 20 direct URLs registered in
+  `awesome-screen-core-01` were permitted to open. No URL may open at the
+  current gate.
 - Every other catalog batch and identity-resolution query remains blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.

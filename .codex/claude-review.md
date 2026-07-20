@@ -5,9 +5,10 @@
 Harness Engineering V2 is rebuilding its research program from a clean
 conceptual slate. The authority reset is complete. V2-D005 through V2-D008
 approve an outline-first process whose active implementation stage is the
-20-source `awesome-screen-core-01` calibration within
-`v2-outline-seed-map`. The final goal continues through a maintainer-approved
-outline and stops before substantive research.
+completed 20-source `awesome-screen-core-01` calibration checkpoint within
+`v2-outline-seed-map`. Maintainer review at that source-screening gate is
+current; no later batch is authorized. The final goal continues through a
+maintainer-approved outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded

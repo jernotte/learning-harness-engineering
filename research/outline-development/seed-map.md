@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** Wave 1 complete; V2-D008 authorizes `awesome-screen-core-01`
+**Status:** `awesome-screen-core-01` complete; maintainer screening gate current
 
 **Authority:** Approved outline-development brief
 
@@ -463,8 +463,9 @@ The most consequential remaining structural questions are:
 
 The former Wave 2 proposal in `first-hop-register.md` was withdrawn before
 approval. The V2-D007 mapping of the complete pinned Awesome catalog and Walking
-Labs curriculum candidate is complete; its maintainer gate now controls whether
-any new outbound source may be selected or opened.
+Labs curriculum candidate is complete, and V2-D008 approved that catalog gate.
+The current source-screening gate controls whether any new outbound source may
+be selected or opened.
 
 ## V2-D007 method correction
 
@@ -473,17 +474,30 @@ defines the selection path forward. The Awesome repository is now treated as a
 lead catalog whose complete qualifying outbound occurrence universe has been
 inventoried and deduplicated without turning curator categories into evidence.
 Walking Labs is evaluated as an existing curriculum proposal, not adopted as an
-outline. The next cross-source structural judgment is blocked pending
-maintainer review of the completed catalog and curriculum artifacts.
+outline. V2-D008 approved that catalog gate and authorized only the first
+calibration batch.
+
+## V2-D008 direct-screen calibration
+
+The exact 20-family `awesome-screen-core-01` batch is complete. Nineteen direct
+pages are retained `read_only`; one LangGraph endpoint is excluded because the
+registered URL yielded only a redirect shell and no further traversal was
+authorized. The screen corrected a legacy Letta destination, an ECC repository
+rename and scope expansion, several catalog source-form assumptions, and the
+distinction between relevance and evidentiary strength. It also exposed schema
+needs for requested-versus-observed identity, repository-shallow inspection,
+transport accessibility versus substantive inspectability, and multiple
+same-family opens. These are calibration results, not an adopted structure or
+cross-source finding. The joined register is
+`research/outline-development/awesome-screen-core-01.md`.
 
 ## Provenance state
 
-The combined seed and Wave 1 diagnostic audit passes at
-`complete_with_declared_manual_sources`: zero errors, four resolved warnings,
-and zero unresolved native observations. The six first-hop sources have
-`read_only` dispositions, the seed-only failed helper endpoint remains
-`excluded`, and there are still zero claims and zero promoted evidence. No
-search or resolution query occurred, and no second-hop source was opened. The
-retained native boundary records the six direct opens, same-family follow-up
-inspection, local PDF processing, and the bounded seed reinspection used to
-identify unopened Wave 2 leads.
+The consolidated diagnostic audit passes at
+`complete_with_declared_manual_sources`: zero errors, ten resolved warnings,
+seven native boundaries, 289 native observations, and zero unresolved
+observations. Across the structural program to date it records 32 unique opened
+source identities, 30 `read_only` dispositions, two exclusions, zero searches,
+zero claims, and zero promoted evidence. The `awesome-screen-core-01` package
+contributes 20 unique opened identities, 19 `read_only` dispositions, one
+exclusion, and seven intentionally resolved `repository_shallow` warnings.

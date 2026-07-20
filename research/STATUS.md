@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Direct-screen calibration — `awesome-screen-core-01` authorized
+**Current phase:** Source-screening gate — `awesome-screen-core-01` complete
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,10 @@
 
 ## Current objective
 
-Execute the exact 20-source `awesome-screen-core-01` direct-screen calibration.
-Establish source identity, accessibility, actual relevance, scope, evidence
-posture, visible lineage, and schema friction without deep reading or following
-any second hop. Stop at its source-screening gate.
+Present the completed `awesome-screen-core-01` direct-screen calibration for
+maintainer review. The gate must assess its source identities, access limits,
+actual relevance, scope, evidence posture, visible lineage, dispositions,
+catalog corrections, and schema friction before any later batch is authorized.
 
 ## Authority state
 
@@ -59,18 +59,18 @@ Completed before the V2-D007 correction:
 No search or resolution query was needed or used. No reference discovered
 inside a first-hop source was opened.
 
-Currently authorized by V2-D007:
+Completed under V2-D007:
 
-- pin and structurally inspect `walkinglabs/learn-harness-engineering` as a
-  curriculum candidate without adopting it;
-- mechanically extract every Markdown link occurrence from the pinned
+- pinned and structurally inspected `walkinglabs/learn-harness-engineering` as
+  a curriculum candidate without adopting it;
+- mechanically extracted every Markdown link occurrence from the pinned
   `ai-boost/awesome-harness-engineering` README;
-- record auditable non-resource exclusions, preserve every qualifying category
-  occurrence, normalize URLs, and derive offline family keys under declared
-  deduplication rules;
-- prepare catalog-context triage, unresolved identities, lineage risks, and an
-  exact proposed source-opening set; and
-- check the relationship between the `ai-boost` repository and the similarly
+- recorded auditable non-resource exclusions, preserved every qualifying
+  category occurrence, normalized URLs, and derived offline family keys under
+  declared deduplication rules;
+- prepared catalog-context triage, unresolved identities, lineage risks, and
+  an exact proposed source-opening set; and
+- checked the relationship between the `ai-boost` repository and the similarly
   named Walking Labs Awesome repository.
 
 That authorized catalog work is complete:
@@ -89,7 +89,7 @@ That authorized catalog work is complete:
 - the two Awesome repositories are not Git forks or mirrors in the bounded
   inspected lineage, but editorial/source independence remains unassessed.
 
-Authorized by V2-D008:
+Completed under V2-D008:
 
 - the catalog accounting, curriculum analysis, and catalog-gate package are
   approved;
@@ -97,9 +97,24 @@ Authorized by V2-D008:
   URLs as editorial independence or corroboration;
 - the complete 21-batch direct-screening program is approved as intended scope;
 - only `awesome-screen-core-01`, exactly as registered in the screening plan at
-  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now; and
+  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, was authorized to execute; and
 - each of its 20 sources receives direct screening only, with no identity query,
   second hop, bibliography traversal, or implementation deep dive.
+
+That one authorized execution is now exhausted:
+
+- all 20 registered source families received a direct result;
+- 22 direct-open events map to exactly 20 requested URLs and 20 source IDs,
+  with two same-URL repeats used only to recover displayed page content;
+- 19 sources are `read_only`, while the registered LangGraph endpoint is
+  `excluded` because its response contained only a redirect shell;
+- the screen records material catalog corrections for the legacy Letta server,
+  the ECC repository rename/scope expansion, source-form mismatches, and the
+  difference between direct relevance and evidence strength;
+- no query, search result, unregistered URL, second hop, implementation deep
+  dive, claim, reference, evidence promotion, or outline decision occurred; and
+- `research/outline-development/awesome-screen-core-01.md` is the durable join
+  from every source lifecycle to its frozen family and occurrence context.
 
 Still not authorized:
 
@@ -113,13 +128,27 @@ Still not authorized:
 - drafting the subject outline itself; and
 - producing or adopting curriculum or learning artifacts.
 
+Reopening a completed batch page is also not authorized at this gate. The
+maintainer must explicitly authorize any later batch or method-changing access.
+
 ## Validation and review state
 
-- The combined Stage 4 diagnostic provenance audit passes at
-  `complete_with_declared_manual_sources` with zero errors, three resolved
-  historical channel-counter warnings, six native boundaries, 230 native
-  observations, zero unreconciled observations, zero claims, and zero promoted
-  evidence.
+- The consolidated Stage 4 diagnostic provenance audit passes at
+  `complete_with_declared_manual_sources` with zero errors, ten resolved
+  warnings, seven native boundaries, 289 native observations, zero unreconciled
+  observations, zero searches, zero claims, and zero promoted evidence. It
+  records 32 unique opened identities, 30 `read_only` dispositions, and two
+  exclusions across all completed structural passes.
+- The `awesome-screen-core-01` package independently passes schema validation
+  and its diagnostic `complete` audit: 59 native observations, zero unresolved
+  observations, 20 unique opened identities from 22 direct-open events, 19
+  `read_only` dispositions, one exclusion, and seven intentionally resolved
+  `repository_shallow` warnings.
+- Two bounded local audits reviewed the completed calibration. The provenance
+  audit found no accounting, capture, join, or authority defect. The content
+  audit found three stale control-state descriptions that could imply renewed
+  opening authority or unresolved lineage ratification; all were accepted,
+  corrected, and passed focused verification.
 - The catalog extractor and planner tests pass. The deterministic catalog audit
   proves both accounting invariants and binds the pinned README, rule manifest,
   extractor, planner, occurrence ledger, family set, and proposed batches by
@@ -212,8 +241,8 @@ local-review fallback and its limits.
 The maintainer explicitly approved V2-D005 through V2-D008 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
-amended brief is controlling, and only the catalog phase is currently
-authorized.
+amended brief is controlling. The first catalog calibration is complete, and no
+further source-opening authority is active while its maintainer gate is open.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.
@@ -229,6 +258,8 @@ non-authoritative history. Focused verification passed with no residual defect.
 The maintainer will review the completed `awesome-screen-core-01` source
 lifecycles, accessibility and identity corrections, relevance and evidence-
 posture distribution, lineage and alias findings, schema friction, provenance
-audit, and recommendation for the next batch or a method correction. No other
-batch opens before that review. Selective raw conversation packets remain
-separately gated per packet.
+audit, and recommendation to retain the corrected per-family register and, if
+accepted, authorize only the unchanged `awesome-screen-core-02` batch next. No
+other batch opens before that review, and the recommendation grants no current
+authority. Selective raw conversation packets remain separately gated per
+packet.

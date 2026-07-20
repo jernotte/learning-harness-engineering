@@ -13,10 +13,21 @@ a source is explicitly opened after its gate.
 The catalog pass is split into four deliberately bounded packages: the
 pre-V2-D007 orientation, immediate repository pinning, structural inspection,
 and final extractor regeneration. Their resolved streams are consolidated into
-`v2-outline-seed-map-events.jsonl`; the diagnostic audit reports six total
-Stage 4 boundaries, 230 native observations, and zero unreconciled observations.
+`v2-outline-seed-map-events.jsonl`.
 Outbound catalog URLs exist only in the occurrence/family ledgers and do not
 receive synthetic source events.
+
+V2-D008 adds the separately bounded `awesome-screen-core-01` package. Its
+resolved stream records 59 native observations, 20 unique direct-source
+lifecycles from 22 same-boundary open events, 19 `read_only` dispositions, one
+exclusion, zero searches, and zero unresolved observations. Seven
+`repository_shallow` warnings are preserved and resolved as intentional direct-
+screen limits. The package audit uses completeness `complete` because the batch
+contains no manual source; the consolidated audit retains
+`complete_with_declared_manual_sources` for the full cycle. After merging the
+package, the consolidated diagnostic audit reports seven native boundaries,
+289 native observations, zero unreconciled observations, zero claims, and no
+promoted evidence.
 
 Because the worktree and native rollout both live below `.codex`, the frozen
 adapter conservatively classified several local fixture/provenance commands as

@@ -29,6 +29,17 @@ corroborate one another.
 The prior six-source Wave 2 proposal was withdrawn before approval. None of its
 sources or planned identity queries was opened, so it contributes no coverage.
 
+The first approved catalog calibration directly screened all 20 families in
+`awesome-screen-core-01`. Nineteen are retained `read_only`; the registered
+LangGraph endpoint is `excluded` because its direct response exposed only a
+redirect shell and another traversal was not authorized. Seven repository
+families were intentionally limited to top-level README/release surfaces and
+remain `repository_shallow` and live-unpinned. The batch also records material
+identity corrections for the legacy Letta server destination and the renamed,
+expanded ECC repository, plus narrower source-form and evidence-posture
+corrections across the set. These screens are catalog evaluation coverage, not
+admitted subject evidence or representative field coverage.
+
 The pinned Awesome census is now complete under its declared rule manifest:
 652 extracted occurrences divide into 415 qualifying resources and 237
 mechanical exclusions. The qualifying occurrences map to 401 offline family
@@ -51,8 +62,9 @@ and internal subsystem-model friction. It remains a `read_only`, coding-agent-
 and-repository-centered curriculum proposal, not V2 authority. The two Awesome
 repositories have distinct Git roots and zero common commit hash in the bounded
 lineage check, but their editorial/source independence is unassessed and their
-20 shared substantive resource URLs are not corroboration. The brief's
-lineage-versus-history ambiguity remains explicit for maintainer ratification.
+20 shared substantive resource URLs are not corroboration. V2-D008 ratified
+that bounded Git-lineage interpretation without converting it into a claim of
+editorial or source independence.
 
 ## Legacy boundary
 
@@ -70,6 +82,6 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the first maintainer-approved direct-screening batch with
-actual accessibility, identity/alias, relevance, lineage, domain, and evidence-
-posture coverage. Until then, all 395 proposed new destinations remain unopened.
+Update this file after the maintainer reviews the first calibration and either
+changes the screening method or authorizes another exact batch. The remaining
+375 proposed new destinations remain unopened.

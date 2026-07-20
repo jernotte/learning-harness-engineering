@@ -400,6 +400,17 @@ corrections, evidence-posture and lineage observations, schema friction, and a
 recommendation for the next authorization. Every other batch remains blocked
 until the maintainer reviews that checkpoint.
 
+### Execution record
+
+The authorized batch completed on 2026-07-20. Its 22 direct-open events map to
+the exact 20 registered URLs and 20 source IDs; two same-URL repeats handled
+runtime rendering and introduced no new family. Nineteen sources are
+`read_only`, and the LangGraph redirect shell is `excluded` with inspection
+extent `none`. No search, identity query, second hop, implementation deep dive,
+claim, reference, or evidence promotion occurred. The diagnostic boundary has
+zero unresolved observations. This completion records execution under V2-D008;
+it does not decide or authorize the next batch.
+
 ### Design-history disposition
 
 `none` — the prior catalog-correction rationale, the staged-calibration

@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-07-20T22:06:06Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-01-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-awesome-screen-core-01-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-ae10eb4597fe2dea",
+      "disposition": "read_only",
+      "reason": "The first-party Codex loop article was used only to calibrate direct relevance, mechanism scope, and vendor evidence posture. Its two catalog occurrences and repeated same-URL open remain one source family; no outcome claim or outline placement is promoted.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article page: title, publication metadata, agent-loop, prompt, tool-loop, and context-management sections"],
+      "inspection_basis": "Direct-page screen only; no linked Codex repository, documentation, or other second hop opened."
+    },
+    {
+      "source_id": "auto-source-7647307fe49844a0",
+      "disposition": "read_only",
+      "reason": "The ReAct abstract was used only to identify the interleaved reasoning/action mechanism, named evaluation settings, and limits of treating an older benchmark paper as general harness architecture.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["arXiv title, author, version metadata, abstract, and reported benchmark summary"],
+      "inspection_basis": "Direct arXiv abstract page only; PDF, references, code, and cited evaluations were not opened."
+    },
+    {
+      "source_id": "auto-source-3cdc3bbb8a55263b",
+      "disposition": "read_only",
+      "reason": "The LangChain article was used only to identify a planner/executor split and its explicit lack of then-current benchmarking. It is vendor design rationale, not promoted effectiveness evidence.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, date, planner/executor description, cost note, and future-evaluation caveat"],
+      "inspection_basis": "Direct article page only; linked papers, documentation, and implementations were not opened."
+    },
+    {
+      "source_id": "auto-source-126e07cf0d684e03",
+      "disposition": "read_only",
+      "reason": "The Anthropic context-engineering article was used only to screen its coverage of context selection, tools, retrieval, compaction, notes, and subagents. Practitioner recommendations and observations remain source-reported.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article metadata and visible sections on context, tools, retrieval, compaction, structured notes, and subagents"],
+      "inspection_basis": "Direct article page only; citations and product documentation were not followed."
+    },
+    {
+      "source_id": "auto-source-82747c62f33e4f20",
+      "disposition": "read_only",
+      "reason": "The live Claude Platform page was used only to identify the documented tool-call/result contract, execution locations, schemas, choice controls, and product-specific scope. Documentation does not establish outcome quality.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["direct overview page sections on client and server tools, round trips, tool choice, schema conformance, and pricing"],
+      "inspection_basis": "Live direct documentation page with no visible page version; linked documentation was not opened."
+    },
+    {
+      "source_id": "auto-source-0668b361cac37fb4",
+      "disposition": "read_only",
+      "reason": "The official MCP introduction was used only to establish project identity, stated interface scope, and redirect correction. Its benefit and ecosystem statements remain project claims.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official introduction page: definition, examples, stated benefits, and ecosystem-support section"],
+      "inspection_basis": "Direct registered URL and automatic redirect only; specification, architecture, registry, and linked clients were not opened."
+    },
+    {
+      "source_id": "auto-source-cecce92d753337bd",
+      "disposition": "read_only",
+      "reason": "The OWASP page was retained narrowly for excessive-functionality, permission, autonomy, approval, and mediation controls. Prompt injection is one trigger/example, not the reason this source is relevant to harness engineering.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct LLM06:2025 page sections defining excessive agency, root causes, examples, mitigations, and attack scenario"],
+      "inspection_basis": "Direct OWASP guidance page only; reference links and adjacent risk pages were not opened."
+    },
+    {
+      "source_id": "auto-source-7fe841355559703a",
+      "disposition": "read_only",
+      "reason": "The Letta repository home was used only to identify a stateful-agent implementation candidate and the material notice that the registered repository is a legacy server whose active development moved elsewhere.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity and legacy notice, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no file, history page, moved repository, documentation, or implementation opened."
+    },
+    {
+      "source_id": "auto-source-1eba12a4a8fa384c",
+      "disposition": "read_only",
+      "reason": "The Anthropic C-compiler account was used only as a first-party case study of loops, containers, Git coordination, tests, feedback, context-efficient output, parallel roles, and observed limits.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article metadata and visible harness, parallelism, testing, context, evaluation, limitation, and risk sections"],
+      "inspection_basis": "Direct article page only; linked compiler repository, test suites, and supporting sources were not opened."
+    },
+    {
+      "source_id": "auto-source-baf9cbcdf7e11126",
+      "disposition": "read_only",
+      "reason": "The promptfoo repository home was used only to identify an evaluation, red-team, and CI implementation candidate. Project capability, adoption, privacy, and reliability statements were not verified.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview and capability list, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no documentation, code, tests, benchmarks, or release body opened."
+    },
+    {
+      "source_id": "auto-source-dab460140f5c7122",
+      "disposition": "read_only",
+      "reason": "The OpenLLMetry repository home was used only to identify an OpenTelemetry-based observability candidate and a possible stale telemetry-policy contradiction requiring later resolution.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview, instrumentation and telemetry sections, root listing, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no documentation, implementation, tests, discussion, or release body opened."
+    },
+    {
+      "source_id": "auto-source-22e1d1b5ef859fb4",
+      "disposition": "read_only",
+      "reason": "The AgentOps repository home was used only to identify a monitoring, replay, cost, evaluation, and integration implementation candidate. Its feature claims remain vendor self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview, feature and integration sections, and root listing"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, documentation, hosted service, or version pin inspected."
+    },
+    {
+      "source_id": "auto-source-721d7c06c94b6351",
+      "disposition": "read_only",
+      "reason": "The AWS sample repository home was used only to identify four runtime-specific human-approval patterns. It is sample implementation guidance, not comparative effectiveness evidence.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview of four approval methods, root listing, and visible no-releases state"],
+      "inspection_basis": "Repository-shallow screen of live main; no sample directory, code, deployment, tests, or linked blog opened."
+    },
+    {
+      "source_id": "auto-source-257ed09536576a04",
+      "disposition": "read_only",
+      "reason": "The registered everything-claude-code URL was used only to identify its automatic rename to ECC and expanded cross-harness operator-system scope. Project maturity, usage, and performance statements were not verified.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["automatically redirected top-level GitHub repository page, rendered README identity, scope and visible v2.0.0 summary, and root listing"],
+      "inspection_basis": "Repository-shallow screen of live main; no guide, architecture, skill, code, test, or release file opened."
+    },
+    {
+      "source_id": "auto-source-58a5a7279791ce2c",
+      "disposition": "read_only",
+      "reason": "The exact Live-SWE-agent v3 preprint was used only to identify its runtime tool-synthesis mechanism, experimental setup, reported results, ablations, and benchmark-specific evidence posture.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["direct arXiv HTML v3 title, abstract, method overview, experimental setup, and visible main-result sections"],
+      "inspection_basis": "Direct versioned paper page only; repository, leaderboard, references, appendices, and result reproduction were not opened."
+    },
+    {
+      "source_id": "auto-source-64af1d1a2fd48283",
+      "disposition": "read_only",
+      "reason": "The Anthropic containment article was used only to screen its first-party account of approvals, sandboxes, VMs, filesystem and egress boundaries, tool-content trust, incidents, and product-specific telemetry.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article metadata and visible risk, defense-component, containment-pattern, incident, external-content, and summary sections"],
+      "inspection_basis": "Direct article page only; linked disclosures, benchmarks, runtimes, and standards were not opened."
+    },
+    {
+      "source_id": "auto-source-b2dde8d2b4d70b66",
+      "disposition": "read_only",
+      "reason": "The DeepEval repository home was used only to identify an evaluation-framework candidate and its self-described agent, tool, planning, and MCP metrics. Metric validity and implementation quality remain unassessed.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview, metric categories, integration summary, and root listing"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, metric documentation, research citation, or hosted platform opened."
+    },
+    {
+      "source_id": "auto-source-4bc641a728ca0582",
+      "disposition": "read_only",
+      "reason": "The live MCP-tunnels page was used only to identify a product-specific private-network architecture, security model, shared responsibility, and explicit research-preview status.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["direct overview page sections on preview status, components, prerequisites, security layers, responsibility, transport metadata, and use"],
+      "inspection_basis": "Live direct documentation page with no visible page version; architecture, security, deployment, and reference subpages were not opened."
+    },
+    {
+      "source_id": "auto-source-9a17e7add848af00",
+      "disposition": "read_only",
+      "reason": "The OpenAI long-horizon article was used only as a first-party single-run case study of durable project memory, milestones, verification, repair, and the Codex loop. The author explicitly distinguishes the experiment from production evidence.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["same direct article URL rendered twice; title, date, author, experiment framing, loop, durable-memory, milestone, and verification sections"],
+      "inspection_basis": "Direct article page only; linked repositories, benchmark, model announcement, Cursor account, and agent-loop article were not followed."
+    },
+    {
+      "source_id": "auto-source-2b0bbc572c83b1d8",
+      "disposition": "excluded",
+      "reason": "The registered LangGraph endpoint returned only a redirect shell. No substantive content, identity metadata, mechanism, date, or evidence posture was inspectable without an unauthorized additional traversal.",
+      "record_path": "research/outline-development/awesome-screen-core-01.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Direct registered URL and its automatic trailing-slash observation only; redirect destination was not manually followed and no resolution query was made."
+    }
+  ],
+  "artifact": {
+    "artifact_id": "v2-outline-awesome-screen-core-01-calibration",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/awesome-screen-core-01.md"
+  },
+  "claims": []
+}

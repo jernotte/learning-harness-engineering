@@ -32,32 +32,33 @@ post-outline research sequence.
 
 ## Current authorization
 
-The maintainer accepted the completed V2 repository reset and approved V2-D005,
-V2-D006, the Stage 4 catalog correction V2-D007, and the catalog-gate decision
-V2-D008 on 2026-07-20. The original three-seed pass, six-source Wave 1,
-Walking Labs curriculum inspection, and complete pinned-catalog census are
-complete. The unopened Wave 2 is withdrawn and has no active authority.
+The maintainer accepted the completed V2 repository reset and approved V2-D005
+through V2-D009 on 2026-07-20. The original three-seed pass, six-source Wave 1,
+Walking Labs curriculum inspection, complete pinned-catalog census, and first
+catalog calibration are complete. The unopened Wave 2 is withdrawn and has no
+active authority.
 
 The catalog gate is approved. The maintainer ratified the bounded Git-lineage
 interpretation and approved the complete 21-batch program as intended scope.
-The one authorized batch, `awesome-screen-core-01`, is complete. Its exact
-20-family register is the batch of that name in
+The completed `awesome-screen-core-01` method and its 19 `read_only` / one
+`excluded` dispositions are approved. Only `awesome-screen-core-02` is now
+authorized. Its exact 20-family register is the batch of that name in
 `research/outline-development/awesome-screening-plan.json` as committed at
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D008 supersedes only that
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D009 supersedes only that
 batch's historical `proposed_not_authorized` field; its membership and
-inspection constraints remain fixed. The completed screen records 20 unique
-source families, 19 `read_only` dispositions, one redirect-shell exclusion,
-zero searches, zero second hops, and zero promoted claims or evidence.
+inspection constraints remain fixed. Use the expanded per-family screening
+register established by core-01.
 
-Current work is the maintainer's source-screening gate over
-`research/outline-development/awesome-screen-core-01.md` and its reconciled
-provenance. V2-D008's immediate source-opening authority is exhausted. Do not
-reopen a screened page, open another catalog family, run an identity query,
+For `awesome-screen-core-02`, open only each registered direct URL and inspect
+only the predeclared surface needed to establish requested and observed
+identity, transport accessibility, substantive inspectability, actual
+relevance, scope, source form, evidence posture, visible lineage or alias state,
+version or pin state, catalog correction, schema friction, and disposition. Do
+not reopen a core-01 page, open another catalog family, run an identity query,
 perform a topical or ecosystem search, follow a second hop, deep-read an
 implementation or technique, draft an outline, select cases, synthesize
 findings, produce or adopt curriculum, build a site, promote evidence maturity,
-or re-admit legacy evidence. Every other batch remains blocked until the
-maintainer explicitly authorizes it.
+or re-admit legacy evidence. Every other batch remains blocked.
 
 ## Clean-slate boundary
 

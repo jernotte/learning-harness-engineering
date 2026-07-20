@@ -37,11 +37,10 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Structural landscape and catalog investigation
 
-**Status:** The V2-D008 catalog gate is approved and its one authorized
-20-source calibration batch, `awesome-screen-core-01`, is complete. The
-maintainer source-screening gate is current. No additional source-opening
-authority is active. The former Wave 2 proposal is withdrawn and has no
-authority.
+**Status:** The V2-D008 catalog gate is approved, `awesome-screen-core-01` is
+complete, and V2-D009 approves its calibration method and dispositions. Only
+the exact 20-source `awesome-screen-core-02` batch is currently authorized.
+The former Wave 2 proposal is withdrawn and has no authority.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -66,9 +65,9 @@ maintainer ratified the bounded Git-lineage interpretation and approved the
 `awesome-screen-core-01` for execution. That pass directly screened its exact
 20 registered URLs and stopped before any additional batch, search, second
 hop, or deep reading. It retains 19 sources `read_only`, excludes one
-redirect-only shell, and promotes no claim or evidence. The maintainer must
-review the calibration before deciding whether to change the method or
-authorize a later batch.
+redirect-only shell, and promotes no claim or evidence. The maintainer approved
+that calibration and authorized only unchanged `awesome-screen-core-02` under
+the same direct-URL-only, no-query, no-second-hop, no-deep-reading boundary.
 
 ## Stage 5 — Competing outline skeletons
 

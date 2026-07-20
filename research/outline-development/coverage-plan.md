@@ -2,20 +2,22 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005 through V2-D008, approved 2026-07-20
-**Current pass:** `awesome-screen-core-01` complete — maintainer checkpoint
+**Authority:** V2-D005 through V2-D009, approved 2026-07-20
+**Current pass:** `awesome-screen-core-02` authorized
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The completed direct screen of the exact 20 families in
-`awesome-screen-core-01` tests source identity, accessibility, relevance,
-scope, evidence posture, visible lineage, and the screening schema. The batch
-is anchored to
+The direct screen of the exact 20 families in `awesome-screen-core-02` tests
+the core-01 method across another source mix while preserving requested and
+observed identity, accessibility, substantive inspectability, relevance, scope,
+source form, evidence posture, visible lineage, version or pin state, catalog
+correction, schema friction, and disposition. The batch is anchored to
 `awesome-screening-plan.json` at commit
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass did not search, follow a
-second hop, deep-read a source, choose a taxonomy, or draft an outline.
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass may not search, follow a
+second hop, reopen core-01, deep-read a source, choose a taxonomy, or draft an
+outline.
 
 ## Wave 1 authorization
 
@@ -160,9 +162,10 @@ and checkpoint actions do not extend permission to open another source.
 
 - No topical or ecosystem search.
 - During the now-closed batch boundary, only the 20 direct URLs registered in
-  `awesome-screen-core-01` were permitted to open. No URL may open at the
-  current gate.
-- Every other catalog batch and identity-resolution query remains blocked.
+  `awesome-screen-core-01` were permitted to open.
+- During the current batch boundary, only the 20 direct URLs registered in
+  `awesome-screen-core-02` may open. Core-01 reopening, every other catalog
+  batch, and every identity-resolution query remain blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -172,7 +175,7 @@ and checkpoint actions do not extend permission to open another source.
 
 ## Stop and checkpoint
 
-Stop when all 20 `awesome-screen-core-01` families have an honest direct-screen
+Stop when all 20 `awesome-screen-core-02` families have an honest direct-screen
 result or recorded access failure; each opened source has identity, inspected
 surface, accessibility, relevance, scope, evidence posture, visible lineage,
 and final disposition; schema friction and catalog-metadata corrections are

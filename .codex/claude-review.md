@@ -3,12 +3,12 @@
 ## Project goal
 
 Harness Engineering V2 is rebuilding its research program from a clean
-conceptual slate. The authority reset is complete. V2-D005 through V2-D008
+conceptual slate. The authority reset is complete. V2-D005 through V2-D009
 approve an outline-first process whose active implementation stage is the
-completed 20-source `awesome-screen-core-01` calibration checkpoint within
-`v2-outline-seed-map`. Maintainer review at that source-screening gate is
-current; no later batch is authorized. The final goal continues through a
-maintainer-approved outline and stops before substantive research.
+20-source `awesome-screen-core-02` calibration within `v2-outline-seed-map`.
+The maintainer approved the completed core-01 method and dispositions before
+authorizing core-02. No later batch is authorized. The final goal continues
+through a maintainer-approved outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -57,7 +57,8 @@ authority.
 - V2-D005 and V2-D006 were approved before the first seed interaction;
   V2-D007 records the later catalog-method correction and explicitly withdraws
   the never-opened Wave 2; V2-D008 approves the catalog gate and authorizes only
-  the exact `awesome-screen-core-01` batch.
+  the exact `awesome-screen-core-01` batch; V2-D009 approves that calibration's
+  method and dispositions and authorizes only exact `awesome-screen-core-02`.
 - The original repository seed is pinned to the observed commit, the local PDF
   has a verified fingerprint, and the Walking Labs curriculum repository is
   pinned before structural inspection.
@@ -77,15 +78,16 @@ authority.
 - Similarly named Awesome repositories are not treated as independent until
   their lineage is checked.
 - Before V2-D008, no previously unopened outbound catalog family was opened.
-  During `awesome-screen-core-01`, exactly its 20 registered direct URLs—and no
-  other family—may open. No topical search, identity query, second hop,
-  implementation deep dive, or legacy readmission occurs.
+  Core-01 opened exactly its 20 registered direct URLs. During
+  `awesome-screen-core-02`, exactly its 20 registered direct URLs—and no other
+  family—may open. No topical search, identity query, second hop, implementation
+  deep dive, core-01 reopen, or legacy readmission occurs.
 - Every authorized direct screen records actual identity, accessibility,
   relevance, scope, evidence posture, visible lineage, inspection extent, and a
   final disposition without treating the screen as deep reading or evidence.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
-- Work stops at the `awesome-screen-core-01` source-screening gate with its
+- Work stops at the `awesome-screen-core-02` source-screening gate with its
   complete source lifecycles, reconciled diagnostic provenance, schema
   friction, and recommendation; all other batches remain blocked.
 

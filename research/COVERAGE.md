@@ -82,6 +82,6 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews the first calibration and either
-changes the screening method or authorizes another exact batch. The remaining
-375 proposed new destinations remain unopened.
+Update this file after the authorized `awesome-screen-core-02` calibration is
+complete. Until then, its 20 destinations and the other 355 proposed new
+destinations remain unopened.

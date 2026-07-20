@@ -422,3 +422,54 @@ approval exchange adds no essential raw context.
 The maintainer explicitly approved the catalog gate, ratified the bounded
 Git-lineage interpretation, approved the 21-batch program as intended scope,
 and authorized only `awesome-screen-core-01` on 2026-07-20.
+
+## V2-D009 — First calibration approved and second calibration authorized
+
+**Status:** Approved
+**Date:** 2026-07-20
+
+### Decision
+
+Approve the `awesome-screen-core-01` direct-screen method and its nineteen
+`read_only` / one `excluded` dispositions. Later batches must retain the
+expanded per-family register fields established by that calibration: frozen
+family and occurrence joins; requested and observed identity; transport
+accessibility and substantive inspectability; exact inspected surface; visible
+version versus actual pin; repository-shallow state; actual source form;
+relevance; evidence posture; lineage or alias notice; catalog correction;
+schema friction; and final disposition.
+
+Authorize only the exact 20-family `awesome-screen-core-02` batch in
+`research/outline-development/awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`, file SHA-256
+`8ce00b2a284a2f789972f3322586497ff0450b734d3cf2d3ad8aec5d8f0169fc`.
+This decision supersedes only that batch's historical
+`proposed_not_authorized` field in the immutable proposal; membership,
+screening extent, and second-hop prohibition remain fixed.
+
+### Boundaries
+
+Core-02 may directly screen each registered URL only for identity,
+accessibility, inspectability, relevance, scope, source form, evidence posture,
+visible lineage, version or pin state, catalog correction, schema friction, and
+disposition. It does not authorize search, identity-resolution queries,
+second-hop or bibliography traversal, reopening core-01, implementation or
+technique deep reading, claims, evidence promotion, outline drafting, legacy
+readmission, or another batch.
+
+### Consequences and next gate
+
+Commit this authority checkpoint before the first core-02 interaction. Then
+screen the exact registered URLs, reconcile the diagnostic provenance, apply
+the approved register method, validate and review the completed package, and
+stop at the core-02 source-screening gate. No later batch opens implicitly.
+
+### Design-history disposition
+
+`none` — the approval and exact bounded authorization are fully represented by
+this canonical decision; the surrounding exchange adds no essential rationale.
+
+### Approval record
+
+The maintainer explicitly approved the proposed core-01 method and dispositions
+and authorized core-02 on 2026-07-20.

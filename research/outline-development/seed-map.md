@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** `awesome-screen-core-01` complete; maintainer screening gate current
+**Status:** `awesome-screen-core-02` authorized for direct screening
 
 **Authority:** Approved outline-development brief
 
@@ -464,8 +464,8 @@ The most consequential remaining structural questions are:
 The former Wave 2 proposal in `first-hop-register.md` was withdrawn before
 approval. The V2-D007 mapping of the complete pinned Awesome catalog and Walking
 Labs curriculum candidate is complete, and V2-D008 approved that catalog gate.
-The current source-screening gate controls whether any new outbound source may
-be selected or opened.
+V2-D009 approved the first calibration and authorizes only exact
+`awesome-screen-core-02` under the current direct-screen boundary.
 
 ## V2-D007 method correction
 
@@ -490,6 +490,14 @@ transport accessibility versus substantive inspectability, and multiple
 same-family opens. These are calibration results, not an adopted structure or
 cross-source finding. The joined register is
 `research/outline-development/awesome-screen-core-01.md`.
+
+## V2-D009 second direct-screen calibration
+
+The maintainer approved the core-01 method and dispositions and authorized only
+the exact 20-family `awesome-screen-core-02` batch. It must retain the expanded
+per-family register, use only registered direct URLs, and stop without search,
+identity resolution, core-01 reopening, second-hop traversal, deep reading,
+claim or evidence promotion, or outline drafting.
 
 ## Provenance state
 

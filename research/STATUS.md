@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Source-screening gate — `awesome-screen-core-01` complete
+**Current phase:** Direct-screen calibration — `awesome-screen-core-02` authorized
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,10 @@
 
 ## Current objective
 
-Present the completed `awesome-screen-core-01` direct-screen calibration for
-maintainer review. The gate must assess its source identities, access limits,
-actual relevance, scope, evidence posture, visible lineage, dispositions,
-catalog corrections, and schema friction before any later batch is authorized.
+Execute the exact 20-family `awesome-screen-core-02` direct-screen calibration
+using the core-01 method approved by the maintainer. Establish the registered
+fields without search, identity resolution, second-hop traversal, deep reading,
+evidence promotion, or outline drafting, then stop at its maintainer gate.
 
 ## Authority state
 
@@ -27,7 +27,7 @@ catalog corrections, and schema friction before any later batch is authorized.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 through V2-D008 were explicitly approved on 2026-07-20.
+- V2-D005 through V2-D009 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
@@ -116,9 +116,21 @@ That one authorized execution is now exhausted:
 - `research/outline-development/awesome-screen-core-01.md` is the durable join
   from every source lifecycle to its frozen family and occurrence context.
 
+Authorized by V2-D009:
+
+- the core-01 direct-screen method and all 19 `read_only` / one `excluded`
+  dispositions are approved;
+- later batches must retain the expanded per-family register fields established
+  by that calibration;
+- only `awesome-screen-core-02`, exactly as registered in the screening plan at
+  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now; and
+- each of its 20 sources receives direct screening only, with no query, core-01
+  reopen, second hop, bibliography traversal, or implementation deep dive.
+
 Still not authorized:
 
-- opening any catalog family outside `awesome-screen-core-01`;
+- opening any catalog family outside `awesome-screen-core-02`;
+- reopening any completed `awesome-screen-core-01` page;
 - querying even a registered family through search or identity resolution;
 - topical or ecosystem search or second-hop traversal;
 - implementation or technique deep dives;
@@ -128,8 +140,8 @@ Still not authorized:
 - drafting the subject outline itself; and
 - producing or adopting curriculum or learning artifacts.
 
-Reopening a completed batch page is also not authorized at this gate. The
-maintainer must explicitly authorize any later batch or method-changing access.
+The maintainer must explicitly authorize any later batch or method-changing
+access.
 
 ## Validation and review state
 
@@ -238,11 +250,11 @@ transmitted, the configured external reviewer did not review this revision, and
 it will not be retried or circumvented. V2-D006 records the one-time
 local-review fallback and its limits.
 
-The maintainer explicitly approved V2-D005 through V2-D008 on 2026-07-20.
+The maintainer explicitly approved V2-D005 through V2-D009 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
-amended brief is controlling. The first catalog calibration is complete, and no
-further source-opening authority is active while its maintainer gate is open.
+amended brief is controlling. The first catalog calibration is approved, and
+only its exact second calibration batch is active.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.
@@ -255,11 +267,9 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the completed `awesome-screen-core-01` source
+The maintainer will review the completed `awesome-screen-core-02` source
 lifecycles, accessibility and identity corrections, relevance and evidence-
 posture distribution, lineage and alias findings, schema friction, provenance
-audit, and recommendation to retain the corrected per-family register and, if
-accepted, authorize only the unchanged `awesome-screen-core-02` batch next. No
-other batch opens before that review, and the recommendation grants no current
-authority. Selective raw conversation packets remain separately gated per
-packet.
+audit, and any recommendation for the next exact batch or method correction. No
+other batch opens before that review. Selective raw conversation packets remain
+separately gated per packet.

@@ -16,10 +16,11 @@ The V2 authority reset and outline-development brief were approved on
 the Awesome repository must be treated as a comprehensive lead catalog and the
 Walking Labs course as a curriculum candidate. The maintainer approved the
 completed catalog gate, ratified its bounded lineage interpretation, approved
-the 21-batch screening program as intended scope, and authorized only the
-20-source `awesome-screen-core-01` calibration batch. That batch is complete
-and awaits maintainer review at its source-screening gate; its joined identity,
-accessibility, relevance, evidence-posture, and schema results are in
+the 21-batch screening program as intended scope, and first authorized the
+20-source `awesome-screen-core-01` calibration batch. That batch is complete;
+the maintainer approved its method and 19 `read_only` / one `excluded`
+dispositions and authorized only `awesome-screen-core-02` next. Core-01's joined
+identity, accessibility, relevance, evidence-posture, and schema results are in
 [`research/outline-development/awesome-screen-core-01.md`](research/outline-development/awesome-screen-core-01.md).
 No other batch is authorized. Work remains on
 `codex/harness-engineering-v2`, which began at commit

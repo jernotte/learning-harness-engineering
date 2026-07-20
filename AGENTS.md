@@ -20,9 +20,10 @@ Read these files in order:
 2. `research/STATUS.md`
 3. `research/DECISIONS.md`
 4. `research/LEGACY.md`
-5. `docs/source-provenance.md`
-6. `docs/provenance-architecture.md`
-7. Any active brief named by `research/STATUS.md`
+5. `docs/design-history.md`
+6. `docs/source-provenance.md`
+7. `docs/provenance-architecture.md`
+8. Any active brief named by `research/STATUS.md`
 
 `docs/research-charter.md`, `docs/methodology.md`, and
 `docs/research-plan.md` are interim V2 control documents until the maintainer
@@ -34,11 +35,10 @@ post-outline research sequence.
 The maintainer accepted the completed V2 repository reset on 2026-07-20. The
 current authorized work is the proposed outline-development brief at
 `research/outline-development/brief.md`. Do not inspect the three seed
-resources, follow
-their references, perform implementation deep dives, select cases, synthesize
-findings, produce curriculum, build a site, promote evidence maturity, or
-re-admit legacy evidence until the applicable maintainer gate recorded in
-`research/STATUS.md` has been satisfied.
+resources, follow their references, perform implementation deep dives, select
+cases, synthesize findings, produce curriculum, build a site, promote evidence
+maturity, or re-admit legacy evidence until the applicable maintainer gate
+recorded in `research/STATUS.md` has been satisfied.
 
 ## Clean-slate boundary
 
@@ -111,8 +111,21 @@ runtime shape. Unknown interactions fail closed. If authorized work exposes a
 consequential capture failure, stop and present the observed failure and a
 bounded correction proposal; do not silently weaken completeness.
 
-Raw transcript-prefix archiving is privacy-sensitive and requires explicit
-authorization before writing outside this repository.
+Full transcript-prefix archiving is privacy-sensitive and requires explicit
+authorization before writing outside this repository. It is not requested for
+Stage 4 and must not be used as selective design history.
+
+## Design history
+
+`research/DECISIONS.md` is the canonical decision record and must remain
+concise. Preserve raw conversation only through the consequential-selection
+policy in `docs/design-history.md`. Never commit raw packets, export a blanket
+transcript prefix for design history, or treat a packet as authority, subject
+evidence, or research-provenance completeness.
+
+Every external packet requires explicit maintainer approval of its exact
+selection manifest. Until a reviewed selective extractor exists, record a
+candidate disposition but do not copy conversation manually.
 
 ## Independent review and agreement
 

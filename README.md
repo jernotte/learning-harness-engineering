@@ -31,6 +31,8 @@ the proposed
 - [`research/DECISIONS.md`](research/DECISIONS.md) contains V2 decisions only.
 - [`research/LEGACY.md`](research/LEGACY.md) defines the archive and selective
   readmission boundary.
+- [`docs/design-history.md`](docs/design-history.md) defines consequential-only
+  conversation retention without turning Git into a chat log.
 - [`research/outline-development/brief.md`](research/outline-development/brief.md)
   is the proposed Stage 3 decision packet; it is not yet approved.
 - [`docs/source-provenance.md`](docs/source-provenance.md) defines evidence
@@ -45,6 +47,7 @@ docs/
   research-charter.md       interim V2 charter; final objectives remain pending
   methodology.md            outline-first interim method
   research-plan.md          current gated V2 plan
+  design-history.md         selective private conversation-retention policy
   source-provenance.md      source, claim, and completeness rules
   provenance-architecture.md retained technical capture architecture
 research/

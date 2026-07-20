@@ -30,12 +30,14 @@ Define audience, outcomes, scope choices, decisions the future research must
 support, organization and granularity criteria, sequence and dependency
 criteria, evidence rules, non-goals, checkpoints, and outline approval criteria.
 
-**Status:** Drafted and reviewed at
-`research/outline-development/brief.md`; awaiting maintainer approval. Seed
-inspection remains blocked.
+**Status:** Proposed and locally reviewed at
+`research/outline-development/brief.md`; awaiting separate maintainer decisions
+on V2-D005 and V2-D006. Seed inspection remains blocked.
 
-**Exit gate:** Maintainer approval plus an explicit transcript-archive privacy
-choice before any seed source is inspected.
+**Exit gate:** Maintainer approval before any seed source is inspected, plus an
+explicit disposition of proposed V2-D006 while the configured external reviewer
+remains unavailable. Selective design-history exports require separate
+packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Bounded seed investigation
 

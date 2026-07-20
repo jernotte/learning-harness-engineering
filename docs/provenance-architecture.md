@@ -58,6 +58,13 @@ prefix through the declared boundary with mode `0600`, then records its path,
 hash, size, lines, runtime source, and date. This operation is privacy-sensitive
 and requires explicit approval before it writes outside the repository.
 
+The command cannot produce a selective design-history packet: its verified
+archive always begins at line 1 and ends at the declared boundary. Do not
+repurpose or relabel it for the consequential-selection policy in
+`docs/design-history.md`. Selective packets are governance context rather than
+research-provenance completeness and require a separate reviewed extractor
+before first use.
+
 ### Audit generation
 
 `audit` validates events and produces machine-readable JSON plus human-readable

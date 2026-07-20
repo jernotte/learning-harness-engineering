@@ -190,3 +190,9 @@ fingerprint-verified archive record. Raw transcript prefixes may contain private
 prompts and tool output. Writing them outside this repository requires explicit
 privacy approval, owner-only permissions, an exact boundary, and recorded hash,
 byte count, line count, date, runtime source, and archive path.
+
+That full-boundary rule applies only when a research boundary is used for
+evidence promotion. Selective design-history packets follow
+`docs/design-history.md`; they are privacy-controlled governance context, never
+satisfy a `capture_archive` requirement, and do not establish provenance
+completeness. Stage 4 performs no promotion and requests no full-prefix archive.

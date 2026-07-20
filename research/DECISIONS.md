@@ -43,6 +43,11 @@ than duplicated in the active branch.
 The maintainer directed the full pivot, established the seed set and
 outline-first sequence, and approved creation of the bounded V2 goal.
 
+### Design-history disposition
+
+Candidate `V2-HIST-001` — the full conceptual pivot and its maintainer
+rationale. No conversation packet or external export is approved.
+
 ## V2-D002 — Repository triage and reset manifest
 
 **Status:** Approved
@@ -96,6 +101,12 @@ routine de-anchoring annotation changes the final implementation count to 29
 unchanged files and 14 adapted files; it does not change the approved retention
 or removal boundary.
 
+### Design-history disposition
+
+`none` — the approved reset manifest, alternatives, consequences, exact Git
+boundary, and review record already preserve the decision without needing raw
+dialogue.
+
 ## V2-D003 — Legacy readmission requires new V2 evidence work
 
 **Status:** Approved as part of V2-D001 and V2-D002
@@ -113,6 +124,11 @@ maturity and approval never transfer.
 
 Archived internal analyses can guide where to look, but cannot support a V2
 material claim on their own.
+
+### Design-history disposition
+
+`none` — the concise rule records the complete readmission constraint, and no
+separate exchange is needed to interpret it.
 
 ## V2-D004 — Completed authority reset accepted
 
@@ -139,6 +155,11 @@ until the maintainer approves the brief.
 After the reset evidence and limits were presented, the maintainer explicitly
 confirmed acceptance on 2026-07-20.
 
+### Design-history disposition
+
+`none` — the acceptance introduced no rationale or rejected alternative beyond
+the reset record and its validation evidence.
+
 ## V2-D005 — Outline-development brief
 
 **Status:** Proposed — awaiting maintainer decision
@@ -155,12 +176,92 @@ four-source extension, primary-only diagnostic provenance, claim and
 disposition rules, deterministic outputs, stop conditions, and blocking
 checkpoints through final outline approval.
 
-Transcript-prefix archiving remains a separate privacy choice. Approval of the
-brief alone does not authorize that external write, and Stage 4 cannot begin
-until the maintainer records Option A or Option B from the brief.
+Conversation retention follows `docs/design-history.md`. Repository decision
+records remain canonical and concise; Stage 4 requests no full-prefix archive.
+Owner-only raw packets are limited to approved consequential exchanges and
+require explicit per-packet manifest approval. They confer no research
+authority, subject evidence, or provenance completeness.
+
+### Design-history disposition
+
+Candidate `V2-HIST-002` — the maintainer's rejection of the full-prefix/none
+binary and requested selective-retention rationale. No conversation packet or
+external export is approved.
 
 ### Authority while proposed
 
 This entry records the decision presented for review; it grants no authority.
 Seed inspection, first-hop screening, skeleton drafting, and outline drafting
-remain blocked until the maintainer approves or revises the brief.
+remain blocked until the maintainer approves or revises the brief and resolves
+V2-D006 in favor of progress.
+
+## V2-D006 — One-time review fallback for the selective-history revision
+
+**Status:** Proposed — awaiting maintainer decision
+**Date:** 2026-07-20
+
+### Context
+
+The configured external Claude review covered the earlier brief but not the
+later selective-history revision. For the revised scope, the first invocation
+was rejected before transmission pending fresh, risk-informed authorization.
+The maintainer then authorized the exact V2 governance and provenance paths.
+A second invocation was rejected before transmission by a hard tenant rule that
+forbids that private repository transfer even with explicit authorization. No
+repository file was transmitted, and the reviewer must not be retried or
+circumvented for this revision.
+
+### Proposed decision
+
+For this documentation-only selective-history revision, accept the passing
+deterministic checks and bounded local read-only audits as a one-time fallback
+for the unavailable external pass. This does not call the revision externally
+reviewed, change the general configured-review requirement, authorize a future
+bypass, or cover implementation of the selective extractor, Stage 4 source
+work, evidence promotion, or later meaningful changes.
+
+If a compliant configured reviewer becomes available before this decision is
+approved, run it and withdraw the exception. Otherwise, Stage 4 requires the
+maintainer to approve both V2-D005 and this declared limit.
+
+### Alternatives considered
+
+- Leave Stage 3 blocked until the external destination becomes permitted.
+  This preserves the strongest separation but has no bounded resolution path.
+- Create a sanitized review packet. Rejected because the repository contract
+  requires direct inspection of actual artifacts, a packet summary is not a
+  substitute, and using one to evade the tenant rule is prohibited.
+- Discard the selective-history revision. Rejected because it would reinstate
+  the full-prefix-versus-none choice the maintainer explicitly rejected.
+
+### Evidence and limits
+
+- `node tools/provenance/test.mjs` passes.
+- `node tools/provenance/check-local-links.mjs` passes.
+- `git diff --check` passes.
+- A bounded content audit found four issues; all four were accepted and fixed:
+  exact reviewer-content retention, canonical packet content modes, complete
+  design-history dispositions, and verified owner-only permission modes.
+- A separate final infrastructure audit found no actionable issue against the
+  hybrid policy, packet boundary, provenance separation, or Stage 4 gate.
+- A follow-up privacy/minimum-necessary audit found no raw conversation,
+  credential, email, or secret value in the declared review scope and confirmed
+  the provenance fixtures are synthetic.
+
+The local agents share the Codex environment and are not equivalent to the
+configured external reviewer. Their agreement is useful review evidence, not
+independent external corroboration.
+
+### Consequences and reopening condition
+
+If approved, the brief may proceed to its maintainer-authorized Stage 4 without
+claiming that this revision completed external review. Future meaningful work
+still follows the configured review workflow. Reopen this decision if a
+compliant external destination becomes available before Stage 4 begins or if
+the selective-history change expands beyond the reviewed documentation scope.
+
+### Design-history disposition
+
+`none` — the repository record fully states the transport failure, alternatives,
+evidence, limit, and reopening condition; raw dialogue would add no necessary
+interpretive context.

@@ -54,6 +54,12 @@ needs semantic source events.
 repository. Obtain explicit permission before using it. The archive must use an
 exact boundary, owner-only permissions, and recorded integrity metadata.
 
+Stage 4 requests no such full-prefix archive. Selective conversation retention
+is governed by `docs/design-history.md` and is not a `capture_archive`, subject
+evidence, or proof of provenance completeness. The current tools cannot produce
+a canonical selective packet; do not copy conversation manually or change the
+provenance schema to simulate one.
+
 ## Validation status
 
 The retained deterministic suite is the inherited baseline. Files under

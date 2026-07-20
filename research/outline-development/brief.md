@@ -5,16 +5,25 @@
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
-**Approval effect:** Adopts the staged process contract below. Once the separate
-transcript-archive privacy choice is recorded, it authorizes only bounded seed
-mapping. Each later checkpoint separately unlocks the next stage; brief
-approval does not approve an outline or authorize substantive research.
+**Approval effect:** Adopts the staged process contract below. Once the linked
+review-limit decision V2-D006 is also resolved in favor of progress, it
+authorizes only bounded seed mapping. Each later checkpoint separately unlocks
+the next stage; brief approval does not approve an outline, authorize
+substantive research, or grant blanket conversation-export permission.
 
 ## Decision requested
 
 Approve, revise, or reject the proposed audience, outcomes, scope, decision
 targets, organizational criteria, sequence criteria, seed boundary, provenance
 treatment, checkpoints, non-goals, and outline approval test.
+
+The earlier configured external review covered the pre-hybrid version of this
+brief. The reviewer could not inspect the selective-history revision because a
+hard tenant rule rejected the declared repository transfer even after explicit
+maintainer authorization. Proposed V2-D006 records the exact limit and asks
+whether deterministic validation plus bounded local read-only audits may serve
+as a one-time fallback for this documentation-only revision. Brief approval and
+V2-D006 are separate decisions; Stage 4 requires both to permit progress.
 
 This brief deliberately contains no proposed harness-engineering taxonomy or
 subject outline. It defines how those proposals will be developed and judged.
@@ -299,6 +308,9 @@ first external interaction.
   recheck those values; the audit engine does not verify the fingerprint
   fields itself.
 - Target `complete_with_declared_manual_sources` provenance.
+  This diagnostic capture label does not assert durable raw-transcript
+  retention. Selective design-history packets cannot satisfy a full-boundary
+  archive or promotion requirement.
 - Give every opened source an identity, discovery path, inspected locations,
   depth, lineage, version or freshness state, and final disposition.
 - Preserve unopened direct references as leads, not evidence.
@@ -325,26 +337,34 @@ inclusion, exclusion, ordering, skeleton, or other outline choice. Source-native
 labels, inventories, topic extraction, and structural proposals that do not
 justify such a choice need no artificial claims and remain `read_only`.
 
-### Transcript-archive privacy decision
+### Selective design-history retention
 
-Durable native-boundary retention can use an owner-only,
-fingerprint-verified archive at
-`/Users/jernotte/dev/reference-materials/research/provenance-transcripts/v2-outline-seed-map/primary-rollout-prefix.jsonl`.
-The retained command archives the entire rollout prefix from line 1 through the
-declared boundary—not only the seed-investigation window—so it may contain
-pre-seed private prompts and tool output.
+Outline development follows `docs/design-history.md`.
+`research/DECISIONS.md` remains the canonical, concise record of consequential
+decisions and maintainer rationale; it must not become a transcript.
 
-- **Option A — recommended:** explicitly authorize the bounded external
-  archive at the exact path above when Stage 4 starts. Creation still requires
-  the normal filesystem approval at execution time.
-- **Option B:** decline the archive. Continue with a diagnostic audit, report
-  that durable transcript retention was not established, and make no breadth,
-  balance, absence, or saturation claim that depends on durable complete
-  capture.
+A minimal owner-only raw packet may be proposed for an architecture or scope
+pivot, major methodology or governance debate, essential maintainer rationale,
+or consequential reviewer disagreement and reconciliation. Routine edits,
+formatting, wording, typos, status exchanges, repeated agreement, routine
+review fixes, and ordinary iteration are excluded.
 
-General approval of this brief does not itself grant external archive-write
-permission. Stage 4 remains blocked until the maintainer selects Option A or
-Option B and the choice is recorded.
+Before any packet is exported, present its packet ID, source task, smallest
+coherent message set or ranges, inclusion reason, content mode, declared
+omissions or redactions, and external destination. Export requires explicit
+maintainer approval of that exact manifest. Brief approval grants no blanket
+export permission.
+
+Stage 4 requests no full-prefix archive. The retained `archive-boundary`
+command cannot produce a selective packet because it always stores the entire
+prefix from line 1. A reviewed selective extractor and verifier are required
+before the first packet export, but their implementation is not a prerequisite
+for seed inspection.
+
+Selective design-history packets are governance context, not research-source
+provenance, subject evidence, or proof of a complete native boundary. Their
+existence cannot support breadth, balance, absence, saturation, or evidence
+promotion.
 
 ## Outputs and checkpoints
 
@@ -374,7 +394,6 @@ Option B and the choice is recorded.
   is needed
 - `research/provenance/v2-outline-seed-map-audit.json`
 - `research/provenance/v2-outline-seed-map-audit.md`
-- with Option A, the exact external transcript-prefix archive named above
 
 Stage 5 writes `research/outline-development/skeletons.md`. Stage 6 iterates and
 ultimately approves `research/outline-development/outline.md`; approval changes
@@ -488,7 +507,11 @@ The maintainer should approve or revise each of these decisions:
 11. the nine-step maintainer-control sequence, including its conditional
     extension gate;
 12. non-goals and post-outline stop; and
-13. the nine-part detailed-outline approval test.
+13. the nine-part detailed-outline approval test; and
+14. selective design-history retention: concise canonical decision records,
+    consequential-only owner packets, explicit per-packet approval, and no
+    Stage 4 full-prefix archive.
 
-The transcript-archive privacy choice is separate: select Option A or Option B
-explicitly before Stage 4 begins.
+Brief approval adopts the selective design-history policy but authorizes no raw
+packet export. Each proposed packet requires explicit approval of its exact
+selection manifest.

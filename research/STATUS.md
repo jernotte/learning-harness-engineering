@@ -8,8 +8,9 @@
 
 ## Current objective
 
-Present the reviewed Stage 3 outline-development brief for maintainer approval
-without inspecting the seed resources or drafting the outline itself.
+Present the revised Stage 3 outline-development brief and the declared V2-D006
+review limit for maintainer decisions without inspecting the seed resources or
+drafting the outline itself.
 
 ## Authority state
 
@@ -83,10 +84,25 @@ inspected `.codex/claude-review.md` and passed with no findings, concerns,
 recommendations requiring immediate action, or inconclusive paths. The
 configured Stage 3 review workflow is complete.
 
+After that review, the maintainer rejected the full-prefix-versus-none archive
+binary and requested selective retention of consequential conversations only.
+The resulting brief and control-policy revision passed bounded content,
+infrastructure, and privacy audits after four accepted content-audit fixes.
+
+The prior external pass does not establish review completion for the revised
+files. A fresh scope-specific review was rejected before transmission pending
+risk-informed authorization. After the maintainer authorized the exact paths,
+a second attempt was rejected before transmission by a hard tenant rule that
+forbids that external transfer even with authorization. No repository file was
+transmitted, the configured external reviewer did not review this revision, and
+it will not be retried or circumvented. Proposed V2-D006 records a one-time
+local-review fallback and its limits for maintainer disposition.
+
 ## Next gate
 
 Present the outline-development brief and obtain explicit maintainer approval
 of its audience, outcomes, scope, decision targets, organizational and sequence
-criteria, seed boundary, checkpoints, non-goals, and approval test. Seed
-inspection remains blocked until that response is recorded and the maintainer
-explicitly selects transcript-archive Option A or Option B.
+criteria, seed boundary, checkpoints, non-goals, and approval test. Obtain a
+separate disposition of proposed V2-D006. Seed inspection remains blocked until
+both gates permit progress. Selective raw conversation packets are separately
+gated per packet and are not a prerequisite for Stage 4.

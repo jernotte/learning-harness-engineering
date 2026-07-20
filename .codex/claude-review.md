@@ -3,15 +3,14 @@
 ## Project goal
 
 Harness Engineering V2 is rebuilding its research program from a clean
-conceptual slate. The current implementation goal is a repository authority
-reset: preserve only content-independent research infrastructure, remove the
-retired conceptual and presentation corpus from the active branch, retain an
-exact archive/readmission boundary, and stop before seed inspection or outline
-development.
+conceptual slate. The authority reset is complete. V2-D005 and V2-D006 approve
+an outline-first process whose active implementation stage is the bounded
+`v2-outline-seed-map` task. The final goal continues through a
+maintainer-approved outline and stops before substantive research.
 
-The final goal continues through a maintainer-approved outline, but the current
-review scope is only the completed reset unless the review request says
-otherwise.
+The explicit review request determines whether the scope is the completed
+reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
+change. Never transfer authority or maturity between those scopes.
 
 ## Governing authority
 
@@ -21,6 +20,8 @@ Judge the change against the explicit review request and the current:
 - `research/STATUS.md`
 - `research/DECISIONS.md`
 - `research/LEGACY.md`
+- `research/outline-development/brief.md`
+- `docs/design-history.md`
 - `docs/source-provenance.md`
 - `docs/provenance-architecture.md`
 
@@ -28,7 +29,7 @@ Historical Git content and pre-pivot decisions are inspectable only when the
 review request declares them as comparison evidence. They are never active
 authority.
 
-## Reset acceptance criteria
+## Reset acceptance criteria when reset is in scope
 
 - The active worktree is attached to `codex/harness-engineering-v2` and its
   history descends from
@@ -49,6 +50,29 @@ authority.
 - The reset does not inspect seed sources, admit subject evidence, define a
   substantive taxonomy, or begin downstream research.
 
+## Stage 4 acceptance criteria when seed mapping is in scope
+
+- V2-D005 and V2-D006 were approved before the first seed interaction.
+- The task inspects exactly the three mandatory seeds before the seed-only
+  checkpoint and does not open a first-hop source early.
+- The repository seed is pinned to the observed commit, and the local PDF has
+  path, SHA-256, byte count, modification time, and an independent recheck.
+- The native capture boundary is declared before interaction, reconciled after
+  the first external interaction, and audited under the `diagnostic` profile
+  with honest `complete_with_declared_manual_sources` treatment.
+- Every opened source has identity, discovery path, inspected locations,
+  reading depth, lineage, freshness or version state, and final disposition.
+- The seed map separates source-native extraction from cross-source structural
+  judgment and does not adopt a seed taxonomy or claim field completeness.
+- The first-hop register counts exact direct-hop evidence, seed attribution,
+  unresolved outline decision, wave, query use, approval checkpoint, and open
+  state. No topical search, second hop, implementation deep dive, or legacy
+  readmission occurs.
+- Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
+  primary verification, and full source records. Nothing is promoted.
+- Work stops at the seed-only gate with an unopened Wave 1 proposal of at most
+  six source families.
+
 ## Quality bar
 
 - Authority is unambiguous across README, agent instructions, status, coverage,
@@ -60,9 +84,14 @@ authority.
   primary verification, and fail-closed unknown interactions.
 - Historical infrastructure claims remain accurately scoped by runtime and
   date.
-- No prose implies that the future outline's audience, objectives, technical
-  scope, organization, or sequence is already settled.
-- User changes outside the approved reset remain intact.
+- During reset review, no prose may pre-approve the future outline. During
+  outline development, treat only the choices explicitly approved in V2-D005
+  or a later maintainer decision as settled.
+- Outline-development artifacts label source-native terms, cross-source
+  inferences, structural proposals, and open questions without blurring them.
+- A source's organization, popularity, or repetition is never treated as proof
+  that the final outline should adopt it.
+- User changes outside the declared review scope remain intact.
 
 ## Non-negotiable invariants
 
@@ -70,7 +99,10 @@ authority.
   approve the outline, admit evidence, change scope, or promote maturity.
 - Do not recommend restoring pre-pivot concepts merely because they were
   previously reviewed or well evidenced.
-- Do not browse or inspect the three seed resources during reset review.
+- Do not browse or inspect the three seed resources during reset review. During
+  Stage 4 review, inspect only captured artifacts and evidence paths explicitly
+  authorized in the review request; do not widen the source boundary or follow
+  references independently.
 - Do not propose speculative provenance infrastructure. Report an actual defect
   in the retained implementation only when it affects the reset or deterministic
   evidence.
@@ -101,6 +133,9 @@ reported command output.
 - Claims that historical adapter validation proves current or universal
   runtime coverage.
 - Scope drift into seed analysis, outline content, or substantive research.
+- For Stage 4, early first-hop access, incomplete seed surfaces, unpinned source
+  identity, weak direct-hop evidence, cap/query drift, hidden taxonomy adoption,
+  unsupported cross-source judgment, or provenance overstatement.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's
@@ -108,7 +143,9 @@ control of later gates.
 
 ## Reviewer access
 
-The reviewer may inspect the current repository and the Git refs explicitly
-declared in the review request. External transcript archives and seed resources
-are outside the reset review unless specifically authorized as evidence paths.
-Review, reconciliation, and verification remain read-only.
+The reviewer may inspect the current repository, Git refs, and local evidence
+paths explicitly declared in the review request. External transcript archives,
+raw conversation packets, archived legacy material, seeds, and retained source
+content are out of scope unless the request names the exact path and records
+the required maintainer authorization. Review, reconciliation, and verification
+remain read-only.

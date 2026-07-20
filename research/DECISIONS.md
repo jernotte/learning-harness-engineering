@@ -162,10 +162,10 @@ the reset record and its validation evidence.
 
 ## V2-D005 — Outline-development brief
 
-**Status:** Proposed — awaiting maintainer decision
+**Status:** Approved
 **Date:** 2026-07-20
 
-### Proposed decision
+### Decision
 
 Approve `research/outline-development/brief.md` as the controlling Stage 4
 authorization. The proposal defines a builder-first audience, intended
@@ -188,16 +188,18 @@ Candidate `V2-HIST-002` — the maintainer's rejection of the full-prefix/none
 binary and requested selective-retention rationale. No conversation packet or
 external export is approved.
 
-### Authority while proposed
+### Approval and authority record
 
-This entry records the decision presented for review; it grants no authority.
-Seed inspection, first-hop screening, skeleton drafting, and outline drafting
-remain blocked until the maintainer approves or revises the brief and resolves
-V2-D006 in favor of progress.
+The maintainer explicitly approved V2-D005 and V2-D006 on 2026-07-20. This
+adopts every item in the brief approval checklist and makes
+`docs/design-history.md` binding. It authorizes only the bounded Stage 4 seed
+map and its narrower checkpoints. It does not authorize a first-hop open before
+the seed-only gate, substantive research, outline drafting, evidence promotion,
+legacy readmission, or any raw conversation export.
 
 ## V2-D006 — One-time review fallback for the selective-history revision
 
-**Status:** Proposed — awaiting maintainer decision
+**Status:** Approved
 **Date:** 2026-07-20
 
 ### Context
@@ -211,7 +213,7 @@ forbids that private repository transfer even with explicit authorization. No
 repository file was transmitted, and the reviewer must not be retried or
 circumvented for this revision.
 
-### Proposed decision
+### Decision
 
 For this documentation-only selective-history revision, accept the passing
 deterministic checks and bounded local read-only audits as a one-time fallback
@@ -220,9 +222,10 @@ reviewed, change the general configured-review requirement, authorize a future
 bypass, or cover implementation of the selective extractor, Stage 4 source
 work, evidence promotion, or later meaningful changes.
 
-If a compliant configured reviewer becomes available before this decision is
-approved, run it and withdraw the exception. Otherwise, Stage 4 requires the
-maintainer to approve both V2-D005 and this declared limit.
+At approval time no compliant configured reviewer was available, so the
+maintainer accepted this declared fallback. If a compliant reviewer becomes
+available before Stage 4 begins, run it and record the result without
+retroactively claiming that the original revision was externally reviewed.
 
 ### Alternatives considered
 
@@ -265,3 +268,10 @@ the selective-history change expands beyond the reviewed documentation scope.
 `none` — the repository record fully states the transport failure, alternatives,
 evidence, limit, and reopening condition; raw dialogue would add no necessary
 interpretive context.
+
+### Approval record
+
+The maintainer explicitly approved this one-time fallback together with
+V2-D005 on 2026-07-20. The limitation and reopening condition remain in force;
+this approval does not characterize the selective-history revision as
+externally reviewed or waive configured review for Stage 4 source work.

@@ -11,18 +11,20 @@ curriculum, and learning artifacts do not constrain V2.
 
 ## Current state
 
-The V2 authority reset was accepted on 2026-07-20. Current work is limited to
-the outline-development brief on `codex/harness-engineering-v2`, which began at
-commit `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
+The V2 authority reset and outline-development brief were approved on
+2026-07-20. Current work is the seed-only pass of the bounded outline-development
+task on `codex/harness-engineering-v2`, which began at commit
+`2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 
 The complete pre-pivot history remains recoverable from
 `codex/archive-pre-pivot-2026-07-20` at
 `071fd2d833c809723c881921956a50e46fa748f1`.
 
 No V2 subject outline, taxonomy, case set, synthesis, or reviewed finding
-currently exists. The named seed sources remain unopened pending approval of
-the proposed
-[`research/outline-development/brief.md`](research/outline-development/brief.md).
+currently exists. The approved
+[`research/outline-development/brief.md`](research/outline-development/brief.md)
+authorizes inspection of exactly three seed leads before the next maintainer
+gate; it does not adopt their taxonomies or authorize substantive research.
 
 ## Where to begin
 
@@ -34,7 +36,7 @@ the proposed
 - [`docs/design-history.md`](docs/design-history.md) defines consequential-only
   conversation retention without turning Git into a chat log.
 - [`research/outline-development/brief.md`](research/outline-development/brief.md)
-  is the proposed Stage 3 decision packet; it is not yet approved.
+  is the approved process contract for bounded seed mapping and outline gates.
 - [`docs/source-provenance.md`](docs/source-provenance.md) defines evidence
   capture and audit rules.
 - [`docs/provenance-architecture.md`](docs/provenance-architecture.md) documents
@@ -55,7 +57,7 @@ research/
   COVERAGE.md               admitted V2 subject coverage only
   DECISIONS.md              V2 decisions only
   LEGACY.md                 archive and selective-readmission contract
-  outline-development/      proposed brief; no subject outline yet
+  outline-development/      approved brief and bounded outline-development work
   provenance/validation/    retained infrastructure validation evidence
   sources/README.md         rules for future V2 source records
   templates/                taxonomy-neutral evidence templates only

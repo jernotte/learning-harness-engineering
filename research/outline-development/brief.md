@@ -1,29 +1,30 @@
 # Harness Engineering V2 — Outline-Development Brief
 
-- **Status:** Proposed for maintainer approval
+- **Status:** Approved by the maintainer on 2026-07-20
 - **Stage:** 3 — outline-development brief
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
-**Approval effect:** Adopts the staged process contract below. Once the linked
-review-limit decision V2-D006 is also resolved in favor of progress, it
-authorizes only bounded seed mapping. Each later checkpoint separately unlocks
-the next stage; brief approval does not approve an outline, authorize
-substantive research, or grant blanket conversation-export permission.
+**Approval effect:** V2-D005 and the linked review-limit decision V2-D006 are
+approved. This contract authorizes only bounded seed mapping. Each later
+checkpoint separately unlocks the next stage; brief approval does not approve
+an outline, authorize substantive research, or grant blanket
+conversation-export permission.
 
-## Decision requested
+## Approval record
 
-Approve, revise, or reject the proposed audience, outcomes, scope, decision
-targets, organizational criteria, sequence criteria, seed boundary, provenance
-treatment, checkpoints, non-goals, and outline approval test.
+The maintainer explicitly approved V2-D005 and V2-D006 on 2026-07-20, adopting
+the audience, outcomes, scope, decision targets, organizational criteria,
+sequence criteria, seed boundary, provenance treatment, checkpoints, non-goals,
+outline approval test, and selective design-history policy below.
 
 The earlier configured external review covered the pre-hybrid version of this
 brief. The reviewer could not inspect the selective-history revision because a
 hard tenant rule rejected the declared repository transfer even after explicit
-maintainer authorization. Proposed V2-D006 records the exact limit and asks
-whether deterministic validation plus bounded local read-only audits may serve
-as a one-time fallback for this documentation-only revision. Brief approval and
-V2-D006 are separate decisions; Stage 4 requires both to permit progress.
+maintainer authorization. Approved V2-D006 records the exact limit and accepts
+deterministic validation plus bounded local read-only audits as a one-time
+fallback for this documentation-only revision. It does not waive review for
+Stage 4 source work.
 
 This brief deliberately contains no proposed harness-engineering taxonomy or
 subject outline. It defines how those proposals will be developed and judged.
@@ -41,7 +42,7 @@ later support learning material, design guidance, or reference material, but a
 course structure will not control it unless the maintainer deliberately changes
 that priority.
 
-## Proposed audience
+## Approved audience
 
 ### Primary audience
 
@@ -82,7 +83,7 @@ reader to:
 The approved outline must state what understanding or decision each major
 section is intended to support. It need not answer the research questions yet.
 
-## Proposed technical boundary
+## Approved interim technical boundary
 
 Use this provisional membership test during outline development:
 
@@ -274,6 +275,10 @@ reasons.
 - Across the entire Stage 4 task, at most three exact-title or
   identifier-resolution queries may locate already named direct citations. Run
   one resolution query per tool call and count it in the first-hop register.
+- During the seed-only pass, such a query is permitted only when a seed's own
+  metadata is insufficient to identify an unopened Wave 1 candidate. Record
+  the resolution intent before the query; do not open the result before Wave 1
+  approval.
 - No topical search, ecosystem search, second-hop traversal, implementation
   deep dive, or bibliography harvesting is authorized.
 - Stop below the cap when additional candidates are unlikely to change the
@@ -404,12 +409,12 @@ judgment. It will not claim field coverage or saturation.
 
 ### Maintainer checkpoints
 
-1. **Brief gate — current.** Approve or revise this brief before any seed is
-   opened.
-2. **Seed-only gate.** After the three seeds are inspected, review their
-   source-native map, candidate register, provenance state, and the proposed
-   first wave of at most six first-hop sources. No first-hop source is opened
-   before approval.
+1. **Brief gate — satisfied.** V2-D005 and V2-D006 were approved before any
+   seed was opened.
+2. **Seed-only gate — current.** After the three seeds are inspected, review
+   their source-native map, candidate register, provenance state, and the
+   proposed first wave of at most six first-hop sources. No first-hop source is
+   opened before approval.
 3. **First-hop wave gate.** After wave one, review what changed and approve,
    revise, or reject the exact second wave of at most six sources.
 4. **Extension gate — conditional.** After wave two, if the 12-source cap is
@@ -485,9 +490,9 @@ omissions.
 
 Outline approval does not admit seed claims or authorize substantive research.
 
-## Brief approval checklist
+## Approved brief checklist
 
-The maintainer should approve or revise each of these decisions:
+The maintainer approved each of these decisions on 2026-07-20:
 
 1. builder-first primary audience and assumed baseline knowledge;
 2. design judgment and evidence-based evaluation as the leading outcomes;
@@ -512,6 +517,6 @@ The maintainer should approve or revise each of these decisions:
     consequential-only owner packets, explicit per-packet approval, and no
     Stage 4 full-prefix archive.
 
-Brief approval adopts the selective design-history policy but authorizes no raw
+This approval adopts the selective design-history policy but authorizes no raw
 packet export. Each proposed packet requires explicit approval of its exact
 selection manifest.

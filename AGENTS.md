@@ -32,13 +32,23 @@ post-outline research sequence.
 
 ## Current authorization
 
-The maintainer accepted the completed V2 repository reset on 2026-07-20. The
-current authorized work is the proposed outline-development brief at
-`research/outline-development/brief.md`. Do not inspect the three seed
-resources, follow their references, perform implementation deep dives, select
-cases, synthesize findings, produce curriculum, build a site, promote evidence
-maturity, or re-admit legacy evidence until the applicable maintainer gate
-recorded in `research/STATUS.md` has been satisfied.
+The maintainer accepted the completed V2 repository reset and approved V2-D005
+and V2-D006 on 2026-07-20. The current authorized work is the seed-only pass of
+the bounded Stage 4 task in `research/outline-development/brief.md`. Inspect
+only the three mandatory seeds and their complete outline-bearing surfaces.
+Pin the repository identity and fingerprint the local PDF before using its
+content. Do not open a first-hop source before the seed-only gate. Do not run a
+topical or ecosystem search, follow a second hop, perform an implementation
+deep dive, draft an outline, select cases, synthesize findings, produce
+curriculum, build a site, promote evidence maturity, or re-admit legacy
+evidence.
+
+The only search permitted during the seed-only pass is an exact-title or
+identifier-resolution query for an already named direct citation whose seed
+metadata is insufficient to identify an unopened Wave 1 candidate. The
+stage-wide maximum is three, each query runs in its own tool call, and every
+query is recorded in the first-hop register. Do not open a resolved result
+before Wave 1 approval.
 
 ## Clean-slate boundary
 

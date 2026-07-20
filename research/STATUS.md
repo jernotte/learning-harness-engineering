@@ -1,16 +1,17 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Outline-development brief — maintainer review
+**Current phase:** Bounded seed investigation — seed-only pass
 **Active subject-research cycle:** None
-**Active brief:** `research/outline-development/brief.md` — proposed, not approved
+**Active outline task:** `v2-outline-seed-map`
+**Active brief:** `research/outline-development/brief.md` — approved
 **Last updated:** 2026-07-20
 
 ## Current objective
 
-Present the revised Stage 3 outline-development brief and the declared V2-D006
-review limit for maintainer decisions without inspecting the seed resources or
-drafting the outline itself.
+Inspect exactly the three mandatory seeds under the approved diagnostic
+provenance boundary, produce their source-native seed map and candidate
+first-hop register, then pause for the seed-only maintainer gate.
 
 ## Authority state
 
@@ -25,21 +26,30 @@ drafting the outline itself.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
+- V2-D005 and V2-D006 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
 Authorized now:
 
-- define the outline-development brief's audience, intended outcomes, scope and
-  exclusions, decision targets, organization and sequence criteria, evidence
-  boundary, non-goals, checkpoints, and approval test;
-- update V2 control state for this gate;
-- present the brief for maintainer approval.
+- initialize task `v2-outline-seed-map` and its diagnostic provenance boundary;
+- inspect the complete outline-bearing surface of the two PDF seeds;
+- inspect the complete category/list structure and repository-local framing of
+  the repository seed while pinning its observed commit;
+- extract source-native vocabulary, topic candidates, structure, prerequisites,
+  assumptions, reference shape, omissions, tensions, counterframes, anchoring
+  hazards, and organizational possibilities;
+- use, only if seed metadata cannot identify an unopened Wave 1 candidate, an
+  exact-title or identifier-resolution query under the stage-wide three-query
+  cap, one query per tool call and recorded before use; and
+- prepare, but do not open, an exact first-hop Wave 1 proposal of at most six
+  direct seed references.
 
 Not authorized:
 
-- inspecting the three seed resources;
-- following seed references;
+- opening any first-hop source before the seed-only maintainer gate;
+- topical or ecosystem search, second-hop traversal, or bibliography
+  harvesting;
 - implementation or technique deep dives;
 - case selection, synthesis, curriculum, or site work;
 - evidence maturity promotion;
@@ -78,8 +88,8 @@ maintainer explicitly authorized export of the declared V2 review scope, the
 review ran and found no correctness findings. Three immediate concerns were
 accepted and fixed: the resolution-query ceiling is stage-wide, the optional
 extension has a named gate, and the decision packet's rendering is corrected.
-The recommendation to version the reviewer contract for Stage 4 is accepted
-and deferred until this brief is approved. The focused verification directly
+The recommendation to version the reviewer contract for Stage 4 was accepted.
+The focused verification directly
 inspected `.codex/claude-review.md` and passed with no findings, concerns,
 recommendations requiring immediate action, or inconclusive paths. The
 configured Stage 3 review workflow is complete.
@@ -95,14 +105,19 @@ risk-informed authorization. After the maintainer authorized the exact paths,
 a second attempt was rejected before transmission by a hard tenant rule that
 forbids that external transfer even with authorization. No repository file was
 transmitted, the configured external reviewer did not review this revision, and
-it will not be retried or circumvented. Proposed V2-D006 records a one-time
-local-review fallback and its limits for maintainer disposition.
+it will not be retried or circumvented. V2-D006 records the one-time
+local-review fallback and its limits.
+
+The maintainer explicitly approved V2-D005 and V2-D006 on 2026-07-20. The
+one-time fallback is closed for the selective-history documentation revision
+only; it does not waive configured review for Stage 4 source work. The approved
+brief is now controlling, and the seed-only pass is authorized.
+
+The reviewer contract is now versioned with bounded Stage 4 criteria.
 
 ## Next gate
 
-Present the outline-development brief and obtain explicit maintainer approval
-of its audience, outcomes, scope, decision targets, organizational and sequence
-criteria, seed boundary, checkpoints, non-goals, and approval test. Obtain a
-separate disposition of proposed V2-D006. Seed inspection remains blocked until
-both gates permit progress. Selective raw conversation packets are separately
-gated per packet and are not a prerequisite for Stage 4.
+After inspecting only the three seeds, present their source-native map,
+candidate register, provenance state, and proposed first-hop Wave 1 of at most
+six sources. No first-hop source may be opened before that maintainer decision.
+Selective raw conversation packets remain separately gated per packet.

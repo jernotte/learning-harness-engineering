@@ -2,9 +2,8 @@
 
 ## Status and purpose
 
-This policy is proposed with the Stage 3 outline-development brief. It becomes
-binding only if the maintainer approves that brief or separately approves this
-policy.
+This policy was approved with V2-D005 on 2026-07-20 and is binding for the V2
+outline-development program.
 
 The repository should preserve why consequential design decisions changed
 without becoming a chat log. `research/DECISIONS.md` remains the canonical,

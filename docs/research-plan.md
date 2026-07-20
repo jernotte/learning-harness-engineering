@@ -30,16 +30,15 @@ Define audience, outcomes, scope choices, decisions the future research must
 support, organization and granularity criteria, sequence and dependency
 criteria, evidence rules, non-goals, checkpoints, and outline approval criteria.
 
-**Status:** Proposed and locally reviewed at
-`research/outline-development/brief.md`; awaiting separate maintainer decisions
-on V2-D005 and V2-D006. Seed inspection remains blocked.
+**Status:** V2-D005 and V2-D006 approved on 2026-07-20.
 
-**Exit gate:** Maintainer approval before any seed source is inspected, plus an
-explicit disposition of proposed V2-D006 while the configured external reviewer
-remains unavailable. Selective design-history exports require separate
-packet-specific approval but do not otherwise block Stage 4.
+**Exit gate:** Satisfied. Selective design-history exports still require
+separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Bounded seed investigation
+
+**Status:** Active at the seed-only pass. No first-hop source may be opened
+before the seed-only maintainer checkpoint.
 
 Using the approved provenance path, inspect only:
 
@@ -47,11 +46,10 @@ Using the approved provenance path, inspect only:
 - `https://github.com/ai-boost/awesome-harness-engineering`
 - `/Users/jernotte/Downloads/2606.24937v1_copy.pdf`
 
-Screen only the first-hop references needed to understand the outline space.
-Extract vocabulary, topics, assumptions, reference structure, omissions,
-tensions, and organizational possibilities without promoting findings.
-
-**Status:** Not authorized.
+At later maintainer-approved waves, screen only the first-hop references needed
+to understand the outline space. Throughout Stage 4, extract vocabulary,
+topics, assumptions, reference structure, omissions, tensions, and
+organizational possibilities without promoting findings.
 
 ## Stage 5 — Competing outline skeletons
 

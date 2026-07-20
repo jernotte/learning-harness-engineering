@@ -98,12 +98,12 @@ cannot verify its own evidence for promotion.
 
 ## Outline-development boundary
 
-The proposed outline-development brief at
-`research/outline-development/brief.md` declares the capture boundary and audit
-treatment for maintainer approval before seed inspection. The outline should
-avoid unnecessary subject-matter claims. Maintainer approval of an outline
-approves objectives, scope, organization, and sequence; it does not promote
-seed statements into research findings.
+The approved outline-development brief at
+`research/outline-development/brief.md` controls the Stage 4 capture boundary
+and audit treatment. The outline should avoid unnecessary subject-matter
+claims. Maintainer approval of an outline approves objectives, scope,
+organization, and sequence; it does not promote seed statements into research
+findings.
 
 Every opened seed or first-hop source still requires source events and a final
 disposition. If the outline or supporting rationale must make a material factual

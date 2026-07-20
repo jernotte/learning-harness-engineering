@@ -37,8 +37,10 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Bounded seed investigation
 
-**Status:** Active at the seed-only pass. No first-hop source may be opened
-before the seed-only maintainer checkpoint.
+**Status:** Active at the first-hop wave gate. The seed-only pass and the exact
+six-source Wave 1 are complete. No Wave 2 identity query or source may be
+opened before the maintainer approves, revises, or rejects the registered
+proposal.
 
 Using the approved provenance path, inspect only:
 

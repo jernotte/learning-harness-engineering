@@ -38,6 +38,19 @@ assert.equal(passed.searches.length, 2);
 assert.equal(passed.sources.length, 5);
 assert.equal(passed.sources.find((source) => source.source_id === "fxp-source-e").opened, false);
 assert.equal(passed.sources.find((source) => source.source_id === "fxp-source-b").disposition, "read_only");
+
+const multiWindowAudit = buildAudit([
+  { event_id: "multi-open-a-1", timestamp: "2026-07-11T00:00:00Z", agent: "fixture", cycle: "multi-window", pass: "wave-1", event_type: "source_opened", source_id: "multi-source-a", canonical_url: "https://example.com/a", host: "example.com", organization: "Example", source_type: "web source", direct_discovery_reason: "fixture" },
+  { event_id: "multi-open-a-2", timestamp: "2026-07-11T00:01:00Z", agent: "fixture", cycle: "multi-window", pass: "wave-2", event_type: "source_opened", source_id: "multi-source-a", canonical_url: "https://example.com/a", host: "example.com", organization: "Example", source_type: "web source", direct_discovery_reason: "fixture reinspection" },
+  { event_id: "multi-open-b", timestamp: "2026-07-11T00:01:01Z", agent: "fixture", cycle: "multi-window", pass: "wave-2", event_type: "source_opened", source_id: "multi-source-b", canonical_url: "https://example.org/b", host: "example.org", organization: "Example B", source_type: "web source", direct_discovery_reason: "fixture" },
+  { event_id: "multi-metrics-1", timestamp: "2026-07-11T00:02:00Z", agent: "fixture", cycle: "multi-window", pass: "wave-1", event_type: "capture_metrics", interaction_count: 2, automatic_event_count: 2, manual_capture_actions: 1, semantic_batch_actions: 1, semantic_decision_count: 1 },
+  { event_id: "multi-metrics-2", timestamp: "2026-07-11T00:02:01Z", agent: "fixture", cycle: "multi-window", pass: "wave-2", event_type: "capture_metrics", interaction_count: 3, automatic_event_count: 3, manual_capture_actions: 0, semantic_batch_actions: 1, semantic_decision_count: 2 },
+], { root, cycle: "multi-window", completeness: "unknown" });
+assert.equal(multiWindowAudit.counts.opened, 2, "reopening a source in a later window must not increase the unique-source count");
+assert.deepEqual(multiWindowAudit.host_distribution, { "example.com": 1, "example.org": 1 }, "host distribution must count unique opened sources");
+assert.equal(multiWindowAudit.counts.manual_capture_actions, 1, "combined audit must sum capture actions across metric batches");
+assert.equal(multiWindowAudit.counts.semantic_batch_actions, 2, "combined audit must sum semantic batches across metric batches");
+
 const noBoundary = buildAudit(readJsonl(fixture("bounded-pass.jsonl")).filter((event) => !["capture_boundary", "capture_observation"].includes(event.event_type)), { root, cycle: "bounded-validation", completeness: "complete" });
 assert(noBoundary.errors.some((item) => item.code === "missing_capture_boundary"));
 const reconstructed = buildAudit(readJsonl(fixture("bounded-pass.jsonl")), { root, cycle: "bounded-validation", completeness: "reconstructed" });

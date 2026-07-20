@@ -1,0 +1,232 @@
+{
+  "timestamp": "2026-07-20T16:22:00Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "first-hop-wave-1-observation-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-wave-1-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-5492669a7293ae6f6658",
+      "previous_resolution_event_id": "native-5492669a7293ae6f6658",
+      "resolution": "linked",
+      "reason": "Timestamp-only unified-exec call marking the declared Wave 1 capture start.",
+      "linked_event_ids": ["v2-outline-seed-map-wave-1-native-timestamps"]
+    },
+    {
+      "observation_id": "native-d7b67c3923afa4c47fdf",
+      "previous_resolution_event_id": "native-d7b67c3923afa4c47fdf",
+      "resolution": "linked",
+      "reason": "Timestamp-only unified-exec call marking the immediate post-open reconciliation boundary.",
+      "linked_event_ids": ["v2-outline-seed-map-wave-1-native-timestamps"]
+    },
+    {
+      "observation_id": "native-cd08f85b29b6ba88e11f",
+      "previous_resolution_event_id": "native-cd08f85b29b6ba88e11f",
+      "resolution": "linked",
+      "reason": "Follow-up ranges were opened only within the six approved Wave 1 source families.",
+      "linked_event_ids": [
+        "v2-wave1-openai-native-inspection",
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection",
+        "v2-wave1-building-effective-agents-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-6da167fe172f9b13c2f5",
+      "previous_resolution_event_id": "native-6da167fe172f9b13c2f5",
+      "resolution": "linked",
+      "reason": "The call loaded the approved PDF runtime and prepared temporary space for the four approved preprints.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-f6c50312a4a774caf5a1",
+      "previous_resolution_event_id": "native-f6c50312a4a774caf5a1",
+      "resolution": "linked",
+      "reason": "Direct PDF downloads remained within the four approved arXiv source families.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-41c09114ca6fecab5868",
+      "previous_resolution_event_id": "native-41c09114ca6fecab5868",
+      "resolution": "linked",
+      "reason": "The call inspected metadata and prepared structural processing for the four approved preprints.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-9a3531f46ccb27821b8e",
+      "previous_resolution_event_id": "native-9a3531f46ccb27821b8e",
+      "resolution": "linked",
+      "reason": "The call extracted full text from the four approved preprints for structural inspection.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-07acf0227b46893e9939",
+      "previous_resolution_event_id": "native-07acf0227b46893e9939",
+      "resolution": "linked",
+      "reason": "The call extracted headings and structural locations from the four approved preprints.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-fbb84e03c20c66e2d824",
+      "previous_resolution_event_id": "native-fbb84e03c20c66e2d824",
+      "resolution": "linked",
+      "reason": "The call created structural subsets of the four approved preprints for visual verification.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-41a898a3c69b97757a1b",
+      "previous_resolution_event_id": "native-41a898a3c69b97757a1b",
+      "resolution": "linked",
+      "reason": "The call rendered selected structural pages from the four approved preprints.",
+      "linked_event_ids": [
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-34022e5ca7aa5136668e",
+      "previous_resolution_event_id": "native-34022e5ca7aa5136668e",
+      "resolution": "linked",
+      "reason": "Visual inspection of eleven selected structural pages from the approved constitutive-definition preprint.",
+      "linked_event_ids": ["v2-wave1-harness-conditions-native-inspection"]
+    },
+    {
+      "observation_id": "native-855513ccf01f58bd21b7",
+      "previous_resolution_event_id": "native-855513ccf01f58bd21b7",
+      "resolution": "linked",
+      "reason": "Visual inspection of fifteen selected structural pages from the approved architecture-decision preprint.",
+      "linked_event_ids": ["v2-wave1-architecture-decisions-native-inspection"]
+    },
+    {
+      "observation_id": "native-280b232e8cd7faca92a7",
+      "previous_resolution_event_id": "native-280b232e8cd7faca92a7",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved scheduler-framework preprint.",
+      "linked_event_ids": ["v2-wave1-scheduler-framework-native-inspection"]
+    },
+    {
+      "observation_id": "native-6f171fce2c8566ee8477",
+      "previous_resolution_event_id": "native-6f171fce2c8566ee8477",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved scheduler-framework preprint.",
+      "linked_event_ids": ["v2-wave1-scheduler-framework-native-inspection"]
+    },
+    {
+      "observation_id": "native-b7b382263cf59ab34dd0",
+      "previous_resolution_event_id": "native-b7b382263cf59ab34dd0",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved scheduler-framework preprint.",
+      "linked_event_ids": ["v2-wave1-scheduler-framework-native-inspection"]
+    },
+    {
+      "observation_id": "native-eb6abdfca9f3405896c6",
+      "previous_resolution_event_id": "native-eb6abdfca9f3405896c6",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved scheduler-framework preprint.",
+      "linked_event_ids": ["v2-wave1-scheduler-framework-native-inspection"]
+    },
+    {
+      "observation_id": "native-1f64cc9069aee0a62409",
+      "previous_resolution_event_id": "native-1f64cc9069aee0a62409",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved natural-language-harness preprint.",
+      "linked_event_ids": ["v2-wave1-natural-language-harnesses-native-inspection"]
+    },
+    {
+      "observation_id": "native-87c3ab46270783405e12",
+      "previous_resolution_event_id": "native-87c3ab46270783405e12",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved natural-language-harness preprint.",
+      "linked_event_ids": ["v2-wave1-natural-language-harnesses-native-inspection"]
+    },
+    {
+      "observation_id": "native-c32ba9ba490d7a75638a",
+      "previous_resolution_event_id": "native-c32ba9ba490d7a75638a",
+      "resolution": "linked",
+      "reason": "Visual inspection of selected pages from the approved natural-language-harness preprint.",
+      "linked_event_ids": ["v2-wave1-natural-language-harnesses-native-inspection"]
+    },
+    {
+      "observation_id": "native-609ffb5387d095de3422",
+      "previous_resolution_event_id": "native-609ffb5387d095de3422",
+      "resolution": "linked",
+      "reason": "Follow-up ranges completed inspection of the already approved Anthropic source family without following any link.",
+      "linked_event_ids": ["v2-wave1-building-effective-agents-native-inspection"]
+    },
+    {
+      "observation_id": "native-bb7ed675fd9cfed75b4e",
+      "previous_resolution_event_id": "native-bb7ed675fd9cfed75b4e",
+      "resolution": "not_research",
+      "reason": "The call only located bundled workspace dependencies and did not open or inspect subject evidence."
+    },
+    {
+      "observation_id": "native-33e6a6d4684630de6cea",
+      "previous_resolution_event_id": "native-33e6a6d4684630de6cea",
+      "resolution": "linked",
+      "reason": "Follow-up ranges completed bounded reinspection of the mandatory asixiv seed's references for the unopened Wave 2 proposal.",
+      "linked_event_ids": ["v2-outline-seed-map-wave-1-seed-reinspection"]
+    },
+    {
+      "observation_id": "native-ff95cff7f3a1f83a409a",
+      "previous_resolution_event_id": "native-ff95cff7f3a1f83a409a",
+      "resolution": "linked",
+      "reason": "Native web event paired with follow-up ranges within the six approved Wave 1 source families.",
+      "linked_event_ids": [
+        "v2-wave1-openai-native-inspection",
+        "v2-wave1-harness-conditions-native-inspection",
+        "v2-wave1-architecture-decisions-native-inspection",
+        "v2-wave1-scheduler-framework-native-inspection",
+        "v2-wave1-natural-language-harnesses-native-inspection",
+        "v2-wave1-building-effective-agents-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-d6c95b5b6f280b6a429a",
+      "previous_resolution_event_id": "native-d6c95b5b6f280b6a429a",
+      "resolution": "linked",
+      "reason": "Native web event paired with follow-up ranges within the approved Anthropic source family.",
+      "linked_event_ids": ["v2-wave1-building-effective-agents-native-inspection"]
+    },
+    {
+      "observation_id": "native-614e6c675cb5166d3e88",
+      "previous_resolution_event_id": "native-614e6c675cb5166d3e88",
+      "resolution": "linked",
+      "reason": "Native web event paired with bounded same-seed reference reinspection; no cited source was opened.",
+      "linked_event_ids": ["v2-outline-seed-map-wave-1-seed-reinspection"]
+    }
+  ]
+}

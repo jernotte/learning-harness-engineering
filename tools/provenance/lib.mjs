@@ -969,7 +969,14 @@ export function buildAudit(events, options = {}) {
   const waivers = events.filter((event) => event.event_type === "provenance_waiver");
   const repositoryObservations = events.filter((event) => event.event_type === "repository_inspected");
   const eventIds = new Set(events.map((event) => event.event_id));
-  const captureMetrics = events.filter((event) => event.event_type === "capture_metrics").at(-1);
+  const captureMetricEvents = events.filter((event) => event.event_type === "capture_metrics");
+  const captureMetrics = captureMetricEvents.length ? {
+    interaction_count: captureMetricEvents.reduce((sum, event) => sum + event.interaction_count, 0),
+    automatic_event_count: captureMetricEvents.reduce((sum, event) => sum + event.automatic_event_count, 0),
+    manual_capture_actions: captureMetricEvents.reduce((sum, event) => sum + event.manual_capture_actions, 0),
+    semantic_batch_actions: captureMetricEvents.reduce((sum, event) => sum + event.semantic_batch_actions, 0),
+    semantic_decision_count: captureMetricEvents.reduce((sum, event) => sum + event.semantic_decision_count, 0),
+  } : null;
   const plannedChannels = new Set(events.filter((event) => event.event_type === "coverage_plan").flatMap((event) => event.planned_channels || []));
   const actualChannels = unique(effectiveSearches, "channel");
   if (repositoryObservations.length) actualChannels.add("local repository inspection");
@@ -1005,7 +1012,8 @@ export function buildAudit(events, options = {}) {
   }
 
   const hostCounts = {};
-  for (const event of opened) if (event.host) hostCounts[event.host] = (hostCounts[event.host] || 0) + 1;
+  const uniqueOpenedSources = new Map(opened.map((event) => [event.source_id, event]));
+  for (const event of uniqueOpenedSources.values()) if (event.host) hostCounts[event.host] = (hostCounts[event.host] || 0) + 1;
   const totalHosts = Object.values(hostCounts).reduce((sum, count) => sum + count, 0);
   for (const [host, count] of Object.entries(hostCounts)) {
     if (totalHosts >= 3 && count / totalHosts >= (options.concentrationThreshold || 0.6)) {

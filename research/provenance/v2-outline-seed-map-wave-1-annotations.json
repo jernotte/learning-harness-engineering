@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-07-20T16:21:00Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "first-hop-wave-1-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-wave-1-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-293d0f9661696880",
+      "disposition": "read_only",
+      "reason": "This first-party engineering retrospective was used only to test whether an environment-, feedback-, and failure-centered journey could organize later outline work. Its reported outcomes remain source-reported and coding-, organization-, and greenfield-specific; no claim or outline choice is promoted here.",
+      "inspection_extent": "full_substantive",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": [
+        "complete article body and section sequence",
+        "reported experiment setting and throughput figures",
+        "repository and application legibility sections",
+        "architecture enforcement, merge philosophy, autonomy, entropy, and remaining-unknowns sections"
+      ],
+      "inspection_basis": "Complete direct-page inspection of the live article published 2026-02-11; treated as first-party practitioner evidence, not independent outcome validation."
+    },
+    {
+      "source_id": "auto-source-1afa2530b3e1f412",
+      "disposition": "read_only",
+      "reason": "The paper's constitutive test and neighboring-concept exclusions were used as a contested boundary instrument. Its conceptual analysis and six coding-harness applications do not establish effectiveness or authority over V2's broader interim boundary.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": [
+        "metadata, abstract, introduction, and research questions",
+        "genealogy and constitutive definition T1-T4",
+        "boundary delimitation against five neighboring concepts",
+        "six application cases",
+        "four design-tension axes, conclusion, references, and AI-use declaration"
+      ],
+      "inspection_basis": "Full-text extraction of the 21-page 2026-06-10 preprint plus visual review of eleven selected structural pages; structural screening rather than exhaustive claim verification."
+    },
+    {
+      "source_id": "auto-source-523b6fa0a1bdab02",
+      "disposition": "read_only",
+      "reason": "The study's decision dimensions, recurring bundles, and explicit non-exhaustiveness were used to test a decision-centered organizing possibility. Its public-project sample and descriptive associations do not establish causal outcomes, field saturation, or a V2 taxonomy.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": [
+        "metadata, abstract, introduction, research questions, and related work",
+        "70-project selection, evidence modes, analysis protocol, and five focal dimensions",
+        "dimension distributions, co-occurrence method, and five interpretive patterns",
+        "designer guidance, limitations, threats to validity, conclusion, corpus appendix, and search protocol"
+      ],
+      "inspection_basis": "Full-text extraction of the 45-page 2026-04-20 preprint plus visual review of fifteen selected structural pages; interpreted as a protocol-guided descriptive study."
+    },
+    {
+      "source_id": "auto-source-107da49445a23241",
+      "disposition": "read_only",
+      "reason": "The scheduler continuum, commitment model, recovery protocol, and declared trade-offs were used to test whether execution topology should be a primary spine or a subordinate decision lens. The proposed Graph Harness has no completed empirical validation, and its 70-project survey substantially overlaps the same author's architecture study, so the two are not independent corroboration.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": [
+        "metadata, abstract, introduction, and related work",
+        "scheduler-unified framework and continuum",
+        "planning-failure analysis, design principles, static execution commitment, state/recovery, and join semantics",
+        "attributable experimental protocol, discussion, limitations, conclusion, survey limitations, methodology, and complete project-list surface"
+      ],
+      "inspection_basis": "Full-text extraction of the 50-page 2026-04-13 preprint plus visual review of sixteen selected structural pages; theoretical proposal and unreviewed survey treated separately from empirical results."
+    },
+    {
+      "source_id": "auto-source-88fd75feed929931",
+      "disposition": "read_only",
+      "reason": "The natural-language/runtime/code ownership boundary and the paper's benchmark design were used to test representation as an implementation decision and auditability concern. Reported feasibility, mechanism metrics, and ablations remain specific to the paper's IHR, models, harness families, and benchmark conditions.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": [
+        "metadata, abstract, introduction, definitions, and four-layer NLAH+IHR architecture",
+        "research questions, harness realizations, benchmarks, experimental setup, and main result tables",
+        "mechanism analysis, module ablations, related work, conclusion, trajectory diagnostic",
+        "natural-language/code expressivity boundary, runtime implementation details, limitations, and risks"
+      ],
+      "inspection_basis": "Full-text extraction of the 22-page 2026-05-18 preprint plus visual review of twelve selected structural pages; source-reported experiment rather than independent reproduction."
+    },
+    {
+      "source_id": "auto-source-38c43325a50c50c6",
+      "disposition": "read_only",
+      "reason": "This first-party practitioner article was used to test whether task shape and the workflow-versus-agent decision should precede mechanism coverage. Its customer and internal experience is useful framing but not controlled comparative proof or a pre-approved taxonomy.",
+      "inspection_extent": "full_substantive",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": [
+        "complete article body published 2024-12-19",
+        "workflow-versus-agent definition and when-not-to-use-agents guidance",
+        "augmented-LLM building block and five workflow patterns",
+        "agent loop, combination guidance, summary, customer-support and coding examples",
+        "tool-interface appendix"
+      ],
+      "inspection_basis": "Complete direct-page inspection of the live Anthropic Engineering article; treated as vendor practitioner guidance and explicitly bounded by its source-reported experience."
+    }
+  ],
+  "artifact": {
+    "artifact_id": "v2-outline-seed-map-structural-map",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/seed-map.md"
+  },
+  "claims": []
+}

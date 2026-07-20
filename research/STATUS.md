@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** First-hop Wave 1 — approved and in progress
+**Current phase:** First-hop wave gate — Wave 1 complete, Wave 2 proposed
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,9 +9,9 @@
 
 ## Current objective
 
-Inspect exactly the six approved first-hop Wave 1 source families for their
-effect on the recorded outline decisions, then stop at the first-hop wave gate
-with an exact unopened Wave 2 proposal or a reason to stop below the cap.
+Present the completed six-source Wave 1 structural map and exact unopened
+six-source Wave 2 proposal for maintainer review. Stop before any Wave 2
+identity query or source open.
 
 ## Authority state
 
@@ -30,7 +30,7 @@ with an exact unopened Wave 2 proposal or a reason to stop below the cap.
 
 ## Current authorization
 
-Completed within the approved seed-only pass:
+Completed within the approved seed-only pass and Wave 1:
 
 - initialized task `v2-outline-seed-map` and its diagnostic provenance boundary;
 - inspected the complete eleven-page asixiv seed and the complete
@@ -43,14 +43,20 @@ Completed within the approved seed-only pass:
 - extracted source-native vocabulary, topic candidates, structure,
   prerequisites, assumptions, reference shape, omissions, tensions,
   counterframes, anchoring hazards, and organizational possibilities; and
-- prepared an exact unopened first-hop Wave 1 proposal of six direct seed
-  references.
+- prepared an exact first-hop Wave 1 proposal of six direct seed references;
+- received maintainer approval for that exact wave without revision;
+- directly inspected all six approved source families for structural effect,
+  assigned each a `read_only` disposition, and preserved their assumptions,
+  limits, counterframes, and lineage risks;
+- recorded that the two Hu Wei papers have substantial corpus-lineage overlap
+  and therefore do not independently corroborate one another;
+- recorded the resulting pressure toward a constraints-to-decisions journey
+  without adopting it as an outline; and
+- prepared an exact unopened Wave 2 proposal that shifts attribution away from
+  the curated repository and targets the remaining structural questions.
 
-No resolution query was needed or used. No first-hop source was opened.
-
-The maintainer approved the exact six-source Wave 1 without revision on
-2026-07-20. Direct structural inspection of those six registered sources is now
-authorized under the existing primary-only provenance boundary.
+No search or resolution query was needed or used. No reference discovered
+inside a first-hop source was opened. Wave 2 has not been approved.
 
 Still not authorized:
 
@@ -60,22 +66,31 @@ Still not authorized:
 - case selection, synthesis, curriculum, or site work;
 - evidence maturity promotion;
 - legacy evidence readmission;
-- drafting the subject outline itself.
+- drafting the subject outline itself; and
+- any Wave 2 identity query or source open before the first-hop wave gate.
 
 ## Validation and review state
 
-- The Stage 4 diagnostic provenance audit passes at
-  `complete_with_declared_manual_sources`: 0 blocking errors, 3 resolved
-  warnings, 0 claims, 0 promoted evidence, and 0 unresolved native
-  observations. The repository pin is machine-readable, and targeted native
-  inspection confirms a passing adapter reconciliation immediately after the
-  first seed open.
-- The event validator, full provenance test suite, local Markdown-link check,
-  and `git diff --check` pass on the finalized checkpoint artifacts.
-- Two bounded local audits found one machine-readable pin mismatch, one
-  reconciliation-traceability concern, one stale audit snapshot, and three
-  content anchoring/authority issues. All were accepted and fixed; focused
-  local verification closed the findings.
+- The combined Stage 4 diagnostic provenance audit passes at
+  `complete_with_declared_manual_sources` with zero errors, four resolved
+  warnings, zero unresolved native observations, zero claims, and zero promoted
+  evidence.
+- Both the Wave 1 and combined event streams pass schema validation. The
+  provenance test suite, local Markdown-link check, and `git diff --check`
+  pass.
+- Two bounded local audits reviewed the finalized checkpoint. The content audit
+  found one stale sentence that blurred the preceding seed-only audit with the
+  current Wave 1 audit; the label was corrected and focused verification
+  passed. The provenance audit found one actual multi-window reporting defect:
+  the derived audit counted a reopened source twice by host and retained only
+  the latest capture-metrics batch. The audit aggregation and its regression
+  test were corrected, the generated audit now reports 10 unique opened
+  sources, one manual capture action, and two semantic batches, and focused
+  verification passed.
+- At the preceding seed-only checkpoint, two bounded local audits found one
+  machine-readable pin mismatch, one reconciliation-traceability concern, one
+  stale audit snapshot, and three content anchoring/authority issues. All were
+  accepted and fixed; focused local verification closed the findings.
 - The configured external review has not been invoked for these new Stage 4
   source and evidence paths. Earlier authorization and the one-time V2-D006
   fallback were scope-specific and do not authorize a new transfer.
@@ -139,7 +154,7 @@ The reviewer contract is now versioned with bounded Stage 4 criteria.
 
 ## Next gate
 
-After Wave 1, the maintainer will review what changed and approve, revise, or
-reject an exact unopened Wave 2 proposal of at most six sources. No Wave 2
-source may be opened before that decision. Selective raw conversation packets
-remain separately gated per packet.
+The maintainer will review what changed and approve, revise, or reject the exact
+unopened Wave 2 proposal in `research/outline-development/first-hop-register.md`.
+No Wave 2 resolution query or source may be opened before that decision.
+Selective raw conversation packets remain separately gated per packet.

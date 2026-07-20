@@ -3,16 +3,17 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 and V2-D006, approved 2026-07-20
-**Current pass:** First-hop Wave 1
+**Current pass:** First-hop wave gate after completed Wave 1
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-Map the range of plausible outline vocabulary, topics, prerequisites,
-organizational principles, omissions, tensions, and counterframes exposed by
-the three approved seeds. The pass prepares an unopened first-hop Wave 1
-proposal; it does not choose a taxonomy or draft an outline.
+Determine how the six approved first-hop Wave 1 source families change the
+plausible boundary, organizing principles, prerequisites, sequence, omissions,
+tensions, and counterframes exposed by the mandatory seeds. The pass prepares
+an exact unopened Wave 2 proposal; it does not choose a taxonomy or draft an
+outline.
 
 ## Wave 1 authorization
 
@@ -22,6 +23,11 @@ their direct inspection for structural effect on the recorded outline
 decisions. It does not authorize following their references, treating their
 claims as established, promoting evidence, drafting an outline, or substituting
 unregistered sources.
+
+Wave 1 is complete. All six approved source families received `read_only`
+structural dispositions. No search, resolution query, second-hop open,
+implementation deep dive, claim declaration, or evidence promotion occurred.
+The exact Wave 2 proposal remains unopened pending the first-hop wave gate.
 
 ## Mandatory seed coverage
 
@@ -81,6 +87,12 @@ seed-only window closed. Event
 targeted check against those native calls without claiming durable transcript
 archive coverage.
 
+The Wave 1 window begins at `2026-07-20T16:12:06Z`, immediately before the six
+approved direct opens, and closes at `2026-07-20T16:20:46Z`, after the final
+authorized same-seed reinspection used to identify unopened Wave 2 leads. The
+window contains no topical query or second-hop open. Semantic annotation and
+append-only observation resolution are recorded in the Wave 1 event package.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
@@ -95,7 +107,8 @@ archive coverage.
 
 ## Stop and checkpoint
 
-Stop after all three seeds have final dispositions, the diagnostic provenance
-state is reconciled or its limitation is explicit, and an exact unopened Wave 1
-proposal of at most six direct source families is ready. Present those artifacts
-for maintainer approval before any first-hop open.
+Stop after all six Wave 1 families have final dispositions, their structural
+effects and lineage limits are recorded, the diagnostic provenance state is
+reconciled, and an exact unopened Wave 2 proposal of at most six direct source
+families is ready. Present those artifacts for maintainer approval before any
+Wave 2 identity query or source open.

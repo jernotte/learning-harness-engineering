@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-07-20T15:50:00Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "seed-only-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-seed-only-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-f608d57e93e6c8c4",
+      "disposition": "read_only",
+      "reason": "The complete eleven-page seed was used only to map its source-native structure and anchoring hazards. It supports no promoted V2 claim or adopted taxonomy at this checkpoint.",
+      "inspection_extent": "full_substantive",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": [
+        "all pages 1-11",
+        "abstract and Sections I-XV",
+        "figures, tables, glossary, field notes, and references [1]-[9]"
+      ],
+      "inspection_basis": "Complete text inspection plus visual rendering and review of all eleven pages."
+    },
+    {
+      "source_id": "auto-source-95e2f11879a290a0",
+      "disposition": "read_only",
+      "reason": "The pinned repository framing and complete category/list organization were used only as a discovery map. No listed resource was opened and no curated category was adopted as V2 authority.",
+      "inspection_extent": "full_substantive",
+      "surfaces": ["README", "documentation"],
+      "locations_inspected": [
+        "README.md at commit 09bda3af8c32b95958f0158e0f356076d6ab44c8",
+        "complete heading and category structure",
+        "repository introduction, Contents, section framing, Templates, Production Infrastructure & Operations, Related Awesome Lists, and Contributing",
+        "CONTRIBUTING.md and AGENTS.md at the pinned commit",
+        "CLAUDE.md pointer to AGENTS.md"
+      ],
+      "inspection_basis": "Pinned main with git ls-remote; inspected repository-local framing and the complete README organization without following curated entries."
+    },
+    {
+      "source_id": "auto-source-16980c73f034951c",
+      "disposition": "excluded",
+      "reason": "The exact GitHub API identity endpoint returned an internal error and contributed no source content. The repository identity was instead pinned directly with git ls-remote.",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "No API content was delivered."
+    },
+    {
+      "source_id": "v2-seed-local-2606-24937v1",
+      "disposition": "read_only",
+      "reason": "The maintainer-provided book-length seed was used to map curriculum shape, harness framing, scope conflicts, and direct first-hop leads. It supports no promoted V2 claim or adopted curriculum at this checkpoint.",
+      "inspection_extent": "partial_substantive",
+      "surfaces": ["paper", "other"],
+      "locations_inspected": [
+        "metadata and file identity",
+        "complete Contents, pages 3-23",
+        "Disclaimer, Preface, and Introduction, pages 24-33",
+        "Part V opener and Chapter 15 framing, pages 291-294",
+        "Chapter 18 opener, architecture, selected structural prose, implementation decisions, testing guidance, and summary, pages 343-368",
+        "Chapter 19 opener, page 369",
+        "Conclusion and Future Directions, pages 573-577",
+        "complete bibliography boundary and entries [1]-[410], pages 578-603"
+      ],
+      "inspection_basis": "SHA-256 and byte count independently rechecked; text extracted across all 603 pages; the complete outline-bearing surface and relevant harness framing inspected; twenty-six structural pages rendered and visually verified."
+    }
+  ],
+  "artifact": {
+    "artifact_id": "v2-outline-seed-map-structural-map",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/seed-map.md"
+  },
+  "claims": []
+}

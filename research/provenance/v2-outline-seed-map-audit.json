@@ -1,0 +1,722 @@
+{
+  "generated_at": "2026-07-20T16:03:52.273Z",
+  "cycle": "v2-outline-seed-map",
+  "completeness": "complete_with_declared_manual_sources",
+  "profile": "diagnostic",
+  "gate_passed": true,
+  "counts": {
+    "searches": 0,
+    "search_updates": 0,
+    "applied_search_updates": 0,
+    "rejected_search_updates": 0,
+    "searches_with_incomplete_result_capture": 0,
+    "returned": 0,
+    "returned_source_identities_recovered": 0,
+    "opened": 4,
+    "read_only": 3,
+    "referenced": 0,
+    "excluded": 1,
+    "declared_claims": 0,
+    "claims": 0,
+    "claim_evidence_mappings": 0,
+    "verifications": 0,
+    "unverified_claim_evidence_mappings": 0,
+    "native_boundaries": 1,
+    "native_observations": 92,
+    "automatically_resolved_observations": 36,
+    "human_resolved_observations": 56,
+    "unresolved_observations": 0,
+    "linked_observations": 86,
+    "not_research_observations": 6,
+    "observation_resolution_batches": 1,
+    "manual_capture_actions": 1,
+    "semantic_batch_actions": 1
+  },
+  "planned_channels": [
+    "direct seed URL inspection",
+    "local repository inspection",
+    "declared manual source"
+  ],
+  "actual_channels": [
+    "local repository inspection"
+  ],
+  "host_distribution": {
+    "asixiv.org": 1,
+    "github.com": 1,
+    "api.github.com": 1,
+    "local filesystem": 1
+  },
+  "repository_depth": [
+    {
+      "source_id": "auto-source-95e2f11879a290a0",
+      "surfaces": [
+        "other",
+        "README",
+        "documentation"
+      ],
+      "pinned": true
+    }
+  ],
+  "repository_observations": [
+    {
+      "timestamp": "2026-07-20T15:02:00.938Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-a4aa202a99cfa90885b9",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-7d7b8ff8beb73bf9be",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "7718afd353fcb283b9eee274534c6fe9cdf34794ed0023bd866238bcbdfe29cd",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 99
+    },
+    {
+      "timestamp": "2026-07-20T15:02:12.059Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-3a65c52594f475fac16b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-8496cb76ad2798aced",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "041f8b9fb0dfba984e5eceedc68a9e24a809015c5c65340069de9691202627d3",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 100
+    },
+    {
+      "timestamp": "2026-07-20T15:03:47.210Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-a31245271d637dd556e1",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-6fed7b64fe21024c06",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "47ba1c5df8d2e4a7c9cb293109c8bcdd1ae353cec5b7c17ea14d248bb40304c1",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 101
+    },
+    {
+      "timestamp": "2026-07-20T15:04:54.839Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-cd1e3f6a6610dd2c2995",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-cb77429a0dab36bc58",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "5070bc56bf2bcabb01c766ac6fe17203b46cf416638b740a0d1e0ff89f06ac42",
+      "surfaces": [
+        "code",
+        "tests"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 102
+    },
+    {
+      "timestamp": "2026-07-20T15:04:59.211Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-cbad19ee6b649210dbc3",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ec087baf90d080ed23",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "18d5731c28f5ad107d8f46f8a9b57881614edb993c7fc6cbcca460cf8bf440e8",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 103
+    },
+    {
+      "timestamp": "2026-07-20T15:07:08.801Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-add0d68a5755392fdc6d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-df5c88a679a58f1bef",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "a3cdb49faafd1c1a8fb0c1a6cbc95387053e57bc53f25bb5cbccb5f3cc812d57",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 108
+    },
+    {
+      "timestamp": "2026-07-20T15:07:12.425Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-97970f9da6225330edb6",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-938019898953bca388",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "a3cdb49faafd1c1a8fb0c1a6cbc95387053e57bc53f25bb5cbccb5f3cc812d57",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 109
+    },
+    {
+      "timestamp": "2026-07-20T15:07:45.782Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-dbdc56cd52a4bbd717d6",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-f38393dc8c3e5af97a",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "4686b371cabb0d9c9c7fe1eb481baf9a868a8cfe7895782d32da77787878d5f0",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 110
+    },
+    {
+      "timestamp": "2026-07-20T15:07:52.468Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-43ac795eaceb1d41079f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-19d0cc8ae5745df719",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "c4b28bb1d3523f9e852f2a0d6e58af185154e711190b65887286d3fd328c4376",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 111
+    },
+    {
+      "timestamp": "2026-07-20T15:07:54.972Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-d997920635051eaa4429",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e52a1c99f74cb004ff",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "c40858c0f728c36cf6bef523d82ee234f78787de5ac9f7c7cad85aaae721c58c",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 112
+    },
+    {
+      "timestamp": "2026-07-20T15:07:57.539Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-e9d4dfafccb9169913c4",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-e0b55eefd3e02659d3",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "fba1469575b11e542aee7321b454439e24730961a218cde6138bc7838d9c2acb",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 113
+    },
+    {
+      "timestamp": "2026-07-20T15:08:17.129Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-4d4e20d25dbd57aaf620",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-6bddfec1ae19ee0cad",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "512ea2e81e0a2bba50b1ca4d748652b782b1648da3a70bea9114d2091f356eeb",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 114
+    },
+    {
+      "timestamp": "2026-07-20T15:09:28.349Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-094640b923cbac5d608b",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-9d78da5bfe64541f65",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "5965879ee85839a4df3fd55b7fb9e6175206f8cbe61c6f44241668effe7c3fbf",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 115
+    },
+    {
+      "timestamp": "2026-07-20T15:09:47.166Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-3e096180c059351b9d74",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-62b6e2c0b0232a6c9b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "c96885f0a85f64c61b0d76510ca80e4a19be674e163a73b68a0a3d57f4dc15b6",
+      "surfaces": [
+        "history"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 116
+    },
+    {
+      "timestamp": "2026-07-20T15:09:55.227Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-40223e1de1673f4ed63d",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-b74cc2ba15085ef4af",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "ca76fbc251e26496eb50ad9925922d96a06f30247f36a04ae8c79ac474e44d1f",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 117
+    },
+    {
+      "timestamp": "2026-07-20T15:09:58.386Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-c4356ce99096de65747f",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c56048c4130cdb3dea",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "f8314dedf6b1f69b88857127d7a260d807d687f0b718c1b021fd8928612599cc",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 118
+    },
+    {
+      "timestamp": "2026-07-20T15:10:05.796Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-ab84ca356973b3a3aab3",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-87626c3fc0e5b92371",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "e6cecb0558ebfde887203081fcd5f906a7a2c59c0737bab60d4ffcf654cc1937",
+      "surfaces": [
+        "code",
+        "documentation"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 119
+    },
+    {
+      "timestamp": "2026-07-20T15:41:11.774Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-22d437ca82fcc7ad3233",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-55525aad2972b299db",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "9d12a2842b1851d2d020aef7aa9ecffb102f4f4d739216a46a7f91c182beb765",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 120
+    },
+    {
+      "timestamp": "2026-07-20T15:41:14.822Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-c91c9c48118cff69f19e",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ba0583ccc43cd8d558",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "71d5338b6c206b9e61b364ff507f4b0cf4bed7b1f0b98f98aab1dc64c3994575",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 121
+    },
+    {
+      "timestamp": "2026-07-20T15:41:18.076Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-2ccfc12f1678696b01d3",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-996c15da21af056593",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "c96885f0a85f64c61b0d76510ca80e4a19be674e163a73b68a0a3d57f4dc15b6",
+      "surfaces": [
+        "history"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 122
+    },
+    {
+      "timestamp": "2026-07-20T15:41:25.565Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-60c8b5f5736edc19e402",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-55ecabb65775c2857b",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "f986a823871146835d6091558b67f3f7db54762f2ba252f99dd57b00b507dc7e",
+      "surfaces": [],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 123
+    },
+    {
+      "timestamp": "2026-07-20T15:41:30.953Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-9babc6c594266aa481f1",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-73b7f739416af2c134",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "a7c494bf72f540b76ea72ffd9508cf8a11b6a8de7d22cf1a85855f08bf3e28c4",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 124
+    },
+    {
+      "timestamp": "2026-07-20T15:42:40.488Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-076e22d6c0a3c5675a03",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c3ba63685653a32afe",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "3d0a6e7439036c1fe212e3de02970db7d3911bd724c773901cbe9ddd70c61426",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 125
+    },
+    {
+      "timestamp": "2026-07-20T15:42:50.700Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-8dedfc06c3245790200c",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-ad2415506ac240afb8",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "bc66f5f727bbdb1bf44c5539b2778494022ec6882f1e084d6cb002d488ebbc7a",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 126
+    },
+    {
+      "timestamp": "2026-07-20T15:43:09.705Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-21de2bdd6d615cd05a87",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-cd2fc802fb6ee26427",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "bb861e90617137178da486db6cee2f1c0436d9d0e637fdafb0b48d5a5d4deed3",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 127
+    },
+    {
+      "timestamp": "2026-07-20T15:43:31.073Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-a0b8eadc5813d0199672",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-8d39c574bdf8315bef",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "83a65d8a1e86b19c60f44a939533454aaceba25da8fd0f290d4ffad904db46a0",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 128
+    },
+    {
+      "timestamp": "2026-07-20T15:43:42.001Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "seed-only-native",
+      "derived_from_native_event": "native-7e17e639622b3e785b94",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-0cc1c19f07a29b4134",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "a4b27055562224ad8a0fb6b20e6984c952a4f1cafea3dfc701227d0117f13dc0",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 129
+    }
+  ],
+  "repository_summary": {
+    "returned": 0,
+    "opened": 1,
+    "readme_only": 1,
+    "code_inspected": 0,
+    "test_inspected": 0,
+    "history_inspected": 0,
+    "pinned": 1,
+    "referenced": 0
+  },
+  "local_repository_summary": {
+    "observations": 27,
+    "code_inspected": 22,
+    "test_inspected": 1,
+    "history_inspected": 2,
+    "commit_captured": 0
+  },
+  "claim_evidence": [],
+  "capture_archives": [],
+  "provenance_waivers": [],
+  "distributions": {
+    "host": {
+      "api.github.com": 1,
+      "github.com": 1,
+      "asixiv.org": 1,
+      "local filesystem": 1
+    },
+    "organization": {
+      "api.github.com": 1,
+      "github.com": 1,
+      "asixiv.org": 1,
+      "maintainer-provided": 1
+    },
+    "source_type": {
+      "web source": 2,
+      "repository": 1,
+      "manual local PDF": 1
+    },
+    "publication_year": {
+      "2026": 1,
+      "unspecified": 3
+    },
+    "primary_secondary": {
+      "unknown until inspected": 3,
+      "independent survey and educational synthesis": 1
+    },
+    "evidence_lineage": {
+      "generic web open": 3,
+      "declared manual source; repository-staged readable copy": 1
+    }
+  },
+  "searches": [],
+  "search_updates": [],
+  "sources": [
+    {
+      "source_id": "auto-source-16980c73f034951c",
+      "canonical_url": "https://api.github.com/repos/ai-boost/awesome-harness-engineering/commits/main",
+      "host": "api.github.com",
+      "organization": "api.github.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "none",
+      "surfaces": [
+        "other"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "The exact GitHub API identity endpoint returned an internal error and contributed no source content. The repository identity was instead pinned directly with git ls-remote.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-95e2f11879a290a0",
+      "canonical_url": "https://github.com/ai-boost/awesome-harness-engineering",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "full_substantive",
+      "surfaces": [
+        "other",
+        "README",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The pinned repository framing and complete category/list organization were used only as a discovery map. No listed resource was opened and no curated category was adopted as V2 authority.",
+      "version_freshness_state": "pinned",
+      "record_path": ""
+    },
+    {
+      "source_id": "auto-source-f608d57e93e6c8c4",
+      "canonical_url": "https://asixiv.org/pdf/curated/2606.00001",
+      "host": "asixiv.org",
+      "organization": "asixiv.org",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "full_substantive",
+      "surfaces": [
+        "other",
+        "paper",
+        "abstract"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The complete eleven-page seed was used only to map its source-native structure and anchoring hazards. It supports no promoted V2 claim or adopted taxonomy at this checkpoint.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": ""
+    },
+    {
+      "source_id": "v2-seed-local-2606-24937v1",
+      "canonical_url": "sha256:7c5a2b81fe135dc9b08221d1da9282f99a7146f043e580eb4809364baff145fe;bytes:9266428;mtime_epoch:1782800862",
+      "host": "local filesystem",
+      "organization": "maintainer-provided",
+      "source_type": "manual local PDF",
+      "publication_year": 2026,
+      "primary_secondary": "independent survey and educational synthesis",
+      "evidence_lineage": "declared manual source; repository-staged readable copy",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "partial_substantive",
+      "surfaces": [
+        "paper",
+        "other"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The maintainer-provided book-length seed was used to map curriculum shape, harness framing, scope conflicts, and direct first-hop leads. It supports no promoted V2 claim or adopted curriculum at this checkpoint.",
+      "version_freshness_state": "Version 1.2.2 dated 22 June 2026",
+      "record_path": ""
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "code": "planned_channel_missing",
+      "message": "Planned channel had no search: direct seed URL inspection",
+      "channel": "direct seed URL inspection",
+      "resolved": true,
+      "resolution": "The diagnostic channel counter derives actual channels from search events, while this pass used authorized direct source opens rather than searches. The native boundary contains the direct asixiv and GitHub source opens."
+    },
+    {
+      "code": "planned_channel_missing",
+      "message": "Planned channel had no search: declared manual source",
+      "channel": "declared manual source",
+      "resolved": true,
+      "resolution": "The diagnostic channel counter derives actual channels from searches and repository observations. The separately enumerable manual source is represented by the predeclared manual_source_set and its complete source lifecycle."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-95e2f11879a290a0 was inspected without code, tests, or history",
+      "source_id": "auto-source-95e2f11879a290a0",
+      "surfaces": [
+        "other",
+        "README",
+        "documentation"
+      ],
+      "pinned": true,
+      "resolved": true,
+      "resolution": "The approved seed-only contract intentionally limited this curated repository to its pinned README category/list structure and repository-local framing. Inspecting code, tests, or history beyond identity pinning was explicitly out of scope."
+    }
+  ]
+}

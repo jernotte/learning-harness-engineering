@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Bounded seed investigation — seed-only pass
+**Current phase:** Seed-only checkpoint — awaiting maintainer decision
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,9 +9,9 @@
 
 ## Current objective
 
-Inspect exactly the three mandatory seeds under the approved diagnostic
-provenance boundary, produce their source-native seed map and candidate
-first-hop register, then pause for the seed-only maintainer gate.
+Review the completed source-native map of the three mandatory seeds and decide
+whether to approve, revise, or reject the proposed unopened first-hop Wave 1.
+No additional source interaction is authorized before that decision.
 
 ## Authority state
 
@@ -30,20 +30,23 @@ first-hop register, then pause for the seed-only maintainer gate.
 
 ## Current authorization
 
-Authorized now:
+Completed within the approved seed-only pass:
 
-- initialize task `v2-outline-seed-map` and its diagnostic provenance boundary;
-- inspect the complete outline-bearing surface of the two PDF seeds;
-- inspect the complete category/list structure and repository-local framing of
-  the repository seed while pinning its observed commit;
-- extract source-native vocabulary, topic candidates, structure, prerequisites,
-  assumptions, reference shape, omissions, tensions, counterframes, anchoring
-  hazards, and organizational possibilities;
-- use, only if seed metadata cannot identify an unopened Wave 1 candidate, an
-  exact-title or identifier-resolution query under the stage-wide three-query
-  cap, one query per tool call and recorded before use; and
-- prepare, but do not open, an exact first-hop Wave 1 proposal of at most six
-  direct seed references.
+- initialized task `v2-outline-seed-map` and its diagnostic provenance boundary;
+- inspected the complete eleven-page asixiv seed and the complete
+  outline-bearing, harness-relevant surface of the 603-page local PDF;
+- inspected the complete category/list structure and repository-local framing
+  of the repository seed at observed commit
+  `09bda3af8c32b95958f0158e0f356076d6ab44c8`;
+- assigned all three seeds `read_only` structural dispositions and excluded one
+  failed helper endpoint that supplied no content;
+- extracted source-native vocabulary, topic candidates, structure,
+  prerequisites, assumptions, reference shape, omissions, tensions,
+  counterframes, anchoring hazards, and organizational possibilities; and
+- prepared an exact unopened first-hop Wave 1 proposal of six direct seed
+  references.
+
+No resolution query was needed or used. No first-hop source was opened.
 
 Not authorized:
 
@@ -57,6 +60,22 @@ Not authorized:
 - drafting the subject outline itself.
 
 ## Validation and review state
+
+- The Stage 4 diagnostic provenance audit passes at
+  `complete_with_declared_manual_sources`: 0 blocking errors, 3 resolved
+  warnings, 0 claims, 0 promoted evidence, and 0 unresolved native
+  observations. The repository pin is machine-readable, and targeted native
+  inspection confirms a passing adapter reconciliation immediately after the
+  first seed open.
+- The event validator, full provenance test suite, local Markdown-link check,
+  and `git diff --check` pass on the finalized checkpoint artifacts.
+- Two bounded local audits found one machine-readable pin mismatch, one
+  reconciliation-traceability concern, one stale audit snapshot, and three
+  content anchoring/authority issues. All were accepted and fixed; focused
+  local verification closed the findings.
+- The configured external review has not been invoked for these new Stage 4
+  source and evidence paths. Earlier authorization and the one-time V2-D006
+  fallback were scope-specific and do not authorize a new transfer.
 
 - The post-reset provenance suite, local Markdown-link check, and
   `git diff --check` pass.
@@ -117,7 +136,9 @@ The reviewer contract is now versioned with bounded Stage 4 criteria.
 
 ## Next gate
 
-After inspecting only the three seeds, present their source-native map,
-candidate register, provenance state, and proposed first-hop Wave 1 of at most
-six sources. No first-hop source may be opened before that maintainer decision.
-Selective raw conversation packets remain separately gated per packet.
+The maintainer may approve, revise, or reject the exact six-source Wave 1 in
+`research/outline-development/first-hop-register.md`. Approval would authorize
+only the bounded Wave 1 opens under the existing Stage 4 controls; it would not
+adopt a source's taxonomy, authorize second-hop traversal, or approve an
+outline. Selective raw conversation packets remain separately gated per
+packet.

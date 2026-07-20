@@ -1,0 +1,508 @@
+{
+  "timestamp": "2026-07-20T15:52:00Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "seed-only-observation-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-seed-only-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-41fae62c28ace26b792a",
+      "previous_resolution_event_id": "native-41fae62c28ace26b792a",
+      "resolution": "linked",
+      "reason": "This unified-exec call recorded the capture-window timestamp; it is conservatively research-capable and is linked to the declared native boundary.",
+      "linked_event_ids": [
+        "v2-outline-seed-map-native-capture-timestamp"
+      ]
+    },
+    {
+      "observation_id": "native-009ba78eef81d949403d",
+      "previous_resolution_event_id": "native-009ba78eef81d949403d",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-c4cebc14cc315e73e90d",
+      "previous_resolution_event_id": "native-c4cebc14cc315e73e90d",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-763610535bab380ace84",
+      "previous_resolution_event_id": "native-763610535bab380ace84",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-2fd7fd0aee535e0e008b",
+      "previous_resolution_event_id": "native-2fd7fd0aee535e0e008b",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-82b394958966e77a7510",
+      "previous_resolution_event_id": "native-82b394958966e77a7510",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-cfc0854d68717ffdc4f1",
+      "previous_resolution_event_id": "native-cfc0854d68717ffdc4f1",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-b0383bfa2426d4ab0842",
+      "previous_resolution_event_id": "native-b0383bfa2426d4ab0842",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-5c5477f9568f401f6ca7",
+      "previous_resolution_event_id": "native-5c5477f9568f401f6ca7",
+      "resolution": "not_research",
+      "reason": "The call only located the bundled document runtime dependencies and did not open or inspect subject evidence."
+    },
+    {
+      "observation_id": "native-22f8086f6fdd914a06e4",
+      "previous_resolution_event_id": "native-22f8086f6fdd914a06e4",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-961351a35d6623ae6232",
+      "previous_resolution_event_id": "native-961351a35d6623ae6232",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-0abb40b16e1d8291ca0a",
+      "previous_resolution_event_id": "native-0abb40b16e1d8291ca0a",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-b0e32ab95ce1a9e866ab",
+      "previous_resolution_event_id": "native-b0e32ab95ce1a9e866ab",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-d5c7b11d9f87d66c4d20",
+      "previous_resolution_event_id": "native-d5c7b11d9f87d66c4d20",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-736c8e7244cae4a7f3ff",
+      "previous_resolution_event_id": "native-736c8e7244cae4a7f3ff",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-400c8b5a2ee9d62f5f7c",
+      "previous_resolution_event_id": "native-400c8b5a2ee9d62f5f7c",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-e1f3a859ff25e5b1da1d",
+      "previous_resolution_event_id": "native-e1f3a859ff25e5b1da1d",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-0133f71357fb967ee976",
+      "previous_resolution_event_id": "native-0133f71357fb967ee976",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-4abfe108cfd1f03a59db",
+      "previous_resolution_event_id": "native-4abfe108cfd1f03a59db",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-b773733b85be05a2ceeb",
+      "previous_resolution_event_id": "native-b773733b85be05a2ceeb",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-3bfe56c77ce342ee2d99",
+      "previous_resolution_event_id": "native-3bfe56c77ce342ee2d99",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-623f3bca46fb4252aed5",
+      "previous_resolution_event_id": "native-623f3bca46fb4252aed5",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-2f697b2d5337f9354d70",
+      "previous_resolution_event_id": "native-2f697b2d5337f9354d70",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-1798a01a452fd494cf58",
+      "previous_resolution_event_id": "native-1798a01a452fd494cf58",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-06371099fcd96d95bfb7",
+      "previous_resolution_event_id": "native-06371099fcd96d95bfb7",
+      "resolution": "linked",
+      "reason": "The call inspected captured GitHub seed content or pinned and read repository-local framing without following a listed resource.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-1ed04b5296f078fded40",
+      "previous_resolution_event_id": "native-1ed04b5296f078fded40",
+      "resolution": "linked",
+      "reason": "The call attempted or prepared identity access for the declared manual PDF seed. Failed macOS and policy-boundary attempts are retained as part of the manual source lifecycle.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-dfc71adb04abda30d56f",
+      "previous_resolution_event_id": "native-dfc71adb04abda30d56f",
+      "resolution": "linked",
+      "reason": "The call attempted or prepared identity access for the declared manual PDF seed. Failed macOS and policy-boundary attempts are retained as part of the manual source lifecycle.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-b571cf83ad3d028c4488",
+      "previous_resolution_event_id": "native-b571cf83ad3d028c4488",
+      "resolution": "linked",
+      "reason": "The call attempted or prepared identity access for the declared manual PDF seed. Failed macOS and policy-boundary attempts are retained as part of the manual source lifecycle.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-ff9391c0373a7378e47d",
+      "previous_resolution_event_id": "native-ff9391c0373a7378e47d",
+      "resolution": "linked",
+      "reason": "The call attempted or prepared identity access for the declared manual PDF seed. Failed macOS and policy-boundary attempts are retained as part of the manual source lifecycle.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-750cf7674a682fb4e59d",
+      "previous_resolution_event_id": "native-750cf7674a682fb4e59d",
+      "resolution": "linked",
+      "reason": "The call attempted or prepared identity access for the declared manual PDF seed. Failed macOS and policy-boundary attempts are retained as part of the manual source lifecycle.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-ed0d9bd307fbceb8b5f7",
+      "previous_resolution_event_id": "native-ed0d9bd307fbceb8b5f7",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-3788136e4cb1b38629f1",
+      "previous_resolution_event_id": "native-3788136e4cb1b38629f1",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-6e325a232e4e23ee8a74",
+      "previous_resolution_event_id": "native-6e325a232e4e23ee8a74",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-93dfdea550a23786432d",
+      "previous_resolution_event_id": "native-93dfdea550a23786432d",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-a1b88c53ad0f7206b0b4",
+      "previous_resolution_event_id": "native-a1b88c53ad0f7206b0b4",
+      "resolution": "not_research",
+      "reason": "The call only located the bundled document runtime dependencies and did not open or inspect subject evidence."
+    },
+    {
+      "observation_id": "native-83dba3e2c88700ba68d2",
+      "previous_resolution_event_id": "native-83dba3e2c88700ba68d2",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-19b904e018ee055e907a",
+      "previous_resolution_event_id": "native-19b904e018ee055e907a",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-1a470e5e8577c45b03db",
+      "previous_resolution_event_id": "native-1a470e5e8577c45b03db",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-968cb01a9f314913ce1e",
+      "previous_resolution_event_id": "native-968cb01a9f314913ce1e",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-23a7e402f8c0810026fc",
+      "previous_resolution_event_id": "native-23a7e402f8c0810026fc",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-fc3d8ab3719750814e27",
+      "previous_resolution_event_id": "native-fc3d8ab3719750814e27",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-e4e1431e4bbd0c9b7962",
+      "previous_resolution_event_id": "native-e4e1431e4bbd0c9b7962",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-da3cc298919f7d5589fe",
+      "previous_resolution_event_id": "native-da3cc298919f7d5589fe",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-01884e5cd1658a5a3a64",
+      "previous_resolution_event_id": "native-01884e5cd1658a5a3a64",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-fb26e715336fda5e95f6",
+      "previous_resolution_event_id": "native-fb26e715336fda5e95f6",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-cc9ea1f74f51b781f976",
+      "previous_resolution_event_id": "native-cc9ea1f74f51b781f976",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-9311c47f9634c472ab34",
+      "previous_resolution_event_id": "native-9311c47f9634c472ab34",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-cbb9fcf5e0cf7934bc18",
+      "previous_resolution_event_id": "native-cbb9fcf5e0cf7934bc18",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-b7f8e04ef07974a50a4d",
+      "previous_resolution_event_id": "native-b7f8e04ef07974a50a4d",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-8bb30f8268966e84381d",
+      "previous_resolution_event_id": "native-8bb30f8268966e84381d",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-23d4fe73e6880d449a1c",
+      "previous_resolution_event_id": "native-23d4fe73e6880d449a1c",
+      "resolution": "linked",
+      "reason": "The call fingerprinted, extracted, structurally inspected, rendered, or visually verified the readable repository-staged copy of the manual PDF seed.",
+      "linked_event_ids": [
+        "v2-seed-local-2606-24937v1-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-587f0a1ff17a1c912dd1",
+      "previous_resolution_event_id": "native-587f0a1ff17a1c912dd1",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-464368038a42dcaaae35",
+      "previous_resolution_event_id": "native-464368038a42dcaaae35",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-4bb5d2bfd6391694f9b2",
+      "previous_resolution_event_id": "native-4bb5d2bfd6391694f9b2",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-724f47d6f605cbdc3f22",
+      "previous_resolution_event_id": "native-724f47d6f605cbdc3f22",
+      "resolution": "linked",
+      "reason": "The call inspected, downloaded, extracted, rendered, or visually verified the asixiv seed without opening a first-hop source.",
+      "linked_event_ids": [
+        "v2-seed-asixiv-2606-00001-native-inspection"
+      ]
+    },
+    {
+      "observation_id": "native-aeb2b2e42b294063372d",
+      "previous_resolution_event_id": "native-aeb2b2e42b294063372d",
+      "resolution": "linked",
+      "reason": "The composite same-seed open inspected additional README ranges and attempted the exact GitHub API identity endpoint; the endpoint failed and is separately excluded.",
+      "linked_event_ids": [
+        "v2-seed-awesome-harness-engineering-native-inspection"
+      ]
+    }
+  ],
+  "search_updates": []
+}

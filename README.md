@@ -24,7 +24,9 @@ completed the same bounded 20-family screen with 19 proposed `read_only`
 dispositions and one proposed exclusion. Its joined identity, accessibility,
 relevance, evidence-posture, catalog-correction, and schema results are in
 [`research/outline-development/awesome-screen-core-02.md`](research/outline-development/awesome-screen-core-02.md).
-The maintainer must review that package before any later batch is authorized.
+The maintainer approved continued use of core-02's method and authorized only
+the exact `awesome-screen-core-03` batch. Core-02's individual dispositions and
+catalog corrections remain proposed because that approval was not explicit.
 Work remains on
 `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.

@@ -95,6 +95,7 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews the completed
-`awesome-screen-core-02` gate or authorizes another exact batch. The remaining
-355 proposed new destinations remain unopened.
+Update this file after the authorized `awesome-screen-core-03` calibration is
+complete. Until then, its 20 destinations and the other 335 proposed new
+destinations remain unopened. Core-02's dispositions and catalog corrections
+remain proposed even though its method is approved for continued use.

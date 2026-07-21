@@ -499,3 +499,58 @@ observations.
 This execution record exhausts V2-D009's opening authority. It does not approve
 the core-02 dispositions or authorize core-03. The maintainer must review the
 completed package before the next decision.
+
+## V2-D010 — Core-02 method approved and third calibration authorized
+
+**Status:** Approved
+**Date:** 2026-07-20
+
+### Decision
+
+Approve continued use of the `awesome-screen-core-02` direct-screen method,
+including the expanded per-family register fields established by core-01 and
+tested again in core-02. This approval covers the method only. The maintainer's
+approval did not explicitly ratify core-02's nineteen proposed `read_only`
+dispositions, one proposed exclusion, or catalog corrections, so those remain
+proposed rather than silently acquiring authority.
+
+Authorize only the exact 20-family `awesome-screen-core-03` batch in
+`research/outline-development/awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`, file SHA-256
+`8ce00b2a284a2f789972f3322586497ff0450b734d3cf2d3ad8aec5d8f0169fc`.
+This decision supersedes only that batch's historical
+`proposed_not_authorized` field in the immutable proposal; membership,
+screening extent, and second-hop prohibition remain fixed.
+
+### Boundaries
+
+Core-03 may directly screen each registered URL only for frozen family and
+occurrence joins, requested and observed identity, transport accessibility,
+substantive inspectability, exact inspected surface, visible version versus
+actual pin, repository-shallow state, actual source form, relevance, evidence
+posture, visible lineage or alias state, catalog correction, schema friction,
+and proposed disposition.
+
+It does not authorize search, identity-resolution queries, manual redirect
+traversal, second-hop or bibliography traversal, reopening core-01 or core-02,
+implementation or technique deep reading, claims, evidence promotion, outline
+drafting, legacy readmission, or another batch.
+
+### Consequences and next gate
+
+Commit this authority checkpoint before the first core-03 interaction. Then
+screen the exact registered URLs, reconcile the diagnostic provenance, apply
+the approved method, validate and review the completed package, and stop at the
+core-03 source-screening gate. No later batch opens implicitly.
+
+### Design-history disposition
+
+`none` — the exact partial approval and bounded authorization are fully
+represented by this canonical decision; the brief approval exchange adds no
+essential rationale.
+
+### Approval record
+
+The maintainer explicitly approved core-02's method and authorized
+`awesome-screen-core-03` on 2026-07-20. The response did not explicitly approve
+core-02's individual dispositions or catalog corrections.

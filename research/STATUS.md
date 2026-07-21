@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Source-screening gate — `awesome-screen-core-02` complete
+**Current phase:** Direct-screen calibration — `awesome-screen-core-03` authorized
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,11 +9,11 @@
 
 ## Current objective
 
-Present the completed `awesome-screen-core-02` direct-screen calibration for
-maintainer review. Its source lifecycles, joined register, proposed
-dispositions, catalog corrections, and diagnostic provenance are complete. No
-later batch or deeper source work is authorized before the maintainer decides
-the gate.
+Execute the exact 20-family `awesome-screen-core-03` direct-screen calibration
+using the method approved through V2-D010. Establish the expanded register
+fields without search, identity resolution, prior-batch reopening, second-hop
+traversal, deep reading, evidence promotion, or outline drafting, then stop at
+its maintainer gate.
 
 ## Authority state
 
@@ -28,7 +28,7 @@ the gate.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 through V2-D009 were explicitly approved on 2026-07-20.
+- V2-D005 through V2-D010 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
@@ -149,9 +149,21 @@ That one authorized execution is now exhausted:
 - `research/outline-development/awesome-screen-core-02.md` is the durable join
   from every source lifecycle to its frozen family and occurrence context.
 
+Authorized by V2-D010:
+
+- the core-02 direct-screen method is approved for continued use;
+- core-02's 19 proposed `read_only` dispositions, one proposed exclusion, and
+  catalog corrections remain proposed because they were not explicitly
+  approved in the maintainer's decision;
+- only `awesome-screen-core-03`, exactly as registered in the screening plan at
+  commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now; and
+- each of its 20 sources receives direct screening only, with no query,
+  prior-batch reopen, manual redirect traversal, second hop, bibliography
+  traversal, or implementation deep dive.
+
 Still not authorized:
 
-- opening any catalog family, including `awesome-screen-core-03`;
+- opening any catalog family outside `awesome-screen-core-03`;
 - reopening any completed `awesome-screen-core-01` or
   `awesome-screen-core-02` page;
 - querying even a registered family through search or identity resolution;
@@ -282,12 +294,12 @@ transmitted, the configured external reviewer did not review this revision, and
 it will not be retried or circumvented. V2-D006 records the one-time
 local-review fallback and its limits.
 
-The maintainer explicitly approved V2-D005 through V2-D009 on 2026-07-20.
+The maintainer explicitly approved V2-D005 through V2-D010 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
-amended brief is controlling. The first catalog calibration is approved. The
-second calibration is complete and awaiting its maintainer gate; no batch is
-active.
+amended brief is controlling. The first catalog calibration and the core-02
+method are approved. Core-02's individual dispositions and corrections remain
+proposed, and only the exact third calibration batch is active.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.
@@ -300,7 +312,7 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the completed `awesome-screen-core-02` source
+The maintainer will review the completed `awesome-screen-core-03` source
 lifecycles, accessibility and identity corrections, relevance and evidence-
 posture distribution, lineage and alias findings, schema friction, provenance
 audit, and any recommendation for the next exact batch or method correction. No

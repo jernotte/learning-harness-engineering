@@ -464,11 +464,13 @@ catalog counts.
    lineage interpretation; and authorized only `awesome-screen-core-01`.
 5. **Source-screening gate or gates — current.** The maintainer approved the
    completed `awesome-screen-core-01` calibration method and dispositions and
-   authorized only exact `awesome-screen-core-02`. Core-02 is complete and now
-   awaits review of its actual source identities, access limits, proposed
-   dispositions, evidence postures, catalog corrections, schema friction, and
-   any resulting change to later batch order. No second-hop source or
-   additional batch is opened implicitly.
+   authorized only exact `awesome-screen-core-02`. Core-02 is complete. The
+   maintainer then approved continued use of its method and authorized only
+   exact `awesome-screen-core-03`; core-02's individual dispositions and
+   catalog corrections remain proposed. Review core-03's actual source
+   identities, access limits, proposed dispositions, evidence postures,
+   catalog corrections, schema friction, and any resulting change to later
+   batch order. No second-hop source or additional batch is opened implicitly.
 6. **Seed-map gate.** Review the completed audited structural landscape and
    remaining gaps before skeleton drafting.
 7. **Skeleton gate.** Review three materially different skeletons and select,

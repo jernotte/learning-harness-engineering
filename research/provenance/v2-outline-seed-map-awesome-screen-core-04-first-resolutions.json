@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-07-21T00:59:11Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-04-first-interaction-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-awesome-screen-core-04-first-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-cb94ac89ae94c1ac7bd1",
+      "previous_resolution_event_id": "native-cb94ac89ae94c1ac7bd1",
+      "resolution": "linked",
+      "reason": "Local UTC boundary-start timestamp command immediately before the authorized direct open; reciprocal local-control metadata records that it accessed no subject source.",
+      "linked_event_ids": [
+        "v2-core04-first-control-start-timestamp"
+      ]
+    }
+  ]
+}

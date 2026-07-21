@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T00:37:57.725Z",
+  "generated_at": "2026-07-21T01:12:10.662Z",
   "cycle": "v2-outline-seed-map",
   "completeness": "complete_with_declared_manual_sources",
   "profile": "diagnostic",
@@ -12,25 +12,25 @@
     "searches_with_incomplete_result_capture": 0,
     "returned": 0,
     "returned_source_identities_recovered": 0,
-    "opened": 72,
-    "read_only": 66,
+    "opened": 92,
+    "read_only": 83,
     "referenced": 0,
-    "excluded": 6,
+    "excluded": 9,
     "declared_claims": 0,
     "claims": 0,
     "claim_evidence_mappings": 0,
     "verifications": 0,
     "unverified_claim_evidence_mappings": 0,
-    "native_boundaries": 9,
-    "native_observations": 385,
-    "automatically_resolved_observations": 250,
-    "human_resolved_observations": 135,
+    "native_boundaries": 10,
+    "native_observations": 439,
+    "automatically_resolved_observations": 293,
+    "human_resolved_observations": 146,
     "unresolved_observations": 0,
-    "linked_observations": 347,
-    "not_research_observations": 38,
-    "observation_resolution_batches": 9,
+    "linked_observations": 400,
+    "not_research_observations": 39,
+    "observation_resolution_batches": 10,
     "manual_capture_actions": 8,
-    "semantic_batch_actions": 7
+    "semantic_batch_actions": 8
   },
   "planned_channels": [
     "direct seed URL inspection",
@@ -43,18 +43,18 @@
   ],
   "host_distribution": {
     "asixiv.org": 1,
-    "github.com": 28,
+    "github.com": 37,
     "api.github.com": 1,
     "local filesystem": 1,
     "openai.com": 3,
-    "arxiv.org": 9,
-    "www.anthropic.com": 7,
-    "blog.langchain.com": 1,
+    "arxiv.org": 10,
+    "www.anthropic.com": 8,
+    "blog.langchain.com": 5,
     "platform.claude.com": 6,
     "modelcontextprotocol.io": 2,
     "genai.owasp.org": 1,
-    "developers.openai.com": 3,
-    "langchain-ai.github.io": 1,
+    "developers.openai.com": 4,
+    "langchain-ai.github.io": 2,
     "platform.openai.com": 1,
     "wellarchitected.github.com": 1,
     "www.letta.com": 1,
@@ -62,7 +62,9 @@
     "blog.modelcontextprotocol.io": 1,
     "code.claude.com": 1,
     "www.swebench.com": 1,
-    "docs.anthropic.com": 1
+    "docs.anthropic.com": 2,
+    "www.digitalapplied.com": 1,
+    "python.useinstructor.com": 1
   },
   "repository_depth": [
     {
@@ -302,6 +304,81 @@
     },
     {
       "source_id": "auto-source-53e1f0b762c2e77b",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-82fcf33f253d184e",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-a5d406dab37933d6",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-38cbf4cf3362b5b3",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-321ceef539b977c0",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-e593782dc9320b43",
+      "surfaces": [
+        "other"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-0cd3a19d9e9d34c3",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-58c73d163c73c759",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-11d6c73f1872cbdd",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false
+    },
+    {
+      "source_id": "auto-source-3c94d1f5d485d1a9",
       "surfaces": [
         "other",
         "README",
@@ -2215,12 +2292,77 @@
         "native-ebee7a3bc39c594418a7"
       ],
       "__line": 1002
+    },
+    {
+      "timestamp": "2026-07-21T00:58:50.086Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-04",
+      "derived_from_native_event": "native-681b05e02a0746e53365",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-c6c46692bc947d24bc",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "e5d008dc53b2b4bcbd6422ba4ced479b6b8dc65b644062e31b97a2286d1776d7",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 1078
+    },
+    {
+      "timestamp": "2026-07-21T00:59:11.919Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-04",
+      "derived_from_native_event": "native-f2946fe5a215ce463134",
+      "adapter": "codex-rollout-v1",
+      "event_id": "auto-repository-85a3c08c71090c5564",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "711f27857dca5d60a1f5e8f9d409d30b1763d18038a8973fe07eea5a8b786715",
+      "surfaces": [
+        "code"
+      ],
+      "commit": null,
+      "capture_mode": "automatic",
+      "__line": 1079
+    },
+    {
+      "event_id": "v2-core04-control-local-project",
+      "timestamp": "2026-07-21T01:06:04Z",
+      "agent": "primary",
+      "cycle": "v2-outline-seed-map",
+      "pass": "awesome-screen-core-04-manual-reconciliation",
+      "event_type": "repository_inspected",
+      "repository_path": "/Users/jernotte/.codex/worktrees/6101/learning-harness-engineering",
+      "command_sha256": "565f6dc1b96414e8fc9d537e0c0d13936ee503fb4f79c7adab30209136daca48",
+      "surfaces": [
+        "command_output"
+      ],
+      "inspection_scope": "Grouped UTC timestamps, first-interaction provenance ingest, validation, stream copy, control append, observation resolution, raw-state diagnostic, corrected effective-state invariant check, and final cutoff command falsely classified external because the worktree and native rollout live under .codex; no subject source was accessed.",
+      "capture_mode": "manual_reconciliation",
+      "native_refs": [
+        "native-cb94ac89ae94c1ac7bd1",
+        "native-b9d4aa1a7df87377163c",
+        "native-2a43f6744ed9b2c41a63",
+        "native-e835e3c284933042a6fe",
+        "native-524ca17c3c3782064967",
+        "native-e25c4cddedb793748801",
+        "native-7f81715f91af01f9750f",
+        "native-fa22b8297f43b6dc9e90",
+        "native-6900fa61b62bc64357b6",
+        "native-a864728c6c328e1c2b35",
+        "native-565f6dc1b96414e8fc9d"
+      ],
+      "__line": 1188
     }
   ],
   "repository_summary": {
     "returned": 0,
-    "opened": 28,
-    "readme_only": 25,
+    "opened": 37,
+    "readme_only": 33,
     "code_inspected": 1,
     "test_inspected": 0,
     "history_inspected": 3,
@@ -2228,8 +2370,8 @@
     "referenced": 0
   },
   "local_repository_summary": {
-    "observations": 102,
-    "code_inspected": 82,
+    "observations": 105,
+    "code_inspected": 84,
     "test_inspected": 7,
     "history_inspected": 6,
     "commit_captured": 1
@@ -2240,22 +2382,24 @@
   "distributions": {
     "host": {
       "wellarchitected.github.com": 1,
-      "github.com": 28,
+      "github.com": 37,
+      "langchain-ai.github.io": 2,
       "modelcontextprotocol.io": 2,
-      "www.anthropic.com": 7,
-      "arxiv.org": 9,
+      "www.anthropic.com": 8,
+      "blog.langchain.com": 5,
+      "arxiv.org": 10,
       "api.github.com": 1,
       "code.claude.com": 1,
-      "developers.openai.com": 3,
+      "developers.openai.com": 4,
       "openai.com": 3,
-      "langchain-ai.github.io": 1,
-      "blog.langchain.com": 1,
       "www.swebench.com": 1,
+      "docs.anthropic.com": 2,
       "platform.claude.com": 6,
+      "python.useinstructor.com": 1,
       "www.letta.com": 1,
+      "www.digitalapplied.com": 1,
       "www.mendral.com": 1,
       "genai.owasp.org": 1,
-      "docs.anthropic.com": 1,
       "platform.openai.com": 1,
       "asixiv.org": 1,
       "blog.modelcontextprotocol.io": 1,
@@ -2263,23 +2407,25 @@
     },
     "organization": {
       "wellarchitected.github.com": 1,
-      "github.com": 25,
+      "github.com": 34,
+      "langchain-ai.github.io": 2,
       "modelcontextprotocol.io": 2,
-      "www.anthropic.com": 7,
-      "arxiv.org": 9,
+      "www.anthropic.com": 8,
+      "blog.langchain.com": 5,
+      "arxiv.org": 10,
       "api.github.com": 1,
       "code.claude.com": 1,
-      "developers.openai.com": 3,
+      "developers.openai.com": 4,
       "openai.com": 3,
-      "langchain-ai.github.io": 1,
-      "blog.langchain.com": 1,
       "www.swebench.com": 1,
+      "docs.anthropic.com": 2,
       "platform.claude.com": 6,
+      "python.useinstructor.com": 1,
       "www.letta.com": 1,
       "ai-boost": 1,
+      "www.digitalapplied.com": 1,
       "www.mendral.com": 1,
       "genai.owasp.org": 1,
-      "docs.anthropic.com": 1,
       "platform.openai.com": 1,
       "asixiv.org": 1,
       "blog.modelcontextprotocol.io": 1,
@@ -2287,22 +2433,22 @@
       "walkinglabs": 2
     },
     "source_type": {
-      "web source": 34,
-      "repository": 28,
-      "preprint": 9,
+      "web source": 44,
+      "repository": 37,
+      "preprint": 10,
       "manual local PDF": 1
     },
     "publication_year": {
       "2026": 1,
-      "unspecified": 71
+      "unspecified": 91
     },
     "primary_secondary": {
-      "unknown until inspected": 68,
+      "unknown until inspected": 88,
       "primary": 3,
       "independent survey and educational synthesis": 1
     },
     "evidence_lineage": {
-      "generic web open": 68,
+      "generic web open": 88,
       "AI Boost curated catalog repository": 1,
       "declared manual source; repository-staged readable copy": 1,
       "Walking Labs curated catalog repository": 1,
@@ -2357,6 +2503,27 @@
       "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
+      "source_id": "auto-source-04f0a9647deb851b",
+      "canonical_url": "https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop",
+      "host": "langchain-ai.github.io",
+      "organization": "langchain-ai.github.io",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "none",
+      "surfaces": [
+        "other"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "Both direct attempts to open the exact registered LangGraph HITL URL returned only a redirect shell. No substantive documentation, mechanism, ownership detail, version, or evidence posture could be established within the authorized boundary.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-0668b361cac37fb4",
       "canonical_url": "https://modelcontextprotocol.io/introduction",
       "host": "modelcontextprotocol.io",
@@ -2377,6 +2544,28 @@
       "disposition_reason": "The official MCP introduction was used only to establish project identity, stated interface scope, and redirect correction. Its benefit and ecosystem statements remain project claims.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-01.md"
+    },
+    {
+      "source_id": "auto-source-0cd3a19d9e9d34c3",
+      "canonical_url": "https://github.com/ukgovernmentbeis/inspect_ai",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Inspect AI repository home was used only to identify the project's evaluation-framework scope across prompts, tool use, multi-turn tasks, model-graded evaluation, extensions, and prebuilt evals. No evaluation result or framework behavior was verified.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-0f0c0cdf7c9dc4eb",
@@ -2400,6 +2589,28 @@
       "record_path": "research/outline-development/awesome-screen-core-03.md"
     },
     {
+      "source_id": "auto-source-1040cd9966982c98",
+      "canonical_url": "https://blog.langchain.com/two-different-types-of-agent-authorization",
+      "host": "blog.langchain.com",
+      "organization": "blog.langchain.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Two Different Types of Agent Authorization article was used only to identify its practitioner distinction between user-delegated credentials and fixed agent identity plus related channel, sharing, intervention, and memory implications. It is not a universal authorization model.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-107da49445a23241",
       "canonical_url": "https://arxiv.org/abs/2604.11378",
       "host": "arxiv.org",
@@ -2421,6 +2632,28 @@
       "disposition_reason": "The scheduler continuum, commitment model, recovery protocol, and declared trade-offs were used to test whether execution topology should be a primary spine or a subordinate decision lens. The proposed Graph Harness has no completed empirical validation, and its 70-project survey substantially overlaps the same author's architecture study, so the two are not independent corroboration.",
       "version_freshness_state": "live_unpinned",
       "record_path": ""
+    },
+    {
+      "source_id": "auto-source-11d6c73f1872cbdd",
+      "canonical_url": "https://github.com/tencent/tencentdb-agent-memory",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The TencentDB-Agent-Memory repository home was used only to identify the owner redirect and its project-described layered symbolic memory, summary, visual-canvas, traceability, cross-session, integration, and optional gateway-authentication surface. Reported gains remain project claims.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-126e07cf0d684e03",
@@ -2666,6 +2899,29 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-321ceef539b977c0",
+      "canonical_url": "https://github.com/raphaelchristi/harness-evolver",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The harness-evolver repository home was used only to identify its project-described automated harness mutation, isolated worktree, evaluation, gating, selection, and learning-loop surface. Reported score changes remain unverified project results.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-38c43325a50c50c6",
       "canonical_url": "https://www.anthropic.com/research/building-effective-agents",
       "host": "www.anthropic.com",
@@ -2686,6 +2942,51 @@
       "disposition_reason": "This first-party practitioner article was used to test whether task shape and the workflow-versus-agent decision should precede mechanism coverage. Its customer and internal experience is useful framing but not controlled comparative proof or a pre-approved taxonomy.",
       "version_freshness_state": "live_unpinned",
       "record_path": ""
+    },
+    {
+      "source_id": "auto-source-38cbf4cf3362b5b3",
+      "canonical_url": "https://github.com/syncause/debug-skill",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Syncause/debug-skill repository home was used only to identify its skill-plus-MCP debugging workflow around reproduction, runtime facts, traces, citation, and repair. No client or debugging behavior was executed.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
+      "source_id": "auto-source-3c94d1f5d485d1a9",
+      "canonical_url": "https://github.com/wandb/weave",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Weave repository home was used only to identify its project-described tracing, debugging, evaluation, and experiment-to-production information-management scope. Capabilities and stated goals remain project self-description.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-3cdc3bbb8a55263b",
@@ -2773,6 +3074,28 @@
       "disposition_reason": "The LLMLingua repository home was used only to identify a research implementation series for prompt and KV-cache compression and its associated source-reported results. This is narrower than general conversation compaction or durable context management.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-4b95225a7f6d480b",
+      "canonical_url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "host": "docs.anthropic.com",
+      "organization": "docs.anthropic.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Extended Thinking documentation was used only to identify Anthropic's stated adaptive and extended-thinking controls, budgets, display and streaming behavior, and preservation across tool loops. Product behavior was not exercised.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-4bc641a728ca0582",
@@ -2933,6 +3256,29 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-58c73d163c73c759",
+      "canonical_url": "https://github.com/callstackincubator/agent-device",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The agent-device repository home was used only to identify the owner redirect and the project's device inspection, control, assertion, evidence, replay, CI, log, and trace surface. No tool or device behavior was executed.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-642743ad9061795a",
       "canonical_url": "https://github.com/langchain-ai/langgraph",
       "host": "github.com",
@@ -2998,6 +3344,49 @@
       "disposition_reason": "The AWS sample repository home was used only to identify four runtime-specific human-approval patterns. It is sample implementation guidance, not comparative effectiveness evidence.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-01.md"
+    },
+    {
+      "source_id": "auto-source-72fcf67d67c1b151",
+      "canonical_url": "https://www.anthropic.com/engineering/beyond-permission-prompts",
+      "host": "www.anthropic.com",
+      "organization": "www.anthropic.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "none",
+      "surfaces": [
+        "other"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "Both direct attempts to open the exact registered Beyond Permission Prompts URL were rejected by the transport as unsafe. Article identity beyond the registered route, content, relevance, and evidence posture could not be established.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
+      "source_id": "auto-source-75b74b7e71f381ad",
+      "canonical_url": "https://python.useinstructor.com/",
+      "host": "python.useinstructor.com",
+      "organization": "python.useinstructor.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Instructor documentation root was used only to identify its structured-output, schema-validation, retry, streaming, and provider-support scope and its own boundary between extraction and agent frameworks. No output property was tested.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-7647307fe49844a0",
@@ -3135,6 +3524,29 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-82fcf33f253d184e",
+      "canonical_url": "https://github.com/openai/openai-agents-python",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The OpenAI Agents SDK repository home was used only to identify its broad agent, tool, handoff, guardrail, human-intervention, session, tracing, and realtime scope. Capabilities remain project self-description.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-855185e3d07e09ad",
       "canonical_url": "https://www.letta.com/blog/letta-v1-agent",
       "host": "www.letta.com",
@@ -3251,6 +3663,28 @@
       "record_path": ""
     },
     {
+      "source_id": "auto-source-96fed04bf2b61d5a",
+      "canonical_url": "https://blog.langchain.com/agent-evaluation-readiness-checklist",
+      "host": "blog.langchain.com",
+      "organization": "blog.langchain.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Agent Evaluation Readiness Checklist article was used only to identify its practitioner method for trace capture, success criteria, capability and regression evaluation, datasets, graders, isolation, and production readiness. It is not an independently validated benchmark.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-97dcab4759c83fdb",
       "canonical_url": "https://github.com/langgenius/dify",
       "host": "github.com",
@@ -3296,6 +3730,50 @@
       "record_path": "research/outline-development/awesome-screen-core-01.md"
     },
     {
+      "source_id": "auto-source-9b1e18963f7fbc08",
+      "canonical_url": "https://www.digitalapplied.com/blog/ai-agent-scaling-gap-march-2026-pilot-to-production",
+      "host": "www.digitalapplied.com",
+      "organization": "www.digitalapplied.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Digital Applied article was used only to identify its source-reported enterprise survey figures, five claimed production-readiness gaps, and proposed readiness framework. The direct page exposed no independently inspectable survey methodology or dataset.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
+      "source_id": "auto-source-9e658ac64da0d3d1",
+      "canonical_url": "https://blog.langchain.com/evaluating-skills",
+      "host": "blog.langchain.com",
+      "organization": "blog.langchain.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Evaluating Skills article was used only to identify its practitioner method for clean-container tasks, metrics, baseline-versus-skill comparison, modularity, invocation, and observability. Internal results remain vendor-reported.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-9fa759b72385cdec",
       "canonical_url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
       "host": "www.anthropic.com",
@@ -3316,6 +3794,28 @@
       "disposition_reason": "The Anthropic engineering article was used only to identify its first-party experiments with planning, generator/evaluator separation, context strategy, sprint contracts, verification, cost, simplification, and model-dependent load-bearing components. Reported outcomes remain source-reported and unreproduced.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-a5d406dab37933d6",
+      "canonical_url": "https://github.com/langfuse/langfuse",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Langfuse repository home was used only to identify its broad observability, prompt-management, evaluation, dataset, playground, API, and deployment scope. Capabilities remain project self-description.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-a841a2284747ba07",
@@ -3517,6 +4017,28 @@
       "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
+      "source_id": "auto-source-cb71b43c7896c074",
+      "canonical_url": "https://blog.langchain.com/autonomous-context-compression",
+      "host": "blog.langchain.com",
+      "organization": "blog.langchain.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Autonomous Context Compression article was used only to identify its project-described agent-triggered compaction policy and vendor-reported evaluation and coding observations. No implementation or result was independently verified.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-cb8f252ccaaf10b0",
       "canonical_url": "https://github.com/modelcontextprotocol/servers",
       "host": "github.com",
@@ -3538,6 +4060,29 @@
       "disposition_reason": "The MCP servers repository home was used only to identify a steering-group-maintained collection of educational reference implementations. The README explicitly distinguishes it from the server registry and warns that examples are not production-ready.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-cb9a1fa584365064",
+      "canonical_url": "https://arxiv.org/abs/2503.09572",
+      "host": "arxiv.org",
+      "organization": "arxiv.org",
+      "source_type": "preprint",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "paper",
+        "abstract"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The unversioned Plan-and-Act arXiv work page was used only to identify planner/executor separation, synthetic plan generation, and paper-reported WebArena-Lite and WebVoyager results. No method or result was reproduced.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-cc9be4621c6c116e",
@@ -3762,6 +4307,27 @@
       "record_path": "research/outline-development/awesome-screen-core-02.md"
     },
     {
+      "source_id": "auto-source-e593782dc9320b43",
+      "canonical_url": "https://github.com/anthropics/ai-harness-scorecard",
+      "host": "github.com",
+      "organization": "github.com",
+      "source_type": "repository",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "none",
+      "surfaces": [
+        "other"
+      ],
+      "disposition": "excluded",
+      "disposition_reason": "Both direct attempts to open the exact registered AI Harness Scorecard repository returned GitHub 404. Repository identity, content, ownership, relevance, and evidence posture remain unestablished.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
+    },
+    {
       "source_id": "auto-source-e9e39426a0d8260e",
       "canonical_url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
       "host": "docs.anthropic.com",
@@ -3804,6 +4370,28 @@
       "disposition_reason": "The OpenAI function-calling guide was used only to identify the documented tools, tool-call/result, schema, custom-tool, and tool-search surface. It is product/API documentation rather than the catalog's apparent educational collection.",
       "version_freshness_state": "live_unpinned",
       "record_path": "research/outline-development/awesome-screen-core-02.md"
+    },
+    {
+      "source_id": "auto-source-f3f1b6782caa4b28",
+      "canonical_url": "https://developers.openai.com/codex/sdk",
+      "host": "developers.openai.com",
+      "organization": "developers.openai.com",
+      "source_type": "web source",
+      "publication_year": "unspecified",
+      "primary_secondary": "unknown until inspected",
+      "evidence_lineage": "generic web open",
+      "query_ids": [],
+      "returned": false,
+      "opened": true,
+      "inspection_extent": "screening",
+      "surfaces": [
+        "other",
+        "documentation"
+      ],
+      "disposition": "read_only",
+      "disposition_reason": "The Codex SDK documentation was used only to identify the documented programmatic-control, thread, CI, internal-tool, workflow, application, and MCP-orchestration surface. Product behavior was not exercised.",
+      "version_freshness_state": "live_unpinned",
+      "record_path": "research/outline-development/awesome-screen-core-04.md"
     },
     {
       "source_id": "auto-source-f608d57e93e6c8c4",
@@ -4256,6 +4844,117 @@
       "pinned": false,
       "resolved": true,
       "resolution": "V2-D010 intentionally authorized only a top-level direct screen. The README and visible release metadata established persistent-memory scope and the cloud-versus-repository distinction; code, tests, history, documentation, consolidation behavior, hosted behavior, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-82fcf33f253d184e was inspected without code, tests, or history",
+      "source_id": "auto-source-82fcf33f253d184e",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README and visible release metadata established broad agent-runtime and orchestration scope; code, tests, history, documentation, examples, integrations, benchmarks, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-a5d406dab37933d6 was inspected without code, tests, or history",
+      "source_id": "auto-source-a5d406dab37933d6",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README established broad observability, prompt-management, evaluation, and deployment scope; code, tests, history, documentation, integrations, hosted behavior, benchmarks, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-38cbf4cf3362b5b3 was inspected without code, tests, or history",
+      "source_id": "auto-source-38cbf4cf3362b5b3",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README established the skill-plus-MCP evidence-debugging workflow; skill files, MCP implementation, code, tests, history, traces, client execution, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-321ceef539b977c0 was inspected without code, tests, or history",
+      "source_id": "auto-source-321ceef539b977c0",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README and visible release metadata established the automated harness-mutation and evaluation-loop framing; code, tests, history, documentation, worktree execution, evaluation artifacts, backends, benchmarks, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-e593782dc9320b43 was inspected without code, tests, or history",
+      "source_id": "auto-source-e593782dc9320b43",
+      "surfaces": [
+        "other"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "The automatic adapter classified the GitHub URL as a repository and recorded the generic response surface, but both direct attempts returned 404 and the semantic inspection extent is none. V2-D011 prohibited owner lookup, search, alternate repositories, and second hops, so no code, tests, history, README, or pin could be inspected."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-0cd3a19d9e9d34c3 was inspected without code, tests, or history",
+      "source_id": "auto-source-0cd3a19d9e9d34c3",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README established the evaluation-framework scope; code, tests, history, documentation, evaluation implementations, tasks, datasets, results, and tag contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-58c73d163c73c759 was inspected without code, tests, or history",
+      "source_id": "auto-source-58c73d163c73c759",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README, owner redirect, and visible release metadata established the device inspection, control, and verification surface; code, tests, history, documentation, tool execution, device interaction, CI runs, evidence artifacts, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-11d6c73f1872cbdd was inspected without code, tests, or history",
+      "source_id": "auto-source-11d6c73f1872cbdd",
+      "surfaces": [
+        "other",
+        "README"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README and owner redirect established layered symbolic-memory, traceability, and integration scope; code, tests, history, documentation, integrations, benchmark artifacts, hosted behavior, and release contents were prohibited."
+    },
+    {
+      "code": "repository_shallow",
+      "message": "auto-source-3c94d1f5d485d1a9 was inspected without code, tests, or history",
+      "source_id": "auto-source-3c94d1f5d485d1a9",
+      "surfaces": [
+        "other",
+        "README",
+        "releases"
+      ],
+      "pinned": false,
+      "resolved": true,
+      "resolution": "V2-D011 intentionally authorized only a top-level direct screen. The README and visible release metadata established tracing, debugging, evaluation, and lifecycle-management scope; code, tests, history, documentation, trace execution, evaluation artifacts, hosted behavior, and release contents were prohibited."
     }
   ]
 }

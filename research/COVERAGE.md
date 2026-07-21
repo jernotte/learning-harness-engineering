@@ -67,6 +67,20 @@ Outlines, and several systems spanning multiple catalog sections. These
 screens remain catalog evaluation coverage, not admitted subject evidence or
 representative field coverage.
 
+The fourth authorized catalog calibration directly screened all 20 families in
+`awesome-screen-core-04` and preserves all 22 frozen occurrence joins. It
+proposes 17 `read_only` dispositions and three exclusions: the LangGraph HITL
+route exposed only a redirect shell, AI Harness Scorecard returned GitHub 404,
+and Beyond Permission Prompts was rejected by the safe-open transport. Eight
+substantively accessible repository families remained top-level,
+`repository_shallow`, and live-unpinned; the ninth catalog-apparent repository
+was the inaccessible 404 route. The batch records owner or route changes for
+agent-device, TencentDB-Agent-Memory, LangChain articles, Anthropic docs, and
+Codex SDK, plus material source-form and category-boundary corrections. These
+screens remain catalog evaluation coverage, not admitted subject evidence or
+representative field coverage. Their method and dispositions await maintainer
+review.
+
 The pinned Awesome census is now complete under its declared rule manifest:
 652 extracted occurrences divide into 415 qualifying resources and 237
 mechanical exclusions. The qualifying occurrences map to 401 offline family
@@ -109,7 +123,7 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the authorized `awesome-screen-core-04` calibration is
-complete. Its 20 destinations and the other 315 proposed new destinations
-remain unopened at this authority checkpoint. Core-02 and core-03 results are
-approved. No core-05 or later batch is authorized.
+Update this file after the maintainer reviews the completed
+`awesome-screen-core-04` calibration. The other 315 proposed new destinations
+remain unopened. Core-02 and core-03 results are approved; core-04's proposed
+17/3 result is not yet approved. No core-05 or later batch is authorized.

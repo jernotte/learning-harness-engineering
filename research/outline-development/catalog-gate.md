@@ -38,9 +38,11 @@ the core-02 method and authorized only exact `awesome-screen-core-03`. Core-03 h
 completed and is recorded in `awesome-screen-core-03.md`: 20 unique registered
 families, 17 proposed `read_only` dispositions, three proposed access-based
 exclusions, no search, no second hop, and no promotion. Its authorization is
-exhausted. V2-D011 approves core-02's and core-03's recorded dispositions,
-methods, and catalog corrections and authorizes only exact
-`awesome-screen-core-04`; the other 17 batches remain blocked.
+exhausted. V2-D011 approved core-02's and core-03's recorded dispositions,
+methods, and catalog corrections and authorized only exact
+`awesome-screen-core-04`. Core-04 has now completed with 17 proposed
+`read_only` dispositions and three proposed access-based exclusions; its
+opening authority is exhausted, and the other 17 batches remain blocked.
 
 ## Approved decision package
 
@@ -53,7 +55,7 @@ methods, and catalog corrections and authorizes only exact
 4. V2-D008 authorized only `awesome-screen-core-01`; after its completion,
    V2-D009 authorized only `awesome-screen-core-02`; after that completion,
    V2-D010 authorized only `awesome-screen-core-03`; after that completion,
-   V2-D011 authorized only `awesome-screen-core-04`. The first three opening
+   V2-D011 authorized only `awesome-screen-core-04`. All four opening
    authorizations are exhausted. Every other batch remains blocked unless
    explicitly approved later.
 

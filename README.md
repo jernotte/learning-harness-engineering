@@ -26,12 +26,14 @@ relevance, evidence-posture, catalog-correction, and schema results are in
 [`research/outline-development/awesome-screen-core-02.md`](research/outline-development/awesome-screen-core-02.md).
 The maintainer has now approved core-02's 19 `read_only` / one `excluded`
 dispositions and catalog corrections, plus core-03's method, 17 `read_only` /
-three `excluded` dispositions, and catalog corrections. Only the exact frozen
-`awesome-screen-core-04` batch is authorized next; its 20 families and 22
-occurrence joins may receive direct screening under the same no-query,
-no-second-hop boundary. Core-03's joined register is in
-[`research/outline-development/awesome-screen-core-03.md`](research/outline-development/awesome-screen-core-03.md).
-No core-05 or later batch is authorized. Work remains on
+three `excluded` dispositions, and catalog corrections. The exact frozen
+`awesome-screen-core-04` batch then completed its 20-family, 22-occurrence-join
+direct screen under the same no-query, no-second-hop boundary. Its joined
+register proposes 17 `read_only` dispositions and three access-based
+exclusions in
+[`research/outline-development/awesome-screen-core-04.md`](research/outline-development/awesome-screen-core-04.md).
+The batch is awaiting maintainer review; no core-05 or later batch is
+authorized. Work remains on
 `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 

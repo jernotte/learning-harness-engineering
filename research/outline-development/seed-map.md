@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** `awesome-screen-core-04` authorized for direct screening
+**Status:** `awesome-screen-core-04` complete; awaiting maintainer review
 
 **Authority:** Approved outline-development brief
 
@@ -468,9 +468,10 @@ V2-D009 approved the first calibration and authorized only exact
 `awesome-screen-core-02` under the current direct-screen boundary. That
 authorization is now exhausted. V2-D010 approved continued use of the core-02
 method and authorized only exact `awesome-screen-core-03`. Core-03 is complete
-and its opening authority is exhausted. V2-D011 approves the outstanding
-core-02 and core-03 results and authorizes only exact
-`awesome-screen-core-04`.
+and its opening authority is exhausted. V2-D011 approved the outstanding
+core-02 and core-03 results and authorized only exact
+`awesome-screen-core-04`. Core-04 is now complete and its opening authority is
+also exhausted.
 
 ## V2-D007 method correction
 
@@ -545,22 +546,31 @@ catalog corrections. Those approvals ratify screening results only; they admit
 no subject evidence and adopt no catalog category, taxonomy, outline, or
 curriculum.
 
-Only the exact 20-family `awesome-screen-core-04` batch is authorized. It must
-preserve all 22 frozen occurrence joins, use only its literal registered direct
-URLs, and stop without search, identity resolution, prior-batch reopening,
-manual redirect traversal, second-hop traversal, repository file or history
-inspection, deep reading, claim or evidence promotion, or outline drafting.
-No core-05 or later batch is authorized.
+Only the exact 20-family `awesome-screen-core-04` batch was authorized. It
+preserved all 22 frozen occurrence joins, used only its literal registered
+direct URLs, and stopped without search, identity resolution, prior-batch
+reopening, manual redirect traversal, second-hop traversal, repository file or
+history inspection, deep reading, claim or evidence promotion, or outline
+drafting. No core-05 or later batch is authorized.
+
+Core-04's joined register proposes 17 `read_only` dispositions and three
+exclusions, keeps eight substantively accessible repository screens shallow
+and live-unpinned, records the ninth repository-shaped URL as an inaccessible
+404, and preserves material route, owner, source-form, category-boundary,
+evidence-posture, recurrence, lineage, and schema corrections. The register is
+`research/outline-development/awesome-screen-core-04.md`. Its opening authority
+is exhausted, and its method and results await maintainer review.
 
 ## Provenance state
 
 The consolidated diagnostic audit passes at
-`complete_with_declared_manual_sources`: zero errors, 28 resolved warnings,
-nine native boundaries, 385 native observations, and zero unresolved
-observations. Across the structural program to date it records 72 unique opened
-source identities, 66 `read_only` dispositions, six exclusions, zero
-searches, zero claims, and zero promoted evidence. The standalone
-`awesome-screen-core-03` package passes at `complete` with 20 unique opened
-identities from 31 direct-open events, 17 `read_only` dispositions, three
+`complete_with_declared_manual_sources`: zero errors, 37 resolved warnings,
+ten native boundaries, 439 native observations, and zero unresolved
+observations. Across the structural program to date it records 92 unique opened
+source identities, 83 `read_only` dispositions, nine exclusions, zero searches,
+zero claims, and zero promoted evidence. The standalone
+`awesome-screen-core-04` package passes at `complete` with 20 unique opened
+identities from 34 direct-open events, 17 `read_only` dispositions, three
 exclusions, zero unresolved observations, and nine intentionally resolved
-`repository_shallow` warnings.
+`repository_shallow` warnings. Its separate first-interaction proof remains
+validation evidence and is not merged into the consolidated stream.

@@ -3,21 +3,22 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D011, approved 2026-07-20
-**Current pass:** `awesome-screen-core-04` authorized
+**Current pass:** `awesome-screen-core-04` complete; maintainer gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The direct screen of the exact 20 families in `awesome-screen-core-04` applies
-the method approved through V2-D011 while preserving requested and observed
+The completed direct screen of the exact 20 families in
+`awesome-screen-core-04` applied the method approved through V2-D011 while
+preserving requested and observed
 identity, accessibility, substantive inspectability, relevance, scope, source
 form, evidence posture, visible lineage, version or pin state, catalog
 correction, schema friction, and proposed disposition. The batch is anchored to
 `awesome-screening-plan.json` at commit
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass may not search, follow a
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass did not search, follow a
 second hop, reopen core-01, core-02, or core-03, deep-read a source, choose a
-taxonomy, or draft an outline. No other batch may open without another explicit
+taxonomy, or draft an outline. No source may now open without another explicit
 decision.
 
 ## Wave 1 authorization
@@ -163,8 +164,9 @@ The `awesome-screen-core-02` native boundary is declared from
 `2026-07-20T22:54:34Z`, after the committed V2-D009 authority checkpoint at
 `ea39a73121ca005cd19f136e03967ccf57cf1e48`. It closes before
 `2026-07-20T22:59:08Z` and contains 57 native observations, 21 direct opens for
-exactly 20 frozen source IDs and URLs, and no search or returned-result event.
-The GitHub Governing Agents URL is the sole repeated direct open. Ten
+the 20 frozen families and registered URLs, producing exactly 20 source IDs,
+and no search or returned-result event. The GitHub Governing Agents URL is the
+sole repeated direct open. Ten
 conservative local provenance-control observations are reciprocally linked;
 zero observations remain unresolved. Later reconciliation and checkpoint
 actions do not extend permission to open another source.
@@ -172,9 +174,21 @@ actions do not extend permission to open another source.
 The `awesome-screen-core-03` native boundary is declared from
 `2026-07-21T00:15:24Z`, after the committed V2-D010 authority checkpoint at
 `4d56178`. It closes before `2026-07-21T00:20:48Z` and contains 39 native
-observations, 31 direct opens for exactly 20 frozen source IDs and URLs, and no
-search or returned-result event. Eleven additional direct opens were bounded
+observations, 31 direct opens for the 20 frozen families and registered URLs,
+producing exactly 20 source IDs, and no search or returned-result event. Eleven
+additional direct opens were bounded
 same-URL recoveries or exact-URL access retries. Nine conservative local
+provenance-control observations are reciprocally linked; zero observations
+remain unresolved. Later reconciliation and checkpoint actions do not extend
+permission to open another source.
+
+The `awesome-screen-core-04` native boundary is declared from
+`2026-07-21T00:58:06Z`, after the committed V2-D011 authority checkpoint at
+`2595989`. It closes before `2026-07-21T01:04:24Z` and contains 54 native
+observations, 34 direct opens for the 20 frozen families and URLs, producing
+exactly 20 source IDs, and no search or returned-result event. Fourteen
+additional direct opens were bounded same-literal-URL recoveries or access
+confirmations. Eleven conservative local
 provenance-control observations are reciprocally linked; zero observations
 remain unresolved. Later reconciliation and checkpoint actions do not extend
 permission to open another source.
@@ -188,10 +202,10 @@ permission to open another source.
   registered in `awesome-screen-core-02` were permitted to open.
 - During the now-closed third batch boundary, only the 20 direct URLs
   registered in `awesome-screen-core-03` were permitted to open.
-- During the current fourth batch boundary, only the 20 literal direct URLs
-  registered in `awesome-screen-core-04` may open. Core-01, core-02, and
-  core-03 may not reopen. All other catalog batches and every identity-
-  resolution query remain blocked.
+- During the now-closed fourth batch boundary, only the 20 literal direct URLs
+  registered in `awesome-screen-core-04` were permitted to open. Core-01,
+  core-02, core-03, and core-04 may not reopen. All other catalog batches and
+  every identity-resolution query remain blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -201,9 +215,9 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-Stop when all 20 `awesome-screen-core-04` families have an honest direct-screen
-result or recorded access failure; each source has the required identity,
-surface, accessibility, relevance, scope, evidence posture, lineage, and
-proposed disposition; schema friction and catalog corrections are explicit;
-and the diagnostic boundary is reconciled. Present that complete calibration
-for maintainer review before opening another batch.
+All 20 `awesome-screen-core-04` families now have an honest direct-screen result
+or recorded access failure; each source has the required identity, surface,
+accessibility, relevance, scope, evidence posture, lineage, and proposed
+disposition; schema friction and catalog corrections are explicit; and the
+diagnostic boundary is reconciled. Work is stopped while the complete
+calibration is presented for maintainer review. No later batch may open.

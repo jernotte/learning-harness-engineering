@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-07-21T01:06:04Z",
+  "agent": "primary",
+  "agent_role": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-04-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-awesome-screen-core-04-batch-1",
+  "sources": [
+    {
+      "source_id": "auto-source-82fcf33f253d184e",
+      "disposition": "read_only",
+      "reason": "The OpenAI Agents SDK repository home was used only to identify its broad agent, tool, handoff, guardrail, human-intervention, session, tracing, and realtime scope. Capabilities remain project self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview and capability list, root listing, visible default branch and history count, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, example execution, integration, benchmark, or release body opened."
+    },
+    {
+      "source_id": "auto-source-96fed04bf2b61d5a",
+      "disposition": "read_only",
+      "reason": "The Agent Evaluation Readiness Checklist article was used only to identify its practitioner method for trace capture, success criteria, capability and regression evaluation, datasets, graders, isolation, and production readiness. It is not an independently validated benchmark.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["automatically redirected article title, author/date, readiness questions, trace and success-criteria guidance, evaluation levels, dataset and grader guidance, and production-readiness checklist"],
+      "inspection_basis": "Direct registered URL and automatic redirect to the current LangChain article route only; linked products, documentation, datasets, examples, references, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-a5d406dab37933d6",
+      "disposition": "read_only",
+      "reason": "The Langfuse repository home was used only to identify its broad observability, prompt-management, evaluation, dataset, playground, API, and deployment scope. Capabilities remain project self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README platform overview and capability list, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, integration, hosted service, benchmark, or release body opened."
+    },
+    {
+      "source_id": "auto-source-38cbf4cf3362b5b3",
+      "disposition": "read_only",
+      "reason": "The Syncause/debug-skill repository home was used only to identify its skill-plus-MCP debugging workflow around reproduction, runtime facts, traces, citation, and repair. No client or debugging behavior was executed.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity, workflow requirements, dependency and client-installation overview, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no skill file, MCP implementation, code, tests, history, trace, client execution, or release body opened."
+    },
+    {
+      "source_id": "auto-source-04f0a9647deb851b",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered LangGraph HITL URL returned only a redirect shell. No substantive documentation, mechanism, ownership detail, version, or evidence posture could be established within the authorized boundary.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL and automatic trailing-slash redirect only; no manual redirect traversal, alternate route, query, search, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-321ceef539b977c0",
+      "disposition": "read_only",
+      "reason": "The harness-evolver repository home was used only to identify its project-described automated harness mutation, isolated worktree, evaluation, gating, selection, and learning-loop surface. Reported score changes remain unverified project results.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity, architecture and claimed evaluation overview, root listing, visible default branch and history count, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, worktree execution, evaluation artifact, backend, benchmark, or release body opened."
+    },
+    {
+      "source_id": "auto-source-e593782dc9320b43",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered AI Harness Scorecard repository returned GitHub 404. Repository identity, content, ownership, relevance, and evidence posture remain unestablished.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL only; no owner query, alternate repository, search, cached copy, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-0cd3a19d9e9d34c3",
+      "disposition": "read_only",
+      "reason": "The Inspect AI repository home was used only to identify the project's evaluation-framework scope across prompts, tool use, multi-turn tasks, model-graded evaluation, extensions, and prebuilt evals. No evaluation result or framework behavior was verified.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, displayed owner identity, rendered README evaluation-framework overview, root listing, visible default branch, history count, and tag count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, eval implementation, task, dataset, result, or tag contents opened."
+    },
+    {
+      "source_id": "auto-source-9b1e18963f7fbc08",
+      "disposition": "read_only",
+      "reason": "The Digital Applied article was used only to identify its source-reported enterprise survey figures, five claimed production-readiness gaps, and proposed readiness framework. The direct page exposed no independently inspectable survey methodology or dataset.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, byline/date, survey population and reported pilot-to-production figures, five-gap framing, and readiness recommendations"],
+      "inspection_basis": "Direct article page with one same-URL content recovery only; linked services, reports, survey instruments, datasets, references, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-72fcf67d67c1b151",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered Beyond Permission Prompts URL were rejected by the transport as unsafe. Article identity beyond the registered route, content, relevance, and evidence posture could not be established.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL only; no alternate route, query, search, linked copy, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-4b95225a7f6d480b",
+      "disposition": "read_only",
+      "reason": "The Extended Thinking documentation was used only to identify Anthropic's stated adaptive and extended-thinking controls, budgets, display and streaming behavior, and preservation across tool loops. Product behavior was not exercised.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official documentation page: extended and adaptive thinking scope, token-budget and display controls, streaming, and thinking preservation around tool use"],
+      "inspection_basis": "Direct registered URL and automatic redirect to platform.claude.com only; linked API references, SDKs, examples, pricing, adjacent documentation, and runtime behavior were not opened."
+    },
+    {
+      "source_id": "auto-source-cb9a1fa584365064",
+      "disposition": "read_only",
+      "reason": "The unversioned Plan-and-Act arXiv work page was used only to identify planner/executor separation, synthetic plan generation, and paper-reported WebArena-Lite and WebVoyager results. No method or result was reproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["arXiv title, authors, submission history, visible v3 and ICML 2025 metadata, abstract, method summary, and reported benchmark summary"],
+      "inspection_basis": "Direct unversioned arXiv abstract page with one same-URL content recovery only; PDF, experimental HTML, code, references, appendices, task data, and result reproduction were not opened."
+    },
+    {
+      "source_id": "auto-source-cb71b43c7896c074",
+      "disposition": "read_only",
+      "reason": "The Autonomous Context Compression article was used only to identify its project-described agent-triggered compaction policy and vendor-reported evaluation and coding observations. No implementation or result was independently verified.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["automatically redirected article title and date, agent-triggered compression description, retained-context policy, summary behavior, stated evaluation basis, and conservative-triggering guidance"],
+      "inspection_basis": "Direct registered URL, automatic redirect to the current LangChain route, and one same-URL content recovery only; linked code, product documentation, evaluation artifacts, benchmarks, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-75b74b7e71f381ad",
+      "disposition": "read_only",
+      "reason": "The Instructor documentation root was used only to identify its structured-output, schema-validation, retry, streaming, and provider-support scope and its own boundary between extraction and agent frameworks. No output property was tested.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["trailing-slash-normalized project documentation root, project identity, structured extraction and validation overview, retry and streaming claims, provider support, and stated extraction-versus-agents distinction"],
+      "inspection_basis": "Direct registered documentation root and automatic trailing-slash normalization only; linked guides, code, examples, benchmarks, integrations, API references, and runtime behavior were not opened."
+    },
+    {
+      "source_id": "auto-source-58c73d163c73c759",
+      "disposition": "read_only",
+      "reason": "The agent-device repository home was used only to identify the owner redirect and the project's device inspection, control, assertion, evidence, replay, CI, log, and trace surface. No tool or device behavior was executed.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["automatically redirected GitHub repository page, displayed owner identity, rendered README capability overview, root listing, visible default branch and history count, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, tool execution, device interaction, CI run, evidence artifact, or release body opened."
+    },
+    {
+      "source_id": "auto-source-1040cd9966982c98",
+      "disposition": "read_only",
+      "reason": "The Two Different Types of Agent Authorization article was used only to identify its practitioner distinction between user-delegated credentials and fixed agent identity plus related channel, sharing, intervention, and memory implications. It is not a universal authorization model.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["automatically redirected article title, author/date, two-authorization-type framing, credential provenance, channel and sharing discussion, human-intervention implications, and memory-permission implications"],
+      "inspection_basis": "Direct registered URL, automatic redirect to the current LangChain route, and one same-URL content recovery only; linked product documentation, examples, implementations, references, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-11d6c73f1872cbdd",
+      "disposition": "read_only",
+      "reason": "The TencentDB-Agent-Memory repository home was used only to identify the owner redirect and its project-described layered symbolic memory, summary, visual-canvas, traceability, cross-session, integration, and optional gateway-authentication surface. Reported gains remain project claims.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["automatically redirected GitHub repository page, displayed owner identity, rendered README architecture and capability overview, reported benchmark and token claims, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, integration, benchmark artifact, hosted behavior, or release body opened."
+    },
+    {
+      "source_id": "auto-source-f3f1b6782caa4b28",
+      "disposition": "read_only",
+      "reason": "The Codex SDK documentation was used only to identify the documented programmatic-control, thread, CI, internal-tool, workflow, application, and MCP-orchestration surface. Product behavior was not exercised.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official Codex SDK page: stated use cases, TypeScript SDK and thread model, and MCP-server orchestration option"],
+      "inspection_basis": "Direct registered URL and automatic redirect to learn.chatgpt.com only; linked SDK reference, package, source code, examples, Agents SDK documentation, CLI documentation, and runtime behavior were not opened."
+    },
+    {
+      "source_id": "auto-source-9e658ac64da0d3d1",
+      "disposition": "read_only",
+      "reason": "The Evaluating Skills article was used only to identify its practitioner method for clean-container tasks, metrics, baseline-versus-skill comparison, modularity, invocation, and observability. Internal results remain vendor-reported.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["automatically redirected article title, byline/date, clean-environment method, task and metric guidance, baseline comparison, skill modularity and invocation, observability, and reported internal results"],
+      "inspection_basis": "Direct registered URL, automatic redirect to the current LangChain route, and one same-URL content recovery only; linked skills, code, containers, tasks, datasets, evaluation artifacts, products, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-3c94d1f5d485d1a9",
+      "disposition": "read_only",
+      "reason": "The Weave repository home was used only to identify its project-described tracing, debugging, evaluation, and experiment-to-production information-management scope. Capabilities and stated goals remain project self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-04.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity and tracing/evaluation overview, root listing, visible default branch and history count, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen of live master with one same-URL content recovery; no code, tests, history, documentation, trace execution, evaluation artifact, hosted service, or release body opened."
+    }
+  ],
+  "artifact": {
+    "artifact_id": "v2-outline-awesome-screen-core-04-calibration",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/awesome-screen-core-04.md"
+  },
+  "claims": []
+}

@@ -35,7 +35,7 @@ post-outline research sequence.
 The maintainer accepted the completed V2 repository reset and approved V2-D005
 through V2-D011 on 2026-07-20. The original three-seed pass, six-source Wave 1,
 Walking Labs curriculum inspection, complete pinned-catalog census, and first
-three catalog calibrations are complete. The unopened Wave 2 is withdrawn and
+four catalog calibrations are complete. The unopened Wave 2 is withdrawn and
 has no active authority.
 
 The catalog gate is approved. The maintainer ratified the bounded Git-lineage
@@ -45,22 +45,20 @@ The completed `awesome-screen-core-01`, `awesome-screen-core-02`, and
 approved. V2-D011 authorized only the exact 20-family
 `awesome-screen-core-04` batch from
 `research/outline-development/awesome-screening-plan.json` at commit
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. V2-D011 supersedes only that
-batch's historical `proposed_not_authorized` field; its 20 families, 20 direct
-URLs, 22 occurrence joins, planned surfaces, screening extent, and second-hop
-prohibition remain fixed.
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`. That batch directly screened its
+exact registered URLs under the expanded register method and produced 17
+proposed `read_only` dispositions and three proposed exclusions. Its opening
+authority is exhausted, and its dispositions, catalog corrections, and the
+method's continued use now await maintainer review.
 
-For core-04, interact only with each literal registered direct URL and inspect
-only the predeclared surface needed to establish the expanded per-family
-register. Bounded repeats of the same literal URL are permitted only for
-direct-page content recovery or access confirmation and must be counted. Do
-not reopen a completed core-01, core-02, or core-03 page, open another catalog
-family, run an identity query, perform a topical or ecosystem search, manually
-traverse a redirect, follow a second hop, inspect repository files or history,
-deep-read an implementation or technique, draft an outline, select cases,
-synthesize findings, produce or adopt curriculum, build a site, promote
-evidence maturity, or re-admit legacy evidence. Every other batch remains
-blocked. Stop at the core-04 source-screening gate.
+No later batch is authorized. Do not reopen a completed core-01, core-02,
+core-03, or core-04 page, open another catalog family, run an identity query,
+perform a topical or ecosystem search, manually traverse a redirect, follow a
+second hop, inspect repository files or history, deep-read an implementation
+or technique, draft an outline, select cases, synthesize findings, produce or
+adopt curriculum, build a site, promote evidence maturity, or re-admit legacy
+evidence. Stop at the core-04 source-screening gate until the maintainer makes
+the next explicit decision.
 
 ## Clean-slate boundary
 

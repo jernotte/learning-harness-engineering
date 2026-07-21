@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Direct-screen calibration — core-04 authorized
+**Current phase:** Direct-screen calibration — core-04 review gate
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,11 +9,10 @@
 
 ## Current objective
 
-Execute the exact 20-family `awesome-screen-core-04` direct-screen calibration
-using the method approved through V2-D011. Preserve all 22 occurrence joins
-without search, identity resolution, prior-batch reopening, second-hop
-traversal, repository deep inspection, evidence promotion, or outline
-drafting, then stop at its maintainer gate.
+Present the completed exact 20-family `awesome-screen-core-04` direct-screen
+calibration for maintainer review. Preserve its 22 occurrence joins, proposed
+17 `read_only` / three `excluded` result, catalog corrections, and provenance
+limits without opening another source or advancing to core-05.
 
 ## Authority state
 
@@ -192,18 +191,41 @@ Authorized by V2-D011:
 - those approvals ratify screening results only and admit no subject evidence,
   claim, taxonomy, outline, curriculum, or downstream execution authority;
 - only `awesome-screen-core-04`, exactly as registered in the frozen screening
-  plan at commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now;
-  and
-- its 20 families, 20 direct URLs, and 22 occurrence joins receive direct
-  screening only, with no query, prior-batch reopen, manual redirect traversal,
-  second hop, bibliography traversal, repository file/history inspection, or
-  implementation deep dive.
+  plan at commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, was authorized; and
+- its 20 families, 20 direct URLs, and 22 occurrence joins were limited to
+  direct screening, with no query, prior-batch reopen, manual redirect
+  traversal, second hop, bibliography traversal, repository file/history
+  inspection, or implementation deep dive.
+
+That one authorized execution is now exhausted:
+
+- all 20 frozen source families received a direct interaction and all 22
+  frozen catalog occurrence joins are preserved;
+- 34 direct-open events map to exactly 20 requested URLs and 20 source IDs;
+  the 14 additional opens were bounded same-literal-URL content recoveries or
+  access confirmations, never alternate-route traversal;
+- 17 sources have proposed `read_only` dispositions, while the LangGraph HITL
+  route, AI Harness Scorecard repository, and Beyond Permission Prompts article
+  have proposed exclusions because their exact direct surfaces yielded no
+  substantive content;
+- eight accessible GitHub repositories remained deliberately
+  `repository_shallow` and live-unpinned; the ninth repository-shaped URL was a
+  404 with semantic inspection extent `none`;
+- the joined register records automatic route and owner changes, source-form
+  and category corrections, visible version versus actual pin, evidence
+  posture, recurrence and lineage limits, and schema friction;
+- no query, search result, unregistered URL, prior-batch reopen, manual
+  redirect traversal, second hop, implementation deep dive, claim, reference,
+  evidence promotion, legacy access, or outline drafting occurred; and
+- `research/outline-development/awesome-screen-core-04.md` is the durable join
+  from every source lifecycle to its frozen family and occurrence context.
 
 Still not authorized:
 
-- opening any catalog family outside `awesome-screen-core-04`;
+- opening any catalog family, including core-05 or a completed calibration;
 - reopening any completed `awesome-screen-core-01`,
-  `awesome-screen-core-02`, or `awesome-screen-core-03` page;
+  `awesome-screen-core-02`, `awesome-screen-core-03`, or
+  `awesome-screen-core-04` page;
 - querying even a registered family through search or identity resolution;
 - topical or ecosystem search or second-hop traversal;
 - implementation or technique deep dives;
@@ -214,16 +236,31 @@ Still not authorized:
 - producing or adopting curriculum or learning artifacts.
 
 The maintainer must explicitly authorize any later batch or method-changing
-access. Core-04 must stop at its source-screening gate.
+access. Core-04 is stopped at its source-screening gate.
 
 ## Validation and review state
 
 - The consolidated Stage 4 diagnostic provenance audit passes at
-  `complete_with_declared_manual_sources` with zero errors, 28 resolved
-  warnings, nine native boundaries, 385 native observations, zero unreconciled
+  `complete_with_declared_manual_sources` with zero errors, 37 resolved
+  warnings, ten native boundaries, 439 native observations, zero unreconciled
   observations, zero searches, zero claims, and zero promoted evidence. It
-  records 72 unique opened identities, 66 `read_only` dispositions, and six
+  records 92 unique opened identities, 83 `read_only` dispositions, and nine
   exclusions across all completed structural passes.
+- The `awesome-screen-core-04` package independently passes schema validation
+  and its diagnostic `complete` audit: 54 native observations, zero unresolved
+  observations, 20 unique opened identities from 34 direct-open events, 17
+  `read_only` dispositions, three exclusions, zero searches or claims, and nine
+  intentionally resolved `repository_shallow` warnings. Its separate
+  first-interaction proof is validation evidence and is not merged into the
+  consolidated stream.
+- Two bounded local audits checked the completed core-04 content, frozen joins,
+  authority state, first-proof separation, capture accounting, and consolidated
+  merge. The provenance audit found no defect. The content audit found a lossy
+  three-context join, eight redirecting rows that omitted the literal requested
+  URL, and wording that called resulting provenance source IDs frozen. All were
+  accepted and corrected; a first focused check caught one abbreviated context
+  path, and the final focused verification closed it with no residual
+  contradiction.
 - The `awesome-screen-core-03` package independently passes schema validation
   and its diagnostic `complete` audit: 39 native observations, zero unresolved
   observations, 20 unique opened identities from 31 direct-open events, 17
@@ -347,8 +384,8 @@ The maintainer explicitly approved V2-D005 through V2-D011 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
 amended brief is controlling. The first three catalog calibration methods,
-dispositions, and corrections are approved, and only the exact fourth
-calibration batch is active.
+dispositions, and corrections are approved. The fourth calibration is complete
+and awaiting maintainer review; all catalog opening authority is exhausted.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.

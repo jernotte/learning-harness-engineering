@@ -37,15 +37,14 @@ separate packet-specific approval but do not otherwise block Stage 4.
 
 ## Stage 4 — Structural landscape and catalog investigation
 
-**Status:** The V2-D008 catalog gate is approved, `awesome-screen-core-01` is
-complete, and V2-D009 approves its calibration method and dispositions. Only
-the exact 20-source `awesome-screen-core-02` batch was authorized; that batch
-is now complete. V2-D010 approves continued use of its method and authorized
-only exact `awesome-screen-core-03`; that batch is now complete and its
-authority exhausted. V2-D011 approves core-02's and core-03's recorded
-dispositions, methods, and catalog corrections and authorizes only exact
-`awesome-screen-core-04`. The former Wave 2 proposal is withdrawn and has no
-authority.
+**Status:** The V2-D008 catalog gate is approved, and the first four core
+calibrations are complete. V2-D009 approved core-01 and authorized only
+core-02; V2-D010 approved continued method use and authorized only core-03;
+V2-D011 approved core-02's outstanding results and core-03's method and
+results, then authorized only exact `awesome-screen-core-04`. Core-04 has now
+completed, its opening authority is exhausted, and its proposed 17 `read_only`
+/ three `excluded` result awaits maintainer review. The former Wave 2 proposal
+is withdrawn and has no authority.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -79,9 +78,11 @@ redirected page, and promoted no claim or evidence. Core-03 then screened its
 exact 20 registered URLs, recorded 17 proposed `read_only` dispositions and
 three proposed exclusions for inaccessible direct surfaces, and likewise
 promoted no claim or evidence. Those core-02 and core-03 results are now
-approved. Only core-04 may execute under the unchanged direct-URL-only,
-no-query, no-second-hop, no-deep-reading boundary; every later batch remains
-blocked.
+approved. Core-04 then screened its exact 20 registered URLs, recorded 17
+proposed `read_only` dispositions and three proposed exclusions for
+inaccessible direct surfaces, and promoted no claim or evidence. Its authority
+is exhausted; every later batch remains blocked pending another explicit
+decision.
 
 ## Stage 5 — Competing outline skeletons
 

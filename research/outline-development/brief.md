@@ -468,10 +468,11 @@ catalog counts.
    maintainer then approved continued use of its method and authorized only
    exact `awesome-screen-core-03`. Core-03 is complete. The maintainer approved
    core-02's outstanding results and core-03's method and results, then
-   authorized only exact `awesome-screen-core-04`. Review core-04's actual
-   source identities, access limits, evidence postures, catalog corrections,
-   schema friction, and any resulting change to later batch order. No
-   second-hop source or additional batch is opened implicitly.
+   authorized only exact `awesome-screen-core-04`. Core-04 is complete and its
+   opening authority is exhausted. Review its actual source identities, access
+   limits, evidence postures, catalog corrections, schema friction, and any
+   resulting change to later batch order. No second-hop source or additional
+   batch is opened implicitly.
 6. **Seed-map gate.** Review the completed audited structural landscape and
    remaining gaps before skeleton drafting.
 7. **Skeleton gate.** Review three materially different skeletons and select,

@@ -54,6 +54,20 @@ unreconciled observations, zero searches, zero claims, and no promoted
 evidence. The separate core-03 first-interaction proof is validation evidence
 and is not merged into the consolidated stream.
 
+V2-D011 adds the separately bounded `awesome-screen-core-04` package. Its
+resolved stream records 54 native observations, 20 unique direct-source
+lifecycles from 34 same-boundary open events, 17 `read_only` dispositions,
+three exclusions, zero searches, and zero unresolved observations. Nine
+`repository_shallow` warnings are preserved and resolved as intentional
+direct-screen limits; one belongs to the mechanically repository-shaped 404
+route whose semantic inspection extent is `none`. The package audit uses
+completeness `complete`. After merging only its full resolved stream, the
+consolidated diagnostic audit reports ten native boundaries, 439 native
+observations, 92 unique opened source identities, 83 `read_only` dispositions,
+nine exclusions, zero unreconciled observations, zero searches, zero claims,
+and no promoted evidence. The separate core-04 first-interaction proof is
+validation evidence and is not merged into the consolidated stream.
+
 Because the worktree and native rollout both live below `.codex`, the frozen
 adapter conservatively classified several local fixture/provenance commands as
 external. Manual reconciliation links those observations reciprocally to

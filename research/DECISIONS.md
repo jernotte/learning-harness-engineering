@@ -477,8 +477,9 @@ and authorized core-02 on 2026-07-20.
 ### Execution record
 
 Core-02 completed under this authorization on 2026-07-20. Its native boundary
-contains 21 direct-open events for exactly the 20 frozen source IDs and URLs;
-the sole repeat was a second same-literal-URL attempt after the GitHub
+contains 21 direct-open events for the 20 frozen families and registered URLs,
+producing exactly 20 source IDs; the sole repeat was a second same-literal-URL
+attempt after the GitHub
 Governing Agents route returned no substantive content. No search, identity
 query, manual redirect traversal, second hop, core-01 reopen, implementation
 deep dive, claim, reference, evidence promotion, legacy access, or outline
@@ -558,8 +559,9 @@ core-02's individual dispositions or catalog corrections.
 ### Execution record
 
 Core-03 completed under this authorization on 2026-07-20. Its native boundary
-contains 31 direct-open events for exactly the 20 frozen source IDs and URLs.
-The eleven additional events were same-literal-URL content recoveries or
+contains 31 direct-open events for the 20 frozen families and registered URLs,
+producing exactly 20 source IDs. The eleven additional events were
+same-literal-URL content recoveries or
 exact-URL access retries: no alternate route, query, search result, manual
 redirect traversal, second hop, prior-batch reopen, implementation deep dive,
 claim, reference, evidence promotion, legacy access, or outline drafting
@@ -661,3 +663,33 @@ represented by this canonical decision.
 
 The maintainer said “approve everything and continue to core-04” on
 2026-07-20. This decision records the bounded gate interpretation above.
+
+### Execution record
+
+Core-04 completed under this authorization on 2026-07-20. Its native boundary
+contains 34 direct-open events for exactly 20 resulting source IDs across the
+20 frozen families and literal registered URLs. Fourteen additional events
+were bounded same-literal-URL content recoveries or access confirmations. No
+alternate route, query, search
+result, manual redirect traversal, second hop, prior-batch reopen, repository
+file or history inspection, implementation deep dive, claim, reference,
+evidence promotion, legacy access, or outline drafting occurred.
+
+The joined register preserves all 22 frozen occurrence joins and records 17
+proposed `read_only` dispositions and three proposed exclusions: a redirect-only
+LangGraph HITL surface, a GitHub 404 for AI Harness Scorecard, and a safe-open
+rejection for Beyond Permission Prompts. It also preserves nine mechanically
+reported and intentionally resolved `repository_shallow` warnings, including
+the inaccessible repository-shaped URL; requested and observed identities;
+visible-version-versus-pin state; evidence posture; recurrence and lineage
+limits; and material catalog corrections. The standalone diagnostic audit
+passes at `complete` with 54 native observations, zero unresolved observations,
+zero searches, and zero claims. The consolidated diagnostic audit passes at
+`complete_with_declared_manual_sources` with ten native boundaries, 439 native
+observations, 92 unique opened source identities, 83 `read_only` dispositions,
+nine exclusions, zero searches, zero claims, and zero unresolved observations.
+
+This execution record exhausts V2-D011's opening authority. It does not approve
+the core-04 dispositions or catalog corrections, authorize continued method
+use, or authorize core-05. The maintainer must review the completed package
+before the next decision.

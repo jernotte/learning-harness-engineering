@@ -1,19 +1,17 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Provisional skeleton baseline — maintainer review gate
+**Current phase:** Conventional-topic skeleton — maintainer review gate
 **Active subject-research cycle:** None
-**Active outline task:** `v2-skeleton-checkpoint-00`
+**Active outline task:** `v2-conventional-skeleton-checkpoint-01`
 **Active brief:** `research/outline-development/brief.md` — approved
 **Last updated:** 2026-07-21
 
 ## Current objective
 
-Present the three materially distinct, adversarially reviewed provisional
-high-level skeletons, their structural-pressure basis, primary dispositions,
-and unresolved choices to the maintainer. Stop for their direction. Do not
-open another source, change portfolio membership, begin a detailed outline, or
-advance to core-05.
+Present the adversarially reviewed conventional-topic skeleton, its vocabulary
+basis, overlap rules, and unresolved placement choices for maintainer direction.
+Do not open another source, begin a detailed outline, or advance to core-05.
 
 ## Authority state
 
@@ -28,8 +26,8 @@ advance to core-05.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 through V2-D011 were explicitly approved on 2026-07-20. V2-D012 was
-  explicitly approved on 2026-07-21.
+- V2-D005 through V2-D011 were explicitly approved on 2026-07-20. V2-D012 and
+  V2-D013 were explicitly approved on 2026-07-21.
 
 ## Current authorization
 
@@ -222,7 +220,7 @@ That one authorized execution is now exhausted:
 - `research/outline-development/awesome-screen-core-04.md` is the durable join
   from every source lifecycle to its frozen family and occurrence context.
 
-Authorized by V2-D012:
+Completed under V2-D012 and rejected at its maintainer gate:
 
 - draft exactly three active provisional skeletons from already captured V2
   artifacts through core-04 and present each as a high-level conceptual tree;
@@ -240,6 +238,22 @@ Authorized by V2-D012:
 - stop after validation and review for the maintainer. This authority does not
   approve core-04 or open core-05.
 
+Authorized by V2-D013:
+
+- preserve the checkpoint-00 A/B/C portfolio, pressure ledger, and review as
+  rejected design history;
+- create one replacement candidate with recognizable context, memory, tools,
+  skills, loops, workflows, orchestration, evaluation, observability,
+  permissions, human-control, and production terminology;
+- use functional depth beyond two levels when it preserves a real subject
+  distinction;
+- reconcile familiar overlaps without inventing substitute vocabulary or
+  copying one catalog taxonomy wholesale;
+- retain decision, causal, and responsibility analysis only as cross-cutting
+  questions; and
+- run bounded local review, validate, and stop for the maintainer. This
+  authority does not approve core-04 or open core-05.
+
 Still not authorized:
 
 - opening any catalog family, including core-05 or a completed calibration;
@@ -252,7 +266,8 @@ Still not authorized:
 - case selection, synthesis of subject findings, or site work;
 - evidence maturity promotion;
 - legacy evidence readmission;
-- expanding the provisional skeletons into a detailed subject outline; and
+- expanding the provisional conventional skeleton into a detailed subject
+  outline; and
 - producing or adopting curriculum or learning artifacts.
 
 The maintainer must explicitly authorize any later batch or method-changing
@@ -260,14 +275,29 @@ access. Core-04 is stopped at its source-screening gate.
 
 ## Validation and review state
 
-- The V2-SK-CP00 baseline contains exactly three active one- or two-level
-  conceptual trees plus one explicitly inactive challenger. Separate local
+- V2-SK-CP01 contains one active thirteen-subject conceptual tree using
+  recognizable harness-engineering terminology, a local vocabulary/placement
+  map, and a bounded adversarial review. Its extra depth is functional rather
+  than a product or implementation inventory. The candidate remains a
+  structural hypothesis awaiting maintainer review.
+- The local architecture audit raised two high and six medium findings; the
+  local vocabulary/authority audit raised four high and three medium findings.
+  The primary accepted and corrected all fifteen. The architecture verifier
+  then passed A-01 through A-08. During its focused pass, the vocabulary
+  verifier found two residual stale-control phrases, confirmed their bounded
+  corrections, and passed T-01 through T-07. Neither review is externally
+  independent or maintainer approval.
+- The provenance test suite, catalog extractor tests, local Markdown-link
+  check, and `git diff --check` pass after the checkpoint-01 corrections.
+- The now-rejected V2-SK-CP00 baseline contained exactly three active one- or
+  two-level conceptual trees plus one explicitly inactive challenger. Separate local
   architecture and traceability adversaries raised three high and eleven
   medium recorded findings; the primary accepted and corrected all fourteen.
   The architecture pass confirmed genuine organizing variance after correction,
   and the traceability pass found no residual core-04/core-05, reviewer-
   authority, catalog-adoption, recurrence, or frozen-artifact defect. These
-  reviews are local, advisory, and not externally independent.
+  reviews are local, advisory, and not externally independent. Their internal
+  pass did not make the structures acceptable to the maintainer.
 - The consolidated Stage 4 diagnostic provenance audit passes at
   `complete_with_declared_manual_sources` with zero errors, 37 resolved
   warnings, ten native boundaries, 439 native observations, zero unreconciled
@@ -426,10 +456,8 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the three adversarially reviewed provisional
-skeletons, their material differences, structural-pressure basis, reviewer
-findings and primary dispositions, provisional recommendation, challenger
-state, and unresolved choices. Core-04's proposed results remain separately
-unratified. No other batch opens, no skeleton enters or leaves the active
-portfolio, and no detailed outline begins before that review. Selective raw
-conversation packets remain separately gated per packet.
+The maintainer will review the conventional-topic replacement, its vocabulary
+map, hierarchy, overlap ownership, reviewer findings and primary dispositions,
+and unresolved placement choices. Core-04's proposed results remain separately
+unratified. No other batch opens and no detailed outline begins before that
+review. Selective raw conversation packets remain separately gated per packet.

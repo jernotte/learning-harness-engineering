@@ -53,26 +53,26 @@ source-opening batches before direct screening or substantive reading.
 ### 6. Separate extraction from organization
 
 First record vocabulary, candidate topics, assumptions, omissions, tensions,
-and reference structure. Only then develop multiple organizations. The
+and reference structure. Only then develop an organization. The
 complete pinned-catalog census and first four calibrated screens satisfy the
-baseline separation needed for provisional skeletons; completing every direct
+baseline separation needed for the provisional skeleton; completing every direct
 screen is not an automatic prerequisite. This keeps the sources from silently
 supplying both the content universe and its final shape.
 
-### 7. Compare competing skeletons
+### 7. Build and review the conventional-topic skeleton
 
-Maintain three active candidates at a maintainer checkpoint, with at most one
-temporary challenger between checkpoints. Present each as a high-level
-conceptual tree and identify its organizing principle, sequence, dependency
-logic, fit to the approved objectives, benefits, risks, blind spots, and
-anchoring hazards. Preserve version lineage. The primary recommends one, but
-only the maintainer may admit, combine, replace, retire, reorder, or select an
-option.
+Use recognizable harness-engineering terms as the public spine. Preserve
+meaningful distinctions among context, memory, tools, skills, protocols,
+planning, orchestration, observability, evaluation, permissions, sandboxing,
+and production operations. Add hierarchy when it clarifies these relationships;
+do not impose a two-level cap or create bespoke substitutes for familiar terms.
 
-Later separately authorized screens pressure the portfolio through a
-structural ledger. Do not rewrite skeletons after each source. Freeze and review
-new versions after at most five batches or an earlier structural stop, then
-pause for the maintainer.
+Later separately authorized screens pressure the structure through a
+structural ledger. Do not rewrite it after each source. Freeze and review new
+versions after at most five batches or an earlier structural stop, then
+pause for the maintainer. Alternative decision, causal, responsibility, and
+learning views are cross-cutting navigation or sequence aids, not competing
+public taxonomies unless the maintainer explicitly requests otherwise.
 
 ### 8. Develop the detailed outline
 
@@ -91,6 +91,8 @@ plan is a separate task.
 ## Reasoning safeguards
 
 - Do not import pre-pivot labels as neutral vocabulary.
+- Do not replace recognizable current field terms with analyst-created labels
+  merely to obtain a cleaner taxonomy.
 - Do not assume the seed sources are complete, independent, or correct.
 - Do not confuse complete coverage of one pinned catalog with field coverage.
 - Do not treat catalog recurrence, ordering, or curator language as source

@@ -17,19 +17,18 @@ calibrations are complete. Core-01 through core-03 are approved. Core-04's
 proposed 17 `read_only` / three `excluded` result remains awaiting maintainer
 ratification, and no core-05 or later batch is authorized.
 
-V2-D012 now authorizes an early-alignment portfolio of three provisional,
-high-level skeletons built only from already captured artifacts. The active
-options test organization by builder decisions, causal control transitions,
-and responsibility/authority allocation. They may evolve at maintainer
-checkpoints, with at most one temporary challenger and preserved version
-lineage. The baseline portfolio and its structural-pressure ledger are in
-[`research/outline-development/skeletons.md`](research/outline-development/skeletons.md)
-and
-[`research/outline-development/skeleton-pressure-ledger.md`](research/outline-development/skeleton-pressure-ledger.md).
-The completed local adversarial review and primary dispositions are in
-[`research/outline-development/skeleton-review.md`](research/outline-development/skeleton-review.md).
-The package now awaits maintainer review. These are structural hypotheses, not
-an approved outline or subject authority.
+The maintainer rejected the abstraction-first A/B/C skeleton portfolio at its
+review gate. V2-D013 now requires the reader-facing structure to use familiar
+harness-engineering terminology and permits useful depth beyond two levels.
+The active replacement is
+[`research/outline-development/conventional-skeleton.md`](research/outline-development/conventional-skeleton.md),
+supported by the
+[`conventional vocabulary map`](research/outline-development/conventional-vocabulary-map.md).
+The bounded adversarial findings and their dispositions are in the
+[`checkpoint-01 review`](research/outline-development/conventional-skeleton-review.md).
+The rejected portfolio, pressure ledger, and review remain preserved in their
+original checkpoint files as design history. The replacement remains a
+structural hypothesis, not an approved outline or subject authority.
 
 Work remains on `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
@@ -41,8 +40,8 @@ The complete pre-pivot history remains recoverable from
 No V2 subject outline has been approved, and no taxonomy, case set, synthesis,
 or reviewed finding currently exists. The approved and amended
 [`research/outline-development/brief.md`](research/outline-development/brief.md)
-authorizes structural inspection of the named inputs and a complete pinned-
-catalog inventory plus the provisional skeleton portfolio. It does not adopt
+authorizes structural inspection of the named inputs, a complete pinned-catalog
+inventory, and the provisional conventional-topic skeleton. It does not adopt
 source taxonomies, authorize a new outbound source open without maintainer
 approval of an exact batch, or authorize substantive research.
 

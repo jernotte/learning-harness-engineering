@@ -4,18 +4,19 @@
 
 Harness Engineering V2 is rebuilding its research program from a clean
 conceptual slate. The authority reset is complete. V2-D005 through V2-D011
-approve an outline-first process, and V2-D012 authorizes a provisional,
-checkpointed skeleton portfolio. The maintainer approved core-02's exact
+approve an outline-first process; V2-D012 produced a provisional skeleton
+portfolio, and V2-D013 records the maintainer's rejection and replacement
+direction. The maintainer approved core-02's exact
 19 `read_only` / one `excluded` dispositions and corrections, then approved
 the method exercised in core-03 plus its exact 17 `read_only` / three
 `excluded` dispositions and corrections. The authorized 20-source
 `awesome-screen-core-04` calibration within `v2-outline-seed-map` is complete
 and awaiting maintainer review; its proposed result is 17 `read_only` / three
 `excluded`. Its opening authority is exhausted, and no core-05 or later batch
-is authorized. The current work creates three active high-level skeletons from
-already captured artifacts, adversarially reviews them, and stops for the
-maintainer. The final goal continues through a maintainer-approved outline and
-stops before substantive research.
+is authorized. The current work creates one deeper replacement using familiar
+harness-engineering vocabulary from already captured artifacts, adversarially
+reviews it, and stops for the maintainer. The final goal continues through a
+maintainer-approved outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -102,9 +103,9 @@ authority.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
 - Core-04 closed with complete source lifecycles, reconciled diagnostic
-  provenance, schema friction, and recommendation. V2-D012 permits only local
-  provisional-skeleton work beyond that point; all later source batches remain
-  blocked.
+  provenance, schema friction, and recommendation. V2-D013 permits only local
+  conventional-skeleton work beyond that point; all later source batches
+  remain blocked.
 
 ## Provisional skeleton acceptance criteria when V2-D012 is in scope
 
@@ -135,6 +136,34 @@ authority.
   advisory and read-only.
 - The checkpoint stops for the maintainer with reviewer findings, primary
   dispositions, unresolved choices, and no implied later-batch authority.
+
+These criteria describe the historical checkpoint-00 package. V2-D013 records
+that the maintainer rejected it despite its internal validation.
+
+## Conventional-skeleton acceptance criteria when V2-D013 is in scope
+
+- The checkpoint has one active replacement with a new stable ID; A, B, and C
+  remain visibly rejected design history.
+- The public spine uses recognizable harness-engineering terms directly,
+  including context engineering, memory/state, tools, skills, loops/workflows,
+  orchestration, evaluation, observability, security/permissions, human
+  control, and production operations.
+- Depth beyond two levels preserves a real semantic, ownership, or dependency
+  distinction rather than product or implementation enumeration.
+- Context is not collapsed into memory; skills into tools or MCP; planning into
+  orchestration; observability into evaluation; or permissions into sandboxing.
+- Familiar overlap is resolved through one primary explanatory home and
+  explicit cross-references, not invented replacement vocabulary.
+- Decision, causal, and responsibility analysis appears only as cross-cutting
+  questions, not reader-facing topic names or a hidden second taxonomy.
+- Catalog and curriculum vocabulary may inform labels but does not establish
+  importance, effectiveness, completeness, or sequence; one source's bundles
+  are not copied wholesale.
+- Core-04 remains unratified. No core-05 source, external query, second hop,
+  deep reading, detailed outline, evidence promotion, legacy artifact, or case
+  selection enters the checkpoint.
+- Review remains advisory and the checkpoint stops for the maintainer with
+  findings, primary dispositions, and unresolved placement choices.
 
 ## Quality bar
 
@@ -206,6 +235,10 @@ reported command output.
   high-level form, shared hidden taxonomy, unjustified portfolio convergence,
   evidence or catalog frequency used as structural authority, missing section
   ownership, or a reviewer recommendation presented as a maintainer decision.
+- For the V2-D013 replacement, bespoke substitutes for common terminology,
+  semantic collapse among familiar terms, unjustified hierarchy, copied
+  catalog bundles, hidden reactivation of A/B/C, or conventional wording
+  presented as proof of universal consensus.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

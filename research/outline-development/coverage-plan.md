@@ -2,21 +2,22 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005 through V2-D011, approved 2026-07-20; V2-D012,
-approved 2026-07-21
-**Current pass:** `v2-skeleton-checkpoint-00`; local structural analysis and
-adversarial review only
+**Authority:** V2-D005 through V2-D011, approved 2026-07-20; V2-D012 through
+V2-D013, approved 2026-07-21
+**Current pass:** `v2-conventional-skeleton-checkpoint-01`; local vocabulary,
+structural analysis, and adversarial review complete; stopped at maintainer gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The current pass asks whether three materially distinct high-level skeletons
-can organize the already captured structural landscape without adopting a
-source taxonomy. It records their pressure basis, reviewer challenges, and
-remaining maintainer choices. It performs no external interaction, changes no
-source disposition, and promotes no evidence. Core-04's proposed result remains
-unratified, and no source may open without another explicit decision.
+The current pass replaces the maintainer-rejected abstraction-first portfolio
+with one deeper skeleton using familiar harness-engineering terms. It records
+the local vocabulary basis, distinctions, overlap ownership, reviewer
+challenges, and remaining maintainer choices. It performs no external
+interaction, changes no source disposition, and promotes no evidence. Core-04's
+proposed result remains unratified, and no source may open without another
+explicit decision.
 
 ## Wave 1 authorization
 
@@ -91,18 +92,19 @@ authorized earlier open or access attempt may establish accessibility.
 
 ## Provisional skeleton boundary
 
-V2-D012 authorizes only local analysis of the captured seed map, Walking Labs
+V2-D013 authorizes only local analysis of the captured seed map, Walking Labs
 analysis, pinned-catalog artifacts, completed screening registers, and their
-audits. The three active skeletons must use distinct organizing principles,
-remain one or two levels beneath a conceptual root, and keep factual claims out
-unless the ordinary ledger and verification rules are satisfied. A structural
-pressure is an outline hypothesis, not a source disposition or finding.
+audits. The active skeleton must use recognizable field terms and may descend
+beyond two levels only to preserve real semantic or ownership distinctions.
+It keeps factual claims out unless the ordinary ledger and verification rules
+are satisfied. A vocabulary placement is an outline hypothesis, not a source
+disposition or finding.
 
-The baseline review may inspect the current repository and diff. It may not
-open a source, follow a link outside the repository, inspect legacy material,
-approve core-04, or change portfolio authority. Because this pass has no
-external research interaction, it creates no new source-lifecycle or native
-provenance boundary.
+The checkpoint-01 review may inspect the current repository and diff. It may
+not open a source, follow a link outside the repository, inspect legacy
+material, approve core-04, or change conventional-skeleton authority. Because
+this pass has no external research interaction, it creates no new source-
+lifecycle or native provenance boundary.
 
 ## Interaction boundary
 
@@ -227,9 +229,9 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-The current pass stops after the three provisional trees, pressure ledger,
+The current pass stops after the conventional-topic tree, vocabulary map,
 adversarial review, primary dispositions, and deterministic validation are
-complete. The maintainer then reviews the portfolio and decides whether to
-keep, revise, merge, replace, retire, or challenge an option and whether any
-later exact screening tranche is worth opening. Core-04 remains proposed and
-no later batch may open implicitly.
+complete. The maintainer then reviews its terminology, placement, depth, and
+overlap rules and decides whether another revision or later exact screening
+tranche is worth opening. Core-04 remains proposed and no later batch may open
+implicitly.

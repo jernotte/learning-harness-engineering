@@ -1,18 +1,18 @@
 # Harness Engineering V2 — Outline-Development Brief
 
 - **Status:** Approved on 2026-07-20; amended by V2-D007 on 2026-07-20 and
-  V2-D012 on 2026-07-21
+  V2-D012 through V2-D013 on 2026-07-21
 - **Stage:** 3 — outline-development brief
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
 **Approval effect:** V2-D005, the linked review-limit decision V2-D006, the
-catalog-landscape correction V2-D007, and the checkpointed skeleton-portfolio
-amendment V2-D012 are approved. This contract authorizes structural seed,
-curriculum, and catalog mapping plus the provisional high-level skeleton
-portfolio. Each later checkpoint separately unlocks the next work; approval
-does not approve an outline, authorize substantive research, or grant blanket
-conversation-export permission.
+catalog-landscape correction V2-D007, checkpointed skeleton amendment V2-D012,
+and conventional-vocabulary correction V2-D013 are approved. This contract
+authorizes structural seed, curriculum, and catalog mapping plus the
+provisional conventional-topic skeleton. Each later checkpoint separately
+unlocks the next work; approval does not approve an outline, authorize
+substantive research, or grant blanket conversation-export permission.
 
 ## Approval record
 
@@ -32,6 +32,12 @@ portfolio adversarially, and stop for immediate maintainer review before any
 core-05 opening. Later screening, if separately authorized, is reviewed after
 at most five batches or an earlier structural stop. The 21-batch plan remains a
 candidate upper bound rather than an automatic completion mandate.
+
+At the resulting checkpoint, the maintainer rejected all three abstraction-
+first spines and the two-level cap. V2-D013 instead authorizes one deeper
+replacement candidate whose public structure uses familiar harness-engineering
+terms. The rejected portfolio remains design history; its analytical lenses
+may survive only as cross-cutting questions.
 
 The earlier configured external review covered the pre-hybrid version of this
 brief. The reviewer could not inspect the selective-history revision because a
@@ -166,40 +172,39 @@ guidance only as later derivatives.
 
 ## Organization and granularity criteria
 
-Maintain three materially different active skeletons at a checkpoint. They
-must differ in organizing principle, not merely in headings, labels, or order.
-Present each as a high-level conceptual tree with only one or two levels below
-the root. The tree is the outline; rationale, comparison, pressure history, and
-review findings remain outside it.
+Use one active replacement skeleton at the current checkpoint. Its public
+spine must use recognizable harness-engineering terms rather than substitute
+decision, lifecycle, or authority labels. Familiar terms may remain contested;
+state their boundary and relationship instead of renaming them away.
 
-At most one temporary challenger may be developed between checkpoints. Only
-the maintainer may admit, merge, replace, retire, or select a skeleton. Preserve
-stable IDs and every version. A materially changed organizing unit, section-
-ownership model, dependency logic, reading mode, or cross-cutting treatment
-receives a new skeleton ID rather than masquerading as an ordinary revision.
+Preserve stable IDs and every version. The rejected A/B/C portfolio remains
+visible as checkpoint-00 history. Only the maintainer may accept, replace,
+reorder, or reject the active candidate.
 
-Each skeleton must state:
+The skeleton must state:
 
 - its organizing principle and intended reading mode;
 - how it serves the approved audience, outcomes, and decision targets;
 - what question or decision each top-level section owns;
 - its inclusion and exclusion logic;
-- how it handles source-native vocabulary and aliases;
+- how it preserves common vocabulary while handling aliases and disputed
+  boundaries;
 - how it treats mechanisms that cross section boundaries without duplicating
   claims;
 - its dependency and sequence rationale;
 - its benefits, risks, blind spots, and anchoring hazards; and
 - what it makes easy to see and what it tends to hide.
 
-No role for implementations, papers, products, domains, or sources is preferred
-before the seed map. Each skeleton must state whether those materials form its
-organizing spine, supporting evidence, a traversal path, a cross-cutting layer,
-or some combination, and must expose the consequences of that choice.
+Implementations, papers, products, domains, and sources do not form the public
+spine merely because they use a common term. The skeleton must state whether
+they later serve as evidence, examples, traversal paths, or comparative cases.
 
 ### Granularity rules
 
-- Skeletons use one or two levels, sufficient to expose the structural choice.
-- The detailed outline normally uses two or three levels.
+- The skeleton may descend beyond two levels when a child preserves a real
+  semantic or ownership distinction.
+- The detailed outline has no fixed depth cap; use only the depth needed to
+  expose distinct objectives, questions, dependencies, or evidence burdens.
 - No top-level section count is predetermined.
 - Split a section only when a child has a distinct objective, decision,
   research question, dependency, or evidence burden.
@@ -225,9 +230,9 @@ The final sequence must:
 - explain why plausible alternate orders were rejected; and
 - support both a coherent first reading and targeted reference use.
 
-No reading mode or sequence is preferred before the seed map. The skeleton
-comparison must evaluate linear, non-linear, hybrid, or other plausible modes
-against the approved audience and outcomes, and explain any option it omits.
+The approved public reading mode now follows conventional topics. Alternative
+decision, causal, responsibility, or pedagogical traversals may be supplied as
+cross-links, but they do not replace familiar section names.
 
 ## Comprehensive seed, curriculum, and catalog investigation
 
@@ -338,16 +343,17 @@ ceiling applies, but the maintainer approves every source-opening batch.
 Anything discovered inside an opened catalog source is second hop and remains
 prohibited unless separately proposed and approved.
 
-V2-D012 permits a future authorization to name a tranche of at most five
-already frozen batches, but it does not itself authorize one. Every batch in a
-tranche retains its own exact membership, provenance boundary, validation, and
-closeout. Skeleton versions update only at the ensuing maintainer checkpoint or
-an earlier mandatory stop; the structural-pressure ledger may receive
-per-family entries after each completed batch.
+V2-D012's still-controlling screening cadence permits a future authorization to
+name a tranche of at most five already frozen batches, but neither V2-D012 nor
+V2-D013 authorizes one. Every batch in a tranche retains its own exact
+membership, provenance boundary, validation, and closeout. The conventional
+structure updates only at the ensuing maintainer checkpoint or an earlier
+mandatory stop; its structural ledger may receive per-family entries after
+each completed batch.
 
 No topical or ecosystem search, implementation deep dive, evidence promotion,
-legacy access, or detailed-outline drafting beyond the V2-D012 provisional
-portfolio is authorized. Exact-title or identifier resolution may be proposed
+legacy access, or detailed-outline drafting beyond the V2-D013 conventional
+skeleton is authorized. Exact-title or identifier resolution may be proposed
 only for an already cataloged family whose identity cannot be determined from
 its URL; every query must be approved and logged before use.
 
@@ -461,11 +467,14 @@ promotion.
 - `research/provenance/v2-outline-seed-map-audit.json`
 - `research/provenance/v2-outline-seed-map-audit.md`
 
-The interleaved Stage 5 baseline writes
+The historical checkpoint-00 baseline wrote
 `research/outline-development/skeletons.md`,
 `research/outline-development/skeleton-pressure-ledger.md`, and
-`research/outline-development/skeleton-review.md`. Later approved checkpoints
-version the portfolio without overwriting its history. Stage 6 iterates and
+`research/outline-development/skeleton-review.md`. Checkpoint 01 writes
+`research/outline-development/conventional-skeleton.md`,
+`research/outline-development/conventional-vocabulary-map.md`, and
+`research/outline-development/conventional-skeleton-review.md`. Later approved
+checkpoints preserve earlier versions rather than overwriting history. Stage 6 iterates and
 ultimately approves `research/outline-development/outline.md`; approval changes
 that artifact's authority, not its path.
 
@@ -503,23 +512,26 @@ catalog counts.
    limits, evidence postures, catalog corrections, schema friction, and any
    resulting change to later batch order. No second-hop source or additional
    batch is opened implicitly.
-6. **Baseline skeleton gate — current.** V2-D012 authorizes three provisional
-   high-level skeletons, a pressure ledger, bounded local adversarial review,
-   and an immediate maintainer checkpoint. Core-04 remains unratified input;
-   core-05 remains closed.
-7. **Later portfolio checkpoints.** If exact future batches are separately
-   authorized, review the current three plus any challenger after at most five
-   completed batches or an earlier structural stop. The maintainer may keep,
-   revise, merge, replace, retire, or reject options and may stop screening.
-8. **Seed-map completion gate.** When the maintainer decides that further
+6. **Abstract skeleton gate — completed and rejected.** V2-D012 produced three
+   reviewed abstraction-first candidates. The maintainer rejected all three
+   and the two-level depth limit through V2-D013.
+7. **Conventional-topic skeleton gate — current.** Review the deeper
+   replacement candidate, its vocabulary map, overlap ownership, local
+   adversarial findings, and unresolved placements. Core-04 remains unratified
+   input; core-05 remains closed.
+8. **Later structural checkpoints.** If exact future batches are separately
+   authorized, review their effect on the conventional-topic structure after
+   at most five completed batches or an earlier structural stop. The maintainer
+   may revise, replace, reorder, or stop the work.
+9. **Seed-map completion gate.** When the maintainer decides that further
    screening is unlikely to add a materially different organizational option,
    review the audited landscape, remaining gaps, and final provisional
-   portfolio before selecting or combining a direction.
-9. **Detailed-outline iteration.** Expand only the maintainer-directed
+   conventional structure before accepting or revising its direction.
+10. **Detailed-outline iteration.** Expand only the maintainer-directed
    structure and visibly disposition requested changes.
-10. **Final outline gate.** Explicitly approve objectives, scope, organization,
+11. **Final outline gate.** Explicitly approve objectives, scope, organization,
    and sequence.
-11. **Post-outline stop.** A separate goal must define and authorize
+12. **Post-outline stop.** A separate goal must define and authorize
    substantive research.
 
 ## Stop conditions
@@ -536,9 +548,9 @@ Stop immediately and ask for direction if:
   topical search, second-hop traversal, credentials, paid access, or deep
   implementation inspection;
 - a proposed factual claim requires evidence outside the approved boundary;
-- two active skeletons become materially equivalent, a challenger exposes a
-  genuinely different principle, or a skeleton cannot serve an approved
-  objective without changing its identity; or
+- the active skeleton must replace familiar field terminology, collapse
+  materially distinct terms, or grow detail without a distinct structural
+  purpose; or
 - evidence suggests changing the brief's objectives, scope, or method.
 
 Normal structural-landscape completion occurs when the original seeds and Wave
@@ -546,14 +558,14 @@ Normal structural-landscape completion occurs when the original seeds and Wave
 qualifying Awesome occurrence is accounted for; canonical families,
 duplicates, exclusions, unresolved identities, and lineage are explicit; the
 then-current maintainer-approved direct-screening set is complete or explicitly
-closed at a portfolio checkpoint; the
+closed at a structural checkpoint; the
 diagnostic audit gate passes with zero errors and zero unresolved warnings; and
 further authorized screening is unlikely to add a materially different
 organizational option. This is completion against the pinned catalog and
 approved structural inputs, not field coverage or saturation.
 
-For the evolving portfolio, a full authorized tranche with no new organizing
-principle, boundary, section owner, dependency, sequence, or cross-cutting
+For the evolving structure, a full authorized tranche with no new conventional
+topic, boundary, section owner, dependency, sequence, or cross-cutting
 treatment is evidence of catalog-bounded diminishing return. It is not an
 automatic stopping formula and never establishes field saturation; the
 maintainer decides whether remaining batches answer a named structural gap.
@@ -563,7 +575,8 @@ maintainer decides whether remaining batches answer a named structural gap.
 This program stage will not:
 
 - establish findings, patterns, best practices, or field completeness;
-- adopt seed terminology or headings as the V2 taxonomy;
+- adopt one seed or catalog's terminology wholesale, or replace recognizable
+  field terms with bespoke analyst vocabulary;
 - select implementation cases or a representative cohort;
 - conduct implementation deep dives or effectiveness evaluation;
 - consult or re-admit legacy evidence;
@@ -603,10 +616,10 @@ described below:
 2. design judgment and evidence-based evaluation as the leading outcomes;
 3. fixed-model, surrounding-system technical boundary and adjacent-field rule;
 4. later research decision targets;
-5. three competing skeletons, two-to-three-level final detail, and no fixed
-   section count;
-6. deferral of the reading mode and sequence until competing skeletons can be
-   compared with explicit dependency tests;
+5. originally, three competing skeletons and shallow final detail — superseded
+   by V2-D013's conventional-topic skeleton and functional-depth rule;
+6. original deferral of the reading mode and sequence — superseded by
+   V2-D013's conventional-topic first reading and cross-cutting traversal rule;
 7. original three-seed boundary and complete outline-bearing inspection
    surface — superseded for Stage 4 inputs by V2-D007;
 8. first-hop eligibility, two waves of six, and one optional four-source
@@ -614,8 +627,9 @@ described below:
 9. diagnostic, primary-only provenance; disposition, claim, output, and
    stop-condition rules — retained, with catalog-specific outputs and stops
    amended by V2-D007;
-10. deliberate deferral of whether implementations, products, domains, cases,
-   or sources organize the outline or play a supporting role;
+10. original deferral of whether implementations, products, domains, cases, or
+    sources organize the outline — superseded by V2-D013's public-topic spine
+    and supporting evidence, example, traversal, and comparative-case roles;
 11. the original nine-step maintainer-control sequence — its Stage 4 wave and
     extension gates are superseded by the V2-D007 catalog and screening gates;
 12. non-goals and post-outline stop; and
@@ -667,3 +681,24 @@ The maintainer approved these early-alignment corrections on 2026-07-21:
 9. continued prohibition of new source opens, detailed-outline expansion,
    substantive research, evidence promotion, and legacy readmission without a
    later explicit decision.
+
+### Approved V2-D013 amendment checklist
+
+The maintainer approved these structural corrections on 2026-07-21:
+
+1. rejection of A, B, and C as active outline candidates while preserving the
+   checkpoint as design history;
+2. conventional harness-engineering terminology as the public outline spine;
+3. context engineering, memory/state, tools, skills, orchestration, evaluation,
+   observability, permissions, human control, and production operations shown
+   by their recognizable names;
+4. explicit relationships among overlapping common terms instead of invented
+   replacements;
+5. functional hierarchy beyond two levels when it exposes real distinctions;
+6. decision, causal, and responsibility analysis retained only as
+   cross-cutting questions;
+7. one active replacement candidate rather than artificial portfolio variance;
+8. catalog and curriculum language used as vocabulary input, never importance,
+   effectiveness, completeness, or sequence authority; and
+9. no new source opening, core-05, detailed outline, evidence promotion, or
+   legacy access before the next maintainer decision.

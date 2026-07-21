@@ -822,3 +822,126 @@ provenance boundary entered the checkpoint. Core-04 remains explicitly
 unratified input. The baseline is now stopped at the maintainer review gate; no
 skeleton is selected and no later screening or detailed-outline authority
 follows.
+
+## V2-D013 — Conventional field vocabulary replaces the abstract skeleton portfolio
+
+**Status:** Approved
+**Date:** 2026-07-21
+
+### Context
+
+At the V2-SK-CP00 maintainer gate, the maintainer rejected the three abstract
+organizing spines. The decision-, transition-, and authority-centered trees
+replaced familiar harness-engineering subjects with analyst-created
+coordinates. That made the outline internally systematic but externally
+unrecognizable. The two-level depth cap also compressed real subject structure
+too aggressively.
+
+The maintainer clarified that the outline should center established field
+phraseology such as context engineering, skills, memory, and orchestration
+systems. Their analogy was mathematical notation: even when an alternative
+symbol system could be made internally coherent, replacing the shared
+vocabulary would make the material harder for people in the field to
+understand.
+
+### Decision
+
+Reject `V2-SK-A`, `V2-SK-B`, and `V2-SK-C` as active outline candidates. Retain
+checkpoint V2-SK-CP00, its review, and its pressure ledger as rejected design
+history; do not rewrite them into apparent approval.
+
+Supersede V2-D012's three-active-skeleton and one-or-two-level requirements for
+the current checkpoint. Authorize one replacement candidate with a new stable
+ID, organized by recognizable harness-engineering subjects. Do not manufacture
+nominally different taxonomies merely to preserve a portfolio count.
+
+The visible spine must use conventional terms directly, including context
+engineering, memory and state, tool engineering, skills, agent loops and
+workflows, orchestration systems, evaluation and verification, observability
+and debugging, security and permissions, human control, and production
+operations. When conventional terms overlap or sources use them
+inconsistently, preserve the familiar labels and explain their relationship;
+do not solve the ambiguity by inventing replacement vocabulary.
+
+The skeleton may descend beyond two levels whenever the additional hierarchy
+exposes a real subject distinction. Depth remains functional rather than
+fixed: add a level to separate concepts with different meanings or ownership,
+not to enumerate products or implementation trivia.
+
+The prior decision, causal, and responsibility structures survive only as
+cross-cutting questions asked within the conventional topics. They do not
+control public section names, the main reading order, or topic ownership.
+
+The pinned catalog, seed map, curriculum analysis, and completed screens may
+show that terms are in use and expose synonym or overlap problems. No one
+source's categories are adopted wholesale. Catalog placement, ordering, and
+occurrence counts do not establish importance, correctness, completeness,
+effectiveness, or sequence.
+
+### Authority limits
+
+This decision authorizes only local vocabulary reconciliation, the deeper
+replacement skeleton, bounded local adversarial review, deterministic
+validation, and the resulting maintainer checkpoint. It opens no source and
+does not approve core-04, core-05, a query, external repository inspection,
+deep reading, evidence promotion, legacy access, case selection, substantive
+synthesis, curriculum, or site work.
+
+The replacement remains a structural hypothesis. It does not establish that
+its vocabulary is universally standardized, that every named topic belongs in
+the final outline, or that any mechanism works.
+
+### Review and next gate
+
+Local review must test recognizability, semantic distinctions among familiar
+terms, functional depth, overlap ownership, scope discipline, catalog or
+curriculum copying, unsupported claims, and whether an apparently common term
+is actually source-specific. The configured external reviewer remains
+unavailable under the recorded hard tenant-transfer rule and must not be
+retried or circumvented.
+
+Stop after presenting the replacement tree, vocabulary map, reviewer findings,
+primary dispositions, and unresolved placement questions. Only the maintainer
+may accept the replacement direction or request another revision.
+
+### Design-history disposition
+
+Candidate `V2-HIST-005` — the maintainer rejected abstraction-first outline
+design and required conventional field vocabulary as the reader-facing
+coordinate system. No conversation packet or export is authorized.
+
+### Approval record
+
+On 2026-07-21 the maintainer said they did not like the presented structures,
+removed the two-level depth constraint, and directed the outline to center
+common harness-engineering phraseology rather than redefine the area.
+
+### Execution record
+
+Checkpoint `V2-SK-CP01` completed under this authorization on 2026-07-21. It
+contains one active replacement, `V2-SK-D` version `0.1`, with thirteen
+reader-facing conventional subjects, selectively deeper functional hierarchy,
+an explicit section-ownership test, recurring-overlap rules, and a vocabulary
+map that separates captured wording from proposed placement. A, B, and C remain
+rejected checkpoint-00 design history.
+
+A local architecture adversary and a separate local vocabulary/authority
+adversary reviewed the package. Their six high and nine medium initial findings
+were all accepted and corrected. The changes pruned inventory-like leaves,
+separated tools, skills, and protocols, narrowed the final architecture section
+to synthesis, assigned every major section a primary question and dependency,
+made recurring terms function-specific, exposed source roles and anchoring
+hazards, added exact local vocabulary anchors, and removed stale checkpoint-00
+controls. The focused architecture verification passed A-01 through A-08. The
+focused vocabulary verification caught and closed two residual stale phrases,
+then passed T-01 through T-07.
+
+The provenance test suite, catalog extractor tests, local Markdown-link check,
+and `git diff --check` pass after all accepted corrections.
+
+The external Claude reviewer was not invoked because the recorded hard tenant-
+transfer prohibition remains controlling. No external source, legacy artifact,
+core-05 family, query, second hop, external implementation, or new provenance
+boundary entered the checkpoint. Core-04 remains explicitly unratified input.
+The candidate is stopped at the maintainer review gate; neither its structure
+nor any later research or screening is approved by this execution record.

@@ -1,7 +1,7 @@
 # Harness Engineering V2 — Baseline Skeleton Adversarial Review
 
 **Checkpoint:** `V2-SK-CP00`
-**Status:** Complete; awaiting maintainer review
+**Status:** Complete historical review; portfolio rejected by the maintainer
 **Authority:** V2-D012
 **Reviewed portfolio:** [`skeletons.md`](skeletons.md)
 **Pressure record:** [`skeleton-pressure-ledger.md`](skeleton-pressure-ledger.md)
@@ -120,3 +120,12 @@ The review does not resolve the choices reserved to the maintainer:
 
 No later batch, outline selection, or detailed-outline work follows from this
 review without an explicit maintainer decision.
+
+## Maintainer disposition
+
+V2-D013 rejected A, B, and C as active outline candidates despite the review's
+internal-correctness pass. The decisive defect was one the review criteria had
+treated as a benefit: all three used analyst-created abstractions instead of
+the field's recognizable subject vocabulary. The two-level presentation rule
+also compressed useful hierarchy. The review remains valid evidence about the
+rejected artifacts, not support for the active replacement.

@@ -1,7 +1,7 @@
 # Harness Engineering V2 — Skeleton Pressure Ledger
 
 **Checkpoint:** `V2-SK-CP00`
-**Status:** Baseline assembled from existing captured artifacts
+**Status:** Historical basis for the rejected V2-SK-CP00 portfolio
 **Authority:** V2-D012
 **Promotion:** None
 
@@ -9,6 +9,11 @@ This ledger records how structural inputs pressure the provisional skeleton
 portfolio. It does not count source recurrence as importance, convert a direct
 screen into evidence, or allow an agent to change a skeleton between
 maintainer checkpoints.
+
+V2-D013 rejected that portfolio's organizing spines. This ledger remains the
+auditable record of how checkpoint 00 was formed; it is not the active
+vocabulary basis. See
+[`conventional-vocabulary-map.md`](conventional-vocabulary-map.md).
 
 The register keeps four epistemic layers separate:
 

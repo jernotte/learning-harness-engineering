@@ -1,7 +1,7 @@
 # Harness Engineering V2 — Provisional Skeleton Portfolio
 
 **Checkpoint:** `V2-SK-CP00`
-**Status:** Adversarially reviewed; awaiting maintainer review
+**Status:** Rejected by the maintainer at V2-SK-CP00; retained as design history
 **Authority:** V2-D012, approved 2026-07-21
 **Maturity:** Structural hypotheses only; no approved outline, taxonomy, claim,
 or promoted evidence
@@ -12,6 +12,12 @@ This portfolio makes the organizing choices visible early enough for the
 maintainer to redirect them. It does not choose an outline. Each skeleton is a
 different hypothesis about how a rigorous harness-engineering body of
 knowledge could help an experienced builder reason, investigate, and decide.
+
+**Maintainer disposition:** V2-D013 rejects all three as active candidates.
+Their abstraction-first spines replaced recognizable field terminology and
+their two-level depth cap hid useful structure. The active replacement is
+[`conventional-skeleton.md`](conventional-skeleton.md). The material below is
+preserved so the rejected approach and its analytical lenses remain auditable.
 
 Core-04's source dispositions and catalog corrections remain proposed. This
 checkpoint uses that batch only as a provisional structural stress test, not as

@@ -109,21 +109,21 @@ editorial or source independence.
 
 ## Provisional skeleton coverage
 
-V2-D012 authorizes three active high-level structural hypotheses using only the
-captured material above:
+The maintainer rejected V2-D012's constraints-to-decisions, causal-lifecycle,
+and responsibility/authority trees as reader-facing organizations. Their
+files remain checkpoint-00 design history.
 
-- a constraints-to-decisions journey;
-- a causal control lifecycle; and
-- a responsibility and authority topology.
-
-Failure and uncertainty response is the first challenger. Evidence and
-uncertainty are a mandatory layer in all three rather than a fourth active
-spine. These options are rendered as one- or two-level conceptual trees in
-`research/outline-development/skeletons.md` and traced to structural inputs in
-`research/outline-development/skeleton-pressure-ledger.md`.
+V2-D013 authorizes one active replacement organized by familiar
+harness-engineering subjects. Its vocabulary map distinguishes context,
+memory/state, tools, skills, protocols, loops/workflows, orchestration,
+evaluation, observability, permissions/sandboxing, human control, and
+production operations without claiming universal definitions. The deeper tree
+is in `research/outline-development/conventional-skeleton.md`; its local basis
+and overlap rules are in
+`research/outline-development/conventional-vocabulary-map.md`.
 
 This is organization coverage, not admitted subject-evidence coverage. The
-skeletons do not establish that a named mechanism works, that a topic is
+replacement does not establish that a named mechanism works, that a topic is
 important, that the catalog is representative, or that an outline has been
 approved.
 
@@ -143,7 +143,7 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews the baseline skeleton portfolio
+Update this file after the maintainer reviews the conventional-topic skeleton
 and the still-proposed `awesome-screen-core-04` calibration. The other 315
 proposed new destinations remain unopened. Core-02 and core-03 results are
 approved; core-04's proposed 17/3 result is not yet approved. No core-05 or

@@ -33,8 +33,8 @@ post-outline research sequence.
 ## Current authorization
 
 The maintainer accepted the completed V2 repository reset and approved V2-D005
-through V2-D011 on 2026-07-20 and V2-D012 on 2026-07-21. The original
-three-seed pass, six-source Wave 1, Walking Labs curriculum inspection,
+through V2-D011 on 2026-07-20 and V2-D012 through V2-D013 on 2026-07-21. The
+original three-seed pass, six-source Wave 1, Walking Labs curriculum inspection,
 complete pinned-catalog census, and first four catalog calibrations are
 complete. The unopened Wave 2 is withdrawn and has no active authority.
 
@@ -51,23 +51,23 @@ proposed `read_only` dispositions and three proposed exclusions. Its opening
 authority is exhausted, and its dispositions, catalog corrections, and the
 method's continued use now await maintainer review.
 
-V2-D012 authorizes only an initial portfolio of three provisional high-level
-skeletons, a structural-pressure ledger, bounded local adversarial review, and
-the resulting maintainer checkpoint. Use only already captured V2 artifacts
-through core-04. Keep three active skeletons at a checkpoint, allow at most one
-temporary challenger, preserve version lineage, and reserve admission, merger,
-replacement, retirement, and selection to the maintainer. Core-04 remains
-unratified structural input.
+The maintainer rejected the V2-D012 A/B/C portfolio at checkpoint 00. V2-D013
+preserves those files as rejected design history and authorizes one replacement
+candidate organized by recognizable harness-engineering terminology. It may
+descend beyond two levels when the hierarchy preserves real distinctions.
+Decision, causal, and responsibility analysis may appear only as cross-cutting
+questions, not as substitute topic names. Use only already captured V2
+artifacts through core-04. Core-04 remains unratified structural input.
 
 No later batch is authorized. Do not reopen a completed core-01, core-02,
 core-03, or core-04 page, open another catalog family, run an identity query,
 perform a topical or ecosystem search, manually traverse a redirect, follow a
 second hop, inspect an external repository's files or history, deep-read an
-implementation or technique, expand the provisional skeletons into a detailed
-outline, select cases, synthesize findings, produce or adopt curriculum, build
-a site, promote evidence maturity, or re-admit legacy evidence. Stop at the
-baseline skeleton checkpoint after adversarial review until the maintainer
-makes the next explicit decision.
+implementation or technique, expand the provisional conventional skeleton into
+a detailed outline, select cases, synthesize findings, produce or adopt
+curriculum, build a site, promote evidence maturity, or re-admit legacy
+evidence. Stop at the conventional-skeleton checkpoint after adversarial review
+until the maintainer makes the next explicit decision.
 
 ## Clean-slate boundary
 
@@ -90,9 +90,8 @@ The current program has these baseline blocking gates:
 1. Approve the repository triage before reset changes.
 2. Review the completed V2 authority reset and its validation/review evidence.
 3. Approve the outline-development brief before seed investigation.
-4. Review the evolving portfolio at each authorized checkpoint; select,
-   combine, replace, retire, or reject competing outline skeletons before
-   detailed outline finalization.
+4. Review the conventional-vocabulary skeleton and direct its topic placement,
+   depth, and cross-links before detailed outline finalization.
 5. Explicitly approve the final outline's objectives, scope, organization, and
    sequence before substantive research planning or execution.
 

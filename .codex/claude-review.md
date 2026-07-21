@@ -4,15 +4,18 @@
 
 Harness Engineering V2 is rebuilding its research program from a clean
 conceptual slate. The authority reset is complete. V2-D005 through V2-D011
-approve an outline-first process. The maintainer approved core-02's exact
+approve an outline-first process, and V2-D012 authorizes a provisional,
+checkpointed skeleton portfolio. The maintainer approved core-02's exact
 19 `read_only` / one `excluded` dispositions and corrections, then approved
 the method exercised in core-03 plus its exact 17 `read_only` / three
 `excluded` dispositions and corrections. The authorized 20-source
 `awesome-screen-core-04` calibration within `v2-outline-seed-map` is complete
 and awaiting maintainer review; its proposed result is 17 `read_only` / three
 `excluded`. Its opening authority is exhausted, and no core-05 or later batch
-is authorized. The final goal continues through a maintainer-approved outline
-and stops before substantive research.
+is authorized. The current work creates three active high-level skeletons from
+already captured artifacts, adversarially reviews them, and stops for the
+maintainer. The final goal continues through a maintainer-approved outline and
+stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -98,9 +101,40 @@ authority.
   final disposition without treating the screen as deep reading or evidence.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
-- Work is stopped at the `awesome-screen-core-04` source-screening gate with
-  its complete source lifecycles, reconciled diagnostic provenance, schema
-  friction, and recommendation; all later batches remain blocked.
+- Core-04 closed with complete source lifecycles, reconciled diagnostic
+  provenance, schema friction, and recommendation. V2-D012 permits only local
+  provisional-skeleton work beyond that point; all later source batches remain
+  blocked.
+
+## Provisional skeleton acceptance criteria when V2-D012 is in scope
+
+- Exactly three skeletons are active at the checkpoint, with at most one
+  explicitly labeled challenger.
+- Each active skeleton uses a materially different organizing principle,
+  section-ownership model, dependency logic, and reading mode rather than
+  cosmetic heading variation.
+- Each outline is rendered as a high-level conceptual tree with only one or two
+  levels below the root. Supporting rationale does not inflate the tree.
+- Every option states audience and outcome fit, inclusion and exclusion logic,
+  section ownership, sequence dependencies, source-vocabulary treatment,
+  cross-cutting treatment, source and case roles, benefits, blind spots, and
+  anchoring hazards.
+- Catalog categories, curriculum subsystems, products, source types, and
+  implementation families do not silently become the outline spine.
+- The pressure ledger separates captured source framing from structural
+  inference and proposal, and no source recurrence is treated as importance or
+  corroboration.
+- Core-04 remains explicitly unratified input. No core-05 source, external
+  query, second hop, deep reading, detailed outline, evidence promotion, or
+  legacy artifact enters the checkpoint.
+- Stable IDs and version lineage make replacement, convergence, and retirement
+  visible; only the maintainer may change portfolio membership.
+- Adversarial review tests objective and boundary alignment, material
+  distinctness, hidden catch-alls, dependency logic, anchoring, unsupported
+  premises, convergence, and the need for a challenger. Review remains
+  advisory and read-only.
+- The checkpoint stops for the maintainer with reviewer findings, primary
+  dispositions, unresolved choices, and no implied later-batch authority.
 
 ## Quality bar
 
@@ -168,6 +202,10 @@ reported command output.
   repository lineage, a source outside the authorized batch, a search or second
   hop, hidden taxonomy or curriculum adoption, unsupported cross-source
   judgment, or provenance overstatement.
+- For the V2-D012 baseline, cosmetic variance, tree depth beyond the approved
+  high-level form, shared hidden taxonomy, unjustified portfolio convergence,
+  evidence or catalog frequency used as structural authority, missing section
+  ownership, or a reviewer recommendation presented as a maintainer decision.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

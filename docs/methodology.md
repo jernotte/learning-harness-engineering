@@ -53,16 +53,26 @@ source-opening batches before direct screening or substantive reading.
 ### 6. Separate extraction from organization
 
 First record vocabulary, candidate topics, assumptions, omissions, tensions,
-and reference structure. Only then develop multiple organizations. This keeps
-the sources from silently supplying both the content universe and its final
-shape.
+and reference structure. Only then develop multiple organizations. The
+complete pinned-catalog census and first four calibrated screens satisfy the
+baseline separation needed for provisional skeletons; completing every direct
+screen is not an automatic prerequisite. This keeps the sources from silently
+supplying both the content universe and its final shape.
 
 ### 7. Compare competing skeletons
 
-Each candidate structure must identify its organizing principle, sequence,
-dependency logic, fit to the approved objectives, benefits, risks, blind spots,
-and anchoring hazards. The primary recommends one, but the maintainer may
-select, combine, reorder, or reject them.
+Maintain three active candidates at a maintainer checkpoint, with at most one
+temporary challenger between checkpoints. Present each as a high-level
+conceptual tree and identify its organizing principle, sequence, dependency
+logic, fit to the approved objectives, benefits, risks, blind spots, and
+anchoring hazards. Preserve version lineage. The primary recommends one, but
+only the maintainer may admit, combine, replace, retire, reorder, or select an
+option.
+
+Later separately authorized screens pressure the portfolio through a
+structural ledger. Do not rewrite skeletons after each source. Freeze and review
+new versions after at most five batches or an earlier structural stop, then
+pause for the maintainer.
 
 ### 8. Develop the detailed outline
 

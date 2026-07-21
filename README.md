@@ -11,43 +11,40 @@ curriculum, and learning artifacts do not constrain V2.
 
 ## Current state
 
-The V2 authority reset and outline-development brief were approved on
-2026-07-20. V2-D007 later corrected Stage 4 after the maintainer clarified that
-the Awesome repository must be treated as a comprehensive lead catalog and the
-Walking Labs course as a curriculum candidate. The maintainer approved the
-completed catalog gate, ratified its bounded lineage interpretation, approved
-the 21-batch screening program as intended scope, and first authorized the
-20-source `awesome-screen-core-01` calibration batch. That batch is complete;
-the maintainer approved its method and 19 `read_only` / one `excluded`
-dispositions and authorized only `awesome-screen-core-02` next. Core-02 has now
-completed the same bounded 20-family screen with 19 proposed `read_only`
-dispositions and one proposed exclusion. Its joined identity, accessibility,
-relevance, evidence-posture, catalog-correction, and schema results are in
-[`research/outline-development/awesome-screen-core-02.md`](research/outline-development/awesome-screen-core-02.md).
-The maintainer has now approved core-02's 19 `read_only` / one `excluded`
-dispositions and catalog corrections, plus core-03's method, 17 `read_only` /
-three `excluded` dispositions, and catalog corrections. The exact frozen
-`awesome-screen-core-04` batch then completed its 20-family, 22-occurrence-join
-direct screen under the same no-query, no-second-hop boundary. Its joined
-register proposes 17 `read_only` dispositions and three access-based
-exclusions in
-[`research/outline-development/awesome-screen-core-04.md`](research/outline-development/awesome-screen-core-04.md).
-The batch is awaiting maintainer review; no core-05 or later batch is
-authorized. Work remains on
-`codex/harness-engineering-v2`, which began at commit
+The V2 authority reset, outline-development brief, complete pinned-catalog
+census, Walking Labs curriculum inspection, and first four 20-family catalog
+calibrations are complete. Core-01 through core-03 are approved. Core-04's
+proposed 17 `read_only` / three `excluded` result remains awaiting maintainer
+ratification, and no core-05 or later batch is authorized.
+
+V2-D012 now authorizes an early-alignment portfolio of three provisional,
+high-level skeletons built only from already captured artifacts. The active
+options test organization by builder decisions, causal control transitions,
+and responsibility/authority allocation. They may evolve at maintainer
+checkpoints, with at most one temporary challenger and preserved version
+lineage. The baseline portfolio and its structural-pressure ledger are in
+[`research/outline-development/skeletons.md`](research/outline-development/skeletons.md)
+and
+[`research/outline-development/skeleton-pressure-ledger.md`](research/outline-development/skeleton-pressure-ledger.md).
+The completed local adversarial review and primary dispositions are in
+[`research/outline-development/skeleton-review.md`](research/outline-development/skeleton-review.md).
+The package now awaits maintainer review. These are structural hypotheses, not
+an approved outline or subject authority.
+
+Work remains on `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
 
 The complete pre-pivot history remains recoverable from
 `codex/archive-pre-pivot-2026-07-20` at
 `071fd2d833c809723c881921956a50e46fa748f1`.
 
-No V2 subject outline, taxonomy, case set, synthesis, or reviewed finding
-currently exists. The approved and amended
+No V2 subject outline has been approved, and no taxonomy, case set, synthesis,
+or reviewed finding currently exists. The approved and amended
 [`research/outline-development/brief.md`](research/outline-development/brief.md)
 authorizes structural inspection of the named inputs and a complete pinned-
-catalog inventory. It does not adopt their taxonomies, authorize a new outbound
-source open without maintainer approval of an exact batch, or authorize
-substantive research.
+catalog inventory plus the provisional skeleton portfolio. It does not adopt
+source taxonomies, authorize a new outbound source open without maintainer
+approval of an exact batch, or authorize substantive research.
 
 ## Where to begin
 

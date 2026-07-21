@@ -693,3 +693,132 @@ This execution record exhausts V2-D011's opening authority. It does not approve
 the core-04 dispositions or catalog corrections, authorize continued method
 use, or authorize core-05. The maintainer must review the completed package
 before the next decision.
+
+## V2-D012 — Provisional skeleton portfolio and checkpointed co-evolution
+
+**Status:** Approved
+**Date:** 2026-07-21
+
+### Context
+
+After four 20-family catalog calibrations, the maintainer paused to test whether
+sequential completion of the remaining catalog screens was the best route to a
+high-quality outline. The complete pinned-catalog census already establishes
+catalog breadth at the occurrence and offline-family level; the remaining
+batches would add more direct screening at the same shallow depth, not deeper
+research. The maintainer preferred to expose competing organizations now,
+allow later screens to pressure and refine them, and review their alignment at
+bounded checkpoints.
+
+### Decision
+
+Authorize a baseline portfolio of three materially distinct, provisional
+high-level skeletons using only already captured V2 artifacts through
+`awesome-screen-core-04`. Render each skeleton as a one- or two-level
+conceptual tree. The tree is the outline; rationale, comparison, and review
+notes remain outside it.
+
+Maintain three active skeletons at each maintainer checkpoint. At most one
+temporary challenger may be developed between checkpoints. A revision keeps
+its stable skeleton ID only while its primary organizing unit, section
+ownership, dependency model, reading mode, and cross-cutting treatment remain
+intact. A materially different principle receives a new ID. Renamed or
+reordered equivalents do not qualify.
+
+Only the maintainer may approve admission, merger, replacement, retirement, or
+selection. Reviewers may recommend those actions but cannot enact them. Every
+version and disposition remains visible so evolution does not erase rejected
+alternatives or rationale.
+
+Record how captured inputs pressure each option in a structural-pressure
+ledger. The ledger may accumulate after each separately authorized screening
+batch, but skeleton versions change only at a checkpoint or mandatory early
+stop. The baseline receives adversarial read-only review and then stops for the
+maintainer.
+
+The complete 21-batch program remains a frozen candidate upper bound, not a
+mandatory completion checklist or automatic execution authority. If future
+screening continues, the intended cadence is a maintainer checkpoint after at
+most five completed batches, or earlier when a new organizing principle,
+boundary challenge, consequential method defect, or possible portfolio change
+appears. Every future batch still requires exact explicit authorization and a
+separate provenance boundary and closeout. This decision authorizes no future
+batch or tranche.
+
+### Authority limits
+
+This decision does not approve core-04's proposed seventeen `read_only`
+dispositions, three exclusions, catalog corrections, or continued screening
+method. Core-04 may inform the baseline only as captured, audited, explicitly
+unratified structural input.
+
+It does not authorize core-05, another source opening, a query, redirect or
+second-hop traversal, repository inspection, deep reading, a detailed outline,
+evidence promotion, legacy access, case selection, synthesis of findings,
+curriculum, or site work. The provisional skeletons are hypotheses, not subject
+authority or approval of their topics.
+
+### Review boundary
+
+The configured external Claude reviewer remains unavailable under the recorded
+hard tenant-transfer prohibition and must not be retried or circumvented.
+For this baseline, the maintainer authorized bounded local adversarial review
+of the captured repository artifacts. Local reviewers must be labeled local,
+cannot supply external independence, and remain advisory and read-only.
+
+Review must test genuine structural difference, audience and objective fit,
+boundary discipline, section ownership, dependencies, cross-cutting treatment,
+hidden catch-alls, source and catalog anchoring, unsupported factual premises,
+premature convergence, and whether a missing principle warrants a challenger.
+
+### Checkpoint and stopping rule
+
+The immediate gate is maintainer review of the three baseline skeletons,
+structural-pressure ledger, adversarial findings, primary dispositions, and
+remaining choices. No source opens before that review.
+
+Later sequential screening should stop when a complete authorized tranche
+produces no new organizing principle, boundary, section owner, dependency,
+sequence, or cross-cutting treatment and the remaining batches cannot be tied
+to a named structural gap. That is a catalog-bounded diminishing-return
+judgment, never a claim of field saturation.
+
+### Design-history disposition
+
+Candidate `V2-HIST-004` — the maintainer's shift from sequential catalog
+completion toward an evolving, checkpointed skeleton portfolio, including the
+reason for preserving variance while permitting replacement and retirement.
+No packet manifest or export is approved.
+
+### Approval record
+
+The maintainer agreed to the three-active-plus-one-challenger portfolio,
+approved creation of the three baseline skeletons and adversarial review before
+their own review, and specified a high-level tree presentation on 2026-07-21.
+
+### Execution record
+
+Checkpoint `V2-SK-CP00` completed under this authorization on 2026-07-21. It
+contains exactly three active, provisional one- or two-level conceptual trees:
+builder decisions under constraints (`V2-SK-A`), observable control
+transitions (`V2-SK-B`), and responsibility/authority allocation (`V2-SK-C`).
+Failure and uncertainty response remains the sole inactive challenger.
+
+A local architecture adversary and a separate local traceability/authority
+adversary reviewed the package. Their three high and eleven medium recorded
+findings were all accepted and corrected. The changes made B's branches actual
+transition classes, made branch ownership deterministic, separated approved
+comparison obligations from a provisional representation hypothesis, exposed
+technical back-edges, differentiated the three operational endpoints, required
+allocation-evaluation criteria in C, audited A against all seven outcomes, and
+made every ledger row distinguish captured basis, primary inference, and
+provisional response with exact local anchors. No consequential disagreement
+remained, so no reconciliation was needed.
+
+The external Claude reviewer was not invoked because the recorded hard tenant-
+transfer prohibition remains controlling. No external source, legacy artifact,
+core-05 family, query, second hop, external repository implementation, or new
+provenance boundary entered the checkpoint. Core-04 remains explicitly
+unratified input. The baseline is now stopped at the maintainer review gate; no
+skeleton is selected and no later screening or detailed-outline authority
+follows.

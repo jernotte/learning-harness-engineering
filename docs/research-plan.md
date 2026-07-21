@@ -46,6 +46,12 @@ completed, its opening authority is exhausted, and its proposed 17 `read_only`
 / three `excluded` result awaits maintainer review. The former Wave 2 proposal
 is withdrawn and has no authority.
 
+V2-D012 interleaves a provisional skeleton baseline with this stage. It
+authorizes no new source opening and does not ratify core-04. The remaining
+21-batch plan is a frozen candidate upper bound; continued execution requires a
+later exact decision and is reviewed after at most five completed batches or an
+earlier structural stop.
+
 Using the approved provenance path, treat these as mandatory structural inputs:
 
 - `https://asixiv.org/pdf/curated/2606.00001`
@@ -89,9 +95,14 @@ decision.
 Present materially different organizations with their principles, sequence,
 dependencies, benefits, risks, blind spots, and anchoring hazards.
 
-**Status:** Not authorized.
+**Status:** Provisional baseline authorized by V2-D012. Create three active
+high-level conceptual trees from already captured artifacts, allow at most one
+temporary challenger, preserve version lineage, run bounded local adversarial
+review, and stop for the maintainer before core-05 or detailed-outline work.
 
-**Exit gate:** Maintainer selection, combination, or rejection.
+**Exit gate:** Maintainer review of the current portfolio, challenger state,
+pressure ledger, reviewer findings, primary dispositions, and next screening or
+selection decision.
 
 ## Stage 6 — Detailed outline
 

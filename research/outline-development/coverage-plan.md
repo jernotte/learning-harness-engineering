@@ -2,24 +2,21 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005 through V2-D011, approved 2026-07-20
-**Current pass:** `awesome-screen-core-04` complete; maintainer gate
+**Authority:** V2-D005 through V2-D011, approved 2026-07-20; V2-D012,
+approved 2026-07-21
+**Current pass:** `v2-skeleton-checkpoint-00`; local structural analysis and
+adversarial review only
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The completed direct screen of the exact 20 families in
-`awesome-screen-core-04` applied the method approved through V2-D011 while
-preserving requested and observed
-identity, accessibility, substantive inspectability, relevance, scope, source
-form, evidence posture, visible lineage, version or pin state, catalog
-correction, schema friction, and proposed disposition. The batch is anchored to
-`awesome-screening-plan.json` at commit
-`3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass did not search, follow a
-second hop, reopen core-01, core-02, or core-03, deep-read a source, choose a
-taxonomy, or draft an outline. No source may now open without another explicit
-decision.
+The current pass asks whether three materially distinct high-level skeletons
+can organize the already captured structural landscape without adopting a
+source taxonomy. It records their pressure basis, reviewer challenges, and
+remaining maintainer choices. It performs no external interaction, changes no
+source disposition, and promotes no evidence. Core-04's proposed result remains
+unratified, and no source may open without another explicit decision.
 
 ## Wave 1 authorization
 
@@ -91,6 +88,21 @@ fail-closed handling. The generated catalog audit must prove:
 
 An unopened destination has accessibility state `not_assessed`. Only an
 authorized earlier open or access attempt may establish accessibility.
+
+## Provisional skeleton boundary
+
+V2-D012 authorizes only local analysis of the captured seed map, Walking Labs
+analysis, pinned-catalog artifacts, completed screening registers, and their
+audits. The three active skeletons must use distinct organizing principles,
+remain one or two levels beneath a conceptual root, and keep factual claims out
+unless the ordinary ledger and verification rules are satisfied. A structural
+pressure is an outline hypothesis, not a source disposition or finding.
+
+The baseline review may inspect the current repository and diff. It may not
+open a source, follow a link outside the repository, inspect legacy material,
+approve core-04, or change portfolio authority. Because this pass has no
+external research interaction, it creates no new source-lifecycle or native
+provenance boundary.
 
 ## Interaction boundary
 
@@ -215,9 +227,9 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-All 20 `awesome-screen-core-04` families now have an honest direct-screen result
-or recorded access failure; each source has the required identity, surface,
-accessibility, relevance, scope, evidence posture, lineage, and proposed
-disposition; schema friction and catalog corrections are explicit; and the
-diagnostic boundary is reconciled. Work is stopped while the complete
-calibration is presented for maintainer review. No later batch may open.
+The current pass stops after the three provisional trees, pressure ledger,
+adversarial review, primary dispositions, and deterministic validation are
+complete. The maintainer then reviews the portfolio and decides whether to
+keep, revise, merge, replace, retire, or challenge an option and whether any
+later exact screening tranche is worth opening. Core-04 remains proposed and
+no later batch may open implicitly.

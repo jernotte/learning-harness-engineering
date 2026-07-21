@@ -107,6 +107,26 @@ lineage check, but their editorial/source independence is unassessed and their
 that bounded Git-lineage interpretation without converting it into a claim of
 editorial or source independence.
 
+## Provisional skeleton coverage
+
+V2-D012 authorizes three active high-level structural hypotheses using only the
+captured material above:
+
+- a constraints-to-decisions journey;
+- a causal control lifecycle; and
+- a responsibility and authority topology.
+
+Failure and uncertainty response is the first challenger. Evidence and
+uncertainty are a mandatory layer in all three rather than a fourth active
+spine. These options are rendered as one- or two-level conceptual trees in
+`research/outline-development/skeletons.md` and traced to structural inputs in
+`research/outline-development/skeleton-pressure-ledger.md`.
+
+This is organization coverage, not admitted subject-evidence coverage. The
+skeletons do not establish that a named mechanism works, that a topic is
+important, that the catalog is representative, or that an outline has been
+approved.
+
 ## Legacy boundary
 
 The pre-pivot corpus is recoverable at
@@ -123,7 +143,8 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews the completed
-`awesome-screen-core-04` calibration. The other 315 proposed new destinations
-remain unopened. Core-02 and core-03 results are approved; core-04's proposed
-17/3 result is not yet approved. No core-05 or later batch is authorized.
+Update this file after the maintainer reviews the baseline skeleton portfolio
+and the still-proposed `awesome-screen-core-04` calibration. The other 315
+proposed new destinations remain unopened. Core-02 and core-03 results are
+approved; core-04's proposed 17/3 result is not yet approved. No core-05 or
+later batch is authorized.

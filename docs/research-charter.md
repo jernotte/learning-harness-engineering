@@ -19,20 +19,28 @@ The program is therefore outline-first:
 
 1. establish a clean repository authority boundary;
 2. approve the criteria by which an outline will be judged;
-3. inspect the maintainer-named structural inputs and complete pinned catalog
-   without adopting their structures;
-4. compare materially different organizations;
+3. inspect the maintainer-named structural inputs and completely enumerate the
+   pinned catalog without adopting their structures;
+4. compare materially different provisional organizations while any
+   separately authorized direct screens, if continued, pressure them at
+   maintainer checkpoints;
 5. develop and approve one detailed outline;
 6. create a separate substantive research plan only afterward.
 
 ## Decisions deliberately left open
 
-Until the outline-development brief is approved, V2 has not fixed:
+The approved outline-development brief now fixes a builder-first interim
+audience, intended decision outcomes, and a provisional fixed-model boundary
+for developing and judging the outline. Those controls do not pre-approve the
+final outline. V2 still has not fixed:
 
-- the definition or technical boundary of harness engineering;
-- the intended audience beyond the maintainer's direct review role;
-- the ultimate learning or design outcomes;
+- the final definition or technical boundary of harness engineering, including
+  ambiguous edge cases;
+- the final wording and priority of the body of knowledge's objectives and
+  later derivative uses;
 - a topic taxonomy or architectural lens;
+- selection, combination, replacement, or retirement of a provisional
+  skeleton;
 - the relationship between concepts, implementation families, domains, and
   learning sequence;
 - the appropriate case-study, synthesis, or curriculum structure;

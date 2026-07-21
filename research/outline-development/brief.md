@@ -1,16 +1,18 @@
 # Harness Engineering V2 — Outline-Development Brief
 
-- **Status:** Approved on 2026-07-20; amended by V2-D007 on 2026-07-20
+- **Status:** Approved on 2026-07-20; amended by V2-D007 on 2026-07-20 and
+  V2-D012 on 2026-07-21
 - **Stage:** 3 — outline-development brief
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
-**Approval effect:** V2-D005, the linked review-limit decision V2-D006, and the
-catalog-landscape correction V2-D007 are approved. This contract authorizes
-only structural seed, curriculum, and catalog mapping. Each later checkpoint
-separately unlocks the next stage; brief approval does not approve an outline,
-authorize substantive research, or grant blanket conversation-export
-permission.
+**Approval effect:** V2-D005, the linked review-limit decision V2-D006, the
+catalog-landscape correction V2-D007, and the checkpointed skeleton-portfolio
+amendment V2-D012 are approved. This contract authorizes structural seed,
+curriculum, and catalog mapping plus the provisional high-level skeleton
+portfolio. Each later checkpoint separately unlocks the next work; approval
+does not approve an outline, authorize substantive research, or grant blanket
+conversation-export permission.
 
 ## Approval record
 
@@ -22,6 +24,14 @@ After Wave 1, the maintainer approved V2-D007: the unopened Wave 2 was
 withdrawn, Walking Labs became a mandatory curriculum candidate, and the
 Awesome repository became a comprehensive lead catalog with a new inventory
 gate before further outbound-source opens.
+
+After four catalog calibrations, the maintainer approved V2-D012: create three
+active provisional high-level skeletons from already captured artifacts,
+permit at most one temporary challenger, preserve version lineage, review the
+portfolio adversarially, and stop for immediate maintainer review before any
+core-05 opening. Later screening, if separately authorized, is reviewed after
+at most five batches or an earlier structural stop. The 21-batch plan remains a
+candidate upper bound rather than an automatic completion mandate.
 
 The earlier configured external review covered the pre-hybrid version of this
 brief. The reviewer could not inspect the selective-history revision because a
@@ -156,8 +166,17 @@ guidance only as later derivatives.
 
 ## Organization and granularity criteria
 
-Produce three materially different skeletons by default. They must differ in
-organizing principle, not merely in headings, labels, or order.
+Maintain three materially different active skeletons at a checkpoint. They
+must differ in organizing principle, not merely in headings, labels, or order.
+Present each as a high-level conceptual tree with only one or two levels below
+the root. The tree is the outline; rationale, comparison, pressure history, and
+review findings remain outside it.
+
+At most one temporary challenger may be developed between checkpoints. Only
+the maintainer may admit, merge, replace, retire, or select a skeleton. Preserve
+stable IDs and every version. A materially changed organizing unit, section-
+ownership model, dependency logic, reading mode, or cross-cutting treatment
+receives a new skeleton ID rather than masquerading as an ordinary revision.
 
 Each skeleton must state:
 
@@ -319,11 +338,18 @@ ceiling applies, but the maintainer approves every source-opening batch.
 Anything discovered inside an opened catalog source is second hop and remains
 prohibited unless separately proposed and approved.
 
+V2-D012 permits a future authorization to name a tranche of at most five
+already frozen batches, but it does not itself authorize one. Every batch in a
+tranche retains its own exact membership, provenance boundary, validation, and
+closeout. Skeleton versions update only at the ensuing maintainer checkpoint or
+an earlier mandatory stop; the structural-pressure ledger may receive
+per-family entries after each completed batch.
+
 No topical or ecosystem search, implementation deep dive, evidence promotion,
-legacy access, or outline drafting is authorized. Exact-title or identifier
-resolution may be proposed only for an already cataloged family whose identity
-cannot be determined from its URL; every query must be approved and logged
-before use.
+legacy access, or detailed-outline drafting beyond the V2-D012 provisional
+portfolio is authorized. Exact-title or identifier resolution may be proposed
+only for an already cataloged family whose identity cannot be determined from
+its URL; every query must be approved and logged before use.
 
 ## Provenance and evidence treatment
 
@@ -435,7 +461,11 @@ promotion.
 - `research/provenance/v2-outline-seed-map-audit.json`
 - `research/provenance/v2-outline-seed-map-audit.md`
 
-Stage 5 writes `research/outline-development/skeletons.md`. Stage 6 iterates and
+The interleaved Stage 5 baseline writes
+`research/outline-development/skeletons.md`,
+`research/outline-development/skeleton-pressure-ledger.md`, and
+`research/outline-development/skeleton-review.md`. Later approved checkpoints
+version the portfolio without overwriting its history. Stage 6 iterates and
 ultimately approves `research/outline-development/outline.md`; approval changes
 that artifact's authority, not its path.
 
@@ -462,7 +492,7 @@ catalog counts.
    analysis, repository lineage, catalog-context triage, unresolved identities,
    concentration risks, and 21-batch intended program; ratified the bounded
    lineage interpretation; and authorized only `awesome-screen-core-01`.
-5. **Source-screening gate or gates — current.** The maintainer approved the
+5. **Completed source-screening gates.** The maintainer approved the
    completed `awesome-screen-core-01` calibration method and dispositions and
    authorized only exact `awesome-screen-core-02`. Core-02 is complete. The
    maintainer then approved continued use of its method and authorized only
@@ -473,15 +503,23 @@ catalog counts.
    limits, evidence postures, catalog corrections, schema friction, and any
    resulting change to later batch order. No second-hop source or additional
    batch is opened implicitly.
-6. **Seed-map gate.** Review the completed audited structural landscape and
-   remaining gaps before skeleton drafting.
-7. **Skeleton gate.** Review three materially different skeletons and select,
-   combine, reorder, or reject them.
-8. **Detailed-outline iteration.** Expand only the maintainer-directed
+6. **Baseline skeleton gate — current.** V2-D012 authorizes three provisional
+   high-level skeletons, a pressure ledger, bounded local adversarial review,
+   and an immediate maintainer checkpoint. Core-04 remains unratified input;
+   core-05 remains closed.
+7. **Later portfolio checkpoints.** If exact future batches are separately
+   authorized, review the current three plus any challenger after at most five
+   completed batches or an earlier structural stop. The maintainer may keep,
+   revise, merge, replace, retire, or reject options and may stop screening.
+8. **Seed-map completion gate.** When the maintainer decides that further
+   screening is unlikely to add a materially different organizational option,
+   review the audited landscape, remaining gaps, and final provisional
+   portfolio before selecting or combining a direction.
+9. **Detailed-outline iteration.** Expand only the maintainer-directed
    structure and visibly disposition requested changes.
-9. **Final outline gate.** Explicitly approve objectives, scope, organization,
+10. **Final outline gate.** Explicitly approve objectives, scope, organization,
    and sequence.
-10. **Post-outline stop.** A separate goal must define and authorize
+11. **Post-outline stop.** A separate goal must define and authorize
    substantive research.
 
 ## Stop conditions
@@ -498,18 +536,27 @@ Stop immediately and ask for direction if:
   topical search, second-hop traversal, credentials, paid access, or deep
   implementation inspection;
 - a proposed factual claim requires evidence outside the approved boundary;
-  or
+- two active skeletons become materially equivalent, a challenger exposes a
+  genuinely different principle, or a skeleton cannot serve an approved
+  objective without changing its identity; or
 - evidence suggests changing the brief's objectives, scope, or method.
 
 Normal structural-landscape completion occurs when the original seeds and Wave
 1 retain final dispositions; Walking Labs is structurally inspected; every
 qualifying Awesome occurrence is accounted for; canonical families,
 duplicates, exclusions, unresolved identities, and lineage are explicit; the
-maintainer-approved direct-screening or deep-reading set is complete; the
+then-current maintainer-approved direct-screening set is complete or explicitly
+closed at a portfolio checkpoint; the
 diagnostic audit gate passes with zero errors and zero unresolved warnings; and
 further authorized screening is unlikely to add a materially different
 organizational option. This is completion against the pinned catalog and
 approved structural inputs, not field coverage or saturation.
+
+For the evolving portfolio, a full authorized tranche with no new organizing
+principle, boundary, section owner, dependency, sequence, or cross-cutting
+treatment is evidence of catalog-bounded diminishing return. It is not an
+automatic stopping formula and never establishes field saturation; the
+maintainer decides whether remaining batches answer a named structural gap.
 
 ## Non-goals
 
@@ -599,3 +646,24 @@ The maintainer approved these corrections on 2026-07-20:
 9. continued prohibition of topical search, second-hop traversal,
    implementation deep dives, evidence promotion, outline drafting, curriculum
    adoption, and legacy readmission.
+
+### Approved V2-D012 amendment checklist
+
+The maintainer approved these early-alignment corrections on 2026-07-21:
+
+1. three active provisional skeletons using only already captured artifacts;
+2. high-level conceptual-tree presentation with one or two levels beneath the
+   root;
+3. at most one temporary challenger and stable, preserved version lineage;
+4. maintainer-only admission, merger, replacement, retirement, and selection;
+5. a structural-pressure ledger that updates per authorized batch while
+   skeleton versions change only at checkpoints;
+6. bounded adversarial read-only review followed by an immediate maintainer
+   checkpoint before core-05;
+7. future checkpoints after at most five separately authorized batches or an
+   earlier structural stop;
+8. the 21-batch plan as a candidate upper bound rather than an automatic
+   completion mandate; and
+9. continued prohibition of new source opens, detailed-outline expansion,
+   substantive research, evidence promotion, and legacy readmission without a
+   later explicit decision.

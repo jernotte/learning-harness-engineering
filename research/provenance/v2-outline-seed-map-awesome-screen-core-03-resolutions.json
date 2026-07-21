@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-07-21T00:24:16Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-03-observation-resolution",
+  "resolution_batch_id": "v2-outline-seed-map-awesome-screen-core-03-resolution-1",
+  "resolutions": [
+    {
+      "observation_id": "native-2b77e398e2d9f5a81cc5",
+      "previous_resolution_event_id": "native-2b77e398e2d9f5a81cc5",
+      "resolution": "linked",
+      "reason": "Local UTC batch-start timestamp command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-376075b537a717c9b68b",
+      "previous_resolution_event_id": "native-376075b537a717c9b68b",
+      "resolution": "linked",
+      "reason": "Local UTC first-interaction cutoff timestamp command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-0befa5c4366f2694840b",
+      "previous_resolution_event_id": "native-0befa5c4366f2694840b",
+      "resolution": "linked",
+      "reason": "Local first-interaction provenance ingest command; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-31c84b86770b9540b9bb",
+      "previous_resolution_event_id": "native-31c84b86770b9540b9bb",
+      "resolution": "linked",
+      "reason": "Local first-interaction provenance validation and invariant inspection; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-1dc87a6f9f0a98fb5fc1",
+      "previous_resolution_event_id": "native-1dc87a6f9f0a98fb5fc1",
+      "resolution": "linked",
+      "reason": "Local inspection of generated first-interaction provenance records; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-c14ff9493615a33fe2fe",
+      "previous_resolution_event_id": "native-c14ff9493615a33fe2fe",
+      "resolution": "linked",
+      "reason": "Local copy and reciprocal-control append for the first-interaction stream; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-a038b1e278fa8072bc05",
+      "previous_resolution_event_id": "native-a038b1e278fa8072bc05",
+      "resolution": "linked",
+      "reason": "Local first-interaction observation resolution, validation, and invariant check; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-d24027a6744b1867fa2d",
+      "previous_resolution_event_id": "native-d24027a6744b1867fa2d",
+      "resolution": "linked",
+      "reason": "Local frozen-plan schema inspection after a failed jq projection; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    },
+    {
+      "observation_id": "native-ebee7a3bc39c594418a7",
+      "previous_resolution_event_id": "native-ebee7a3bc39c594418a7",
+      "resolution": "linked",
+      "reason": "Local frozen-plan key and exact-URL inspection; reciprocal grouped local-control event confirms that no subject source was accessed.",
+      "linked_event_ids": ["v2-core03-control-local-project"]
+    }
+  ]
+}

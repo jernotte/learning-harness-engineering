@@ -554,3 +554,30 @@ essential rationale.
 The maintainer explicitly approved core-02's method and authorized
 `awesome-screen-core-03` on 2026-07-20. The response did not explicitly approve
 core-02's individual dispositions or catalog corrections.
+
+### Execution record
+
+Core-03 completed under this authorization on 2026-07-20. Its native boundary
+contains 31 direct-open events for exactly the 20 frozen source IDs and URLs.
+The eleven additional events were same-literal-URL content recoveries or
+exact-URL access retries: no alternate route, query, search result, manual
+redirect traversal, second hop, prior-batch reopen, implementation deep dive,
+claim, reference, evidence promotion, legacy access, or outline drafting
+occurred.
+
+The joined register preserves all 22 frozen occurrence joins and records 17
+proposed `read_only` dispositions, three proposed exclusions, nine
+intentionally shallow repository screens, requested and observed route changes,
+visible-version-versus-pin state, evidence posture, recurrence and lineage
+limits, and material catalog corrections. The standalone diagnostic audit
+passes at `complete` with 39 native observations, zero unresolved observations,
+zero claims, and nine resolved `repository_shallow` warnings. The consolidated
+diagnostic audit also passes at `complete_with_declared_manual_sources` with
+nine native boundaries, 385 native observations, 72 unique opened source
+identities, 66 `read_only` dispositions, six exclusions, zero searches, zero
+claims, and zero unresolved observations.
+
+This execution record exhausts V2-D010's opening authority. It does not approve
+the core-03 dispositions, retroactively approve core-02's proposed
+dispositions or corrections, or authorize core-04. The maintainer must review
+the completed package before the next decision.

@@ -5,11 +5,13 @@
 Harness Engineering V2 is rebuilding its research program from a clean
 conceptual slate. The authority reset is complete. V2-D005 through V2-D010
 approve an outline-first process. The 20-source `awesome-screen-core-03`
-calibration within `v2-outline-seed-map` is the only active source-opening
-batch. The maintainer approved continued use of the completed core-02 method
-before authorizing core-03; core-02's proposed dispositions and corrections
-remain unapproved. No later batch is authorized. The final goal continues
-through a maintainer-approved outline and stops before substantive research.
+calibration within `v2-outline-seed-map` is complete and its opening authority
+is exhausted. The maintainer approved continued use of the completed core-02
+method before authorizing core-03; core-02's proposed dispositions and
+corrections remain unapproved, and core-03's 17 proposed `read_only` / three
+proposed `excluded` dispositions now await review. No later batch is
+authorized. The final goal continues through a maintainer-approved outline and
+stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -60,8 +62,8 @@ authority.
   the never-opened Wave 2; V2-D008 approves the catalog gate and authorizes only
   the exact `awesome-screen-core-01` batch; V2-D009 approves that calibration's
   method and dispositions and authorized only exact `awesome-screen-core-02`.
-  V2-D010 approves continued use of the core-02 method and authorizes only exact
-  `awesome-screen-core-03`; the first two opening authorizations are exhausted.
+  V2-D010 approves continued use of the core-02 method and authorized only exact
+  `awesome-screen-core-03`; all three opening authorizations are exhausted.
 - The original repository seed is pinned to the observed commit, the local PDF
   has a verified fingerprint, and the Walking Labs curriculum repository is
   pinned before structural inspection.
@@ -84,9 +86,10 @@ authority.
   Core-01 opened exactly its 20 registered direct URLs. Core-02 later opened
   exactly its 20 registered direct URLs—and no other family—under V2-D009. No
   topical search, identity query, second hop, implementation deep dive,
-  core-01 reopen, or legacy readmission occurred. During core-03, exactly its
-  20 registered direct URLs—and no other family—may open; no completed prior
-  batch may reopen.
+  core-01 reopen, or legacy readmission occurred. Core-03 then opened exactly
+  its 20 registered direct URLs—and no other family—without reopening either
+  completed prior batch. No destination may now open before another explicit
+  maintainer decision.
 - Every authorized direct screen records actual identity, accessibility,
   relevance, scope, evidence posture, visible lineage, inspection extent, and a
   final disposition without treating the screen as deep reading or evidence.

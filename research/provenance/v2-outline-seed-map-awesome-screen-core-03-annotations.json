@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-07-21T00:24:16Z",
+  "agent": "primary",
+  "cycle": "v2-outline-seed-map",
+  "pass": "awesome-screen-core-03-semantic-annotation",
+  "semantic_batch_id": "v2-outline-seed-map-awesome-screen-core-03-batch-1",
+  "agent_role": "primary",
+  "artifact": {
+    "artifact_id": "v2-outline-awesome-screen-core-03-calibration",
+    "artifact_type": "analysis",
+    "artifact_path": "research/outline-development/awesome-screen-core-03.md"
+  },
+  "claims": [],
+  "sources": [
+    {
+      "source_id": "auto-source-ba31bde2dfc28f63",
+      "disposition": "read_only",
+      "reason": "The Playwright MCP repository home was used only to identify a browser-automation MCP server based on structured accessibility snapshots and the project's stated MCP-versus-CLI/Skills tradeoff. No capability or comparative outcome was verified.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview and comparison, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, example execution, browser behavior, or release body opened."
+    },
+    {
+      "source_id": "auto-source-d5f9dbd62b3ecc11",
+      "disposition": "read_only",
+      "reason": "The Claude Code Auto Mode article was used only to identify Anthropic's stated threat model, two-layer defense, approval design, internal evaluation figures, and human-review caveat. All outcomes remain vendor-reported.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, author/date, threat model, tool-output probe, transcript classifier, approval tiers, reported evaluation figures, and stated limitations"],
+      "inspection_basis": "Direct first-party article page only; linked documentation, classifiers, datasets, implementations, references, and evaluations were not opened."
+    },
+    {
+      "source_id": "auto-source-cddc9a2d075a5103",
+      "disposition": "read_only",
+      "reason": "The mem0 repository home was used only to identify its broad memory scope, current algorithm announcement, and the README's distinction between managed-service benchmark behavior and the open-source project. Results remain project-reported.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README overview, algorithm and benchmark notices, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, benchmark artifacts, hosted service, or release body opened."
+    },
+    {
+      "source_id": "auto-source-642743ad9061795a",
+      "disposition": "read_only",
+      "reason": "The LangGraph repository home was used only to identify a low-level orchestration framework for long-running stateful agents and its project-described durable execution, human-intervention, memory, and debugging surface. The root did not establish the catalog's separate release wording.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README scope and capability overview, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main with one same-URL content recovery; no code, tests, history, documentation, release page, integration, or example opened."
+    },
+    {
+      "source_id": "auto-source-22b0273a7c1efebd",
+      "disposition": "read_only",
+      "reason": "The OpenAI eval-skills article was used only to identify its practical pattern for defining skill success, capturing traces and artifacts, and combining deterministic and rubric-based checks. It is vendor guidance rather than an independent benchmark.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation", "other"],
+      "locations_inspected": ["direct article title, author/date, definition of skill evals, outcome/process/style/efficiency goals, and example evaluation workflow"],
+      "inspection_basis": "Direct article page with two same-URL line recoveries only; linked skill docs, examples, source repository, eval platform documentation, and other posts were not opened."
+    },
+    {
+      "source_id": "auto-source-580ca860ba1f4d76",
+      "disposition": "read_only",
+      "reason": "The Opik repository home was used only to identify its broad tracing, evaluation, optimization, monitoring, guardrail, and CI/CD-evaluation scope. Capabilities and throughput remain project self-description.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README platform overview and capability list, root listing, visible README update date, and default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, integration, benchmark, hosted service, or release body opened."
+    },
+    {
+      "source_id": "auto-source-1ce67529b68b7d4a",
+      "disposition": "read_only",
+      "reason": "The Claude Code commands page was used only to identify the documented `/doctor` installation and configuration checkup and to correct the source's scope to a broad command reference. Product behavior was not exercised.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["direct commands documentation, `/doctor` entry, broad command listing, and visible version-qualified note"],
+      "inspection_basis": "Direct live documentation page only; linked command details, installation guides, changelog, code, and runtime behavior were not opened."
+    },
+    {
+      "source_id": "auto-source-cf18e9c6fc10a052",
+      "disposition": "read_only",
+      "reason": "The HITL Protocol repository home was used only to identify its service-agent-human handoff protocol, HTTP 202/review/polling shape, and included reference implementations. Protocol claims remain project-reported.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README protocol overview and flow, visible version badge, root listing, and default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main; no specification file, implementation, code, tests, history, documentation, package, or release body opened."
+    },
+    {
+      "source_id": "auto-source-7def51b1549aee4a",
+      "disposition": "read_only",
+      "reason": "The revfactory/harness repository home was used only to identify a Claude Code-specific factory/meta-skill that says it generates agent teams and skills from domain descriptions. Its level model, patterns, and usefulness remain project framing.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity, stated generated artifacts and pattern count, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main; no skill file, generated output, implementation, code, tests, history, example, or release body opened."
+    },
+    {
+      "source_id": "auto-source-44a30ce8057db5dc",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered MCP authorization URL were rejected by the transport as unsafe. No specification content, ownership detail, relevance, or immutable-content state could be established within the authorized boundary.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL only; no alternate route, manual redirect traversal, query, search, adjacent specification page, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-433a37bad4e66a78",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered SWE-bench root failed with a fetch error and returned no substantive benchmark content. Scope, version, dataset, results, and evidence posture remain unestablished.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL and automatic trailing-slash normalization only; no alternate route, linked README, query, search, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-4f11e26be57ffed1",
+      "disposition": "read_only",
+      "reason": "The unversioned AgentCgroup arXiv work page was used only to identify its OS-resource characterization question, sandboxed coding-agent setting, eBPF/cgroups mechanism, and paper-reported preliminary results. No result was reproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["arXiv title, authors, submission history, visible v2 metadata, abstract, experiment scope, and reported result summary"],
+      "inspection_basis": "Direct unversioned arXiv abstract page only; PDF, experimental HTML, code, references, appendices, task data, and result reproduction were not opened."
+    },
+    {
+      "source_id": "auto-source-0f0c0cdf7c9dc4eb",
+      "disposition": "excluded",
+      "reason": "Both direct attempts to open the exact registered Anthropic tool-writing article URL were rejected by the transport as unsafe. Article identity beyond the registered route, relevance, thesis, and evidence posture could not be established.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "none",
+      "surfaces": [],
+      "locations_inspected": [],
+      "inspection_basis": "Two direct attempts at the same registered URL only; no alternate route, query, search, linked copy, or second hop was used."
+    },
+    {
+      "source_id": "auto-source-aba1b395dcfe14d7",
+      "disposition": "read_only",
+      "reason": "The Codex hooks documentation was used only to identify the documented lifecycle events, matchers, plugin hooks, tool coverage, blocking and rewriting, permission-request handling, and stated enforcement limits. Product behavior was not exercised.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official hooks page: plugin hooks, matcher patterns, tool coverage, common fields, PreToolUse behavior, and permission-request behavior"],
+      "inspection_basis": "Direct registered URL, automatic redirect to learn.chatgpt.com, and one same-URL line recovery only; linked schemas, examples, repositories, and adjacent documentation were not opened."
+    },
+    {
+      "source_id": "auto-source-13d43140a57ef61e",
+      "disposition": "read_only",
+      "reason": "The unversioned Agyn arXiv work page was used only to identify its role-based multi-agent software-engineering architecture, isolated sandboxes, communication and methodology, and paper-reported SWE-bench outcome. No result was reproduced.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["paper", "abstract"],
+      "locations_inspected": ["arXiv title, authors, submission history, visible v2 metadata, abstract, system scope, and reported benchmark summary"],
+      "inspection_basis": "Direct unversioned arXiv abstract page only; PDF, experimental HTML, code, references, appendices, task data, and result reproduction were not opened."
+    },
+    {
+      "source_id": "auto-source-e9e39426a0d8260e",
+      "disposition": "read_only",
+      "reason": "The Claude prompt-caching page was used only to identify the documented prompt-prefix cache, automatic and explicit breakpoints, TTLs, and stated cost and latency behavior. Caching was not treated as general compaction.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official documentation page: cache identity, automatic and explicit modes, breakpoint behavior, TTLs, and stated accounting behavior"],
+      "inspection_basis": "Direct registered URL and automatic redirect to platform.claude.com only; linked pricing, API reference, examples, SDKs, and adjacent documentation were not opened."
+    },
+    {
+      "source_id": "auto-source-dd44483fe80f0f0a",
+      "disposition": "read_only",
+      "reason": "The Outlines repository home was used only to identify a structured-output constrained-generation library and the project's stated guarantee and provider-independence goals. No output property or implementation was tested.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README project overview and stated output constraints, root listing, and visible default branch and history count"],
+      "inspection_basis": "Repository-shallow screen of live main; no code, tests, history, documentation, generation backend, example execution, benchmark, or release body opened."
+    },
+    {
+      "source_id": "auto-source-7cb0600d234b19c0",
+      "disposition": "read_only",
+      "reason": "The Chrome DevTools MCP repository home was used only to identify its browser-automation, navigation, performance, network, debugging, memory, extension, and experimental tool surface. No tool or browser behavior was executed.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README setup, direct tool-category list, configuration options, root listing, and visible default branch"],
+      "inspection_basis": "Repository-shallow screen with one same-URL content recovery; no tool documentation link, code, tests, history, browser execution, security behavior, or release body opened."
+    },
+    {
+      "source_id": "auto-source-a841a2284747ba07",
+      "disposition": "read_only",
+      "reason": "The Claude Agent SDK permissions page was used only to identify its documented hook, deny, ask, mode, allow, and callback order; scoped rules; always-prompt cases; and bypass caveats. It is product-specific behavior, not a universal authorization model.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["documentation"],
+      "locations_inspected": ["automatically redirected official permissions page: evaluation order, allow and deny rules, callback reachability, permission modes, scoped patterns, and visible version-qualified behavior"],
+      "inspection_basis": "Direct registered URL, automatic redirect to code.claude.com, and one same-URL content recovery only; linked hooks, approval, settings, connector, or API-reference pages were not opened."
+    },
+    {
+      "source_id": "auto-source-53e1f0b762c2e77b",
+      "disposition": "read_only",
+      "reason": "The Stash repository home was used only to identify its self-hosted persistent-memory, Postgres/pgvector, MCP, recall, and project-described consolidation surface, including the stated distinction between cloud and repository implementations.",
+      "record_path": "research/outline-development/awesome-screen-core-03.md",
+      "inspection_extent": "screening",
+      "surfaces": ["README", "releases"],
+      "locations_inspected": ["top-level GitHub repository page, rendered README identity, setup, MCP and memory overview, root listing, visible default branch and history count, and visible latest-release metadata"],
+      "inspection_basis": "Repository-shallow screen with one same-URL content recovery; no code, tests, history, documentation, consolidation implementation, hosted service, benchmark, or release body opened."
+    }
+  ]
+}

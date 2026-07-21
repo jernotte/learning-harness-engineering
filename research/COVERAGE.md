@@ -53,6 +53,18 @@ label, and several article/documentation forms and category boundaries. These
 screens remain catalog evaluation coverage, not admitted subject evidence,
 approved dispositions, or representative field coverage.
 
+The third approved catalog calibration directly screened all 20 families in
+`awesome-screen-core-03` and preserves all 22 frozen occurrence joins. It
+records 17 proposed `read_only` dispositions and three proposed exclusions:
+the MCP authorization page and Anthropic tool-writing article were rejected by
+the direct transport, and the SWE-bench root returned a fetch error. Nine
+repository families remained top-level, `repository_shallow`, and
+live-unpinned. The batch records material form and boundary corrections for the
+OpenAI eval-skills article, HITL Protocol, Codex hooks, prompt caching,
+Outlines, and several systems spanning multiple catalog sections. These
+screens remain catalog evaluation coverage, not admitted subject evidence,
+approved dispositions, or representative field coverage.
+
 The pinned Awesome census is now complete under its declared rule manifest:
 652 extracted occurrences divide into 415 qualifying resources and 237
 mechanical exclusions. The qualifying occurrences map to 401 offline family
@@ -95,7 +107,8 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the authorized `awesome-screen-core-03` calibration is
-complete. Until then, its 20 destinations and the other 335 proposed new
-destinations remain unopened. Core-02's dispositions and catalog corrections
-remain proposed even though its method is approved for continued use.
+Update this file after the maintainer resolves the completed
+`awesome-screen-core-03` gate. The other 335 proposed new destinations remain
+unopened. Core-02's dispositions and catalog corrections remain proposed even
+though its method is approved for continued use; core-03's 17/3 dispositions
+and corrections are also proposed. No later batch is authorized.

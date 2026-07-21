@@ -3,13 +3,14 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D010, approved 2026-07-20
-**Current pass:** `awesome-screen-core-03` authorized
+**Current pass:** `awesome-screen-core-03` complete; maintainer gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The direct screen of the exact 20 families in `awesome-screen-core-03` applies
+The completed direct screen of the exact 20 families in
+`awesome-screen-core-03` applies
 the method approved through V2-D010 while preserving requested and observed
 identity, accessibility, substantive inspectability, relevance, scope, source
 form, evidence posture, visible lineage, version or pin state, catalog
@@ -17,7 +18,8 @@ correction, schema friction, and proposed disposition. The batch is anchored to
 `awesome-screening-plan.json` at commit
 `3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass may not search, follow a
 second hop, reopen core-01 or core-02, deep-read a source, choose a taxonomy, or
-draft an outline.
+draft an outline. Its authorization is exhausted; no later batch may open
+without another explicit decision.
 
 ## Wave 1 authorization
 
@@ -168,6 +170,16 @@ conservative local provenance-control observations are reciprocally linked;
 zero observations remain unresolved. Later reconciliation and checkpoint
 actions do not extend permission to open another source.
 
+The `awesome-screen-core-03` native boundary is declared from
+`2026-07-21T00:15:24Z`, after the committed V2-D010 authority checkpoint at
+`4d56178`. It closes before `2026-07-21T00:20:48Z` and contains 39 native
+observations, 31 direct opens for exactly 20 frozen source IDs and URLs, and no
+search or returned-result event. Eleven additional direct opens were bounded
+same-URL recoveries or exact-URL access retries. Nine conservative local
+provenance-control observations are reciprocally linked; zero observations
+remain unresolved. Later reconciliation and checkpoint actions do not extend
+permission to open another source.
+
 ## Search and traversal limits
 
 - No topical or ecosystem search.
@@ -175,9 +187,10 @@ actions do not extend permission to open another source.
   `awesome-screen-core-01` were permitted to open.
 - During the now-closed second batch boundary, only the 20 direct URLs
   registered in `awesome-screen-core-02` were permitted to open.
-- During the current batch boundary, only the 20 direct URLs registered in
-  `awesome-screen-core-03` may open. Core-01 and core-02 reopening, every other
-  catalog batch, and every identity-resolution query remain blocked.
+- During the now-closed third batch boundary, only the 20 direct URLs
+  registered in `awesome-screen-core-03` were permitted to open. Core-01 and
+  core-02 were not reopened. All completed-batch reopening, every other catalog
+  batch, and every identity-resolution query remain blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -187,9 +200,9 @@ actions do not extend permission to open another source.
 
 ## Stop and checkpoint
 
-Stop when all 20 `awesome-screen-core-03` families have an honest direct-screen
-result or recorded access failure; each source has the required identity,
-surface, accessibility, relevance, scope, evidence posture, lineage, and
-proposed disposition; schema friction and catalog corrections are explicit;
-and the diagnostic boundary is reconciled. Present that complete calibration
-for maintainer review before opening another batch.
+The stop condition is satisfied: all 20 `awesome-screen-core-03` families have
+an honest direct-screen result or recorded access failure; each source has the
+required identity, surface, accessibility, relevance, scope, evidence posture,
+lineage, and proposed disposition; schema friction and catalog corrections are
+explicit; and the diagnostic boundary is reconciled. Present this complete
+calibration for maintainer review before opening another batch.

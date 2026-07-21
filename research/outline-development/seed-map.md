@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** `awesome-screen-core-03` authorized for direct screening
+**Status:** `awesome-screen-core-03` complete; awaiting maintainer review
 
 **Authority:** Approved outline-development brief
 
@@ -467,8 +467,9 @@ Labs curriculum candidate is complete, and V2-D008 approved that catalog gate.
 V2-D009 approved the first calibration and authorized only exact
 `awesome-screen-core-02` under the current direct-screen boundary. That
 authorization is now exhausted. V2-D010 approves continued use of the core-02
-method and authorizes only exact `awesome-screen-core-03`; core-02's individual
-dispositions and catalog corrections remain proposed.
+method and authorized only exact `awesome-screen-core-03`; core-02's individual
+dispositions and catalog corrections remain proposed. Core-03 is complete and
+its opening authority is exhausted.
 
 ## V2-D007 method correction
 
@@ -518,21 +519,31 @@ proposed.
 The maintainer approved continued use of the core-02 method and authorized only
 the exact 20-family `awesome-screen-core-03` batch. The approval did not
 explicitly ratify core-02's individual dispositions or catalog corrections, so
-they remain proposed. Core-03 must preserve all 22 frozen occurrence joins and
-the expanded register, use only its registered direct URLs, and stop without
-search, identity resolution, prior-batch reopening, manual redirect traversal,
+they remain proposed. Core-03 was required to preserve all 22 frozen occurrence
+joins and the expanded register, use only its registered direct URLs, and stop
+without search, identity resolution, prior-batch reopening, manual redirect traversal,
 second-hop traversal, deep reading, claim or evidence promotion, or outline
 drafting.
+
+That exact batch is complete. Its 31 direct-open events resolve to exactly 20
+frozen source identities and URLs, with eleven same-URL recoveries or access
+retries and no alternate route. All 22 occurrence joins are preserved. The
+joined register proposes 17 `read_only` dispositions and three exclusions,
+keeps nine repository screens shallow and live-unpinned, and records material
+route, source-form, category-boundary, evidence-posture, recurrence, lineage,
+and schema corrections without promoting a finding. The register is
+`research/outline-development/awesome-screen-core-03.md`. No later batch is
+authorized.
 
 ## Provenance state
 
 The consolidated diagnostic audit passes at
-`complete_with_declared_manual_sources`: zero errors, 19 resolved warnings,
-eight native boundaries, 346 native observations, and zero unresolved
-observations. Across the structural program to date it records 52 unique opened
-source identities, 49 `read_only` dispositions, three exclusions, zero
+`complete_with_declared_manual_sources`: zero errors, 28 resolved warnings,
+nine native boundaries, 385 native observations, and zero unresolved
+observations. Across the structural program to date it records 72 unique opened
+source identities, 66 `read_only` dispositions, six exclusions, zero
 searches, zero claims, and zero promoted evidence. The standalone
-`awesome-screen-core-02` package passes at `complete` with 20 unique opened
-identities from 21 direct-open events, 19 `read_only` dispositions, one
-exclusion, zero unresolved observations, and nine intentionally resolved
+`awesome-screen-core-03` package passes at `complete` with 20 unique opened
+identities from 31 direct-open events, 17 `read_only` dispositions, three
+exclusions, zero unresolved observations, and nine intentionally resolved
 `repository_shallow` warnings.

@@ -21,9 +21,10 @@ The program is therefore outline-first:
 2. approve the criteria by which an outline will be judged;
 3. inspect the maintainer-named structural inputs and completely enumerate the
    pinned catalog without adopting their structures;
-4. develop a recognizable conventional-topic organization while any separately
-   authorized direct screens, if continued, pressure its placement and depth
-   at maintainer checkpoints;
+4. develop one recognizable conventional-topic architecture with an honest
+   branching first-reading traversal while any separately authorized direct
+   screens, if continued, pressure its placement and depth at maintainer
+   checkpoints;
 5. develop and approve one detailed outline;
 6. create a separate substantive research plan only afterward.
 
@@ -39,8 +40,7 @@ final outline. V2 still has not fixed:
 - the final wording and priority of the body of knowledge's objectives and
   later derivative uses;
 - a topic taxonomy or architectural lens;
-- final acceptance, grouping, depth, and sequence of the conventional-topic
-  skeleton;
+- final acceptance, grouping, depth, sequence, and traversal of V2-SK-F;
 - the relationship between concepts, implementation families, domains, and
   learning sequence;
 - the appropriate case-study, synthesis, or curriculum structure;

@@ -945,3 +945,116 @@ core-05 family, query, second hop, external implementation, or new provenance
 boundary entered the checkpoint. Core-04 remains explicitly unratified input.
 The candidate is stopped at the maintainer review gate; neither its structure
 nor any later research or screening is approved by this execution record.
+
+## V2-D014 — Synthesize D and E into one conventional architecture with a build-up traversal
+
+**Status:** Approved
+**Date:** 2026-07-21
+
+### Context
+
+The maintainer supplied a Fable review and an untracked build-up alternative,
+`V2-SK-E`, then requested a new version F using D, E, and the primary's
+adjudicated comparison. The review correctly exposed a weak first-reading path,
+an Evaluation/Observability ordering tension, prose-only cross-cutting security,
+and the value of explicit per-section decisions. Its headline curriculum-first
+verdict relied on pre-V2 goals that have no active authority, and E converted
+optional, cyclic mechanisms into an inaccurate linear component ladder.
+
+### Decision
+
+Authorize `V2-SK-F` at checkpoint `V2-SK-CP02` as the sole active skeleton
+under development. F must synthesize:
+
+- D's complete conventional-topic content architecture, reviewed vocabulary
+  ownership, scope, and source roles; and
+- E's useful build-up motivation, stop points, point-of-risk security reminders,
+  and explicit decision framing.
+
+F must contain one canonical topic tree and one nonduplicated, ID-based build-up
+traversal through that tree. The public headings remain recognizable field
+terms. The traversal must branch, permit stopping, distinguish hard
+prerequisites from common construction order and optional capability edges,
+and preserve consequential cycles and back-edges.
+
+Do not assert that tools are required for loops, loops for memory or skills,
+skills for protocols, or one agent for orchestration. Separate working and task
+state from optional persistent memory. Expose security and human control,
+assurance, and production conditions from their first relevant boundary even
+when their full explanations remain in dedicated subjects. Treat evaluation
+design, instrumentation, observation, judgment, and revision as a feedback
+cycle rather than a one-way chapter dependency.
+
+Every major section must state the analytical understanding it enables and the
+decision it supports without promising that reading a section makes a system
+reliable, safe, or production-ready. A direct model call may be a starting
+artifact and boundary test, but it is not declared the smallest harness before
+the boundary is approved.
+
+### Lineage and authority
+
+`V2-SK-D` remains the completed, adversarially reviewed checkpoint-01 baseline
+and is not rejected. `V2-SK-E` is admitted only as an advisory design input; it
+was never active or approved under V2-D013, and its original authority claim
+must be corrected before it is tracked. Fable's review and the D/E adjudication
+are design pressure, not subject evidence or decision authority.
+
+F is the only active checkpoint-02 candidate. This synthesis does not change
+the approved research-and-knowledge-architecture priority into a curriculum-
+first program. A build-up path is a reading traversal; curriculum and learning
+deliverables remain deferred.
+
+### Authority limits and next gate
+
+This decision authorizes only local retention of E as an advisory input,
+development and bounded adversarial review of F, deterministic validation, and
+the resulting maintainer checkpoint. It does not approve F, ratify core-04,
+open core-05, open or query any source, inspect external implementation detail,
+select cases, expand a detailed outline, promote evidence, access legacy
+material, or produce curriculum or learning artifacts.
+
+Stop after F, its D/E disposition, reviewer findings, primary dispositions, and
+validation are complete. Only the maintainer may accept F, request revision, or
+return to D.
+
+### Design-history disposition
+
+Candidate `V2-HIST-006` — the maintainer requested a synthesis that preserves
+the conventional topic architecture while adding a branching build-up reading
+path. No conversation packet, Fable transcript, or export is authorized.
+
+### Approval record
+
+On 2026-07-21 the maintainer explicitly directed the primary to use D, E, the
+review discussion, and the primary's reasoning to create version F.
+
+### Execution record
+
+Checkpoint `V2-SK-CP02` completed under this authorization on 2026-07-21. F
+preserves D's canonical thirteen-subject tree exactly apart from stable F IDs
+and adds one nonduplicated, branching first-reading traversal. The traversal
+uses independent optional branches and stop points, classifies every material
+relationship, and exposes security and human-control, assurance, and production
+rails without turning them into duplicate topic trees.
+
+A local architecture adversary raised three high and five medium findings. A
+separate local vocabulary/authority adversary raised one high and three medium
+findings. The primary accepted and corrected all twelve: persistent memory,
+continuity, and protocols became independent branches; approved audience,
+outcome, and inclusion contracts were restored; relationship classifications
+were completed; retry and recovery ownership was repaired; production feedback
+can reopen F1–F13; D's structural children were restored exactly; and E's
+post-CP01 advisory lineage plus the D014 reviewer boundary were made explicit.
+
+Focused architecture verification passed A-01 through A-08. Focused
+vocabulary/authority verification passed T-01 through T-04. Neither found a
+residual consequential defect. The provenance test suite, catalog extractor
+tests, local Markdown-link check, and `git diff --check` pass after the
+corrections.
+
+The external Claude reviewer was not invoked because the recorded hard tenant-
+transfer prohibition remains controlling. No external source, legacy artifact,
+core-05 family, query, second hop, implementation detail, claim, evidence
+promotion, curriculum, or new provenance boundary entered the checkpoint.
+Core-04 remains unratified. F is a reviewed structural hypothesis, not an
+approved outline; the package is stopped for maintainer review.

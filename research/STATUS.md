@@ -1,16 +1,17 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Conventional-topic skeleton — maintainer review gate
+**Current phase:** V2-SK-F — maintainer review gate
 **Active subject-research cycle:** None
-**Active outline task:** `v2-conventional-skeleton-checkpoint-01`
+**Active outline task:** `v2-conventional-buildup-skeleton-checkpoint-02`
 **Active brief:** `research/outline-development/brief.md` — approved
 **Last updated:** 2026-07-21
 
 ## Current objective
 
-Present the adversarially reviewed conventional-topic skeleton, its vocabulary
-basis, overlap rules, and unresolved placement choices for maintainer direction.
+Present the adversarially reviewed V2-SK-F package: its single conventional-
+topic architecture, branching build-up traversal, cross-cutting rails, D/E
+disposition, reviewer findings, primary dispositions, and unresolved choices.
 Do not open another source, begin a detailed outline, or advance to core-05.
 
 ## Authority state
@@ -26,8 +27,8 @@ Do not open another source, begin a detailed outline, or advance to core-05.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 through V2-D011 were explicitly approved on 2026-07-20. V2-D012 and
-  V2-D013 were explicitly approved on 2026-07-21.
+- V2-D005 through V2-D011 were explicitly approved on 2026-07-20. V2-D012
+  through V2-D014 were explicitly approved on 2026-07-21.
 
 ## Current authorization
 
@@ -254,6 +255,21 @@ Authorized by V2-D013:
 - run bounded local review, validate, and stop for the maintainer. This
   authority does not approve core-04 or open core-05.
 
+Authorized by V2-D014:
+
+- preserve `V2-SK-D` as the reviewed checkpoint-01 conventional baseline;
+- retain `V2-SK-E` only as an advisory input and correct its inaccurate
+  V2-D013 authority claim;
+- make `V2-SK-F` the sole active checkpoint-02 candidate;
+- retain one canonical conventional-topic tree and add one ID-based, branching
+  build-up traversal with optional branches and explicit stop points;
+- preserve D's complete subject coverage and ownership rules while adopting
+  E's useful motivation, decision framing, and point-of-risk reminders;
+- expose state/loop and evaluation/observability cycles plus security,
+  assurance, and production back-edges; and
+- run bounded local review, validate, and stop for the maintainer. This does
+  not approve F, core-04, core-05, curriculum, or detailed-outline work.
+
 Still not authorized:
 
 - opening any catalog family, including core-05 or a completed calibration;
@@ -266,8 +282,7 @@ Still not authorized:
 - case selection, synthesis of subject findings, or site work;
 - evidence maturity promotion;
 - legacy evidence readmission;
-- expanding the provisional conventional skeleton into a detailed subject
-  outline; and
+- expanding V2-SK-F into a detailed subject outline; and
 - producing or adopting curriculum or learning artifacts.
 
 The maintainer must explicitly authorize any later batch or method-changing
@@ -275,11 +290,21 @@ access. Core-04 is stopped at its source-screening gate.
 
 ## Validation and review state
 
-- V2-SK-CP01 contains one active thirteen-subject conceptual tree using
+- V2-SK-CP02 contains F's canonical thirteen-subject tree, branching ID-based
+  traversal, section-accountability map, and security, assurance, and
+  production rails. Two bounded local reviews raised four high and eight medium
+  findings. The primary accepted and corrected all twelve. Focused architecture
+  verification passed A-01 through A-08, and focused vocabulary/authority
+  verification passed T-01 through T-04 with no residual consequential defect.
+  The reviews are advisory, not externally independent, and not maintainer
+  approval.
+- The checkpoint-02 provenance suite, catalog tests, local Markdown-link check,
+  and `git diff --check` pass after all corrections.
+- V2-SK-CP01 contains the reviewed thirteen-subject D baseline using
   recognizable harness-engineering terminology, a local vocabulary/placement
   map, and a bounded adversarial review. Its extra depth is functional rather
-  than a product or implementation inventory. The candidate remains a
-  structural hypothesis awaiting maintainer review.
+  than a product or implementation inventory. D remains a structural
+  hypothesis and reviewed baseline, not an approved governing skeleton.
 - The local architecture audit raised two high and six medium findings; the
   local vocabulary/authority audit raised four high and three medium findings.
   The primary accepted and corrected all fifteen. The architecture verifier
@@ -456,8 +481,9 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the conventional-topic replacement, its vocabulary
-map, hierarchy, overlap ownership, reviewer findings and primary dispositions,
-and unresolved placement choices. Core-04's proposed results remain separately
-unratified. No other batch opens and no detailed outline begins before that
-review. Selective raw conversation packets remain separately gated per packet.
+The maintainer will review V2-SK-F's conventional-topic tree, partial-order
+build-up traversal, cross-cutting rails, D/E disposition, reviewer findings,
+primary dispositions, and unresolved choices. Core-04's proposed results remain
+separately unratified. No other batch opens and no detailed outline begins
+before that review. Selective raw conversation packets remain separately gated
+per packet.

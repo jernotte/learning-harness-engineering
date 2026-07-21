@@ -3,10 +3,16 @@
 **Skeleton:** `V2-SK-D`
 **Version:** `0.1`
 **Checkpoint:** `V2-SK-CP01`
-**Status:** Adversarially reviewed; awaiting maintainer review
+**Status:** Adversarially reviewed checkpoint-01 baseline; preserved as an
+input to V2-SK-F and not rejected
 **Authority:** V2-D013
 **Maturity:** Structural hypothesis only; not an approved outline or taxonomy
 **Input boundary:** Existing captured V2 artifacts through proposed core-04; no new source access
+
+V2-D014 makes
+[`V2-SK-F`](conventional-buildup-skeleton.md) the sole active checkpoint-02
+candidate. This document remains the reviewed conventional-topic baseline from
+which F inherits its complete topic architecture.
 
 ## Organizing principle
 

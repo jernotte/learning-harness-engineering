@@ -6,17 +6,18 @@ Harness Engineering V2 is rebuilding its research program from a clean
 conceptual slate. The authority reset is complete. V2-D005 through V2-D011
 approve an outline-first process; V2-D012 produced a provisional skeleton
 portfolio, and V2-D013 records the maintainer's rejection and replacement
-direction. The maintainer approved core-02's exact
+direction. V2-D014 makes F the sole active synthesis of reviewed D and advisory
+E. The maintainer approved core-02's exact
 19 `read_only` / one `excluded` dispositions and corrections, then approved
 the method exercised in core-03 plus its exact 17 `read_only` / three
 `excluded` dispositions and corrections. The authorized 20-source
 `awesome-screen-core-04` calibration within `v2-outline-seed-map` is complete
 and awaiting maintainer review; its proposed result is 17 `read_only` / three
 `excluded`. Its opening authority is exhausted, and no core-05 or later batch
-is authorized. The current work creates one deeper replacement using familiar
-harness-engineering vocabulary from already captured artifacts, adversarially
-reviews it, and stops for the maintainer. The final goal continues through a
-maintainer-approved outline and stops before substantive research.
+is authorized. The current work creates one conventional-topic content tree
+with one branching, ID-based build-up traversal, adversarially reviews it, and
+stops for the maintainer. The final goal continues through a maintainer-approved
+outline and stops before substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -103,9 +104,9 @@ authority.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
 - Core-04 closed with complete source lifecycles, reconciled diagnostic
-  provenance, schema friction, and recommendation. V2-D013 permits only local
-  conventional-skeleton work beyond that point; all later source batches
-  remain blocked.
+  provenance, schema friction, and recommendation. V2-D014 permits only the
+  bounded local F synthesis and review beyond that point; all later source
+  batches remain blocked.
 
 ## Provisional skeleton acceptance criteria when V2-D012 is in scope
 
@@ -164,6 +165,38 @@ that the maintainer rejected it despite its internal validation.
   selection enters the checkpoint.
 - Review remains advisory and the checkpoint stops for the maintainer with
   findings, primary dispositions, and unresolved placement choices.
+
+These criteria describe the reviewed D baseline. V2-D014 preserves D and uses
+it as the complete content basis for F.
+
+## F synthesis acceptance criteria when V2-D014 is in scope
+
+- F is the sole active checkpoint-02 candidate. D remains a reviewed baseline;
+  E remains advisory and has no retroactive V2-D013 authority.
+- F contains one conventional-topic content tree and one nonduplicated
+  traversal that references stable topic IDs.
+- Every D structural node is retained or explicitly dispositioned. Design
+  goals, Task and Workflow State, Autonomy and Control, and Developer
+  Experience are not silently lost.
+- Traversal relationships distinguish hard prerequisites, common construction
+  order, optional capability edges, and cross-cutting or back-edge relations.
+- F does not imply that tools are required for loops, loops for memory or
+  skills, skills for protocols, or one agent for orchestration.
+- Working/task state and persistent memory remain distinct; orchestration is
+  not reduced to multi-agent escalation.
+- Context/Tools, State/Loops, Evaluation/Observability, Security/authority, and
+  Production/earlier-design cycles or back-edges remain visible.
+- A direct model call is a starting artifact or edge case, not an adopted
+  definition of the smallest harness.
+- Each major topic states the understanding it enables and the decision it
+  supports without guaranteeing reliability, safety, or production readiness.
+- Security, assurance, and production constraints appear from their first
+  relevant boundary while retaining one primary explanatory home.
+- F remains a research and knowledge architecture. It introduces no curriculum,
+  learning deliverable, selected case, detailed outline, source, promoted
+  evidence, or legacy material.
+- Core-04 remains unratified, core-05 remains closed, review remains advisory,
+  and the checkpoint stops for the maintainer.
 
 ## Quality bar
 
@@ -239,6 +272,10 @@ reported command output.
   semantic collapse among familiar terms, unjustified hierarchy, copied
   catalog bundles, hidden reactivation of A/B/C, or conventional wording
   presented as proof of universal consensus.
+- For the V2-D014 synthesis, duplicated topic trees, silent D-content loss,
+  linear maturity ladders, false universal dependencies, hidden cycles,
+  outcome guarantees, E presented as prior authority, or build-up framing that
+  silently changes the project into a curriculum.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

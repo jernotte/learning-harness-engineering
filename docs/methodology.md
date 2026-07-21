@@ -59,13 +59,20 @@ baseline separation needed for the provisional skeleton; completing every direct
 screen is not an automatic prerequisite. This keeps the sources from silently
 supplying both the content universe and its final shape.
 
-### 7. Build and review the conventional-topic skeleton
+### 7. Build and review the conventional-topic architecture
 
 Use recognizable harness-engineering terms as the public spine. Preserve
 meaningful distinctions among context, memory, tools, skills, protocols,
 planning, orchestration, observability, evaluation, permissions, sandboxing,
 and production operations. Add hierarchy when it clarifies these relationships;
 do not impose a two-level cap or create bespoke substitutes for familiar terms.
+
+Keep one canonical content tree. A guided first reading may traverse that tree
+in a different order, but it must reference stable topic IDs rather than copy
+or redefine their contents. Model optional mechanisms as branches with stop
+points; preserve cycles and back-edges instead of forcing a universal component
+ladder. State the understanding and decision each major topic supports without
+claiming an implementation outcome.
 
 Later separately authorized screens pressure the structure through a
 structural ledger. Do not rewrite it after each source. Freeze and review new

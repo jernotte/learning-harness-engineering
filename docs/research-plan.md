@@ -46,12 +46,12 @@ completed, its opening authority is exhausted, and its proposed 17 `read_only`
 / three `excluded` result awaits maintainer review. The former Wave 2 proposal
 is withdrawn and has no authority.
 
-V2-D012 historically interleaved the rejected skeleton baseline with this
-stage. V2-D013 now authorizes only its conventional-topic replacement. Neither
-decision authorizes a new source opening or ratifies core-04. The remaining
-21-batch plan is a frozen candidate upper bound; continued execution requires
-a later exact decision and is reviewed after at most five completed batches or
-an earlier structural stop.
+V2-D012 historically interleaved the rejected abstract baseline with this
+stage. V2-D013 produced the reviewed conventional-topic baseline D; V2-D014
+now authorizes only the F synthesis. None authorizes a new source opening or
+ratifies core-04. The remaining 21-batch plan is a frozen candidate upper
+bound; continued execution requires a later exact decision and is reviewed
+after at most five completed batches or an earlier structural stop.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -91,19 +91,21 @@ inaccessible direct surfaces, and promoted no claim or evidence. Its authority
 is exhausted; every later batch remains blocked pending another explicit
 decision.
 
-## Stage 5 — Conventional-topic outline skeleton
+## Stage 5 — Conventional-topic architecture and traversal
 
-Present a recognizable field-vocabulary organization with explicit topic
-boundaries, overlap ownership, sequence, dependencies, benefits, risks, blind
-spots, and anchoring hazards.
+Present one recognizable field-vocabulary content tree plus one nonduplicated,
+branching first-reading traversal with explicit topic boundaries, overlap
+ownership, dependencies, cycles, stop points, decisions, benefits, risks,
+blind spots, and anchoring hazards.
 
-**Status:** V2-SK-CP00 was rejected by the maintainer. V2-D013 authorizes one
-deeper replacement candidate using conventional harness-engineering terms and
-only already captured artifacts. V2-SK-CP01 is adversarially reviewed and now
-stopped for the maintainer before core-05 or detailed-outline work.
+**Status:** V2-SK-CP00 was rejected. V2-SK-D is the reviewed checkpoint-01
+baseline. V2-D014 makes V2-SK-F the sole active checkpoint-02 candidate and
+retains E only as advisory input. F's bounded local review and deterministic
+validation are complete. It used only already captured artifacts and is stopped
+for the maintainer before core-05 or detailed-outline work.
 
-**Exit gate:** Maintainer review of the replacement vocabulary, hierarchy,
-topic placement, overlap rules, reviewer findings, and unresolved choices.
+**Exit gate:** Maintainer review of F's topic tree, branching traversal,
+cross-cutting rails, D/E disposition, reviewer findings, and unresolved choices.
 
 ## Stage 6 — Detailed outline
 

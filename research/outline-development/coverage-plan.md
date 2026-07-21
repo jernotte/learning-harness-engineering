@@ -3,18 +3,18 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D011, approved 2026-07-20; V2-D012 through
-V2-D013, approved 2026-07-21
-**Current pass:** `v2-conventional-skeleton-checkpoint-01`; local vocabulary,
-structural analysis, and adversarial review complete; stopped at maintainer gate
+V2-D014, approved 2026-07-21
+**Current pass:** `v2-conventional-buildup-skeleton-checkpoint-02` complete;
+stopped at the maintainer review gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The current pass replaces the maintainer-rejected abstraction-first portfolio
-with one deeper skeleton using familiar harness-engineering terms. It records
-the local vocabulary basis, distinctions, overlap ownership, reviewer
-challenges, and remaining maintainer choices. It performs no external
+The current pass synthesizes the reviewed D baseline and advisory E into F: one
+conventional-topic content tree plus one branching, ID-based build-up traversal.
+It records D/E dispositions, dependency classifications, cross-cutting rails,
+reviewer challenges, and remaining maintainer choices. It performs no external
 interaction, changes no source disposition, and promotes no evidence. Core-04's
 proposed result remains unratified, and no source may open without another
 explicit decision.
@@ -92,17 +92,17 @@ authorized earlier open or access attempt may establish accessibility.
 
 ## Provisional skeleton boundary
 
-V2-D013 authorizes only local analysis of the captured seed map, Walking Labs
-analysis, pinned-catalog artifacts, completed screening registers, and their
-audits. The active skeleton must use recognizable field terms and may descend
-beyond two levels only to preserve real semantic or ownership distinctions.
-It keeps factual claims out unless the ordinary ledger and verification rules
-are satisfied. A vocabulary placement is an outline hypothesis, not a source
-disposition or finding.
+V2-D014 authorizes only local synthesis of D, advisory E, their adjudication,
+the captured seed map, Walking Labs analysis, pinned-catalog artifacts,
+completed screening registers, and their audits. F must use recognizable field
+terms, preserve D's complete topic coverage, and distinguish topic ownership
+from its build-up traversal. It keeps factual claims out unless the ordinary
+ledger and verification rules are satisfied. A dependency or placement is an
+outline hypothesis, not a source disposition or finding.
 
-The checkpoint-01 review may inspect the current repository and diff. It may
+The checkpoint-02 review may inspect the current repository and diff. It may
 not open a source, follow a link outside the repository, inspect legacy
-material, approve core-04, or change conventional-skeleton authority. Because
+material, approve core-04, or change F's authority. Because
 this pass has no external research interaction, it creates no new source-
 lifecycle or native provenance boundary.
 
@@ -229,9 +229,8 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-The current pass stops after the conventional-topic tree, vocabulary map,
-adversarial review, primary dispositions, and deterministic validation are
-complete. The maintainer then reviews its terminology, placement, depth, and
-overlap rules and decides whether another revision or later exact screening
-tranche is worth opening. Core-04 remains proposed and no later batch may open
-implicitly.
+The current pass stops after F's topic tree, branching traversal, D/E
+disposition, cross-cutting rails, adversarial review, primary dispositions, and
+deterministic validation are complete. The maintainer then reviews F and
+decides whether to accept it, revise it, or return to D. Core-04 remains
+proposed and no later batch may open implicitly.

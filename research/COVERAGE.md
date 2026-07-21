@@ -113,17 +113,25 @@ The maintainer rejected V2-D012's constraints-to-decisions, causal-lifecycle,
 and responsibility/authority trees as reader-facing organizations. Their
 files remain checkpoint-00 design history.
 
-V2-D013 authorizes one active replacement organized by familiar
+V2-D013 produced the reviewed D baseline organized by familiar
 harness-engineering subjects. Its vocabulary map distinguishes context,
 memory/state, tools, skills, protocols, loops/workflows, orchestration,
 evaluation, observability, permissions/sandboxing, human control, and
-production operations without claiming universal definitions. The deeper tree
-is in `research/outline-development/conventional-skeleton.md`; its local basis
-and overlap rules are in
-`research/outline-development/conventional-vocabulary-map.md`.
+production operations without claiming universal definitions.
+
+V2-D014 makes F the sole active checkpoint-02 candidate. F preserves D's
+complete topic coverage and ownership map while adding a nonduplicated,
+branching build-up traversal, explicit decisions, and security, assurance, and
+production rails. D remains the reviewed baseline; E is advisory input only.
+The active artifact is
+`research/outline-development/conventional-buildup-skeleton.md`; its local
+vocabulary basis remains
+`research/outline-development/conventional-vocabulary-map.md`, and its bounded
+local review is
+`research/outline-development/conventional-buildup-skeleton-review.md`.
 
 This is organization coverage, not admitted subject-evidence coverage. The
-replacement does not establish that a named mechanism works, that a topic is
+F does not establish that a named mechanism works, that a topic is
 important, that the catalog is representative, or that an outline has been
 approved.
 
@@ -143,7 +151,7 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews the conventional-topic skeleton
+Update this file after the maintainer reviews V2-SK-F
 and the still-proposed `awesome-screen-core-04` calibration. The other 315
 proposed new destinations remain unopened. Core-02 and core-03 results are
 approved; core-04's proposed 17/3 result is not yet approved. No core-05 or

@@ -17,18 +17,20 @@ calibrations are complete. Core-01 through core-03 are approved. Core-04's
 proposed 17 `read_only` / three `excluded` result remains awaiting maintainer
 ratification, and no core-05 or later batch is authorized.
 
-The maintainer rejected the abstraction-first A/B/C skeleton portfolio at its
-review gate. V2-D013 now requires the reader-facing structure to use familiar
-harness-engineering terminology and permits useful depth beyond two levels.
-The active replacement is
-[`research/outline-development/conventional-skeleton.md`](research/outline-development/conventional-skeleton.md),
-supported by the
-[`conventional vocabulary map`](research/outline-development/conventional-vocabulary-map.md).
-The bounded adversarial findings and their dispositions are in the
-[`checkpoint-01 review`](research/outline-development/conventional-skeleton-review.md).
-The rejected portfolio, pressure ledger, and review remain preserved in their
-original checkpoint files as design history. The replacement remains a
-structural hypothesis, not an approved outline or subject authority.
+The maintainer rejected the abstraction-first A/B/C portfolio, then used
+V2-D013 to create the reviewed conventional-topic baseline `V2-SK-D`. After a
+maintainer-provided build-up alternative exposed useful reading-path pressure
+and several false linear dependencies, V2-D014 authorized one synthesis:
+[`V2-SK-F`](research/outline-development/conventional-buildup-skeleton.md).
+F keeps a single familiar-topic architecture and adds a branching build-up
+traversal, explicit decision targets, and security, assurance, and production
+rails. Its bounded local
+[`adversarial review`](research/outline-development/conventional-buildup-skeleton-review.md)
+is complete. The reviewed
+[`V2-SK-D`](research/outline-development/conventional-skeleton.md) remains its
+checkpoint-01 baseline; [`V2-SK-E`](research/outline-development/buildup-skeleton.md)
+is retained only as an advisory input. F remains a structural hypothesis, not
+an approved outline or subject authority.
 
 Work remains on `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
@@ -37,11 +39,12 @@ The complete pre-pivot history remains recoverable from
 `codex/archive-pre-pivot-2026-07-20` at
 `071fd2d833c809723c881921956a50e46fa748f1`.
 
-No V2 subject outline has been approved, and no taxonomy, case set, synthesis,
-or reviewed finding currently exists. The approved and amended
+No V2 subject outline has been approved, and no subject-research taxonomy, case
+set, evidence synthesis, or reviewed subject finding currently exists. The
+approved and amended
 [`research/outline-development/brief.md`](research/outline-development/brief.md)
 authorizes structural inspection of the named inputs, a complete pinned-catalog
-inventory, and the provisional conventional-topic skeleton. It does not adopt
+inventory, and the provisional F synthesis. It does not adopt
 source taxonomies, authorize a new outbound source open without maintainer
 approval of an exact batch, or authorize substantive research.
 

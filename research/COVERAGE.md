@@ -41,29 +41,31 @@ corrections across the set. These screens are catalog evaluation coverage, not
 admitted subject evidence or representative field coverage.
 
 The second approved catalog calibration directly screened all 20 families in
-`awesome-screen-core-02`. It records 19 proposed `read_only` dispositions and
-one proposed exclusion: the GitHub Governing Agents route automatically
-redirected but exposed no substantive page content in either same-URL attempt.
+`awesome-screen-core-02`. Its 19 `read_only` dispositions, one exclusion, and
+catalog corrections are approved. The GitHub Governing Agents route
+automatically redirected but exposed no substantive page content in either
+same-URL attempt.
 Nine repository families were intentionally limited to top-level
 README/release surfaces and remain `repository_shallow` and live-unpinned. The
 batch records material catalog corrections for TaskWeaver's archived state,
 MCP servers as educational reference implementations rather than a registry,
 LiteLLM's gateway role, AgentBench's benchmark scope, the Dify root-versus-node
 label, and several article/documentation forms and category boundaries. These
-screens remain catalog evaluation coverage, not admitted subject evidence,
-approved dispositions, or representative field coverage.
+screens remain catalog evaluation coverage, not admitted subject evidence or
+representative field coverage.
 
 The third approved catalog calibration directly screened all 20 families in
-`awesome-screen-core-03` and preserves all 22 frozen occurrence joins. It
-records 17 proposed `read_only` dispositions and three proposed exclusions:
-the MCP authorization page and Anthropic tool-writing article were rejected by
-the direct transport, and the SWE-bench root returned a fetch error. Nine
+`awesome-screen-core-03` and preserves all 22 frozen occurrence joins. Its
+method, 17 `read_only` dispositions, three exclusions, and catalog corrections
+are approved. The MCP authorization page and Anthropic tool-writing article
+were rejected by the direct transport, and the SWE-bench root returned a fetch
+error. Nine
 repository families remained top-level, `repository_shallow`, and
 live-unpinned. The batch records material form and boundary corrections for the
 OpenAI eval-skills article, HITL Protocol, Codex hooks, prompt caching,
 Outlines, and several systems spanning multiple catalog sections. These
-screens remain catalog evaluation coverage, not admitted subject evidence,
-approved dispositions, or representative field coverage.
+screens remain catalog evaluation coverage, not admitted subject evidence or
+representative field coverage.
 
 The pinned Awesome census is now complete under its declared rule manifest:
 652 extracted occurrences divide into 415 qualifying resources and 237
@@ -107,8 +109,7 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer resolves the completed
-`awesome-screen-core-03` gate. The other 335 proposed new destinations remain
-unopened. Core-02's dispositions and catalog corrections remain proposed even
-though its method is approved for continued use; core-03's 17/3 dispositions
-and corrections are also proposed. No later batch is authorized.
+Update this file after the authorized `awesome-screen-core-04` calibration is
+complete. Its 20 destinations and the other 315 proposed new destinations
+remain unopened at this authority checkpoint. Core-02 and core-03 results are
+approved. No core-05 or later batch is authorized.

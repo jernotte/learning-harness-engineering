@@ -42,9 +42,10 @@ complete, and V2-D009 approves its calibration method and dispositions. Only
 the exact 20-source `awesome-screen-core-02` batch was authorized; that batch
 is now complete. V2-D010 approves continued use of its method and authorized
 only exact `awesome-screen-core-03`; that batch is now complete and its
-authority exhausted. Core-02's individual dispositions and catalog corrections
-remain proposed, as do core-03's 17 `read_only` / three `excluded`
-dispositions. The former Wave 2 proposal is withdrawn and has no authority.
+authority exhausted. V2-D011 approves core-02's and core-03's recorded
+dispositions, methods, and catalog corrections and authorizes only exact
+`awesome-screen-core-04`. The former Wave 2 proposal is withdrawn and has no
+authority.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -77,9 +78,10 @@ Core-02 screened its exact 20 registered URLs, recorded 19 proposed
 redirected page, and promoted no claim or evidence. Core-03 then screened its
 exact 20 registered URLs, recorded 17 proposed `read_only` dispositions and
 three proposed exclusions for inaccessible direct surfaces, and likewise
-promoted no claim or evidence. The program is paused at the completed core-03
-maintainer gate under the unchanged no-query, no-second-hop, no-deep-reading
-boundary; every later batch remains blocked.
+promoted no claim or evidence. Those core-02 and core-03 results are now
+approved. Only core-04 may execute under the unchanged direct-URL-only,
+no-query, no-second-hop, no-deep-reading boundary; every later batch remains
+blocked.
 
 ## Stage 5 — Competing outline skeletons
 

@@ -2,24 +2,23 @@
 
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
-**Authority:** V2-D005 through V2-D010, approved 2026-07-20
-**Current pass:** `awesome-screen-core-03` complete; maintainer gate
+**Authority:** V2-D005 through V2-D011, approved 2026-07-20
+**Current pass:** `awesome-screen-core-04` authorized
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The completed direct screen of the exact 20 families in
-`awesome-screen-core-03` applies
-the method approved through V2-D010 while preserving requested and observed
+The direct screen of the exact 20 families in `awesome-screen-core-04` applies
+the method approved through V2-D011 while preserving requested and observed
 identity, accessibility, substantive inspectability, relevance, scope, source
 form, evidence posture, visible lineage, version or pin state, catalog
 correction, schema friction, and proposed disposition. The batch is anchored to
 `awesome-screening-plan.json` at commit
 `3c66817a1f7a43adf7492451f859c501f1dfee7c`. The pass may not search, follow a
-second hop, reopen core-01 or core-02, deep-read a source, choose a taxonomy, or
-draft an outline. Its authorization is exhausted; no later batch may open
-without another explicit decision.
+second hop, reopen core-01, core-02, or core-03, deep-read a source, choose a
+taxonomy, or draft an outline. No other batch may open without another explicit
+decision.
 
 ## Wave 1 authorization
 
@@ -188,9 +187,11 @@ permission to open another source.
 - During the now-closed second batch boundary, only the 20 direct URLs
   registered in `awesome-screen-core-02` were permitted to open.
 - During the now-closed third batch boundary, only the 20 direct URLs
-  registered in `awesome-screen-core-03` were permitted to open. Core-01 and
-  core-02 were not reopened. All completed-batch reopening, every other catalog
-  batch, and every identity-resolution query remain blocked.
+  registered in `awesome-screen-core-03` were permitted to open.
+- During the current fourth batch boundary, only the 20 literal direct URLs
+  registered in `awesome-screen-core-04` may open. Core-01, core-02, and
+  core-03 may not reopen. All other catalog batches and every identity-
+  resolution query remain blocked.
 - No second-hop traversal, destination bibliography harvesting,
   implementation deep dive, or legacy-material access.
 - Mechanical README extraction performs no network request and creates no
@@ -200,9 +201,9 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-The stop condition is satisfied: all 20 `awesome-screen-core-03` families have
-an honest direct-screen result or recorded access failure; each source has the
-required identity, surface, accessibility, relevance, scope, evidence posture,
-lineage, and proposed disposition; schema friction and catalog corrections are
-explicit; and the diagnostic boundary is reconciled. Present this complete
-calibration for maintainer review before opening another batch.
+Stop when all 20 `awesome-screen-core-04` families have an honest direct-screen
+result or recorded access failure; each source has the required identity,
+surface, accessibility, relevance, scope, evidence posture, lineage, and
+proposed disposition; schema friction and catalog corrections are explicit;
+and the diagnostic boundary is reconciled. Present that complete calibration
+for maintainer review before opening another batch.

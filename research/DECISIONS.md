@@ -581,3 +581,83 @@ This execution record exhausts V2-D010's opening authority. It does not approve
 the core-03 dispositions, retroactively approve core-02's proposed
 dispositions or corrections, or authorize core-04. The maintainer must review
 the completed package before the next decision.
+
+## V2-D011 — Outstanding calibration results approved and fourth calibration authorized
+
+**Status:** Approved
+**Date:** 2026-07-20
+
+### Decision
+
+Approve the exact nineteen `read_only` dispositions, one `excluded`
+disposition, and catalog corrections recorded in
+`research/outline-development/awesome-screen-core-02.md`.
+
+Approve continued use of the direct-screen method as exercised in core-03,
+including its expanded per-family register, and approve the exact seventeen
+`read_only` dispositions, three `excluded` dispositions, and catalog
+corrections recorded in
+`research/outline-development/awesome-screen-core-03.md`.
+
+Authorize only the exact 20-family `awesome-screen-core-04` batch in
+`research/outline-development/awesome-screening-plan.json` at commit
+`3c66817a1f7a43adf7492451f859c501f1dfee7c`, file SHA-256
+`8ce00b2a284a2f789972f3322586497ff0450b734d3cf2d3ad8aec5d8f0169fc`.
+The batch contains 20 unique registered direct URLs and 22 frozen occurrence
+joins, zero identity-resolution queries, screening extent only, and a
+prohibited second hop. This decision supersedes only core-04's historical
+`proposed_not_authorized` field in the immutable proposal; membership, URLs,
+occurrence joins, planned surfaces, extent, and prohibitions remain fixed.
+
+The maintainer's phrase “approve everything” is bounded by the immediately
+preceding core-02 and core-03 gate items. It is not blanket authority for other
+batches or later program stages.
+
+### Approval limits
+
+Approving these dispositions and corrections ratifies screening results only.
+It admits no subject evidence, proves no source claim or effectiveness result,
+and adopts no catalog category, topic, taxonomy, outline, or curriculum. An
+access-based exclusion is not a judgment of topic irrelevance or permanent
+unavailability. Approval of the 21-batch intended scope still does not
+authorize automatic execution.
+
+### Boundaries
+
+Core-04 may interact only with each literal registered direct URL to establish
+the frozen joins, requested and observed identity, transport accessibility,
+substantive inspectability, exact inspected surface, visible version versus
+actual pin, `repository_shallow` state, actual source form, relevance, evidence
+posture, visible lineage or alias state, catalog correction, schema friction,
+and proposed disposition. A bounded repeat of the same literal URL is allowed
+only for direct-page content recovery or access confirmation and must be fully
+counted. Automatic redirects may be observed and recorded but never manually
+traversed.
+
+This does not authorize search or identity-resolution queries, topical or
+ecosystem search, reopening core-01, core-02, or core-03, manual redirect
+traversal, second-hop or bibliography traversal, repository file, code, or
+history inspection, implementation or technique deep reading, claims,
+references, evidence promotion or maturity, outline or skeleton drafting,
+taxonomy adoption, case selection, synthesis, curriculum or learning work,
+site work, legacy access or readmission, conversation-packet export, or any
+other batch.
+
+### Consequences and next gate
+
+Commit this authority checkpoint before the first core-04 interaction. Then
+start a distinct core-04 diagnostic native boundary, screen the exact
+registered URLs, reconcile the diagnostic provenance, validate and review the
+completed package, and stop at the core-04 source-screening gate. No core-05 or
+later batch opens implicitly.
+
+### Design-history disposition
+
+`none` — the terse approval adds no new rationale or rejected alternative; the
+bounded gate items, exact frozen batch, limits, and consequences are fully
+represented by this canonical decision.
+
+### Approval record
+
+The maintainer said “approve everything and continue to core-04” on
+2026-07-20. This decision records the bounded gate interpretation above.

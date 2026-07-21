@@ -1,7 +1,7 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** Direct-screen calibration — core-03 maintainer gate
+**Current phase:** Direct-screen calibration — core-04 authorized
 **Active subject-research cycle:** None
 **Active outline task:** `v2-outline-seed-map`
 **Active brief:** `research/outline-development/brief.md` — approved
@@ -9,10 +9,11 @@
 
 ## Current objective
 
-Present the completed exact 20-family `awesome-screen-core-03` direct-screen
-calibration for maintainer review. The 17 proposed `read_only` and three
-proposed `excluded` dispositions, catalog corrections, provenance package, and
-continued method use remain at the gate; no later batch is authorized.
+Execute the exact 20-family `awesome-screen-core-04` direct-screen calibration
+using the method approved through V2-D011. Preserve all 22 occurrence joins
+without search, identity resolution, prior-batch reopening, second-hop
+traversal, repository deep inspection, evidence promotion, or outline
+drafting, then stop at its maintainer gate.
 
 ## Authority state
 
@@ -27,7 +28,7 @@ continued method use remain at the gate; no later batch is authorized.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
 - V2 has no admitted subject evidence or approved outline.
-- V2-D005 through V2-D010 were explicitly approved on 2026-07-20.
+- V2-D005 through V2-D011 were explicitly approved on 2026-07-20.
 
 ## Current authorization
 
@@ -151,9 +152,9 @@ That one authorized execution is now exhausted:
 Authorized by V2-D010:
 
 - the core-02 direct-screen method is approved for continued use;
-- core-02's 19 proposed `read_only` dispositions, one proposed exclusion, and
-  catalog corrections remain proposed because they were not explicitly
-  approved in the maintainer's decision;
+- core-02's 19 `read_only` dispositions, one exclusion, and catalog corrections
+  remained proposed at that gate because they were not explicitly approved in
+  V2-D010; V2-D011 later approved them;
 - only `awesome-screen-core-03`, exactly as registered in the screening plan at
   commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, was authorized; and
 - each of its 20 sources was limited to direct screening, with no query,
@@ -182,9 +183,25 @@ That one authorized execution is now exhausted:
 - `research/outline-development/awesome-screen-core-03.md` is the durable join
   from every source lifecycle to its frozen family and occurrence context.
 
+Authorized by V2-D011:
+
+- core-02's exact 19 `read_only` / one `excluded` dispositions and catalog
+  corrections are approved as recorded in its completed register;
+- the method exercised in core-03 and its exact 17 `read_only` / three
+  `excluded` dispositions and catalog corrections are approved as recorded;
+- those approvals ratify screening results only and admit no subject evidence,
+  claim, taxonomy, outline, curriculum, or downstream execution authority;
+- only `awesome-screen-core-04`, exactly as registered in the frozen screening
+  plan at commit `3c66817a1f7a43adf7492451f859c501f1dfee7c`, may execute now;
+  and
+- its 20 families, 20 direct URLs, and 22 occurrence joins receive direct
+  screening only, with no query, prior-batch reopen, manual redirect traversal,
+  second hop, bibliography traversal, repository file/history inspection, or
+  implementation deep dive.
+
 Still not authorized:
 
-- opening any catalog family;
+- opening any catalog family outside `awesome-screen-core-04`;
 - reopening any completed `awesome-screen-core-01`,
   `awesome-screen-core-02`, or `awesome-screen-core-03` page;
 - querying even a registered family through search or identity resolution;
@@ -197,7 +214,7 @@ Still not authorized:
 - producing or adopting curriculum or learning artifacts.
 
 The maintainer must explicitly authorize any later batch or method-changing
-access.
+access. Core-04 must stop at its source-screening gate.
 
 ## Validation and review state
 
@@ -326,13 +343,12 @@ transmitted, the configured external reviewer did not review this revision, and
 it will not be retried or circumvented. V2-D006 records the one-time
 local-review fallback and its limits.
 
-The maintainer explicitly approved V2-D005 through V2-D010 on 2026-07-20.
+The maintainer explicitly approved V2-D005 through V2-D011 on 2026-07-20.
 The one-time fallback is closed for the selective-history documentation
 revision only; it does not waive configured review for Stage 4 source work. The
-amended brief is controlling. The first catalog calibration and the core-02
-method are approved. Core-02's individual dispositions and corrections remain
-proposed. The third calibration is complete with proposed dispositions, and no
-later batch is active.
+amended brief is controlling. The first three catalog calibration methods,
+dispositions, and corrections are approved, and only the exact fourth
+calibration batch is active.
 
 The reviewer contract now states the V2-D007 catalog criteria. The provenance
 suite, local Markdown-link check, and `git diff --check` pass for the amendment.
@@ -345,7 +361,7 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review the completed `awesome-screen-core-03` source
+The maintainer will review the completed `awesome-screen-core-04` source
 lifecycles, accessibility and identity corrections, relevance and evidence-
 posture distribution, lineage and alias findings, schema friction, provenance
 audit, and any recommendation for the next exact batch or method correction. No

@@ -2,7 +2,7 @@
 
 **Task:** `v2-outline-seed-map`
 
-**Status:** `awesome-screen-core-03` complete; awaiting maintainer review
+**Status:** `awesome-screen-core-04` authorized for direct screening
 
 **Authority:** Approved outline-development brief
 
@@ -466,10 +466,11 @@ approval. The V2-D007 mapping of the complete pinned Awesome catalog and Walking
 Labs curriculum candidate is complete, and V2-D008 approved that catalog gate.
 V2-D009 approved the first calibration and authorized only exact
 `awesome-screen-core-02` under the current direct-screen boundary. That
-authorization is now exhausted. V2-D010 approves continued use of the core-02
-method and authorized only exact `awesome-screen-core-03`; core-02's individual
-dispositions and catalog corrections remain proposed. Core-03 is complete and
-its opening authority is exhausted.
+authorization is now exhausted. V2-D010 approved continued use of the core-02
+method and authorized only exact `awesome-screen-core-03`. Core-03 is complete
+and its opening authority is exhausted. V2-D011 approves the outstanding
+core-02 and core-03 results and authorizes only exact
+`awesome-screen-core-04`.
 
 ## V2-D007 method correction
 
@@ -511,17 +512,18 @@ register is `research/outline-development/awesome-screen-core-02.md`.
 The execution used only the frozen direct URLs and stopped without search,
 identity resolution, core-01 reopening, second-hop traversal, deep reading,
 claim or evidence promotion, or outline drafting. Its opening authority is
-exhausted. The core-02 individual dispositions and catalog corrections remain
-proposed.
+exhausted. The core-02 individual dispositions and catalog corrections
+remained proposed at that checkpoint and were later approved by V2-D011.
 
 ## V2-D010 third direct-screen calibration
 
 The maintainer approved continued use of the core-02 method and authorized only
 the exact 20-family `awesome-screen-core-03` batch. The approval did not
 explicitly ratify core-02's individual dispositions or catalog corrections, so
-they remain proposed. Core-03 was required to preserve all 22 frozen occurrence
-joins and the expanded register, use only its registered direct URLs, and stop
-without search, identity resolution, prior-batch reopening, manual redirect traversal,
+they remained proposed at that checkpoint; V2-D011 later approved them.
+Core-03 was required to preserve all 22 frozen occurrence joins and the
+expanded register, use only its registered direct URLs, and stop without
+search, identity resolution, prior-batch reopening, manual redirect traversal,
 second-hop traversal, deep reading, claim or evidence promotion, or outline
 drafting.
 
@@ -532,8 +534,23 @@ joined register proposes 17 `read_only` dispositions and three exclusions,
 keeps nine repository screens shallow and live-unpinned, and records material
 route, source-form, category-boundary, evidence-posture, recurrence, lineage,
 and schema corrections without promoting a finding. The register is
-`research/outline-development/awesome-screen-core-03.md`. No later batch is
-authorized.
+`research/outline-development/awesome-screen-core-03.md`.
+
+## V2-D011 fourth direct-screen calibration
+
+The maintainer approved core-02's exact 19 `read_only` / one `excluded`
+dispositions and catalog corrections, and approved the method exercised in
+core-03 plus its exact 17 `read_only` / three `excluded` dispositions and
+catalog corrections. Those approvals ratify screening results only; they admit
+no subject evidence and adopt no catalog category, taxonomy, outline, or
+curriculum.
+
+Only the exact 20-family `awesome-screen-core-04` batch is authorized. It must
+preserve all 22 frozen occurrence joins, use only its literal registered direct
+URLs, and stop without search, identity resolution, prior-batch reopening,
+manual redirect traversal, second-hop traversal, repository file or history
+inspection, deep reading, claim or evidence promotion, or outline drafting.
+No core-05 or later batch is authorized.
 
 ## Provenance state
 

@@ -3,7 +3,8 @@
 **Skeleton:** `V2-SK-F`
 **Version:** `0.1`
 **Checkpoint:** `V2-SK-CP02`
-**Status:** Adversarially reviewed; awaiting maintainer review
+**Status:** Reviewed checkpoint-02 predecessor; superseded by approved V2-SK-G
+and not rejected
 **Authority:** V2-D014
 **Maturity:** Structural hypothesis only; not an approved outline or taxonomy
 **Input boundary:** Reviewed V2-SK-D, advisory V2-SK-E, their adjudicated
@@ -12,6 +13,12 @@ source access
 
 **Review:**
 [`conventional-buildup-skeleton-review.md`](conventional-buildup-skeleton-review.md)
+
+V2-D015 makes
+[`V2-SK-G`](governing-structure.md) the sole governing high-level structure.
+This document preserves the reviewed thirteen-section predecessor and its
+branching traversal; it has no current governing authority beyond the elements
+G explicitly adopts.
 
 ## Relationship to D and E
 

@@ -1,7 +1,7 @@
 # Harness Engineering V2 — Conventional Vocabulary Map
 
 **Checkpoint:** `V2-SK-CP01`
-**Status:** Adversarially reviewed provisional basis; awaiting maintainer review
+**Status:** Adversarially reviewed checkpoint-01 basis; historical input to G
 **Authority:** V2-D013
 **Research effect:** None; this is local structural reconciliation, not subject evidence
 
@@ -19,7 +19,8 @@ Each row separates three layers:
 2. **Status** distinguishes maintainer-directed public labels, captured
    vocabulary, and primary synthesis.
 3. **Proposed boundary/home** is the checkpoint-01 primary's structural
-   reconciliation. It awaits maintainer review and is not a source-native fact.
+   reconciliation. G now governs current grouping and ownership through its
+   explicit mapping; neither placement is a source-native fact.
 
 No active row depends solely on proposed core-04. The unratified
 [core-04 calibration](awesome-screen-core-04.md#cross-source-calibration-results)

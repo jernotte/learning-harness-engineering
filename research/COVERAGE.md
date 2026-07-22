@@ -107,7 +107,7 @@ lineage check, but their editorial/source independence is unassessed and their
 that bounded Git-lineage interpretation without converting it into a claim of
 editorial or source independence.
 
-## Provisional skeleton coverage
+## Governing-structure coverage
 
 The maintainer rejected V2-D012's constraints-to-decisions, causal-lifecycle,
 and responsibility/authority trees as reader-facing organizations. Their
@@ -119,21 +119,18 @@ memory/state, tools, skills, protocols, loops/workflows, orchestration,
 evaluation, observability, permissions/sandboxing, human control, and
 production operations without claiming universal definitions.
 
-V2-D014 makes F the sole active checkpoint-02 candidate. F preserves D's
-complete topic coverage and ownership map while adding a nonduplicated,
-branching build-up traversal, explicit decisions, and security, assurance, and
-production rails. D remains the reviewed baseline; E is advisory input only.
-The active artifact is
-`research/outline-development/conventional-buildup-skeleton.md`; its local
-vocabulary basis remains
-`research/outline-development/conventional-vocabulary-map.md`, and its bounded
-local review is
-`research/outline-development/conventional-buildup-skeleton-review.md`.
+V2-D014 produced reviewed predecessor F. V2-D015 then approved G as the sole
+governing high-level structure with ten stable top-level subjects, three
+explicit consolidations, and a primary-home-plus-local-application rule. The
+active organization artifact is
+`research/outline-development/governing-structure.md`. F remains its immediate
+reviewed predecessor, D the reviewed checkpoint-01 vocabulary baseline, and E
+advisory input only.
 
-This is organization coverage, not admitted subject-evidence coverage. The
-F does not establish that a named mechanism works, that a topic is
-important, that the catalog is representative, or that an outline has been
-approved.
+This is approved high-level organization coverage, not admitted subject-
+evidence coverage. G does not establish that a named mechanism works, that a
+topic is important, that the catalog is representative, or that the detailed
+outline has been approved.
 
 ## Legacy boundary
 
@@ -151,8 +148,8 @@ harness engineering and not compatibility with every future runtime shape.
 
 ## Next update
 
-Update this file after the maintainer reviews V2-SK-F
-and the still-proposed `awesome-screen-core-04` calibration. The other 315
-proposed new destinations remain unopened. Core-02 and core-03 results are
-approved; core-04's proposed 17/3 result is not yet approved. No core-05 or
-later batch is authorized.
+Update this file after the next authorized detailed-outline checkpoint or the
+maintainer's separate review of the still-proposed `awesome-screen-core-04`
+calibration. The other 315 proposed new destinations remain unopened. Core-02
+and core-03 results are approved; core-04's proposed 17/3 result is not. No
+core-05 or later batch is authorized.

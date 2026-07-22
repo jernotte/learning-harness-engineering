@@ -21,11 +21,10 @@ The program is therefore outline-first:
 2. approve the criteria by which an outline will be judged;
 3. inspect the maintainer-named structural inputs and completely enumerate the
    pinned catalog without adopting their structures;
-4. develop one recognizable conventional-topic architecture with an honest
-   branching first-reading traversal while any separately authorized direct
-   screens, if continued, pressure its placement and depth at maintainer
-   checkpoints;
-5. develop and approve one detailed outline;
+4. approve one recognizable conventional-topic high-level architecture with
+   explicit cross-sectional ownership;
+5. when separately authorized, expand that governing structure into one
+   detailed outline and approve it;
 6. create a separate substantive research plan only afterward.
 
 ## Decisions deliberately left open
@@ -39,8 +38,8 @@ final outline. V2 still has not fixed:
   ambiguous edge cases;
 - the final wording and priority of the body of knowledge's objectives and
   later derivative uses;
-- a topic taxonomy or architectural lens;
-- final acceptance, grouping, depth, sequence, and traversal of V2-SK-F;
+- detailed objectives, subsection grouping, research questions, evidence
+  burdens, dependencies, and final traversal beneath V2-SK-G;
 - the relationship between concepts, implementation families, domains, and
   learning sequence;
 - the appropriate case-study, synthesis, or curriculum structure;
@@ -48,6 +47,10 @@ final outline. V2 still has not fixed:
 
 The repository name and maintainer-named structural inputs identify an area of
 inquiry, not an accepted answer to these questions.
+
+V2-D015 settles only the ten-section high-level organization, its primary
+ownership, and its cross-sectional treatment. It does not settle the remaining
+detailed-outline or post-outline decisions above.
 
 ## Evidence standards retained during the reset
 

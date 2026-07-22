@@ -1,19 +1,19 @@
 # Harness Engineering V2 — Outline-Development Brief
 
 - **Status:** Approved on 2026-07-20; amended by V2-D007 on 2026-07-20 and
-  V2-D012 through V2-D014 on 2026-07-21
+  V2-D012 through V2-D015 on 2026-07-21
 - **Stage:** 3 — outline-development brief
 - **Decision authority:** Maintainer
 - **Subject evidence admitted:** None
 
 **Approval effect:** V2-D005, the linked review-limit decision V2-D006, the
 catalog-landscape correction V2-D007, checkpointed skeleton amendment V2-D012,
-conventional-vocabulary correction V2-D013, and D/E synthesis amendment V2-D014
-are approved. This contract
-authorizes structural seed, curriculum, and catalog mapping plus the
-provisional V2-SK-F synthesis. Each later checkpoint separately
-unlocks the next work; approval does not approve an outline, authorize
-substantive research, or grant blanket conversation-export permission.
+conventional-vocabulary correction V2-D013, D/E synthesis amendment V2-D014,
+and governing-structure decision V2-D015 are approved. This contract authorizes
+structural seed, curriculum, and catalog mapping plus the completed G high-
+level-structure checkpoint. Each later checkpoint separately unlocks the next
+work; approval does not approve the detailed outline, authorize substantive
+research, or grant blanket conversation-export permission.
 
 ## Approval record
 
@@ -46,6 +46,12 @@ as advisory design input, and create one active synthesis F. F keeps one
 conventional-topic content tree and adds one branching, ID-based build-up
 traversal with honest optionality, cycles, back-edges, and stop points.
 
+After reviewing overlap and grouping across F, the maintainer approved
+V2-D015. G consolidates F into ten governing top-level subjects, fixes G1–G10
+as stable addresses, and adopts the primary-home-plus-local-application rule
+for cross-sectional mechanisms. G is approved high-level organization; the
+detailed outline remains a separately authorized and separately approved stage.
+
 The earlier configured external review covered the pre-hybrid version of this
 brief. The reviewer could not inspect the selective-history revision because a
 hard tenant rule rejected the declared repository transfer even after explicit
@@ -54,8 +60,9 @@ deterministic validation plus bounded local read-only audits as a one-time
 fallback for this documentation-only revision. It does not waive review for
 Stage 4 source work.
 
-This brief deliberately contains no proposed harness-engineering taxonomy or
-subject outline. It defines how those proposals will be developed and judged.
+This brief supplies no subject evidence or detailed outline. The separately
+approved `governing-structure.md` records the high-level organization that the
+next authorized outline stage must refine and test.
 
 ## Purpose
 
@@ -179,23 +186,29 @@ guidance only as later derivatives.
 
 ## Organization and granularity criteria
 
-Use V2-SK-F as the sole active skeleton at checkpoint 02. Its public content
-tree must use recognizable harness-engineering terms rather than substitute
-decision, lifecycle, or authority labels. Familiar terms may remain contested;
-state their boundary and relationship instead of renaming them away.
+Use V2-SK-G as the sole governing high-level structure. G1–G10, their approved
+grouping, primary ownership, high-level order, and declared cross-sectional
+treatment control later detailed-outline refinement. Public headings use
+recognizable harness-engineering terms rather than substitute decision,
+lifecycle, or authority labels.
 
-F contains one canonical content tree and one nonduplicated build-up traversal
-that references stable topic IDs. The tree owns topic content and reference
-navigation. The traversal supplies the recommended first reading, must branch
-and permit stopping, and must not become a second taxonomy, a universal
-component ladder, or a curriculum.
+G combines closely interacting terms at the top level while preserving them as
+named internal distinctions. Explain a mechanism once at its primary home;
+other sections discuss only the local consequence that changes their own
+decision and cross-reference that home.
 
-Preserve stable IDs and every version. The rejected A/B/C portfolio remains
-visible as checkpoint-00 history. D remains the reviewed checkpoint-01
-baseline; E remains advisory and was never active under V2-D013. Only the
-maintainer may accept, replace, reorder, or reject F.
+Preserve stable IDs and every version. F is the reviewed checkpoint-02
+predecessor, D the reviewed checkpoint-01 baseline, E advisory only, and A/B/C
+rejected checkpoint-00 history. Detailed-outline refinement may add depth under
+G1–G10 when separately authorized, but only the maintainer may add, remove,
+rename, merge, split, reorder, or materially reassign a G top-level owner.
 
-The skeleton must state:
+The approved brief continues to own the program-level audience, outcomes,
+technical boundary, and exclusions. G must expose its organizing rule, reading
+mode, high-level ownership, conventional vocabulary, cross-sectional treatment,
+sequence, and structural tradeoffs. The later detailed outline must
+operationalize the full contract at section level. Across those artifacts, the
+structure must state:
 
 - its organizing principle and intended reading mode;
 - how it serves the approved audience, outcomes, and decision targets;
@@ -221,7 +234,8 @@ they later serve as evidence, examples, traversal paths, or comparative cases.
   semantic or ownership distinction.
 - The detailed outline has no fixed depth cap; use only the depth needed to
   expose distinct objectives, questions, dependencies, or evidence burdens.
-- No top-level section count is predetermined.
+- G has exactly ten approved top-level sections; the later detailed outline has
+  no predetermined subsection count or depth.
 - Split a section only when a child has a distinct objective, decision,
   research question, dependency, or evidence burden.
 - Combine material when separating it would hide a load-bearing interaction or
@@ -250,12 +264,12 @@ The approved public reading mode now follows conventional topics. Alternative
 decision, causal, responsibility, or pedagogical traversals may be supplied as
 cross-links, but they do not replace familiar section names.
 
-For F, classify every traversal relationship as a hard prerequisite, common
-construction order, optional capability edge, or cross-cutting/back-edge
-relationship. Preserve at least the Context/Tools, State/Loops,
-Evaluation/Observability, Security/authority, and Production/earlier-design
-cycles. A direct call may be a starting artifact, but it does not settle the
-harness boundary.
+For G, preserve explicit internal distinctions inside the three merged owners:
+tools versus protocols; local loops and workflows versus orchestration; and
+captured signals versus evaluative judgment. Preserve the Context/Capabilities,
+State/Control, Assurance, Security/authority, and Production/earlier-design
+cycles through typed cross-references. A direct call may be a starting artifact,
+but it does not settle the harness boundary.
 
 ## Comprehensive seed, curriculum, and catalog investigation
 
@@ -368,15 +382,15 @@ prohibited unless separately proposed and approved.
 
 V2-D012's still-controlling screening cadence permits a future authorization to
 name a tranche of at most five already frozen batches, but V2-D012 through
-V2-D014 authorize none. Every batch in a tranche retains its own exact
+V2-D015 authorize none. Every batch in a tranche retains its own exact
 membership, provenance boundary, validation, and closeout. The conventional
 structure updates only at the ensuing maintainer checkpoint or an earlier
 mandatory stop; its structural ledger may receive per-family entries after
 each completed batch.
 
 No topical or ecosystem search, implementation deep dive, evidence promotion,
-legacy access, or detailed-outline drafting beyond the V2-D014 F synthesis is
-authorized. Exact-title or identifier resolution may be proposed
+legacy access, or detailed-outline drafting beyond the V2-D015 G finalization
+is authorized. Exact-title or identifier resolution may be proposed
 only for an already cataloged family whose identity cannot be determined from
 its URL; every query must be approved and logged before use.
 
@@ -499,8 +513,11 @@ The historical checkpoint-00 baseline wrote
 `research/outline-development/conventional-skeleton-review.md`. Checkpoint 02
 writes `research/outline-development/buildup-skeleton.md`,
 `research/outline-development/conventional-buildup-skeleton.md`, and
-`research/outline-development/conventional-buildup-skeleton-review.md`. Later
-approved checkpoints preserve earlier versions rather than overwriting history. Stage 6 iterates and
+`research/outline-development/conventional-buildup-skeleton-review.md`.
+Checkpoint 03 writes
+`research/outline-development/governing-structure.md` and
+`research/outline-development/governing-structure-review.md`. Later approved
+checkpoints preserve earlier versions rather than overwriting history. Stage 6 iterates and
 ultimately approves `research/outline-development/outline.md`; approval changes
 that artifact's authority, not its path.
 
@@ -544,24 +561,27 @@ catalog counts.
 7. **Conventional-topic baseline gate — completed.** V2-SK-D and its vocabulary
    map passed bounded local review. D remains the checkpoint-01 baseline and is
    not rejected.
-8. **F synthesis gate — current.** Review F's single conventional-topic tree,
-   branching build-up traversal, cross-cutting rails, D/E disposition, local
-   adversarial findings, and unresolved choices. Core-04 remains unratified
-   input; core-05 remains closed.
-9. **Later structural checkpoints.** If exact future batches are separately
-   authorized, review their effect on the conventional-topic structure after
-   at most five completed batches or an earlier structural stop. The maintainer
-   may revise, replace, reorder, or stop the work.
-10. **Seed-map completion gate.** When the maintainer decides that further
-   screening is unlikely to add a materially different organizational option,
-   review the audited landscape, remaining gaps, and final provisional
-   conventional structure before accepting or revising its direction.
-11. **Detailed-outline iteration.** Expand only the maintainer-directed
-   structure and visibly disposition requested changes.
-12. **Final outline gate.** Explicitly approve objectives, scope, organization,
-   and sequence.
-13. **Post-outline stop.** A separate goal must define and authorize
-   substantive research.
+8. **F synthesis gate — completed.** F passed bounded review and became the
+   reviewed checkpoint-02 predecessor to the maintainer's consolidation.
+9. **G governing-structure gate — completed.** The exact ten-section decision,
+   F-to-G mapping, stable IDs, merger boundaries, and cross-sectional rules are
+   recorded and reviewed. Core-04 remains unratified; core-05 remains closed.
+10. **Detailed-outline authorization gate — next.** Begin expansion beneath
+    G1–G10 only after another explicit maintainer decision.
+11. **Later structural checkpoints.** If exact future batches are separately
+    authorized, review their effect on the conventional-topic structure after
+    at most five completed batches or an earlier structural stop. The maintainer
+    may revise, replace, reorder, or stop the work.
+12. **Seed-map completion gate.** When the maintainer decides that further
+    screening is unlikely to add a materially different organizational option,
+    review the audited landscape, remaining gaps, and final provisional
+    conventional structure before accepting or revising its direction.
+13. **Detailed-outline iteration.** Expand only the maintainer-directed
+    structure and visibly disposition requested changes.
+14. **Final outline gate.** Explicitly approve objectives, scope, organization,
+    and sequence.
+15. **Post-outline stop.** A separate goal must define and authorize
+    substantive research.
 
 ## Stop conditions
 
@@ -647,10 +667,10 @@ described below:
 4. later research decision targets;
 5. originally, three competing skeletons and shallow final detail — superseded
    by V2-D013's conventional-topic and functional-depth rule, then V2-D014's
-   single-tree synthesis;
+   single-tree synthesis, then V2-D015's ten-section consolidation;
 6. original deferral of the reading mode and sequence — superseded by
    V2-D014's conventional-topic architecture plus branching first-reading
-   traversal;
+   traversal and V2-D015's governing high-level order and cross-sectional rule;
 7. original three-seed boundary and complete outline-bearing inspection
    surface — superseded for Stage 4 inputs by V2-D007;
 8. first-hop eligibility, two waves of six, and one optional four-source
@@ -757,3 +777,24 @@ The maintainer approved these synthesis controls on 2026-07-21:
 10. no new source opening, core-04 ratification, core-05, detailed outline,
     evidence promotion, legacy access, case selection, curriculum, or learning
     deliverable before the next maintainer decision.
+
+### Approved V2-D015 amendment checklist
+
+The maintainer approved these governing-structure controls on 2026-07-21:
+
+1. V2-SK-G as the sole governing high-level structure;
+2. exactly ten stable top-level addresses, G1–G10, in the approved order;
+3. F4/F6 combined as Tools, Protocols, and Integration while preserving the
+   tool/protocol distinction;
+4. F7/F8 combined as Agent Loops, Workflows, and Orchestration while preserving
+   local-control, orchestration, and multi-agent distinctions;
+5. F10/F11 combined as Evaluation, Verification, and Observability while
+   preserving signal capture, verification, and judgment distinctions;
+6. G10 retained as final synthesis with no new mechanism family;
+7. the primary-home-plus-local-application rule for cross-sectional material;
+8. F as reviewed predecessor, D as reviewed baseline, E as advisory only, and
+   complete stable lineage;
+9. top-level G changes returned to the maintainer; and
+10. no detailed-outline drafting, source opening, core-04 ratification, core-05,
+    evidence promotion, legacy access, case selection, curriculum, or learning
+    deliverable without another explicit decision.

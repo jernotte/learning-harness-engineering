@@ -47,11 +47,11 @@ completed, its opening authority is exhausted, and its proposed 17 `read_only`
 is withdrawn and has no authority.
 
 V2-D012 historically interleaved the rejected abstract baseline with this
-stage. V2-D013 produced the reviewed conventional-topic baseline D; V2-D014
-now authorizes only the F synthesis. None authorizes a new source opening or
-ratifies core-04. The remaining 21-batch plan is a frozen candidate upper
-bound; continued execution requires a later exact decision and is reviewed
-after at most five completed batches or an earlier structural stop.
+stage. V2-D013 and V2-D014 produced reviewed D and F predecessors. V2-D015
+approves only the governing high-level structure G; it does not authorize a new
+source opening or ratify core-04. The remaining 21-batch plan is a frozen
+candidate upper bound; continued execution requires a later exact decision and
+is reviewed after at most five completed batches or an earlier structural stop.
 
 Using the approved provenance path, treat these as mandatory structural inputs:
 
@@ -91,21 +91,19 @@ inaccessible direct surfaces, and promoted no claim or evidence. Its authority
 is exhausted; every later batch remains blocked pending another explicit
 decision.
 
-## Stage 5 — Conventional-topic architecture and traversal
+## Stage 5 — Governing high-level structure
 
-Present one recognizable field-vocabulary content tree plus one nonduplicated,
-branching first-reading traversal with explicit topic boundaries, overlap
-ownership, dependencies, cycles, stop points, decisions, benefits, risks,
-blind spots, and anchoring hazards.
+Select one recognizable field-vocabulary structure with explicit topic
+boundaries, grouping, ownership, cross-sectional treatment, sequence, and
+stable top-level IDs.
 
-**Status:** V2-SK-CP00 was rejected. V2-SK-D is the reviewed checkpoint-01
-baseline. V2-D014 makes V2-SK-F the sole active checkpoint-02 candidate and
-retains E only as advisory input. F's bounded local review and deterministic
-validation are complete. It used only already captured artifacts and is stopped
-for the maintainer before core-05 or detailed-outline work.
+**Status:** Completed. V2-SK-CP00 was rejected; D and F remain reviewed
+predecessors. V2-D015 approves V2-SK-G as the governing ten-section high-level
+structure. G uses only already captured structural inputs and authorizes no
+source access or detailed-outline work.
 
-**Exit gate:** Maintainer review of F's topic tree, branching traversal,
-cross-cutting rails, D/E disposition, reviewer findings, and unresolved choices.
+**Exit gate:** Satisfied by V2-D015 and completed CP03 repository finalization
+and review.
 
 ## Stage 6 — Detailed outline
 

@@ -3,21 +3,20 @@
 **Task ID:** `v2-outline-seed-map`
 **Declared:** 2026-07-20T15:00:12Z
 **Authority:** V2-D005 through V2-D011, approved 2026-07-20; V2-D012 through
-V2-D014, approved 2026-07-21
-**Current pass:** `v2-conventional-buildup-skeleton-checkpoint-02` complete;
-stopped at the maintainer review gate
+V2-D015, approved 2026-07-21
+**Current pass:** `v2-governing-structure-checkpoint-03` complete; stopped at
+the detailed-outline authorization gate
 **Audit profile:** `diagnostic`
 **Target completeness:** `complete_with_declared_manual_sources`
 
 ## Decision this pass informs
 
-The current pass synthesizes the reviewed D baseline and advisory E into F: one
-conventional-topic content tree plus one branching, ID-based build-up traversal.
-It records D/E dispositions, dependency classifications, cross-cutting rails,
-reviewer challenges, and remaining maintainer choices. It performs no external
-interaction, changes no source disposition, and promotes no evidence. Core-04's
-proposed result remains unratified, and no source may open without another
-explicit decision.
+The completed pass records the maintainer-approved ten-section G structure,
+maps every F owner to G, fixes stable G1–G10 addresses, merger boundaries, and
+cross-sectional ownership, and closes bounded fidelity/authority review. It
+performed no subject-source interaction, changed no source disposition, and
+promoted no evidence. Core-04's proposed result remains unratified, and no
+source may open without another explicit decision.
 
 ## Wave 1 authorization
 
@@ -90,21 +89,20 @@ fail-closed handling. The generated catalog audit must prove:
 An unopened destination has accessibility state `not_assessed`. Only an
 authorized earlier open or access attempt may establish accessibility.
 
-## Provisional skeleton boundary
+## Governing-structure boundary
 
-V2-D014 authorizes only local synthesis of D, advisory E, their adjudication,
-the captured seed map, Walking Labs analysis, pinned-catalog artifacts,
-completed screening registers, and their audits. F must use recognizable field
-terms, preserve D's complete topic coverage, and distinguish topic ownership
-from its build-up traversal. It keeps factual claims out unless the ordinary
-ledger and verification rules are satisfied. A dependency or placement is an
-outline hypothesis, not a source disposition or finding.
+V2-D015 authorizes only faithful local finalization of G from the maintainer's
+approved structure and the reviewed D/E/F lineage. G fixes ten high-level
+subjects and cross-sectional ownership but admits no factual claim or subject
+evidence. A grouping, dependency, or placement remains organization authority,
+not a source disposition or research finding.
 
-The checkpoint-02 review may inspect the current repository and diff. It may
+The checkpoint-03 review may inspect the current repository and diff. It may
 not open a source, follow a link outside the repository, inspect legacy
-material, approve core-04, or change F's authority. Because
-this pass has no external research interaction, it creates no new source-
-lifecycle or native provenance boundary.
+material, approve core-04, redesign the maintainer-approved top level, or
+authorize the detailed outline. A configured read-only control review is not a
+subject-source interaction and creates no source-lifecycle or native provenance
+boundary.
 
 ## Interaction boundary
 
@@ -229,8 +227,7 @@ permission to open another source.
 
 ## Stop and checkpoint
 
-The current pass stops after F's topic tree, branching traversal, D/E
-disposition, cross-cutting rails, adversarial review, primary dispositions, and
-deterministic validation are complete. The maintainer then reviews F and
-decides whether to accept it, revise it, or return to D. Core-04 remains
-proposed and no later batch may open implicitly.
+The pass is stopped after G, its F-to-G mapping, cross-sectional rules, fidelity
+and authority reviews, primary dispositions, and deterministic validation.
+Detailed-outline work requires another explicit maintainer decision. Core-04
+remains proposed and no later batch may open implicitly.

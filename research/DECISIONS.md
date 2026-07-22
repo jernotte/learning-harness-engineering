@@ -1058,3 +1058,141 @@ core-05 family, query, second hop, implementation detail, claim, evidence
 promotion, curriculum, or new provenance boundary entered the checkpoint.
 Core-04 remains unratified. F is a reviewed structural hypothesis, not an
 approved outline; the package is stopped for maintainer review.
+
+## V2-D015 — Approve the ten-section governing high-level structure
+
+**Status:** Approved
+**Date:** 2026-07-21
+
+### Context
+
+During the F review gate, the maintainer questioned whether technically
+distinct but tightly interacting subjects required separate top-level homes.
+The discussion first examined Tool Engineering and Protocols and Integration,
+then applied the same principle to every F section. The maintainer clarified
+that a mechanism may have one general explanation while its consequences are
+also discussed inside Context, Orchestration, Security, Production, or another
+section where it changes a local decision.
+
+The configured read-only Claude discussion review and one bounded
+reconciliation were advisory. The tool resolved to Claude Fable 5 at high
+effort, not the requested Opus 4.8. It supplied design pressure but no decision
+authority, subject evidence, or repository change.
+
+### Decision
+
+Approve `V2-SK-G` at checkpoint `V2-SK-CP03` as the governing high-level
+structure for later detailed-outline refinement. Its stable reference file is
+`research/outline-development/governing-structure.md`.
+
+G has ten top-level subjects:
+
+1. Foundations and Field Vocabulary;
+2. Context Engineering;
+3. Memory and State;
+4. Tools, Protocols, and Integration;
+5. Skills;
+6. Agent Loops, Workflows, and Orchestration;
+7. Security, Permissions, and Human Control;
+8. Evaluation, Verification, and Observability;
+9. Production Infrastructure and Operations; and
+10. Integrated Harness Architectures as the final synthesis layer.
+
+This approves three top-level combinations from F:
+
+- Tool Engineering plus Protocols and Integration;
+- Agent Loops, Planning, and Workflows plus Orchestration Systems and
+  Multi-Agent Systems; and
+- Evaluation and Verification plus Observability, Tracing, and Debugging.
+
+The combination changes grouping, not semantic identity. Tools and protocols,
+local loops and orchestration, and captured signals and evaluative judgment
+remain distinct named children with explicit ownership.
+
+### Cross-sectional rule
+
+Approve the following rule for detailed refinement:
+
+> Explain the general mechanism once in its primary home, then discuss its
+> section-specific consequences wherever they change a different harness
+> decision.
+
+Cross-sectional treatment must not create competing definitions or duplicate
+claim ownership. Context owns how protocol-provided material reaches a call;
+the merged tools/protocols section owns interface and interoperability
+mechanics; orchestration owns coordination and agent-to-agent use; Security
+owns identity, authority, and trust; Production owns runtime reliability and
+operational response.
+
+### Lineage and stable IDs
+
+F becomes the reviewed checkpoint-02 predecessor and is not rejected. G
+supersedes F as the active candidate and is the sole governing high-level
+structure. D remains the reviewed checkpoint-01 baseline from which F inherited
+its content, and E remains advisory only.
+
+G1 through G10 are stable top-level addresses for detailed-outline expansion.
+Later work may add subordinate IDs and refine children while preserving the
+approved subject set, grouping, IDs, order, and primary ownership. Any top-
+level addition, removal, rename, merge, split, reorder, ID change, or ownership
+change returns to the maintainer.
+
+### Authority limits and next gate
+
+This decision authorizes only creation and bounded review of the governing
+structure, updates to repository control and lineage documents, deterministic
+validation, and the resulting handoff. It does not authorize drafting the
+detailed outline in this turn, ratify core-04, open core-05, open or query a
+source, inspect external implementation detail, select cases, admit or promote
+evidence, access legacy material, or produce curriculum or learning artifacts.
+
+The next stage is detailed-outline refinement from G1–G10. It begins only after
+the maintainer explicitly authorizes that task. The later final-outline gate
+still requires explicit approval of the detailed objectives, scope,
+organization, and sequence before substantive research.
+
+### Design-history disposition
+
+Candidate `V2-HIST-007` — the maintainer approved a ten-section structure and
+the primary-home-plus-local-application rule after testing whether F's
+top-level distinctions were over-separated. No raw conversation packet,
+reviewer transcript, or export is authorized.
+
+### Approval record
+
+On 2026-07-21 the maintainer agreed with the ten-section structure and directed
+the primary to finalize it into the durable file that future detailed-outline
+refinement will reference.
+
+### Execution record
+
+Checkpoint `V2-SK-CP03` completed under this authorization on 2026-07-21.
+`governing-structure.md` now records the exact G1–G10 structure and order,
+complete F-to-G disposition, stable-address and change-control rules, primary
+ownership, the three protected merger boundaries, cross-sectional treatment,
+high-level traversal, audience and inclusion boundary, structural tradeoffs,
+and the contract for later detailed refinement. F remains the reviewed
+immediate predecessor, D the reviewed baseline, and E advisory only.
+
+The bounded local architecture review raised one high and three medium
+findings. The separate local vocabulary/authority review raised two high, two
+medium, and one completion finding. The primary accepted and corrected all
+nine. Focused local verification passed every correction without a fix-induced
+regression.
+
+The configured read-only Claude review inspected every declared control and
+lineage path and returned `pass` with zero findings, two non-blocking concerns,
+and two low-priority recommendations. The primary independently accepted and
+implemented all four; no reconciliation was needed. One focused verification
+pass then checked those four items and their possible regressions and returned
+`pass` with zero findings. Its sole concern was the expected removal of pending
+closeout markers, which was completed. The configured model resolved to Claude
+Fable 5 at high effort; its review remained advisory and conferred no authority
+or evidence.
+
+The provenance test suite, catalog extractor tests, local Markdown-link check,
+and `git diff --check` pass after all corrections. No source, query, external
+implementation, legacy artifact, subject evidence, case, curriculum, learning
+sequence, core-05 family, or detailed-outline content entered the checkpoint.
+Core-04 remains unratified. The repository is stopped at the explicit detailed-
+outline authorization gate.

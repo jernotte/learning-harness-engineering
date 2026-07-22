@@ -3,12 +3,12 @@
 **Design input:** `V2-SK-E`
 **Version:** `0.1`
 **Origin:** Post-CP01 advisory input retained for `V2-SK-CP02`
-**Status:** Advisory; never active or approved; preserved as an input to
-`V2-SK-F`
+**Status:** Advisory; never active or approved; preserved in the D/E/F/G
+design lineage
 **Original authority claim:** V2-D013 — incorrect; that decision authorized only
 V2-SK-D
-**Current authority:** V2-D014 permits retention solely as an advisory input to
-V2-SK-F
+**Current authority:** V2-D014 permits retention solely as advisory input to F;
+V2-D015 gives E no independent or governing authority in G
 **Maturity:** Unreviewed alternative containing adjudicated dependency,
 coverage, and outcome overclaims
 **Input boundary:** Existing captured V2 artifacts through proposed core-04; no new source access
@@ -17,9 +17,10 @@ with different ordering and framing. Review found silent omissions and false
 universal dependencies. The body is preserved as the design input that F
 adjudicates; its self-assessment is not accepted as fact.
 
-The active synthesis is
-[`V2-SK-F`](conventional-buildup-skeleton.md). See its D/E disposition for the
-accepted and rejected parts of this proposal.
+The current governing structure is
+[`V2-SK-G`](governing-structure.md). Reviewed predecessor
+[`V2-SK-F`](conventional-buildup-skeleton.md) records the accepted and rejected
+parts of this proposal.
 
 ## Organizing principle
 

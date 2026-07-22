@@ -1,12 +1,14 @@
 # Harness Engineering V2 — F Synthesis Adversarial Review
 
 **Checkpoint:** `V2-SK-CP02`
-**Status:** Complete; awaiting maintainer review
+**Status:** Complete historical checkpoint-02 review; F superseded by approved
+V2-SK-G
 **Authority:** V2-D014
 **Reviewed skeleton:**
 [`conventional-buildup-skeleton.md`](conventional-buildup-skeleton.md)
 **Reviewed inputs:** [`conventional-skeleton.md`](conventional-skeleton.md) and
 [`buildup-skeleton.md`](buildup-skeleton.md)
+**Successor:** [`governing-structure.md`](governing-structure.md)
 **Review type:** Bounded local read-only adversarial review; not externally
 independent and not maintainer approval
 

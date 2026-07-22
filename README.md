@@ -17,20 +17,19 @@ calibrations are complete. Core-01 through core-03 are approved. Core-04's
 proposed 17 `read_only` / three `excluded` result remains awaiting maintainer
 ratification, and no core-05 or later batch is authorized.
 
-The maintainer rejected the abstraction-first A/B/C portfolio, then used
-V2-D013 to create the reviewed conventional-topic baseline `V2-SK-D`. After a
-maintainer-provided build-up alternative exposed useful reading-path pressure
-and several false linear dependencies, V2-D014 authorized one synthesis:
-[`V2-SK-F`](research/outline-development/conventional-buildup-skeleton.md).
-F keeps a single familiar-topic architecture and adds a branching build-up
-traversal, explicit decision targets, and security, assurance, and production
-rails. Its bounded local
-[`adversarial review`](research/outline-development/conventional-buildup-skeleton-review.md)
-is complete. The reviewed
-[`V2-SK-D`](research/outline-development/conventional-skeleton.md) remains its
-checkpoint-01 baseline; [`V2-SK-E`](research/outline-development/buildup-skeleton.md)
-is retained only as an advisory input. F remains a structural hypothesis, not
-an approved outline or subject authority.
+The maintainer rejected the abstraction-first A/B/C portfolio, developed the
+reviewed D and F predecessors, and then approved the consolidated ten-section
+[`V2-SK-G` governing high-level structure](research/outline-development/governing-structure.md)
+under V2-D015. G combines Tools with Protocols and Integration, Agent Loops and
+Workflows with Orchestration, and Evaluation and Verification with
+Observability while preserving each term as an internal distinction. It is the
+sole governing basis for later detailed-outline refinement.
+
+G is an approved high-level organization, not an approved detailed outline or
+subject-evidence taxonomy. F remains the reviewed checkpoint-02 predecessor, D
+the reviewed checkpoint-01 vocabulary baseline, and E advisory design input.
+The bounded [`CP03 review`](research/outline-development/governing-structure-review.md)
+is complete. Detailed-outline work remains at an explicit authorization gate.
 
 Work remains on `codex/harness-engineering-v2`, which began at commit
 `2ad6c8cf5d5246874475df2acc71c6fdc74cdbba`.
@@ -44,9 +43,10 @@ set, evidence synthesis, or reviewed subject finding currently exists. The
 approved and amended
 [`research/outline-development/brief.md`](research/outline-development/brief.md)
 authorizes structural inspection of the named inputs, a complete pinned-catalog
-inventory, and the provisional F synthesis. It does not adopt
-source taxonomies, authorize a new outbound source open without maintainer
-approval of an exact batch, or authorize substantive research.
+inventory, and the completed G high-level-structure checkpoint. It does not
+authorize detailed-outline drafting, adopt source taxonomies, authorize a new
+outbound source open without maintainer approval of an exact batch, or
+authorize substantive research.
 
 ## Where to begin
 
@@ -60,6 +60,10 @@ approval of an exact batch, or authorize substantive research.
 - [`research/outline-development/brief.md`](research/outline-development/brief.md)
   is the approved process contract for structural landscape mapping and outline
   gates.
+- [`research/outline-development/governing-structure.md`](research/outline-development/governing-structure.md)
+  is the approved high-level basis for the next detailed-outline stage.
+- [`research/outline-development/governing-structure-review.md`](research/outline-development/governing-structure-review.md)
+  records its local and configured independent fidelity reviews.
 - [`docs/source-provenance.md`](docs/source-provenance.md) defines evidence
   capture and audit rules.
 - [`docs/provenance-architecture.md`](docs/provenance-architecture.md) documents

@@ -33,7 +33,7 @@ post-outline research sequence.
 ## Current authorization
 
 The maintainer accepted the completed V2 repository reset and approved V2-D005
-through V2-D011 on 2026-07-20 and V2-D012 through V2-D014 on 2026-07-21. The
+through V2-D011 on 2026-07-20 and V2-D012 through V2-D015 on 2026-07-21. The
 original three-seed pass, six-source Wave 1, Walking Labs curriculum inspection,
 complete pinned-catalog census, and first four catalog calibrations are
 complete. The unopened Wave 2 is withdrawn and has no active authority.
@@ -52,24 +52,25 @@ authority is exhausted, and its dispositions, catalog corrections, and the
 method's continued use now await maintainer review.
 
 The maintainer rejected the V2-D012 A/B/C portfolio at checkpoint 00. V2-D013
-produced the reviewed conventional-topic baseline `V2-SK-D`. V2-D014 now makes
-`V2-SK-F` the sole active checkpoint-02 candidate, synthesizing D with the
-useful parts of advisory `V2-SK-E`. F must retain one conventional-topic content
-tree and one nonduplicated, branching build-up traversal. D remains a reviewed
-baseline, E was never active, and neither is rejected or promoted by F's
-development. Use only already captured V2 artifacts through core-04. Core-04
-remains unratified structural input. F's bounded local adversarial review is
-complete, and the package is stopped for maintainer review.
+produced reviewed baseline D, and V2-D014 produced reviewed predecessor F.
+V2-D015 approves `V2-SK-G` as the sole governing high-level structure. Its ten
+stable top-level addresses and cross-sectional ownership rule are recorded in
+`research/outline-development/governing-structure.md`. F remains the immediate
+reviewed predecessor, D its reviewed vocabulary baseline, and E advisory only.
+G is approved high-level organization, not an approved detailed outline or
+subject-evidence taxonomy. Its CP03 finalization and bounded review are
+complete. Core-04 remains unratified structural input.
 
 No later batch is authorized. Do not reopen a completed core-01, core-02,
 core-03, or core-04 page, open another catalog family, run an identity query,
 perform a topical or ecosystem search, manually traverse a redirect, follow a
 second hop, inspect an external repository's files or history, deep-read an
-implementation or technique, expand F into a detailed outline, select cases,
-synthesize findings, produce or adopt
-curriculum, build a site, promote evidence maturity, or re-admit legacy
-evidence. Stop at the F checkpoint after adversarial review
-until the maintainer makes the next explicit decision.
+implementation or technique, expand G into a detailed outline, alter G's
+top-level subject set, grouping, IDs, order, or primary ownership, select
+cases, synthesize findings, produce or adopt curriculum, build a site, promote
+evidence maturity, or re-admit legacy evidence. Stop after the G finalization
+checkpoint until the maintainer explicitly authorizes detailed-outline work or
+another bounded task.
 
 ## Clean-slate boundary
 
@@ -92,10 +93,10 @@ The current program has these baseline blocking gates:
 1. Approve the repository triage before reset changes.
 2. Review the completed V2 authority reset and its validation/review evidence.
 3. Approve the outline-development brief before seed investigation.
-4. Review V2-SK-F's conventional-topic architecture, branching traversal,
-   topic placement, depth, and cross-cutting rails before detailed outline
-   finalization.
-5. Explicitly approve the final outline's objectives, scope, organization, and
+4. Approve the governing high-level structure before detailed-outline work;
+   satisfied by V2-D015 and V2-SK-G.
+5. Explicitly authorize detailed-outline refinement from G1–G10.
+6. Explicitly approve the final outline's objectives, scope, organization, and
    sequence before substantive research planning or execution.
 
 An approved active brief may add narrower blocking checkpoints between these

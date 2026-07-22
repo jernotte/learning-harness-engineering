@@ -59,7 +59,7 @@ baseline separation needed for the provisional skeleton; completing every direct
 screen is not an automatic prerequisite. This keeps the sources from silently
 supplying both the content universe and its final shape.
 
-### 7. Build and review the conventional-topic architecture
+### 7. Select the governing high-level architecture
 
 Use recognizable harness-engineering terms as the public spine. Preserve
 meaningful distinctions among context, memory, tools, skills, protocols,
@@ -81,12 +81,18 @@ pause for the maintainer. Alternative decision, causal, responsibility, and
 learning views are cross-cutting navigation or sequence aids, not competing
 public taxonomies unless the maintainer explicitly requests otherwise.
 
+V2-D015 completes this stage with V2-SK-G: ten stable top-level subjects and a
+primary-home-plus-local-application rule for cross-sectional mechanisms. G is
+the governing high-level structure; its approval is not approval of the
+detailed outline.
+
 ### 8. Develop the detailed outline
 
-The selected direction expands into objectives, scope and exclusions, sections
-and subsections, inclusion and ordering rationales, research questions,
-dependencies, cross-cutting concerns, required evidence types, open choices,
-uncertainty, and deliberate omissions.
+When explicitly authorized, G1–G10 expand into objectives, scope and
+exclusions, sections and subsections, inclusion and ordering rationales,
+research questions, dependencies, cross-cutting concerns, required evidence
+types, open choices, uncertainty, and deliberate omissions. This stage is not
+yet authorized.
 
 ### 9. Stop for explicit approval
 

@@ -7,17 +7,18 @@ conceptual slate. The authority reset is complete. V2-D005 through V2-D011
 approve an outline-first process; V2-D012 produced a provisional skeleton
 portfolio, and V2-D013 records the maintainer's rejection and replacement
 direction. V2-D014 makes F the sole active synthesis of reviewed D and advisory
-E. The maintainer approved core-02's exact
+E. V2-D015 approves G as the sole governing ten-section high-level structure;
+F is now its reviewed predecessor. The maintainer approved core-02's exact
 19 `read_only` / one `excluded` dispositions and corrections, then approved
 the method exercised in core-03 plus its exact 17 `read_only` / three
 `excluded` dispositions and corrections. The authorized 20-source
 `awesome-screen-core-04` calibration within `v2-outline-seed-map` is complete
 and awaiting maintainer review; its proposed result is 17 `read_only` / three
 `excluded`. Its opening authority is exhausted, and no core-05 or later batch
-is authorized. The current work creates one conventional-topic content tree
-with one branching, ID-based build-up traversal, adversarially reviews it, and
-stops for the maintainer. The final goal continues through a maintainer-approved
-outline and stops before substantive research.
+is authorized. G's faithful CP03 finalization and review are complete, and the
+repository is stopped before detailed-outline drafting. The final goal
+continues through a maintainer-approved detailed outline and stops before
+substantive research.
 
 The explicit review request determines whether the scope is the completed
 reset, a Stage 4 seed-map checkpoint, later outline work, or another bounded
@@ -104,8 +105,8 @@ authority.
 - Material outline-choice claims, if any, have V2 claim IDs, exact mappings,
   primary verification, and full source records. Nothing is promoted.
 - Core-04 closed with complete source lifecycles, reconciled diagnostic
-  provenance, schema friction, and recommendation. V2-D014 permits only the
-  bounded local F synthesis and review beyond that point; all later source
+  provenance, schema friction, and recommendation. V2-D015 permits only the
+  bounded local G finalization and review beyond that point; all later source
   batches remain blocked.
 
 ## Provisional skeleton acceptance criteria when V2-D012 is in scope
@@ -198,6 +199,37 @@ it as the complete content basis for F.
 - Core-04 remains unratified, core-05 remains closed, review remains advisory,
   and the checkpoint stops for the maintainer.
 
+These criteria describe reviewed predecessor F. V2-D015 supersedes F as the
+active high-level structure without rewriting its checkpoint.
+
+## Governing-structure acceptance criteria when V2-D015 is in scope
+
+- `research/outline-development/governing-structure.md` contains exactly the
+  ten maintainer-approved G1–G10 top-level subjects in their approved order.
+- F4/F6 map to merged G4; F7/F8 map to merged G6; F10/F11 map to merged G8;
+  every other F owner maps exactly once to its retained G owner.
+- The three merged sections preserve tools versus protocols, local control
+  versus orchestration, and captured signals versus evaluative judgment as
+  explicit internal distinctions rather than synonyms.
+- The primary-home-plus-local-application rule permits section-specific
+  protocol, state, security, assurance, and production treatment without
+  creating competing definitions or duplicate claim ownership.
+- G10 is explicitly final synthesis and introduces no new mechanism family.
+- G1–G10 are stable high-level addresses. No detailed subsection IDs,
+  `outline.md`, research questions, evidence plan, case set, or learning
+  sequence enters this checkpoint.
+- G is called an approved high-level structure, never an approved detailed
+  outline, evidence-backed taxonomy, or field consensus.
+- F remains the reviewed immediate predecessor, D the reviewed checkpoint-01
+  baseline, and E advisory only; none transfers subject evidence or current
+  governing authority into G except through V2-D015's explicit mapping.
+- Review tests transcription fidelity, ownership coherence, lineage, and scope.
+  It cannot redesign the ten approved top-level subjects or exercise the next
+  gate.
+- Core-04 remains unratified, core-05 remains closed, and no source, query,
+  external implementation inspection, legacy material, evidence promotion,
+  curriculum, or detailed-outline drafting enters the checkpoint.
+
 ## Quality bar
 
 - Authority is unambiguous across README, agent instructions, status, coverage,
@@ -276,6 +308,11 @@ reported command output.
   linear maturity ladders, false universal dependencies, hidden cycles,
   outcome guarantees, E presented as prior authority, or build-up framing that
   silently changes the project into a curriculum.
+- For the V2-D015 finalization, deviation from the exact ten-section decision,
+  incomplete F-to-G disposition, semantic collapse inside a merged section,
+  competing cross-sectional ownership, unstable G IDs, an implied detailed-
+  outline or research authorization, or predecessor/reviewer authority
+  laundering.
 
 Do not report taste-only wording changes. Prioritize defects that change
 authority, recoverability, evidence integrity, validation, or the maintainer's

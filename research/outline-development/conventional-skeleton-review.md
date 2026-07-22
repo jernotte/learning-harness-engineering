@@ -1,11 +1,13 @@
 # Harness Engineering V2 — Conventional Skeleton Adversarial Review
 
 **Checkpoint:** `V2-SK-CP01`
-**Status:** Complete; awaiting maintainer review
+**Status:** Complete historical checkpoint-01 review; D retained as a reviewed
+baseline beneath F and G
 **Authority:** V2-D013
 **Reviewed skeleton:** [`conventional-skeleton.md`](conventional-skeleton.md)
 **Vocabulary basis:**
 [`conventional-vocabulary-map.md`](conventional-vocabulary-map.md)
+**Current successor:** [`governing-structure.md`](governing-structure.md)
 **Review type:** Bounded local read-only adversarial review; not externally
 independent and not maintainer approval
 

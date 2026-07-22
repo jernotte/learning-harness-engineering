@@ -1,18 +1,19 @@
 # Harness Engineering V2 Status
 
 **Governance mode:** Maintainer-gated early alignment
-**Current phase:** V2-SK-F — maintainer review gate
+**Current phase:** V2-SK-G approved — detailed-outline authorization gate
 **Active subject-research cycle:** None
-**Active outline task:** `v2-conventional-buildup-skeleton-checkpoint-02`
+**Active outline task:** None — `v2-governing-structure-checkpoint-03` complete
 **Active brief:** `research/outline-development/brief.md` — approved
 **Last updated:** 2026-07-21
 
 ## Current objective
 
-Present the adversarially reviewed V2-SK-F package: its single conventional-
-topic architecture, branching build-up traversal, cross-cutting rails, D/E
-disposition, reviewer findings, primary dispositions, and unresolved choices.
-Do not open another source, begin a detailed outline, or advance to core-05.
+Await explicit maintainer authorization to refine V2-SK-G into a detailed
+outline. The approved ten-section structure, F-to-G lineage, stable top-level
+IDs, merger boundaries, cross-sectional ownership rules, and checkpoint review
+are durable. Detailed-outline drafting, source access, and core-05 remain
+closed.
 
 ## Authority state
 
@@ -26,9 +27,9 @@ Do not open another source, begin a detailed outline, or advance to core-05.
   `071fd2d833c809723c881921956a50e46fa748f1`.
 - Pre-pivot questions, taxonomy, cases, claims, syntheses, curriculum, and
   learning artifacts have no V2 authority.
-- V2 has no admitted subject evidence or approved outline.
+- V2 has no admitted subject evidence or approved detailed outline.
 - V2-D005 through V2-D011 were explicitly approved on 2026-07-20. V2-D012
-  through V2-D014 were explicitly approved on 2026-07-21.
+  through V2-D015 were explicitly approved on 2026-07-21.
 
 ## Current authorization
 
@@ -270,6 +271,21 @@ Authorized by V2-D014:
 - run bounded local review, validate, and stop for the maintainer. This does
   not approve F, core-04, core-05, curriculum, or detailed-outline work.
 
+Authorized by V2-D015:
+
+- approve `V2-SK-G` as the sole governing high-level structure;
+- fix G1–G10 as stable top-level addresses with the approved ten subjects,
+  grouping, primary ownership, order, and cross-sectional treatment;
+- combine F4/F6 as Tools, Protocols, and Integration;
+- combine F7/F8 as Agent Loops, Workflows, and Orchestration;
+- combine F10/F11 as Evaluation, Verification, and Observability;
+- retain G10 Integrated Harness Architectures as final synthesis;
+- preserve F as the reviewed immediate predecessor, D as its reviewed
+  vocabulary baseline, and E as advisory only; and
+- create, review, validate, and commit the governing reference and control
+  updates, then stop. This does not authorize detailed-outline drafting,
+  core-04 ratification, core-05, source access, or research.
+
 Still not authorized:
 
 - opening any catalog family, including core-05 or a completed calibration;
@@ -282,7 +298,9 @@ Still not authorized:
 - case selection, synthesis of subject findings, or site work;
 - evidence maturity promotion;
 - legacy evidence readmission;
-- expanding V2-SK-F into a detailed subject outline; and
+- expanding V2-SK-G into a detailed subject outline; changing its top-level
+  subject set, grouping, IDs, order, or primary ownership without another
+  maintainer decision; and
 - producing or adopting curriculum or learning artifacts.
 
 The maintainer must explicitly authorize any later batch or method-changing
@@ -290,6 +308,21 @@ access. Core-04 is stopped at its source-screening gate.
 
 ## Validation and review state
 
+- V2-SK-CP03 faithfully records the maintainer-approved G1–G10 structure,
+  complete F-to-G disposition, three protected merger boundaries, and primary-
+  home-plus-local-application rule. Two bounded local reviews raised three high,
+  five medium, and one completion finding. The primary accepted and corrected
+  all nine; focused verification passed every material correction with no fix-
+  induced regression.
+- The configured read-only Claude review inspected every declared control and
+  lineage path and returned `pass` with zero findings, two non-blocking
+  concerns, and two low-priority recommendations. The primary accepted and
+  implemented all four. The review resolved to Claude Fable 5 at high effort
+  and remains advisory. One focused configured verification passed all four
+  agreed items with no finding or regression; its sole concern was this now-
+  completed ledger closeout.
+- The checkpoint-03 provenance suite, catalog tests, local Markdown-link check,
+  and `git diff --check` pass after all corrections.
 - V2-SK-CP02 contains F's canonical thirteen-subject tree, branching ID-based
   traversal, section-accountability map, and security, assurance, and
   production rails. Two bounded local reviews raised four high and eight medium
@@ -481,9 +514,8 @@ non-authoritative history. Focused verification passed with no residual defect.
 
 ## Next gate
 
-The maintainer will review V2-SK-F's conventional-topic tree, partial-order
-build-up traversal, cross-cutting rails, D/E disposition, reviewer findings,
-primary dispositions, and unresolved choices. Core-04's proposed results remain
-separately unratified. No other batch opens and no detailed outline begins
-before that review. Selective raw conversation packets remain separately gated
-per packet.
+After faithful CP03 finalization and review, the repository stops for explicit
+authorization to begin detailed-outline refinement from G1–G10. Core-04's
+proposed results remain separately unratified. No other batch opens, and no
+detailed outline begins, before that decision. Selective raw conversation
+packets remain separately gated per packet.

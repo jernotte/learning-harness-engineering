@@ -1,0 +1,58 @@
+name: Publish outline review companion
+
+on:
+  push:
+    branches:
+      - codex/outline-review-pages
+    paths:
+      - .github/workflows/publish-outline-review.yml
+      - research/outline-development/outline-review-companion.html
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy single-page review aid
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out the approved branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Stage only the review companion
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e _site
+          install -d _site
+          install -m 0644 research/outline-development/outline-review-companion.html _site/index.html
+          touch _site/.nojekyll
+          cmp -s research/outline-development/outline-review-companion.html _site/index.html
+          test ! -s _site/.nojekyll
+          mapfile -t published_files < <(find _site -mindepth 1 -maxdepth 1 -type f -printf '%f\n' | sort)
+          test "${#published_files[@]}" -eq 2
+          test "${published_files[0]}" = ".nojekyll"
+          test "${published_files[1]}" = "index.html"
+          test "$(find _site -mindepth 1 -maxdepth 1 | wc -l)" -eq 2
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+
+      - name: Upload the single-page artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

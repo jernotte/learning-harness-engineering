@@ -1,0 +1,3395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Context Engineering — Harness Engineering</title>
+  <style>
+    :root {
+      --canvas: #eef2f7;
+      --surface: #ffffff;
+      --surface-soft: #f7f9fc;
+      --ink: #172033;
+      --muted: #4b596d;
+      --accent: #174f83;
+      --accent-deep: #103a61;
+      --accent-soft: #e7f0f8;
+      --line: #d5dee9;
+      --warning: #855f00;
+      --warning-bg: #fff8db;
+      --focus: #0969da;
+      --radius: 0.75rem;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 18rem;
+      background:
+        radial-gradient(circle at top right, rgb(23 79 131 / 9%), transparent 30rem),
+        var(--canvas);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.58;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.16em;
+    }
+
+    a:hover {
+      color: var(--accent-deep);
+    }
+
+    a:focus-visible {
+      outline: 0.2rem solid var(--focus);
+      outline-offset: 0.2rem;
+      border-radius: 0.2rem;
+    }
+
+    .skip-link {
+      position: fixed;
+      inset: 0.5rem auto auto 0.5rem;
+      z-index: 20;
+      padding: 0.65rem 0.85rem;
+      transform: translateY(-160%);
+      border-radius: 0.35rem;
+      background: var(--surface);
+      box-shadow: 0 0.25rem 1rem rgb(23 32 51 / 18%);
+      font-weight: 750;
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    .page-header,
+    .jump-shell,
+    main,
+    footer {
+      width: min(calc(100% - 2rem), 72rem);
+      margin-inline: auto;
+    }
+
+    .page-header {
+      padding-block: 2.75rem 1.25rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.4rem;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.085em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 24ch;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .lede {
+      max-width: 72ch;
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block: 1.15rem;
+    }
+
+    .status-row span {
+      padding: 0.28rem 0.58rem;
+      border: 1px solid #b9c8d8;
+      border-radius: 999px;
+      background: rgb(255 255 255 / 72%);
+      color: var(--accent-deep);
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    .authority-note {
+      margin-top: 1.4rem;
+      padding: 1rem 1.15rem;
+      border: 1px solid #d6bb65;
+      border-inline-start: 0.38rem solid var(--warning);
+      border-radius: var(--radius);
+      background: var(--warning-bg);
+      box-shadow: 0 0.2rem 0.8rem rgb(23 32 51 / 6%);
+    }
+
+    .authority-note h1 {
+      margin: 0 0 0.35rem;
+      color: #604500;
+      font-size: 1rem;
+    }
+
+    .authority-note p {
+      max-width: 88ch;
+      margin: 0.35rem 0;
+    }
+
+    .source-pins {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 0.9rem;
+    }
+
+    .source-pins p {
+      min-width: 0;
+      margin: 0;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid rgb(133 95 0 / 25%);
+      border-radius: 0.45rem;
+      background: rgb(255 255 255 / 55%);
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 0.84em;
+    }
+
+    .jump-shell {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding-block: 0.55rem;
+      background: rgb(238 242 247 / 94%);
+      backdrop-filter: blur(0.55rem);
+    }
+
+    .jump-nav {
+      display: flex;
+      gap: 0.45rem;
+      overflow-x: auto;
+      padding: 0.3rem;
+      border: 1px solid var(--line);
+      border-radius: 0.6rem;
+      background: var(--surface);
+      box-shadow: 0 0.2rem 0.8rem rgb(23 32 51 / 7%);
+      scrollbar-width: thin;
+    }
+
+    .jump-nav a {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.48rem 0.62rem;
+      border-radius: 0.4rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .jump-nav a:hover {
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+    }
+
+    .jump-nav a span {
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-weight: 850;
+    }
+
+    main {
+      padding-block: 1rem 4rem;
+    }
+
+    .reading-key {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 0.35rem 0 1.1rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .reading-key li {
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 0.55rem;
+      background: rgb(255 255 255 / 70%);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .reading-key strong {
+      display: block;
+      color: var(--ink);
+    }
+
+    .outline {
+      counter-reset: top-section;
+      margin: 0;
+      padding: 0 0 0 4.2rem;
+      list-style: none;
+    }
+
+    .section-item {
+      counter-increment: top-section;
+      position: relative;
+      margin-block: 1.2rem;
+      padding-inline-start: 0.55rem;
+      scroll-margin-top: 5.2rem;
+    }
+
+    .section-item::before {
+      content: counter(top-section, upper-roman) ".";
+      position: absolute;
+      inset-block-start: 1.05rem;
+      inset-inline-start: -3.45rem;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-align: end;
+      width: 2.5rem;
+    }
+
+    .section-card {
+      overflow: clip;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 0.35rem 1.25rem rgb(23 32 51 / 8%);
+    }
+
+    .section-header {
+      padding: 1.1rem 1.25rem 1rem;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, var(--surface), var(--surface-soft));
+    }
+
+    .section-header h1,
+    .child-list h2,
+    .nested-list h3 {
+      margin: 0;
+      overflow-wrap: anywhere;
+      line-height: 1.3;
+    }
+
+    .section-header h1 {
+      font-size: clamp(1.2rem, 2.1vw, 1.48rem);
+    }
+
+    .section-header p {
+      max-width: 86ch;
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+    }
+
+    .address {
+      display: inline-block;
+      margin-inline-end: 0.42rem;
+      padding: 0.09rem 0.38rem;
+      border-radius: 0.3rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 0.82em;
+      font-variant-numeric: tabular-nums;
+      vertical-align: 0.08em;
+    }
+
+    .child-list {
+      margin: 0;
+      padding: 0.25rem 1.25rem 0.65rem 3.75rem;
+      list-style-type: upper-alpha;
+    }
+
+    .child-list > li {
+      padding: 0.9rem 0 0.95rem 0.35rem;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 5.2rem;
+    }
+
+    .child-list > li:first-child {
+      border-top: 0;
+    }
+
+    .child-list > li::marker,
+    .nested-list > li::marker {
+      color: var(--accent);
+      font-weight: 850;
+    }
+
+    .child-list h2 {
+      font-size: 1.02rem;
+    }
+
+    .child-list p,
+    .nested-list p {
+      max-width: 84ch;
+      margin: 0.36rem 0 0;
+      color: var(--muted);
+    }
+
+    .nested-list {
+      margin: 0.9rem 0 0.1rem;
+      padding: 0.75rem 0.8rem 0.75rem 3rem;
+      border-inline-start: 0.28rem solid #8db4d5;
+      border-radius: 0 0.45rem 0.45rem 0;
+      background: var(--accent-soft);
+      list-style-type: decimal;
+    }
+
+    .nested-list > li {
+      padding-inline-start: 0.25rem;
+      scroll-margin-top: 5.2rem;
+    }
+
+    .nested-list h3 {
+      font-size: 0.98rem;
+    }
+
+    footer {
+      padding-block: 0 2.5rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 46rem) {
+      .page-header,
+      .jump-shell,
+      main,
+      footer {
+        width: min(calc(100% - 1rem), 72rem);
+      }
+
+      .page-header {
+        padding-top: 1.75rem;
+      }
+
+      .source-pins,
+      .reading-key {
+        grid-template-columns: 1fr;
+      }
+
+      .outline {
+        padding-inline-start: 2.65rem;
+      }
+
+      .section-item {
+        padding-inline-start: 0.2rem;
+      }
+
+      .section-item::before {
+        inset-inline-start: -2.55rem;
+        width: 2rem;
+      }
+
+      .section-header {
+        padding-inline: 0.9rem;
+      }
+
+      .child-list {
+        padding-inline: 2.4rem 0.9rem;
+      }
+
+      .nested-list {
+        padding-inline-start: 2.25rem;
+      }
+
+      .jump-nav a {
+        max-width: 11rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 0.65in;
+      }
+
+      :root,
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .page-header,
+      main,
+      footer {
+        width: auto;
+      }
+
+      .jump-shell,
+      .skip-link,
+      .reading-key {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 0;
+      }
+
+      .authority-note,
+      .source-pins p,
+      .section-card {
+        box-shadow: none;
+      }
+
+      .authority-note,
+      .source-pins p {
+        background: #fff;
+      }
+
+      .outline {
+        padding-inline-start: 2.8rem;
+      }
+
+      .section-item {
+        margin-block: 0.8rem;
+      }
+
+      .section-item::before {
+        inset-inline-start: -2.5rem;
+        width: 2rem;
+      }
+
+      .section-card {
+        overflow: visible;
+        border-color: #888;
+      }
+
+      .section-header,
+      .nested-list {
+        background: #fff;
+      }
+
+      .child-list > li,
+      .nested-list > li {
+        break-inside: avoid;
+      }
+
+      h1,
+      h1,
+      h2,
+      h3 {
+        break-after: avoid;
+      }
+
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+
+    /* Native, no-script topic drill-downs. */
+    .drilldown-guide {
+      margin: 0.2rem 0 1.1rem;
+      padding: 0.8rem 0.95rem;
+      border: 1px solid #aac4dc;
+      border-radius: 0.55rem;
+      background: var(--accent-soft);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .drilldown-guide strong {
+      color: var(--accent-deep);
+    }
+
+    .child-list > li {
+      padding: 0 0 0 0.35rem;
+    }
+
+    .topic-details {
+      min-width: 0;
+    }
+
+    .topic-details > summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.36rem 1rem;
+      align-items: center;
+      margin-inline-start: -0.35rem;
+      padding: 0.9rem 0.2rem 0.95rem 0.35rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .topic-details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .topic-details > summary:hover {
+      background: var(--surface-soft);
+    }
+
+    .topic-details > summary:focus-visible {
+      outline: 0.2rem solid var(--focus);
+      outline-offset: 0.12rem;
+    }
+
+    .topic-details[open] > summary {
+      background: var(--accent-soft);
+    }
+
+    .topic-title {
+      grid-column: 1;
+      min-width: 0;
+      color: var(--ink);
+      font-size: 1.02rem;
+      font-weight: 760;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .nested-list .topic-title {
+      font-size: 0.98rem;
+    }
+
+    .topic-objective {
+      grid-column: 1;
+      max-width: 84ch;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .disclosure-label {
+      display: inline-flex;
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-items: center;
+      gap: 0.42rem;
+      justify-self: end;
+      padding: 0.3rem 0.48rem;
+      border: 1px solid #b5c9dc;
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 780;
+      white-space: nowrap;
+    }
+
+    .disclosure-label::after {
+      content: "▾";
+      font-size: 0.9rem;
+      transform: rotate(-90deg);
+      transition: transform 120ms ease;
+    }
+
+    .topic-details[open] .disclosure-label::after {
+      transform: none;
+    }
+
+    .open-label {
+      display: none;
+    }
+
+    .topic-details[open] .closed-label {
+      display: none;
+    }
+
+    .topic-details[open] .open-label {
+      display: inline;
+    }
+
+    .detail-panel {
+      margin: 0 0 0.95rem;
+      padding: 0.85rem;
+      border: 1px solid #c9d8e6;
+      border-radius: 0.55rem;
+      background: var(--surface-soft);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin: 0;
+    }
+
+    .detail-block {
+      min-width: 0;
+      padding: 0.75rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 0.45rem;
+      background: var(--surface);
+    }
+
+    .detail-block--wide {
+      grid-column: 1 / -1;
+    }
+
+    .detail-block dt {
+      color: var(--accent-deep);
+      font-size: 0.87rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .detail-block dt code {
+      display: inline-block;
+      margin-inline-start: 0.32rem;
+      padding: 0.08rem 0.3rem;
+      border-radius: 0.25rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .detail-block dd {
+      margin: 0.38rem 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .detail-block dd code {
+      padding: 0.04rem 0.24rem;
+      border-radius: 0.2rem;
+      background: #eef2f6;
+      color: var(--ink);
+    }
+
+    @media (max-width: 46rem) {
+      .topic-details > summary {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .disclosure-label {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-block--wide {
+        grid-column: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .disclosure-label::after {
+        transition: none;
+      }
+    }
+
+    @media print {
+      .drilldown-guide,
+      .disclosure-label {
+        display: none;
+      }
+
+      .topic-details > summary {
+        padding-inline: 0;
+        cursor: default;
+      }
+
+      .topic-details > .detail-panel {
+        display: block !important;
+        margin-bottom: 0.65rem;
+        border-color: #999;
+        background: #fff;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-block,
+      .detail-block--wide {
+        grid-column: auto;
+        break-inside: avoid;
+        background: #fff;
+      }
+
+      .topic-title {
+        break-after: avoid;
+      }
+    }
+
+
+    /* V2-D020 reader-first layer. Canonical wording remains in formal notes. */
+    .reader-kicker {
+      display: inline-block;
+      margin-inline-end: 0.48rem;
+      padding: 0.08rem 0.34rem;
+      border-radius: 0.25rem;
+      background: #d8e9f7;
+      color: var(--accent-deep);
+      font-size: 0.68rem;
+      font-weight: 850;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+      vertical-align: 0.1em;
+    }
+
+    .section-purpose {
+      color: #34465c !important;
+      font-size: 1.01rem;
+    }
+
+    .section-formal {
+      max-width: 86ch;
+      margin-top: 0.7rem;
+    }
+
+    .section-formal > summary,
+    .formal-notes > summary {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      width: fit-content;
+      padding: 0.24rem 0.45rem;
+      border-radius: 0.35rem;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 780;
+    }
+
+    .section-formal > summary:hover,
+    .formal-notes > summary:hover {
+      background: var(--accent-soft);
+    }
+
+    .section-formal > summary:focus-visible,
+    .formal-notes > summary:focus-visible {
+      outline: 0.2rem solid var(--focus);
+      outline-offset: 0.12rem;
+    }
+
+    .section-formal summary small,
+    .formal-notes summary small {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .section-formal-panel {
+      margin-top: 0.45rem;
+      padding: 0.65rem 0.75rem;
+      border-inline-start: 0.22rem solid #a9bed2;
+      background: rgb(255 255 255 / 62%);
+    }
+
+    .section-header .section-formal-panel p {
+      margin: 0.24rem 0 0;
+      font-size: 0.88rem;
+    }
+
+    .section-header .section-formal-panel .formal-field-name {
+      margin: 0;
+      color: var(--accent-deep);
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .topic-purpose {
+      grid-column: 1;
+      max-width: 84ch;
+      color: #3f5066;
+      line-height: 1.55;
+    }
+
+    .reader-layer {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.65fr);
+      gap: 0.75rem;
+    }
+
+    .reader-card {
+      min-width: 0;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid #c8d7e5;
+      border-radius: 0.5rem;
+      background: var(--surface);
+    }
+
+    .reader-card--example {
+      border-inline-start: 0.3rem solid #448563;
+      background: #f2faf5;
+    }
+
+    .reader-card--why {
+      border-inline-start: 0.3rem solid #a87915;
+      background: #fffaf0;
+    }
+
+    .reader-card p {
+      max-width: none;
+      margin: 0.38rem 0 0;
+      color: #34465c;
+      line-height: 1.55;
+    }
+
+    .reader-card .reader-card-title {
+      margin: 0;
+      color: var(--accent-deep);
+      font-size: 0.82rem;
+      font-weight: 850;
+    }
+
+    .reader-card-title span {
+      display: inline-block;
+      margin-inline-start: 0.35rem;
+      padding: 0.05rem 0.3rem;
+      border-radius: 999px;
+      background: #dcefe3;
+      color: #285d41;
+      font-size: 0.68rem;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .formal-notes {
+      margin-top: 0.8rem;
+      border-top: 1px dashed #b8c8d7;
+      padding-top: 0.55rem;
+    }
+
+    .formal-panel {
+      margin-top: 0.55rem;
+      padding: 0.75rem;
+      border: 1px solid #c9d3de;
+      border-radius: 0.5rem;
+      background: #f7f8fa;
+    }
+
+    .formal-panel .detail-block {
+      background: #fff;
+    }
+
+    @media (max-width: 46rem) {
+      .reader-layer {
+        grid-template-columns: 1fr;
+      }
+
+      .section-formal > summary,
+      .formal-notes > summary {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.05rem;
+      }
+    }
+
+    @media print {
+      .reader-card,
+      .formal-panel,
+      .section-formal-panel {
+        background: #fff;
+        break-inside: avoid;
+      }
+
+      .formal-notes > summary,
+      .section-formal > summary {
+        display: none;
+      }
+
+      .formal-notes > .formal-panel,
+      .section-formal > .section-formal-panel {
+        display: block !important;
+      }
+    }
+
+    /* V2-D033: cumulative expository G2 article. The outline above remains intact. */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .section-title-link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem;
+      width: fit-content;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section-title-link:hover {
+      color: var(--accent-deep);
+    }
+
+    .draft-link-chip {
+      display: inline-flex;
+      align-items: center;
+      margin-inline-start: 0.4rem;
+      padding: 0.28rem 0.55rem;
+      border: 1px solid #7ba88f;
+      border-radius: 999px;
+      background: #e8f6ee;
+      color: #174f35;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.025em;
+      white-space: nowrap;
+    }
+
+    .section-title-link:hover .draft-link-chip {
+      border-color: #3d7758;
+      background: #d7eee1;
+    }
+
+    .g2-article {
+      margin-top: 5rem;
+      scroll-margin-top: 5.2rem;
+      border-top: 0.35rem solid #174f83;
+      border-bottom: 1px solid #b9c7d5;
+      background: #fff;
+      color: #202b3b;
+      box-shadow: 0 1rem 2.8rem rgb(23 32 51 / 10%);
+    }
+
+    .g2-article:focus {
+      outline: none;
+    }
+
+    .g2-article:focus-visible {
+      outline: 0.24rem solid var(--focus);
+      outline-offset: 0.25rem;
+    }
+
+    .g2-article [id] {
+      scroll-margin-top: 5.4rem;
+    }
+
+    .g2-article-header {
+      padding: clamp(1.8rem, 5vw, 3.6rem) clamp(1.25rem, 5vw, 4.5rem) 2rem;
+      border-bottom: 1px solid #d6dee7;
+      background: #fbfcfe;
+    }
+
+    .g2-article .back-link {
+      display: inline-block;
+      margin-bottom: 1.3rem;
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    .g2-article-header .eyebrow {
+      margin: 0 0 0.5rem;
+      color: #326242;
+      font-size: 0.76rem;
+      letter-spacing: 0.09em;
+    }
+
+    .g2-article-header h1 {
+      max-width: 22ch;
+      margin: 0;
+      color: #14283c;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(2.15rem, 5vw, 3.75rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    .g2-article-deck {
+      max-width: 66ch;
+      margin: 1.25rem 0 0;
+      color: #384a5e;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(1.13rem, 2vw, 1.32rem);
+      line-height: 1.58;
+    }
+
+    .g2-article-deck p {
+      margin: 0.75rem 0 0;
+    }
+
+    .g2-status-note {
+      max-width: 76ch;
+      margin: 1.35rem 0 0;
+      padding-top: 0.85rem;
+      border-top: 1px solid #dce3ea;
+      color: #536276;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    .g2-article-layout {
+      display: grid;
+      grid-template-columns: minmax(11.5rem, 14rem) minmax(0, 47rem);
+      justify-content: center;
+      column-gap: clamp(2rem, 5vw, 4.5rem);
+      row-gap: 1.8rem;
+      padding: clamp(1.6rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 3.5rem) 4rem;
+    }
+
+    .g2-article-rail {
+      grid-column: 1;
+      grid-row: 2;
+      min-width: 0;
+    }
+
+    .g2-article-toc {
+      position: sticky;
+      top: 5.2rem;
+      max-height: calc(100vh - 6.2rem);
+      overflow: auto;
+      padding-inline-end: 0.65rem;
+      scrollbar-width: thin;
+    }
+
+    .g2-article-toc h2 {
+      margin: 0 0 0.7rem;
+      color: #263d53;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .g2-article-toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .g2-article-toc li {
+      counter-increment: toc;
+      display: grid;
+      grid-template-columns: 1.6rem minmax(0, 1fr);
+      gap: 0.15rem;
+      padding-block: 0.31rem;
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .g2-article-toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      color: #788798;
+      font-size: 0.68rem;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.65;
+    }
+
+    .g2-article-toc a {
+      color: #41546a;
+      font-size: 0.78rem;
+      font-weight: 650;
+      line-height: 1.38;
+      text-decoration: none;
+    }
+
+    .g2-article-toc a:hover {
+      color: #174f83;
+      text-decoration: underline;
+    }
+
+    .g2-article-body {
+      grid-column: 2;
+      grid-row: 2;
+      min-width: 0;
+      max-width: 47rem;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.06rem;
+      line-height: 1.72;
+    }
+
+    .g2-article-body > *:first-child {
+      margin-top: 0;
+    }
+
+    .g2-at-a-glance {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      padding: 1rem 1.1rem 1.05rem;
+      border: 1px solid #bccbd8;
+      border-left: 0.3rem solid #174f83;
+      background: #f7fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .g2-at-a-glance h2 {
+      margin: 0 0 0.8rem;
+      color: #18354e;
+      font-size: 0.86rem;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .g2-at-a-glance dl {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 0.34fr) minmax(0, 1fr);
+      margin: 0;
+    }
+
+    .g2-at-a-glance dt,
+    .g2-at-a-glance dd {
+      margin: 0;
+      padding: 0.42rem 0;
+      border-top: 1px solid #e0e7ed;
+    }
+
+    .g2-at-a-glance dt:first-of-type,
+    .g2-at-a-glance dt:first-of-type + dd {
+      border-top: 0;
+    }
+
+    .g2-at-a-glance dt {
+      padding-inline-end: 0.7rem;
+      color: #42566b;
+      font-size: 0.77rem;
+      font-weight: 800;
+    }
+
+    .g2-at-a-glance dd {
+      color: #27384a;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .g2-article-section {
+      padding-top: 0.25rem;
+    }
+
+    .g2-article-section + .g2-article-section {
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid #cfd8e2;
+    }
+
+    .g2-article-body h2,
+    .g2-article-body h3,
+    .g2-article-body h4 {
+      color: #172f46;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-wrap: balance;
+    }
+
+    .g2-article-body h2 {
+      margin: 0 0 1.1rem;
+      font-size: clamp(1.55rem, 3vw, 2.05rem);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+    }
+
+    .g2-article-body h3 {
+      margin: 2.2rem 0 0.65rem;
+      font-size: 1.18rem;
+      line-height: 1.3;
+    }
+
+    .g2-heading-anchor {
+      margin-inline-start: 0.28rem;
+      color: #7a8998;
+      font-size: 0.75em;
+      font-weight: 500;
+      opacity: 0;
+      text-decoration: none;
+    }
+
+    h2:hover > .g2-heading-anchor,
+    h3:hover > .g2-heading-anchor,
+    .g2-heading-anchor:focus-visible {
+      opacity: 1;
+    }
+
+    .g2-article-body p {
+      margin: 0.78rem 0;
+    }
+
+    .g2-article-body li + li {
+      margin-top: 0.38rem;
+    }
+
+    .g2-article-body strong {
+      color: #152d42;
+    }
+
+    .g2-article-body code {
+      padding: 0.08rem 0.24rem;
+      border-radius: 0.2rem;
+      background: #eef2f5;
+      color: #29445d;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.82em;
+      overflow-wrap: anywhere;
+    }
+
+    .g2-definition {
+      margin: 1.4rem 0;
+      padding: 0.9rem 1.1rem;
+      border-inline-start: 0.28rem solid #2a6f55;
+      background: #f2f8f5;
+      color: #263e34;
+    }
+
+    .g2-definition p {
+      margin: 0;
+    }
+
+    .g2-table-wrap {
+      width: 100%;
+      margin: 1.5rem 0 1.8rem;
+      overflow-x: auto;
+      border: 1px solid #cbd5df;
+      background: #fff;
+      scrollbar-width: thin;
+    }
+
+    .g2-table {
+      width: 100%;
+      min-width: 38rem;
+      border-collapse: collapse;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.79rem;
+      line-height: 1.47;
+    }
+
+    .g2-table caption {
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid #cbd5df;
+      background: #f4f7fa;
+      color: #344a60;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .g2-table th,
+    .g2-table td {
+      padding: 0.68rem 0.72rem;
+      border: 1px solid #dce3ea;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .g2-table th {
+      background: #edf3f7;
+      color: #213d55;
+      font-size: 0.74rem;
+      letter-spacing: 0.012em;
+    }
+
+    .g2-table tbody tr:nth-child(even) {
+      background: #fafbfd;
+    }
+
+    .g2-figure {
+      margin: 1.7rem 0 2rem;
+      padding: 1rem;
+      border: 1px solid #b9c9d7;
+      background: #f8fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .g2-figure figcaption {
+      margin-bottom: 0.9rem;
+      color: #17344d;
+      font-size: 0.9rem;
+      font-weight: 850;
+    }
+
+    .g2-figure-reading {
+      margin: 0.85rem 0 0 !important;
+      padding-top: 0.75rem;
+      border-top: 1px solid #d8e0e7;
+      color: #46586a;
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .g2-cycle {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: cycle;
+    }
+
+    .g2-cycle li {
+      counter-increment: cycle;
+      position: relative;
+      min-height: 6rem;
+      margin: 0;
+      padding: 1.9rem 0.72rem 0.72rem;
+      border: 1px solid #9eb2c4;
+      background: #fff;
+      color: #253c51;
+      font-size: 0.77rem;
+      line-height: 1.42;
+    }
+
+    .g2-cycle li::before {
+      content: counter(cycle);
+      position: absolute;
+      inset: 0.55rem auto auto 0.65rem;
+      display: grid;
+      width: 1.05rem;
+      height: 1.05rem;
+      place-items: center;
+      border-radius: 50%;
+      background: #174f83;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+    }
+
+    .g2-cycle li:nth-child(3),
+    .g2-cycle li:nth-child(4) {
+      border-color: #6ea080;
+      background: #f2f8f4;
+    }
+
+    .g2-cycle li:nth-child(4) {
+      border-width: 2px;
+      border-color: #287164;
+      background: #eef8f7;
+    }
+
+    .g2-cycle-return {
+      margin: 0.65rem 0 0;
+      padding: 0.5rem 0.65rem;
+      border: 1px dashed #b17b16;
+      background: #fff9e9;
+      color: #6b4a0c;
+      font-size: 0.75rem;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .g2-source-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.7rem;
+      align-items: stretch;
+    }
+
+    .g2-flow-stage {
+      padding: 0.78rem;
+      border: 1px solid #aab9c8;
+      background: #fff;
+    }
+
+    .g2-flow-stage--candidate {
+      border-color: #b8c1ca;
+      background: #f2f4f6;
+    }
+
+    .g2-flow-stage--gate {
+      border: 2px solid #5b936e;
+      background: #f0f8f3;
+    }
+
+    .g2-flow-stage--delivered {
+      border: 2px solid #287164;
+      background: #eef8f7;
+    }
+
+    .g2-flow-stage h4 {
+      margin: 0 0 0.5rem;
+      color: #294156;
+      font-size: 0.77rem;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .g2-flow-stage ul {
+      margin: 0;
+      padding-inline-start: 1.05rem;
+      color: #3d4f60;
+      font-size: 0.73rem;
+      line-height: 1.45;
+    }
+
+    .g2-altitude,
+    .g2-horizons {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .g2-altitude {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .g2-altitude li,
+    .g2-horizons li {
+      position: relative;
+      margin: 0;
+      padding: 0.72rem;
+      border: 1px solid #9eb2c4;
+      background: #fff;
+      color: #31495d;
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+
+    .g2-altitude li:nth-child(1) { background: #eef4fa; border-color: #7f9fba; }
+    .g2-altitude li:nth-child(2) { background: #f0f6f8; border-color: #7ba7ad; }
+    .g2-altitude li:nth-child(3) { background: #eef8f7; border-color: #6c9e91; }
+    .g2-altitude li:nth-child(4) { background: #f2f8f4; border-color: #7ca184; }
+    .g2-altitude li:nth-child(5) { background: #fff9e9; border: 2px solid #b17b16; }
+
+    .g2-altitude span,
+    .g2-horizons span {
+      display: block;
+      margin-bottom: 0.28rem;
+      color: #5b6e80;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+    }
+
+    .g2-altitude strong,
+    .g2-horizons strong {
+      display: block;
+      margin-bottom: 0.24rem;
+      color: #23445e;
+      font-size: 0.78rem;
+    }
+
+    .g2-altitude small,
+    .g2-horizons small {
+      display: block;
+      color: #485c6d;
+      font-size: 0.68rem;
+      line-height: 1.42;
+    }
+
+    .g2-checkpoint-flow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) minmax(0, 1fr);
+      gap: 1.1rem;
+      align-items: stretch;
+    }
+
+    .g2-checkpoint-stage {
+      position: relative;
+      padding: 0.8rem;
+      border: 1px solid #aab9c8;
+      background: #fff;
+    }
+
+    .g2-checkpoint-stage:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -0.82rem;
+      z-index: 1;
+      width: 0.55rem;
+      color: #557087;
+      font-size: 1.05rem;
+      font-weight: 900;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    .g2-checkpoint-stage--exhaust {
+      border-color: #b8c1ca;
+      background: #f2f4f6;
+    }
+
+    .g2-checkpoint-stage--durable {
+      border: 2px solid #287164;
+      background: #eef8f7;
+    }
+
+    .g2-checkpoint-stage--next {
+      border-color: #7f9fba;
+      background: #eef4fa;
+    }
+
+    .g2-checkpoint-stage h4 {
+      margin: 0 0 0.5rem;
+      color: #294156;
+      font-size: 0.76rem;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .g2-checkpoint-stage ul {
+      margin: 0;
+      padding-inline-start: 1.05rem;
+      color: #3d4f60;
+      font-size: 0.72rem;
+      line-height: 1.45;
+    }
+
+    .g2-horizons {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .g2-horizons li:nth-child(1) { border: 2px solid #287164; background: #eef8f7; }
+    .g2-horizons li:nth-child(2) { border-color: #7f9fba; background: #eef4fa; }
+    .g2-horizons li:nth-child(3) { border: 2px dashed #b17b16; background: #fff9e9; }
+
+    .g2-packet-stack {
+      display: grid;
+      gap: 0.42rem;
+      margin: 0;
+    }
+
+    .g2-packet-layer {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 0.34fr) minmax(0, 1fr);
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0.66rem 0.75rem;
+      border: 1px solid #7ba9a2;
+      background: #f1f9f7;
+    }
+
+    .g2-packet-layer:first-child {
+      border: 2px solid #174f83;
+      background: #eef4fa;
+    }
+
+    .g2-packet-layer--uncertain {
+      border: 2px dashed #b17b16;
+      background: #fff9e9;
+    }
+
+    .g2-packet-layer dt,
+    .g2-packet-layer dd {
+      margin: 0;
+    }
+
+    .g2-packet-layer dt {
+      color: #24465a;
+      font-size: 0.72rem;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .g2-packet-layer dd {
+      color: #344958;
+      font-size: 0.76rem;
+      line-height: 1.42;
+    }
+
+    .g2-delta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.88fr) minmax(0, 1fr);
+      gap: 0.65rem;
+      align-items: stretch;
+    }
+
+    .g2-call-state,
+    .g2-delta-actions {
+      padding: 0.8rem;
+      border: 1px solid #7ba9a2;
+      background: #f1f9f7;
+    }
+
+    .g2-delta-actions {
+      border: 2px solid #5b936e;
+      background: #f2f8f4;
+    }
+
+    .g2-call-state h4,
+    .g2-delta-actions h4 {
+      margin: 0 0 0.5rem;
+      color: #28465b;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+    }
+
+    .g2-call-state ul,
+    .g2-delta-actions ul {
+      margin: 0;
+      padding-inline-start: 1rem;
+      color: #3c4e5e;
+      font-size: 0.72rem;
+      line-height: 1.44;
+    }
+
+    .g2-code-figure {
+      margin: 1.5rem 0 1.8rem;
+      border: 1px solid #aebdca;
+      background: #fbfcfd;
+    }
+
+    .g2-code-figure figcaption {
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid #cbd5df;
+      background: #edf3f7;
+      color: #304a61;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.77rem;
+      font-weight: 800;
+    }
+
+    .g2-code-figure pre {
+      max-width: 100%;
+      margin: 0;
+      padding: 1rem;
+      overflow: auto;
+      color: #213548;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.76rem;
+      line-height: 1.58;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      tab-size: 2;
+    }
+
+    .g2-deep-dive {
+      margin: 1.5rem 0;
+      border-block: 1px solid #c7d3de;
+      background: #f8fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .g2-deep-dive > summary {
+      padding: 0.8rem 2.2rem 0.8rem 0.9rem;
+      color: #24445f;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .g2-deep-dive[open] > summary {
+      border-bottom: 1px solid #d7e0e7;
+    }
+
+    .g2-deep-dive-body {
+      padding: 0.25rem 0.9rem 0.9rem;
+      color: #344a5d;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 0.94rem;
+      line-height: 1.62;
+    }
+
+    .g2-source-record {
+      display: block;
+    }
+
+    .g2-source-record code {
+      display: block;
+      margin-top: 0.18rem;
+      color: #576777;
+      font-size: 0.72rem;
+    }
+
+    .g2-evidence-note {
+      margin-top: 2rem;
+      padding: 0.85rem 1rem;
+      border-inline-start: 0.25rem solid #b17b16;
+      background: #fffaf0;
+      color: #5e4c28;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    .g2-end-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #cfd8e2;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    @media (max-width: 60rem) {
+      .g2-article-layout {
+        grid-template-columns: minmax(0, 47rem);
+      }
+
+      .g2-at-a-glance,
+      .g2-article-rail,
+      .g2-article-body {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      .g2-article-toc {
+        position: static;
+        max-height: none;
+        padding: 0 0 1.2rem;
+        border-bottom: 1px solid #cfd8e2;
+      }
+
+      .g2-article-toc ol {
+        columns: 2;
+        column-gap: 2rem;
+      }
+
+      .g2-article-toc li {
+        break-inside: avoid;
+      }
+    }
+
+    @media (max-width: 52rem) {
+      .g2-source-flow,
+      .g2-altitude {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 42rem) {
+      .g2-article-header {
+        padding-inline: 1rem;
+      }
+
+      .g2-article-layout {
+        gap: 1.6rem;
+        padding: 1.25rem 1rem 3rem;
+      }
+
+      .g2-article-toc ol {
+        columns: 1;
+      }
+
+      .g2-at-a-glance dl,
+      .g2-packet-layer {
+        grid-template-columns: 1fr;
+      }
+
+      .g2-at-a-glance dd {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .g2-at-a-glance dt:not(:first-of-type) {
+        padding-top: 0.7rem;
+      }
+
+      .g2-cycle,
+      .g2-source-flow,
+      .g2-delta,
+      .g2-altitude,
+      .g2-checkpoint-flow,
+      .g2-horizons {
+        grid-template-columns: 1fr;
+      }
+
+      .g2-checkpoint-stage:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: 50%;
+        bottom: -0.95rem;
+        transform: translateX(50%);
+      }
+
+      .g2-cycle li {
+        min-height: 0;
+      }
+
+      .g2-table {
+        min-width: 0;
+        border: 0;
+      }
+
+      .g2-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .g2-table tbody,
+      .g2-table tr,
+      .g2-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .g2-table tbody tr {
+        padding: 0.28rem 0.72rem 0.55rem;
+        border-bottom: 1px solid #cbd5df;
+      }
+
+      .g2-table tbody tr:last-child {
+        border-bottom: 0;
+      }
+
+      .g2-table td {
+        display: grid;
+        grid-template-columns: minmax(6.8rem, 0.42fr) minmax(0, 1fr);
+        gap: 0.65rem;
+        padding: 0.5rem 0;
+        border: 0;
+        border-top: 1px solid #e1e7ed;
+      }
+
+      .g2-table td:first-child {
+        border-top: 0;
+      }
+
+      .g2-table td::before {
+        content: attr(data-label);
+        color: #365169;
+        font-size: 0.68rem;
+        font-weight: 850;
+        line-height: 1.38;
+      }
+
+      .g2-table-wrap {
+        overflow: visible;
+      }
+
+      .g2-end-nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .g2-article *,
+      .g2-article *::before,
+      .g2-article *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+    @media print {
+      .page-header,
+      .jump-shell,
+      main > :not(#g2-first-draft),
+      footer {
+        display: none !important;
+      }
+
+      main {
+        width: auto;
+        margin: 0;
+      }
+
+      .g2-article {
+        margin-top: 1rem;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .g2-article:focus,
+      .g2-article:focus-visible {
+        outline: none !important;
+      }
+
+      .g2-article-header,
+      .g2-article-layout {
+        padding-inline: 0;
+      }
+
+      .g2-article .back-link,
+      .g2-article-rail,
+      .g2-end-nav,
+      .g2-heading-anchor {
+        display: none !important;
+      }
+
+      .g2-article-layout {
+        display: block;
+      }
+
+      .g2-article-body {
+        max-width: none;
+        font-size: 10.5pt;
+      }
+
+      .g2-article-section + .g2-article-section {
+        margin-top: 1.8rem;
+        padding-top: 1.4rem;
+      }
+
+      .g2-deep-dive > summary {
+        display: none;
+      }
+
+      .g2-article .g2-deep-dive::details-content {
+        display: block !important;
+        content-visibility: visible !important;
+      }
+
+      .g2-deep-dive-body {
+        display: block !important;
+      }
+
+      .g2-figure,
+      .g2-at-a-glance,
+      .g2-code-figure,
+      .g2-deep-dive {
+        background: #fff;
+        break-inside: avoid;
+      }
+
+      .g2-table-wrap {
+        overflow: visible;
+        break-inside: auto;
+      }
+
+      .g2-table {
+        min-width: 0;
+        font-size: 7.5pt;
+      }
+
+      .g2-table tbody,
+      .g2-table tr,
+      .g2-table td {
+        display: table-row-group;
+      }
+
+      .g2-table tr {
+        display: table-row;
+      }
+
+      .g2-table td {
+        display: table-cell;
+      }
+
+      .g2-table td::before {
+        content: none;
+      }
+
+      .g2-table thead {
+        display: table-header-group;
+      }
+
+      .g2-article-body h2,
+      .g2-article-body h3,
+      .g2-article-body h4 {
+        break-after: avoid;
+      }
+    }
+
+
+    /* V2-D037: standalone subject-page navigation and layout. */
+    .site-nav {
+      width: min(calc(100% - 2rem), 72rem);
+      margin-inline: auto;
+      padding-block: 1rem;
+    }
+
+    .site-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid #b9c8d8;
+      border-radius: 999px;
+      background: rgb(255 255 255 / 86%);
+      font-size: 0.88rem;
+      font-weight: 780;
+      text-decoration: none;
+    }
+
+    body.article-page main {
+      margin-bottom: 2rem;
+    }
+
+    body.article-page .g2-article {
+      margin-top: 0;
+    }
+
+    .g2-source-record {
+      color: #243e59;
+      font-weight: 760;
+    }
+
+    @media print {
+      body.article-page .site-nav,
+      body.article-page footer {
+        display: none !important;
+      }
+
+      body.article-page main > #g2-first-draft {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="article-page">
+  <a class="skip-link" href="#g2-first-draft">Skip to Context Engineering</a>
+  <nav class="site-nav" aria-label="Harness Engineering review site">
+    <a href="index.html#g2">← Harness Engineering outline</a>
+  </nav>
+  <main id="context-engineering">
+    <article id="g2-first-draft" class="g2-article" tabindex="-1" aria-labelledby="g2-article-title">
+      <header class="g2-article-header">
+        <p class="eyebrow">Expository review draft · v1.2</p>
+        <h1 id="g2-article-title">Context Engineering</h1>
+        <div class="g2-article-deck"><p>Context Engineering is the design and control of the information available to
+a model for a particular call. It includes the instructions, evidence, state,
+capability descriptions, examples, and prior interaction that the system
+delivers—and the decisions that determine what stays out, what changes form,
+and what can be recovered later.</p>
+<p>The key phrase is <strong>for a particular call</strong>. A repository, memory store, tool
+catalog, and conversation may contain millions of useful tokens. The model does
+not act on that whole universe. It acts on the working set presented now,
+through the model interface, under a finite context window. Context Engineering
+is therefore less like filling a container and more like preparing the decision
+surface for the next step in a changing task.</p>
+<p>This article develops that idea through one fictional shipping regression. The
+case is a teaching illustration, not a measured model run. It makes the design
+choices concrete while the source notes preserve the limits of the evidence
+behind the broader guidance.</p>
+</div>
+        <p class="g2-status-note"><strong>Review state:</strong> v1.2 keeps the selected v1 writing structure and adds one pinned practitioner source family. Its cases and recommendations remain source-reported, the shipping material and diagrams are teaching illustrations, and no Context Engineering finding has been promoted. Numbered planning addresses remain on the outline page.</p>
+      </header>
+      <div class="g2-article-layout">
+        <aside class="g2-at-a-glance" aria-labelledby="g2-glance-title">
+          <h2 id="g2-glance-title">At a glance</h2>
+          <dl>
+            <dt>Core question</dt><dd>What should this model call see, in what form, and why?</dd>
+            <dt>Unit of design</dt><dd>One model call inside an evolving task.</dd>
+            <dt>Candidate inputs</dt><dd>Instructions, evidence, state, capabilities, examples, memory, and history.</dd>
+            <dt>Primary output</dt><dd>A sufficient, legible, and reviewable delivered working set.</dd>
+            <dt>Iteration focus</dt><dd>Trajectory, structural retrieval, reviewed checkpoints, context isolation, decision-level artifacts, and feedback horizons.</dd>
+            <dt>Central tradeoff</dt><dd>Focus without omission; breadth without irrelevant or misleading load.</dd>
+            <dt>Boundary</dt><dd>G2 controls current-call information. Adjacent sections own persistence, tools, skills, workflow, authority, evaluation, and operation.</dd>
+          </dl>
+        </aside>
+        <div class="g2-article-rail">
+          <nav class="g2-article-toc" aria-labelledby="g2-toc-title">
+            <h2 id="g2-toc-title">Contents</h2>
+            <ol><li><a href="#g2-context-problem-title">The context engineering problem</a></li>
+<li><a href="#g2-model-call-title">The model call as the unit of design</a></li>
+<li><a href="#g2-prompts-instructions-title">Prompts and Instructions</a></li>
+<li><a href="#g2-sources-retrieval-title">Context Sources and Retrieval</a></li>
+<li><a href="#g2-assembly-delivery-title">Context Assembly and Delivery</a></li>
+<li><a href="#g2-windows-management-title">Context Windows, Compaction, Compression, and Caching</a></li>
+<li><a href="#g2-context-lifecycle-title">The complete context lifecycle</a></li>
+<li><a href="#g2-context-failures-title">How context failures appear</a></li>
+<li><a href="#g2-context-evaluation-title">Evaluating a context change</a></li>
+<li><a href="#g2-context-boundaries-title">Boundaries with adjacent harness systems</a></li>
+<li><a href="#g2-evidence-status-title">Evidence status and open questions</a></li>
+<li><a href="#g2-source-notes-title">Source notes</a></li>
+<li><a href="#g2-author-appendix-title">Author appendix</a></li></ol>
+          </nav>
+        </div>
+        <div class="g2-article-body">
+<section class="g2-article-section" id="g2-context-problem" aria-labelledby="g2-context-problem-title">
+  <h2 id="g2-context-problem-title">The context engineering problem<a class="g2-heading-anchor" href="#g2-context-problem-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Imagine a coding agent asked to make checkout reject an unavailable shipping
+method before payment. The harness can search a repository containing more
+than 4,000 files. It gives the model a large packet: checkout code, old design
+notes, deployment logs, and several test reports. The model proposes a plausible
+change. The change is still wrong.</p>
+<p>The packet omitted one controlling fact: the current shipping contract says
+that availability must be checked against the destination-specific service
+level returned by the quote service. The old design note describes a global
+availability flag. Both facts appear relevant, but only one governs current
+behavior. More volume did not compensate for the missing contract, and the
+presence of a stale explanation made the packet actively misleading.</p>
+<p>The failure is not simply “the prompt was bad” or “the model needed more
+context.” It can be located more precisely:</p>
+<ol>
+<li>The call&#39;s decision was not stated narrowly enough to reveal which contract
+mattered.</li>
+<li>The source-selection process did not distinguish current authority from
+historical relevance.</li>
+<li>The delivered packet did not label the stale note as superseded.</li>
+<li>Nothing recorded the omission, so a reviewer could not reconstruct why the
+model never saw the controlling rule.</li>
+</ol>
+<p>A corrected packet could be much smaller, but size alone is not the lesson.
+The corrected packet succeeds only if it contains enough current, authoritative
+material for this decision. In a less localized incident, a broader and
+well-organized packet might be the safer starting point. The goal is not minimum
+context. The goal is a <strong>sufficient, legible, and reviewable working set</strong>.</p>
+<aside class="g2-definition" aria-label="Working definition"><p><strong>Working definition</strong><br>Context Engineering is the deliberate construction and maintenance of the
+working set delivered to a model for a bounded decision, including its
+instructions, sources, organization, transformations, and lifecycle across
+calls.</p></aside>
+
+</section>
+<section class="g2-article-section" id="g2-model-call" aria-labelledby="g2-model-call-title">
+  <h2 id="g2-model-call-title">The model call as the unit of design<a class="g2-heading-anchor" href="#g2-model-call-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>A useful way to reason about context is to start at the model boundary. For one
+call, ask what the harness can observe before and after the model is invoked.
+The harness can usually observe the material it intentionally supplied, the
+invocation settings it controlled, the response or tool call it received, and
+the state changes it recorded. It may not be able to observe provider-managed
+instructions, internal model processing, or hidden platform transformations.</p>
+<p>This produces three distinct sets:</p>
+<ul>
+<li><strong>Candidate information</strong> is everything the system could potentially obtain:
+repository files, retrieved documents, memory records, tool descriptions,
+user messages, runtime state, and prior results.</li>
+<li><strong>Delivered context</strong> is the exact representation made visible through the
+model interface for this call, including order, labels, summaries, and any
+omitted portions.</li>
+<li><strong>Used information</strong> is whatever actually influenced the model&#39;s behavior.
+This last set is not directly observable merely because an item was present.</li>
+</ul>
+<p>Context Engineering controls the path from candidates to delivery. It can make
+important information easier to use, but it does not guarantee that the model
+will use it correctly. That distinction prevents a common diagnostic mistake:
+finding a fact somewhere in the repository and assuming it was present,
+legible, and influential in the failed call.</p>
+<h3 id="g2-article-the-changing-working-set">The changing working set<a class="g2-heading-anchor" href="#g2-article-the-changing-working-set" aria-label="Permalink to this heading">§</a></h3>
+<figure class="g2-figure" aria-labelledby="g2-cycle-caption" aria-describedby="g2-cycle-reading" data-diagram="working-set-cycle">
+  <figcaption id="g2-cycle-caption">The working set changes after every consequential call</figcaption>
+  <ol class="g2-cycle">
+    <li><strong>Current decision</strong><br>Bound the outcome, constraints, and uncertainty.</li>
+    <li><strong>Candidate information</strong><br>Expose sources, state, capabilities, and prior results.</li>
+    <li><strong>Select and shape</strong><br>Retrieve, label, order, omit, and transform.</li>
+    <li><strong>Delivered working set</strong><br>The exact observable packet reaches the model boundary.</li>
+    <li><strong>Response or tool call</strong><br>The model returns a result or requests an action.</li>
+    <li><strong>New task state</strong><br>Evidence, decisions, and open questions change.</li>
+  </ol>
+  <p class="g2-cycle-return">The new state becomes the starting point for the next bounded decision.</p>
+  <p id="g2-cycle-reading" class="g2-figure-reading"><strong>How to read it:</strong> Context construction is a loop. The packet for call two should be derived from the state produced by call one, not formed by appending everything indefinitely.</p>
+</figure>
+<p>The working set changes as the task changes. A test run adds evidence. A tool
+call resolves one uncertainty and creates another. An implementation change
+makes an old file snapshot stale. A summary may replace exact history, while a
+large tool result may leave the active window but remain recoverable by an
+identifier.</p>
+<p>The route to the current state matters too. Repository searches, discarded
+hypotheses, failed edits, and tool results can remain in a conversation after
+their immediate job is done. That accumulated route is the call&#39;s
+<strong>trajectory</strong>. Some of it is valuable: a rejected approach and the evidence
+against it can prevent repetition. Some of it is dangerous: an early guess can
+remain prominent even after better evidence arrives. Managing trajectory means
+turning what was learned into explicit current state, while keeping important
+history recoverable and clearly labeled.</p>
+<p>For the shipping case, imagine that the first search found only the old global
+flag. A later trace finds the destination-specific contract. Replaying the
+entire search history gives the stale theory and the current rule similar visual
+weight. A better next-call packet states that the global-flag theory was
+rejected, identifies the contract that displaced it, and retains the earlier
+search under a reference in case a reviewer needs to reconstruct the change.</p>
+<p>This produces four practical checks for a working set. They are design
+questions, not a validated scoring formula or a fixed priority order.</p>
+<div class="g2-table-wrap" role="region" aria-label="Four checks for the quality of a changing working set" tabindex="0"><table class="g2-table"><caption>Four checks for the quality of a changing working set</caption>
+<thead>
+<tr>
+<th scope="col">Working-set check</th>
+<th scope="col">Concrete question</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Working-set check"><strong>Correctness</strong></td>
+<td data-label="Concrete question">Is anything presented as current or controlling when it is false, stale, or merely assumed?</td>
+</tr>
+<tr>
+<td data-label="Working-set check"><strong>Sufficiency</strong></td>
+<td data-label="Concrete question">Does the call have the evidence, constraints, and capabilities needed for this decision?</td>
+</tr>
+<tr>
+<td data-label="Working-set check"><strong>Proportion</strong></td>
+<td data-label="Concrete question">Is the volume and detail justified by a current job, rather than by availability alone?</td>
+</tr>
+<tr>
+<td data-label="Working-set check"><strong>Trajectory</strong></td>
+<td data-label="Concrete question">Does the packet carry forward verified state and useful disagreement without letting obsolete exploration steer the next step?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Four design questions organize the rest of the article:</p>
+<div class="g2-table-wrap" role="region" aria-label="Four questions that organize a context decision" tabindex="0"><table class="g2-table"><caption>Four questions that organize a context decision</caption>
+<thead>
+<tr>
+<th scope="col">Design question</th>
+<th scope="col">What it makes explicit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Design question">What decision is this call making?</td>
+<td data-label="What it makes explicit">The bounded outcome, success conditions, constraints, and current uncertainty.</td>
+</tr>
+<tr>
+<td data-label="Design question">What can the model actually see?</td>
+<td data-label="What it makes explicit">The delivered instructions, evidence, state, capabilities, examples, and history—not merely what exists elsewhere.</td>
+</tr>
+<tr>
+<td data-label="Design question">What changed since the previous call?</td>
+<td data-label="What it makes explicit">New evidence, resolved questions, stale material, state transitions, and anything removed or transformed.</td>
+</tr>
+<tr>
+<td data-label="Design question">How will the system judge the context change?</td>
+<td data-label="What it makes explicit">The expected behavior, trace, failure, cost, or robustness difference and plausible competing explanations.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These questions form a dependency chain. The system must first clarify the
+decision, then locate candidate information, assemble a delivered packet,
+maintain it as the task evolves, and finally connect the context choices to
+observed outcomes.</p>
+
+</section>
+<section class="g2-article-section" id="g2-prompts-instructions" aria-labelledby="g2-prompts-instructions-title">
+  <h2 id="g2-prompts-instructions-title">Prompts and Instructions<a class="g2-heading-anchor" href="#g2-prompts-instructions-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Prompts and instructions establish what the current call is trying to do and
+which directions control its behavior. Prompt engineering is therefore a local
+part of Context Engineering: it shapes one important class of context, while
+Context Engineering also covers evidence, state, capabilities, history,
+retrieval, assembly, and change across calls.</p>
+<p>The most useful instruction usually identifies the decision at the right
+altitude. Too little direction leaves the model guessing about the outcome.
+Too much procedure can freeze an approach before the system has inspected the
+evidence. A strong instruction separates five concerns:</p>
+<ul>
+<li><strong>Outcome:</strong> what must be different when the step is complete.</li>
+<li><strong>Success conditions:</strong> what observation would show that the outcome holds.</li>
+<li><strong>Constraints:</strong> what must remain true, such as API compatibility or a safety
+boundary.</li>
+<li><strong>Known uncertainty:</strong> what is not yet established and may require
+retrieval or testing.</li>
+<li><strong>Expected response:</strong> what result, trace, or handoff the next system step
+needs.</li>
+</ul>
+<h3 id="g2-article-instruction-altitude-in-the-shipping-case">Instruction altitude in the shipping case<a class="g2-heading-anchor" href="#g2-article-instruction-altitude-in-the-shipping-case" aria-label="Permalink to this heading">§</a></h3>
+<p>The following three instructions concern the same regression. Their differences
+show why both under-specification and premature procedure can fail.</p>
+<div class="g2-table-wrap" role="region" aria-label="Three instruction altitudes applied to the same shipping regression" tabindex="0"><table class="g2-table"><caption>Three instruction altitudes applied to the same shipping regression</caption>
+<thead>
+<tr>
+<th scope="col">Instruction</th>
+<th scope="col">What it supplies</th>
+<th scope="col">What it leaves unresolved</th>
+<th scope="col">Likely effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Instruction">“Improve checkout reliability.”</td>
+<td data-label="What it supplies">A broad area of concern.</td>
+<td data-label="What it leaves unresolved">The failing behavior, governing rule, compatibility constraints, and validation route.</td>
+<td data-label="Likely effect">The model must invent the decision and may optimize the wrong behavior.</td>
+</tr>
+<tr>
+<td data-label="Instruction">“Fix the shipping-availability regression shown by the failing test. Reject an unavailable shipping method before payment, preserve the public API and current tax behavior, run the focused test and checkout suite, and report anything you could not verify.”</td>
+<td data-label="What it supplies">A bounded outcome, observable checks, constraints, and an uncertainty-reporting requirement.</td>
+<td data-label="What it leaves unresolved">The implementation path, which should depend on current evidence.</td>
+<td data-label="Likely effect">The model has room to investigate while remaining tied to the intended result.</td>
+</tr>
+<tr>
+<td data-label="Instruction">“Open these five files in this order, change function A, add branch B, update fixture C, and inspect nothing else.”</td>
+<td data-label="What it supplies">A complete procedure.</td>
+<td data-label="What it leaves unresolved">Whether those files reflect the current contract or whether another dependency controls the behavior.</td>
+<td data-label="Likely effect">The model may execute a stale theory efficiently and ignore contradictory evidence.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The middle instruction is not universally best because it is shorter or more
+abstract. It is useful here because the desired behavior and validation route
+are known while the correct implementation is not. If the task were a tightly
+regulated migration with an approved procedure, more explicit steps could be
+appropriate. If the failure were not yet localized, the instruction would need
+to preserve more exploratory latitude.</p>
+<h3 id="g2-article-instructions-change-with-the-decision">Instructions change with the decision<a class="g2-heading-anchor" href="#g2-article-instructions-change-with-the-decision" aria-label="Permalink to this heading">§</a></h3>
+<p>One long task can contain several different decisions. An exploratory call may
+need to map a control path and report uncertainty without proposing a patch. A
+planning call may need to turn verified findings into a change sequence with
+explicit validation points. An implementation call may need to execute one
+approved slice and report the observed result. Reusing the same instruction for
+all three can mix discovery, commitment, and execution before the evidence is
+ready.</p>
+<div class="g2-table-wrap" role="region" aria-label="How the instruction and return artifact change with the immediate decision" tabindex="0"><table class="g2-table"><caption>How the instruction and return artifact change with the immediate decision</caption>
+<thead>
+<tr>
+<th scope="col">Call&#39;s immediate job</th>
+<th scope="col">Instruction emphasis</th>
+<th scope="col">Useful returned artifact</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Call's immediate job">Understand the regression</td>
+<td data-label="Instruction emphasis">Trace entry point, contract, control and data path, dependencies, and unresolved branches; do not assume the fix.</td>
+<td data-label="Useful returned artifact">Evidence-backed codebase map with exact sources and open questions.</td>
+</tr>
+<tr>
+<td data-label="Call's immediate job">Decide the change</td>
+<td data-label="Instruction emphasis">Use reviewed findings to name the intended edits, preserved constraints, and verification sequence.</td>
+<td data-label="Useful returned artifact">Reviewable plan whose assumptions point back to evidence.</td>
+</tr>
+<tr>
+<td data-label="Call's immediate job">Make a bounded change</td>
+<td data-label="Instruction emphasis">Implement the selected slice, run named checks, and update verified state rather than silently rewriting the plan.</td>
+<td data-label="Useful returned artifact">Diff, test results, deviations, and the next known decision.</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is an example of phase-specific context, not a mandatory three-stage
+workflow. A small, obvious correction may combine the decisions. A difficult
+investigation may need several research passes. G6 owns the workflow and its
+checkpoints; G2 asks whether each call&#39;s instruction and expected handoff match
+the decision it is actually making.</p>
+<h3 id="g2-article-precedence-provenance-and-instruction-like-text">Precedence, provenance, and instruction-like text<a class="g2-heading-anchor" href="#g2-article-precedence-provenance-and-instruction-like-text" aria-label="Permalink to this heading">§</a></h3>
+<p>Real packets contain more than one source of direction: platform rules, system
+instructions, user requests, repository conventions, skill files, policy
+documents, and text returned by tools. These do not automatically have equal
+authority. The harness should preserve where a direction came from, which
+scope it governs, and how conflicts are handled.</p>
+<p>Retrieved text can also contain imperative language. A stale design note that
+says “always use the global availability flag” is evidence about a former
+design, not a new controlling instruction. Treating every imperative sentence
+as an instruction collapses evidence and authority into one unsafe category.
+Security, permissions, and trust policy are owned primarily by G7; the local
+Context Engineering responsibility is to preserve their labels and precedence
+when constructing the current call.</p>
+<p>Examples belong to the same design decision. A good example can demonstrate a
+format, boundary, or subtle distinction. A poor example can silently narrow the
+solution space or introduce facts that look authoritative. Examples should be
+included for a named reason, not because model-facing packets are assumed to be
+better when they contain demonstrations.</p>
+<p>Once the call&#39;s decision and controlling directions are legible, the harness
+can determine what supporting information the call needs and where that
+information might come from.</p>
+
+</section>
+<section class="g2-article-section" id="g2-sources-retrieval" aria-labelledby="g2-sources-retrieval-title">
+  <h2 id="g2-sources-retrieval-title">Context Sources and Retrieval<a class="g2-heading-anchor" href="#g2-sources-retrieval-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Context sources are the places from which candidate information can be
+obtained. They may include the current request, repository files, contracts,
+test output, databases, memory records, tool results, capability descriptions,
+run state, and prior messages. <strong>Source discovery</strong> identifies places that may
+hold an answer. <strong>Retrieval</strong> queries or fetches material from those places so
+it can be inspected. <strong>Selection</strong> decides which retrieved candidates have a
+job in the current packet. <strong>Delivery</strong> makes the chosen representation visible
+to the model. These operations can repeat in different orders as new evidence
+changes what the system needs.</p>
+<p>Relevance is necessary but not sufficient. A source can discuss the right
+topic and still be stale, unofficial, incomplete, untrusted, or inappropriate
+for the current role. Selection normally considers several properties:</p>
+<ul>
+<li><strong>Decision relevance:</strong> which current requirement or uncertainty the item
+can resolve.</li>
+<li><strong>Authority:</strong> whether the item is allowed to govern the decision it appears
+to govern.</li>
+<li><strong>Freshness and version:</strong> whether it still describes the system under
+review.</li>
+<li><strong>Conflict:</strong> whether another credible source disagrees and the disagreement
+must remain visible.</li>
+<li><strong>Permissions and sensitivity:</strong> whether this call and role may receive the
+material.</li>
+<li><strong>Retrieval cost and recoverability:</strong> whether the item should be loaded now,
+summarized, indexed, or left available for later access.</li>
+</ul>
+<h3 id="g2-article-from-a-source-pool-to-a-delivered-packet">From a source pool to a delivered packet<a class="g2-heading-anchor" href="#g2-article-from-a-source-pool-to-a-delivered-packet" aria-label="Permalink to this heading">§</a></h3>
+<figure class="g2-figure" aria-labelledby="g2-source-flow-caption" aria-describedby="g2-source-flow-reading" data-diagram="source-selection-flow">
+  <figcaption id="g2-source-flow-caption">Discovery, retrieval, inspection, and delivery form an iterative path</figcaption>
+  <div class="g2-source-flow">
+    <section class="g2-flow-stage g2-flow-stage--candidate" aria-labelledby="g2-candidate-pool-title"><h4 id="g2-candidate-pool-title">1 · Known sources</h4><ul><li>Contract registry</li><li>Test system</li><li>Repository areas</li><li>Design archive</li><li>Log store</li><li>Source index</li></ul></section>
+    <section class="g2-flow-stage" aria-labelledby="g2-retrieved-candidates-title"><h4 id="g2-retrieved-candidates-title">2 · Retrieve and inspect</h4><ul><li>Fetch concrete version</li><li>Read relevant content</li><li>Trace dependencies</li><li>Record missing results</li></ul></section>
+    <section class="g2-flow-stage g2-flow-stage--gate" aria-labelledby="g2-selection-gates-title"><h4 id="g2-selection-gates-title">3 · Selection gates</h4><ul><li>Decision relevance</li><li>Authority</li><li>Freshness</li><li>Conflict</li><li>Permissions</li><li>Recovery cost</li></ul></section>
+    <section class="g2-flow-stage g2-flow-stage--delivered" aria-labelledby="g2-delivered-set-title"><h4 id="g2-delivered-set-title">4 · Delivered now</h4><ul><li>Governing contract passage</li><li>Exact failed assertion</li><li>Focused implementation</li><li>Explicit conflict label</li></ul></section>
+  </div>
+  <p class="g2-cycle-return">An inspected item can expose a missing dependency and send the harness back to source discovery or another retrieval.</p>
+  <p id="g2-source-flow-reading" class="g2-figure-reading"><strong>How to read it:</strong> A known source is not yet a retrieved candidate, and a retrieved candidate is not yet a delivered item. The path can loop as evidence changes the decision or reveals another source.</p>
+</figure>
+<p>The selection gates are questions, not a universal scoring formula or a single
+one-way filter. A current test result may be direct evidence of a failure but
+not authoritative about the intended product rule. A contract may govern
+behavior but say nothing about where the code implements it. Inspecting either
+item may expose a dependency that sends the harness back to discovery and
+retrieval. The useful packet often combines sources with different jobs while
+keeping those jobs and the iterative path visible.</p>
+<h3 id="g2-article-worked-source-analysis">Worked source analysis<a class="g2-heading-anchor" href="#g2-article-worked-source-analysis" aria-label="Permalink to this heading">§</a></h3>
+<p>For the shipping regression, the harness begins with the following candidates.
+The final column records a reasoned disposition for this call, not a permanent
+classification of the source.</p>
+<div class="g2-table-wrap" role="region" aria-label="Candidate-source analysis for the shipping regression" tabindex="0"><table class="g2-table"><caption>Candidate-source analysis for the shipping regression</caption>
+<thead>
+<tr>
+<th scope="col">Candidate</th>
+<th scope="col">Decision question it can help resolve</th>
+<th scope="col">Authority and freshness</th>
+<th scope="col">Conflict or uncertainty</th>
+<th scope="col">Disposition for this call</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Candidate">Current shipping contract</td>
+<td data-label="Decision question it can help resolve">Which availability rule is valid?</td>
+<td data-label="Authority and freshness">Current version; product-owned.</td>
+<td data-label="Conflict or uncertainty">Conflicts with the superseded architecture note.</td>
+<td data-label="Disposition for this call">Deliver the governing passage with version and ownership labels.</td>
+</tr>
+<tr>
+<td data-label="Candidate">Focused failing-test output</td>
+<td data-label="Decision question it can help resolve">What failure is observed now?</td>
+<td data-label="Authority and freshness">Current run at the current commit.</td>
+<td data-label="Conflict or uncertainty">The test itself could encode a stale expectation.</td>
+<td data-label="Disposition for this call">Deliver the exact assertion and run identity; keep that caveat visible.</td>
+</tr>
+<tr>
+<td data-label="Candidate">Checkout validation function</td>
+<td data-label="Decision question it can help resolve">Where may behavior change?</td>
+<td data-label="Authority and freshness">Current repository version.</td>
+<td data-label="Conflict or uncertainty">It may delegate the final decision elsewhere.</td>
+<td data-label="Disposition for this call">Deliver the focused function and retrieve dependencies as the trace requires.</td>
+</tr>
+<tr>
+<td data-label="Candidate">Superseded architecture note</td>
+<td data-label="Decision question it can help resolve">Why does the old global flag exist?</td>
+<td data-label="Authority and freshness">Explicitly stale.</td>
+<td data-label="Conflict or uncertainty">Contradicts the current contract.</td>
+<td data-label="Disposition for this call">Keep retrievable as history; do not present it as current truth.</td>
+</tr>
+<tr>
+<td data-label="Candidate">Authentication logs</td>
+<td data-label="Decision question it can help resolve">Could authentication be blocking checkout?</td>
+<td data-label="Authority and freshness">Current but not connected to the observed failure.</td>
+<td data-label="Conflict or uncertainty">Sensitive and probably unrelated.</td>
+<td data-label="Disposition for this call">Omit unless later evidence points to authentication.</td>
+</tr>
+<tr>
+<td data-label="Candidate">Complete repository tree</td>
+<td data-label="Decision question it can help resolve">Where else could relevant code exist?</td>
+<td data-label="Authority and freshness">Current but too broad to serve as evidence by itself.</td>
+<td data-label="Conflict or uncertainty">Names can mislead.</td>
+<td data-label="Disposition for this call">Use as a retrieval index rather than the main packet.</td>
+</tr>
+</tbody>
+</table></div>
+<p>This analysis does not reduce retrieval to keyword matching. It begins from the
+decision requirements established in the instruction, finds sources that can
+resolve them, and preserves disagreements that affect the conclusion.</p>
+<h3 id="g2-article-retrieve-a-path-not-just-a-pile-of-files">Retrieve a path, not just a pile of files<a class="g2-heading-anchor" href="#g2-article-retrieve-a-path-not-just-a-pile-of-files" aria-label="Permalink to this heading">§</a></h3>
+<p>For coding work, several individually relevant files may still fail to explain
+the behavior. The model often needs the relationship among them: where the
+request enters, which contract governs it, how data and control move, which
+dependency makes the final decision, and where the result can be observed.</p>
+<p>In the shipping case, a search for “availability” finds the checkout branch and
+the stale global-flag note. That is not yet a codebase model. The useful trace is
+closer to:</p>
+<figure class="g2-code-figure"><figcaption>Worked example: trace the governing shipping path</figcaption><pre tabindex="0" aria-label="Worked example: trace the governing shipping path"><code>checkout request
+  → validateShipping(selection, destination)
+    → quoteService.getOptions(destination)
+      → destination-specific service level
+    → compare selected method with returned options
+  → reject before payment or continue
+</code></pre></figure>
+<p>The trace exposes a concrete retrieval question at every arrow. It also shows
+where the current contract belongs and where a focused test can observe the
+result. If the quote service delegates through another unresolved dependency,
+the research artifact should say so rather than smoothing the gap into a
+confident explanation.</p>
+<p>This distinction matters because incomplete research can be compacted and
+handed forward like any other state. A short, polished summary of the wrong
+dependency path is more usable than raw search output, but it is not more true.
+Exact source references, unresolved branches, and rejected hypotheses make the
+retrieved model reviewable before it becomes planning context.</p>
+<h3 id="g2-article-progressive-disclosure">Progressive disclosure<a class="g2-heading-anchor" href="#g2-article-progressive-disclosure" aria-label="Permalink to this heading">§</a></h3>
+<p>Large systems rarely need every potentially useful item loaded in advance.
+Progressive disclosure gives the model a map, index, tool description, or
+compact summary first, then exposes full material when the evolving decision
+requires it. A repository tree can identify likely areas. A tool schema can
+explain how to request a quote-service trace. A memory index can show that a
+prior decision exists without placing the entire record in every call.</p>
+<p>This strategy reduces irrelevant load only when the retrieval path is usable.
+The model needs enough information to know what is available, when to fetch it,
+and how to recognize failure. If an index omits the shipping contract, or a
+tool silently returns a stale version, deferred access merely hides the missing
+input. Material left outside the active window should therefore have an
+explicit recovery path and version semantics.</p>
+<p>There is also a breadth tradeoff. In the localized shipping regression, the
+failing test and named contract justify a focused initial view. In an incident
+where the responsible subsystem is unknown, aggressively pruning to checkout
+code could blind the investigation. A broader but structured source map may be
+the correct first working set until evidence narrows the problem. Focus follows
+the state of knowledge; it is not a fixed packet-size target.</p>
+<p>After sources are selected, they still have to be transformed into a coherent
+model-facing representation. That is the assembly problem.</p>
+
+</section>
+<section class="g2-article-section" id="g2-assembly-delivery" aria-labelledby="g2-assembly-delivery-title">
+  <h2 id="g2-assembly-delivery-title">Context Assembly and Delivery<a class="g2-heading-anchor" href="#g2-assembly-delivery-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Context assembly turns selected material into the exact working set delivered
+to the model. Selection decides <strong>which information has a job</strong>. Assembly
+decides <strong>how that information appears</strong>: its type, label, order, excerpt,
+format, surrounding explanation, and relationship to other items.</p>
+<p>A packet can contain all the right facts and still be hard to use. A current
+contract buried below a long stale discussion may receive less attention than
+its authority warrants. Two unlabeled passages can look mutually
+corroborating even when one is superseded. A summary can erase the uncertainty
+that should have prevented an irreversible action.</p>
+<h3 id="g2-article-anatomy-of-a-call-packet">Anatomy of a call packet<a class="g2-heading-anchor" href="#g2-article-anatomy-of-a-call-packet" aria-label="Permalink to this heading">§</a></h3>
+<figure class="g2-figure" aria-labelledby="g2-packet-caption" aria-describedby="g2-packet-reading" data-diagram="packet-anatomy">
+  <figcaption id="g2-packet-caption">A call packet keeps different kinds of context legible</figcaption>
+  <dl class="g2-packet-stack">
+    <div class="g2-packet-layer"><dt>Current decision</dt><dd>The bounded outcome this call must advance.</dd></div>
+    <div class="g2-packet-layer"><dt>Success and constraints</dt><dd>Observable checks plus boundaries that must remain true.</dd></div>
+    <div class="g2-packet-layer"><dt>Controlling rules</dt><dd>Current authoritative material, labeled with source and version.</dd></div>
+    <div class="g2-packet-layer"><dt>Current evidence</dt><dd>Observed facts, failures, and state tied to an inspectable run or snapshot.</dd></div>
+    <div class="g2-packet-layer"><dt>Focused working material</dt><dd>The code, document, or data needed to make this decision.</dd></div>
+    <div class="g2-packet-layer g2-packet-layer--uncertain"><dt>Conflict and uncertainty</dt><dd>Stale sources, unresolved questions, and conditions that could change the conclusion.</dd></div>
+    <div class="g2-packet-layer"><dt>Capabilities and result form</dt><dd>Available actions and the trace or handoff the next step needs.</dd></div>
+  </dl>
+  <p id="g2-packet-reading" class="g2-figure-reading"><strong>How to read it:</strong> The stack is not a mandatory template. Its purpose is to stop a current rule, an observed fact, a historical explanation, and an unresolved assumption from appearing as one undifferentiated block of prose.</p>
+</figure>
+<p>The layers are not mandatory fields for every call. They are a way to prevent
+different kinds of material from collapsing into undifferentiated prose. A
+short call may need only an instruction and one evidence item. A consequential
+decision may need explicit constraints, source versions, unresolved conflict,
+and a requested trace.</p>
+<h3 id="g2-article-match-the-representation-to-the-decision">Match the representation to the decision<a class="g2-heading-anchor" href="#g2-article-match-the-representation-to-the-decision" aria-label="Permalink to this heading">§</a></h3>
+<p>Context is not only a choice of facts. It is also a choice of representation.
+A paragraph, sequence diagram, contract excerpt, call-stack tree, and file-tree
+diff can describe the same change at different levels. The useful form is the
+one that exposes the decision and its likely misunderstanding without forcing
+unsettled lower-level choices.</p>
+<figure class="g2-figure" aria-labelledby="g2-altitude-caption" aria-describedby="g2-altitude-reading" data-diagram="decision-altitude">
+  <figcaption id="g2-altitude-caption">The representation becomes more concrete as the decision moves toward implementation</figcaption>
+  <ol class="g2-altitude">
+    <li><span>Outcome</span><strong>User behavior</strong><small>What changes and why?</small></li>
+    <li><span>Interaction</span><strong>System path</strong><small>Who exchanges what?</small></li>
+    <li><span>Contract</span><strong>Governing shape</strong><small>Which fields and rules control?</small></li>
+    <li><span>Program</span><strong>Code structure</strong><small>Where do types and calls change?</small></li>
+    <li><span>Change record</span><strong>Verified delta</strong><small>What changed, and what was observed?</small></li>
+  </ol>
+  <p id="g2-altitude-reading" class="g2-figure-reading"><strong>How to read it:</strong> Moving right adds implementation detail. The packet should stop at the lowest level the current decision actually needs; otherwise it can freeze choices that have not been reviewed.</p>
+</figure>
+<p>Applied to the shipping case, the decision views look like this:</p>
+<div class="g2-table-wrap" role="region" aria-label="Representations matched to five views of the shipping decision" tabindex="0"><table class="g2-table"><caption>Representations matched to five views of the shipping decision</caption>
+<thead>
+<tr>
+<th scope="col">Decision view</th>
+<th scope="col">Question being settled</th>
+<th scope="col">Representation that exposes it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Decision view">User outcome</td>
+<td data-label="Question being settled">What must checkout do differently?</td>
+<td data-label="Representation that exposes it">One outcome statement: an unavailable destination-specific service never reaches payment.</td>
+</tr>
+<tr>
+<td data-label="Decision view">System interaction</td>
+<td data-label="Question being settled">Which component supplies the governing fact?</td>
+<td data-label="Representation that exposes it">A short sequence from checkout to the quote service and back.</td>
+</tr>
+<tr>
+<td data-label="Decision view">Interface contract</td>
+<td data-label="Question being settled">What value controls the decision?</td>
+<td data-label="Representation that exposes it">The current request/response fields and availability rule.</td>
+</tr>
+<tr>
+<td data-label="Decision view">Program shape</td>
+<td data-label="Question being settled">Where should the rule be expressed in code?</td>
+<td data-label="Representation that exposes it">A call-stack tree, focused types or signatures, and a file-tree delta.</td>
+</tr>
+<tr>
+<td data-label="Decision view">Verified change record</td>
+<td data-label="Question being settled">What bounded change is ready to inform the next decision?</td>
+<td data-label="Representation that exposes it">A diff summary, observed behavior, focused check result, and preserved suite constraints.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are not mandatory project phases. A localized fix may need only the
+contract and program shape. A product change with ambiguous behavior may need
+the outcome and system interaction reviewed first. Context Engineering owns
+which representation enters a particular call; it does not make the product,
+architecture, or workflow decision correct by itself. The change record is a
+model-facing representation of completed work, not the work sequence itself:
+G6 owns how a bounded slice is coordinated, and G8 owns how it is verified.</p>
+<h3 id="g2-article-worked-packet-for-the-shipping-decision">Worked packet for the shipping decision<a class="g2-heading-anchor" href="#g2-article-worked-packet-for-the-shipping-decision" aria-label="Permalink to this heading">§</a></h3>
+<p>The shipping packet below shows the intended representation. It is a fixture,
+not a transcript of an executed call.</p>
+<figure class="g2-code-figure"><figcaption>Worked example: assembled shipping call packet</figcaption><pre tabindex="0" aria-label="Worked example: assembled shipping call packet"><code>CURRENT DECISION
+Change checkout validation so an unavailable destination-specific shipping
+service is rejected before payment.
+
+SUCCESS CONDITIONS
+- The focused regression test passes.
+- The checkout suite passes.
+- The public checkout API and current tax behavior remain unchanged.
+- Any behavior that could not be verified is reported.
+
+CONTROLLING RULE
+Source: shipping-contract-v4.1, product-owned, current
+Rule: availability is determined from the destination-specific service level
+returned by the quote service. The legacy global flag is not controlling.
+
+CURRENT EVIDENCE
+Source: test run checkout-shipping-184 at commit abc123
+Observed failure: an unavailable service proceeds to payment when the global
+flag is true.
+
+FOCUSED IMPLEMENTATION
+Source: checkout/validateShipping.ts at commit abc123
+[focused function plus the quote-service call site]
+
+KNOWN CONFLICT
+architecture/shipping-v2.md describes the legacy global flag. It is
+superseded by shipping-contract-v4.1 and is supplied only to explain the
+existing branch.
+
+CAPABILITIES
+- Repository search and file read are available.
+- Focused test and checkout suite can be run.
+
+REQUESTED RESULT
+Return the change, tests run, observed results, and unresolved uncertainty.
+</code></pre></figure>
+<p>This packet makes the current decision the organizing center. The contract is
+identified as controlling, the test as observed evidence, the old note as
+historical conflict, and the implementation as the current change surface.
+The model can still inspect dependencies rather than being forced to execute a
+preselected patch.</p>
+<h3 id="g2-article-intended-delivered-and-observable-context">Intended, delivered, and observable context<a class="g2-heading-anchor" href="#g2-article-intended-delivered-and-observable-context" aria-label="Permalink to this heading">§</a></h3>
+<p>A prompt template is not proof of what the model received. Frameworks may add
+tool descriptions, system instructions, memory snippets, or transformed
+history. Providers may manage layers that the application cannot fully
+inspect. For review and evaluation, the system should distinguish:</p>
+<ul>
+<li>the <strong>intended packet</strong> produced by its assembly policy;</li>
+<li>the <strong>observable delivered packet</strong> recorded at the invocation boundary;</li>
+<li>any <strong>managed or unknown layers</strong> that could not be captured; and</li>
+<li>the model&#39;s <strong>response and resulting state change</strong>.</li>
+</ul>
+<p>This article proposes a <strong>context manifest</strong> as one possible reconstruction
+record for that boundary. “Context receipt” is project shorthand, not an
+established industry term. Candidate fields include the call and decision,
+each item&#39;s type and source version, its delivered form and position, why it
+was selected, any transformation, and how the original can be recovered. The
+minimum practical schema remains an open research question.</p>
+<details class="g2-deep-dive" id="g2-context-manifest-note"><summary>Technical note: reconstructing the observable context boundary</summary><div class="g2-deep-dive-body"><p>For the worked shipping packet, a compact manifest might contain:</p>
+<div class="g2-table-wrap" role="region" aria-label="Example fields in a context reconstruction record" tabindex="0"><table class="g2-table"><caption>Example fields in a context reconstruction record</caption>
+<thead>
+<tr>
+<th scope="col">Field</th>
+<th scope="col">Example value</th>
+<th scope="col">Why it matters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Field">Call and decision</td>
+<td data-label="Example value"><code>checkout-01</code>: choose the validation change</td>
+<td data-label="Why it matters">Connects every item to one bounded purpose.</td>
+</tr>
+<tr>
+<td data-label="Field">Invocation boundary</td>
+<td data-label="Example value">model/runtime identifier; fixture marked “not run”</td>
+<td data-label="Why it matters">Separates a teaching packet from an observed execution.</td>
+</tr>
+<tr>
+<td data-label="Field">Item and type</td>
+<td data-label="Example value">Current contract; controlling rule</td>
+<td data-label="Why it matters">Prevents a rule from looking like ordinary background.</td>
+</tr>
+<tr>
+<td data-label="Field">Source and version</td>
+<td data-label="Example value"><code>shipping-contract-v4.1</code></td>
+<td data-label="Why it matters">Makes freshness and conflict review possible.</td>
+</tr>
+<tr>
+<td data-label="Field">Delivered form and position</td>
+<td data-label="Example value">Focused passage after success conditions</td>
+<td data-label="Why it matters">Records what the model could actually see.</td>
+</tr>
+<tr>
+<td data-label="Field">Selection reason</td>
+<td data-label="Example value">Defines the valid availability rule</td>
+<td data-label="Why it matters">Makes inclusion reviewable rather than habitual.</td>
+</tr>
+<tr>
+<td data-label="Field">Transformation and recovery</td>
+<td data-label="Example value">Exact passage; full contract retrievable by version</td>
+<td data-label="Why it matters">Exposes loss and the route back to source material.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The manifest does not prove causal use, complete provider visibility, or
+correct behavior. It makes the system&#39;s own context path inspectable enough to
+compare runs and diagnose omissions.</p>
+</div></details>
+<h3 id="g2-article-updating-the-next-call">Updating the next call<a class="g2-heading-anchor" href="#g2-article-updating-the-next-call" aria-label="Permalink to this heading">§</a></h3>
+<p>After the first change at commit <code>abc124</code>, the focused shipping test passes.
+The required checkout suite now exposes a tax-rounding failure that passed in
+the recorded baseline run at <code>abc123</code>. That before/after difference does not
+prove the shipping change caused the failure, but the change cannot be accepted
+while its required suite is red. The next call therefore investigates the new
+failure while preserving the shipping contract and API constraint so that a
+tax fix does not undo the corrected behavior. It should not simply receive the
+entire previous packet plus the new log.</p>
+<figure class="g2-figure" aria-labelledby="g2-delta-caption" aria-describedby="g2-delta-reading" data-diagram="call-delta">
+  <figcaption id="g2-delta-caption">The next packet is an edited state, not an ever-growing transcript</figcaption>
+  <div class="g2-delta">
+    <section class="g2-call-state" aria-labelledby="g2-call-one-title"><h4 id="g2-call-one-title">Call 1 · checkout-01</h4><ul><li>Contract v4.1</li><li>Failure at commit abc123</li><li>Original validator</li><li>Shipping decision</li></ul></section>
+    <section class="g2-delta-actions" aria-labelledby="g2-delta-actions-title"><h4 id="g2-delta-actions-title">Explicit delta</h4><ul><li><strong>Preserve:</strong> contract and API constraint</li><li><strong>Add:</strong> tax-rounding failure</li><li><strong>Update:</strong> code to abc124</li><li><strong>Remove:</strong> resolved trace</li><li><strong>Recover:</strong> full run by ID</li></ul></section>
+    <section class="g2-call-state" aria-labelledby="g2-call-two-title"><h4 id="g2-call-two-title">Call 2 · checkout-02</h4><ul><li>Preserved constraints</li><li>Suite 184 differs from baseline 183</li><li>Updated code at abc124</li><li>Tax-rounding diagnosis</li></ul></section>
+  </div>
+  <p id="g2-delta-reading" class="g2-figure-reading"><strong>How to read it:</strong> Continuity comes from preserving the still-controlling material and recording the transition. It does not require replaying every token from the earlier call.</p>
+</figure>
+<p>The preserved contract and API constraint maintain continuity. The new suite
+failure becomes current evidence. The long successful trace can leave the
+active packet while remaining recoverable by run identifier. The earlier
+implementation snapshot is either updated to the new commit or clearly marked
+as historical. This is <strong>context editing</strong>: preserve, add, update, remove, and
+retain-for-recovery are distinct actions.</p>
+<p>Different roles may need different views of the same state. A worker making the
+code change may need the contract, focused implementation, and test command. A
+reviewer may need the diff, both test results, and the preserved constraints but
+not the entire exploration history. G6 owns which role acts and how work is
+coordinated; G2 owns the local question of what each selected role receives for
+its current decision.</p>
+<p>A research note or plan may serve two audiences at once: it can align a human
+reviewer and become model context for the next phase. That does not mean both
+audiences need an identical rendering. The reviewer may need rationale,
+alternatives, and uncertainty at a glance. The model may need exact constraints,
+source excerpts, and a precise output contract. Both views should point to the
+same controlling decisions and recoverable evidence so that convenience does
+not produce two incompatible versions of the task.</p>
+<p>The handoff also needs to show its uncertainty. Suppose a repository-research
+worker returns “availability is controlled by the global flag” without naming
+the files inspected or the unresolved quote-service branch. The coordinator
+receives a concise packet, but the isolation has hidden the exact place where
+the investigation stopped. A useful return packet includes its scope, evidence,
+conflicts, missing branches, confidence limits, and recovery references. A
+fresh context window prevents raw exploration history from spreading; it should not
+make incomplete research look settled.</p>
+<p>Assembly and editing make the working set legible, but they do not remove the
+model interface&#39;s finite capacity. Long-running work requires explicit choices
+about what survives, what changes form, and what can be recovered.</p>
+
+</section>
+<section class="g2-article-section" id="g2-windows-management" aria-labelledby="g2-windows-management-title">
+  <h2 id="g2-windows-management-title">Context Windows, Compaction, Compression, and Caching<a class="g2-heading-anchor" href="#g2-windows-management-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>A context window is the finite amount of material the model interface can
+accept for a call, usually measured in tokens. The window is a hard boundary,
+not a target to fill. Long histories, repeated tool output, large documents,
+and expanding state compete for space with the instructions and current
+evidence that the next decision needs.</p>
+<p>The terms below describe overlapping dimensions, not mutually exclusive boxes.
+<strong>Compression</strong> is an operation that makes a representation smaller.
+<strong>Compaction</strong> is a retention policy for an accumulated trajectory and often
+uses summarization or another form of compression. <strong>Clearing</strong> removes bodies
+from the active window. <strong>External state</strong> relocates selected information.
+<strong>Isolation</strong> gives another call a different working set. <strong>Caching</strong> reuses
+material or computation; it can reduce cost without changing model-visible
+context at all. It becomes a G2 concern when reuse changes what is delivered or
+whether the reused material is still valid.</p>
+<div class="g2-table-wrap" role="region" aria-label="Window-management mechanisms and the different problems they address" tabindex="0"><table class="g2-table"><caption>Window-management mechanisms and the different problems they address</caption>
+<thead>
+<tr>
+<th scope="col">Mechanism</th>
+<th scope="col">What changes</th>
+<th scope="col">Appropriate use</th>
+<th scope="col">Main risk or adjacent owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Mechanism"><strong>Compaction</strong></td>
+<td data-label="What changes">A retention policy replaces or reorganizes accumulated trajectory state, commonly using compression for part of the result.</td>
+<td data-label="Appropriate use">Continue a long task while retaining selected decisions, constraints, evidence, and open questions.</td>
+<td data-label="Main risk or adjacent owner">Exact wording, numbers, uncertainty, and rejected alternatives can disappear; the policy and compression method must be judged separately.</td>
+</tr>
+<tr>
+<td data-label="Mechanism"><strong>Compression</strong></td>
+<td data-label="What changes">An operation makes a representation smaller through summarization, filtering, encoding, or structural reduction.</td>
+<td data-label="Appropriate use">Reduce size while preserving the information needed by a defined downstream decision; it may be used inside compaction or independently.</td>
+<td data-label="Main risk or adjacent owner">“Shorter” can conceal irreversible semantic loss; the term covers methods with very different fidelity.</td>
+</tr>
+<tr>
+<td data-label="Mechanism"><strong>Tool-result clearing</strong></td>
+<td data-label="What changes">Old result bodies leave the active window while their call records or identifiers remain.</td>
+<td data-label="Appropriate use">Remove bulky output that can be fetched again reliably.</td>
+<td data-label="Main risk or adjacent owner">Recovery may fail, return a different version, or cost too much.</td>
+</tr>
+<tr>
+<td data-label="Mechanism"><strong>External memory or state</strong></td>
+<td data-label="What changes">Selected information persists outside the active window and can be loaded later.</td>
+<td data-label="Appropriate use">Carry facts or decisions across calls or sessions.</td>
+<td data-label="Main risk or adjacent owner">The wrong material can be saved, omitted, or reloaded stale; G3 owns the persistence mechanism.</td>
+</tr>
+<tr>
+<td data-label="Mechanism"><strong>Context-isolated worker</strong></td>
+<td data-label="What changes">A separate worker receives a bounded view instead of the coordinator&#39;s accumulated context.</td>
+<td data-label="Appropriate use">Separate a well-bounded decision from unrelated history.</td>
+<td data-label="Main risk or adjacent owner">Handoff loss and orchestration effects; G6 owns worker control.</td>
+</tr>
+<tr>
+<td data-label="Mechanism"><strong>Caching</strong></td>
+<td data-label="What changes">A representation or computation is reused under a cache key; model-visible context may remain unchanged.</td>
+<td data-label="Appropriate use">Avoid repeating unchanged processing when validity conditions hold, or reuse a prior retrieval result deliberately.</td>
+<td data-label="Main risk or adjacent owner">Staleness, invalidation, privacy, authority change, and confusion between reuse and correct selection; G9 owns production operation, while G2 examines delivered-content validity.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="g2-article-from-temporary-work-traces-to-durable-state">From temporary work traces to durable state<a class="g2-heading-anchor" href="#g2-article-from-temporary-work-traces-to-durable-state" aria-label="Permalink to this heading">§</a></h3>
+<p>Coding work produces a great deal of context that is useful while the work is
+happening but expensive or misleading to carry forever. File searches orient
+the investigation. Reads build a control-path model. Edit attempts expose
+constraints. Tests and builds create evidence. Large structured tool results
+may supply one decisive field. These traces are not worthless; they simply have
+a different lifecycle from the state the next decision needs.</p>
+<figure class="g2-figure" aria-labelledby="g2-checkpoint-caption" aria-describedby="g2-checkpoint-reading" data-diagram="exploration-checkpoint">
+  <figcaption id="g2-checkpoint-caption">Proposed checkpoint: carry selected state into the next call</figcaption>
+  <div class="g2-checkpoint-flow">
+    <section class="g2-checkpoint-stage g2-checkpoint-stage--exhaust" aria-labelledby="g2-exhaust-title"><h4 id="g2-exhaust-title">Temporary work traces</h4><ul><li>Search trails</li><li>File reads</li><li>Failed edits</li><li>Long logs</li><li>Large payloads</li></ul></section>
+    <section class="g2-checkpoint-stage g2-checkpoint-stage--durable" aria-labelledby="g2-durable-title"><h4 id="g2-durable-title">Reviewed checkpoint</h4><ul><li>Current decision</li><li>Verified evidence</li><li>Rejected theories</li><li>Open questions</li><li>Recovery references</li></ul></section>
+    <section class="g2-checkpoint-stage g2-checkpoint-stage--next" aria-labelledby="g2-fresh-call-title"><h4 id="g2-fresh-call-title">Fresh call</h4><ul><li>Right instruction</li><li>Right artifact</li><li>Bounded next step</li><li>Known limits</li><li>Room to work</li></ul></section>
+  </div>
+  <p id="g2-checkpoint-reading" class="g2-figure-reading"><strong>How to read it:</strong> The middle artifact is the high-risk boundary. It should be smaller than the exploration trace, but its conclusions, omissions, provenance, and source-authority labels must be inspectable before the next call relies on it.</p>
+</figure>
+<div class="g2-table-wrap" role="region" aria-label="Turning high-volume work traces into recoverable decision state" tabindex="0"><table class="g2-table"><caption>Turning high-volume work traces into recoverable decision state</caption>
+<thead>
+<tr>
+<th scope="col">Accumulated work trace</th>
+<th scope="col">Durable state for the next call</th>
+<th scope="col">What remains recoverable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Accumulated work trace">Search queries and dozens of candidate file hits</td>
+<td data-label="Durable state for the next call">The entry point, relevant dependency path, files actually inspected, and unresolved branches</td>
+<td data-label="What remains recoverable">Exact query results and repository version</td>
+</tr>
+<tr>
+<td data-label="Accumulated work trace">A rejected global-flag hypothesis</td>
+<td data-label="Durable state for the next call">The hypothesis, its rejected status, and the contract evidence that displaced it</td>
+<td data-label="What remains recoverable">Original note and comparison record</td>
+</tr>
+<tr>
+<td data-label="Accumulated work trace">Several failed edits</td>
+<td data-label="Durable state for the next call">The attempted approach, observed failure, and constraint learned from it</td>
+<td data-label="What remains recoverable">Patch or commit identity and command output</td>
+</tr>
+<tr>
+<td data-label="Accumulated work trace">A long test/build stream</td>
+<td data-label="Durable state for the next call">Exact failing assertion, environment, affected check, summary of passes, and run identity</td>
+<td data-label="What remains recoverable">Complete immutable log</td>
+</tr>
+<tr>
+<td data-label="Accumulated work trace">A large JSON response</td>
+<td data-label="Durable state for the next call">Decision-relevant fields, schema/version, omissions, and uncertainty</td>
+<td data-label="What remains recoverable">Original payload under a stable identifier</td>
+</tr>
+</tbody>
+</table></div>
+<p>The durable side should not contain only conclusions. It should preserve enough
+evidence and disagreement for another call—or a human reviewer—to decide
+whether those conclusions deserve to control downstream work.</p>
+<h3 id="g2-article-intentional-compaction-at-a-decision-boundary">Intentional compaction at a decision boundary<a class="g2-heading-anchor" href="#g2-article-intentional-compaction-at-a-decision-boundary" aria-label="Permalink to this heading">§</a></h3>
+<p>Compaction need not wait until the window is nearly full. A meaningful boundary
+can be a useful trigger: exploration has produced a reviewable model, a plan has
+been approved for implementation, or a bounded slice has been verified. At such
+a boundary, the accumulated trajectory can be replaced with a reviewed
+checkpoint designed for the next decision.</p>
+<p>The source&#39;s research → plan → implement workflow motivates this pattern,
+but it does not establish a universal trigger or sufficient checkpoint schema.
+This article proposes the following candidate fields for later testing:</p>
+<ul>
+<li>the current goal and the decision now being made;</li>
+<li>controlling requirements and constraints;</li>
+<li>verified findings with exact source or run references;</li>
+<li>rejected hypotheses and why they were rejected;</li>
+<li>completed changes and the current repository or system state;</li>
+<li>checks run, observed results, and unverified behavior;</li>
+<li>unresolved questions, blockers, and confidence limits;</li>
+<li>the next intended action; and</li>
+<li>identifiers that recover omitted searches, logs, payloads, and prior versions.</li>
+</ul>
+<p>This is more than summarizing the conversation. It transfers working and
+decision state from an exploratory trace to a smaller artifact for later calls;
+it does <strong>not</strong> transfer the authority of the underlying material. Contracts,
+evidence, and source records retain their own authority. The checkpoint carries
+their provenance, review status, uncertainty, and recovery references. As the
+structural-retrieval example showed, a concise checkpoint can still preserve a
+wrong dependency model. Review therefore remains necessary at the boundary.</p>
+<p>No fixed token percentage determines the right moment. Task complexity,
+uncertainty, loss risk, recovery cost, and the presence of a real decision
+boundary all matter. The research → plan → implement sequence is one
+practitioner pattern that makes those boundaries visible, not a general law of
+Context Engineering.</p>
+<h3 id="g2-article-worked-window-decision-the-long-test-log">Worked window decision: the long test log<a class="g2-heading-anchor" href="#g2-article-worked-window-decision-the-long-test-log" aria-label="Permalink to this heading">§</a></h3>
+<p>Suppose the checkout suite emits 500 lines. Most lines report passing tests.
+One block records the new tax-rounding failure, exact expected and observed
+values, environment, and test identity. Three different treatments serve
+different future needs:</p>
+<ol>
+<li><strong>Keep exact in the active packet:</strong> retain the failing block and invocation
+metadata because the next call must diagnose those values.</li>
+<li><strong>Summarize in the active packet:</strong> state that the remaining checkout suite
+passed, including the count and run identifier, because the full success
+stream is not needed for the current decision.</li>
+<li><strong>Clear but keep recoverable:</strong> store the complete log under its immutable
+run identifier so a reviewer can inspect any omitted line later.</li>
+</ol>
+<p>The defensible choice depends on a survival policy. Exact numeric evidence,
+current constraints, unresolved conflict, provenance, and recovery identifiers
+usually deserve stronger protection than repetitive progress output. But that
+is not a universal deletion rule. If intermittent timing behavior is under
+investigation, repeated timestamps that looked like noise may become the main
+evidence.</p>
+<h3 id="g2-article-fidelity-and-recoverability">Fidelity and recoverability<a class="g2-heading-anchor" href="#g2-article-fidelity-and-recoverability" aria-label="Permalink to this heading">§</a></h3>
+<p>Every lossy transformation should make two questions explicit:</p>
+<ul>
+<li>Which downstream decisions is the transformed representation intended to
+support?</li>
+<li>If an omitted detail becomes important, can the system recover the exact
+original version?</li>
+</ul>
+<p>Recoverability changes the risk of removal. Clearing an immutable log with a
+tested retrieval path is different from replacing it with an unaudited summary
+and discarding the source. Even a recoverable item may be practically lost if
+the next call does not know it exists, lacks permission to fetch it, or cannot
+afford the retrieval latency.</p>
+<p>Caching requires a related validity judgment. A cached prompt prefix or
+retrieval result may be byte-identical while its authority has expired. A cache
+key should reflect the versions and conditions that make reuse valid, and the
+system needs an invalidation path when policies, permissions, tools, or source
+material change. Current G2 seed material identifies caching as important but
+does not yet support a general design recommendation.</p>
+<p>With instructions, sources, assembly, and window management in place, the
+whole context lifecycle can now be seen as one connected control loop.</p>
+
+</section>
+<section class="g2-article-section" id="g2-context-lifecycle" aria-labelledby="g2-context-lifecycle-title">
+  <h2 id="g2-context-lifecycle-title">The complete context lifecycle<a class="g2-heading-anchor" href="#g2-context-lifecycle-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>The shipping case can be reconstructed as a ten-step sequence:</p>
+<ol>
+<li><strong>Bound the decision.</strong> Fix the destination-specific availability regression
+without changing the public API or tax behavior.</li>
+<li><strong>Derive context requirements.</strong> The call needs the observed failure, current
+availability rule, relevant implementation, validation route, and known
+constraints.</li>
+<li><strong>Map known sources.</strong> The harness identifies contracts, test systems,
+repository areas, old notes, logs, and indexes that may hold needed material.</li>
+<li><strong>Retrieve and trace.</strong> The harness fetches concrete versions, follows the
+behavior from checkout through the quote service, and marks unresolved
+branches instead of treating a list of files as understanding.</li>
+<li><strong>Inspect and select.</strong> It applies authority, freshness, conflict,
+permission, and recovery questions and returns to retrieval when an inspected
+item exposes another need.</li>
+<li><strong>Assemble and deliver.</strong> The packet labels the contract as controlling, the
+test as evidence, the old note as superseded history, and the code as the
+change surface.</li>
+<li><strong>Observe the result.</strong> The response produces a change; focused and suite
+tests create new evidence.</li>
+<li><strong>Checkpoint verified state.</strong> A reviewed handoff records the governing
+decision, rejected theory, current change, results, uncertainty, and recovery
+references without replaying all exploration.</li>
+<li><strong>Edit for the next call.</strong> Resolved material leaves the active set, the new
+failure enters, snapshots update, and bulky logs remain recoverable.</li>
+<li><strong>Evaluate and retain the trace.</strong> The system connects packet, invocation,
+   result, and state change without claiming that presence proves causal use.</li>
+</ol>
+<p>This lifecycle is recursive. Retrieval may reveal that the instruction is
+wrong. A test may change the decision. A permission boundary may remove a
+source and require escalation. Context Engineering is therefore a repeated
+control process around model calls, not a one-time prompt-building step.</p>
+
+</section>
+<section class="g2-article-section" id="g2-context-failures" aria-labelledby="g2-context-failures-title">
+  <h2 id="g2-context-failures-title">How context failures appear<a class="g2-heading-anchor" href="#g2-context-failures-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Context failures are easier to diagnose when the context path is explicit.
+The first question below identifies a useful checkpoint, not a guaranteed
+cause; model capability, tool behavior, orchestration, security policy, and
+application code can produce similar symptoms.</p>
+<div class="g2-table-wrap" role="region" aria-label="Symptoms, context-path checkpoints, and competing explanations" tabindex="0"><table class="g2-table"><caption>Symptoms, context-path checkpoints, and competing explanations</caption>
+<thead>
+<tr>
+<th scope="col">Observed symptom</th>
+<th scope="col">First context-path checkpoint</th>
+<th scope="col">Competing explanation to keep open</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Observed symptom">Plausible work solves the wrong task.</td>
+<td data-label="First context-path checkpoint">Were the outcome and success conditions explicit in the controlling instruction?</td>
+<td data-label="Competing explanation to keep open">The task itself may be ambiguous or internally inconsistent.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">The response ignores a current fact.</td>
+<td data-label="First context-path checkpoint">Was the fact retrieved, delivered, clearly labeled, and visibly current?</td>
+<td data-label="Competing explanation to keep open">The model may have received and misused it.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">Relevant information was present but apparently unused.</td>
+<td data-label="First context-path checkpoint">Was it buried, conflicting, weakly labeled, transformed, or delivered to the wrong role?</td>
+<td data-label="Competing explanation to keep open">The model may lack the reasoning capability the decision requires.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">A later call loses a constraint.</td>
+<td data-label="First context-path checkpoint">Did the delta, handoff, or compaction preserve it?</td>
+<td data-label="Competing explanation to keep open">Another system component may have overwritten the state.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">A summary appears correct but later work fails.</td>
+<td data-label="First context-path checkpoint">Which exact details survived and which were irreversibly lost?</td>
+<td data-label="Competing explanation to keep open">The failure may be unrelated to the summary.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">A coherent plan expands a wrong assumption into many changes.</td>
+<td data-label="First context-path checkpoint">Did its research input preserve sources, unresolved dependency branches, rejected alternatives, and review status?</td>
+<td data-label="Competing explanation to keep open">The domain model or requirement may itself be wrong.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">A coordinator receives a confident but incomplete worker summary.</td>
+<td data-label="First context-path checkpoint">Does the handoff expose inspection scope, evidence, uncertainty, missing branches, and recovery paths?</td>
+<td data-label="Competing explanation to keep open">The delegated investigation may have been poorly bounded or executed.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">Two agents act from incompatible assumptions.</td>
+<td data-label="First context-path checkpoint">Did their role-specific packets share current decisions and source versions?</td>
+<td data-label="Competing explanation to keep open">The workflow may lack a conflict-resolution protocol.</td>
+</tr>
+<tr>
+<td data-label="Observed symptom">A result cannot be explained or compared.</td>
+<td data-label="First context-path checkpoint">Can the intended and observable packet, transformations, invocation, and resulting state be reconstructed?</td>
+<td data-label="Competing explanation to keep open">Provider-managed layers may remain unavailable.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The table also shows why “add more context” is a weak default response. More
+material does not repair a missing governing source, an authority conflict, a
+stale summary, or a wrong-role delivery. Diagnosis should identify where the
+path broke before choosing a mechanism.</p>
+
+</section>
+<section class="g2-article-section" id="g2-context-evaluation" aria-labelledby="g2-context-evaluation-title">
+  <h2 id="g2-context-evaluation-title">Evaluating a context change<a class="g2-heading-anchor" href="#g2-context-evaluation-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Evaluation asks whether a context choice improved behavior under stated
+conditions. G8 owns the general evaluation, verification, and observability
+method. G2&#39;s local responsibility is to make context variants and their traces
+specific enough to compare.</p>
+<p>One successful focused packet does not establish that smaller packets are
+better. It may have removed misleading material, introduced the missing
+contract, improved organization, changed an instruction, or coincided with a
+different model outcome. A credible comparison keeps the task, model, tools,
+invocation conditions, and success criteria stable while varying the context
+policy deliberately.</p>
+<div class="g2-table-wrap" role="region" aria-label="Conditions that separate packet size from organization and sufficiency" tabindex="0"><table class="g2-table"><caption>Conditions that separate packet size from organization and sufficiency</caption>
+<thead>
+<tr>
+<th scope="col">Comparison condition</th>
+<th scope="col">What it helps distinguish</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Comparison condition">Credible current approach</td>
+<td data-label="What it helps distinguish">Establishes how the real system behaves before the change.</td>
+</tr>
+<tr>
+<td data-label="Comparison condition">Broad, weakly organized packet</td>
+<td data-label="What it helps distinguish">Exposes the effects of carrying candidates without a reasoned structure or selection policy.</td>
+</tr>
+<tr>
+<td data-label="Comparison condition">Broad, well-structured packet</td>
+<td data-label="What it helps distinguish">Tests whether organization—not deletion—accounts for the improvement.</td>
+</tr>
+<tr>
+<td data-label="Comparison condition">Reasoned focused packet</td>
+<td data-label="What it helps distinguish">Tests the proposed decision-relevant selection and labeling.</td>
+</tr>
+<tr>
+<td data-label="Comparison condition">Deliberately underspecified packet</td>
+<td data-label="What it helps distinguish">Reveals which success conditions fail when necessary information is absent.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Useful observations depend on the task but can include decision correctness,
+constraint violations, required tool use, recovery behavior, latency, cost,
+variance across repeated runs, and the ability to reconstruct failures. A
+context manifest connects those outcomes to what changed without turning
+correlation into proof of internal model use.</p>
+<h3 id="g2-article-immediate-results-and-delayed-consequences">Immediate results and delayed consequences<a class="g2-heading-anchor" href="#g2-article-immediate-results-and-delayed-consequences" aria-label="Permalink to this heading">§</a></h3>
+<p>A context change can look successful at one horizon and remain uncertain at
+another. The focused shipping test answers an immediate behavior question. The
+checkout suite checks nearby regressions. Neither shows by itself whether the
+change made the code harder to modify months later. The practitioner source for
+this iteration emphasizes that mismatch: functional feedback can arrive in
+seconds, while architectural or maintainability costs may appear only after
+later changes. It also explicitly acknowledges that those delayed effects are
+difficult to benchmark and prove.</p>
+<figure class="g2-figure" aria-labelledby="g2-horizons-caption" aria-describedby="g2-horizons-reading" data-diagram="feedback-horizons">
+  <figcaption id="g2-horizons-caption">Different consequences become visible on different clocks</figcaption>
+  <ol class="g2-horizons">
+    <li><span>Seconds to minutes</span><strong>Focused behavior</strong><small>Assertion, tool result, local constraint</small></li>
+    <li><span>Minutes to days</span><strong>Task completion</strong><small>Suite, review, rework, integration</small></li>
+    <li><span>Weeks to months</span><strong>Later change</strong><small>Design drift, recurring defect, change cost</small></li>
+  </ol>
+  <p id="g2-horizons-reading" class="g2-figure-reading"><strong>How to read it:</strong> Fast checks give cleaner feedback but cover a narrower outcome. Later observations cover durability while accumulating more competing causes.</p>
+</figure>
+<div class="g2-table-wrap" role="region" aria-label="What context evaluation can and cannot establish at three time horizons" tabindex="0"><table class="g2-table"><caption>What context evaluation can and cannot establish at three time horizons</caption>
+<thead>
+<tr>
+<th scope="col">Observation horizon</th>
+<th scope="col">What can be observed</th>
+<th scope="col">What it cannot establish alone</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Observation horizon">Same call or focused run</td>
+<td data-label="What can be observed">Instruction following, target behavior, tool use, exact failure, and recovery behavior</td>
+<td data-label="What it cannot establish alone">Broad regression safety or durable design quality</td>
+</tr>
+<tr>
+<td data-label="Observation horizon">Task completion</td>
+<td data-label="What can be observed">Suite results, constraint preservation, review findings, implementation coherence, and rework before acceptance</td>
+<td data-label="What it cannot establish alone">Ease of future change or long-term incident risk</td>
+</tr>
+<tr>
+<td data-label="Observation horizon">Later codebase change</td>
+<td data-label="What can be observed">Repeated defects, change surface, design drift, and effort needed to modify the area again</td>
+<td data-label="What it cannot establish alone">That one earlier context packet caused the outcome; models, people, requirements, and code all changed in between</td>
+</tr>
+</tbody>
+</table></div>
+<p>The longer the horizon, the more useful durable records become and the weaker
+simple causal attribution becomes. A context manifest can preserve the packet
+and decisions for later comparison, but it cannot make months of intervening
+changes disappear. G8 owns the evaluation design. G2&#39;s contribution is to make
+the tested context variant and its decision artifacts reconstructable at every
+horizon.</p>
+<p>The current source set provides practitioner guidance, implementation examples,
+source-reported results, and useful negative cases, but not the independent
+controlled evidence needed for a general effectiveness claim. This article
+therefore presents a design model and evaluation questions, not a settled law
+that focus, phase handoffs, context isolation, or compression always improves
+quality.</p>
+
+</section>
+<section class="g2-article-section" id="g2-context-boundaries" aria-labelledby="g2-context-boundaries-title">
+  <h2 id="g2-context-boundaries-title">Boundaries with adjacent harness systems<a class="g2-heading-anchor" href="#g2-context-boundaries-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>Context Engineering touches almost every harness component because each can
+produce or consume model-facing information. The primary-home rule keeps that
+contact from turning G2 into the whole field.</p>
+<div class="g2-table-wrap" role="region" aria-label="Primary ownership and G2's local current-call question" tabindex="0"><table class="g2-table"><caption>Primary ownership and G2's local current-call question</caption>
+<thead>
+<tr>
+<th scope="col">Nearby decision</th>
+<th scope="col">Primary home</th>
+<th scope="col">Context Engineering&#39;s local question</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Nearby decision">What outcome and invocation policy control?</td>
+<td data-label="Primary home">G1 — Foundations and Field Vocabulary</td>
+<td data-label="Context Engineering's local question">What information does this bounded call require?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">What persists outside the call?</td>
+<td data-label="Primary home">G3 — Memory and State</td>
+<td data-label="Context Engineering's local question">Which retained information should be loaded now?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">What can the model call?</td>
+<td data-label="Primary home">G4 — Tools, Protocols, and Integration</td>
+<td data-label="Context Engineering's local question">Which capability descriptions and results should this call see?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">How is reusable procedure packaged?</td>
+<td data-label="Primary home">G5 — Skills</td>
+<td data-label="Context Engineering's local question">When should skill content enter the working set?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">Which step or worker acts next?</td>
+<td data-label="Primary home">G6 — Agent Loops, Workflows, and Orchestration</td>
+<td data-label="Context Engineering's local question">What should this role see for this decision?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">What is trusted and permitted?</td>
+<td data-label="Primary home">G7 — Security, Permissions, and Human Control</td>
+<td data-label="Context Engineering's local question">Which authority constraints and trust labels must be preserved?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">Did the context help?</td>
+<td data-label="Primary home">G8 — Evaluation, Verification, and Observability</td>
+<td data-label="Context Engineering's local question">Can the exact packet be connected to outcomes and failures?</td>
+</tr>
+<tr>
+<td data-label="Nearby decision">How is reuse operated?</td>
+<td data-label="Primary home">G9 — Production Infrastructure and Operations</td>
+<td data-label="Context Engineering's local question">What do cache, storage, version, and outage behavior do to delivered information?</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are shared boundaries, not ownership transfers. For example, G3 decides
+how memory is written, retained, and recalled; G2 examines which recalled item
+belongs in this call. G4 defines a tool&#39;s interface and execution semantics; G2
+examines how its description and results appear in the working set. G6 chooses
+a workflow and role; G2 assembles the selected role&#39;s local view.</p>
+
+</section>
+<section class="g2-article-section" id="g2-evidence-status" aria-labelledby="g2-evidence-status-title">
+  <h2 id="g2-evidence-status-title">Evidence status and open questions<a class="g2-heading-anchor" href="#g2-evidence-status-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>This v1.2 candidate retains the seven maintainer-approved seed reviews and adds
+one pinned practitioner repository as its sole new source lineage. It promotes
+no research finding. Four evidence classes remain separate:</p>
+<ul>
+<li><strong>Teaching illustration:</strong> the shipping regression, packet, run identifiers,
+and diagrams are invented to explain the model.</li>
+<li><strong>Project working model:</strong> the candidate-to-delivery lifecycle, design
+questions, manifest fields, and failure checkpoints organize the next
+research pass but are not approved findings.</li>
+<li><strong>Source-reported guidance:</strong> the seed cards preserve what vendor and
+practitioner sources recommend or report, with their limitations.</li>
+<li><strong>Established evidence:</strong> none has been promoted for G2.</li>
+</ul>
+<p>The new source family also shows a useful refinement in emphasis. The earlier
+essay centers context management while already reporting the need for sustained
+human engagement and codebase expertise. The later essay adds stronger
+counterevidence: harness work is not sufficient by itself, a lights-off attempt
+failed, several layers of human review remain necessary, and the maintainability
+thesis lacks a good benchmark. This is one practitioner refining a view, not two
+independent sources agreeing.</p>
+<p>The next research pass should pressure-test, extend, or replace this treatment.
+Important open questions include:</p>
+<ul>
+<li>Which independent controlled studies isolate context composition from model,
+tool, orchestration, and prompt changes?</li>
+<li>Under what task conditions does focus help, and when does broader structured
+context protect against premature narrowing?</li>
+<li>How should authority, provenance, and security labels survive retrieval,
+summarization, caching, and handoff?</li>
+<li>Which manifest fields are actually sufficient to reproduce and diagnose a
+model call across common runtimes?</li>
+<li>How can semantic loss in compaction or compression be detected before it
+causes downstream failure?</li>
+<li>Which fields must a phase-boundary checkpoint preserve, and how should an
+incorrect research artifact be detected before it becomes planning context?</li>
+<li>When does a context-isolated worker improve focus, and when does its handoff
+merely hide incomplete retrieval or disagreement?</li>
+<li>Which cache-validity and invalidation practices transfer across providers and
+harness architectures?</li>
+<li>How should negative evidence—an unsuccessful retrieval, missing source, or
+failed recovery—be represented in the working set?</li>
+<li>Which observations connect an immediate context improvement to delayed
+maintainability without overstating causality?</li>
+</ul>
+
+</section>
+<section class="g2-article-section" id="g2-source-notes" aria-labelledby="g2-source-notes-title">
+  <h2 id="g2-source-notes-title">Source notes<a class="g2-heading-anchor" href="#g2-source-notes-title" aria-label="Permalink to this heading">§</a></h2>
+  <p>The records below identify the local review cards used during drafting. The
+repository copies preserve exact inspected support, source posture, and unresolved limits.</p>
+<div class="g2-table-wrap" role="region" aria-label="Local source records, their use, and their controlling limits" tabindex="0"><table class="g2-table"><caption>Local source records, their use, and their controlling limits</caption>
+<thead>
+<tr>
+<th scope="col">Local source record</th>
+<th scope="col">Use in this candidate</th>
+<th scope="col">Controlling limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-01 — Arize Context Engineering Basics</span></td>
+<td data-label="Use in this candidate">What-the-model-sees framing; observability, versioning, and regression-test leads.</td>
+<td data-label="Controlling limit">Live vendor guidance with low empirical rigor; same organizational family as SEED-02.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-02 — Arize production context and evaluation</span></td>
+<td data-label="Use in this candidate">Sufficiency, omission, systems of record, and the evaluation loop.</td>
+<td data-label="Controlling limit">Interview/vendor narrative; illustrative code; no controlled comparison.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-03 — Cursor Directory collection</span></td>
+<td data-label="Use in this candidate">Coverage and later-discovery lead inventory only.</td>
+<td data-label="Controlling limit">Derivative aggregator; quantitative and effectiveness claims are not used here.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-04 — Anthropic effective context engineering</span></td>
+<td data-label="Use in this candidate">Changing working set, instruction altitude, progressive disclosure, and long-horizon choices.</td>
+<td data-label="Controlling limit">Practitioner article and explanatory figures; broad effectiveness claims remain unverified.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-05 — Anthropic cookbook</span></td>
+<td data-label="Use in this candidate">Compaction, clearing, memory, triggers, and survival checks.</td>
+<td data-label="Controlling limit">One synthetic vendor workload; not reproduced; token reduction is not quality proof.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-06 — Cursor self-driving codebases</span></td>
+<td data-label="Use in this candidate">Intent, procedure rigidity, freshness, and handoffs.</td>
+<td data-label="Controlling limit">Vendor report; orchestration confound; no isolated context comparison.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">SEED-07 — Cursor swarm economics</span></td>
+<td data-label="Use in this candidate">Role-specific views, shared decisions, and review lenses.</td>
+<td data-label="Controlling limit">Vendor report; raw runs absent; context effects not causally isolated.</td>
+</tr>
+<tr>
+<td data-label="Local source record"><span class="g2-source-record">ACE-01 — Advanced Context Engineering for Coding Agents</span></td>
+<td data-label="Use in this candidate">Trajectory, intentional compaction, context isolation, phase-specific artifacts, error amplification, decision altitude, and feedback horizons.</td>
+<td data-label="Controlling limit">One author/vendor lineage of practitioner essays. Linked evidence was not opened; reported cases are not controlled comparisons; quantitative and categorical claims are excluded.</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section class="g2-article-section" id="g2-author-appendix" aria-labelledby="g2-author-appendix-title">
+  <h2 id="g2-author-appendix-title">Author appendix<a class="g2-heading-anchor" href="#g2-author-appendix-title" aria-label="Permalink to this heading">§</a></h2>
+  <details class="g2-deep-dive" id="g2-author-scope-note"><summary>Open scope, completeness, and review limits</summary><div class="g2-deep-dive-body"><p><strong>Current scope.</strong> This candidate develops only Context Engineering. It retains
+the approved G2 reference containers, order, and adjacent-system boundaries.
+It does not change the canonical outline or establish the structure of later
+subjects.</p>
+<p><strong>Current completeness.</strong> This iteration keeps the complete v1 conceptual spine
+and recurring worked case, then adds a deeper coding-agent account of
+trajectory, structural retrieval, phase-specific context, intentional
+compaction, context isolation, decision-level representations, and delayed
+feedback. Its sole new source is <code>V2-G2-ACE-01</code>; later authorized passes may add
+independent evidence, implementation detail, or counterexamples.</p>
+<p><strong>Current limits.</strong> No learner study, live model run, controlled comparison, or
+independent subject-evidence review has occurred. The local HTML is the intended
+maintainer review surface. The v1 Markdown and combined HTML baselines remain historical snapshots. This
+standalone page is the current reviewer-facing projection.</p>
+</div></details>
+</section>
+          <aside class="g2-evidence-note" aria-label="Evidence boundary"><strong>Evidence boundary:</strong> this page is a non-authoritative v1.2 candidate. Its sole new source family contributes practitioner workflows, examples, and counterexamples—not controlled confirmation. The source section separates reported guidance, teaching fixtures, project working models, and unresolved questions.</aside>
+          <nav class="g2-end-nav" aria-label="End of Context Engineering article">
+            <a href="index.html#g2">Back to the outline: Context Engineering ↑</a>
+            <a href="#g2-first-draft">Back to the article start ↑</a>
+          </nav>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p><strong>Review state:</strong> Context Engineering v1.2 is a non-authoritative reviewer-facing candidate. The canonical outline remains unapproved, and no research finding is promoted by this presentation.</p>
+    <p>This self-contained page uses no external styles, fonts, images, scripts, frames, analytics, storage, or render-time network requests.</p>
+  </footer>
+</body>
+</html>

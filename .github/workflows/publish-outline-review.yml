@@ -1,4 +1,4 @@
-name: Publish outline review companion
+name: Publish outline review site
 
 on:
   push:
@@ -6,7 +6,8 @@ on:
       - codex/outline-review-pages
     paths:
       - .github/workflows/publish-outline-review.yml
-      - research/outline-development/outline-review-companion.html
+      - research/outline-development/site/index.html
+      - research/outline-development/site/context-engineering.html
 permissions:
   contents: read
   pages: write
@@ -18,7 +19,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Deploy single-page review aid
+    name: Deploy two-page review site
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
@@ -29,26 +30,29 @@ jobs:
       - name: Check out the approved branch
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
-      - name: Stage only the review companion
+      - name: Stage only the review site
         shell: bash
         run: |
           set -euo pipefail
           test ! -e _site
           install -d _site
-          install -m 0644 research/outline-development/outline-review-companion.html _site/index.html
+          install -m 0644 research/outline-development/site/index.html _site/index.html
+          install -m 0644 research/outline-development/site/context-engineering.html _site/context-engineering.html
           touch _site/.nojekyll
-          cmp -s research/outline-development/outline-review-companion.html _site/index.html
+          cmp -s research/outline-development/site/index.html _site/index.html
+          cmp -s research/outline-development/site/context-engineering.html _site/context-engineering.html
           test ! -s _site/.nojekyll
-          mapfile -t published_files < <(find _site -mindepth 1 -maxdepth 1 -type f -printf '%f\n' | sort)
-          test "${#published_files[@]}" -eq 2
+          mapfile -t published_files < <(find _site -mindepth 1 -type f -printf '%P\n' | sort)
+          test "${#published_files[@]}" -eq 3
           test "${published_files[0]}" = ".nojekyll"
-          test "${published_files[1]}" = "index.html"
-          test "$(find _site -mindepth 1 -maxdepth 1 | wc -l)" -eq 2
+          test "${published_files[1]}" = "context-engineering.html"
+          test "${published_files[2]}" = "index.html"
+          test "$(find _site -mindepth 1 | wc -l)" -eq 3
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
-      - name: Upload the single-page artifact
+      - name: Upload the two-page artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: _site

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Harness Engineering V2 — Compact Outline Review Companion</title>
+  <title>Harness Engineering V2 — Outline Review</title>
   <style>
     :root {
       --canvas: #eef2f7;
@@ -933,7 +933,7 @@
       }
     }
 
-    /* V2-D027: same-page G2 baseline draft. The outline above remains intact. */
+    /* V2-D033: cumulative expository G2 article. The outline above remains intact. */
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -965,10 +965,10 @@
       align-items: center;
       margin-inline-start: 0.4rem;
       padding: 0.28rem 0.55rem;
-      border: 1px solid #88b29c;
+      border: 1px solid #7ba88f;
       border-radius: 999px;
-      background: #e9f7ef;
-      color: #205c3e;
+      background: #e8f6ee;
+      color: #174f35;
       font-size: 0.7rem;
       font-weight: 800;
       letter-spacing: 0.025em;
@@ -976,867 +976,1063 @@
     }
 
     .section-title-link:hover .draft-link-chip {
-      border-color: #447e60;
-      background: #d9f0e3;
+      border-color: #3d7758;
+      background: #d7eee1;
     }
 
-    .g2-draft {
+    .g2-article {
       margin-top: 5rem;
       scroll-margin-top: 5.2rem;
-      border: 1px solid #b8c9d9;
-      border-radius: 1rem;
-      background: var(--surface);
-      box-shadow: 0 1.2rem 3rem rgb(23 32 51 / 12%);
-      overflow: clip;
+      border-top: 0.35rem solid #174f83;
+      border-bottom: 1px solid #b9c7d5;
+      background: #fff;
+      color: #202b3b;
+      box-shadow: 0 1rem 2.8rem rgb(23 32 51 / 10%);
     }
 
-    .g2-draft:focus {
+    .g2-article:focus {
       outline: none;
     }
 
-    .g2-draft:focus-visible {
-      outline: none;
+    .g2-article:focus-visible {
+      outline: 0.24rem solid var(--focus);
+      outline-offset: 0.25rem;
     }
 
-    .g2-draft:focus-visible .g2-draft-header {
-      box-shadow: inset 0 0 0 0.22rem #f5d36a;
+    .g2-article [id] {
+      scroll-margin-top: 5.4rem;
     }
 
-    .g2-draft-header {
-      padding: clamp(1.3rem, 4vw, 2.5rem);
-      color: #f7fbff;
-      background:
-        radial-gradient(circle at 88% 10%, rgb(126 205 167 / 28%), transparent 18rem),
-        linear-gradient(135deg, #123d66, #176176);
+    .g2-article-header {
+      padding: clamp(1.8rem, 5vw, 3.6rem) clamp(1.25rem, 5vw, 4.5rem) 2rem;
+      border-bottom: 1px solid #d6dee7;
+      background: #fbfcfe;
     }
 
-    .g2-draft-header .eyebrow {
-      color: #c9ecdf;
-    }
-
-    .back-link {
-      display: inline-flex;
-      margin-bottom: 1.1rem;
-      color: #fff;
-      font-size: 0.86rem;
+    .g2-article .back-link {
+      display: inline-block;
+      margin-bottom: 1.3rem;
+      font-size: 0.88rem;
       font-weight: 750;
     }
 
-    .back-link:hover {
-      color: #d7f5e7;
+    .g2-article-header .eyebrow {
+      margin: 0 0 0.5rem;
+      color: #326242;
+      font-size: 0.76rem;
+      letter-spacing: 0.09em;
     }
 
-    .g2-draft-header h2 {
-      max-width: 19ch;
+    .g2-article-header h2 {
+      max-width: 22ch;
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.06;
-      letter-spacing: -0.035em;
+      color: #14283c;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(2.15rem, 5vw, 3.75rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
     }
 
-    .draft-lede {
+    .g2-article-deck {
       max-width: 66ch;
-      margin: 1rem 0 0;
-      color: #e4f1f6;
-      font-size: clamp(1.05rem, 2vw, 1.22rem);
+      margin: 1.25rem 0 0;
+      color: #384a5e;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(1.13rem, 2vw, 1.32rem);
+      line-height: 1.58;
+    }
+
+    .g2-article-deck p {
+      margin: 0.75rem 0 0;
+    }
+
+    .g2-status-note {
+      max-width: 76ch;
+      margin: 1.35rem 0 0;
+      padding-top: 0.85rem;
+      border-top: 1px solid #dce3ea;
+      color: #536276;
+      font-size: 0.84rem;
       line-height: 1.55;
     }
 
-    .draft-status {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1.25rem 0 0;
-      padding: 0;
-      list-style: none;
+    .g2-article-layout {
+      display: grid;
+      grid-template-columns: minmax(11.5rem, 14rem) minmax(0, 47rem);
+      justify-content: center;
+      column-gap: clamp(2rem, 5vw, 4.5rem);
+      row-gap: 1.8rem;
+      padding: clamp(1.6rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 3.5rem) 4rem;
     }
 
-    .draft-status li {
-      padding: 0.3rem 0.62rem;
-      border: 1px solid rgb(255 255 255 / 38%);
-      border-radius: 999px;
-      background: rgb(255 255 255 / 10%);
-      color: #fff;
+    .g2-article-rail {
+      grid-column: 1;
+      grid-row: 2;
+      min-width: 0;
+    }
+
+    .g2-article-toc {
+      position: sticky;
+      top: 5.2rem;
+      max-height: calc(100vh - 6.2rem);
+      overflow: auto;
+      padding-inline-end: 0.65rem;
+      scrollbar-width: thin;
+    }
+
+    .g2-article-toc h3 {
+      margin: 0 0 0.7rem;
+      color: #263d53;
       font-size: 0.78rem;
-      font-weight: 750;
-    }
-
-    .draft-body {
-      padding: clamp(1rem, 4vw, 2.5rem);
-    }
-
-    .draft-prose {
-      max-width: 75ch;
-    }
-
-    .draft-prose p,
-    .draft-prose li {
-      color: #33455b;
-    }
-
-    .draft-prose p {
-      margin-block: 0.65rem;
-    }
-
-    .draft-prose strong {
-      color: var(--ink);
-    }
-
-    .draft-kicker {
-      margin: 0 0 0.35rem;
-      color: #29684b;
-      font-size: 0.75rem;
-      font-weight: 850;
-      letter-spacing: 0.065em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .draft-section {
-      padding-block: 2.5rem;
-      scroll-margin-top: 5.2rem;
-      border-top: 1px solid var(--line);
+    .g2-article-toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
     }
 
-    .g2-draft [id] {
-      scroll-margin-top: 5.2rem;
+    .g2-article-toc li {
+      counter-increment: toc;
+      display: grid;
+      grid-template-columns: 1.6rem minmax(0, 1fr);
+      gap: 0.15rem;
+      padding-block: 0.31rem;
+      border-bottom: 1px solid #edf0f4;
     }
 
-    .draft-section:first-of-type {
-      padding-top: 1rem;
+    .g2-article-toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      color: #788798;
+      font-size: 0.68rem;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.65;
+    }
+
+    .g2-article-toc a {
+      color: #41546a;
+      font-size: 0.78rem;
+      font-weight: 650;
+      line-height: 1.38;
+      text-decoration: none;
+    }
+
+    .g2-article-toc a:hover {
+      color: #174f83;
+      text-decoration: underline;
+    }
+
+    .g2-article-body {
+      grid-column: 2;
+      grid-row: 2;
+      min-width: 0;
+      max-width: 47rem;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.06rem;
+      line-height: 1.72;
+    }
+
+    .g2-article-body > *:first-child {
+      margin-top: 0;
+    }
+
+    .g2-at-a-glance {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      padding: 1rem 1.1rem 1.05rem;
+      border: 1px solid #bccbd8;
+      border-left: 0.3rem solid #174f83;
+      background: #f7fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .g2-at-a-glance h3 {
+      margin: 0 0 0.8rem;
+      color: #18354e;
+      font-size: 0.86rem;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .g2-at-a-glance dl {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 0.34fr) minmax(0, 1fr);
+      margin: 0;
+    }
+
+    .g2-at-a-glance dt,
+    .g2-at-a-glance dd {
+      margin: 0;
+      padding: 0.42rem 0;
+      border-top: 1px solid #e0e7ed;
+    }
+
+    .g2-at-a-glance dt:first-of-type,
+    .g2-at-a-glance dt:first-of-type + dd {
       border-top: 0;
     }
 
-    .draft-section h3 {
-      max-width: 30ch;
-      margin: 0;
-      color: #123d66;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+    .g2-at-a-glance dt {
+      padding-inline-end: 0.7rem;
+      color: #42566b;
+      font-size: 0.77rem;
+      font-weight: 800;
     }
 
-    .draft-section h4 {
-      max-width: 42ch;
-      margin: 2rem 0 0.5rem;
-      color: #183f61;
-      font-size: 1.15rem;
+    .g2-at-a-glance dd {
+      color: #27384a;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .g2-article-section {
+      padding-top: 0.25rem;
+    }
+
+    .g2-article-section + .g2-article-section {
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid #cfd8e2;
+    }
+
+    .g2-article-body h3,
+    .g2-article-body h4,
+    .g2-article-body h5 {
+      color: #172f46;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-wrap: balance;
+    }
+
+    .g2-article-body h3 {
+      margin: 0 0 1.1rem;
+      font-size: clamp(1.55rem, 3vw, 2.05rem);
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+    }
+
+    .g2-article-body h4 {
+      margin: 2.2rem 0 0.65rem;
+      font-size: 1.18rem;
       line-height: 1.3;
     }
 
-    .draft-section-intro {
-      max-width: 70ch;
-      margin: 0.75rem 0 1.5rem;
-      color: #40536a;
-      font-size: 1.04rem;
-    }
-
-    .draft-toc {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      border: 1px solid #c4d5e3;
-      border-radius: 0.7rem;
-      background: #f1f7fb;
-    }
-
-    .draft-toc p {
-      margin: 0 0 0.55rem;
-      color: var(--accent-deep);
-      font-size: 0.8rem;
-      font-weight: 850;
-      letter-spacing: 0.045em;
-      text-transform: uppercase;
-    }
-
-    .draft-toc ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .draft-toc a {
-      display: inline-flex;
-      padding: 0.42rem 0.58rem;
-      border: 1px solid #afc7da;
-      border-radius: 0.42rem;
-      background: #fff;
-      font-size: 0.82rem;
-      font-weight: 720;
+    .g2-heading-anchor {
+      margin-inline-start: 0.28rem;
+      color: #7a8998;
+      font-size: 0.75em;
+      font-weight: 500;
+      opacity: 0;
       text-decoration: none;
     }
 
-    .draft-callout {
-      max-width: 76ch;
-      margin: 1.2rem 0;
-      padding: 1rem 1.1rem;
-      border: 1px solid #bfd1df;
-      border-inline-start: 0.38rem solid #4b7da4;
-      border-radius: 0.55rem;
-      background: #f4f8fb;
+    h3:hover > .g2-heading-anchor,
+    h4:hover > .g2-heading-anchor,
+    .g2-heading-anchor:focus-visible {
+      opacity: 1;
     }
 
-    .draft-callout--authority {
-      border-color: #d8be69;
-      border-inline-start-color: #946c08;
-      background: #fff9e6;
+    .g2-article-body p {
+      margin: 0.78rem 0;
     }
 
-    .draft-callout--gap {
-      border-color: #d8b0a4;
-      border-inline-start-color: #a94f35;
-      background: #fff6f2;
+    .g2-article-body li + li {
+      margin-top: 0.38rem;
     }
 
-    .draft-callout--example {
-      border-color: #a9cbb8;
-      border-inline-start-color: #327653;
-      background: #f1faf5;
+    .g2-article-body strong {
+      color: #152d42;
     }
 
-    .draft-callout p {
-      margin: 0.35rem 0;
+    .g2-article-body code {
+      padding: 0.08rem 0.24rem;
+      border-radius: 0.2rem;
+      background: #eef2f5;
+      color: #29445d;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.82em;
+      overflow-wrap: anywhere;
     }
 
-    .callout-label,
-    .epistemic-label {
-      display: inline-block;
-      margin: 0 0 0.4rem;
-      color: #184c72;
-      font-size: 0.72rem;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .g2-definition {
+      margin: 1.4rem 0;
+      padding: 0.9rem 1.1rem;
+      border-inline-start: 0.28rem solid #2a6f55;
+      background: #f2f8f5;
+      color: #263e34;
     }
 
-    .draft-callout--authority .callout-label {
-      color: #715000;
+    .g2-definition p {
+      margin: 0;
     }
 
-    .draft-callout--gap .callout-label {
-      color: #873922;
+    .g2-table-wrap {
+      width: 100%;
+      margin: 1.5rem 0 1.8rem;
+      overflow-x: auto;
+      border: 1px solid #cbd5df;
+      background: #fff;
+      scrollbar-width: thin;
     }
 
-    .epistemic-key,
-    .comparison-grid,
-    .four-jobs,
-    .definition-grid,
-    .role-grid,
-    .mechanism-grid,
-    .gap-grid,
-    .delta-grid {
+    .g2-table {
+      width: 100%;
+      min-width: 38rem;
+      border-collapse: collapse;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.79rem;
+      line-height: 1.47;
+    }
+
+    .g2-table caption {
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid #cbd5df;
+      background: #f4f7fa;
+      color: #344a60;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .g2-table th,
+    .g2-table td {
+      padding: 0.68rem 0.72rem;
+      border: 1px solid #dce3ea;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .g2-table th {
+      background: #edf3f7;
+      color: #213d55;
+      font-size: 0.74rem;
+      letter-spacing: 0.012em;
+    }
+
+    .g2-table tbody tr:nth-child(even) {
+      background: #fafbfd;
+    }
+
+    .g2-figure {
+      margin: 1.7rem 0 2rem;
+      padding: 1rem;
+      border: 1px solid #b9c9d7;
+      background: #f8fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .g2-figure figcaption {
+      margin-bottom: 0.9rem;
+      color: #17344d;
+      font-size: 0.9rem;
+      font-weight: 850;
+    }
+
+    .g2-figure-reading {
+      margin: 0.85rem 0 0 !important;
+      padding-top: 0.75rem;
+      border-top: 1px solid #d8e0e7;
+      color: #46586a;
+      font-size: 0.78rem;
+      line-height: 1.55;
+    }
+
+    .g2-cycle {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.8rem;
-      margin: 1rem 0;
-    }
-
-    .epistemic-key {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      padding: 0;
-      list-style: none;
-    }
-
-    .epistemic-key li,
-    .comparison-card,
-    .job-card,
-    .definition-card,
-    .role-card,
-    .mechanism-card,
-    .gap-card,
-    .delta-card {
-      min-width: 0;
-      padding: 0.9rem;
-      border: 1px solid var(--line);
-      border-radius: 0.58rem;
-      background: #fff;
-    }
-
-    .epistemic-key li {
-      color: #43546a;
-      font-size: 0.84rem;
-    }
-
-    .epistemic-key strong,
-    .comparison-card strong,
-    .job-card strong,
-    .definition-card strong,
-    .role-card strong,
-    .mechanism-card strong,
-    .gap-card strong,
-    .delta-card strong {
-      display: block;
-      margin-bottom: 0.3rem;
-      color: #173d5e;
-    }
-
-    .epistemic-key li:nth-child(1) {
-      border-top: 0.28rem solid #4b7da4;
-    }
-
-    .epistemic-key li:nth-child(2) {
-      border-top: 0.28rem solid #7c6aa6;
-    }
-
-    .epistemic-key li:nth-child(3) {
-      border-top: 0.28rem solid #b06a25;
-    }
-
-    .epistemic-key li:nth-child(4) {
-      border-top: 0.28rem solid #327653;
-    }
-
-    .epistemic-key li:nth-child(5) {
-      border-top: 0.28rem solid #a94f35;
-    }
-
-    .concept-figure {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      border: 1px solid #bdd0df;
-      border-radius: 0.75rem;
-      background: #f7fafc;
-    }
-
-    .concept-figure figcaption {
-      margin-bottom: 0.9rem;
-      color: #31465b;
-      font-size: 0.85rem;
-    }
-
-    .concept-figure figcaption strong {
-      color: #163f61;
-    }
-
-    .concept-flow,
-    .retrieval-flow {
-      display: grid;
-      grid-template-columns: repeat(7, minmax(0, 1fr));
-      gap: 1.1rem;
+      gap: 0.65rem;
       margin: 0;
       padding: 0;
-      counter-reset: flow-step;
       list-style: none;
+      counter-reset: cycle;
     }
 
-    .retrieval-flow {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .concept-flow li,
-    .retrieval-flow li {
-      counter-increment: flow-step;
+    .g2-cycle li {
+      counter-increment: cycle;
       position: relative;
-      min-width: 0;
-      padding: 0.8rem 0.65rem;
-      border: 1px solid #b9cddd;
-      border-radius: 0.55rem;
+      min-height: 6rem;
+      margin: 0;
+      padding: 1.9rem 0.72rem 0.72rem;
+      border: 1px solid #9eb2c4;
       background: #fff;
-      color: #33485d;
-      font-size: 0.82rem;
+      color: #253c51;
+      font-size: 0.77rem;
+      line-height: 1.42;
+    }
+
+    .g2-cycle li::before {
+      content: counter(cycle);
+      position: absolute;
+      inset: 0.55rem auto auto 0.65rem;
+      display: grid;
+      width: 1.05rem;
+      height: 1.05rem;
+      place-items: center;
+      border-radius: 50%;
+      background: #174f83;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+    }
+
+    .g2-cycle li:nth-child(3),
+    .g2-cycle li:nth-child(4) {
+      border-color: #6ea080;
+      background: #f2f8f4;
+    }
+
+    .g2-cycle li:nth-child(4) {
+      border-width: 2px;
+      border-color: #287164;
+      background: #eef8f7;
+    }
+
+    .g2-cycle-return {
+      margin: 0.65rem 0 0;
+      padding: 0.5rem 0.65rem;
+      border: 1px dashed #b17b16;
+      background: #fff9e9;
+      color: #6b4a0c;
+      font-size: 0.75rem;
+      font-weight: 750;
       text-align: center;
     }
 
-    .concept-flow li::before,
-    .retrieval-flow li::before {
-      content: counter(flow-step);
+    .g2-source-flow {
       display: grid;
-      width: 1.45rem;
-      height: 1.45rem;
-      margin: -0.15rem auto 0.45rem;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 850;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.7rem;
+      align-items: stretch;
     }
 
-    .concept-flow li:not(:last-child)::after,
-    .retrieval-flow li:not(:last-child)::after {
-      content: "→";
-      position: absolute;
-      inset-inline-end: -0.92rem;
-      inset-block-start: 50%;
-      color: #557a99;
-      font-size: 1rem;
-      font-weight: 900;
-      transform: translateY(-50%);
-    }
-
-    .thesis-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.8rem;
-      margin: 1rem 0;
-    }
-
-    .thesis-card {
-      min-width: 0;
-      padding: 1rem;
-      border: 1px solid #c4d3df;
-      border-top: 0.32rem solid #3f7198;
-      border-radius: 0.6rem;
+    .g2-flow-stage {
+      padding: 0.78rem;
+      border: 1px solid #aab9c8;
       background: #fff;
     }
 
-    .thesis-card--rival {
-      border-top-color: #8a6f31;
+    .g2-flow-stage--candidate {
+      border-color: #b8c1ca;
+      background: #f2f4f6;
     }
 
-    .thesis-card .epistemic-label {
-      color: #345f80;
+    .g2-flow-stage--gate {
+      border: 2px solid #5b936e;
+      background: #f0f8f3;
     }
 
-    .thesis-card--rival .epistemic-label {
-      color: #735816;
+    .g2-flow-stage--delivered {
+      border: 2px solid #287164;
+      background: #eef8f7;
     }
 
-    .thesis-card h4 {
-      margin: 0 0 0.4rem;
-      font-size: 1rem;
-    }
-
-    .modifier-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin: 1rem 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .modifier-list li {
-      padding: 0.75rem;
-      border-inline-start: 0.25rem solid #788aa0;
-      background: #f5f7fa;
-      color: #3b4e63;
-      font-size: 0.9rem;
-    }
-
-    .four-jobs {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .job-card {
-      border-top: 0.3rem solid #35715a;
-    }
-
-    .job-card a {
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .job-card p,
-    .comparison-card p,
-    .definition-card p,
-    .role-card p,
-    .mechanism-card p,
-    .gap-card p,
-    .delta-card p {
-      margin: 0.35rem 0 0;
-      color: #43546a;
-      font-size: 0.9rem;
-    }
-
-    .job-artifact {
-      margin-top: 0.7rem !important;
-      padding-top: 0.6rem;
-      border-top: 1px dashed #bccad5;
-    }
-
-    .comparison-card {
-      border-top: 0.3rem solid #9a5f25;
-    }
-
-    .comparison-card--useful {
-      border-top-color: #327653;
-      background: #f3faf6;
-    }
-
-    .comparison-card blockquote {
-      margin: 0.65rem 0 0;
-      color: #2f4257;
-      font-size: 0.9rem;
-    }
-
-    .definition-grid,
-    .role-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .mechanism-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .mechanism-card:last-child {
-      grid-column: 1 / -1;
-    }
-
-    .mechanism-card dl,
-    .manifest-grid {
-      margin: 0.55rem 0 0;
-    }
-
-    .mechanism-card dt,
-    .manifest-grid dt {
-      margin-top: 0.55rem;
-      color: #1e4d71;
-      font-size: 0.76rem;
-      font-weight: 850;
+    .g2-flow-stage h5 {
+      margin: 0 0 0.5rem;
+      color: #294156;
+      font-size: 0.77rem;
       letter-spacing: 0.035em;
       text-transform: uppercase;
     }
 
-    .mechanism-card dd,
-    .manifest-grid dd {
-      margin: 0.12rem 0 0;
-      color: #43546a;
-    }
-
-    .table-wrap {
-      max-width: 100%;
-      margin: 1rem 0;
-      overflow-x: auto;
-      border: 1px solid #c6d2dd;
-      border-radius: 0.58rem;
-      background: #fff;
-    }
-
-    .table-wrap:focus-visible {
-      outline: 0.2rem solid var(--focus);
-      outline-offset: 0.18rem;
-    }
-
-    .draft-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 38rem;
-    }
-
-    .draft-table caption {
-      padding: 0.75rem 0.85rem;
-      color: #294a65;
-      font-size: 0.85rem;
-      font-weight: 750;
-      text-align: start;
-    }
-
-    .draft-table th,
-    .draft-table td {
-      padding: 0.72rem 0.78rem;
-      border-top: 1px solid #d7e0e8;
-      color: #3c4e63;
-      font-size: 0.86rem;
-      text-align: start;
-      vertical-align: top;
-    }
-
-    .draft-table th {
-      background: #edf4f8;
-      color: #173f60;
-      font-weight: 800;
-    }
-
-    .manifest-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.7rem;
-    }
-
-    .manifest-grid > div {
-      min-width: 0;
-      padding: 0.78rem;
-      border: 1px solid #ccd7e0;
-      border-radius: 0.5rem;
-      background: #fff;
-    }
-
-    .code-example {
-      margin: 1rem 0;
-      overflow-x: auto;
-      border: 1px solid #17374f;
-      border-radius: 0.62rem;
-      background: #12283a;
-    }
-
-    .code-example:focus-visible {
-      outline: 0.2rem solid var(--focus);
-      outline-offset: 0.18rem;
-    }
-
-    .code-example figcaption {
-      padding: 0.72rem 0.9rem;
-      border-bottom: 1px solid rgb(255 255 255 / 13%);
-      color: #cde8f2;
-      font-size: 0.82rem;
-    }
-
-    .code-example pre {
+    .g2-flow-stage ul {
       margin: 0;
-      padding: 1rem;
-      color: #f2f7fa;
-      font-size: 0.82rem;
-      line-height: 1.58;
+      padding-inline-start: 1.05rem;
+      color: #3d4f60;
+      font-size: 0.73rem;
+      line-height: 1.45;
     }
 
-    .delta-grid {
+    .g2-altitude,
+    .g2-horizons {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .g2-altitude {
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
-    .delta-card {
-      border-top: 0.28rem solid #4d7898;
+    .g2-altitude li,
+    .g2-horizons li {
+      position: relative;
+      margin: 0;
+      padding: 0.72rem;
+      border: 1px solid #9eb2c4;
+      background: #fff;
+      color: #31495d;
+      font-size: 0.72rem;
+      line-height: 1.4;
     }
 
-    .delta-card:nth-child(2) {
-      border-top-color: #327653;
+    .g2-altitude li:nth-child(1) { background: #eef4fa; border-color: #7f9fba; }
+    .g2-altitude li:nth-child(2) { background: #f0f6f8; border-color: #7ba7ad; }
+    .g2-altitude li:nth-child(3) { background: #eef8f7; border-color: #6c9e91; }
+    .g2-altitude li:nth-child(4) { background: #f2f8f4; border-color: #7ca184; }
+    .g2-altitude li:nth-child(5) { background: #fff9e9; border: 2px solid #b17b16; }
+
+    .g2-altitude span,
+    .g2-horizons span {
+      display: block;
+      margin-bottom: 0.28rem;
+      color: #5b6e80;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
     }
 
-    .delta-card:nth-child(3) {
-      border-top-color: #7964a0;
+    .g2-altitude strong,
+    .g2-horizons strong {
+      display: block;
+      margin-bottom: 0.24rem;
+      color: #23445e;
+      font-size: 0.78rem;
     }
 
-    .delta-card:nth-child(4) {
-      border-top-color: #a8513a;
+    .g2-altitude small,
+    .g2-horizons small {
+      display: block;
+      color: #485c6d;
+      font-size: 0.68rem;
+      line-height: 1.42;
     }
 
-    .delta-card:nth-child(5) {
-      border-top-color: #8b6f2e;
-    }
-
-    .failure-grid {
+    .g2-checkpoint-flow {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin: 1rem 0;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) minmax(0, 1fr);
+      gap: 1.1rem;
+      align-items: stretch;
     }
 
-    .failure-grid > div {
-      min-width: 0;
-      padding: 0.85rem;
-      border: 1px solid #d1dbe3;
-      border-inline-start: 0.28rem solid #a8513a;
-      border-radius: 0.5rem;
+    .g2-checkpoint-stage {
+      position: relative;
+      padding: 0.8rem;
+      border: 1px solid #aab9c8;
       background: #fff;
     }
 
-    .failure-grid dt {
-      color: #703421;
+    .g2-checkpoint-stage:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -0.82rem;
+      z-index: 1;
+      width: 0.55rem;
+      color: #557087;
+      font-size: 1.05rem;
+      font-weight: 900;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+
+    .g2-checkpoint-stage--exhaust {
+      border-color: #b8c1ca;
+      background: #f2f4f6;
+    }
+
+    .g2-checkpoint-stage--durable {
+      border: 2px solid #287164;
+      background: #eef8f7;
+    }
+
+    .g2-checkpoint-stage--next {
+      border-color: #7f9fba;
+      background: #eef4fa;
+    }
+
+    .g2-checkpoint-stage h5 {
+      margin: 0 0 0.5rem;
+      color: #294156;
+      font-size: 0.76rem;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .g2-checkpoint-stage ul {
+      margin: 0;
+      padding-inline-start: 1.05rem;
+      color: #3d4f60;
+      font-size: 0.72rem;
+      line-height: 1.45;
+    }
+
+    .g2-horizons {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .g2-horizons li:nth-child(1) { border: 2px solid #287164; background: #eef8f7; }
+    .g2-horizons li:nth-child(2) { border-color: #7f9fba; background: #eef4fa; }
+    .g2-horizons li:nth-child(3) { border: 2px dashed #b17b16; background: #fff9e9; }
+
+    .g2-packet-stack {
+      display: grid;
+      gap: 0.42rem;
+      margin: 0;
+    }
+
+    .g2-packet-layer {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 0.34fr) minmax(0, 1fr);
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0.66rem 0.75rem;
+      border: 1px solid #7ba9a2;
+      background: #f1f9f7;
+    }
+
+    .g2-packet-layer:first-child {
+      border: 2px solid #174f83;
+      background: #eef4fa;
+    }
+
+    .g2-packet-layer--uncertain {
+      border: 2px dashed #b17b16;
+      background: #fff9e9;
+    }
+
+    .g2-packet-layer dt,
+    .g2-packet-layer dd {
+      margin: 0;
+    }
+
+    .g2-packet-layer dt {
+      color: #24465a;
+      font-size: 0.72rem;
       font-weight: 850;
+      text-transform: uppercase;
     }
 
-    .failure-grid dd {
-      margin: 0.25rem 0 0;
-      color: #43546a;
-      font-size: 0.9rem;
+    .g2-packet-layer dd {
+      color: #344958;
+      font-size: 0.76rem;
+      line-height: 1.42;
     }
 
-    .gap-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .g2-delta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.88fr) minmax(0, 1fr);
+      gap: 0.65rem;
+      align-items: stretch;
     }
 
-    .gap-card {
-      border-top: 0.28rem solid #8c4c37;
+    .g2-call-state,
+    .g2-delta-actions {
+      padding: 0.8rem;
+      border: 1px solid #7ba9a2;
+      background: #f1f9f7;
     }
 
-    .gap-card ol,
-    .gap-card ul {
-      margin: 0.55rem 0 0;
-      padding-inline-start: 1.3rem;
+    .g2-delta-actions {
+      border: 2px solid #5b936e;
+      background: #f2f8f4;
     }
 
-    .source-notes {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      border: 1px solid #c9d5df;
-      border-radius: 0.6rem;
-      background: #f7f9fb;
+    .g2-call-state h5,
+    .g2-delta-actions h5 {
+      margin: 0 0 0.5rem;
+      color: #28465b;
+      font-size: 0.76rem;
+      text-transform: uppercase;
     }
 
-    .source-notes summary {
-      color: #184b70;
-      cursor: pointer;
+    .g2-call-state ul,
+    .g2-delta-actions ul {
+      margin: 0;
+      padding-inline-start: 1rem;
+      color: #3c4e5e;
+      font-size: 0.72rem;
+      line-height: 1.44;
+    }
+
+    .g2-code-figure {
+      margin: 1.5rem 0 1.8rem;
+      border: 1px solid #aebdca;
+      background: #fbfcfd;
+    }
+
+    .g2-code-figure figcaption {
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid #cbd5df;
+      background: #edf3f7;
+      color: #304a61;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.77rem;
       font-weight: 800;
     }
 
-    .source-notes[open] summary {
-      margin-bottom: 0.7rem;
+    .g2-code-figure pre {
+      max-width: 100%;
+      margin: 0;
+      padding: 1rem;
+      overflow: auto;
+      color: #213548;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.76rem;
+      line-height: 1.58;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      tab-size: 2;
     }
 
-    .source-note {
-      max-width: 75ch;
-      color: #4b5d70;
-      font-size: 0.84rem;
+    .g2-deep-dive {
+      margin: 1.5rem 0;
+      border-block: 1px solid #c7d3de;
+      background: #f8fafc;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .draft-end-nav {
+    .g2-deep-dive > summary {
+      padding: 0.8rem 2.2rem 0.8rem 0.9rem;
+      color: #24445f;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .g2-deep-dive[open] > summary {
+      border-bottom: 1px solid #d7e0e7;
+    }
+
+    .g2-deep-dive-body {
+      padding: 0.25rem 0.9rem 0.9rem;
+      color: #344a5d;
+      font-family: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 0.94rem;
+      line-height: 1.62;
+    }
+
+    .g2-source-record {
+      display: block;
+    }
+
+    .g2-source-record code {
+      display: block;
+      margin-top: 0.18rem;
+      color: #576777;
+      font-size: 0.72rem;
+    }
+
+    .g2-evidence-note {
+      margin-top: 2rem;
+      padding: 0.85rem 1rem;
+      border-inline-start: 0.25rem solid #b17b16;
+      background: #fffaf0;
+      color: #5e4c28;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    .g2-end-nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
       justify-content: space-between;
-      margin-top: 2.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .draft-end-nav a {
+      gap: 0.8rem;
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #cfd8e2;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
       font-weight: 750;
     }
 
-    @media (max-width: 64rem) {
-      .epistemic-key,
-      .four-jobs,
-      .delta-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media (max-width: 60rem) {
+      .g2-article-layout {
+        grid-template-columns: minmax(0, 47rem);
       }
 
-      .concept-flow {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+      .g2-at-a-glance,
+      .g2-article-rail,
+      .g2-article-body {
+        grid-column: 1;
+        grid-row: auto;
       }
 
-      .retrieval-flow {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .g2-article-toc {
+        position: static;
+        max-height: none;
+        padding: 0 0 1.2rem;
+        border-bottom: 1px solid #cfd8e2;
       }
 
-      .concept-flow li::after,
-      .retrieval-flow li::after {
-        display: none;
+      .g2-article-toc ol {
+        columns: 2;
+        column-gap: 2rem;
+      }
+
+      .g2-article-toc li {
+        break-inside: avoid;
       }
     }
 
-    @media (max-width: 46rem) {
-      .draft-link-chip {
-        margin: 0.35rem 0 0;
+    @media (max-width: 52rem) {
+      .g2-source-flow,
+      .g2-altitude {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 42rem) {
+      .g2-article-header {
+        padding-inline: 1rem;
       }
 
-      .g2-draft {
-        margin-top: 3rem;
-        border-radius: 0.7rem;
+      .g2-article-layout {
+        gap: 1.6rem;
+        padding: 1.25rem 1rem 3rem;
       }
 
-      .epistemic-key,
-      .comparison-grid,
-      .four-jobs,
-      .definition-grid,
-      .role-grid,
-      .mechanism-grid,
-      .gap-grid,
-      .delta-grid,
-      .thesis-grid,
-      .modifier-list,
-      .failure-grid,
-      .manifest-grid,
-      .concept-flow,
-      .retrieval-flow {
+      .g2-article-toc ol {
+        columns: 1;
+      }
+
+      .g2-at-a-glance dl,
+      .g2-packet-layer {
         grid-template-columns: 1fr;
       }
 
-      .mechanism-card:last-child {
-        grid-column: auto;
+      .g2-at-a-glance dd {
+        padding-top: 0;
+        border-top: 0;
       }
 
-      .draft-toc ul {
+      .g2-at-a-glance dt:not(:first-of-type) {
+        padding-top: 0.7rem;
+      }
+
+      .g2-cycle,
+      .g2-source-flow,
+      .g2-delta,
+      .g2-altitude,
+      .g2-checkpoint-flow,
+      .g2-horizons {
+        grid-template-columns: 1fr;
+      }
+
+      .g2-checkpoint-stage:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: 50%;
+        bottom: -0.95rem;
+        transform: translateX(50%);
+      }
+
+      .g2-cycle li {
+        min-height: 0;
+      }
+
+      .g2-table {
+        min-width: 0;
+        border: 0;
+      }
+
+      .g2-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .g2-table tbody,
+      .g2-table tr,
+      .g2-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .g2-table tbody tr {
+        padding: 0.28rem 0.72rem 0.55rem;
+        border-bottom: 1px solid #cbd5df;
+      }
+
+      .g2-table tbody tr:last-child {
+        border-bottom: 0;
+      }
+
+      .g2-table td {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(6.8rem, 0.42fr) minmax(0, 1fr);
+        gap: 0.65rem;
+        padding: 0.5rem 0;
+        border: 0;
+        border-top: 1px solid #e1e7ed;
       }
 
-      .draft-toc a {
-        height: 100%;
+      .g2-table td:first-child {
+        border-top: 0;
       }
 
-      .code-example pre {
-        font-size: 0.75rem;
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
+      .g2-table td::before {
+        content: attr(data-label);
+        color: #365169;
+        font-size: 0.68rem;
+        font-weight: 850;
+        line-height: 1.38;
+      }
+
+      .g2-table-wrap {
+        overflow: visible;
+      }
+
+      .g2-end-nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .g2-article *,
+      .g2-article *::before,
+      .g2-article *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
     }
 
     @media print {
-      .g2-draft {
-        break-before: page;
+      .page-header,
+      .jump-shell,
+      main > :not(#g2-first-draft),
+      footer {
+        display: none !important;
+      }
+
+      main {
+        width: auto;
+        margin: 0;
+      }
+
+      .g2-article {
+        margin-top: 1rem;
         border: 0;
         box-shadow: none;
-        overflow: visible;
       }
 
-      .g2-draft-header {
-        padding: 0 0 1rem;
-        color: #000;
-        background: #fff;
+      .g2-article:focus,
+      .g2-article:focus-visible {
+        outline: none !important;
       }
 
-      .g2-draft-header .eyebrow,
-      .draft-lede,
-      .draft-status li {
-        color: #000;
+      .g2-article-header,
+      .g2-article-layout {
+        padding-inline: 0;
       }
 
-      .back-link,
-      .draft-link-chip,
-      .draft-toc,
-      .draft-end-nav {
+      .g2-article .back-link,
+      .g2-article-rail,
+      .g2-end-nav,
+      .g2-heading-anchor {
+        display: none !important;
+      }
+
+      .g2-article-layout {
+        display: block;
+      }
+
+      .g2-article-body {
+        max-width: none;
+        font-size: 10.5pt;
+      }
+
+      .g2-article-section + .g2-article-section {
+        margin-top: 1.8rem;
+        padding-top: 1.4rem;
+      }
+
+      .g2-deep-dive > summary {
         display: none;
       }
 
-      .draft-body {
-        padding: 0;
+      .g2-article .g2-deep-dive::details-content {
+        display: block !important;
+        content-visibility: visible !important;
       }
 
-      .concept-figure,
-      .epistemic-key li,
-      .comparison-card,
-      .job-card,
-      .definition-card,
-      .role-card,
-      .mechanism-card,
-      .gap-card,
-      .delta-card,
-      .failure-grid > div,
-      .manifest-grid > div,
-      .draft-callout {
-        break-inside: avoid;
+      .g2-deep-dive-body {
+        display: block !important;
+      }
+
+      .g2-figure,
+      .g2-at-a-glance,
+      .g2-code-figure,
+      .g2-deep-dive {
         background: #fff;
+        break-inside: avoid;
       }
 
-      .draft-table thead {
+      .g2-table-wrap {
+        overflow: visible;
+        break-inside: auto;
+      }
+
+      .g2-table {
+        min-width: 0;
+        font-size: 7.5pt;
+      }
+
+      .g2-table tbody,
+      .g2-table tr,
+      .g2-table td {
+        display: table-row-group;
+      }
+
+      .g2-table tr {
+        display: table-row;
+      }
+
+      .g2-table td {
+        display: table-cell;
+      }
+
+      .g2-table td::before {
+        content: none;
+      }
+
+      .g2-table thead {
         display: table-header-group;
       }
 
-      .table-wrap,
-      .code-example {
-        overflow: visible;
-      }
-
-      .code-example {
-        border-color: #555;
-        background: #fff;
-      }
-
-      .code-example figcaption,
-      .code-example pre {
-        color: #000;
-      }
-
-      .code-example pre {
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
-      }
-
-      .source-notes > div {
-        display: block !important;
+      .g2-article-body h3,
+      .g2-article-body h4,
+      .g2-article-body h5 {
+        break-after: avoid;
       }
     }
 
+
+    /* V2-D037: the outline is now its own review page. */
+    @media print {
+      body.outline-page .page-header,
+      body.outline-page main#outline > ol.outline {
+        display: block !important;
+      }
+
+      body.outline-page main {
+        width: auto;
+        margin: 0;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="outline-page">
   <a class="skip-link" href="#outline">Skip to outline</a>
 
   <header class="page-header">
     <p class="eyebrow">V2-OUTLINE-REVIEW-COMPANION · HTML rendering · V2-OUT-CP01</p>
     <h1>Harness Engineering V2 — Compact Outline Review Companion</h1>
-    <p class="lede">A practical reading view of the existing CP01 outline. Start with the plain-language purpose, open a topic for a concrete implementation example, and use the formal notes only when you need the exact planning wording.</p>
+    <p class="lede">A practical reading view of the existing CP01 outline. Each developed subject opens as a separate article, while this page keeps the numbered structure, plain-language purpose, concrete implementation examples, and exact planning notes easy to scan.</p>
     <div class="status-row" aria-label="Artifact status">
       <span>Non-authoritative review aid</span>
       <span>CP01 unapproved and stopped</span>
@@ -1848,7 +2044,7 @@
     <aside class="authority-note" aria-labelledby="authority-title">
       <h2 id="authority-title">Review-view boundary</h2>
       <p>This page leads with plain-language explanations and concrete implementation scenarios. Every scenario is <strong>hypothetical and illustrative</strong>—not a researched case, evidence claim, recommendation, or prescribed architecture. Open <strong>Formal planning notes</strong> under any topic to inspect its exact canonical six-field dossier.</p>
-      <p>V2-SK-G controls the top level; <code>outline.md</code> controls CP01 dossiers; <code>baseline-content-draft.md</code> controls the candidate G2 first-draft content; the decisions and status ledgers control authority and reader-layer exceptions; and the committed Markdown companion controls the compact address/title projection. This HTML has lowest precedence. If it conflicts with any controlling artifact, this page is wrong. Final outline approval must use the canonical outline.</p>
+      <p>V2-SK-G controls the top level; <code>outline.md</code> controls CP01 dossiers; the decisions and status ledgers control authority and reader-layer exceptions; and the committed Markdown companion controls the compact address/title projection. This HTML has lowest precedence. The separate Context Engineering article is a review candidate, not part of the canonical outline. If either page conflicts with a controlling artifact, the page is wrong. Final outline approval must use the canonical outline.</p>
       <div class="source-pins">
         <p><strong>Canonical outline</strong><br><code>1f3d07a2ff92423472a6beaa2e44dfe7e8f75938</code></p>
         <p><strong>Markdown companion</strong><br><code>79744aeb5d9539af8a62e6898ac29b7f7dc5e41d</code></p>
@@ -2122,11 +2318,11 @@
           <section class="section-card" aria-labelledby="g2-title">
             <header class="section-header">
               <h2 id="g2-title">
-                <a class="section-title-link" href="#g2-first-draft">
+                <a class="section-title-link" href="context-engineering.html">
                   <span class="address">G2</span>
                   <span>Context Engineering</span>
-                  <span class="draft-link-chip" aria-hidden="true">Read first draft ↓</span>
-                  <span class="visually-hidden">— read the first draft</span>
+                  <span class="draft-link-chip" aria-hidden="true">Read article →</span>
+                  <span class="visually-hidden">— open the standalone Context Engineering article</span>
                 </a>
               </h2>
               <p class="section-purpose"><span class="reader-kicker">Plain English</span>Explain exactly what information reaches each model call, where it came from, how it was arranged, and what was shortened, omitted, or reused.</p>
@@ -5197,628 +5393,12 @@
         </li>
     </ol>
 
-    <article id="g2-first-draft" class="g2-draft" tabindex="-1" aria-labelledby="g2-draft-title">
-      <header class="g2-draft-header">
-        <a class="back-link" href="#g2">← Back to the G2 outline</a>
-        <p class="eyebrow">V2-G2-BASELINE-DRAFT-01 · First draft · V2-G2-HTML-CP01</p>
-        <h2 id="g2-draft-title">Context Engineering</h2>
-        <p class="draft-lede">Context Engineering is the engineering of what a model sees for a particular call: what enters, what stays out, how it is organized, and how the working set changes as the task changes.</p>
-        <ul class="draft-status" aria-label="Draft status">
-          <li>Non-authoritative first draft</li>
-          <li>No subject evidence promoted</li>
-          <li>G2.1–G2.4 remain provisional</li>
-          <li>Built from seven approved seed reviews</li>
-        </ul>
-      </header>
 
-      <div class="draft-body">
-        <aside class="draft-callout draft-callout--authority" aria-labelledby="g2-draft-boundary-label">
-          <p id="g2-draft-boundary-label" class="callout-label">How to use this draft</p>
-          <p>This is the first attempt to turn the reviewed baseline into useful content. Read it to judge the direction, depth, examples, and voice—not as a final outline or a list of proven best practices.</p>
-          <p><code>baseline-content-draft.md</code> controls this candidate content. The canonical outline still controls the G2 structure. If this reading view changes the meaning or hides a limitation, the HTML is wrong.</p>
-        </aside>
-
-        <section aria-labelledby="g2-draft-labels-title">
-          <h3 id="g2-draft-labels-title" class="visually-hidden">Evidence and status labels</h3>
-          <p class="draft-kicker">Read the labels, not just the polish</p>
-          <ul class="epistemic-key">
-            <li><strong>Working model</strong>A useful way to organize this draft, not field consensus.</li>
-            <li><strong>Source-reported</strong>A practitioner or vendor describes it; effectiveness is not assumed.</li>
-            <li><strong>Hypothesis</strong>A claim the program intends to test, not a conclusion.</li>
-            <li><strong>Draft design rule</strong>A proposed review requirement, not an empirical best practice.</li>
-            <li><strong>Evidence needed</strong>An important area the seven seeds do not support well enough.</li>
-          </ul>
-        </section>
-
-        <nav class="draft-toc" aria-label="Context Engineering first draft">
-          <p>In this first draft</p>
-          <ul>
-            <li><a href="#g2-draft-overview">The core idea</a></li>
-            <li><a href="#g2-draft-g2-1">G2.1 Instructions</a></li>
-            <li><a href="#g2-draft-g2-2">G2.2 Sources</a></li>
-            <li><a href="#g2-draft-g2-3">G2.3 Assembly</a></li>
-            <li><a href="#g2-draft-g2-4">G2.4 Context Windows</a></li>
-            <li><a href="#g2-draft-worked">Worked example</a></li>
-            <li><a href="#g2-draft-failures">Failure guide</a></li>
-            <li><a href="#g2-draft-sources">Sources and limits</a></li>
-          </ul>
-        </nav>
-
-        <section id="g2-draft-overview" class="draft-section" aria-labelledby="g2-draft-overview-title">
-          <p class="draft-kicker">The core idea</p>
-          <h3 id="g2-draft-overview-title">Engineer the working set for this call</h3>
-          <div class="draft-prose">
-            <p><span class="epistemic-label">Working model</span><br>Context Engineering includes more than prompt wording. A call may receive instructions, the user’s request, retrieved documents, current state, tool descriptions, earlier messages, tool results, examples, and runtime-managed material. The harness decides which candidates should be available now, how they should be shaped and ordered, what should be omitted, and how the set should change after the call.</p>
-            <p>The important unit is the <strong>current model call</strong>. A project can contain a huge amount of information, but only some of it reaches the model at one moment. A tool result, new failure, handoff, or state change can make the next call need a different set.</p>
-          </div>
-
-          <figure class="concept-figure" aria-labelledby="g2-draft-lifecycle-caption">
-            <figcaption id="g2-draft-lifecycle-caption"><strong>The context lifecycle.</strong> A conceptual working model—not a mandatory linear architecture. Every box is readable text; the arrows only reinforce the order.</figcaption>
-            <ol class="concept-flow">
-              <li><strong>Intent</strong><br>Bound the outcome and constraints.</li>
-              <li><strong>Candidates</strong><br>Identify information that could matter.</li>
-              <li><strong>Retrieve</strong><br>Fetch current facts and check sources.</li>
-              <li><strong>Assemble</strong><br>Select, label, order, and transform.</li>
-              <li><strong>Deliver</strong><br>Fit and record the model-visible set.</li>
-              <li><strong>Act</strong><br>Receive a response or tool call.</li>
-              <li><strong>Revise</strong><br>Use new result and state for the next call.</li>
-            </ol>
-          </figure>
-
-          <p class="source-note">This framing comes mainly from the changing-working-set lifecycle in <a href="#g2-draft-source-01">SEED-01</a> and <a href="#g2-draft-source-04">SEED-04</a>. Those are explanatory sources, not proof that one selection strategy is best.</p>
-
-          <h4>Where Context Engineering stops</h4>
-          <div class="draft-prose">
-            <p>G2 touches most of an agent system, but it does not own those entire systems. It owns the local question: <strong>what from each system reaches this call, in what form?</strong></p>
-          </div>
-          <div class="definition-grid" aria-label="Primary ownership boundaries">
-            <section class="definition-card"><strong>Goals · G1</strong><p>G1 defines the bounded outcome. G2 turns it into information requirements for a call.</p></section>
-            <section class="definition-card"><strong>Memory · G3</strong><p>G3 owns what persists. G2 decides whether and how retained material is loaded now.</p></section>
-            <section class="definition-card"><strong>Tools · G4</strong><p>G4 owns capabilities and protocols. G2 decides which descriptions and results enter context.</p></section>
-            <section class="definition-card"><strong>Skills · G5</strong><p>G5 owns reusable procedure. G2 decides when loaded skill content joins the working set.</p></section>
-            <section class="definition-card"><strong>Orchestration · G6</strong><p>G6 chooses steps and workers. G2 decides what that particular call or worker can see.</p></section>
-            <section class="definition-card"><strong>Authority · G7</strong><p>G7 owns trust and permission. G2 must preserve the applicable constraints in context.</p></section>
-            <section class="definition-card"><strong>Evaluation · G8</strong><p>G8 judges behavior. G2 makes the delivered context reconstructable enough to evaluate.</p></section>
-            <section class="definition-card"><strong>Operations · G9</strong><p>G9 operates storage and caching. G2 owns their semantic effect on the current call.</p></section>
-          </div>
-
-          <h4>The central tension: minimum sufficient, not minimum possible</h4>
-          <div class="draft-prose">
-            <p>A focused debugging call might need the exact failure, relevant code, a pre-existing diff, task constraints, and tool contracts. Dumping the entire repository and months of history into the same call may bury those inputs. But removing one database constraint or acceptance criterion is not focus; it is omission.</p>
-          </div>
-          <div class="thesis-grid" aria-label="Primary hypothesis and equal-weight rivals">
-            <article class="thesis-card">
-              <p class="epistemic-label">Hypothesis · V2-G2-H01</p>
-              <h4>Reasoned minimum-sufficient context</h4>
-              <p>A reasoned sufficient set may preserve or improve outcomes while reducing a meaningful cost.</p>
-            </article>
-            <article class="thesis-card thesis-card--rival">
-              <p class="epistemic-label">Rival · V2-G2-CH01</p>
-              <h4>Broader can be safer</h4>
-              <p>When relevance is uncertain, a broader well-structured set may protect details whose value cannot be known in advance.</p>
-            </article>
-            <article class="thesis-card thesis-card--rival">
-              <p class="epistemic-label">Rival · V2-G2-CH02</p>
-              <h4>Organization may explain the gain</h4>
-              <p>Labels, ordering, separation, and conflict handling may matter more than removing tokens.</p>
-            </article>
-          </div>
-          <ul class="modifier-list" aria-label="Conditions that may change the result">
-            <li><strong>V2-G2-M01 · Useful repetition</strong><br>Redundancy may improve robustness enough to belong in the minimum.</li>
-            <li><strong>V2-G2-M02 · Progressive access</strong><br>Retrieval and editing over time may beat one static starting bundle.</li>
-            <li><strong>V2-G2-M03 · Task conditions</strong><br>The balance may change by model, role, domain, horizon, and error cost.</li>
-          </ul>
-          <aside class="draft-callout draft-callout--authority">
-            <p class="callout-label">Non-removable constraint · V2-G2-C01</p>
-            <p>Policy, permission, provenance, or safety material may be mandatory even when it does not improve the immediate task score.</p>
-          </aside>
-          <p class="source-note">H01, both rivals, all three modifiers, and C01 come from the approved G2 charter. They are live research questions, not findings established by the seed set.</p>
-
-          <h4>Four jobs organize the current draft</h4>
-          <div class="four-jobs">
-            <article class="job-card">
-              <a href="#g2-draft-g2-1"><span class="address">G2.1</span>Prompts and Instructions</a>
-              <p>Decide what is meant to direct behavior, at what level, from whom, and for how long.</p>
-              <p class="job-artifact"><strong>Inspect:</strong> instruction and authority record.</p>
-            </article>
-            <article class="job-card">
-              <a href="#g2-draft-g2-2"><span class="address">G2.2</span>Context Sources and Retrieval</a>
-              <p>Decide which facts are eligible, current, relevant, sufficient, and actually retrieved.</p>
-              <p class="job-artifact"><strong>Inspect:</strong> retrieval receipt and omissions.</p>
-            </article>
-            <article class="job-card">
-              <a href="#g2-draft-g2-3"><span class="address">G2.3</span>Context Assembly and Delivery</a>
-              <p>Build the exact model-visible payload and record every important transformation.</p>
-              <p class="job-artifact"><strong>Inspect:</strong> context manifest.</p>
-            </article>
-            <article class="job-card">
-              <a href="#g2-draft-g2-4"><span class="address">G2.4</span>Context Windows, Compaction, Compression, and Caching</a>
-              <p>Manage finite space and reuse without hiding loss, staleness, or recovery assumptions.</p>
-              <p class="job-artifact"><strong>Inspect:</strong> before/after context record.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="g2-draft-g2-1" class="draft-section" aria-labelledby="g2-draft-g2-1-title">
-          <p class="draft-kicker">G2.1 · Prompts and Instructions</p>
-          <h3 id="g2-draft-g2-1-title">State the outcome without scripting every move</h3>
-          <p class="draft-section-intro">This section separates behavior-directing instructions from surrounding data, then asks whether the direction is clear enough to act on without becoming a brittle guessed procedure.</p>
-
-          <div class="definition-grid" aria-label="G2.1 quick orientation">
-            <section class="definition-card"><strong>Decision owned</strong><p>What should control behavior, who supplied it, what scope it has, and how specific it should be.</p></section>
-            <section class="definition-card"><strong>Artifact to inspect</strong><p>The outcome, constraints, success checks, authority, scope, and unresolved conflicts.</p></section>
-            <section class="definition-card"><strong>Typical failure</strong><p>Vague intent, hidden precedence, or a checklist that blocks investigation outside a guessed path.</p></section>
-          </div>
-
-          <h4>What counts as an instruction?</h4>
-          <div class="draft-prose">
-            <p>An instruction is material intentionally supplied to direct behavior: the role, outcome, constraints, success conditions, permitted actions, required process, or an example meant to guide the response.</p>
-            <p>Other material can influence behavior without being authoritative instruction. A log is usually evidence. A tool description explains a capability. A retrieved document may contain instruction-like text, but retrieval alone does not grant authority. Provenance, trust, and scope still determine whether that text can control behavior.</p>
-            <p>The practical question is not only “what text is present?” It is: <strong>which material is meant to control behavior, who supplied it, and within what scope?</strong></p>
-          </div>
-          <aside class="draft-callout draft-callout--gap">
-            <p class="callout-label">Placeholder — evidence needed</p>
-            <p>Build a concrete treatment of instruction hierarchy, provenance, scope, conflict resolution, and untrusted retrieved instructions. This must stay linked to G7 authority and security rather than becoming a formatting rule.</p>
-          </aside>
-          <p class="source-note">The prompt-versus-context distinction is source framing from <a href="#g2-draft-source-01">SEED-01</a> and <a href="#g2-draft-source-04">SEED-04</a>. The unresolved authority problem is charter constraint V2-G2-C01.</p>
-
-          <h4>Find the useful altitude</h4>
-          <p class="draft-prose"><span class="epistemic-label">Source-reported practice</span><br>Several seeds recommend stating the outcome, important constraints, and domain facts the model would not otherwise know. They also warn that a long checklist can narrow the task to only the cases the checklist names.</p>
-          <div class="comparison-grid" aria-label="Three instruction altitudes">
-            <article class="comparison-card">
-              <strong>Too vague</strong>
-              <blockquote>“Improve checkout reliability.”</blockquote>
-              <p>No bounded failure, success test, or constraint tells the model what “better” means.</p>
-            </article>
-            <article class="comparison-card comparison-card--useful">
-              <strong>Useful altitude</strong>
-              <blockquote>“Fix the checkout-total regression shown by the failing test. Preserve the public API, do not change tax policy, run the focused test and checkout suite, and report anything you cannot verify.”</blockquote>
-              <p>It supplies the goal, boundary, evidence, checks, and escalation condition while leaving room to investigate.</p>
-            </article>
-            <article class="comparison-card">
-              <strong>Too procedural</strong>
-              <blockquote>“Open these five files in order, change function A, add branch B, update fixture C, then run commands D through H. Do not inspect anything else.”</blockquote>
-              <p>It may be valid when the procedure is mandatory. As a guessed solution, it can hide the real cause.</p>
-            </article>
-          </div>
-          <p class="source-note">The three-level teaching pattern comes from <a href="#g2-draft-source-04">SEED-04</a>, with a similar vendor-reported tension in <a href="#g2-draft-source-06">SEED-06</a>. It is a practitioner heuristic, not a universal optimum.</p>
-
-          <h4>Refine from observed failures</h4>
-          <div class="draft-prose">
-            <p><span class="epistemic-label">Source-reported practice</span><br>Start with enough instruction to run the task. Observe real failures. Then add a targeted constraint, example, or clarification instead of predicting every edge case in advance.</p>
-            <p>If the first checkout fix changes rounding in another currency, add the specific invariant and regression case. A page of generic “write good code” advice would add volume without addressing the failure.</p>
-          </div>
-
-          <h4>What a reviewer should be able to see</h4>
-          <div class="draft-callout draft-callout--example">
-            <p class="callout-label">Draft design rule</p>
-            <p>A bounded call should expose the desired outcome, success checks, hard constraints, prohibited actions, instruction source, scope, expected lifetime, guiding examples, unresolved conflicts, and the invocation conditions under which the instruction was evaluated.</p>
-          </div>
-          <p class="draft-prose">This does not mean every call needs a long instruction block. Often the goal is to make a few controlling instructions clearer and easier to audit.</p>
-        </section>
-
-        <section id="g2-draft-g2-2" class="draft-section" aria-labelledby="g2-draft-g2-2-title">
-          <p class="draft-kicker">G2.2 · Context Sources and Retrieval</p>
-          <h3 id="g2-draft-g2-2-title">Bring current facts into the decision</h3>
-          <p class="draft-section-intro">This section maps where candidate information comes from, why it is eligible, how it is retrieved, and whether the delivered set is both relevant and sufficient.</p>
-
-          <div class="definition-grid" aria-label="G2.2 quick orientation">
-            <section class="definition-card"><strong>Decision owned</strong><p>Which sources can inform this call, what triggers retrieval, and what current facts the decision needs.</p></section>
-            <section class="definition-card"><strong>Artifact to inspect</strong><p>The candidate set, eligibility, selector, delivered excerpt, freshness, transformations, misses, and omissions.</p></section>
-            <section class="definition-card"><strong>Typical failure</strong><p>The bundle contains related material but omits the one current fact that changes the answer.</p></section>
-          </div>
-
-          <h4>Build a candidate pool before selecting</h4>
-          <div class="definition-grid" aria-label="Candidate context source groups">
-            <section class="definition-card"><strong>Directions</strong><p>User request, system and developer instructions, constraints, and examples.</p></section>
-            <section class="definition-card"><strong>Project and domain facts</strong><p>Code, tests, documents, configuration, databases, APIs, tickets, and systems of record.</p></section>
-            <section class="definition-card"><strong>History and state</strong><p>Earlier messages, tool results, current task state, and retained records loaded from G3.</p></section>
-            <section class="definition-card"><strong>Capabilities</strong><p>Tool descriptions, protocol resources, and skill content exposed through G4 and G5.</p></section>
-            <section class="definition-card"><strong>Runtime layers</strong><p>Provider- or framework-managed material that may not be fully visible to the application.</p></section>
-          </div>
-          <p class="draft-prose">Existence does not imply eligibility, and eligibility does not mean the item belongs in every call. A source can be relevant but not permitted, permitted but stale, current but low authority, or useful only after a particular uncertainty arises.</p>
-
-          <figure class="concept-figure" aria-labelledby="g2-draft-retrieval-caption">
-            <figcaption id="g2-draft-retrieval-caption"><strong>Five retrieval gates.</strong> An item can stop at any stage; the record should explain why.</figcaption>
-            <ol class="retrieval-flow">
-              <li><strong>Available</strong><br>The information exists.</li>
-              <li><strong>Eligible</strong><br>It is permitted and in scope.</li>
-              <li><strong>Retrieved</strong><br>A query or selector fetches it.</li>
-              <li><strong>Selected</strong><br>It survives ranking and filtering.</li>
-              <li><strong>Delivered</strong><br>The model sees a recorded form.</li>
-            </ol>
-          </figure>
-
-          <h4>Retrieve facts before asking for a decision</h4>
-          <div class="draft-prose">
-            <p><span class="epistemic-label">Source-reported example</span><br>A restocking agent retrieves current inventory and forecast data from systems of record, then gives the model a compact decision packet. The model reasons from current inputs instead of guessing them from a general prompt.</p>
-            <p>For checkout debugging, the same pattern retrieves the failing test output, current implementation, relevant schema, nearby tests, and any pre-existing diff before asking why the total is wrong.</p>
-          </div>
-          <p class="source-note">The restocking example in <a href="#g2-draft-source-02">SEED-02</a> is illustrative vendor code, not a deployed trace or controlled result. Its role here is explanatory.</p>
-
-          <h4>Use progressive disclosure when the need is conditional</h4>
-          <div class="draft-prose">
-            <p>Progressive disclosure keeps a small index, identifier, or summary available and loads full material only when the task calls for it. A coding agent might start with file names and short descriptions, then open the implementation and test after narrowing the fault.</p>
-            <p>This can reduce initial load, but it can also fail. The agent may not know what to request; ranking may miss the source; retrieval may cost more than carrying it; a summary may hide the clue that would trigger retrieval; or the supposedly recoverable source may change or disappear.</p>
-          </div>
-          <aside class="draft-callout">
-            <p class="callout-label">Open comparison · V2-G2-M02</p>
-            <p>Whether progressive access works better than one static starting bundle remains a hypothesis. The seeds illustrate the mechanism; they do not settle the comparison.</p>
-          </aside>
-
-          <h4>Relevance and sufficiency are different tests</h4>
-          <div class="definition-grid">
-            <section class="definition-card"><strong>Relevance</strong><p>Can this item affect the bounded decision or requirement?</p></section>
-            <section class="definition-card"><strong>Sufficiency</strong><p>Does the delivered set preserve what the task needs under the tested conditions?</p></section>
-            <section class="definition-card"><strong>Freshness</strong><p>Is the version and age acceptable for this decision?</p></section>
-            <section class="definition-card"><strong>Authority</strong><p>Is the source allowed and appropriate to inform the decision?</p></section>
-            <section class="definition-card"><strong>Conflict visibility</strong><p>Are incompatible facts or directions preserved instead of silently collapsed?</p></section>
-          </div>
-          <p class="draft-prose">Three error logs may all be relevant while the missing database constraint is what makes the set sufficient. A complete archive may contain that constraint while surrounding it with stale and conflicting versions. These are working definitions; the baseline does not establish validated thresholds.</p>
-          <aside class="draft-callout draft-callout--gap">
-            <p class="callout-label">Placeholder — evidence needed</p>
-            <p>Add retrieval evaluation that preserves the candidate set, selected items, misses, conflicts, freshness, and task consequences. The seeds do not adequately cover recall/precision tradeoffs, contradictory sources, poisoning, or later-arising relevance.</p>
-          </aside>
-
-          <h4>Make retrieval inspectable</h4>
-          <div class="draft-callout draft-callout--example">
-            <p class="callout-label">Draft design rule</p>
-            <p>A retrieval receipt should show the considered source, why it was eligible, what selected it, the exact delivered form, freshness or version, transformations, and what was rejected or omitted.</p>
-          </div>
-          <div class="table-wrap" tabindex="0" role="region" aria-label="Example retrieval receipt table">
-            <table class="draft-table">
-              <caption>Hypothetical checkout retrieval receipt—not a validated schema</caption>
-              <thead><tr><th scope="col">Question</th><th scope="col">Example record</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">What source was considered?</th><td><code>checkout/test_totals.py</code> at the current commit</td></tr>
-                <tr><th scope="row">Why was it eligible?</th><td>User-authorized repository path; matches the failing test</td></tr>
-                <tr><th scope="row">What selected it?</th><td>Exact test name plus dependency lookup</td></tr>
-                <tr><th scope="row">What was delivered?</th><td>Exact lines or a structured excerpt—not merely the file name</td></tr>
-                <tr><th scope="row">How current was it?</th><td>Commit, version, retrieval time, or equivalent</td></tr>
-                <tr><th scope="row">What changed it?</th><td>Filtering, truncation, summarization, or formatting</td></tr>
-                <tr><th scope="row">What was omitted?</th><td>Duplicate historical log and a stale generated file</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="source-note">Logging and versioning are source-reported recommendations in <a href="#g2-draft-source-01">SEED-01</a>. The receipt itself is a proposed audit surface.</p>
-        </section>
-
-        <section id="g2-draft-g2-3" class="draft-section" aria-labelledby="g2-draft-g2-3-title">
-          <p class="draft-kicker">G2.3 · Context Assembly and Delivery</p>
-          <h3 id="g2-draft-g2-3-title">Build the exact payload the model can see</h3>
-          <p class="draft-section-intro">Retrieval produces candidates. Assembly decides which candidates reach the model, in what form, in what order, and with which source and authority labels.</p>
-
-          <div class="definition-grid" aria-label="G2.3 quick orientation">
-            <section class="definition-card"><strong>Decision owned</strong><p>How eligible information is selected, transformed, separated, ordered, and delivered.</p></section>
-            <section class="definition-card"><strong>Artifact to inspect</strong><p>A context manifest that reconstructs the delivered items and their transformation path.</p></section>
-            <section class="definition-card"><strong>Typical failure</strong><p>A source list exists, but nobody can establish what the model actually saw.</p></section>
-          </div>
-
-          <h4>Assembly is more than concatenation</h4>
-          <div class="definition-grid" aria-label="Assembly operations">
-            <section class="definition-card"><strong>Select or omit</strong><p>Choose items for this decision and record important exclusions.</p></section>
-            <section class="definition-card"><strong>Separate and label</strong><p>Distinguish instructions, evidence, state, authority, freshness, and uncertainty.</p></section>
-            <section class="definition-card"><strong>Order and place</strong><p>Put high-priority material where the model can identify its role.</p></section>
-            <section class="definition-card"><strong>Transform</strong><p>Turn files, logs, tables, or results into a usable representation.</p></section>
-            <section class="definition-card"><strong>Deduplicate or repeat</strong><p>Remove accidental duplicates while preserving intentional, useful redundancy.</p></section>
-            <section class="definition-card"><strong>Fit the call</strong><p>Meet the current invocation contract and isolate information by task or role.</p></section>
-          </div>
-          <aside class="draft-callout draft-callout--example">
-            <p class="callout-label">Draft design rule</p>
-            <p>The central requirement is reconstructability. After the call, a reviewer should be able to determine what the model could actually see—not merely which prompt template, repository, or database existed somewhere in the system.</p>
-          </aside>
-
-          <h4>Organization may matter as much as reduction</h4>
-          <div class="draft-prose">
-            <p>Imagine two calls with the same ten items. One mixes instructions, current state, evidence, and stale history. The other labels those roles, surfaces conflicts, places the current failure near the task, and separates old history. If the second works better, removing tokens did not cause the gain; organization did.</p>
-            <p>This is why rival hypothesis <strong>V2-G2-CH02</strong> remains serious. A future test should improve structure while holding content constant, then test removal while holding the improved structure constant.</p>
-          </div>
-
-          <h4>Different roles can need different views</h4>
-          <div class="role-grid" aria-label="Role-specific context examples">
-            <article class="role-card"><strong>Planner</strong><p>May need the global goal, constraints, work tree, dependencies, and unresolved decisions.</p></article>
-            <article class="role-card"><strong>Worker</strong><p>May need one bounded objective, relevant code, local interfaces, constraints, and tools.</p></article>
-            <article class="role-card"><strong>Reviewer</strong><p>May need a process transcript, output-only view, codebase view, or authority record for a particular review lens.</p></article>
-          </div>
-          <p class="source-note">Planner/worker and reviewer-view examples come from vendor reports in <a href="#g2-draft-source-06">SEED-06</a> and <a href="#g2-draft-source-07">SEED-07</a>. Orchestration, ownership, review method, and model choice are confounded with context isolation, so these reports do not establish causality.</p>
-
-          <h4>A handoff is a context transformation</h4>
-          <div class="draft-prose">
-            <p>When a worker returns selected findings instead of its entire trajectory, it performs selection and compression. A useful handoff may carry completed work, decisions and reasons, current state, failures, concerns, deviations, unresolved questions, exact continuation identifiers, and evidence the next role should inspect.</p>
-            <p>Omissions matter. A polished summary can hide uncertainty, failed approaches, or a detail the next worker needs.</p>
-          </div>
-
-          <h4>Use a context manifest as the call’s receipt</h4>
-          <div class="draft-callout draft-callout--example">
-            <p class="callout-label">Draft design rule</p>
-            <p>A context manifest should reconstruct the delivered items and the path that produced them. It is a proposed design target, not an adopted standard.</p>
-          </div>
-          <dl class="manifest-grid" aria-label="Candidate context manifest fields">
-            <div><dt>Call and task</dt><dd>Which decision this context served.</dd></div>
-            <div><dt>Runtime</dt><dd>Model and invocation settings that accompanied it.</dd></div>
-            <div><dt>Item identity</dt><dd>Instruction, evidence, state, example, tool, result, or history.</dd></div>
-            <div><dt>Source and version</dt><dd>Where the item came from and which version was used.</dd></div>
-            <div><dt>Authority or trust</dt><dd>Why it was allowed and how it should be treated.</dd></div>
-            <div><dt>Selection reason</dt><dd>Why the item was included for this call.</dd></div>
-            <div><dt>Position</dt><dd>Where and how the model could see the item.</dd></div>
-            <div><dt>Transformation</dt><dd>Filtering, summary, formatting, deduplication, or other lineage.</dd></div>
-            <div><dt>Omission and recovery</dt><dd>What was removed or replaced and whether the original is reliably retrievable.</dd></div>
-          </dl>
-          <aside class="draft-callout draft-callout--gap">
-            <p class="callout-label">Placeholder — evidence needed</p>
-            <p>The seed set does not provide a complete validated manifest schema or a primary implementation that captures provider-managed layers. The fields above come from the approved charter and canonical outline as a review target.</p>
-          </aside>
-
-          <h4>Connect context versions to outcomes</h4>
-          <div class="draft-prose">
-            <p><span class="epistemic-label">Draft design rule</span><br>A change to the prompt, retrieved set, order, summary, or role bundle should create an observable version. G8 can then compare it with task success, constraint adherence, failures, robustness, latency, and cost.</p>
-            <p>Not every bad result is a context failure. The model, tool, orchestration, runtime, or evaluation can be wrong. The requirement is to make context inspectable enough to test instead of guess.</p>
-          </div>
-        </section>
-
-        <section id="g2-draft-g2-4" class="draft-section" aria-labelledby="g2-draft-g2-4-title">
-          <p class="draft-kicker">G2.4 · Context Windows, Compaction, Compression, and Caching</p>
-          <h3 id="g2-draft-g2-4-title">Manage finite space without hiding loss</h3>
-          <p class="draft-section-intro">This section distinguishes ways to shrink, remove, move, isolate, or reuse information. Each mechanism changes the risk, recoverability, and ownership boundary.</p>
-
-          <div class="definition-grid" aria-label="G2.4 quick orientation">
-            <section class="definition-card"><strong>Decision owned</strong><p>What leaves or re-enters the active context, what meaning may be lost, and when reused material becomes stale.</p></section>
-            <section class="definition-card"><strong>Artifact to inspect</strong><p>Before/after context, trigger, retention rules, recovery path, cache identity, and survival checks.</p></section>
-            <section class="definition-card"><strong>Typical failure</strong><p>A summary loses an exact constraint, or supposedly recoverable material cannot be fetched unchanged.</p></section>
-          </div>
-
-          <h4>A context budget is more than a token limit</h4>
-          <div class="draft-prose">
-            <p>A call has finite practical capacity. Even when everything fits in the formal window, the material still costs tokens, latency, money, retrieval work, human audit effort, and attention among competing pieces of information.</p>
-            <p>The objective is not “use the fewest tokens.” It is to preserve what the current decision needs while managing those costs and making loss visible. A broader structured bundle can be worth the cost when uncertainty or the cost of error is high.</p>
-          </div>
-
-          <h4>Keep five mechanisms distinct</h4>
-          <div class="mechanism-grid">
-            <article class="mechanism-card">
-              <strong>Compaction</strong>
-              <dl><dt>What changes</dt><dd>Earlier dialogue and results become a summary.</dd><dt>Illustrative fit</dt><dd>A long-running conversation must continue in a smaller active representation.</dd><dt>Main risk</dt><dd>Exact wording, values, uncertainty, or later-needed details disappear.</dd></dl>
-            </article>
-            <article class="mechanism-card">
-              <strong>Tool-result clearing</strong>
-              <dl><dt>What changes</dt><dd>Old result bodies leave the window while call identity remains.</dd><dt>Illustrative fit</dt><dd>The exact original is reliably and cheaply retrievable.</dd><dt>Main risk</dt><dd>Re-fetch fails, changes, costs too much, or breaks comparison.</dd></dl>
-            </article>
-            <article class="mechanism-card">
-              <strong>External memory or notes</strong>
-              <dl><dt>What changes</dt><dd>Selected information moves outside the window and may be loaded later.</dd><dt>Illustrative fit</dt><dd>State must survive the session or return selectively.</dd><dt>Main risk</dt><dd>The system saves the wrong fact or reloads stale state. Primary ownership remains G3.</dd></dl>
-            </article>
-            <article class="mechanism-card">
-              <strong>Context-isolated worker</strong>
-              <dl><dt>What changes</dt><dd>A separate worker receives a focused bundle and returns selected results.</dd><dt>Illustrative fit</dt><dd>A bounded task can proceed without the coordinator’s full history.</dd><dt>Main risk</dt><dd>Handoff loss and orchestration confounds. Primary control ownership remains G6.</dd></dl>
-            </article>
-            <article class="mechanism-card">
-              <strong>Caching</strong>
-              <dl><dt>What changes</dt><dd>A stable prefix, representation, or result may be reused.</dd><dt>Illustrative fit</dt><dd>Potentially when reuse is supported and freshness and authority can be controlled; this baseline does not establish a practice.</dd><dt>Main risk</dt><dd>Stale, unauthorized, or private material persists. Runtime operation remains G9.</dd></dl>
-            </article>
-          </div>
-          <p class="source-note">Compaction, clearing, and memory are illustrated in <a href="#g2-draft-source-05">SEED-05</a>. <a href="#g2-draft-source-04">SEED-04</a> presents compaction, external notes, clearing, and isolated workers as conditional long-horizon options. These describe mechanisms; they do not prove general effectiveness.</p>
-
-          <aside class="draft-callout draft-callout--gap">
-            <p class="callout-label">Placeholder — evidence needed: compression</p>
-            <p>The seeds mostly discuss conversation summarization and result clearing. They do not provide a stable account of other compression forms, their fidelity, or their recoverability. Compaction must not silently stand in for the entire “compression” topic.</p>
-          </aside>
-
-          <h4>Lossy, removable, and recoverable are not synonyms</h4>
-          <div class="comparison-grid" aria-label="Three treatments of a 500-line test log">
-            <article class="comparison-card comparison-card--useful"><strong>Recoverable clearing</strong><p>Remove the body from the next call only if the exact log remains available by immutable identity.</p></article>
-            <article class="comparison-card"><strong>Lossy summary</strong><p>Replace it with “three tests failed,” losing exact names, values, and stack traces.</p></article>
-            <article class="comparison-card"><strong>Tested omission</strong><p>Remove repeated progress noise only after evidence shows the tested workflow does not need it.</p></article>
-          </div>
-          <div class="draft-callout draft-callout--example">
-            <p class="callout-label">Draft design rule</p>
-            <p>A compaction policy should state what must survive and test for those items after transformation.</p>
-          </div>
-
-          <h4>Expose triggers and survival checks</h4>
-          <div class="draft-prose">
-            <p>An automatic edit policy should show the threshold that starts compaction, how many recent calls stay intact, which result types are never cleared, which goals and identifiers a summary must retain, where the original lives, and which probes verify that required information survived.</p>
-            <p><a href="#g2-draft-source-05">SEED-05</a> displays configurable choices and one synthetic run with a smaller context trajectory. That run was not reproduced, includes no repeated trials or answer-quality comparison, and does not establish its settings as defaults.</p>
-          </div>
-
-          <aside class="draft-callout draft-callout--gap">
-            <p class="callout-label">Placeholder — evidence needed: caching</p>
-            <p>Separate semantic context policy from compute reuse. Cover prefix or KV caching, cache identity, invalidation, staleness, privacy, authority changes, provider-managed state, and the conditions that require recomputation. The current baseline only names cache/KV sharing as a landscape lead; it justifies no implementation recommendation.</p>
-          </aside>
-        </section>
-
-        <section id="g2-draft-worked" class="draft-section" aria-labelledby="g2-draft-worked-title">
-          <p class="draft-kicker">Worked example · Hypothetical</p>
-          <h3 id="g2-draft-worked-title">Follow one checkout task across two calls</h3>
-          <p class="draft-section-intro">The identifiers and payload below are invented to make the mechanics inspectable. This is not a recommended prompt template or a researched case.</p>
-
-          <aside class="draft-callout draft-callout--example">
-            <p class="callout-label">Task</p>
-            <p>Fix a checkout-total regression. Preserve the public API and existing tax policy. Use the focused failing test and full checkout suite as success checks. Report anything that cannot be verified.</p>
-          </aside>
-
-          <h4>Plan the first call through all four G2 jobs</h4>
-          <div class="four-jobs">
-            <article class="job-card"><strong>G2.1 · Instructions</strong><p>Outcome, constraints, success checks, repository permission, and uncertainty escalation.</p></article>
-            <article class="job-card"><strong>G2.2 · Retrieval</strong><p>Exact failure, current implementation, nearby tests, schema, pre-existing diff, versions, and tool descriptions.</p></article>
-            <article class="job-card"><strong>G2.3 · Assembly</strong><p>Separate directions from evidence, place the failure near the task, label paths and versions, and record omissions.</p></article>
-            <article class="job-card"><strong>G2.4 · Window policy</strong><p>No old transcript by default; focused log excerpt with a recoverable original; no compaction or cache assumption yet.</p></article>
-          </div>
-
-          <figure class="code-example" tabindex="0" aria-labelledby="g2-draft-bundle-caption">
-            <figcaption id="g2-draft-bundle-caption">Hypothetical first-call bundle at illustrative commit <code>abc123</code></figcaption>
-            <pre><code>[CONTROLLING INSTRUCTIONS]
-Goal: Fix the checkout-total regression shown below.
-Constraints: Preserve the public API and existing tax policy.
-Success: The focused test and full checkout suite pass.
-Escalate: Report any behavior you cannot verify.
-
-[CURRENT FAILURE — REPOSITORY EVIDENCE]
-test_checkout_total_rounding: expected 19.44, received 19.45
-
-[RELEVANT CODE]
-checkout/calculator.py — current calculation
-checkout/test_totals.py — failing and neighboring cases
-schema/currency.json — allowed precision and rounding fields
-
-[AVAILABLE CAPABILITIES]
-Read a repository file; apply a bounded patch; run a named test target.
-
-[RETRIEVABLE, NOT DELIVERED]
-Other repository files and the complete test log remain available by exact
-path or run ID. No prior project transcript is included.</code></pre>
-          </figure>
-
-          <h4>Record one delivered item</h4>
-          <dl class="manifest-grid" aria-label="Hypothetical context manifest receipt for ctx-004">
-            <div><dt>Item</dt><dd><code>ctx-004</code> · Evidence</dd></div>
-            <div><dt>Source</dt><dd>Focused run <code>run-17</code> at <code>abc123</code></dd></div>
-            <div><dt>Delivered form</dt><dd>Exact failing assertion</dd></div>
-            <div><dt>Selection reason</dt><dd>Current observed failure named by the task</dd></div>
-            <div><dt>Transformation</dt><dd>Surrounding progress output omitted</dd></div>
-            <div><dt>Recovery</dt><dd>Full log re-runnable by the recorded test target</dd></div>
-          </dl>
-
-          <h4>Change the context when the decision changes</h4>
-          <p class="draft-prose">Suppose the model edits one function and the focused test passes, but the full suite reveals a currency-rounding failure. The next call should not append everything forever. Its context delta is explicit:</p>
-          <div class="delta-grid" aria-label="Call-to-call context delta">
-            <article class="delta-card"><strong>Preserve</strong><p>Original goal, tax-policy constraint, and public-API constraint.</p></article>
-            <article class="delta-card"><strong>Add</strong><p>Current diff and the new full-suite failure.</p></article>
-            <article class="delta-card"><strong>Update</strong><p>Focused test passes; full suite does not.</p></article>
-            <article class="delta-card"><strong>Remove</strong><p>Old focused-run body; keep the result and exact re-run target.</p></article>
-            <article class="delta-card"><strong>Defer</strong><p>No compaction while the trajectory remains short.</p></article>
-          </div>
-          <aside class="draft-callout">
-            <p class="callout-label">If compaction becomes necessary</p>
-            <p>Check that both constraints, both observed failures, exact files, current diff, and unresolved questions survived. The useful bundle changes because the decision changed.</p>
-          </aside>
-        </section>
-
-        <section id="g2-draft-failures" class="draft-section" aria-labelledby="g2-draft-failures-title">
-          <p class="draft-kicker">Diagnostic aid · Working checklist</p>
-          <h3 id="g2-draft-failures-title">When context goes wrong, inspect the path</h3>
-          <p class="draft-section-intro">These are candidate failure modes. The draft does not claim they are equally common or that Context Engineering is their only possible cause.</p>
-          <dl class="failure-grid">
-            <div><dt>Vague intent</dt><dd>Plausible work misses the real task. Inspect outcome, success criteria, domain constraints, and escalation conditions.</dd></div>
-            <div><dt>Procedure trap</dt><dd>A checklist blocks investigation outside the guessed path. Distinguish mandatory policy from a proposed tactic.</dd></div>
-            <div><dt>Missing decision input</dt><dd>The model answers without a current fact it needed. Inspect candidates, retrieval misses, and omissions.</dd></div>
-            <div><dt>Context bloat</dt><dd>Useful material is buried in stale history or giant outputs. Inspect selection, placement, labels, duplicates, and role isolation.</dd></div>
-            <div><dt>Hidden conflict</dt><dd>Directions or facts disagree without visible precedence. Inspect source, authority, version, and conflict handling.</dd></div>
-            <div><dt>Stale state</dt><dd>A plan, file, or retrieved fact no longer matches the system. Inspect freshness, rewrite policy, and invalidation.</dd></div>
-            <div><dt>Lossy compaction</dt><dd>A summary keeps the theme but drops an exact constraint or identifier. Compare before/after records and survival probes.</dd></div>
-            <div><dt>False recoverability</dt><dd>Cleared material cannot be fetched again unchanged. Inspect identity, access, latency, version, and failure behavior.</dd></div>
-            <div><dt>Role bleed</dt><dd>A worker receives global noise or a planner loses the global picture. Inspect role manifests and handoffs.</dd></div>
-            <div><dt>Unobservable context</dt><dd>Nobody can explain a result because the delivered payload is unknown. Inspect the manifest and managed runtime layers.</dd></div>
-          </dl>
-
-          <section id="g2-draft-gaps" aria-labelledby="g2-draft-gaps-title">
-            <h4 id="g2-draft-gaps-title">What the next research pass still needs to fill</h4>
-            <p class="draft-prose">These gaps are part of the first draft on purpose. They show what a targeted pass should improve after the maintainer confirms the direction.</p>
-            <div class="gap-grid">
-              <article class="gap-card">
-                <strong>Theme · Authority and observability</strong>
-                <ul>
-                  <li><strong>1 · Authority and safety:</strong> precedence, permissions, untrusted text, poisoning, provenance, and non-removable policy.</li>
-                  <li><strong>3 · Context manifests:</strong> practical schemas and primary implementations that reconstruct delivered items and transformations.</li>
-                </ul>
-              </article>
-              <article class="gap-card">
-                <strong>Theme · Causal and failure evidence</strong>
-                <ul>
-                  <li><strong>2 · Causal evidence:</strong> broad structured, pruned structured, indiscriminate, and underspecified context.</li>
-                  <li><strong>5 · Instruction design evidence:</strong> intent versus tactics, examples, specificity, conflict, and over-specification.</li>
-                  <li><strong>6 · Retrieval quality:</strong> candidate sets, misses, contradiction, freshness, and later relevance.</li>
-                  <li><strong>7 · Compaction failures:</strong> negative/null results and detail-survival tests.</li>
-                </ul>
-              </article>
-              <article class="gap-card">
-                <strong>Theme · Reuse and implementation</strong>
-                <ul>
-                  <li><strong>4 · Caching:</strong> prefix/KV behavior, identity, invalidation, privacy, and compute reuse versus semantic policy.</li>
-                  <li><strong>10 · Primary implementation records:</strong> inspectable traces, configurations, and reproducible mechanisms.</li>
-                </ul>
-              </article>
-              <article class="gap-card">
-                <strong>Theme · Transfer and robustness</strong>
-                <ul>
-                  <li><strong>8 · Transfer:</strong> different models, domains, roles, task horizons, and error costs.</li>
-                  <li><strong>9 · Useful redundancy:</strong> when repetition or independent representations improve robustness.</li>
-                </ul>
-              </article>
-            </div>
-            <aside class="draft-callout draft-callout--authority">
-              <p class="callout-label">Proposed next-pass priority — subject to maintainer review</p>
-              <p>Start with instruction authority/untrusted content and practical context-manifest implementations. Those would make the draft safer and turn “what the model saw” into something concrete. Then target pruning versus organization, retrieval misses, and compaction loss so the preferred hypothesis can begin to be tested.</p>
-            </aside>
-          </section>
-
-          <section id="g2-draft-review" aria-labelledby="g2-draft-review-title">
-            <h4 id="g2-draft-review-title">Questions for your review</h4>
-            <ol class="draft-prose">
-              <li>Is “engineering what the model sees for a particular call” the right center of gravity?</li>
-              <li>Does the minimum-sufficient-versus-omission tension match the position you want?</li>
-              <li>Are G2.1–G2.4 doing the right jobs, or is one carrying too much or too little?</li>
-              <li>Are the checkout and restocking examples concrete enough? Should checkout remain the running example, or should restocking replace or alternate with it?</li>
-              <li>Is the boundary with memory, tools, orchestration, security, evaluation, and operations clear?</li>
-              <li>Does the proposed authority-plus-manifest research priority match what you want to deepen first?</li>
-              <li>Is the voice and density appropriate for the eventual learning material?</li>
-            </ol>
-          </section>
-        </section>
-
-        <section id="g2-draft-sources" class="draft-section" aria-labelledby="g2-draft-sources-title">
-          <p class="draft-kicker">Traceability and limits</p>
-          <h3 id="g2-draft-sources-title">What informed this first draft</h3>
-          <p class="draft-section-intro">These seven source families calibrated the direction and examples. They remain <code>read_only</code>; none is promoted to subject evidence or a reviewed finding.</p>
-
-          <div class="table-wrap" tabindex="0" role="region" aria-label="G2 seed source trail and limitations">
-            <table class="draft-table">
-              <caption>Seed source trail. Links are optional exits from this self-contained page.</caption>
-              <thead><tr><th scope="col">Source</th><th scope="col">Use in this draft</th><th scope="col">Controlling limit</th></tr></thead>
-              <tbody>
-                <tr id="g2-draft-source-01"><th scope="row"><a href="https://arize.com/docs/phoenix/prompt-engineering/concepts-prompts/context-engineering-basics">SEED-01 · Arize basics</a></th><td>Definition, lifecycle controls, logging/versioning, lazy recall</td><td>Vendor guidance; low empirical rigor; same lineage as SEED-02</td></tr>
-                <tr id="g2-draft-source-02"><th scope="row"><a href="https://arize.com/blog/ai-agents-in-production-context-evaluation/">SEED-02 · Arize production context</a></th><td>Systems-of-record and restocking example; omission and evaluation</td><td>Interview/vendor narrative; no controlled evidence</td></tr>
-                <tr id="g2-draft-source-03"><th scope="row"><a href="https://cursor.directory/plugins/context-engineering">SEED-03 · Cursor Directory collection</a></th><td>Coverage and future-source lead only; not factual support</td><td>Derivative aggregator; embedded claims and sources unverified</td></tr>
-                <tr id="g2-draft-source-04"><th scope="row"><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">SEED-04 · Anthropic effective context</a></th><td>Changing working set, instruction altitude, progressive disclosure, long-horizon distinctions</td><td>Practitioner article and figures; low empirical rigor; same lineage as SEED-05</td></tr>
-                <tr id="g2-draft-source-05"><th scope="row"><a href="https://platform.claude.com/cookbook/tool-use-context-engineering-context-engineering-tools">SEED-05 · Anthropic cookbook</a></th><td>Compaction, clearing, memory, triggers, and survival examples</td><td>One synthetic vendor workload; not reproduced; token reduction is not quality proof</td></tr>
-                <tr id="g2-draft-source-06"><th scope="row"><a href="https://cursor.com/blog/self-driving-codebases">SEED-06 · Cursor self-driving codebases</a></th><td>Intent, checklist risk, freshness, and handoffs</td><td>Vendor report; orchestration confound; same lineage as SEED-07</td></tr>
-                <tr id="g2-draft-source-07"><th scope="row"><a href="https://cursor.com/blog/agent-swarm-model-economics">SEED-07 · Cursor swarm economics</a></th><td>Role-specific context and review lenses</td><td>Vendor report; raw runs absent; context effect not causally isolated</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <aside class="draft-callout draft-callout--authority">
-            <p class="callout-label">What agreement does—and does not—mean</p>
-            <p>Agreement among these sources is useful editorial calibration, not independent corroboration. The set is concentrated in three vendor lineages, with SEED-03 acting as a derivative collection. Effectiveness, causality, transfer, and security remain open.</p>
-          </aside>
-
-          <details class="source-notes" id="g2-draft-writing">
-            <summary>How this page’s writing and accessibility were reviewed</summary>
-            <div>
-              <p class="source-note">The editorial criteria are separate from the G2 subject sources. They require a named audience, concrete and familiar language, focused sentences, front-loaded points, meaningful headings and links, semantic page structure, and complete textual meaning for diagrams.</p>
-              <ul class="source-note">
-                <li><a href="https://developers.google.com/tech-writing/one/audience">Google Technical Writing: Audience</a></li>
-                <li><a href="https://developers.google.com/tech-writing/one/short-sentences">Google Technical Writing: Short sentences</a></li>
-                <li><a href="https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice">Microsoft Style Guide: Top 10 tips for style and voice</a></li>
-                <li><a href="https://www.w3.org/WAI/tips/writing/">W3C WAI: Writing for Web Accessibility</a></li>
-                <li><a href="https://www.w3.org/WAI/tutorials/page-structure/">W3C WAI: Page Structure Tutorial</a></li>
-                <li><a href="https://www.w3.org/WAI/tutorials/images/">W3C WAI: Images Tutorial</a></li>
-              </ul>
-              <p class="source-note">These live, unpinned pages are <code>read_only</code> review guidance—not Context Engineering evidence or universal laws of writing.</p>
-            </div>
-          </details>
-
-          <nav class="draft-end-nav" aria-label="End of Context Engineering first draft">
-            <a href="#g2">← Back to the G2 outline</a>
-            <a href="#g2-first-draft">Back to first-draft start ↑</a>
-          </nav>
-        </section>
-      </div>
-    </article>
   </main>
 
   <footer>
-    <p><strong>Review state:</strong> The global outline CP01 remains unapproved and stopped; CP02–CP06 remain inactive. The linked G2 baseline is a non-authoritative first-draft candidate.</p>
-    <p>Select any child topic for a plain-language explanation and hypothetical implementation example; its exact canonical dossier remains under Formal planning notes. This self-contained page renders without external styles, fonts, images, scripts, frames, or network requests. Optional source links leave the page only when selected.</p>
+    <p><strong>Review state:</strong> The global outline CP01 remains unapproved and stopped; CP02–CP06 remain inactive. Numbered planning addresses live on this outline page. Context Engineering is the first developed subject with a separate reviewer-facing article.</p>
+    <p>Select any outline child for its plain-language explanation and exact planning dossier. Open Context Engineering for the cumulative v1.2 article. Both pages are self-contained and render without external styles, fonts, images, scripts, frames, or network requests.</p>
   </footer>
 </body>
 </html>

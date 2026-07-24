@@ -38,16 +38,13 @@ jobs:
           install -d _site
           install -m 0644 research/outline-development/site/index.html _site/index.html
           install -m 0644 research/outline-development/site/context-engineering.html _site/context-engineering.html
-          touch _site/.nojekyll
           cmp -s research/outline-development/site/index.html _site/index.html
           cmp -s research/outline-development/site/context-engineering.html _site/context-engineering.html
-          test ! -s _site/.nojekyll
           mapfile -t published_files < <(find _site -mindepth 1 -type f -printf '%P\n' | sort)
-          test "${#published_files[@]}" -eq 3
-          test "${published_files[0]}" = ".nojekyll"
-          test "${published_files[1]}" = "context-engineering.html"
-          test "${published_files[2]}" = "index.html"
-          test "$(find _site -mindepth 1 | wc -l)" -eq 3
+          test "${#published_files[@]}" -eq 2
+          test "${published_files[0]}" = "context-engineering.html"
+          test "${published_files[1]}" = "index.html"
+          test "$(find _site -mindepth 1 | wc -l)" -eq 2
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5

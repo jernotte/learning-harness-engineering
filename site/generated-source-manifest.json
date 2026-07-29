@@ -1,14 +1,73 @@
 {
   "schema_version": "harness-learning-site-v1",
-  "canonical_layer": "learning Markdown",
-  "chapter_id": "context-management-in-agent-harnesses",
-  "chapter_status": "provisional",
-  "chapter_updated": "2026-07-19",
+  "canonical_layer": "hand-authored HTML (site-variants/context-engineering.html)",
+  "chapter_id": "the-context-window",
+  "chapter_status": "draft, maintainer-approved 2026-07-29",
+  "chapter_updated": "2026-07-29",
   "renderer": {
-    "name": "marked",
-    "version": "17.0.5"
+    "name": "hand-authored",
+    "note": "This chapter is not generated from learning Markdown. Its figures are bespoke HTML/CSS that Markdown cannot express, so the generator was bypassed. The sources listed below describe the SUPERSEDED generated chapter and are retained only for history."
   },
-  "sources": [
+  "tooling": [
+    {
+      "path": "tools/learning-site/generate.cjs",
+      "role": "generator",
+      "bytes": 27978,
+      "sha256": "0a71efe23a5feb2752f5ee893630ad37f13a91339f560074233e50a4be7759f7"
+    },
+    {
+      "path": "tools/learning-site/assets/styles.css",
+      "role": "generator",
+      "bytes": 28256,
+      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
+    },
+    {
+      "path": "tools/learning-site/assets/site.js",
+      "role": "generator",
+      "bytes": 3151,
+      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
+    }
+  ],
+  "pages": [
+    {
+      "output": "index.html",
+      "derived_from": [
+        "learning/README.md",
+        "learning/chapters/context-management-in-agent-harnesses.md"
+      ]
+    },
+    {
+      "output": "chapters/context-management-in-agent-harnesses.html",
+      "derived_from": [
+        "learning/chapters/context-management-in-agent-harnesses.md",
+        "research/syntheses/context-management-across-harnesses.md",
+        "research/claims/context-management-across-harnesses.md"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "path": "assets/site.js",
+      "bytes": 3151,
+      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
+    },
+    {
+      "path": "assets/styles.css",
+      "bytes": 28256,
+      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
+    },
+    {
+      "path": "chapters/context-management-in-agent-harnesses.html",
+      "bytes": 104638,
+      "sha256": "fca8b507688c0c26f7f76f433969a0f0ad022f4d8a6070dcdf25d524c686d1db"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9303,
+      "sha256": "fdbffe392672b238b9d4b67ea7583a546c337a0d250f90e31841a7156a8b525f"
+    }
+  ],
+  "superseded_sources": [
     {
       "path": "learning/README.md",
       "role": "rendered",
@@ -94,63 +153,8 @@
       "sha256": "d5fdb43954e907979f87b370653427fa6e79e1212c94cbf57e0ae55fdaa5e7fa"
     }
   ],
-  "tooling": [
-    {
-      "path": "tools/learning-site/generate.cjs",
-      "role": "generator",
-      "bytes": 27978,
-      "sha256": "0a71efe23a5feb2752f5ee893630ad37f13a91339f560074233e50a4be7759f7"
-    },
-    {
-      "path": "tools/learning-site/assets/styles.css",
-      "role": "generator",
-      "bytes": 28256,
-      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
-    },
-    {
-      "path": "tools/learning-site/assets/site.js",
-      "role": "generator",
-      "bytes": 3151,
-      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
-    }
-  ],
-  "pages": [
-    {
-      "output": "index.html",
-      "derived_from": [
-        "learning/README.md",
-        "learning/chapters/context-management-in-agent-harnesses.md"
-      ]
-    },
-    {
-      "output": "chapters/context-management-in-agent-harnesses.html",
-      "derived_from": [
-        "learning/chapters/context-management-in-agent-harnesses.md",
-        "research/syntheses/context-management-across-harnesses.md",
-        "research/claims/context-management-across-harnesses.md"
-      ]
-    }
-  ],
-  "outputs": [
-    {
-      "path": "assets/site.js",
-      "bytes": 3151,
-      "sha256": "d282a73a1fa217bddb51d1024cb189ef0a694476507f089bdff66d509fa7a57e"
-    },
-    {
-      "path": "assets/styles.css",
-      "bytes": 28256,
-      "sha256": "3c0fc2417ab38536d2e9269f9ef7c7d8e579154c13e8c84a806c89e50d06e3ea"
-    },
-    {
-      "path": "chapters/context-management-in-agent-harnesses.html",
-      "bytes": 104638,
-      "sha256": "fca8b507688c0c26f7f76f433969a0f0ad022f4d8a6070dcdf25d524c686d1db"
-    },
-    {
-      "path": "index.html",
-      "bytes": 9303,
-      "sha256": "fdbffe392672b238b9d4b67ea7583a546c337a0d250f90e31841a7156a8b525f"
-    }
-  ]
+  "authored_source": {
+    "path": "site-variants/context-engineering.html",
+    "sha256": "2fc8b1c8651db07e5b26c9193bdc914b6def79803fae5ec8af6943ef0b196ba5"
+  }
 }

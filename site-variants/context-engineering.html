@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>The Context Window · Chapter 1</title>
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
   <style>
   .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
   .variant-bar strong { margin-right: 0.6rem; }
@@ -164,11 +164,20 @@
     .grow-num { display: none; }
   }
   </style>
-  <script defer src="../assets/site.js"></script>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/annotator.js"></script>
 </head>
 <body class="chapter-page">
-  
-  
+  <div class="variant-bar" role="navigation" aria-label="Chapter versions">
+    <strong>Chapter 1:</strong>
+    <a href="index.html">Overview</a>
+    <a href="context-engineering.html" aria-current="page">The Context Window</a>
+    <a href="version-e.html">Version E (superseded)</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme" style="margin-left:auto"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  </div>
+
+  <p class="variant-note"><strong>Chapter 1.</strong> Grounded in nineteen cited sources, with three more read and explicitly set aside. Constructed example figures are labelled as such; every claim about measured model behaviour is footnoted. Select any text to annotate it.</p>
+
   <main id="main-content" tabindex="-1">
     <article class="chapter-article variant-article">
       <header class="chapter-header">

@@ -563,3 +563,39 @@ Approval authorizes Phase 3 of the current goal: the canonical synthesis and hum
 On 2026-07-18, the maintainer explicitly approved D-013 and authorized Phase 3: the canonical cross-harness synthesis and human-oriented learning Markdown. The maintainer then confirmed the intended layer boundary: Markdown is the canonical human-oriented intermediate layer, and HTML follows as a generated presentation layer rather than an independently edited source of knowledge. This approval enacts the responsibility-label refinements, cross-cutting annotations, and focused target-test policy above. It does not authorize another implementation before the final learning checkpoint, and HTML may not begin until the Markdown exists and passes content validation.
 
 On 2026-07-19, after the synthesis and learning Markdown passed content validation, the maintainer revised only the HTML execution arrangement. Codex's deterministic Markdown-to-site writer generated the current static site. The separate write-bounded Fable-high writer remains intact as a second authoring implementation. Fable review, reconciliation, and verification remain a third, read-only role. Neither writer may modify canonical research or learning Markdown. This delivery-mechanics change does not alter D-013's taxonomy, target-test policy, evidence limits, or maturity decisions.
+
+## D-014 — Reject the first learning pilot and reset delivery around mechanism-level teaching
+
+**Status:** Approved
+**Date:** 2026-07-19
+
+### Decision
+
+Reject “Where Harnesses Put Control” as the active human learning chapter while preserving its research substrate and Git history. The site presentation was acceptable; the content was not. Replace the active curriculum with a mechanism-level chapter on context management that follows this teaching sequence:
+
+> concrete engineering problem → exact implementation flow → same-axis comparison → tradeoff and failure mode → builder decision → optional evidence drill-down
+
+Use the four maintainer-reviewed cases as the comparative backbone. Permit bounded topic-specific primary inspection of additional systems when it materially tests the chapter's design space without pretending to be a full case study. Under that boundary, admit pinned Codex CLI and Letta Code/open-server context evidence; retain Claude Code only as clearly labeled secondary reporting. Do not promote those bounded records to reviewed harness cases, claim field prevalence, or change the canonical R1–R11 taxonomy.
+
+Keep the deterministic Codex site writer and the isolated Fable-high writer as separate authoring implementations. Use Codex for the current rewrite. Fable's exhausted session limit defers independent review; it does not block producing the learning artifact and cannot be reported as PASS. Run the normal read-only Fable review against the finished replacement when capacity returns.
+
+Browser Use and every other full implementation remain blocked until the maintainer reads and dispositions the replacement learning experience.
+
+### Why
+
+The rejected pilot was traceable and accurate but failed the project's actual objective. It organized the material around a broad abstraction, summarized systems instead of teaching their mechanisms, offered little same-axis comparison or tradeoff analysis, and made epistemic/governance posture more prominent than the engineering. The result did not improve the maintainer's understanding.
+
+Context management is the first replacement topic because the retained cases already contain deep, comparable evidence on prompt construction, bounded reads, tool-result shaping, durable history, active projections, compaction, subagent inheritance, and memory. Targeted Codex and Letta inspection adds high-information counter-shapes without reopening a full landscape cycle. The Arize article is used as a pedagogical benchmark and source-reported Claude comparator, not as authority over pinned code.
+
+### Consequences
+
+- Checkpoint 4 was not approved; its first learning pilot is rejected.
+- `learning/chapters/context-management-in-agent-harnesses.md` becomes the canonical human chapter under review.
+- `research/syntheses/context-management-across-harnesses.md` and its working claim ledger become the immediate agent-grade substrate.
+- The original first-batch synthesis remains valid research evidence but no longer dictates the active curriculum structure.
+- The provenance infrastructure remains frozen; evidence rigor still supports learning rather than becoming the deliverable.
+- Fable review remains an explicit deferred check, not a delivery gate while capacity is unavailable.
+
+### Approval record
+
+After identifying the first chapter as unusably shallow, the maintainer agreed to the content reset and explicitly directed Codex to continue without the capacity-blocked Fable reviewer, with the finished rewrite to be reviewed later. This approval authorizes the bounded topic inspections and replacement learning/site work above; it does not authorize another full harness case or taxonomy change.

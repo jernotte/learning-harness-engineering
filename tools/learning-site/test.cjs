@@ -9,11 +9,11 @@ const {
   extractFrontmatter,
   extractOpeningHeadings,
   generate,
-  replaceCanonicalDiagram,
+  replaceCanonicalDiagrams,
 } = require("./generate.cjs");
 
 const repoRoot = path.resolve(__dirname, "../..");
-const chapterPath = path.join(repoRoot, "learning/chapters/where-harnesses-put-control.md");
+const chapterPath = path.join(repoRoot, "learning/chapters/context-management-in-agent-harnesses.md");
 const chapter = fs.readFileSync(chapterPath, "utf8");
 
 let assertions = 0;
@@ -41,20 +41,21 @@ function filesUnder(root) {
 }
 
 const parsed = extractFrontmatter(chapter);
-check(parsed.attributes.id === "where-harnesses-put-control", "chapter id is parsed");
+check(parsed.attributes.id === "context-management-in-agent-harnesses", "chapter id is parsed");
 check(parsed.attributes.source_cases.length === 4, "all four source cases are parsed");
 check(parsed.attributes.source_cases.every((item) => /^[0-9a-f]{40}$/.test(item.commit)), "all source-case pins are full commits");
 
 const opening = extractOpeningHeadings(parsed.body, parsed.attributes.title);
 check(opening.title === parsed.attributes.title, "frontmatter and H1 agree");
-check(opening.subtitle === "Model-directed loops inside programmed execution and recovery envelopes", "subtitle derives from Markdown");
+check(opening.subtitle === "What the model sees is a product decision", "subtitle derives from Markdown");
 check(!opening.body.trimStart().startsWith("# "), "opening headings are removed from the render body");
 
-const diagrammed = replaceCanonicalDiagram(opening.body);
-check(diagrammed.includes('<figure class="control-map"'), "canonical Mermaid becomes the accessible diagram");
+const diagrammed = replaceCanonicalDiagrams(opening.body);
+check(diagrammed.includes('<figure class="context-map"'), "context pipeline becomes an accessible diagram");
+check(diagrammed.includes('<figure class="compaction-map"'), "compaction pipeline becomes an accessible diagram");
 expectThrow(
-  () => replaceCanonicalDiagram(opening.body.replace("I[Ingress and admission]", "I[Changed ingress]")),
-  /canonical control diagram changed/i,
+  () => replaceCanonicalDiagrams(opening.body.replace("D[(Durable task state)]", "D[(Changed state)]")),
+  /canonical context diagram changed/i,
 );
 
 const invalidPin = chapter.replace(
@@ -80,12 +81,14 @@ for (const relative of firstFiles) {
   );
 }
 
-const html = fs.readFileSync(path.join(first, "chapters/where-harnesses-put-control.html"), "utf8");
+const html = fs.readFileSync(path.join(first, "chapters/context-management-in-agent-harnesses.html"), "utf8");
 check((html.match(/<h1(?:\s|>)/g) || []).length === 1, "chapter contains exactly one H1");
-check((html.match(/data-evidence-kind="inference"/g) || []).length === 4, "all four explicit inference trails remain inferences");
-check(!html.includes('evidence-detail kind-fact'), "an inference over facts is never strengthened to fact");
+check(html.includes('data-evidence-kind="inference"'), "explicit inference trails remain labeled");
+check(html.includes('data-evidence-kind="reported"'), "source-reported Claude material remains labeled");
 check(html.includes("commit 2b3fda9921b5590f285165287bd442a25817f17b"), "full commits remain screen-reader accessible");
 check(html.includes("How to read evidence"), "the epistemic legend is present");
+check(html.includes("16,384 tokens") && html.includes("50 percent"), "mechanism-level compaction defaults survive rendering");
+check(html.includes("Design your context contract"), "the builder decision guide survives rendering");
 
 const manifest = JSON.parse(fs.readFileSync(path.join(first, "generated-source-manifest.json"), "utf8"));
 check(manifest.renderer.name === "marked" && manifest.renderer.version === "17.0.5", "renderer identity is pinned");

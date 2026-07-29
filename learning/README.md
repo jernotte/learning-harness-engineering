@@ -12,17 +12,23 @@ The learning layer may simplify navigation and introduce teaching aids, examples
 
 ## Learning progression
 
-### 1. Where harnesses put control
+### 1. The Context Window
 
-[Where Harnesses Put Control: Model-Directed Loops Inside Programmed Execution and Recovery Envelopes](chapters/where-harnesses-put-control.md)
+[The Context Window: what the model is actually reading during a conversation](../site-variants/context-engineering.html)
 
-Learn to trace who controls admission, model calls, action authority, observations, recovery, task acceptance, and across-run adaptation. The chapter compares four reviewed implementations without treating recurrence as proof of effectiveness.
+Builds the subject from zero. What a stateless model actually receives on each call; tokens; the anatomy of a turn-zero context and why tool schemas dominate it; who authors each region and how prefix caching follows from that; why a larger window does not remove the problem; and the four moves a harness makes in response, bounding, compaction, subagents, and memory.
 
-**Prerequisites:** Basic tool-calling and software control-flow concepts.
-**Status:** Provisional learning chapter derived from the first canonical synthesis.
-**Research basis:** [First-batch harness architecture](../research/syntheses/first-batch-harness-architecture.md).
+**Prerequisites:** None. The chapter assumes no prior knowledge of harnesses, tokens, or tool calling.
 
-Read the generated experience from the [site landing page](../site/index.html) or open [Chapter 1 directly](../site/chapters/where-harnesses-put-control.html). The [generated-source manifest](../site/generated-source-manifest.json) binds those pages to the Markdown and research inputs used to create them.
+**Status:** Draft, maintainer-approved 2026-07-29. Nineteen cited sources, with three read and explicitly set aside and two unreachable (recorded in the chapter). Example-agent figures are constructed and labelled as such; every claim about measured model behaviour is footnoted.
+
+**Authoring note:** This chapter is hand-authored HTML rather than generated from Markdown. Its figures are bespoke HTML and CSS that Markdown cannot express, so `tools/learning-site` was bypassed and `site/generated-source-manifest.json` records the page as hand-authored. The canonicality rule below therefore does not apply to this chapter: the HTML at `site-variants/context-engineering.html` is the source. Reconciling this with the Markdown pipeline is an open question.
+
+Read it at [site-variants/context-engineering.html](../site-variants/context-engineering.html), which carries the annotator for feedback, or without the annotator at [site/chapters/context-management-in-agent-harnesses.html](../site/chapters/context-management-in-agent-harnesses.html).
+
+The comparison-first drafts (Versions A through E, including the 9,210-word “Context Engineering” deep guide) are superseded. They remain in `site-variants/` and in Git history. They were rejected for demanding that a reader hold four unfamiliar systems in mind while still learning the concepts.
+
+The earlier “Where Harnesses Put Control” page was rejected by the maintainer as too abstract and shallow to teach the subject. It remains recoverable in Git history but is no longer part of the active curriculum.
 
 ## How to read the evidence labels
 

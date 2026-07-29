@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Chapter 1 candidates · Chapter 1 candidates</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
+  .variant-bar strong { margin-right: 0.6rem; }
+  .variant-bar a { padding: 0.25rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; }
+  .variant-bar a[aria-current="page"] { border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .variant-note { max-width: var(--measure); margin: 1rem auto 0; padding: 0.7rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius-small); color: var(--ink-faint); font-size: 0.8rem; }
+  .variant-article { max-width: calc(var(--measure) + 4rem); margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  .variant-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; max-width: 70rem; margin: 2rem auto; padding: 0 1.2rem; }
+  .variant-cards article { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .variant-cards h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+  .variant-cards p { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.88rem; }
+  .variant-cards .meta { color: var(--ink-faint); font-size: 0.75rem; margin-bottom: 0.6rem; }
+
+  /* Version E comparison figures */
+  .prose figure[class^="fig-"] { margin: 2rem 0; padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+  .prose figure[class^="fig-"] figcaption { margin-bottom: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .fig-note { margin: 0.8rem 0 0; font-size: 0.75rem; color: var(--ink-faint); }
+  /* per-harness mechanism flows */
+  .flow { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+  .flow + .flow { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--line); }
+  .fnode { display: inline-flex; flex-direction: column; gap: 1px; max-width: 15rem; padding: 0.45rem 0.75rem; border: 1.5px solid var(--line-strong); border-radius: 8px; background: var(--surface-raised); font-size: 0.75rem; font-weight: 700; }
+  .fnode small { font-weight: 450; color: var(--ink-faint); }
+  .fnode.src { border-style: dashed; font-weight: 600; }
+  .fnode.cache { border-color: var(--gold); }
+  .fnode.call { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+  .fnode.risk { border-style: dashed; border-color: var(--rust); }
+  .farrow { color: var(--ink-faint); font-weight: 800; }
+  /* assembly stack */
+  .stack-rows { display: flex; flex-direction: column; gap: 0.45rem; }
+  .stack-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.6rem; align-items: stretch; }
+  .stack-label { align-self: center; font-size: 0.72rem; font-weight: 750; color: var(--ink-faint); text-align: right; }
+  .stack-seg { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.78rem; }
+  .stack-seg.core { background: var(--teal-soft); color: var(--teal-strong); }
+  .stack-seg.session { background: var(--blue-soft); color: var(--blue); }
+  .stack-seg.turn { background: var(--gold-soft); color: var(--gold); }
+  /* window bars */
+  .win-rows, .fate-rows { display: flex; flex-direction: column; gap: 0.55rem; }
+  .win-row { display: grid; grid-template-columns: 13rem 1fr 9rem; gap: 0.7rem; align-items: center; }
+  .win-label { font-size: 0.76rem; font-weight: 700; }
+  .win-label small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .win-bar { display: flex; height: 14px; overflow: hidden; border-radius: 999px; border: 1px solid var(--line); }
+  .win-bar i.keep { background: var(--teal); }
+  .win-bar i.drop { background: var(--line); opacity: 0.45; }
+  .win-note { font-size: 0.7rem; color: var(--ink-faint); }
+  /* result fates */
+  .fate-row { display: grid; grid-template-columns: 6.5rem 1fr 1fr; gap: 0.7rem; align-items: stretch; }
+  .fate-label { align-self: center; font-size: 0.78rem; font-weight: 750; }
+  .fate-model { padding: 0.45rem 0.7rem; border-radius: 8px; background: var(--teal-soft); color: var(--teal-strong); font-size: 0.74rem; }
+  .fate-durable { padding: 0.45rem 0.7rem; border: 1px dashed var(--line-strong); border-radius: 8px; color: var(--ink-faint); font-size: 0.74rem; }
+  /* branch projection */
+  .branch-canvas { display: flex; flex-direction: column; gap: 0.9rem; overflow-x: auto; padding: 0.3rem 0; }
+  .branch-lane { display: flex; align-items: center; gap: 0; white-space: nowrap; }
+  .branch-lane.faded { opacity: 0.45; }
+  .bnode { padding: 0.3rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 8px; font-size: 0.72rem; background: var(--surface-raised); }
+  .bnode.active { border-color: var(--teal); color: var(--teal); font-weight: 750; }
+  .bnode.summary { border-color: var(--gold); color: var(--gold); }
+  .bnode.abandoned { border-style: dashed; }
+  .bedge { width: 1.4rem; height: 1px; background: var(--line-strong); flex: none; }
+  /* posture + inheritance axes */
+  .posture-axis { display: grid; grid-template-columns: 7rem 1fr 7rem; gap: 0.6rem; align-items: start; }
+  .pole { padding-top: 0.1rem; font-size: 0.72rem; font-weight: 750; color: var(--ink-soft); text-align: center; }
+  .pole small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .axis-line, .inherit-axis { position: relative; display: block; height: 9.5rem; }
+  .axis-line::before, .inherit-axis::before { content: ""; position: absolute; top: 0.55rem; right: 0; left: 0; height: 3px; border-radius: 999px; background: linear-gradient(90deg, var(--teal), var(--rust)); }
+  .ptick, .itick { position: absolute; top: 0; width: 8.5rem; margin-left: -4.25rem; text-align: center; font-size: 0.68rem; }
+  .ptick::before, .itick::before { content: ""; display: block; width: 11px; height: 11px; margin: 0 auto 0.35rem; border: 2px solid var(--paper); border-radius: 50%; background: var(--ink); }
+  .ptick b, .itick b { display: block; }
+  .ptick small, .itick small { color: var(--ink-faint); line-height: 1.25; display: block; }
+  .axis-line .ptick:nth-of-type(even) b, .inherit-axis .itick:nth-of-type(even) b { margin-top: 3.4rem; }
+  .inherit-axis { height: 9rem; margin: 0.4rem 0 0; }
+  /* placement quadrant */
+  .quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .quad-cell { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; font-size: 0.74rem; }
+  .quad-cell b { font-size: 0.8rem; }
+  .quad-cell small { color: var(--ink-faint); }
+  .q-cost { margin-top: 0.2rem; color: var(--ink-soft); font-style: italic; }
+  .q-tl { background: var(--teal-soft); } .q-tr { background: var(--blue-soft); } .q-bl { background: var(--gold-soft); } .q-br { background: var(--violet-soft); }
+  /* profiles */
+  .profile-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.6rem; }
+  .p-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.85rem 0.95rem; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; background: var(--surface-raised); font-size: 0.74rem; }
+  .p-card b { font-size: 0.85rem; }
+  .p-card em { color: var(--rust); font-style: normal; font-weight: 650; }
+  .p-card span { color: var(--ink-soft); }
+  @media (max-width: 700px) {
+    .win-row { grid-template-columns: 1fr; gap: 0.25rem; }
+    .fate-row { grid-template-columns: 1fr; }
+    .posture-axis { grid-template-columns: 1fr; }
+    .quad-grid { grid-template-columns: 1fr; }
+    .axis-line, .inherit-axis { height: auto; min-height: 8rem; }
+  }
+</style>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/annotator.js"></script>
+</head>
+<body class="chapter-page">
+  <div class="variant-bar" role="navigation" aria-label="Chapter versions">
+    <strong>Chapter 1 candidates:</strong>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="version-a.html">Version A</a>
+    <a href="version-b.html">Version B</a>
+    <a href="version-c.html">Version C</a>
+    <a href="version-d.html">Version D</a>
+    <a href="context-engineering.html">The Context Window</a>
+    <a href="version-e.html">Version E</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme" style="margin-left:auto"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  </div>
+  
+  <main id="main-content" tabindex="-1">
+    <article class="variant-article">
+      <header class="chapter-header">
+        <p class="eyebrow">Comparison preview · not the published site</p>
+        <h1>Chapter 1, four ways</h1>
+        <p class="chapter-summary">The same concept — context management in agent harnesses — written with four different pedagogical structures. Every version carries the same verified facts, pins, citations, and epistemic labels; only the skeleton and voice change. Read them in any order and pick the one you learn best from.</p>
+      </header>
+      <div class="variant-cards">
+        <article>
+    <p class="meta">Approved 2026-07-29 · about 40 min · 9,000 words · 19 cited sources</p>
+    <h2><a href="context-engineering.html">The Context Window — current chapter</a></h2>
+    <p>Builds from zero: what a model receives, tokens, the anatomy of a turn-zero context, prefix caching, why a bigger window does not fix degradation, and the four moves a harness has to make. Replaces the comparison-first drafts below.</p>
+    <a class="button primary" href="context-engineering.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+  <article>
+    <h2><a href="version-a.html">Version A — Conceptual framework</a></h2>
+    <p class="meta">“Context Management in Agent Harnesses” · about 35 min · 8,160 words</p>
+    <p>The current chapter. Teaches the six-decision framework up front, then compares all four harnesses inside each decision. Concept-led: abstraction first, evidence organized beneath it.</p>
+    <a class="button primary" href="version-a.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+<article>
+    <h2><a href="version-b.html">Version B — Lifecycle narrative</a></h2>
+    <p class="meta">“Context Through the Life of a Task” · about 17 min · 3,916 words</p>
+    <p>One coding session told chronologically (9:00 start → tomorrow), watching what the model saw at each moment in each harness. Story-led: the six-decision framework is revealed at the end, extracted from the narrative.</p>
+    <a class="button primary" href="version-b.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+<article>
+    <h2><a href="version-c.html">Version C — Failure-first diagnosis</a></h2>
+    <p class="meta">“Why Agents Forget” · about 13 min · 3,092 words</p>
+    <p>Starts from five familiar operator complaints (“the error was right there”) and works backward from each symptom to the mechanism. Diagnostic-led: the framework becomes a debugging checklist.</p>
+    <a class="button primary" href="version-c.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+<article>
+    <h2><a href="version-d.html">Version D — Design workshop</a></h2>
+    <p class="meta">“Designing a Context Policy” · about 13 min · 3,047 words</p>
+    <p>Second person: you are building the harness and must make six binding decisions, with the four implementations as advisors. Activity-led: every section ends in “write it down,” accumulating a context contract.</p>
+    <a class="button primary" href="version-d.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+<article>
+    <h2><a href="version-e.html">Version E — The deep guide (superseded)</a></h2>
+    <p class="meta">“Context Engineering” · about 40 min · 9,210 words</p>
+    <p>Depth-first for technical readers. Every mechanism area follows a fixed method: how it works (algorithm-level, per harness) → what each choice optimizes for → what the research actually found (with numbers and limits) → design guidance. Seven comparison diagrams, and a closing goal-driven design procedure: name your dominant goal, get the policies that serve it.</p>
+    <a class="button primary" href="version-e.html">Read this version <span aria-hidden="true">→</span></a>
+  </article>
+      </div>
+      <p class="variant-note">These pages are a selection preview generated outside the canonical pipeline. The published site under <code>site/</code> still renders Version A. After you choose, the winner becomes the canonical chapter Markdown and the site regenerates from it; the other variants are archived or deleted.</p>
+    </article>
+  </main>
+</body>
+</html>

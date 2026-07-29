@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Designing a Context Policy · Chapter 1 candidates</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
+  .variant-bar strong { margin-right: 0.6rem; }
+  .variant-bar a { padding: 0.25rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; }
+  .variant-bar a[aria-current="page"] { border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .variant-note { max-width: var(--measure); margin: 1rem auto 0; padding: 0.7rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius-small); color: var(--ink-faint); font-size: 0.8rem; }
+  .variant-article { max-width: calc(var(--measure) + 4rem); margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  .variant-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1rem; max-width: 70rem; margin: 2rem auto; padding: 0 1.2rem; }
+  .variant-cards article { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .variant-cards h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+  .variant-cards p { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.88rem; }
+  .variant-cards .meta { color: var(--ink-faint); font-size: 0.75rem; margin-bottom: 0.6rem; }
+
+  /* Version E comparison figures */
+  .prose figure[class^="fig-"] { margin: 2rem 0; padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+  .prose figure[class^="fig-"] figcaption { margin-bottom: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .fig-note { margin: 0.8rem 0 0; font-size: 0.75rem; color: var(--ink-faint); }
+  /* per-harness mechanism flows */
+  .flow { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
+  .flow + .flow { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--line); }
+  .fnode { display: inline-flex; flex-direction: column; gap: 1px; max-width: 15rem; padding: 0.45rem 0.75rem; border: 1.5px solid var(--line-strong); border-radius: 8px; background: var(--surface-raised); font-size: 0.75rem; font-weight: 700; }
+  .fnode small { font-weight: 450; color: var(--ink-faint); }
+  .fnode.src { border-style: dashed; font-weight: 600; }
+  .fnode.cache { border-color: var(--gold); }
+  .fnode.call { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+  .fnode.risk { border-style: dashed; border-color: var(--rust); }
+  .farrow { color: var(--ink-faint); font-weight: 800; }
+  /* assembly stack */
+  .stack-rows { display: flex; flex-direction: column; gap: 0.45rem; }
+  .stack-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.6rem; align-items: stretch; }
+  .stack-label { align-self: center; font-size: 0.72rem; font-weight: 750; color: var(--ink-faint); text-align: right; }
+  .stack-seg { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.78rem; }
+  .stack-seg.core { background: var(--teal-soft); color: var(--teal-strong); }
+  .stack-seg.session { background: var(--blue-soft); color: var(--blue); }
+  .stack-seg.turn { background: var(--gold-soft); color: var(--gold); }
+  /* window bars */
+  .win-rows, .fate-rows { display: flex; flex-direction: column; gap: 0.55rem; }
+  .win-row { display: grid; grid-template-columns: 13rem 1fr 9rem; gap: 0.7rem; align-items: center; }
+  .win-label { font-size: 0.76rem; font-weight: 700; }
+  .win-label small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .win-bar { display: flex; height: 14px; overflow: hidden; border-radius: 999px; border: 1px solid var(--line); }
+  .win-bar i.keep { background: var(--teal); }
+  .win-bar i.drop { background: var(--line); opacity: 0.45; }
+  .win-note { font-size: 0.7rem; color: var(--ink-faint); }
+  /* result fates */
+  .fate-row { display: grid; grid-template-columns: 6.5rem 1fr 1fr; gap: 0.7rem; align-items: stretch; }
+  .fate-label { align-self: center; font-size: 0.78rem; font-weight: 750; }
+  .fate-model { padding: 0.45rem 0.7rem; border-radius: 8px; background: var(--teal-soft); color: var(--teal-strong); font-size: 0.74rem; }
+  .fate-durable { padding: 0.45rem 0.7rem; border: 1px dashed var(--line-strong); border-radius: 8px; color: var(--ink-faint); font-size: 0.74rem; }
+  /* branch projection */
+  .branch-canvas { display: flex; flex-direction: column; gap: 0.9rem; overflow-x: auto; padding: 0.3rem 0; }
+  .branch-lane { display: flex; align-items: center; gap: 0; white-space: nowrap; }
+  .branch-lane.faded { opacity: 0.45; }
+  .bnode { padding: 0.3rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 8px; font-size: 0.72rem; background: var(--surface-raised); }
+  .bnode.active { border-color: var(--teal); color: var(--teal); font-weight: 750; }
+  .bnode.summary { border-color: var(--gold); color: var(--gold); }
+  .bnode.abandoned { border-style: dashed; }
+  .bedge { width: 1.4rem; height: 1px; background: var(--line-strong); flex: none; }
+  /* posture + inheritance axes */
+  .posture-axis { display: grid; grid-template-columns: 7rem 1fr 7rem; gap: 0.6rem; align-items: start; }
+  .pole { padding-top: 0.1rem; font-size: 0.72rem; font-weight: 750; color: var(--ink-soft); text-align: center; }
+  .pole small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .axis-line, .inherit-axis { position: relative; display: block; height: 9.5rem; }
+  .axis-line::before, .inherit-axis::before { content: ""; position: absolute; top: 0.55rem; right: 0; left: 0; height: 3px; border-radius: 999px; background: linear-gradient(90deg, var(--teal), var(--rust)); }
+  .ptick, .itick { position: absolute; top: 0; width: 8.5rem; margin-left: -4.25rem; text-align: center; font-size: 0.68rem; }
+  .ptick::before, .itick::before { content: ""; display: block; width: 11px; height: 11px; margin: 0 auto 0.35rem; border: 2px solid var(--paper); border-radius: 50%; background: var(--ink); }
+  .ptick b, .itick b { display: block; }
+  .ptick small, .itick small { color: var(--ink-faint); line-height: 1.25; display: block; }
+  .axis-line .ptick:nth-of-type(even) b, .inherit-axis .itick:nth-of-type(even) b { margin-top: 3.4rem; }
+  .inherit-axis { height: 9rem; margin: 0.4rem 0 0; }
+  /* placement quadrant */
+  .quad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .quad-cell { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.75rem 0.9rem; border: 1px solid var(--line); border-radius: 8px; font-size: 0.74rem; }
+  .quad-cell b { font-size: 0.8rem; }
+  .quad-cell small { color: var(--ink-faint); }
+  .q-cost { margin-top: 0.2rem; color: var(--ink-soft); font-style: italic; }
+  .q-tl { background: var(--teal-soft); } .q-tr { background: var(--blue-soft); } .q-bl { background: var(--gold-soft); } .q-br { background: var(--violet-soft); }
+  /* profiles */
+  .profile-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.6rem; }
+  .p-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.85rem 0.95rem; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 8px; background: var(--surface-raised); font-size: 0.74rem; }
+  .p-card b { font-size: 0.85rem; }
+  .p-card em { color: var(--rust); font-style: normal; font-weight: 650; }
+  .p-card span { color: var(--ink-soft); }
+  @media (max-width: 700px) {
+    .win-row { grid-template-columns: 1fr; gap: 0.25rem; }
+    .fate-row { grid-template-columns: 1fr; }
+    .posture-axis { grid-template-columns: 1fr; }
+    .quad-grid { grid-template-columns: 1fr; }
+    .axis-line, .inherit-axis { height: auto; min-height: 8rem; }
+  }
+</style>
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/annotator.js"></script>
+</head>
+<body class="chapter-page">
+  <div class="variant-bar" role="navigation" aria-label="Chapter versions">
+    <strong>Chapter 1 candidates:</strong>
+    <a href="index.html">Overview</a>
+    <a href="version-a.html">Version A</a>
+    <a href="version-b.html">Version B</a>
+    <a href="version-c.html">Version C</a>
+    <a href="version-d.html" aria-current="page">Version D</a>
+    <a href="version-e.html">Version E</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme" style="margin-left:auto"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span></button>
+  </div>
+  
+  <p class="variant-note"><strong>Version D — Design workshop.</strong> Second person: you are building the harness and must make six binding decisions, with the four implementations as advisors. Activity-led: every section ends in “write it down,” accumulating a context contract. Same verified facts and citations in every version — only the structure and voice differ. About 13 min read (3,047 words).</p>
+  <main id="main-content" tabindex="-1">
+    <article class="chapter-article variant-article">
+      <header class="chapter-header">
+        <p class="eyebrow">Harness architecture · Context and memory</p>
+        <h1>Designing a Context Policy</h1>
+        <p class="chapter-subtitle">Six decisions, four advisors</p>
+        <p class="chapter-summary">A working session: make the six context decisions every harness must make, with four production implementations as your advisors.</p>
+        <div class="chapter-objectives">
+          <p id="chapter-objectives-title">After this chapter you should be able to</p>
+          <ul aria-labelledby="chapter-objectives-title">
+            <li>Make the six context decisions every harness design must resolve</li>
+            <li>Use four production implementations as evidence when weighing each decision</li>
+            <li>Anticipate the failure mode each choice accepts</li>
+            <li>Leave with a written context contract for your own harness</li>
+          </ul>
+        </div>
+        <div class="evidence-legend" aria-labelledby="evidence-legend-title">
+          <p id="evidence-legend-title">How to read evidence</p>
+          <ul class="epistemic-key">
+            <li class="kind-fact">Verified fact</li>
+            <li class="kind-reported">Source-reported</li>
+            <li class="kind-inference">Inference</li>
+            <li class="kind-recommendation">Recommendation</li>
+            <li class="kind-contested">Contested</li>
+            <li class="kind-open">Open question</li>
+          </ul>
+        </div>
+      </header>
+      <div class="prose chapter-prose"><p>You are building a harness for a long-running coding agent. The model is chosen, the tools work, and now you face the decisions that will quietly determine most of your agent&#39;s failures: <strong>what does the model get to see, and what happens to everything else?</strong></p>
+<p>Industry writing calls this discipline <strong>context engineering</strong>. This chapter runs it as a working session. You will make six decisions in order. At each one you will hear from four advisors—Pi, OpenHands Software Agent SDK, OpenClaw, and Hermes Agent, each pinned and reviewed at an exact commit—plus two consultants brought in for specific questions (Codex CLI and Letta, pinned bounded inspections) and one rumor from a closed shop (Claude Code, source-reported only). At the end of each decision, you write your answer down. By the chapter&#39;s end you will have a <strong>context contract</strong>: the document most harnesses never write and then wish they had.</p>
+<p>Your design canvas is the pipeline every advisor implements some version of:</p>
+<figure class="context-map" aria-labelledby="context-map-caption">
+  <figcaption id="context-map-caption">
+    <strong>The context pipeline</strong>
+    <span>Durable information becomes model evidence only after selection, retrieval, transformation, and budgeting.</span>
+  </figcaption>
+  <div class="context-sources" aria-label="Candidate information sources">
+    <article><span>Durable state</span><small>events, transcript, branches</small></article>
+    <article><span>Instructions</span><small>policy, tools, skills</small></article>
+    <article><span>Workspace</span><small>files, environment, results</small></article>
+    <article><span>Long-term memory</span><small>retrieved or injected state</small></article>
+  </div>
+  <ol class="context-flow" aria-label="Context construction stages">
+    <li><b>1</b><span><strong>Select or retrieve</strong><small>Choose candidates for this call.</small></span></li>
+    <li><b>2</b><span><strong>Transform and budget</strong><small>Truncate, summarize, normalize, order.</small></span></li>
+    <li class="active-context"><b>3</b><span><strong>Active model context</strong><small>The only representation the model can use now.</small></span></li>
+    <li><b>4</b><span><strong>Action and observation</strong><small>Effects create new candidate evidence.</small></span></li>
+  </ol>
+  <p class="omission-note"><strong>Omitted material</strong> can remain durable while being completely invisible to the model on this turn.</p>
+</figure>
+
+<p>The model receives only the output of selection and transformation—never the durable transcript, workspace, memory store, or raw environment. Every decision below chooses what that pipeline keeps, spends, and discards. (<a href="../research/claims/context-management-across-harnesses.md#c001">Context synthesis C001</a>, <a href="../research/claims/context-management-across-harnesses.md#c002">C002</a>)</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — persistence is not model awareness.</strong></p>
+<p>Throughout this session, &quot;we stored it&quot; and &quot;the model can use it now&quot; are different claims. Design as if the distance between them is where your bugs will live—because it is.</p>
+</blockquote>
+<h2 id="decision-1-what-enters-before-the-agent-asks-for-anything">Decision 1: What enters before the agent asks for anything?<a class="heading-anchor" href="#decision-1-what-enters-before-the-agent-asks-for-anything" aria-label="Link to Decision 1: What enters before the agent asks for anything?">#</a></h2>
+<p><strong>The question.</strong> Which instructions, tools, skills, files, and environment facts enter every call automatically—and how does each one go stale?</p>
+<p><strong>How the field decided.</strong> Pi assembles working directory, date, active tool guidance, project instruction files, and skill metadata, walking the repository ancestry; skills are advertised by metadata and loaded on demand—<strong>progressive disclosure</strong>, refreshed together with the executable tool set. OpenHands freezes agent policy, materializes it with runtime tool schemas into an inspectable <code>SystemPromptEvent</code>, and lets dynamic state flow through the event model. OpenClaw separates a cache-stable prefix from run-specific material, injects bootstrap files by default, and varies the set by route—ordinary runs full, heartbeat and cron lighter or empty. Hermes caches the assembled system prompt for the session and adds request-local material per call, accepting that a mid-session profile update may wait for invalidation.</p>
+<p><strong>What you are trading.</strong> Rebuild aggressively and you buy freshness with cost and prompt variability. Cache aggressively and you buy stability with stale snapshots. Advertise resources and you save tokens while betting on well-timed retrieval. Inject everything and you avoid retrieval misses while crowding attention. (<a href="../research/claims/context-management-across-harnesses.md#c003">Context synthesis C003</a>)</p>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> For your harness: What is in every call? What is per-session, per-route? What must be retrieved? What invalidates each cached element—and does the model know how fresh its picture is?</p>
+</blockquote>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for initial construction</summary>
+
+<ul>
+<li>Pi: active-tool, instruction-file, skills-metadata, and extension-refresh assembly in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E04</a></li>
+<li>OpenHands: frozen agent policy materialized with runtime tools, plugins, skills, MCP, and the model view in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E06</a></li>
+<li>OpenClaw: per-run materialization of provider, prompt, bootstrap, skills, context-engine state, and the effective tool set in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E07</a></li>
+<li>Hermes: session-cached system prompt with request-local additions and restore-or-rebuild invalidation in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E10</a></li>
+<li>Status: verified implementation facts for the assembly and caching paths; the staleness tradeoff framing is inference</li>
+</ul>
+</details>
+
+<h2 id="decision-2-how-does-the-agent-acquire-what-it-is-missing">Decision 2: How does the agent acquire what it is missing?<a class="heading-anchor" href="#decision-2-how-does-the-agent-acquire-what-it-is-missing" aria-label="Link to Decision 2: How does the agent acquire what it is missing?">#</a></h2>
+<p><strong>The question.</strong> When the agent needs a 10,000-line file or a long log, what window does it get, and what continuation exists?</p>
+<p><strong>How the field decided.</strong></p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Advisor</th>
+<th>File reads</th>
+<th>Shell / bootstrap</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pi</td>
+<td>First 2,000 lines and 50 KB, offset to continue</td>
+<td>Shell keeps the <em>last</em> 2,000 lines and 50 KB; full output spills to a temporary file</td>
+</tr>
+<tr>
+<td>OpenHands</td>
+<td>Caller-selected range, 16,000-character response cap</td>
+<td>Terminal observations cap at 30,000 characters; full content may persist when configured</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Tool-specific</td>
+<td>Bootstrap: 20,000 characters per file, 60,000 aggregate, head-and-tail with warning; live results tiered separately</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>500 lines default, 2,000 max, 100,000 characters, complete-line trim, next offset</td>
+<td>Project instructions get a model-window-scaled budget</td>
+</tr>
+</tbody></table></div>
+<p>Consultants concur on the deeper principle: Codex bounds combined AGENTS files at 32 KiB and ordinary shell output at 10,000 tokens and one MiB per process; Letta&#39;s shell requests a 10,000-token budget and caps inline output at 30,000 characters while retaining a larger process-local body.</p>
+<p><strong>What you are trading.</strong> Pi&#39;s head-for-files, tail-for-commands asymmetry is task-shaped: declarations top, stack traces bottom—and anything mid-file can vanish. OpenHands converts a bad window into a visible retrieval error. The consensus worth stealing: <strong>acquisition is typed by source</strong>—files, shell output, bootstrap instructions, and observations do not deserve one universal truncation rule.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — &quot;the model has a 200K window&quot; does not mean the harness will send 200K of this result.</strong></p>
+<p>Every advisor reserves capacity for instructions, history, schemas, and output, and caps single sources so none monopolizes attention.</p>
+</blockquote>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> For each source type in your harness: window shape (head, tail, range), byte and line budgets, continuation mechanism, and who chooses the window—the model, the caller, or the policy.</p>
+</blockquote>
+<h2 id="decision-3-what-does-the-model-learn-about-what-just-happened">Decision 3: What does the model learn about what just happened?<a class="heading-anchor" href="#decision-3-what-does-the-model-learn-about-what-just-happened" aria-label="Link to Decision 3: What does the model learn about what just happened?">#</a></h2>
+<p><strong>The question.</strong> An 80,000-character build fails with the decisive assertion at character 53,000. What reaches the next call?</p>
+<p><strong>How the field decided.</strong> Pi keeps the tail and names the temp file holding everything—visible loss, recovery handle—and fails tool calls whose arguments a provider may have truncated rather than executing them. OpenHands converts output into a typed, capped observation inside the durable event tree; the transformer is powerful and therefore dangerous—a lossy conversion writes a clean record of the wrong evidence. OpenClaw maintains three representations (canonical transcript, bounded provider clone, recovery-time rewrite), caps live results by tier at 16K/32K/64K characters under a 30-percent window share, and preserves head plus a diagnostic-looking tail with an omission marker. Hermes spills big bodies to disk and returns a 1,500-character preview (the pinned default) plus the path—full recoverability, behavioral risk.</p>
+<p><strong>What you are trading.</strong></p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Policy</th>
+<th>You gain</th>
+<th>You silently risk</th>
+<th>Recovery cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Head</td>
+<td>setup, schema, declarations</td>
+<td>the final error</td>
+<td>paginate later</td>
+</tr>
+<tr>
+<td>Tail</td>
+<td>the final error</td>
+<td>the initial cause</td>
+<td>inspect the spill</td>
+</tr>
+<tr>
+<td>Head + tail</td>
+<td>both boundaries</td>
+<td>the decisive middle</td>
+<td>targeted retrieval</td>
+</tr>
+<tr>
+<td>Preview + path</td>
+<td>full recoverability</td>
+<td>evidence never fetched</td>
+<td>one more call, judged well</td>
+</tr>
+<tr>
+<td>Typed observation</td>
+<td>structure and status</td>
+<td>conversion losses</td>
+<td>raw artifact, if retained</td>
+</tr>
+</tbody></table></div>
+<p>There is no context-free winner; a good policy is output-aware, makes omission obvious, preserves a route back, and <strong>tests whether the route is used</strong>. (<a href="../research/claims/context-management-across-harnesses.md#c004">Context synthesis C004</a>)</p>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> For each tool: the representation the model sees, the omission marker, the recovery handle, and the test that proves the handle gets used under pressure.</p>
+</blockquote>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for result shaping</summary>
+
+<ul>
+<li>Pi: exact head/tail limits, continuation, and spill behavior in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: exact file/terminal caps and persistence condition in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a>, plus the typed action/observation boundary in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E08</a></li>
+<li>OpenClaw: exact bootstrap and live-result budgets in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E21</a>, plus canonical/provider/recovery projections in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E10</a></li>
+<li>Hermes: exact read, per-result, aggregate, preview, and spill limits in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; information-value tradeoffs are engineering inference</li>
+</ul>
+</details>
+
+<h2 id="decision-4-which-history-is-live">Decision 4: Which history is live?<a class="heading-anchor" href="#decision-4-which-history-is-live" aria-label="Link to Decision 4: Which history is live?">#</a></h2>
+<p><strong>The question.</strong> Your durable record and your model-visible history are different objects. What is each, and what maps one to the other?</p>
+<p><strong>How the field decided.</strong> Pi keeps append-only JSONL session trees; the model view follows the active leaf, so a call reasons over a path, not everything stored. OpenHands separates three answers cleanly—the event log says what happened, the branch head says what is current, the never-persisted <code>View</code> says what the model may see. OpenClaw runs a federation of stores with different durability and recovery rules and projects a repaired view; &quot;OpenClaw persists the conversation&quot; is not a meaningful sentence until you name the store. Hermes holds sessions in SQLite, where compression soft-archives old rows and inserts the compacted projection atomically under the same session ID—original rows stay searchable.</p>
+<p><strong>What you are trading.</strong> Projection buys auditability, branching, and recovery at the price of a mapping that can drift. <strong>All four advisors store more than the model receives</strong>—the design question is whether your projection is deterministic, testable, and explainable after an incident. (<a href="../research/claims/context-management-across-harnesses.md#c002">Context synthesis C002</a>)</p>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> Name the source of truth. Define the projection rule. Decide how you would replay the exact model view from durable state after a bad night.</p>
+</blockquote>
+<h2 id="decision-5-what-happens-when-it-stops-fitting">Decision 5: What happens when it stops fitting?<a class="heading-anchor" href="#decision-5-what-happens-when-it-stops-fitting" aria-label="Link to Decision 5: What happens when it stops fitting?">#</a></h2>
+<p><strong>The question.</strong> Sessions outgrow windows. When yours does, what is protected, what is transformed, and—above all—what happens when the transformation fails?</p>
+<figure class="compaction-map" aria-labelledby="compaction-map-caption">
+  <figcaption id="compaction-map-caption">
+    <strong>The common compaction shape</strong>
+    <span>A protected head and recent tail surround a transformed middle; storage retention and model visibility remain separate.</span>
+  </figcaption>
+  <div class="history-before" aria-label="History before compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment middle">Older middle</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-arrow" aria-hidden="true"><span>summarize or evict</span>↓</div>
+  <div class="history-after" aria-label="Active context after compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment summary">Summary or retained structure</span>
+    <span class="segment tail">Recent tail</span>
+  </div>
+  <div class="compaction-notes">
+    <p><strong>Durable store</strong><span>The raw middle may still exist.</span></p>
+    <p><strong>Active uncertainty</strong><span>Omission and hallucination can survive as fluent context.</span></p>
+  </div>
+</figure>
+
+<p><strong>How the field decided.</strong> Pi compacts by default—16,384 reserved tokens, 20,000-token recent region, legal-boundary walk, structured summary folding in the previous one, appended file lists—and bounds overflow recovery to one compact-and-retry. OpenHands makes condensation optional at the constructor and opinionated in the preset (80 events, keep first four; generic defaults differ), records a durable condensation event with the forgotten IDs, and distinguishes soft pressure (may fail without changing the view) from hard (retry smaller, then propagate). OpenClaw compacts inside a liveness envelope—raised reserve floor, overflow and timeout detection, bounded retries, resume-from-transcript, last-resort persisted truncation, then reset guidance. Hermes compresses in place near 50 percent, protects the system prompt plus early messages (protection decays after the first pass) and a recent region, prunes old tool payloads, soft-archives rows—and, by default (<code>abort_on_summary_failure=false</code>), survives an ordinary summarizer failure by inserting a deterministic lossy placeholder, while preserving history on auth and network failures.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Advisor</th>
+<th>On failure or persistent pressure</th>
+<th>Implied priority</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pi</td>
+<td>bounded retry, then stop</td>
+<td>predictable termination</td>
+</tr>
+<tr>
+<td>OpenHands</td>
+<td>soft may hold the view; hard retries then propagates</td>
+<td>optimization ≠ recovery</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>escalate, then reset guidance</td>
+<td>service liveness</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>lossy continuation by default, raw rows preserved</td>
+<td>forward progress</td>
+</tr>
+</tbody></table></div>
+<p>Codex compacts automatically at 90 percent of its effective window and warns that repeated compaction can reduce accuracy—an advisor admitting a cost in writing. Letta&#39;s server defaults to a sliding-window summarizer and keeps older conversation searchable, refusing to make the summary the only road back.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — a fluent summary reads as complete.</strong></p>
+<p>Truncation announces itself; a summary that silently dropped one requirement does not. Your failure posture will matter more than your summarizer prompt.</p>
+</blockquote>
+<p><strong>What the research warns.</strong> Semenov and Dorofeev call LLM-summary compaction potentially lossy, blocking, destructive, and hallucination-prone (one long run of evidence). Cim and collaborators measured compaction at up to 62 percent of wall time in low-threshold settings with semantically varying ten-run summaries—on other tasks and stacks. Status for your design review: <strong>contested implementation practice</strong>—widely shipped, plausibly useful, unmeasured at these pins. Do not let anyone on your team call it solved. (<a href="../research/claims/context-management-across-harnesses.md#c005">Context synthesis C005</a>, <a href="../research/claims/context-management-across-harnesses.md#c009">C009</a>)</p>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> Trigger threshold. Protected regions. Legal cut points and tool-pair integrity. Raw-history retention. And a one-line answer per failure: summarizer down, summary too big, pressure persists—hold, retry, degrade, or stop?</p>
+</blockquote>
+<details class="evidence-detail kind-inference" data-evidence-kind="inference">
+<summary>Exact implementation anchors for compaction defaults and failure posture</summary>
+
+<ul>
+<li>Pi: trigger, protected recent region, structured summary, and defaults in <a href="../research/sources/cp2-pi-v0.80.6.md#evidence-items-and-claim-references">CP2-S001-E12</a></li>
+<li>OpenHands: bare-agent versus preset defaults and the 80-event/four-event policy in <a href="../research/sources/cp2-openhands-sdk-v1.35.0.md#evidence-items-and-claim-references">CP2-S002-E15</a></li>
+<li>OpenClaw: runtime compaction and bounded recovery in <a href="../research/sources/cp2-openclaw-v2026.6.6.md#evidence-items-and-claim-references">CP2-S005-E08</a></li>
+<li>Hermes: threshold, protected regions, pruning, soft archival, and summary-failure split in <a href="../research/sources/cp2-hermes-agent-v0.18.2.md#evidence-items-and-claim-references">CP2-S009-E26</a></li>
+<li>Status: verified implementation facts; the stated priorities and semantic-retention risks are engineering inferences</li>
+</ul>
+</details>
+
+<h2 id="decision-6-what-crosses-to-a-child-agent">Decision 6: What crosses to a child agent?<a class="heading-anchor" href="#decision-6-what-crosses-to-a-child-agent" aria-label="Link to Decision 6: What crosses to a child agent?">#</a></h2>
+<p><strong>The question.</strong> Delegation creates a new projection boundary. What crosses it?</p>
+<p><strong>How the field decided.</strong> Isolation dominates the defaults: Pi&#39;s example extension sends an explicit task to a separate process (no transcript; bounded output back); OpenHands starts a new conversation with the task and a shared workspace (aggregated final text back); OpenClaw isolates unless a same-agent transcript fork is explicitly requested (cross-agent must stay isolated); Hermes gives children fresh sessions—explicit goal, context, workspace; no parent files, no memory, capability no broader than the parent.</p>
+<p>Codex proves the choice need not be binary: <code>fork_turns</code> accepts <code>none</code>, a turn count, or <code>all</code>—and even &quot;all&quot; filters tool calls, tool results, reasoning, and non-final assistant work as implementation debris, passing system, developer, and user messages plus final answers. Letta offers stateless ephemeral children (no MemFS, no memory blocks) and an explicit conversation fork.</p>
+<p><strong>What you are trading.</strong> Isolation cuts contamination and cost and creates <strong>brief-writing risk</strong>—every omitted constraint is unavailable unless rediscovered. Inheritance cuts briefing loss and imports irrelevance, staleness, and cost. Codex&#39;s filter is a third instructive answer to a hard question: which parts of a trajectory are context, and which are debris—knowing the filter can also discard the one tool result that mattered.</p>
+<blockquote class="callout confusion"><p><strong>Common confusion — a fresh context is not an independent mind.</strong></p>
+<p>If the same parent model writes the brief, executes it, and grades the summary, correlated errors remain likely. (<a href="../research/claims/context-management-across-harnesses.md#c006">Context synthesis C006</a>)</p>
+</blockquote>
+<blockquote class="callout">
+<p><strong>Write it down.</strong> An inheritance policy by role and message type; a handoff contract for briefs; what returns to the parent; and the test comparing child briefs against parent requirements.</p>
+</blockquote>
+<h2 id="the-seventh-decision-you-did-not-schedule-memory">The seventh decision you did not schedule: memory<a class="heading-anchor" href="#the-seventh-decision-you-did-not-schedule-memory" aria-label="Link to The seventh decision you did not schedule: memory">#</a></h2>
+<p>Your harness will be asked to &quot;remember things.&quot; Before agreeing, separate five claims: <strong>history</strong> (recorded), <strong>active context</strong> (visible now), <strong>memory</strong> (meant to survive), <strong>adaptation</strong> (future artifacts change), <strong>optimization</strong> (changes selected by measured outcomes). The advisors implement the first four. None demonstrates the fifth.</p>
+<p>OpenClaw retrieves through a memory plugin, can flush durable notes before compaction, and ships disabled-by-default dreaming that promotes repeatedly recalled, diverse material. Hermes updates memory and skills from conversation experience in background processes. Letta prices placement explicitly—always-visible <code>system/</code> memory permanently consumes context; other memory must be read; history stays searchable; reflection rewrites committed memory through git-committed, validated MemFS edits. Codex ships cross-run memory as an experimental, disabled-by-default extension.</p>
+<p>The promotion signals—recall, diversity, recency, interpretation—are not outcomes; a frequently recalled mistake is promoted as readily as a truth. MemoryAgentBench splits memory into four competencies and finds no evaluated method mastering all; it does not test these harnesses. Design accordingly: provenance on writes, conflict representation, a correction and forgetting path, and no &quot;self-improving&quot; claims without outcome evidence. (<a href="../research/claims/context-management-across-harnesses.md#c007">Context synthesis C007</a>, <a href="../research/claims/context-management-across-harnesses.md#c010">C010</a>)</p>
+<h2 id="design-review-attack-your-own-policy">Design review: attack your own policy<a class="heading-anchor" href="#design-review-attack-your-own-policy" aria-label="Link to Design review: attack your own policy">#</a></h2>
+<p>Before shipping, review your six answers against the failures they must survive. Each row is a question for your design, not a feature list:</p>
+<div class="table-scroll" role="region" aria-label="Scrollable comparison table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Attack</th>
+<th>Your policy survives if…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Silent omission</strong></td>
+<td>truncation is marked and a recoverable handle exists</td>
+</tr>
+<tr>
+<td><strong>Retrieval miss</strong></td>
+<td>required resources are inventoried and their triggers tested</td>
+</tr>
+<tr>
+<td><strong>Stale injection</strong></td>
+<td>each cached element has a stated invalidation rule</td>
+</tr>
+<tr>
+<td><strong>Projection drift</strong></td>
+<td>the model view can be replayed from durable state</td>
+</tr>
+<tr>
+<td><strong>Summary omission</strong></td>
+<td>retention probes test the constraints, not the mechanics</td>
+</tr>
+<tr>
+<td><strong>Summary hallucination</strong></td>
+<td>summary facts are checked against durable events</td>
+</tr>
+<tr>
+<td><strong>Tool-pair corruption</strong></td>
+<td>action/result pairs are handled atomically</td>
+</tr>
+<tr>
+<td><strong>Memory pollution</strong></td>
+<td>writes carry provenance and a forgetting path exists</td>
+</tr>
+<tr>
+<td><strong>Child starvation</strong></td>
+<td>briefs are compared against parent requirements</td>
+</tr>
+<tr>
+<td><strong>Attention crowding</strong></td>
+<td>you measure task performance by context composition, not fit</td>
+</tr>
+</tbody></table></div>
+<p>Context failures usually remove the evidence needed to notice them—your review&#39;s job is to make that impossible. (<a href="../research/claims/context-management-across-harnesses.md#c008">Context synthesis C008</a>)</p>
+<h2 id="your-contract-assembled">Your contract, assembled<a class="heading-anchor" href="#your-contract-assembled" aria-label="Link to Your contract, assembled">#</a></h2>
+<p>The six write-it-down blocks compose into one document (<a href="../research/claims/context-management-across-harnesses.md#c011">Context synthesis C011</a>):</p>
+<ol>
+<li><strong>Source of truth</strong> — named per surface, with a winner when stores disagree.</li>
+<li><strong>Admission</strong> — every call / per session or route / retrieval only, with invalidation rules.</li>
+<li><strong>Transformation</strong> — per source type: selection, budget, window, omission marker, recovery path.</li>
+<li><strong>Failure posture</strong> — hold, retry, degrade, or stop, decided before the incident.</li>
+<li><strong>Boundary crossing</strong> — what survives calls, crashes, resumes, compactions, spawns, and days.</li>
+<li><strong>Retention tests</strong> — proofs that knowledge survives, not that mechanisms ran.</li>
+</ol>
+<p>This is an engineering recommendation, not a claim that one contract fits every product. The advisors disagree with each other on nearly every decision above while all shipping working systems—the contract&#39;s value is not the answers, it is that yours are written, tested, and deliberate.</p>
+<h2 id="what-your-advisors-can-and-cannot-tell-you">What your advisors can and cannot tell you<a class="heading-anchor" href="#what-your-advisors-can-and-cannot-tell-you" aria-label="Link to What your advisors can and cannot tell you">#</a></h2>
+<p>They can show you <strong>verified mechanics at exact pins</strong>: every number in this chapter traces to inspected code. They can show you four coherent, different priority orderings—termination, inspectability, liveness, forward progress. They cannot tell you which policy wins on matched long-horizon tasks (unmeasured), how closed harnesses behave (the Claude Code reporting—a 256 KiB pre-read gate, roughly 25,000-token post-read budget, read deduplication, spill-with-preview, working-set restoration—remains source-reported and version-unstable), or whether their similarities are independent convergence (OpenClaw and Hermes share migration and influence links; they are not independent data points). (<a href="../research/claims/context-management-across-harnesses.md#c012">Context synthesis C012</a>)</p>
+<h2 id="recap">Recap<a class="heading-anchor" href="#recap" aria-label="Link to Recap">#</a></h2>
+<p>You made six decisions: what enters, how the missing is acquired, what the model learns about events, which history is live, what happens under pressure, and what crosses to children—plus the memory decision that arrived unscheduled. Four production teams answered the same questions differently and defensibly; your contract is only obliged to be explicit where theirs are implicit.</p>
+<p>If you remember one question, make it this:</p>
+<blockquote class="callout">
+<p><strong>What exact evidence will the model receive on the next call, and what happened to everything else?</strong></p>
+</blockquote>
+<h2 id="reflection-questions">Reflection questions<a class="heading-anchor" href="#reflection-questions" aria-label="Link to Reflection questions">#</a></h2>
+<ol>
+<li>Which of your six answers did you find hardest to write down—and is that where your next incident is?</li>
+<li>Which advisor&#39;s priority ordering (termination, inspectability, liveness, forward progress) matches your product, and where does it not?</li>
+<li>What retention test could you add to CI this week?</li>
+<li>Which single number in your contract are you least confident about, and what experiment would settle it?</li>
+</ol>
+<h2 id="suggested-next-reading">Suggested next reading<a class="heading-anchor" href="#suggested-next-reading" aria-label="Link to Suggested next reading">#</a></h2>
+<ul>
+<li><a href="../research/syntheses/context-management-across-harnesses.md">Agent-grade context synthesis</a></li>
+<li><a href="../research/case-studies/pi-v0.80.6.md">Pi case study</a> · <a href="../research/case-studies/openhands-sdk-v1.35.0.md">OpenHands SDK case study</a> · <a href="../research/case-studies/openclaw-v2026.6.6.md">OpenClaw case study</a> · <a href="../research/case-studies/hermes-agent-v0.18.2.md">Hermes Agent case study</a></li>
+<li><a href="../research/sources/codex-cli-v0.144.6-context.md">Codex CLI bounded context inspection</a> · <a href="../research/sources/letta-code-v0.28.11-context.md">Letta bounded context inspection</a></li>
+</ul>
+</div>
+    </article>
+  </main>
+</body>
+</html>

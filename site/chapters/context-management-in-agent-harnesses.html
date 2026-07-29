@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>The Context Window · Chapter 1</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+  .variant-bar { position: sticky; top: 0; z-index: 80; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-raised); font-size: 0.8rem; }
+  .variant-bar strong { margin-right: 0.6rem; }
+  .variant-bar a { padding: 0.25rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; }
+  .variant-bar a[aria-current="page"] { border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .variant-note { max-width: var(--measure); margin: 1rem auto 0; padding: 0.7rem 1rem; border: 1px dashed var(--line-strong); border-radius: var(--radius-small); color: var(--ink-faint); font-size: 0.8rem; }
+  .variant-article { max-width: calc(var(--measure) + 4rem); margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+
+  .prose figure { margin: 2.2rem 0; padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--surface); }
+  .prose figure figcaption { margin-bottom: 1rem; font-size: 0.85rem; color: var(--ink-soft); }
+  .fig-note { margin: 0.9rem 0 0; font-size: 0.75rem; color: var(--ink-faint); }
+
+  .typed { max-width: var(--measure); margin: 1.4rem auto; padding: 0.9rem 1.1rem; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface-raised); font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 0.95rem; }
+
+  /* tokenization strip */
+  .toks { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 0.85rem; }
+  .tok { padding: 0.25rem 0.5rem; border-radius: 5px; background: var(--teal-soft); color: var(--teal-strong, var(--teal)); white-space: pre; }
+  .toks.alt .tok { background: var(--gold-soft); color: var(--gold); }
+  .tok-count { margin-left: 0.5rem; font-family: inherit; font-size: 0.75rem; color: var(--ink-faint); }
+  .toks-row + .toks-row { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px dashed var(--line); }
+  .toks-row p { margin: 0 0 0.45rem; font-size: 0.78rem; color: var(--ink-faint); }
+
+  /* code block */
+  .prose pre { overflow-x: auto; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-raised); font-size: 0.78rem; line-height: 1.5; }
+  .prose pre code { font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); }
+
+  /* arithmetic block */
+  .sum { display: flex; flex-direction: column; gap: 0.3rem; font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 0.8rem; }
+  .sum div { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 0.2rem 0; }
+  .sum div span:last-child { font-variant-numeric: tabular-nums; }
+  .sum div.total { margin-top: 0.3rem; padding-top: 0.5rem; border-top: 1px solid var(--line-strong); font-weight: 750; }
+
+  /* composition stack */
+  .comp { display: flex; flex-direction: column; gap: 0.5rem; }
+  .comp-row { display: grid; grid-template-columns: 10.5rem 1fr; gap: 0.8rem; align-items: center; }
+  .comp-key { font-size: 0.74rem; font-weight: 750; text-align: right; line-height: 1.3; }
+  .comp-key small { display: block; font-weight: 500; color: var(--ink-faint); }
+  .comp-bar { position: relative; display: flex; align-items: center; min-height: 2.5rem; padding: 0.4rem 0.75rem; border-radius: 8px; font-size: 0.76rem; line-height: 1.35; }
+  .comp-bar b { font-variant-numeric: tabular-nums; }
+  .c-sys { background: var(--teal-soft); color: var(--teal-strong, var(--teal)); }
+  .c-tool { background: var(--blue-soft); color: var(--blue); }
+  .c-inst { background: var(--gold-soft); color: var(--gold); }
+  .c-skill { background: var(--violet-soft); color: var(--violet); }
+  .c-env { background: var(--surface-raised); color: var(--ink-soft); border: 1px solid var(--line); }
+  .c-you { background: var(--rust); color: var(--paper); font-weight: 700; }
+  .comp-total { display: grid; grid-template-columns: 10.5rem 1fr; gap: 0.8rem; margin-top: 0.3rem; padding-top: 0.6rem; border-top: 1px solid var(--line); font-size: 0.76rem; }
+  .comp-total span:first-child { text-align: right; font-weight: 750; color: var(--ink-faint); }
+
+  /* ownership grid */
+  .own { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .own th { padding: 0.4rem 0.7rem; border-bottom: 1px solid var(--line-strong); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-faint); text-align: left; }
+  .own td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .own td:first-child { font-weight: 700; white-space: nowrap; }
+  .own .rate-frozen { color: var(--teal); font-weight: 650; }
+  .own .rate-slow { color: var(--blue); font-weight: 650; }
+  .own .rate-live { color: var(--rust); font-weight: 650; }
+
+  /* cache prefix diagram */
+  .pfx { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.75rem; }
+  .pfx-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.7rem; align-items: center; }
+  .pfx-row > span:first-child { text-align: right; font-weight: 700; color: var(--ink-faint); }
+  .pfx-bar { display: flex; height: 30px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+  .pfx-bar i { display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 0.68rem; font-weight: 700; }
+  .pfx-hit { background: var(--teal-soft); color: var(--teal-strong, var(--teal)); }
+  .pfx-miss { background: var(--rust); color: var(--paper); }
+  .pfx-new { background: var(--gold-soft); color: var(--gold); }
+
+  /* citations */
+  .cite { padding: 0 0.1em; font-size: 0.72em; font-weight: 700; vertical-align: super; line-height: 0; color: var(--teal); text-decoration: none; }
+  .cite:hover { text-decoration: underline; }
+  .refs { padding-left: 1.4rem; font-size: 0.78rem; color: var(--ink-soft); }
+  .refs li { margin: 0.5rem 0; line-height: 1.6; }
+  :target { background: color-mix(in srgb, var(--gold-soft), transparent 30%); border-radius: 4px; }
+
+  /* growth chart */
+  .grow { display: flex; flex-direction: column; gap: 0.4rem; }
+  .grow-row { display: grid; grid-template-columns: 4.2rem 1fr 5rem; gap: 0.7rem; align-items: center; font-size: 0.75rem; }
+  .grow-row > span:first-child { color: var(--ink-faint); font-weight: 650; }
+  .grow-track { height: 15px; border-radius: 999px; background: color-mix(in srgb, var(--line), transparent 40%); overflow: hidden; }
+  .grow-fill { height: 100%; border-radius: 999px; background: var(--teal); }
+  .grow-row.over .grow-fill { background: var(--rust); }
+  .grow-row.over { color: var(--rust); font-weight: 700; }
+  .grow-num { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+
+  /* position/accuracy column chart */
+  .chartwrap { overflow-x: auto; }
+  .cols { position: relative; display: flex; align-items: flex-end; gap: 0.7rem; min-width: 22rem; height: 250px; padding: 1.2rem 0.3rem 1.6rem; }
+  .col { position: relative; flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+  .col .val { margin-bottom: 4px; font-size: 0.68rem; font-weight: 750; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .col .bar { width: 100%; border-radius: 5px 5px 0 0; background: var(--teal); }
+  .col .bar.dip { background: var(--rust); opacity: 0.85; }
+  .col .lab { position: absolute; bottom: -1.35rem; font-size: 0.7rem; color: var(--ink-faint); }
+  .baseline { position: absolute; left: 0; right: 0; z-index: 3; border-top: 2px dashed var(--rust); }
+  .baseline span { position: absolute; right: 0; top: -1.2rem; padding: 0 0.35rem; background: var(--surface); font-size: 0.68rem; font-weight: 750; color: var(--rust); }
+
+  /* bounding shapes */
+  .shapes { display: flex; flex-direction: column; gap: 0.55rem; }
+  .shape-row { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.7rem; align-items: center; }
+  .shape-lab { text-align: right; font-size: 0.75rem; font-weight: 750; }
+  .shape-bar { display: flex; height: 30px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .shape-bar i { display: flex; align-items: center; justify-content: center; overflow: hidden; font-style: normal; font-size: 0.66rem; font-weight: 700; white-space: nowrap; }
+  .shape-bar i.keep { background: var(--teal-soft); color: var(--teal-strong, var(--teal)); }
+  .shape-bar i.drop { background: color-mix(in srgb, var(--line), transparent 55%); color: var(--ink-faint); font-weight: 500; }
+  .shape-bar i.stub { background: var(--teal); color: var(--paper); }
+  .shape-bar i.stored { background: var(--gold-soft); color: var(--gold); }
+
+  /* compaction transaction */
+  .compact { display: flex; flex-direction: column; gap: 0.6rem; }
+  .compact-row { display: grid; grid-template-columns: 4rem 1fr; gap: 0.7rem; align-items: center; }
+  .compact-lab { text-align: right; font-size: 0.75rem; font-weight: 750; color: var(--ink-faint); }
+  .compact-bar { display: flex; height: 32px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .compact-bar i { display: flex; align-items: center; justify-content: center; overflow: hidden; font-style: normal; font-size: 0.65rem; font-weight: 700; white-space: nowrap; }
+  .c-fixed { background: var(--blue-soft); color: var(--blue); }
+  .c-old { background: color-mix(in srgb, var(--line), transparent 45%); color: var(--ink-faint); }
+  .c-recent { background: var(--teal-soft); color: var(--teal-strong, var(--teal)); }
+  .c-sum { background: var(--gold-soft); color: var(--gold); }
+  .c-free { background: repeating-linear-gradient(45deg, transparent, transparent 5px, color-mix(in srgb, var(--line), transparent 60%) 5px, color-mix(in srgb, var(--line), transparent 60%) 10px); color: var(--ink-faint); font-weight: 500; }
+
+  /* isolation comparison */
+  .iso { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .iso-head { margin: 0 0 0.5rem; font-size: 0.72rem; font-weight: 750; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); }
+  .iso-box { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.7rem 0.8rem; border: 1.5px solid var(--line-strong); border-radius: 8px; font-size: 0.71rem; }
+  .iso-box span { font-weight: 750; font-size: 0.7rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.04em; }
+  .iso-box i { font-style: normal; color: var(--ink-soft); }
+  .iso-box b { margin-top: 0.3rem; font-size: 0.74rem; }
+  .iso-box.main { border-color: var(--rust); }
+  .iso-box.main b { color: var(--rust); }
+  .iso-box.main.slim { border-color: var(--teal); }
+  .iso-box.main.slim b { color: var(--teal); }
+  .iso-box.child { border-style: dashed; }
+  .iso-arrow { padding: 0.35rem 0; font-size: 0.68rem; font-weight: 700; color: var(--ink-faint); text-align: center; }
+
+  .prose-table { overflow-x: auto; margin: 1.4rem 0; }
+
+
+  /* cache cost comparison */
+  .costs { display: flex; flex-direction: column; gap: 0.7rem; }
+  .cost-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.8rem; align-items: center; }
+  .cost-row > span:first-child { text-align: right; font-size: 0.73rem; font-weight: 750; color: var(--ink-faint); }
+  .cost-bars { display: flex; flex-direction: column; gap: 4px; }
+  .cost-bars i { display: flex; align-items: center; min-width: 3.2rem; height: 19px; padding-left: 0.45rem; border-radius: 3px; font-style: normal; font-size: 0.66rem; font-weight: 750; white-space: nowrap; }
+  .cb-broken { background: var(--rust); color: var(--paper); }
+  .cb-cached { background: var(--teal-soft); color: var(--teal-strong, var(--teal)); }
+  .cost-key { margin-top: 0.9rem; display: flex; gap: 1.1rem; font-size: 0.7rem; color: var(--ink-faint); }
+  .cost-key b { display: inline-block; width: 0.7rem; height: 0.7rem; margin-right: 0.3rem; border-radius: 2px; vertical-align: middle; }
+
+  @media (max-width: 700px) {
+    .comp-row, .comp-total, .pfx-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    .comp-key, .pfx-row > span:first-child { text-align: left; }
+    .grow-row { grid-template-columns: 3.2rem 1fr; }
+    .iso { grid-template-columns: 1fr; }
+    .shape-row, .compact-row, .cost-row { grid-template-columns: 1fr; gap: 0.25rem; }
+    .cost-row > span:first-child { text-align: left; }
+    .shape-lab, .compact-lab { text-align: left; }
+    .grow-num { display: none; }
+  }
+  </style>
+  <script defer src="../assets/site.js"></script>
+</head>
+<body class="chapter-page">
+  
+  
+  <main id="main-content" tabindex="-1">
+    <article class="chapter-article variant-article">
+      <header class="chapter-header">
+        <p class="eyebrow">Chapter 1</p>
+        <h1>The Context Window</h1>
+        <p class="chapter-subtitle">What the model is actually reading during a conversation</p>
+      </header>
+
+      <div class="prose">
+
+        <p>A developer opens a coding agent and types six words:</p>
+
+        <p class="typed">rename the timeout variable to deadline</p>
+
+        <p>The model that answers never sees those six words on their own. By the time the request reaches it, the request sits at the bottom of a document roughly fifteen thousand tokens long, and the developer wrote 0.04% of it.</p>
+
+        <p>Somebody decided what the other 99.96% was. That decision is the subject of everything that follows.</p>
+
+        <h2>What a model actually receives</h2>
+
+        <p>A language model has no memory, no session, and no awareness that a conversation is taking place. It is a function. It takes a block of text, returns the text that most plausibly continues it, and retains nothing. Called again, it starts from zero.</p>
+
+        <p>This is worth sitting with, because every other idea here follows from it. When a chat assistant appears to remember something said three messages ago, nothing was remembered. The software around the model re-sent those three messages, along with everything else it wanted the model to know, and paid for every token of it again.</p>
+
+        <p>That software is the <strong>harness</strong>. Its main job, the one that determines whether an agent works at all, is deciding what goes in that block of text on every single call.</p>
+
+        <p>The block of text has a name: the <strong>context window</strong>. Two different quantities travel under that name, and keeping them apart matters more than it first appears.</p>
+
+        <p>The first is a hard maximum. Every model accepts some largest number of tokens in a single call, fixed by how it was trained and how it is served. This is the number printed on a model card. Exceeding it returns an error, and the error is unambiguous.</p>
+
+        <p>The second is the length over which the model still performs well, usually called the <strong>effective context</strong>. It is shorter than the maximum, it moves with the task, and nothing announces when it has been passed. A 400,000 token request against a one-million token maximum sits well inside the limit and may still be far past the point where the model reliably uses what it was given.</p>
+
+        <p>The gap is large, and it has been measured more than once. NoLiMa tested thirteen models that each advertise support for at least 128,000 tokens, using questions worded so that they share no vocabulary with the passage being sought, which forces the model to recognise meaning rather than match words. At 32,000 tokens, a quarter of the advertised length, eleven of the thirteen scored below half of their own short-context baseline.<a class="cite" href="#ref-16" id="cite-16a">[16]</a> An earlier benchmark found the same shape a generation before, with only half of seventeen systems holding up at 32,000 tokens while nearly all of them scored close to perfect on the simpler retrieval test usually cited as evidence.<a class="cite" href="#ref-17" id="cite-17a">[17]</a></p>
+
+        <p>Specific percentages age quickly and these will too. What holds is the shape: the advertised number and the working number are different quantities, the difference is frequently several-fold, and the tests most often quoted in support of the advertised number are the ones least able to detect the shortfall.</p>
+
+        <p>Everything that follows concerns the distance between those two numbers.</p>
+
+        <p>Two phrases recur from here on and they mean different things. <strong>Context window</strong> is the hard maximum, matching how model documentation and API errors use the term. <strong>The context</strong> is the document actually assembled for the call being made right now, whatever its size. A harness authors the second and merely rents the first.</p>
+
+        <p>One further phrase needs separating out, because it sounds related and describes something else entirely. <strong>Sliding window attention</strong> is a decision made when a model is designed and trained. Rather than letting every token look back at every earlier token, each token is allowed to see only a fixed span of its neighbours. This makes the model cheaper to run, and it is fixed in the trained weights: no configuration setting changes it, and nothing a harness does can reach it.</p>
+
+        <p>A harness can separately run its own sliding window over the conversation, discarding the oldest turns to stay under the maximum. That is ordinary code operating on the transcript, changeable between releases, and it has no bearing on what any individual token is permitted to look at inside the network.</p>
+
+        <p>The two share a name and nothing else. One governs what the model may attend to internally. The other governs what gets sent. Neither is the context window, which is only the question of how much the model will accept.</p>
+
+        <h3>Tokens</h3>
+
+        <p>A <strong>token</strong> is a chunk of text. Models do not read characters or words. Before anything reaches the model, a tokenizer chops the text into pieces drawn from a fixed vocabulary of perhaps a hundred thousand entries, and each piece becomes one number. Common English words are usually a single token, with the leading space attached. Rarer words break into fragments.</p>
+
+        <figure>
+          <figcaption>The same text as a person reads it, and as the model receives it. Exact splits vary between tokenizers; the shape does not.</figcaption>
+          <div class="toks-row">
+            <p>The request, 39 characters:</p>
+            <div class="toks">
+              <span class="tok">rename</span><span class="tok"> the</span><span class="tok"> timeout</span><span class="tok"> variable</span><span class="tok"> to</span><span class="tok"> deadline</span>
+              <span class="tok-count">6 tokens</span>
+            </div>
+          </div>
+          <div class="toks-row">
+            <p>A variable name from the code the agent is about to read, 25 characters:</p>
+            <div class="toks alt">
+              <span class="tok">connection</span><span class="tok">Retry</span><span class="tok">Deadline</span><span class="tok">Ms</span>
+              <span class="tok-count">4 tokens</span>
+            </div>
+          </div>
+        </figure>
+
+        <p>Prose runs around four characters per token. Code runs denser, closer to three, because identifiers, punctuation, and indentation all fragment. This matters more than it sounds: a 340-line TypeScript file comes to roughly 4,000 tokens, and the agent is about to read several of them.</p>
+
+        <p>For physical scale, a 100,000 token window holds on the order of 75,000 words, or roughly 250 pages of ordinary prose.<a class="cite" href="#ref-9" id="cite-9a">[9]</a> That sounds like a great deal of room. The rest of this chapter is largely about why it is not.</p>
+
+        <p>Tokens are billed in both directions. There is a second cost, paid in attention rather than money: a model's ability to use what it has been given degrades as the document grows, a problem that returns later. For now, tokens are the unit. Everything that follows is measured in them.</p>
+
+        <h2>Opening the document</h2>
+
+        <p>Below is the breakdown from a small coding agent at the moment the request is submitted, before the model has done anything at all. Exact numbers vary by harness. Treat this one as representative.</p>
+
+        <figure>
+          <figcaption>Turn zero. Everything in the model's context before it takes a single action.</figcaption>
+          <div class="comp">
+            <div class="comp-row">
+              <span class="comp-key">System prompt<small>16%</small></span>
+              <div class="comp-bar c-sys" style="width:16%; min-width:11rem"><span>Who the agent is, how it should behave, what it must never do. <b>2,400</b></span></div>
+            </div>
+            <div class="comp-row">
+              <span class="comp-key">Tool schemas<small>59%</small></span>
+              <div class="comp-bar c-tool" style="width:59%"><span>Every tool the agent can call, described in JSON: name, purpose, arguments, when to use it. <b>8,900</b></span></div>
+            </div>
+            <div class="comp-row">
+              <span class="comp-key">Instruction files<small>7%</small></span>
+              <div class="comp-bar c-inst" style="width:22%"><span>The project's <code>AGENTS.md</code>, read off disk and pasted in. <b>1,100</b></span></div>
+            </div>
+            <div class="comp-row">
+              <span class="comp-key">Skill index<small>4%</small></span>
+              <div class="comp-bar c-skill" style="width:16%"><span>Names and one-line descriptions of procedures it can load later. <b>600</b></span></div>
+            </div>
+            <div class="comp-row">
+              <span class="comp-key">Environment<small>2%</small></span>
+              <div class="comp-bar c-env" style="width:13%"><span>Working directory, date, git branch, OS. <b>340</b></span></div>
+            </div>
+            <div class="comp-row">
+              <span class="comp-key">The request<small>0.04%</small></span>
+              <div class="comp-bar c-you" style="width:8%"><span><b>6</b></span></div>
+            </div>
+            <div class="comp-total"><span>Total</span><span>~15,300 tokens, sent again on every single model call</span></div>
+          </div>
+        </figure>
+
+        <h3>Why the tool schemas are so large</h3>
+
+        <p>Nearly six thousand words describing tools, sent on every call, most of them irrelevant to renaming a variable. They have to be there. A model cannot call a tool it has not been told about, and it is told about tools by being shown their descriptions in the prompt. There is no separate channel, no registry it queries. An agent's entire sense of what it is capable of comes from text sitting in the same document as the request, competing for the same attention.</p>
+
+        <p>Here is one tool, in full, roughly as the model receives it. It is the simplest tool this agent has.</p>
+
+<pre><code>{
+  "name": "read_file",
+  "description": "Read the contents of a file from the local filesystem.
+    Use this before editing any file. Returns the file with line numbers
+    prefixed. If the file is longer than 2000 lines, only the first 2000
+    are returned and a truncation notice is appended. Prefer this over
+    running `cat` through the shell tool.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "path":   { "type": "string",
+                  "description": "Absolute path to the file." },
+      "offset": { "type": "integer",
+                  "description": "Line number to start from. Use when the
+                    file is too large to read in one call." },
+      "limit":  { "type": "integer",
+                  "description": "Number of lines to read." }
+    },
+    "required": ["path"]
+  }
+}</code></pre>
+
+        <p>That comes to about 190 tokens, and most of it is prose rather than structure. The description is where a tool's behavior actually gets communicated, so tool authors write more of it, not less, and every word ships on every call. A tool with an enum of twenty allowed values, or six optional parameters each needing explanation, runs several times this size.</p>
+
+        <p>Prose of that length looks like overhead worth trimming. The evidence points the other way. The SWE-agent researchers built an interface designed specifically for language model agents, tuning exactly these surfaces, which commands exist, how results are returned, what guardrails fire, and reported that doing so substantially improved the agent's ability to edit files, navigate a repository, and run tests, reaching 12.5% pass@1 on SWE-bench.<a class="cite" href="#ref-15" id="cite-15a">[15]</a> Their argument is that an agent is a distinct kind of user and needs an interface built for it.</p>
+
+        <p>That reframes what a schema is. It looks like documentation describing a capability. It operates as the capability, because a model has no other route to discovering what a tool does or how to call it.</p>
+
+        <p>Across the full tool set:</p>
+
+        <figure>
+          <figcaption>Where 8,900 tokens goes. Fourteen tools, sized by how much explanation each one needs.</figcaption>
+          <div class="sum">
+            <div><span>read_file, write_file, edit_file</span><span>1,240</span></div>
+            <div><span>list_dir, glob, grep</span><span>1,050</span></div>
+            <div><span>shell (long: sandboxing, timeouts, escaping)</span><span>1,600</span></div>
+            <div><span>web_search, web_fetch</span><span>980</span></div>
+            <div><span>task / spawn_subagent (long: delegation rules)</span><span>1,750</span></div>
+            <div><span>todo_write, todo_read</span><span>620</span></div>
+            <div><span>git_status, git_diff</span><span>710</span></div>
+            <div><span>ask_user</span><span>430</span></div>
+            <div><span>tool-use preamble and formatting rules</span><span>520</span></div>
+            <div class="total"><span>14 tools</span><span>8,900</span></div>
+          </div>
+          <p class="fig-note">The two longest are the two most dangerous. Tools that can destroy things need more instructions about when not to use them.</p>
+        </figure>
+
+        <p>This is the first real design tradeoff. Every added tool costs tokens on every call for the entire session, whether or not it gets used. Forty tools means 25,000 tokens spent before the conversation starts.</p>
+
+        <p>Which is why a serious harness does not ship all fourteen schemas in the form shown above. It sends names and one-line descriptions up front, and loads a tool's full schema only at the moment the model reaches for it. Some go further and provide a search tool whose only job is finding the other tools. Both approaches buy back most of that 8,900 tokens, and both pay for it the same way: the model must now decide it needs a tool before it can read how the tool works, which adds a round trip and a chance to guess wrong. The version above is the honest starting point, and the thing every later refinement is refining.</p>
+
+        <h3>How small the request is</h3>
+
+        <p>The bottom row invites an obvious reading that is worth correcting. Six tokens out of 15,300 is a rounding error by volume. It is not a rounding error by influence, and the two are different measurements.</p>
+
+        <p>Two things give the request weight out of all proportion to its size. It sits at the very end of the document, and as the position research below shows, the end of a context is a favoured location rather than a neglected one. More significantly, instruction tuning trains a model specifically to treat the user's turn as the thing to be acted on, so the request functions as the instruction while most of the surrounding material functions as standing background. A model given 15,000 tokens of policy and six tokens of request will attempt the request.</p>
+
+        <p>What the ratio does establish is where to look when behaviour goes wrong. An agent that takes an unrequested action, refuses something reasonable, or adopts a convention from nowhere is usually responding to text the user never wrote and cannot see: a clause in the system prompt, a tool description that oversells what it does, or an instruction file committed to the repository months ago and forgotten. Debugging an agent means reading the whole document, not just the message.</p>
+
+        <h2>Who put each piece there</h2>
+
+        <p>Each region in that breakdown has a different author, and each changes on its own schedule. Sorting them that way exposes a constraint the sizes alone do not show.</p>
+
+        <figure>
+          <figcaption>The same six regions, sorted by who controls them and how often they change.</figcaption>
+          <table class="own">
+            <thead>
+              <tr><th>Region</th><th>Written by</th><th>Enters the context</th><th>Changes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>System prompt</td><td>Harness author</td><td>Every call, unchanged</td>
+                <td class="rate-frozen">On a new release</td>
+              </tr>
+              <tr>
+                <td>Tool schemas</td><td>Tool author</td><td>Every call</td>
+                <td class="rate-frozen">When tools are added or removed</td>
+              </tr>
+              <tr>
+                <td>Instruction files</td><td>The user, or their team</td><td>When found on disk</td>
+                <td class="rate-slow">Whenever someone edits the file</td>
+              </tr>
+              <tr>
+                <td>Skill index</td><td>Skill author</td><td>Names only, up front</td>
+                <td class="rate-slow">Full text loads on demand, mid&#8209;task</td>
+              </tr>
+              <tr>
+                <td>Environment</td><td>The harness, at runtime</td><td>Rebuilt per call, or cached</td>
+                <td class="rate-live">Constantly</td>
+              </tr>
+              <tr>
+                <td>The request</td><td>The user</td><td>Once</td>
+                <td class="rate-frozen">Never</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
+        <p>The last column is where the engineering starts. Some of this document is frozen for months. Some of it is different every second. That split matters because of how model providers price repeated text.</p>
+
+        <h3>Prefix caching, and why layout is a performance decision</h3>
+
+        <p>Sending fifteen thousand identical tokens on every call would be ruinous, so providers cache them. The mechanism is simple and unforgiving: the provider hashes the document from the beginning up to a marked point, and if that hash matches a recent request, the work is reused.</p>
+
+        <p>It is a <em>prefix</em> match. Anthropic's documentation puts the requirement as "100% identical prompt segments, including all text and images up to and including the block marked with cache control."<a class="cite" href="#ref-1" id="cite-1a">[1]</a> Change one character at position 400 and everything after position 400 is recomputed at full price, even if the remaining fourteen thousand tokens are identical.</p>
+
+        <figure>
+          <figcaption>Two arrangements of the same content. The only difference is where the timestamp sits.</figcaption>
+          <div class="pfx">
+            <div class="pfx-row">
+              <span>Good</span>
+              <div class="pfx-bar">
+                <i class="pfx-hit" style="width:88%">cached prefix, 13,400 tokens at 0.1&times;</i>
+                <i class="pfx-new" style="width:12%">fresh</i>
+              </div>
+            </div>
+            <div class="pfx-row">
+              <span>Broken</span>
+              <div class="pfx-bar">
+                <i class="pfx-hit" style="width:3%"></i>
+                <i class="pfx-miss" style="width:97%">timestamp at token 400 invalidates everything after it</i>
+              </div>
+            </div>
+          </div>
+          <p class="fig-note">Same tokens, same tools, same model. One line of code apart.</p>
+        </figure>
+
+        <p>The prices make the stakes concrete. On Anthropic's API a cache read costs 0.1 times the base input price, and a cache write costs 1.25 times base for the default five-minute lifetime, or 2 times base for the one-hour option.<a class="cite" href="#ref-1" id="cite-1b">[1]</a> Two calls with the same prefix already pay for themselves: 1.25 + 0.1 against 2.0. By the fifteenth call the cached arrangement has cost a fraction of the broken one, for identical output.</p>
+
+        <figure>
+          <figcaption>What the same 13,400 token prefix costs as a session goes on, priced in multiples of one uncached send. The cached run pays a premium on the first call and never pays full price again.</figcaption>
+          <div class="costs">
+            <div class="cost-row"><span>1 call</span><div class="cost-bars"><i class="cb-broken" style="width:6.7%">1.00</i><i class="cb-cached" style="width:8.3%">1.25</i></div></div>
+            <div class="cost-row"><span>2 calls</span><div class="cost-bars"><i class="cb-broken" style="width:13.3%">2.00</i><i class="cb-cached" style="width:9.0%">1.35</i></div></div>
+            <div class="cost-row"><span>5 calls</span><div class="cost-bars"><i class="cb-broken" style="width:33.3%">5.00</i><i class="cb-cached" style="width:11.0%">1.65</i></div></div>
+            <div class="cost-row"><span>15 calls</span><div class="cost-bars"><i class="cb-broken" style="width:100%">15.00</i><i class="cb-cached" style="width:17.7%">2.65</i></div></div>
+          </div>
+          <div class="cost-key"><span><b class="cb-broken"></b>broken prefix, full price every call</span><span><b class="cb-cached"></b>clean prefix, 1.25&times; once then 0.1&times;</span></div>
+          <p class="fig-note">The crossover falls between the first and second call. Everything after that is the cached run pulling away.</p>
+        </figure>
+
+        <p>So the harness author has a layout problem, and the answer falls straight out of the ownership table: stable material first, volatile material last. A current timestamp at the top of the system prompt quietly destroys the cache for everything below it. That is a real bug that real teams ship, and it does not announce itself. Nothing breaks. The agent still works. The bill is several times larger than it should be.</p>
+
+        <p>Caching also has a floor, and the floor moves by model in a way that is easy to get wrong. On Anthropic's models the minimum cacheable prompt is 512 tokens on Opus 5, 1,024 on a group including Opus 4.8, Sonnet 5, and Sonnet 4.6, 2,048 on Opus 4.7, and 4,096 on Opus 4.6 and Haiku 4.5.<a class="cite" href="#ref-1" id="cite-1c">[1]</a> That ordering is not simply newest-is-lowest, so a prompt sized to cache on one model can silently fail to cache on an older sibling in the same family. A prompt under the floor "will be processed without caching, and no error is returned."<a class="cite" href="#ref-1" id="cite-1e">[1]</a> Nothing reports the failure, so it shows up in cache-read counts rather than in logs.</p>
+
+        <p>The default cache then lasts five minutes, refreshed at no cost on every hit.<a class="cite" href="#ref-1" id="cite-1d">[1]</a> A continuously working agent stays warm indefinitely. An agent waiting on a human goes cold and pays the write cost again when the human returns.</p>
+
+        <h2>Then the agent starts working</h2>
+
+        <p>Everything so far describes turn zero, before the agent has acted. Once it begins working, the document grows through a process nobody is directly writing.</p>
+
+        <p>The model reads the fifteen thousand tokens and responds with a tool call: read the file. The harness runs it, gets 340 lines of TypeScript back, and appends the result. Then it calls the model again with the whole thing. Then a search. Then three more file reads. Then an edit, and a test run that fails and returns 900 lines of stack trace.</p>
+
+        <figure>
+          <figcaption>The same conversation, measured every few turns, against a 128,000 token limit.</figcaption>
+          <div class="grow">
+            <div class="grow-row"><span>turn 0</span><div class="grow-track"><div class="grow-fill" style="width:12%"></div></div><span class="grow-num">15,300</span></div>
+            <div class="grow-row"><span>turn 1</span><div class="grow-track"><div class="grow-fill" style="width:19%"></div></div><span class="grow-num">24,100</span></div>
+            <div class="grow-row"><span>turn 2</span><div class="grow-track"><div class="grow-fill" style="width:24%"></div></div><span class="grow-num">31,400</span></div>
+            <div class="grow-row"><span>turn 5</span><div class="grow-track"><div class="grow-fill" style="width:45%"></div></div><span class="grow-num">58,200</span></div>
+            <div class="grow-row"><span>turn 9</span><div class="grow-track"><div class="grow-fill" style="width:75%"></div></div><span class="grow-num">96,000</span></div>
+            <div class="grow-row"><span>turn 14</span><div class="grow-track"><div class="grow-fill" style="width:97%"></div></div><span class="grow-num">142,000</span></div>
+            <div class="grow-row over"><span>turn 15</span><div class="grow-track"><div class="grow-fill" style="width:100%"></div></div><span class="grow-num">refused</span></div>
+          </div>
+          <p class="fig-note">Nothing failed. The agent did exactly what it was asked.</p>
+        </figure>
+
+        <p>Two things are wrong here, and they are worth separating because they have different fixes.</p>
+
+        <p><strong>The wall.</strong> After fifteen turns the agent cannot make another call. Every tool result it ever saw is still in the document, in full, including the 900-line stack trace it read once and resolved four turns ago.</p>
+
+        <p>The agent has not run out of memory. Everything it did is still on disk, and the harness could produce a complete transcript on request. What it has run out of is room in a single document, and the model only acts on the document in front of it. Holding those two ideas apart is the most useful habit in this field: <em>stored</em> and <em>visible to the model right now</em> are different claims about the same information, and almost every hard decision in harness design lives in the gap between them.</p>
+
+        <p><strong>The bill.</strong> Each of those bars measures a single request, and all sixteen were sent. Added up, the session cost about 1.15 million input tokens to rename a variable.</p>
+
+        <p>That total is constructed, so it is worth checking against something independent. A practitioner guide reaches the same order of magnitude from different assumptions, taking a fifty-step agentic workflow at 20,000 tokens per call and arriving at a million tokens consumed.<a class="cite" href="#ref-9" id="cite-9b">[9]</a> Millions of input tokens for a single sustained task is the ordinary case rather than a pathological one.</p>
+
+        <p>Most of that 1.15 million is the same prefix sent over and over, which is what makes the cache layout described earlier worth the trouble. With a clean prefix most of it bills at a tenth of the base rate. With a timestamp near the top, none of it does.</p>
+
+        <p>So the harness has to start making decisions it never had to make at turn zero. Which of these results still matters? Can the file read be cut down to the twenty lines that were relevant? Can turns 1 through 9 be replaced with a paragraph summarizing them? Should the test run have gone to a second agent with its own fresh window, reporting back one sentence?</p>
+
+        <p>Every one of those options gives something up. Cutting the file read risks discarding the line that mattered. Summarizing turns 1 through 9 leaves the agent working from an account of its own history written by a model, with no way to tell what the summary omitted. Handing the test run to a second agent keeps the stack trace out of this document entirely, at the price of a report that is only as good as one sentence. No arrangement keeps everything. The rest of this is about choosing what to lose.</p>
+
+        <h2>Why a bigger window does not fix this</h2>
+
+        <p>The obvious response to the wall is to buy a larger room. Context windows have grown from 4,000 tokens to 200,000 to a million, and that growth invites an assumption: give the model enough space and the problem takes care of itself.</p>
+
+        <p>It does not, and the evidence against it is specific enough to be worth walking through carefully, because everything that follows exists to answer it.</p>
+
+        <h3>Position changes the answer</h3>
+
+        <p>The cleanest demonstration comes from a controlled experiment by Liu and colleagues.<a class="cite" href="#ref-2" id="cite-2a">[2]</a> A model is given a question and twenty documents, exactly one of which contains the answer. The other nineteen are real, relevant-looking, and useless. Everything is held fixed except one variable: where in the pile the useful document sits.</p>
+
+        <p>If a context window were a filing cabinet, position would not matter at all.</p>
+
+        <figure>
+          <figcaption>Multi-document question answering, GPT-3.5-Turbo, twenty documents. Accuracy by the position of the one document that contains the answer.<a class="cite" href="#ref-2" id="cite-2b">[2]</a></figcaption>
+          <div class="chartwrap">
+            <div class="cols">
+              <div class="baseline" style="bottom:63.5%"><span>56.1% with no documents at all</span></div>
+              <div class="col"><span class="val">75.8%</span><div class="bar" style="height:85.8%"></div><span class="lab">1st</span></div>
+              <div class="col"><span class="val">57.2%</span><div class="bar dip" style="height:64.8%"></div><span class="lab">5th</span></div>
+              <div class="col"><span class="val">53.8%</span><div class="bar dip" style="height:60.9%"></div><span class="lab">10th</span></div>
+              <div class="col"><span class="val">55.4%</span><div class="bar dip" style="height:62.7%"></div><span class="lab">15th</span></div>
+              <div class="col"><span class="val">63.2%</span><div class="bar" style="height:71.6%"></div><span class="lab">20th</span></div>
+            </div>
+          </div>
+          <p class="fig-note">Chart scaled to 88.3%, the model's accuracy when handed only the correct document and nothing else.</p>
+        </figure>
+
+        <p>The chart shows two separate things.</p>
+
+        <p>The first is the shape. Accuracy is high at the front, recovers at the back, and sags in the middle. Attention is not distributed evenly across a document. The beginning and the end are privileged positions, and the middle is where information goes to be ignored.</p>
+
+        <p>The second is the dashed line, which is the more alarming of the two. That line marks how the same model scored when it was given <em>no documents whatsoever</em> and had to answer from memory alone: 56.1%. When the answer was placed tenth out of twenty, the model scored 53.8%. Handing it the correct document, in the wrong position, left it performing slightly worse than handing it nothing.</p>
+
+        <p>The effect was not one model misbehaving. It held across all six systems tested, including two Claude models and two GPT-3.5 variants, and it got worse with depth: at thirty documents, the same model ran 73.4% at the front, 50.5% in the middle, and 63.7% at the end.<a class="cite" href="#ref-2" id="cite-2c">[2]</a> Adding more material lowered the floor.</p>
+
+        <p>One honest caveat. That study ran on 2023-era models, and every model in it has since been retired. The specific percentages describe those systems on that day. What has survived replication is the shape.</p>
+
+        <h3>Length changes the answer, on its own</h3>
+
+        <p>Position is only half of it. A separate study from Chroma held position constant and varied length across 18 models spanning Anthropic, OpenAI, Google, and Alibaba.<a class="cite" href="#ref-3" id="cite-3a">[3]</a> The finding was blunt: "model performance varies significantly as input length changes, even on simple tasks."</p>
+
+        <p>Simple is doing real work in that sentence. One of the tasks was copying a sequence of repeated words and reporting a single unique word planted inside it. There is no reasoning to do and no retrieval difficulty in any meaningful sense. Accuracy still fell as the sequence grew.</p>
+
+        <p>Three results from that study are worth carrying into any harness design.</p>
+
+        <p><strong>Distractors compound.</strong> Adding a single plausible-but-wrong passage measurably lowered accuracy against a needle-only baseline, and four distractors degraded it further.<a class="cite" href="#ref-3" id="cite-3b">[3]</a> Irrelevant context is not inert. It competes.</p>
+
+        <p><strong>Models fail in different directions.</strong> Under distractors, the Claude models tended toward abstention, declining to answer rather than guessing, while GPT models more often produced confident incorrect answers.<a class="cite" href="#ref-3" id="cite-3c">[3]</a> A harness that treats a refusal and a wrong answer as the same failure will misread which of those is happening.</p>
+
+        <p><strong>Coherence hurt.</strong> The most counterintuitive result in the study: models performed <em>worse</em> when the surrounding material read as a coherent document, and shuffling it into incoherence consistently improved retrieval.<a class="cite" href="#ref-3" id="cite-3c2">[3]</a> A well-organized pile of related context is, for retrieval purposes, harder to see through than a jumbled one.</p>
+
+        <p>The authors are candid that they cannot explain the mechanism, and say so directly: they "do not have a definitive answer for why that occurs."<a class="cite" href="#ref-3" id="cite-3d">[3]</a> That distinction has practical weight. A measured effect with an unidentified cause can still be designed around, but it cannot be reasoned away from first principles, and any confident architectural explanation offered elsewhere is claiming more than the measurements support. The code and datasets are published, so the results can be re-run rather than taken on trust.<a class="cite" href="#ref-3" id="cite-3e">[3]</a></p>
+
+        <h3>Where the cost comes from</h3>
+
+        <p>A partial architectural explanation does exist, and it traces back to the paper that introduced the architecture every current model is built on.</p>
+
+        <p>Self-attention works by relating every position in a sequence to every other position. The original paper states the cost directly: a self-attention layer runs in <code>O(n&sup2; &middot; d)</code> for sequence length <code>n</code> and representation dimension <code>d</code>, against <code>O(n &middot; d&sup2;)</code> for the recurrent layers it replaced.<a class="cite" href="#ref-7" id="cite-7a">[7]</a> Length enters that expression squared. Doubling the document quadruples the work.</p>
+
+        <p>What the expense buys is the reason the architecture won. The same table gives the maximum path length between any two positions in a self-attention layer as <code>O(1)</code>, against <code>O(n)</code> for a recurrent layer.<a class="cite" href="#ref-7" id="cite-7b">[7]</a> Any token can reach any other token in a single step. The property that lets a model connect a detail on line 4,000 to a question asked on line 1 is precisely the property that makes the cost quadratic. They cannot be separated.</p>
+
+        <p>The authors anticipated the consequence for long sequences and sketched a way out in the same paper: restrict each position to attending over a neighbourhood of size <code>r</code>, which lowers the cost to <code>O(r &middot; n &middot; d)</code> and raises the path length to <code>O(n/r)</code>.<a class="cite" href="#ref-7" id="cite-7c">[7]</a> Even in 2017 the trade on the table was reach against cost, and it is recognisably the same trade every mechanism in this chapter makes. Restricted attention of this kind did not stay hypothetical. Longformer built it directly, giving each token a window of <code>w</code> neighbours at a per-layer cost of <code>O(n &times; w)</code> that scales linearly with sequence length, then recovered long-range reach two ways: stacking layers, since <code>&#8467;</code> layers of window <code>w</code> produce a receptive field of <code>&#8467; &times; w</code>, and granting global attention at a small number of chosen positions, which keeps the combined cost at <code>O(n)</code>.<a class="cite" href="#ref-18" id="cite-18a">[18]</a> Mistral 7B carries the same idea into a production model, using sliding window attention to handle longer sequences at reduced inference cost.<a class="cite" href="#ref-19" id="cite-19a">[19]</a> This is the architectural sense of sliding window set aside earlier, and it is the 2017 proposal shipped.</p>
+
+        <p>Attention is not the only quantity that grows. Producing each new token requires the keys and values already computed for every earlier token, which serving systems retain in a KV cache rather than recompute from scratch. That cache grows with every token in the session and occupies GPU memory, which is why long sessions tend to slow down before they fail outright, and why memory bandwidth rather than raw arithmetic is often the binding constraint in production serving.<a class="cite" href="#ref-10" id="cite-10a">[10]</a> This is the practical answer to a question the chapter has so far left open: the context window has a maximum because attention cost, cache growth, and finite device memory all push against the same ceiling.</p>
+
+        <p>Substantial engineering exists to soften those curves, including attention implementations that cut memory traffic without changing the asymptotic compute, and sparse patterns that skip most pairwise comparisons outright.<a class="cite" href="#ref-10" id="cite-10b">[10]</a> None of it removes the underlying relationship. It moves the point at which the relationship begins to hurt.</p>
+
+        <p>Anthropic frames the practical consequence as an <strong>attention budget</strong>: a finite resource drawn down by every token admitted, with models having comparatively little training experience with dependencies spanning very long contexts.<a class="cite" href="#ref-4" id="cite-4a">[4]</a></p>
+
+        <p>Be careful how much that explains. The quadratic term accounts for what a long context <em>costs</em> to process, and the training distribution accounts for some of why long-range dependencies are handled poorly. Neither accounts for the measured degradation on a task as trivial as copying repeated words. The architecture explains the price. The failure is still unexplained, which is why the Chroma authors' refusal to claim a mechanism is the correct posture rather than a hedge.</p>
+
+        <p class="fig-note">This section covers what attention costs rather than how it works. Grant Sanderson's step-by-step visual treatment remains the fastest route to intuition for the mechanism itself.<a class="cite" href="#ref-11" id="cite-11a">[11]</a></p>
+
+        <h3>What this changes about the job</h3>
+
+        <p>Put the two results together and the design brief changes shape.</p>
+
+        <p>A context window is not storage that happens to have a size limit. It is a budget of attention with an uneven interior, where the same information is worth more at the edges than in the middle, and where every token admitted makes every other token slightly harder to use. The limit at 128,000 tokens is a hard failure. The degradation well below it is a soft failure, and soft failures are worse, because nothing raises an error. The agent simply gets quietly less reliable as the session goes on, and the transcript looks fine.</p>
+
+        <p>So the question a harness has to answer stops being "does this fit" and becomes "does this earn its place." Anthropic states the target as finding "the smallest set of high-signal tokens that maximize the likelihood of some desired outcome."<a class="cite" href="#ref-4" id="cite-4b">[4]</a></p>
+
+        <p>Practitioners working at the sharp end put a number on it. One published methodology for coding agents recommends designing the entire workflow around context management and holding utilization in the 40 to 60 percent range.<a class="cite" href="#ref-14" id="cite-14a">[14]</a> That figure is a heuristic drawn from field experience rather than a measured threshold, and its author offers no derivation for it, so it should not be treated as a constant. What it captures correctly is the posture. The limit is not the target, and an agent operating at ninety percent of its window is working deep inside the region the research above describes.</p>
+
+        <p>The same source offers a ranking of what goes wrong, ordered by how much damage each does: incorrect information is worse than missing information, which is worse than excessive noise.<a class="cite" href="#ref-14" id="cite-14b">[14]</a> That ordering is worth carrying through everything below, because it inverts the order in which these failures are usually feared. Noise is the one that gets noticed, since it arrives on the invoice. Incorrect information is the one that ends a session with a confident wrong answer and no indication that anything went wrong. Several of the mechanisms that follow reduce noise by manufacturing exactly that risk.</p>
+
+        <p>Four moves do most of that work. Each one is introduced below at the level needed to reason about it. Each gives something up.</p>
+
+        <h2>Move one: bound what comes back</h2>
+
+        <p>The cheapest intervention is also the earliest. A tool result enters the context because the harness put it there, and nothing forces the harness to include all of it.</p>
+
+        <p>Recall the shape of the problem from the session above. A test run failed and returned 900 lines of stack trace. Perhaps 30 of those lines carried information. The rest were framework internals repeated across every frame. Yet all 900 lines entered the document, stayed for the remainder of the session, and were re-sent on every subsequent call.</p>
+
+        <p><strong>Bounding</strong> is the decision to admit only part of a result. The interesting question is not how much to keep, which is a tuning parameter, but <em>which part</em>, which is a bet about where the information lives.</p>
+
+        <figure>
+          <figcaption>Four bounding strategies applied to the same 900-line output. Solid regions enter the context; faded regions do not.</figcaption>
+          <div class="shapes">
+            <div class="shape-row">
+              <span class="shape-lab">Head</span>
+              <div class="shape-bar"><i class="keep" style="width:22%">first 200 lines</i><i class="drop" style="width:78%">discarded</i></div>
+            </div>
+            <div class="shape-row">
+              <span class="shape-lab">Tail</span>
+              <div class="shape-bar"><i class="drop" style="width:78%">discarded</i><i class="keep" style="width:22%">last 200</i></div>
+            </div>
+            <div class="shape-row">
+              <span class="shape-lab">Head and tail</span>
+              <div class="shape-bar"><i class="keep" style="width:14%">first 120</i><i class="drop" style="width:72%">discarded</i><i class="keep" style="width:14%">last 120</i></div>
+            </div>
+            <div class="shape-row">
+              <span class="shape-lab">Spill</span>
+              <div class="shape-bar"><i class="stub" style="width:8%">stub</i><i class="stored" style="width:92%">written to disk, retrievable by path</i></div>
+            </div>
+          </div>
+        </figure>
+
+        <p>Each shape encodes an assumption about the output it will meet.</p>
+
+        <div class="prose-table">
+        <table class="own">
+          <thead><tr><th>Strategy</th><th>Bets that the signal is</th><th>Fails when</th></tr></thead>
+          <tbody>
+            <tr><td>Head</td><td>Declared early: schemas, headers, the first error</td><td>A command fails at the end. The exit status and summary line are exactly what got cut.</td></tr>
+            <tr><td>Tail</td><td>At the end: exit codes, summaries, the final assertion</td><td>Setup output explains the failure. The cause is gone and only the symptom survives.</td></tr>
+            <tr><td>Head and tail</td><td>At both boundaries, with filler between</td><td>The one matching line was in the middle. Nothing indicates it existed.</td></tr>
+            <tr><td>Spill</td><td>Recoverable later, if the model asks</td><td>The model never asks. Nothing was lost and nothing was used.</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>Head suits file reads. Tail suits shell commands, where the interesting news is usually the last thing printed. Head-and-tail hedges across both and pays for it by deleting the middle, which is where a grep match would have been. Spill preserves everything at the cost of an extra decision by the model and an extra round trip, and the failure mode is the quietest of the four: the information is on disk, correctly, and never read.</p>
+
+        <p>Two properties separate a good bounding implementation from a careless one, and neither is about the size of the cap.</p>
+
+        <p>The first is whether truncation is <em>visible</em>. A result that silently ends looks to the model like a result that ended. A result carrying a marker, a line count, and a path to the rest lets the model reason about what it is missing. The difference is between an agent that concludes a test suite passed and one that knows it read the first 200 lines of the output.</p>
+
+        <p>The second is whether the full content remains <em>recoverable</em>. Bounding what the model sees on this call is a reversible decision if the harness kept the original. Discarding the original is not. These are different operations that look identical from inside the context window, and the distinction between storage and visibility introduced earlier is exactly the one at stake.</p>
+
+        <h2>Move two: compaction</h2>
+
+        <p>Bounding controls what enters. It does nothing about what has already accumulated. By turn nine of the session above, the context held nine turns of history, every one of which was admitted for good reason and most of which no longer matters.</p>
+
+        <p><strong>Compaction</strong> is the decision to replace a span of history with a shorter account of it. In its usual form the harness picks a cut point, sends everything before it to a model with instructions to summarize, keeps a tail of recent turns untouched, and rebuilds the active context from the summary plus the tail.</p>
+
+        <figure>
+          <figcaption>A compaction transaction. Turns 1 through 9 are replaced by a summary; recent turns survive intact.</figcaption>
+          <div class="compact">
+            <div class="compact-row">
+              <span class="compact-lab">Before</span>
+              <div class="compact-bar">
+                <i class="c-fixed" style="width:12%">prompt + tools</i>
+                <i class="c-old" style="width:62%">turns 1&ndash;9, in full</i>
+                <i class="c-recent" style="width:26%">turns 10&ndash;14</i>
+              </div>
+            </div>
+            <div class="compact-row">
+              <span class="compact-lab">After</span>
+              <div class="compact-bar">
+                <i class="c-fixed" style="width:12%">prompt + tools</i>
+                <i class="c-sum" style="width:9%">summary</i>
+                <i class="c-recent" style="width:26%">turns 10&ndash;14</i>
+                <i class="c-free" style="width:53%">room to keep working</i>
+              </div>
+            </div>
+          </div>
+          <p class="fig-note">The original turns are typically retained on disk. What changed is what the model can see.</p>
+        </figure>
+
+        <p>Anthropic describes the version running in Claude Code as summarizing the conversation and reinitiating a new window with that summary, prompting the model to preserve architectural decisions, unresolved bugs, and implementation details while discarding redundant tool outputs.<a class="cite" href="#ref-4" id="cite-4c">[4]</a> LangChain records the trigger as an auto-compact at roughly 95% of the window.<a class="cite" href="#ref-5" id="cite-5a">[5]</a></p>
+
+        <p>The choice of what to preserve is the entire design. Note the asymmetry in that list: decisions and open problems are kept, tool outputs are dropped. A decision is small, expensive to rediscover, and invisible in the code. A tool output is large, cheap to regenerate, and usually already reflected in the filesystem.</p>
+
+        <p>That asymmetry points at a cheaper intervention. Anthropic identifies clearing tool results as "the safest lightest touch" form of compaction,<a class="cite" href="#ref-4" id="cite-4d">[4]</a> and the reason it is safe is that a tool result is a cache of the world rather than a record of the reasoning. The file is still on disk. Re-reading it costs one call. Nothing about the agent's understanding is destroyed by removing a copy of something that still exists.</p>
+
+        <p>Summarizing the reasoning is a different transaction with a different risk profile, and it is worth being precise about what makes it uncomfortable. Compaction hands the agent an account of its own history, written by a model, which the agent has no way to audit. Anything the summarizer judged unimportant is not marked as missing. It is simply absent. If the summary omits that a particular approach was tried and abandoned, the agent has no signal that the gap exists and may spend the next several turns re-deriving a dead end.</p>
+
+        <h3>Compaction as an event, or compaction as a design</h3>
+
+        <p>Everything above describes compaction as something that happens <em>to</em> a session. A threshold is crossed, a summarizer runs, and the work continues on whatever came back. There is a second way to run it.</p>
+
+        <p>The alternative treats compaction as deliberate and early rather than automatic and late. Work is phased, and at each natural boundary the distilled state is written into a durable artifact, with the next phase starting from that artifact rather than from a summary of a transcript. One published methodology structures this as research, then planning, then implementation, compacting the current status back into a plan file after each verified phase, and describes the object of the exercise as designing the entire workflow around context management.<a class="cite" href="#ref-14" id="cite-14c">[14]</a></p>
+
+        <p>What changes is who picks the cut point and what the cut produces. A threshold-triggered summary is written by a model, at the least convenient moment, about a conversation, with nobody watching. A plan file written at a phase boundary is an artifact a person can read and correct before the next phase consumes it.</p>
+
+        <p>Set that against the severity ranking from earlier and the argument sharpens. Incorrect information is the most expensive failure, an automatic summary is a machine for producing it silently, and the deliberate version puts a human in front of the artifact at the point where correction is cheapest. The practitioner case for that placement is blunt: a bad line in a plan produces hundreds of bad lines of code, and a bad line in the research underneath it produces thousands.<a class="cite" href="#ref-14" id="cite-14d">[14]</a></p>
+
+        <p>Compaction is also not free in the obvious sense. It requires its own model call, on a large input, at the exact moment the session is already long. And it can fail. A harness has to decide what happens when the summarizer returns nothing usable, and the honest options are to abort and preserve the oversized context, or to substitute a placeholder and accept that the middle of the session is now gone.</p>
+
+        <h2>Move three: send the work somewhere else</h2>
+
+        <p>Bounding and compaction both operate on one document. A third move questions the premise that there should only be one.</p>
+
+        <p>A <strong>subagent</strong> is a separate model conversation with its own context window, started by the main agent to do a defined piece of work. It receives a task description, runs its own loop with its own tools, and returns a result. Everything it read along the way stays in its window and never touches the caller's.</p>
+
+        <figure>
+          <figcaption>The same failing test run, handled in the main context and handled by a subagent.</figcaption>
+          <div class="iso">
+            <div class="iso-col">
+              <p class="iso-head">Inline</p>
+              <div class="iso-box main">
+                <span>main context</span>
+                <i>900-line stack trace</i>
+                <i>4 file reads chasing it</i>
+                <i>2 failed hypotheses</i>
+                <b>+31,000 tokens, permanent</b>
+              </div>
+            </div>
+            <div class="iso-col">
+              <p class="iso-head">Delegated</p>
+              <div class="iso-box child">
+                <span>subagent context</span>
+                <i>900-line stack trace</i>
+                <i>4 file reads chasing it</i>
+                <i>2 failed hypotheses</i>
+                <b>discarded on return</b>
+              </div>
+              <div class="iso-arrow">returns one report</div>
+              <div class="iso-box main slim">
+                <span>main context</span>
+                <b>+400 tokens</b>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <p>Anthropic describes subagents exploring with clean context windows and returning a condensed summary, typically in the range of 1,000 to 2,000 tokens, with the detailed work isolated inside the child.<a class="cite" href="#ref-4" id="cite-4e">[4]</a> The Agent SDK guidance makes the ratio explicit: subagents suit situations processing large volumes of information where most of it turns out to be irrelevant.<a class="cite" href="#ref-6" id="cite-6a">[6]</a></p>
+
+        <p>That ratio is the whole case. Investigating a failure means reading a great deal to conclude a little. If the reading happens in a window that gets discarded, the caller pays for the conclusion instead of the investigation.</p>
+
+        <p>What gets given up is harder to see, and it is not the tokens.</p>
+
+        <p>The caller receives a report. It cannot inspect what produced the report. If the subagent misread a file, followed a wrong lead, or quietly failed to check something, the report may still read as confident and complete, and there is no signal distinguishing a thorough investigation from a shallow one. Delegation converts a transparent process into an opaque one, and the exchange rate is exactly the compression ratio being celebrated.</p>
+
+        <p>The transfer runs in both directions and the outbound side is the one more often underestimated. A subagent starts with whatever the caller thought to write in the task description. It does not know what the user actually asked for, what has already been tried, or which constraint makes the obvious fix unacceptable, unless that was written down. A vague brief produces work that is competent and beside the point, and the caller pays the full cost of the child's session to find that out.</p>
+
+        <h2>Move four: keep it outside the window</h2>
+
+        <p>The three moves so far all manage a document that dies when the session ends. Close the terminal and everything the agent worked out is gone. The next session begins from the same turn zero, with the same system prompt and no idea that any of it ever happened.</p>
+
+        <p><strong>Memory</strong> is the decision to write something durable that a later context can pull back in. In its plainest and most common form it is a file. The agent writes notes as it works, and reads them back when relevant.<a class="cite" href="#ref-4" id="cite-4f">[4]</a></p>
+
+        <p>The mechanism deserves stating flatly, because the word invites more mystery than it warrants. Memory does not give the model recall. The model remains stateless and still reads only the document in front of it. What memory changes is that some of that document can now be assembled from a durable store rather than from the conversation, which means information can survive a compaction, a crash, or a week.</p>
+
+        <p>Which turns retrieval into the actual problem. A note that is never read is a file, not a memory. Something has to decide, on a later turn, that a particular note is relevant now. That decision is made either by the harness, which must guess in advance, or by the model, which must be told the note exists before it can want it.</p>
+
+        <p>The common resolution is to keep a small index permanently in context, listing what exists without its contents, and to load the full text only when something reaches for it. Anthropic calls this pattern progressive disclosure and notes that the metadata of a reference carries real signal on its own: file sizes suggest complexity, naming conventions hint at purpose, timestamps proxy for relevance.<a class="cite" href="#ref-4" id="cite-4g">[4]</a></p>
+
+        <p>The skill index in the turn-zero breakdown was doing precisely this. Six hundred tokens of names and one-line descriptions bought the option to load any of them later. The same trick, applied to tools, was what bought back most of the 8,900 tokens earlier in this chapter. It is one idea in three costumes: keep the pointer in context, keep the payload out of it, and accept an extra round trip when the payload turns out to be needed.</p>
+
+        <p>The cost is that the agent has to know what to want. A model that never reads its notes performs exactly like a model with no notes, and it is worth being clear that this failure is silent too.</p>
+
+        <h2>Seeing all four at once</h2>
+
+        <p>Presented in sequence these look like four unrelated tricks. They are four positions on one question: where should information live relative to the model's attention.</p>
+
+        <p>LangChain's taxonomy is the most useful compression of this, sorting every technique in the field into four verbs.<a class="cite" href="#ref-5" id="cite-5b">[5]</a></p>
+
+        <div class="prose-table">
+        <table class="own">
+          <thead><tr><th>Verb</th><th>The move</th><th>Seen in this chapter as</th></tr></thead>
+          <tbody>
+            <tr><td>Write</td><td>Put information somewhere outside the context window</td><td>Memory files, spilled tool output</td></tr>
+            <tr><td>Select</td><td>Pull the right subset back in when it is needed</td><td>Skill indexes, lazy tool schemas, note retrieval</td></tr>
+            <tr><td>Compress</td><td>Keep the meaning, discard the tokens</td><td>Bounding, compaction</td></tr>
+            <tr><td>Isolate</td><td>Split the work across separate windows</td><td>Subagents</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>The academic literature cuts it differently and lands in a similar place. The largest survey of the field to date, synthesizing more than 1,400 papers, separates context engineering into three foundational components, context retrieval and generation, context processing, and context management, and then into the systems assembled from them: retrieval-augmented generation, memory systems with tool-integrated reasoning, and multi-agent systems.<a class="cite" href="#ref-8" id="cite-8a">[8]</a> The vocabulary differs from the four verbs above. The joints are in the same places: get information in, do something to it, decide what stays, and split the work when one window will not serve.</p>
+
+        <p>A community index of the same literature, updated as new work lands, sorts the field along yet another axis: context scaling, production context management, structured data integration, agent harnesses and runtime systems, memory, evaluation, and applications.<a class="cite" href="#ref-12" id="cite-12a">[12]</a> That "agent harnesses and runtime systems" now appears as a first-class category, rather than as an implementation detail of something else, is a reasonable indication of where the problem has settled.</p>
+
+        <p>That survey also records an asymmetry worth carrying forward, because it cuts against the grain of everything here. Models equipped with careful context engineering have become markedly capable at <em>understanding</em> complex context, while remaining notably weaker at <em>generating</em> long-form output of comparable sophistication, which the authors name as a defining priority for future work.<a class="cite" href="#ref-8" id="cite-8b">[8]</a> Nearly all the effort described in this chapter goes into what the model reads. Considerably less is settled about the other direction.</p>
+
+        <p>Read the ownership table from earlier alongside that list and the shape of the job appears. Prompt assembly decides what is written into the context at the start. Bounding and compaction decide what stays. Subagents decide what never arrives. Memory decides what outlives the session. Every one of them is a policy, every policy has a failure mode, and none of the failure modes announce themselves.</p>
+
+        <p>Which is why the last of the four is verification, and it sits slightly apart from the others. The Agent SDK guidance frames the whole agent loop as gather context, take action, verify work, and repeat,<a class="cite" href="#ref-6" id="cite-6b">[6]</a> with the verification step running on rules where rules exist, a linter being the clearest case, and falling back to visual checks or a second model's judgment where they do not.<a class="cite" href="#ref-6" id="cite-6c">[6]</a> Context engineering decides what the model can see. Verification is what catches the cases where the answer was wrong anyway.</p>
+
+        <h2>What to carry forward</h2>
+
+        <p>A model is a stateless function over a single document, and the harness writes that document from scratch on every call.</p>
+
+        <p>The document is mostly not the user's message. At turn zero of a small coding agent it is dominated by tool schemas and a system prompt, and every region of it has a different author and a different rate of change. Those rates determine cache behavior, and cache behavior determines whether an identical session costs one unit or ten.</p>
+
+        <p>The document grows on its own once the agent starts working, and it hits two walls rather than one. The hard wall is the context limit, which produces an error. The soft wall arrives much earlier, produces nothing, and is measurable: information in the middle of a long context is used less reliably than information at the edges, badly enough in one controlled study that a correct document placed tenth of twenty left the model performing slightly worse than no documents at all.<a class="cite" href="#ref-2" id="cite-2d">[2]</a></p>
+
+        <p>Everything else is a response to that. Bound what enters, compact what accumulated, isolate what would bloat, and write down what should outlive the session. Each move trades a known cost for an unknown one, and the unknown one is always the same shape: something that was true is no longer visible, and nothing marks its absence.</p>
+
+        <p>One boundary deserves marking before going further. Everything described here improves what a model can see. None of it improves what a model does once the view is clear. A practitioner argument worth taking seriously holds that coding agents left to run without human review degrade a codebase in ways no context policy corrects, on the grounds that a model optimises for the signal its training rewarded, tests passing within seconds, while the cost of a weak architectural decision is measured in weeks or months and has no fast oracle to score it.<a class="cite" href="#ref-13" id="cite-13a">[13]</a> That is a training and workflow problem rather than a context problem, and a harness that curates perfectly will not touch it.</p>
+
+        <p>Context engineering is necessary. Nothing surveyed here establishes that it is sufficient, and a discipline that claims otherwise is overselling itself.</p>
+
+        <p>The distinction to keep is the one that has recurred throughout. <em>Stored</em> and <em>visible to the model right now</em> are different claims. Almost every hard decision in harness design lives in the gap between them.</p>
+
+
+        <h2 id="references">References</h2>
+
+        <ol class="refs">
+          <li id="ref-1">Anthropic, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">Prompt caching</a>, Claude platform documentation. Retrieved 2026-07-27. Source for the exact-prefix requirement, the 0.1&times; read and 1.25&times;/2&times; write multipliers, the 512&ndash;4,096 token minimum cacheable prompt, and the five-minute default lifetime refreshed on use. <a class="cite" href="#cite-1a">&#8617;</a></li>
+          <li id="ref-2">Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang, <a href="https://arxiv.org/abs/2307.03172">Lost in the Middle: How Language Models Use Long Contexts</a>, <em>Transactions of the Association for Computational Linguistics</em>, 2024. Source for the multi-document QA position curve, the closed-book and oracle baselines, and the thirty-document results. Models evaluated were MPT-30B-Instruct, LongChat-13B (16K), GPT-3.5-Turbo, GPT-3.5-Turbo (16K), Claude-1.3, and Claude-1.3 (100K), all now retired. <a class="cite" href="#cite-2a">&#8617;</a></li>
+          <li id="ref-3">Kelly Hong, Anton Troynikov, and Jeff Huber, <a href="https://research.trychroma.com/context-rot">Context Rot: How Increasing Input Tokens Impacts LLM Performance</a>, Chroma, 2025. Source for the 18-model length-degradation study, the repeated-words task, the distractor and haystack-coherence results, and the authors' statement that the mechanism is unexplained. Replication code and experiment configurations for the NIAH extension, LongMemEval, and repeated-words tasks are published at <a href="https://github.com/chroma-core/context-rot">chroma-core/context-rot</a>. <a class="cite" href="#cite-3a">&#8617;</a></li>
+          <li id="ref-4">Anthropic, <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering for AI agents</a>, 2025. Source for the attention-budget framing, the compaction description and what Claude Code preserves, tool-result clearing as lightest-touch compaction, the 1,000&ndash;2,000 token subagent return, progressive disclosure and reference metadata, and the "smallest set of high-signal tokens" formulation. <a class="cite" href="#cite-4a">&#8617;</a></li>
+          <li id="ref-5">LangChain, <a href="https://www.langchain.com/blog/context-engineering-for-agents">Context Engineering for Agents</a>, 2025. Source for the write / select / compress / isolate taxonomy and the reported auto-compaction threshold. <a class="cite" href="#cite-5a">&#8617;</a></li>
+          <li id="ref-6">Anthropic, <a href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk">Building agents with the Claude Agent SDK</a>, 2025. Source for the gather / act / verify loop, the subagent information-volume guidance, and the rules-based, visual, and model-judgment verification options. <a class="cite" href="#cite-6a">&#8617;</a></li>
+          <li id="ref-7">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin, <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>, NeurIPS, 2017. Source for the per-layer complexity of self-attention (<code>O(n&sup2; &middot; d)</code>) against recurrent layers (<code>O(n &middot; d&sup2;)</code>), the <code>O(1)</code> maximum path length, and the restricted-neighbourhood variant at <code>O(r &middot; n &middot; d)</code> with path length <code>O(n/r)</code>. All from Table 1 and the accompanying discussion. <a class="cite" href="#cite-7a">&#8617;</a></li>
+          <li id="ref-8">Lingrui Mei, Jiayu Yao, Yuyao Ge, Yiwei Wang, Baolong Bi, Yujun Cai, Jiazhi Liu, Mingyu Li, Zhong-Zhi Li, Duzhen Zhang, Chenlin Zhou, Jiayi Mao, Tianze Xia, Jiafeng Guo, and Shenghua Liu, <a href="https://arxiv.org/abs/2507.13334">A Survey of Context Engineering for Large Language Models</a>, 2025. Source for the field-level decomposition into context retrieval and generation, context processing, and context management, its system-level categories, and the stated asymmetry between context comprehension and long-form generation. <a class="cite" href="#cite-8a">&#8617;</a></li>
+          <li id="ref-9">Comet, <a href="https://www.comet.com/site/blog/context-window/">What is a context window?</a>, 2025. Source for the words-and-pages scale of a 100,000 token window and for the independent fifty-step agentic workflow estimate. Practitioner material rather than peer-reviewed work; used here for order-of-magnitude corroboration only. <a class="cite" href="#cite-9a">&#8617;</a></li>
+          <li id="ref-10">Jim Allen Wallace, <a href="https://redis.io/blog/llm-context-windows/">LLM context windows: understanding and optimizing working memory</a>, Redis, 2026. Source for KV cache growth and memory bandwidth as constraints alongside attention cost, and for the existence of memory-efficient and sparse attention implementations. Vendor engineering material carrying product recommendations; the architectural constraints it describes are independently established, and its specific performance figures are not relied on here. <a class="cite" href="#cite-10a">&#8617;</a></li>
+          <li id="ref-11">Grant Sanderson (3Blue1Brown), <a href="https://www.youtube.com/watch?v=eMlx5fFNoYc">Attention in transformers, step-by-step</a>, Deep Learning chapter 6. Recommended for visual intuition on the attention mechanism. Cited as further viewing; no factual claim in this chapter rests on it. <a class="cite" href="#cite-11a">&#8617;</a></li>
+          <li id="ref-12">Meirtz, <a href="https://github.com/Meirtz/Awesome-Context-Engineering">Awesome-Context-Engineering</a>, community index, ongoing. Source for the alternative category breakdown of the field. A living index rather than a fixed publication; its contents change. <a class="cite" href="#cite-12a">&#8617;</a></li>
+          <li id="ref-13">HumanLayer, <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md">Why Software Factories Fail</a>, 2026. Source for the argument that unreviewed coding agents degrade maintainability, and that test-passing rewards resolve in seconds while architectural cost resolves over months with no fast oracle. An explicitly opinionated practitioner essay arguing partly against the harness-engineering framing adopted here; presented here as a position to be answered rather than an established result. <a class="cite" href="#cite-13a">&#8617;</a></li>
+          <li id="ref-14">HumanLayer, <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md">Advanced Context Engineering for Coding Agents</a>, 2026. Source for intentional compaction, the research / plan / implementation phasing, the 40&ndash;60% utilization target, the severity ranking of incorrect over missing over noisy information, and the leverage argument for reviewing plans rather than code. Practitioner methodology reporting field results rather than controlled measurement; the utilization figure in particular is presented by its author without derivation. <a class="cite" href="#cite-14a">&#8617;</a></li>
+          <li id="ref-15">John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, and Ofir Press, <a href="https://arxiv.org/abs/2405.15793">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a>, NeurIPS, 2024. Source for the claim that interface design measurably affects language model agent performance, and for the reported 12.5% pass@1 on SWE-bench. Cited from the abstract; the detailed interface ablations are in the full paper. <a class="cite" href="#cite-15a">&#8617;</a></li>
+          <li id="ref-16">Modarressi et al., <a href="https://arxiv.org/abs/2502.05167">NoLiMa: Long-Context Evaluation Beyond Literal Matching</a>, 2025. Source for the finding that of thirteen models advertising at least 128K context, eleven scored below half their short-context baseline at 32K, on questions constructed to share no vocabulary with the target passage. <a class="cite" href="#cite-16a">&#8617;</a></li>
+          <li id="ref-17">Hsieh et al., <a href="https://arxiv.org/abs/2404.06654">RULER: What's the Real Context Size of Your Long-Context Language Models?</a>, 2024. Source for the finding that of seventeen models advertising 32K or greater context, only half sustained satisfactory performance at 32K, while nearly all scored near-perfectly on vanilla needle-in-a-haystack retrieval. <a class="cite" href="#cite-17a">&#8617;</a></li>
+          <li id="ref-18">Beltagy et al., <a href="https://arxiv.org/abs/2004.05150">Longformer: The Long-Document Transformer</a>, 2020. Source for windowed attention at <code>O(n &times; w)</code>, the <code>&#8467; &times; w</code> receptive field from stacked layers, dilated windows, and the preservation of <code>O(n)</code> scaling when global attention is added at a small number of positions. <a class="cite" href="#cite-18a">&#8617;</a></li>
+          <li id="ref-19">Jiang et al., <a href="https://arxiv.org/abs/2310.06825">Mistral 7B</a>, 2023. Cited as a production model employing sliding window attention to handle longer sequences at reduced inference cost. Cited from the abstract; the window size and rolling buffer details are in the full paper. <a class="cite" href="#cite-19a">&#8617;</a></li>
+        </ol>
+
+        <h3>Sources reviewed and not cited</h3>
+
+        <p class="fig-note">Three further sources were read and deliberately left out. The Wikipedia article on context windows is derivative of Liu et al. for its substantive claim and carries maintenance tags flagging citation and original-research concerns, so it is not a suitable citation for a chapter holding itself to primary sources. A widely shared Medium explainer restates standard transformer material without adding a claim this chapter relies on, and gives a token-per-word ratio inconsistent with the figures used here. A developer guide from Unstructured covers document chunking and overlap strategies, which belong to retrieval preprocessing rather than to the harness decisions examined here, and its model figures are several generations out of date. One source, a mechanistic treatment of context rot hosted by TMLS, could not be retrieved: it returns HTTP 403 on both of its known hostnames. OpenAI's harness engineering essay, cited in the HumanLayer bibliography and directly relevant to the framing used here, is likewise 403 to automated retrieval and remains unread.</p>
+
+        
+
+        <hr>
+
+        <p class="fig-note">Numbers describing the example agent (the 15,300-token breakdown, the per-tool sizes, and the turn-by-turn growth) are constructed and labelled representative. Every claim about measured model behavior is cited above.</p>
+
+      </div>
+    </article>
+  </main>
+</body>
+</html>

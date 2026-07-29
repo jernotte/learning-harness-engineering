@@ -36,12 +36,12 @@
     }
   });
 
-  const progress = document.querySelector("[data-reading-progress]");
+  const progressBars = [...document.querySelectorAll("[data-reading-progress]")];
   const updateProgress = () => {
-    if (!progress) return;
+    if (!progressBars.length) return;
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-    progress.style.transform = `scaleX(${ratio})`;
+    for (const bar of progressBars) bar.style.transform = `scaleX(${ratio})`;
   };
   updateProgress();
   addEventListener("scroll", updateProgress, { passive: true });

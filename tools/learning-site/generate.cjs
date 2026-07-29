@@ -18,32 +18,50 @@ try {
 
 const EXPECTED_MARKED_VERSION = "17.0.5";
 
-const EXPECTED_CONTROL_DIAGRAM = `flowchart LR
-  I[Ingress and admission] --> C[Call construction]
-  C --> M{Model proposes}
-  M --> A[Action mediation]
-  A --> E[Environment]
-  E --> O[Observation construction]
-  O --> C
-  M --> F[Candidate completion]
-  F --> T{Completion and acceptance policy}
-  T -->|Continue| C
-  T -->|Accept| D[Delivered outcome]
-  S[(Durable state and recovery)] -. persists and reconstructs .-> I
-  S -. informs .-> C
-  A -. records .-> S
-  O -. records .-> S
-  T -. records .-> S
-  S -. trajectories and failures .-> X[External evaluation]
-  D -. outcomes .-> X
-  X -. optional signal .-> R[Across-run adaptation]
-  R -. changes future policy or context .-> C`;
+const CHAPTER_SLUG = "context-management-in-agent-harnesses";
+const CHAPTER_MARKDOWN = `learning/chapters/${CHAPTER_SLUG}.md`;
+const CHAPTER_HTML = `chapters/${CHAPTER_SLUG}.html`;
+const SYNTHESIS_PATH = "research/syntheses/context-management-across-harnesses.md";
+const CLAIMS_PATH = "research/claims/context-management-across-harnesses.md";
+
+const EXPECTED_CONTEXT_PIPELINE = `flowchart LR
+  D[(Durable task state)] --> S[Select]
+  P[Instructions and policy] --> S
+  W[Workspace and environment] --> R[Read or retrieve]
+  M[(Long-term memory)] --> R
+  R --> S
+  S --> T[Transform and budget]
+  T --> C[Active model context]
+  C --> A[Model action]
+  A --> E[Environment effect]
+  E --> O[Shape observation]
+  O --> D
+  O --> T
+  S -. omitted material .-> X[Not visible this turn]`;
+
+const EXPECTED_COMPACTION_PIPELINE = `flowchart LR
+  H[Protected head] --> N[Next active context]
+  O[Older middle] --> U[Summarize or evict]
+  U --> N
+  R[Recent tail] --> N
+  O -. raw history may remain .-> D[(Durable store)]
+  U -. omission or hallucination risk .-> Q[Retention uncertainty]`;
 
 const SOURCE_PATHS = [
   "learning/README.md",
-  "learning/chapters/where-harnesses-put-control.md",
-  "research/syntheses/first-batch-harness-architecture.md",
-  "research/claims/first-batch-harness-architecture.md",
+  CHAPTER_MARKDOWN,
+  SYNTHESIS_PATH,
+  CLAIMS_PATH,
+  "research/sources/cp2-pi-v0.80.6.md",
+  "research/sources/cp2-openhands-sdk-v1.35.0.md",
+  "research/sources/cp2-openclaw-v2026.6.6.md",
+  "research/sources/cp2-hermes-agent-v0.18.2.md",
+  "research/sources/codex-cli-v0.144.6-context.md",
+  "research/sources/letta-code-v0.28.11-context.md",
+  "research/sources/arize-2026-context-management-harnesses.md",
+  "research/sources/semenov-2026-beyond-compaction.md",
+  "research/sources/cim-2026-parallel-compaction.md",
+  "research/sources/hou-2026-memoryagentbench.md",
 ];
 
 const TOOL_PATHS = [
@@ -120,6 +138,18 @@ function extractFrontmatter(markdown) {
     const match = raw.match(new RegExp(`^${key}:\\s*(.+)$`, "m"));
     if (match) attributes[key] = unquote(match[1]);
   }
+  const learningObjectives = [];
+  const objectiveLines = raw.split("\n");
+  const objectiveStart = objectiveLines.findIndex((line) => line === "learning_objectives:");
+  if (objectiveStart >= 0) {
+    for (const line of objectiveLines.slice(objectiveStart + 1)) {
+      if (/^[a-z_]+:/.test(line)) break;
+      const item = line.match(/^\s*-\s+(.+)$/);
+      if (item) learningObjectives.push(unquote(item[1]));
+    }
+  }
+  attributes.learning_objectives = learningObjectives;
+
   const sourceCases = [];
   const rawLines = raw.split("\n");
   const sourceStart = rawLines.findIndex((line) => line === "source_cases:");
@@ -174,54 +204,72 @@ function extractOpeningHeadings(markdown, expectedTitle) {
   };
 }
 
-function replaceCanonicalDiagram(markdown) {
+function replaceCanonicalDiagrams(markdown) {
   const matches = [...markdown.matchAll(/```mermaid\s*\n([\s\S]*?)\n```/g)];
-  if (matches.length !== 1) {
-    throw new Error(`Expected exactly one Mermaid control diagram; found ${matches.length}.`);
+  if (matches.length !== 2) {
+    throw new Error(`Expected exactly two canonical context diagrams; found ${matches.length}.`);
   }
-  const actual = matches[0][1].replaceAll("\r\n", "\n").trim();
-  if (actual !== EXPECTED_CONTROL_DIAGRAM) {
-    throw new Error("The canonical control diagram changed; update the accessible renderer deliberately.");
+  const replacements = new Map([
+    [EXPECTED_CONTEXT_PIPELINE, renderContextPipeline()],
+    [EXPECTED_COMPACTION_PIPELINE, renderCompactionPipeline()],
+  ]);
+  const seen = new Set();
+  let output = markdown;
+  for (const match of matches) {
+    const actual = match[1].replaceAll("\r\n", "\n").trim();
+    const replacement = replacements.get(actual);
+    if (!replacement || seen.has(actual)) {
+      throw new Error("A canonical context diagram changed or was duplicated; update the accessible renderer deliberately.");
+    }
+    seen.add(actual);
+    output = output.replace(match[0], replacement);
   }
-  return markdown.replace(matches[0][0], renderControlDiagram());
+  return output;
 }
 
-function renderControlDiagram() {
-  const stages = [
-    ["01", "Admission", "A request becomes owned work."],
-    ["02", "Call construction", "Policy and state become a model-visible problem."],
-    ["03", "Model proposal", "The model selects a local next action."],
-    ["04", "Action authority", "Programmed policy decides what may execute."],
-    ["05", "Environment effect", "The world changes—or rejects the request."],
-    ["06", "Observation", "Consequences become evidence for the next call."],
-  ];
-  return `<figure class="control-map" aria-labelledby="control-map-caption">
-  <figcaption id="control-map-caption">
-    <strong>The active control loop</strong>
-    <span>Observation normally feeds the next call; candidate completion branches through an acceptance policy.</span>
+function renderContextPipeline() {
+  return `<figure class="context-map" aria-labelledby="context-map-caption">
+  <figcaption id="context-map-caption">
+    <strong>The context pipeline</strong>
+    <span>Durable information becomes model evidence only after selection, retrieval, transformation, and budgeting.</span>
   </figcaption>
-  <ol class="control-flow">
-    ${stages
-      .map(
-        ([number, title, text]) => `<li>
-      <span class="flow-number" aria-hidden="true">${number}</span>
-      <span><strong>${title}</strong><small>${text}</small></span>
-    </li>`,
-      )
-      .join("\n    ")}
+  <div class="context-sources" aria-label="Candidate information sources">
+    <article><span>Durable state</span><small>events, transcript, branches</small></article>
+    <article><span>Instructions</span><small>policy, tools, skills</small></article>
+    <article><span>Workspace</span><small>files, environment, results</small></article>
+    <article><span>Long-term memory</span><small>retrieved or injected state</small></article>
+  </div>
+  <ol class="context-flow" aria-label="Context construction stages">
+    <li><b>1</b><span><strong>Select or retrieve</strong><small>Choose candidates for this call.</small></span></li>
+    <li><b>2</b><span><strong>Transform and budget</strong><small>Truncate, summarize, normalize, order.</small></span></li>
+    <li class="active-context"><b>3</b><span><strong>Active model context</strong><small>The only representation the model can use now.</small></span></li>
+    <li><b>4</b><span><strong>Action and observation</strong><small>Effects create new candidate evidence.</small></span></li>
   </ol>
-  <div class="control-branch" aria-label="Completion branch">
-    <span class="branch-line" aria-hidden="true"></span>
-    <div><strong>Candidate completion</strong><small>The model proposes stopping.</small></div>
-    <span class="branch-arrow" aria-hidden="true">→</span>
-    <div><strong>Acceptance policy</strong><small>Continue, escalate, reject, or deliver.</small></div>
+  <p class="omission-note"><strong>Omitted material</strong> can remain durable while being completely invisible to the model on this turn.</p>
+</figure>`;
+}
+
+function renderCompactionPipeline() {
+  return `<figure class="compaction-map" aria-labelledby="compaction-map-caption">
+  <figcaption id="compaction-map-caption">
+    <strong>The common compaction shape</strong>
+    <span>A protected head and recent tail surround a transformed middle; storage retention and model visibility remain separate.</span>
+  </figcaption>
+  <div class="history-before" aria-label="History before compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment middle">Older middle</span>
+    <span class="segment tail">Recent tail</span>
   </div>
-  <div class="support-contracts">
-    <article><span>Continuity</span><p>Durable state, replay, recovery, compaction.</p></article>
-    <article><span>External evaluation</span><p>Trajectories and outcomes assessed outside the run.</p></article>
-    <article><span>Across-run adaptation</span><p>Optional signals change future policy or context.</p></article>
+  <div class="compaction-arrow" aria-hidden="true"><span>summarize or evict</span>↓</div>
+  <div class="history-after" aria-label="Active context after compaction">
+    <span class="segment head">Protected head</span>
+    <span class="segment summary">Summary or retained structure</span>
+    <span class="segment tail">Recent tail</span>
   </div>
-  <p class="diagram-loop-note">The loop is not linear in a real harness: lifecycle, state, extensions, and failure policy can intervene at every stage.</p>
+  <div class="compaction-notes">
+    <p><strong>Durable store</strong><span>The raw middle may still exist.</span></p>
+    <p><strong>Active uncertainty</strong><span>Omission and hallucination can survive as fluent context.</span></p>
+  </div>
 </figure>`;
 }
 
@@ -275,7 +323,7 @@ function renderMarkdown(markdown) {
 
 function rewriteLandingLinks(html) {
   return html
-    .replaceAll('href="chapters/where-harnesses-put-control.md"', 'href="chapters/where-harnesses-put-control.html"')
+    .replaceAll(`href="chapters/${CHAPTER_SLUG}.md"`, `href="${CHAPTER_HTML}"`)
     .replaceAll('href="READER-FEEDBACK.md"', 'href="../learning/READER-FEEDBACK.md"');
 }
 
@@ -283,18 +331,38 @@ function rewriteChapterLinks(html) {
   return html.replaceAll('href="../READER-FEEDBACK.md"', 'href="../../learning/READER-FEEDBACK.md"');
 }
 
+function tocEntries(headings) {
+  return headings
+    .filter((heading) => heading.level === 2 || heading.level === 3)
+    .map(
+      (heading) => `<li class="toc-level-${heading.level}"><a href="#${heading.id}">${escapeHtml(heading.text)}</a></li>`,
+    )
+    .join("\n    ");
+}
+
 function renderToc(headings) {
-  const selected = headings.filter((heading) => heading.level === 2 || heading.level === 3);
   return `<nav class="toc" aria-label="On this page">
   <p class="toc-title">On this page</p>
   <ol>
-    ${selected
-      .map(
-        (heading) => `<li class="toc-level-${heading.level}"><a href="#${heading.id}">${escapeHtml(heading.text)}</a></li>`,
-      )
-      .join("\n    ")}
+    ${tocEntries(headings)}
   </ol>
 </nav>`;
+}
+
+function renderInlineToc(headings) {
+  return `<details class="toc-inline">
+  <summary>On this page</summary>
+  <nav aria-label="On this page">
+    <ol>
+    ${tocEntries(headings)}
+    </ol>
+  </nav>
+</details>`;
+}
+
+function estimateReadingMinutes(markdown) {
+  const words = stripTags(markdown.replace(/```[\s\S]*?```/g, " ")).split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
 }
 
 function topNavigation(prefix, active) {
@@ -305,8 +373,8 @@ function topNavigation(prefix, active) {
   </a>
   <nav class="primary-nav" aria-label="Primary">
     <a${active === "home" ? ' aria-current="page"' : ""} href="${prefix}index.html">Overview</a>
-    <a${active === "chapter" ? ' aria-current="page"' : ""} href="${prefix}chapters/where-harnesses-put-control.html">Chapter 1</a>
-    <a href="${prefix}../research/syntheses/first-batch-harness-architecture.md">Research</a>
+    <a${active === "chapter" ? ' aria-current="page"' : ""} href="${prefix}${CHAPTER_HTML}">Chapter 1</a>
+    <a href="${prefix}../${SYNTHESIS_PATH}">Research</a>
   </nav>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme" title="Change color theme">
     <span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Theme</span>
@@ -344,7 +412,7 @@ function pageShell({ title, description, prefix, active, body, bodyClass = "" })
 </html>\n`;
 }
 
-function landingPage(learningHtml, attributes) {
+function landingPage(learningHtml, attributes, readingMinutes) {
   return pageShell({
     title: "Learning guide",
     description: "A research-backed learning guide to the architecture around language models.",
@@ -355,11 +423,11 @@ function landingPage(learningHtml, attributes) {
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
       <p class="eyebrow">Harness engineering · Chapter 1</p>
-      <h1 id="hero-title">See the system around the model.</h1>
+      <h1 id="hero-title">Design what the model can know.</h1>
       <p class="hero-lede">${escapeHtml(attributes.summary)}</p>
       <div class="hero-actions">
-        <a class="button primary" href="chapters/where-harnesses-put-control.html">Start the chapter <span aria-hidden="true">→</span></a>
-        <a class="button quiet" href="../research/syntheses/first-batch-harness-architecture.md">Inspect the synthesis</a>
+        <a class="button primary" href="${CHAPTER_HTML}">Start the chapter <span aria-hidden="true">→</span></a>
+        <a class="button quiet" href="../${SYNTHESIS_PATH}">Inspect the synthesis</a>
       </div>
       <p class="hero-note"><span class="status-dot" aria-hidden="true"></span> Provisional learning material · four pinned, maintainer-reviewed cases</p>
     </div>
@@ -376,15 +444,16 @@ function landingPage(learningHtml, attributes) {
   <section class="chapter-feature" aria-labelledby="chapter-feature-title">
     <div>
       <p class="eyebrow">Current lesson</p>
-      <h2 id="chapter-feature-title">Where Harnesses Put Control</h2>
+      <h2 id="chapter-feature-title">${escapeHtml(attributes.title)}</h2>
       <p>${escapeHtml(attributes.summary)}</p>
     </div>
     <dl class="chapter-facts">
       <div><dt>Level</dt><dd>Technically capable newcomer</dd></div>
       <div><dt>Evidence</dt><dd>4 reviewed implementation pins</dd></div>
       <div><dt>Status</dt><dd>Provisional, lineage-aware</dd></div>
+      <div><dt>Length</dt><dd>About ${readingMinutes} min</dd></div>
     </dl>
-    <a class="text-link" href="chapters/where-harnesses-put-control.html">Read Chapter 1 <span aria-hidden="true">→</span></a>
+    <a class="text-link" href="${CHAPTER_HTML}">Read Chapter 1 <span aria-hidden="true">→</span></a>
   </section>
 
   <section class="landing-copy prose" aria-labelledby="guide-details-title">
@@ -395,7 +464,16 @@ function landingPage(learningHtml, attributes) {
   });
 }
 
-function chapterPage(attributes, subtitle, chapterHtml, headings) {
+function chapterPage(attributes, subtitle, chapterHtml, headings, readingMinutes) {
+  const objectives = attributes.learning_objectives || [];
+  const objectivesBlock = objectives.length
+    ? `<div class="chapter-objectives">
+          <p id="chapter-objectives-title">After this chapter you should be able to</p>
+          <ul aria-labelledby="chapter-objectives-title">
+            ${objectives.map((item) => `<li>${escapeHtml(item.replace(/\.$/, ""))}</li>`).join("\n            ")}
+          </ul>
+        </div>`
+    : "";
   const cases = attributes.source_cases || [];
   const caseList = cases
     .map(
@@ -403,8 +481,8 @@ function chapterPage(attributes, subtitle, chapterHtml, headings) {
     )
     .join("\n");
   return pageShell({
-    title: attributes.title || "Where Harnesses Put Control",
-    description: attributes.summary || "Trace control through a modern language-model harness.",
+    title: attributes.title || "Context Management in Agent Harnesses",
+    description: attributes.summary || "Understand how agent harnesses construct and transform model context.",
     prefix: "../",
     active: "chapter",
     bodyClass: "chapter-page",
@@ -412,24 +490,26 @@ function chapterPage(attributes, subtitle, chapterHtml, headings) {
   <aside class="chapter-rail" aria-label="Chapter context">
     <a class="back-link" href="../index.html"><span aria-hidden="true">←</span> Learning guide</a>
     <p class="rail-label">Chapter 1 of 1</p>
-    <div class="rail-progress"><span></span></div>
+    <div class="rail-progress" aria-hidden="true"><span data-reading-progress></span></div>
     <p class="rail-status"><span class="status-dot" aria-hidden="true"></span> ${escapeHtml(attributes.status || "provisional")}</p>
     <p class="rail-updated">Updated ${escapeHtml(attributes.updated || "")}</p>
-    <a class="rail-source" href="../../learning/chapters/where-harnesses-put-control.md">View canonical Markdown</a>
+    <p class="rail-updated">About ${readingMinutes} min read</p>
+    <a class="rail-source" href="../../${CHAPTER_MARKDOWN}">View canonical Markdown</a>
   </aside>
 
   <main id="main-content" tabindex="-1">
     <article class="chapter-article">
       <header class="chapter-header">
-        <p class="eyebrow">Harness architecture · Control and evidence</p>
-        <h1>${escapeHtml(attributes.title || "Where Harnesses Put Control")}</h1>
+        <p class="eyebrow">Harness architecture · Context and memory</p>
+        <h1>${escapeHtml(attributes.title || "Context Management in Agent Harnesses")}</h1>
         <p class="chapter-subtitle">${escapeHtml(subtitle)}</p>
         <p class="chapter-summary">${escapeHtml(attributes.summary || "")}</p>
         <div class="chapter-actions">
           <button type="button" class="button quiet compact" data-expand-evidence aria-pressed="false">Expand evidence</button>
-          <a class="button quiet compact" href="../../research/syntheses/first-batch-harness-architecture.md">Research synthesis</a>
+          <a class="button quiet compact" href="../../${SYNTHESIS_PATH}">Research synthesis</a>
         </div>
         <ul class="case-pins" aria-label="Reviewed implementation boundaries">${caseList}</ul>
+        ${objectivesBlock}
         <div class="evidence-legend" aria-labelledby="evidence-legend-title">
           <p id="evidence-legend-title">How to read evidence</p>
           <ul class="epistemic-key">
@@ -442,12 +522,16 @@ function chapterPage(attributes, subtitle, chapterHtml, headings) {
           </ul>
         </div>
       </header>
+      ${renderInlineToc(headings)}
       <div class="prose chapter-prose">${chapterHtml}</div>
       <footer class="chapter-end">
         <p class="eyebrow">Continue the loop</p>
         <h2>What did this chapter change in your mental model?</h2>
         <p>Record anything unclear, unsupported, missing, impractical, or worth deeper research. Your reading feedback directs the next cycle.</p>
-        <a class="button primary" href="../../learning/READER-FEEDBACK.md">Open reader feedback <span aria-hidden="true">→</span></a>
+        <div class="chapter-end-actions">
+          <a class="button primary" href="../../learning/READER-FEEDBACK.md">Open reader feedback <span aria-hidden="true">→</span></a>
+          <a class="button quiet" href="#main-content">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
       </footer>
     </article>
   </main>
@@ -498,12 +582,14 @@ function generate({ repoRoot, outputRoot }) {
   const landingRendered = renderMarkdown(landingBody);
   const landingHtml = rewriteLandingLinks(landingRendered.html);
 
-  const chapterRendered = renderMarkdown(replaceCanonicalDiagram(opening.body));
+  const chapterRendered = renderMarkdown(replaceCanonicalDiagrams(opening.body));
   const chapterHtml = rewriteChapterLinks(chapterRendered.html);
 
+  const readingMinutes = estimateReadingMinutes(opening.body);
+
   const outputContents = new Map([
-    ["index.html", landingPage(landingHtml, attributes)],
-    ["chapters/where-harnesses-put-control.html", chapterPage(attributes, opening.subtitle, chapterHtml, chapterRendered.headings)],
+    ["index.html", landingPage(landingHtml, attributes, readingMinutes)],
+    [CHAPTER_HTML, chapterPage(attributes, opening.subtitle, chapterHtml, chapterRendered.headings, readingMinutes)],
     ["assets/styles.css", fs.readFileSync(path.join(root, "tools/learning-site/assets/styles.css"))],
     ["assets/site.js", fs.readFileSync(path.join(root, "tools/learning-site/assets/site.js"))],
   ]);
@@ -526,14 +612,14 @@ function generate({ repoRoot, outputRoot }) {
     pages: [
       {
         output: "index.html",
-        derived_from: ["learning/README.md", "learning/chapters/where-harnesses-put-control.md"],
+        derived_from: ["learning/README.md", CHAPTER_MARKDOWN],
       },
       {
-        output: "chapters/where-harnesses-put-control.html",
+        output: CHAPTER_HTML,
         derived_from: [
-          "learning/chapters/where-harnesses-put-control.md",
-          "research/syntheses/first-batch-harness-architecture.md",
-          "research/claims/first-batch-harness-architecture.md",
+          CHAPTER_MARKDOWN,
+          SYNTHESIS_PATH,
+          CLAIMS_PATH,
         ],
       },
     ],
@@ -580,7 +666,7 @@ module.exports = {
   extractFrontmatter,
   extractOpeningHeadings,
   generate,
-  replaceCanonicalDiagram,
+  replaceCanonicalDiagrams,
   renderMarkdown,
   slugify,
 };

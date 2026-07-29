@@ -10,12 +10,11 @@
       return null;
     }
   })();
-  const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // Light is the default until the reader chooses otherwise; the OS
+  // preference is deliberately not consulted.
   const initialTheme = storedTheme === "light" || storedTheme === "dark"
     ? storedTheme
-    : preferredDark
-      ? "dark"
-      : "light";
+    : "light";
 
   const applyTheme = (theme) => {
     root.dataset.theme = theme;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1670,6 +1670,15 @@ a {
   .cost-key { margin-top: 0.9rem; display: flex; gap: 1.1rem; font-size: 0.7rem; color: var(--ink-faint); }
   .cost-key b { display: inline-block; width: 0.7rem; height: 0.7rem; margin-right: 0.3rem; border-radius: 2px; vertical-align: middle; }
 
+
+  /* in-practice section */
+  .skip-note { max-width: var(--measure); margin: 0 0 1.4rem; padding: 0.7rem 0.95rem; border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; background: var(--gold-soft); color: var(--gold); font-size: 0.8rem; }
+  .src-quote { margin: 1.6rem 0; padding: 0.9rem 1.1rem; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; background: var(--surface-raised); }
+  .src-quote p { margin: 0 0 0.5rem; font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 0.78rem; line-height: 1.6; color: var(--ink-soft); }
+  .src-quote p:last-of-type { margin-bottom: 0.6rem; }
+  .src-quote cite { display: block; font-size: 0.72rem; font-style: normal; color: var(--ink-faint); }
+  .src-quote strong { color: var(--teal); }
+
   @media (max-width: 700px) {
     .comp-row, .comp-total, .pfx-row { grid-template-columns: 1fr; gap: 0.2rem; }
     .comp-key, .pfx-row > span:first-child { text-align: left; }
@@ -2285,6 +2294,131 @@ a {
         <p>The distinction to keep is the one that has recurred throughout. <em>Stored</em> and <em>visible to the model right now</em> are different claims. Almost every hard decision in harness design lives in the gap between them.</p>
 
 
+        <hr>
+
+        <h2 id="in-practice">In practice: three harnesses, one decision</h2>
+
+        <p class="skip-note">This section applies the material above to real code and can be skipped without losing the concepts. It exists because the tradeoffs described so far are easier to believe once they have been seen written down by people shipping working systems.</p>
+
+        <p>Bounding gave four shapes and a table of what each one bets on. That table was reasoned out rather than observed. This section checks it against three open-source harnesses, each pinned to a specific commit, each readable by anyone who wants to confirm what follows.</p>
+
+        <div class="prose-table">
+        <table class="own">
+          <thead><tr><th>Harness</th><th>Version</th><th>Commit</th><th>File examined</th></tr></thead>
+          <tbody>
+            <tr><td>Pi</td><td>v0.80.6</td><td><code>2b3fda99</code></td><td><code>packages/coding-agent/src/core/tools/truncate.ts</code></td></tr>
+            <tr><td>OpenClaw</td><td>v2026.6.6</td><td><code>8c802aa6</code></td><td><code>src/agents/embedded-agent-runner/tool-result-truncation.ts</code></td></tr>
+            <tr><td>Hermes Agent</td><td>v2026.7.7.2</td><td><code>9de9c25f</code></td><td><code>tools/tool_result_storage.py</code>, <code>tools/budget_config.py</code></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>All three answer the same question. A tool has returned more text than should enter the context. What now?</p>
+
+        <h3>Pi: decide once, per tool</h3>
+
+        <p>Pi keeps one shared truncation module and exports two functions from it. The choice between them is made by whoever writes the tool, at the time the tool is written. The source comments state the reasoning without needing interpretation.</p>
+
+        <blockquote class="src-quote">
+          <p>Truncate content from the head (keep first N lines/bytes).<br>
+          <strong>Suitable for file reads where you want to see the beginning.</strong></p>
+          <p>Truncate content from the tail (keep last N lines/bytes).<br>
+          <strong>Suitable for bash output where you want to see the end (errors, final results).</strong></p>
+          <cite><code>truncate.ts</code>, function documentation</cite>
+        </blockquote>
+
+        <p>That is the head-versus-tail split from the table above, arrived at independently and written into a shipped harness. The file reader calls <code>truncateHead</code>. The shell tool calls <code>truncateTail</code>.</p>
+
+        <p>Three implementation details matter more than the choice itself.</p>
+
+        <p><strong>Two limits, not one.</strong> <code>DEFAULT_MAX_LINES = 2000</code> and <code>DEFAULT_MAX_BYTES = 50 * 1024</code>, and the module applies whichever is reached first. A single cap would be naive in a way that shows up immediately in real use: two thousand lines of formatted Python and two thousand lines of minified JavaScript are not comparable quantities of context.</p>
+
+        <p><strong>Truncation is announced.</strong> The model receives a notice reading <code>[Truncated: showing 2000 of 8431 lines (2000 line limit)]</code>. This is the visible-truncation property argued for above, implemented as a literal string appended to the result.</p>
+
+        <p><strong>The recovery path is in the tool description.</strong> Pi's <code>read</code> tool tells the model, in the schema the model reads on every call, that output is capped and how to get past it: "Use offset/limit for large files. When you need the full file, continue with offset until complete." The instruction for handling truncation ships alongside the capability that causes it.</p>
+
+        <p>There is a sharp edge worth noticing. If the very first line of a file is itself larger than the 50KB byte limit, <code>truncateHead</code> returns <em>empty</em> content and sets a <code>firstLineExceedsLimit</code> flag rather than returning a partial line. Reading a minified bundle therefore yields no content at all, plus an explanation. That is a deliberate choice in favour of never handing the model a fragment of a line, and it is paid for in a case where the model learns nothing about the file.</p>
+
+        <h3>OpenClaw: decide per result, at runtime</h3>
+
+        <p>OpenClaw does not fix the shape when the tool is written. It inspects each result as it arrives and picks a shape based on what the text looks like.</p>
+
+        <p>Two ceilings apply first, and the lower one wins. There is a share-of-window ceiling:</p>
+
+        <blockquote class="src-quote">
+          <p>Maximum share of the context window a single tool result should occupy. This is intentionally conservative. A single tool result should not consume more than 30% of the context window even without other messages.</p>
+          <cite><code>MAX_TOOL_RESULT_CONTEXT_SHARE = 0.3</code></cite>
+        </blockquote>
+
+        <p>And a fixed ceiling that steps up with the size of the window in play: 16,000 characters by default, 32,000 once the window is at least 100,000 tokens, 64,000 once it is at least 200,000. The final cap is the smaller of the two, with tokens converted to characters at a ratio of roughly four to one that the source itself flags as approximate.</p>
+
+        <p>Then the interesting part. Before cutting, OpenClaw asks whether the end of the output looks like it matters, by scanning the last 2,000 characters for three signals: words including <code>error</code>, <code>exception</code>, <code>failed</code>, <code>fatal</code>, <code>traceback</code>, <code>panic</code>, <code>stack trace</code>, <code>errno</code> and <code>exit code</code>; a closing brace suggesting the output is JSON; or summary words including <code>total</code>, <code>summary</code>, <code>result</code>, <code>complete</code>, <code>finished</code> and <code>done</code>.</p>
+
+        <p>If any of those hit, the budget splits: up to 30% of it or 4,000 characters, whichever is less, is reserved for the tail, the head takes the rest, and the middle is replaced with a marker. If none hit, the beginning is kept and the rest discarded. Either way the cut is nudged to the nearest newline when one falls within 20% of the target, so the model rarely receives a severed line.</p>
+
+        <p>This is the head-plus-tail shape from the table above, applied conditionally rather than always. It buys the coverage of both boundaries only when the tail appears to warrant it, and avoids paying the middle-deletion cost the rest of the time.</p>
+
+        <p>The exposure is that the decision now rests on a word list. A source file that discusses error handling in prose will trigger tail preservation it does not need. A genuine failure whose message avoids all of those words, and plenty do, will be treated as ordinary output and have its ending discarded. The heuristic is good and it is still a heuristic.</p>
+
+        <h3>Hermes: do not decide, move it out of the window</h3>
+
+        <p>Hermes takes the position that truncation is the wrong operation, and says so in the first line of the module.</p>
+
+        <blockquote class="src-quote">
+          <p>Tool result persistence. Preserves large outputs instead of truncating.</p>
+          <cite><code>tool_result_storage.py</code>, module docstring</cite>
+        </blockquote>
+
+        <p>Output above a threshold is written into the sandbox, and what enters the context is a pointer with a sample. The defence is layered explicitly, and the layers are worth separating because each catches a failure the others miss.</p>
+
+        <div class="prose-table">
+        <table class="own">
+          <thead><tr><th>Layer</th><th>Trigger</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Per-tool cap</td><td>Tool author's own limit</td><td>The tool truncates before returning. Described in the source as the only layer the tool author controls.</td></tr>
+            <tr><td>Per-result persistence</td><td>Result over <code>100,000</code> characters</td><td>Full output written to the sandbox temp directory; context receives a preview plus the path.</td></tr>
+            <tr><td>Per-turn aggregate</td><td>All results in one assistant turn over <code>200,000</code> characters</td><td>Largest non-persisted results spilled to disk until the total is under budget.</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>That third layer answers something the four shapes above do not address at all. A single oversized result is the obvious problem. Twelve medium results in one turn, each individually under the limit, is the problem nobody plans for, and Hermes budgets the turn as well as the result.</p>
+
+        <p>What lands in the context is a <code>&lt;persisted-output&gt;</code> block containing the original size, the file path, a 1,500-character preview cut at a newline boundary, and an explicit instruction: "Use the read_file tool with offset and limit to access specific sections of this output."</p>
+
+        <p>Then the detail that justifies reading source rather than documentation. The threshold table opens with a hard-pinned exemption:</p>
+
+        <blockquote class="src-quote">
+          <p>Tools whose thresholds must never be overridden.<br>
+          <code>read_file=inf</code> prevents infinite persist-&gt;read-&gt;persist loops.</p>
+          <cite><code>budget_config.py</code>, <code>PINNED_THRESHOLDS</code></cite>
+        </blockquote>
+
+        <p>Follow the mechanism through without that line. A large file is read. The result exceeds the threshold, so it is written to disk and replaced with a path. The model is told to use <code>read_file</code> to see the rest. That read returns a large result, which exceeds the threshold, which is written to disk and replaced with a path. The instruction that makes spilling recoverable is the same instruction that makes it recursive, and the fix is to exempt the retrieval tool from the mechanism entirely, permanently, with configuration override disallowed.</p>
+
+        <p>The general cost of this design is the one already named: the model has to choose to retrieve. Nothing is lost, and nothing is used either unless a second decision is made correctly.</p>
+
+        <h3>Reading the three choices</h3>
+
+        <p>Each design looks well matched to the conditions its harness runs under, and in each case something in the source beyond the truncation code supports the reading.</p>
+
+        <p><strong>Pi decides at design time because it can.</strong> An interactive coding tool ships a known, small set of tools, and the person writing the file reader knows that files declare their structure early while shell commands report their verdict late. Static assignment costs nothing at runtime and is trivially auditable. The supporting signal is that Pi puts the recovery instruction in the tool description, which only works if the tool set is stable enough to describe carefully.</p>
+
+        <p><strong>OpenClaw decides at runtime because it cannot know in advance.</strong> It runs one agent across many channels and routes, and the model behind a given run varies. The supporting signal is the tiered cap: a harness with a fixed model and window would not need three tiers keyed to window size. A share-of-window ceiling is the natural form for a limit when the window is a runtime variable rather than a constant.</p>
+
+        <p><strong>Hermes externalizes because a filesystem is already present.</strong> The module documents writing through <code>env.execute()</code> so results are reachable across local, Docker, SSH, Modal and Daytona backends. A harness whose execution model already assumes a sandbox gets disk almost for free, and it already ships the <code>read_file</code> tool needed to get the content back. Spilling is cheap for Hermes in a way it would not be for a harness without a guaranteed writable filesystem.</p>
+
+        <p>Reading a harness this way is a skill worth practising, and it is falsifiable. If Pi grew an unbounded plugin tool ecosystem, per-tool static assignment would start failing, and a runtime heuristic would become the better fit. That is the test to apply to any of these claims: name the condition that would make the choice wrong, then look for whether the harness lives in that condition.</p>
+
+        <h3>What transfers</h3>
+
+        <p>Three points survive across all three implementations, and they are the ones to carry into a design.</p>
+
+        <p><strong>One number is never enough.</strong> Pi uses lines and bytes. OpenClaw uses a window share and a tier cap. Hermes uses a per-result threshold and a per-turn budget. Every one of them ended up with at least two limits, because each single limit has a case that defeats it.</p>
+
+        <p><strong>The recovery instruction ships with the truncation.</strong> All three tell the model what was removed and how to reach it, in the result itself or in the tool description. None of them silently shorten output. This is unanimous across three codebases that made otherwise different choices.</p>
+
+        <p><strong>The mechanism that saves the context can consume it.</strong> Hermes had to exempt <code>read_file</code> to stop spilling from feeding itself. Pi returns nothing at all when the first line is too long. OpenClaw's heuristic can be triggered by prose about errors. Every one of these mechanisms has a case where it works against the thing it exists to protect, which is worth expecting in a design rather than discovering in production.</p>
         <h2 id="references">References</h2>
 
         <ol class="refs">
@@ -2336,12 +2470,11 @@ a {
       return null;
     }
   })();
-  const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // Light is the default until the reader chooses otherwise; the OS
+  // preference is deliberately not consulted.
   const initialTheme = storedTheme === "light" || storedTheme === "dark"
     ? storedTheme
-    : preferredDark
-      ? "dark"
-      : "light";
+    : "light";
 
   const applyTheme = (theme) => {
     root.dataset.theme = theme;
